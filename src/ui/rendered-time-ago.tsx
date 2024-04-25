@@ -44,7 +44,7 @@ export function RenderedTimeAgo({ timestamp }: { timestamp: number }) {
 					<span
 						// https://react.dev/reference/react-dom/hydrate#suppressing-unavoidable-hydration-mismatch-errors
 						suppressHydrationWarning={true}
-						className="font-semibold tabular-nums text-gray-900"
+						className="font-semibold text-gray-900 tabular-nums"
 					>
 						{msAgo >= 1000 ? ms(msAgo) : "0s"}
 					</span>{" "}

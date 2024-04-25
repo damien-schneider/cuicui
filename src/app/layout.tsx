@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "#/styles/globals.css";
+import "#/src/styles/globals.css";
 import { AddressBar } from "#/src/ui/address-bar";
 import Byline from "#/src/ui/byline";
 import { GlobalNav } from "#/src/ui/global-nav";

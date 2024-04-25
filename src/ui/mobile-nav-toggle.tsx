@@ -38,7 +38,7 @@ export function MobileNavToggle({ children }: { children: React.ReactNode }) {
 		<>
 			<button
 				type="button"
-				className="group absolute right-0 top-0 flex h-14 items-center gap-x-2 px-4 lg:hidden"
+				className="group absolute top-0 right-0 flex h-14 items-center gap-x-2 px-4 lg:hidden"
 				onClick={() => setIsOpen(!isOpen)}
 			>
 				<div className="font-medium text-gray-100 group-hover:text-gray-400">
@@ -53,7 +53,7 @@ export function MobileNavToggle({ children }: { children: React.ReactNode }) {
 
 			<div
 				className={clsx("overflow-y-auto lg:static lg:block", {
-					"fixed inset-x-0 bottom-0 top-14 bg-gray-900": isOpen,
+					"fixed inset-x-0 top-14 bottom-0 bg-gray-900": isOpen,
 					hidden: !isOpen,
 				})}
 			>

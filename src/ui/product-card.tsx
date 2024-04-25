@@ -1,13 +1,13 @@
-import { Product } from "#/src/app/api/products/product";
+import { type DineroSnapshot, dinero } from "dinero.js";
+import Image from "next/image";
+import Link from "next/link";
+import type { Product } from "#/src/app/api/products/product";
 import { ProductBestSeller } from "#/src/ui/product-best-seller";
 import { ProductEstimatedArrival } from "#/src/ui/product-estimated-arrival";
 import { ProductLowStockWarning } from "#/src/ui/product-low-stock-warning";
 import { ProductPrice } from "#/src/ui/product-price";
 import { ProductRating } from "#/src/ui/product-rating";
 import { ProductUsedPrice } from "#/src/ui/product-used-price";
-import { dinero, type DineroSnapshot } from "dinero.js";
-import Image from "next/image";
-import Link from "next/link";
 
 export const ProductCard = ({
 	product,
@@ -23,7 +23,7 @@ export const ProductCard = ({
 			<div className="space-y-2">
 				<div className="relative">
 					{product.isBestSeller ? (
-						<div className="absolute left-2 top-2 z-10 flex">
+						<div className="absolute top-2 left-2 z-10 flex">
 							<ProductBestSeller />
 						</div>
 					) : null}
@@ -38,7 +38,7 @@ export const ProductCard = ({
 					/>
 				</div>
 
-				<div className="truncate text-sm font-medium text-white group-hover:text-vercel-cyan">
+				<div className="truncate font-medium text-sm text-white group-hover:text-vercel-cyan">
 					{product.name}
 				</div>
 

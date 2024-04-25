@@ -1,8 +1,8 @@
-import { Product } from "#/src/app/api/products/product";
+import { type Dinero, multiply, toUnit } from "dinero.js";
+import type { Product } from "#/src/app/api/products/product";
 import { ProductCurrencySymbol } from "#/src/ui/product-currency-symbol";
 import { ProductDeal } from "#/src/ui/product-deal";
 import { ProductLighteningDeal } from "#/src/ui/product-lightening-deal";
-import { multiply, toUnit, type Dinero } from "dinero.js";
 
 function isDiscount(obj: any): obj is { percent: number; expires?: number } {
 	return typeof obj?.percent === "number";
@@ -41,10 +41,10 @@ export const ProductPrice = ({
 
 	return (
 		<div className="flex">
-			<div className="text-sm leading-snug text-white">
+			<div className="text-sm text-white leading-snug">
 				<ProductCurrencySymbol dinero={price} />
 			</div>
-			<div className="text-lg font-bold leading-snug text-white">
+			<div className="font-bold text-lg text-white leading-snug">
 				{toUnit(price)}
 			</div>
 		</div>

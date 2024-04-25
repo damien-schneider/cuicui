@@ -1,7 +1,7 @@
 "use client";
 
-import React, { Suspense } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
+import React, { Suspense } from "react";
 
 function Params() {
 	const searchParams = useSearchParams();

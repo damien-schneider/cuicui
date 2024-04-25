@@ -24,7 +24,7 @@ export function RenderingInfo({
 
 	return (
 		<div className="space-y-3 rounded-lg bg-gray-900 p-3">
-			<div className="text-sm text-gray-300">{msg}</div>
+			<div className="text-gray-300 text-sm">{msg}</div>
 
 			<div className="flex">
 				<RenderedTimeAgo timestamp={Date.now()} />

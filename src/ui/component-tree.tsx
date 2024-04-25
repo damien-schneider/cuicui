@@ -1,6 +1,6 @@
+import clsx from "clsx";
 import { Boundary } from "#/src/ui/boundary";
 import CountUp from "#/src/ui/count-up";
-import clsx from "clsx";
 
 type Item = {
 	name: string;
@@ -25,9 +25,9 @@ const List = ({ items, depth }: { items: Item[]; depth: number }) => {
 										"relative ml-5 pt-2",
 										// Use the border of pseudo elements to visualize hierarchy
 										// │
-										"before:absolute before:-left-2.5 before:top-0 before:border-l-2 before:border-gray-800",
+										"before:-left-2.5 before:absolute before:top-0 before:border-gray-800 before:border-l-2",
 										// ──
-										"after:absolute after:-left-2.5 after:top-[17px] after:h-3 after:w-2.5 after:border-t-2 after:border-gray-800",
+										"after:-left-2.5 after:absolute after:top-[17px] after:h-3 after:w-2.5 after:border-gray-800 after:border-t-2",
 										{
 											// ├─
 											"before:h-full": !isLast,
@@ -54,7 +54,7 @@ const List = ({ items, depth }: { items: Item[]; depth: number }) => {
 
 							<div
 								className={clsx(
-									"rounded-md bg-gray-800 px-2 py-0.5 text-xs tracking-wide text-white/50",
+									"rounded-md bg-gray-800 px-2 py-0.5 text-white/50 text-xs tracking-wide",
 									{
 										"animate-[fadeToTransparent_1s_ease-in-out_forwards_1]":
 											item.type === "server",
@@ -114,14 +114,14 @@ export const ComponentTree = ({ items }: { items: Item[] }) => {
 					<div className="space-y-6">
 						<div className="space-y-3 rounded-lg bg-gray-900 p-4">
 							<div className="flex items-center justify-between gap-x-3">
-								<div className="rounded-md bg-vercel-blue px-2 py-0.5 text-xs tabular-nums tracking-wider text-blue-50">
+								<div className="rounded-md bg-vercel-blue px-2 py-0.5 text-blue-50 text-xs tabular-nums tracking-wider">
 									<CountUp
 										start={(clientTotal + serverTotal) / 1000}
 										end={clientTotal / 1000}
 									/>{" "}
 									KB
 								</div>
-								<div className="text-sm text-gray-300">Bundle Size</div>
+								<div className="text-gray-300 text-sm">Bundle Size</div>
 							</div>
 
 							<div className="overflow-hidden rounded-full bg-gray-700">
@@ -137,15 +137,15 @@ export const ComponentTree = ({ items }: { items: Item[] }) => {
 						</div>
 
 						<div className="space-y-3">
-							<div className="flex items-center gap-x-3 text-sm text-gray-400">
-								<div className="rounded-md bg-vercel-blue px-2 py-0.5 text-xs tracking-widest text-white/50">
+							<div className="flex items-center gap-x-3 text-gray-400 text-sm">
+								<div className="rounded-md bg-vercel-blue px-2 py-0.5 text-white/50 text-xs tracking-widest">
 									{"</>"}
 								</div>
 								<div>Client Component</div>
 							</div>
 
-							<div className="flex items-center gap-x-3 text-sm text-gray-400">
-								<div className="rounded-md bg-gray-700 px-2 py-0.5 text-xs tracking-widest text-white/50">
+							<div className="flex items-center gap-x-3 text-gray-400 text-sm">
+								<div className="rounded-md bg-gray-700 px-2 py-0.5 text-white/50 text-xs tracking-widest">
 									{"</>"}
 								</div>
 								<div>Server Component</div>
@@ -153,7 +153,7 @@ export const ComponentTree = ({ items }: { items: Item[] }) => {
 						</div>
 					</div>
 				</div>
-				<div className="text-sm italic text-vercel-orange">
+				<div className="text-sm text-vercel-orange italic">
 					Note: The component bundle sizes are not yet accurate.
 				</div>
 			</div>

@@ -1,5 +1,5 @@
-import { Product } from "#/src/app/api/products/product";
-import { dinero, toUnit, up, type DineroSnapshot } from "dinero.js";
+import { type DineroSnapshot, dinero, toUnit, up } from "dinero.js";
+import type { Product } from "#/src/app/api/products/product";
 
 export const ProductUsedPrice = ({
 	usedPrice: usedPriceRaw,

@@ -1,4 +1,4 @@
-import { toFormat, type Dinero } from "dinero.js";
+import { type Dinero, toFormat } from "dinero.js";
 
 export const ProductCurrencySymbol = ({
 	dinero,

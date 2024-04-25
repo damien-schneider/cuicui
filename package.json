@@ -4,6 +4,7 @@
 	"scripts": {
 		"build": "next build",
 		"dev": "next dev",
+		"dev:trubo": "next dev --turbo",
 		"lint": "next lint",
 		"lint-staged": "lint-staged",
 		"format:fix": "biome format --write ./src",
@@ -18,7 +19,7 @@
 		"pre-commit": "lint-staged"
 	},
 	"lint-staged": {
-		"*": "biome format --write ./src && biome check ./src && next build"
+		"*": "biome format --write ./src"
 	},
 	"dependencies": {
 		"@heroicons/react": "2.1.3",

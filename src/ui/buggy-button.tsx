@@ -1,7 +1,7 @@
 "use client";
 
-import Button from "#/src/ui/button";
 import React from "react";
+import Button from "#/src/ui/button";
 
 export default function BuggyButton() {
 	const [clicked, setClicked] = React.useState(false);

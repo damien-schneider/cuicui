@@ -1,6 +1,6 @@
-import { CounterProvider } from "#/src/app/context/counter-context";
 import type React from "react";
 import { getCategories } from "#/src/app/api/categories/getCategories";
+import { CounterProvider } from "#/src/app/context/counter-context";
 import { Boundary } from "#/src/ui/boundary";
 import { TabGroup } from "#/src/ui/tab-group";
 import ContextClickCounter from "./context-click-counter";

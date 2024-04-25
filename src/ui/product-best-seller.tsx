@@ -1,6 +1,6 @@
 export const ProductBestSeller = () => {
 	return (
-		<div className="rounded bg-gray-600 px-1.5 text-xs font-medium leading-5 text-white">
+		<div className="rounded bg-gray-600 px-1.5 font-medium text-white text-xs leading-5">
 			Best Seller
 		</div>
 	);
