@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Container = styled.div`
   display: grid;
@@ -45,25 +45,25 @@ const SkeletonLineTwo = styled.div`
 `;
 
 const Skeleton = () => (
-  <SkeletonInner>
-    <SkeletonImg />
-    <SkeletonBtn />
-    <SkeletonLineOne />
-    <SkeletonLineTwo />
-  </SkeletonInner>
+	<SkeletonInner>
+		<SkeletonImg />
+		<SkeletonBtn />
+		<SkeletonLineOne />
+		<SkeletonLineTwo />
+	</SkeletonInner>
 );
 
 export default function Page() {
-  return (
-    <div className="space-y-4">
-      <h1 className="text-xl font-medium text-gray-400/80">
-        Styled with Styled Components
-      </h1>
-      <Container>
-        <Skeleton />
-        <Skeleton />
-        <Skeleton />
-      </Container>
-    </div>
-  );
+	return (
+		<div className="space-y-4">
+			<h1 className="text-xl font-medium text-gray-400/80">
+				Styled with Styled Components
+			</h1>
+			<Container>
+				<Skeleton />
+				<Skeleton />
+				<Skeleton />
+			</Container>
+		</div>
+	);
 }
