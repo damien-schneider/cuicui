@@ -1,3 +1,5 @@
+import { type DineroSnapshot, dinero } from "dinero.js";
+import { Suspense } from "react";
 import type { Product } from "#/app/api/products/product";
 import { Ping } from "#/ui/ping";
 import { ProductEstimatedArrival } from "#/ui/product-estimated-arrival";
@@ -5,8 +7,6 @@ import { ProductLowStockWarning } from "#/ui/product-low-stock-warning";
 import { ProductPrice } from "#/ui/product-price";
 import { ProductSplitPayments } from "#/ui/product-split-payments";
 import { ProductUsedPrice } from "#/ui/product-used-price";
-import { dinero, type DineroSnapshot } from "dinero.js";
-import { Suspense } from "react";
 import { AddToCart } from "./add-to-cart";
 
 function LoadingDots() {
@@ -69,7 +69,7 @@ export function Pricing({
 			<ProductPrice price={price} discount={product.discount} />
 
 			<div className="relative">
-				<div className="absolute -left-4 top-1">
+				<div className="-left-4 absolute top-1">
 					<Ping />
 				</div>
 			</div>

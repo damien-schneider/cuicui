@@ -3,7 +3,7 @@ import { ExternalLink } from "#/ui/external-link";
 export default function Page() {
 	return (
 		<div className="prose prose-sm prose-invert max-w-none">
-			<h1 className="text-xl font-bold">Static Data</h1>
+			<h1 className="font-bold text-xl">Static Data</h1>
 
 			<ul>
 				<li>By default, data fetching in Next.js is cached static.</li>

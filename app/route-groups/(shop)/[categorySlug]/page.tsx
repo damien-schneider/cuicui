@@ -9,7 +9,7 @@ export default async function Page({
 	const category = await getCategory({ slug: params.categorySlug });
 	return (
 		<div className="space-y-4">
-			<h1 className="text-xl font-medium text-gray-400/80">
+			<h1 className="font-medium text-gray-400/80 text-xl">
 				All {category.name}
 			</h1>
 

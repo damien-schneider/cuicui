@@ -1,7 +1,7 @@
+import type React from "react";
 import { getCategories } from "#/app/api/categories/getCategories";
 import { ClickCounter } from "#/ui/click-counter";
 import { TabGroup } from "#/ui/tab-group";
-import React from "react";
 
 const title = "Nested Layouts";
 

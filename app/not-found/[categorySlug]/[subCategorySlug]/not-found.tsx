@@ -7,7 +7,7 @@ export default function NotFound() {
 			color="pink"
 		>
 			<div className="space-y-3 text-vercel-pink">
-				<h2 className="text-lg font-bold">Sub Category Not Found</h2>
+				<h2 className="font-bold text-lg">Sub Category Not Found</h2>
 
 				<p className="text-sm">Could not find requested resource</p>
 			</div>

@@ -1,5 +1,5 @@
-import type { NextRequest } from "next/server";
 import { ImageResponse } from "next/og";
+import type { NextRequest } from "next/server";
 import type { ReactElement } from "react";
 
 export const runtime = "edge";
@@ -66,7 +66,7 @@ export async function GET(req: NextRequest): Promise<Response | ImageResponse> {
 
 		// eslint-disable-next-line no-console
 		console.log(e.message);
-		return new Response(`Failed to generate the image`, {
+		return new Response("Failed to generate the image", {
 			status: 500,
 		});
 	}

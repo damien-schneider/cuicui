@@ -1,5 +1,5 @@
-import { ExternalLink } from "#/ui/external-link";
 import Link from "next/link";
+import { ExternalLink } from "#/ui/external-link";
 
 const items = [
 	{
@@ -12,7 +12,7 @@ const items = [
 export default function Page() {
 	return (
 		<div className="space-y-6">
-			<h1 className="text-xl font-medium text-gray-300">Code Snippets</h1>
+			<h1 className="font-medium text-gray-300 text-xl">Code Snippets</h1>
 
 			<div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
 				{items.map((item) => {
@@ -27,7 +27,7 @@ export default function Page() {
 							</div>
 
 							{item.description ? (
-								<div className="line-clamp-3 text-sm text-gray-400 group-hover:text-gray-300">
+								<div className="line-clamp-3 text-gray-400 text-sm group-hover:text-gray-300">
 									{item.description}
 								</div>
 							) : null}

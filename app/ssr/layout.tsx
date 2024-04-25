@@ -1,5 +1,5 @@
+import type React from "react";
 import { TabGroup } from "#/ui/tab-group";
-import React from "react";
 
 const title = "Dynamic Data";
 

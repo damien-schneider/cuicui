@@ -5,7 +5,7 @@ export default function Page() {
 	return (
 		<Boundary labels={["parallel-routes/page.tsx"]} size="small">
 			<div className="prose prose-sm prose-invert max-w-none">
-				<h2 className="text-lg font-bold">Parallel Routes</h2>
+				<h2 className="font-bold text-lg">Parallel Routes</h2>
 				<ul>
 					<li>
 						Parallel Routes allow you to simultaneously or conditionally render

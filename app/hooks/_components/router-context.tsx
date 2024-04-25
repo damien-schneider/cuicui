@@ -1,6 +1,5 @@
 "use client";
 
-import { Boundary } from "#/ui/boundary";
 import {
 	useParams,
 	usePathname,
@@ -8,6 +7,7 @@ import {
 	useSelectedLayoutSegment,
 	useSelectedLayoutSegments,
 } from "next/navigation";
+import { Boundary } from "#/ui/boundary";
 
 export function HooksClient() {
 	const pathname = usePathname();

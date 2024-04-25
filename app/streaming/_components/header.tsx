@@ -1,10 +1,10 @@
-import { NextLogo } from "#/ui/next-logo";
 import {
 	MagnifyingGlassIcon,
 	ShoppingCartIcon,
 } from "@heroicons/react/24/solid";
 import Image from "next/image";
 import Link from "next/link";
+import { NextLogo } from "#/ui/next-logo";
 import { CartCount } from "./cart-count";
 
 export function Header() {
@@ -35,7 +35,7 @@ export function Header() {
 			<div className="flex shrink-0 gap-x-3">
 				<div className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gray-600 text-white">
 					<ShoppingCartIcon className="w-6 text-white" />
-					<div className="absolute -right-1 -top-1 flex h-4 w-4 items-center justify-center rounded-full bg-vercel-cyan text-sm font-bold text-cyan-800">
+					<div className="-right-1 -top-1 absolute flex h-4 w-4 items-center justify-center rounded-full bg-vercel-cyan font-bold text-cyan-800 text-sm">
 						<CartCount />
 					</div>
 				</div>

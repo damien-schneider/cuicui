@@ -1,16 +1,16 @@
-import { demos } from "#/lib/demos";
 import Link from "next/link";
+import { demos } from "#/lib/demos";
 
 export default function Page() {
 	return (
 		<div className="space-y-8">
-			<h1 className="text-xl font-medium text-gray-300">Examples</h1>
+			<h1 className="font-medium text-gray-300 text-xl">Examples</h1>
 
 			<div className="space-y-10 text-white">
 				{demos.map((section) => {
 					return (
 						<div key={section.name} className="space-y-5">
-							<div className="text-xs font-semibold uppercase tracking-wider text-gray-400">
+							<div className="font-semibold text-gray-400 text-xs uppercase tracking-wider">
 								{section.name}
 							</div>
 
@@ -27,7 +27,7 @@ export default function Page() {
 											</div>
 
 											{item.description ? (
-												<div className="line-clamp-3 text-sm text-gray-400 group-hover:text-gray-300">
+												<div className="line-clamp-3 text-gray-400 text-sm group-hover:text-gray-300">
 													{item.description}
 												</div>
 											) : null}

@@ -1,6 +1,6 @@
-import { Boundary } from "#/ui/boundary";
 import { cookies } from "next/headers";
-import React from "react";
+import type React from "react";
+import { Boundary } from "#/ui/boundary";
 import { CartCountProvider } from "../_components/cart-count-context";
 import { Header } from "../_components/header";
 

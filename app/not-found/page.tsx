@@ -1,10 +1,10 @@
-import { ExternalLink } from "#/ui/external-link";
 import Link from "next/link";
+import { ExternalLink } from "#/ui/external-link";
 
 export default function Page() {
 	return (
 		<div className="prose prose-sm prose-invert max-w-none">
-			<h1 className="text-xl font-bold">Not Found</h1>
+			<h1 className="font-bold text-xl">Not Found</h1>
 
 			<ul>
 				<li>

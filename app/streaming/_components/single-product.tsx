@@ -1,8 +1,8 @@
-import { Pricing } from "#/app/streaming/_components/pricing";
-import type { Product } from "#/app/api/products/product";
-import { ProductRating } from "#/ui/product-rating";
 import { cookies } from "next/headers";
 import Image from "next/image";
+import type { Product } from "#/app/api/products/product";
+import { Pricing } from "#/app/streaming/_components/pricing";
+import { ProductRating } from "#/ui/product-rating";
 
 export const SingleProduct = async ({ data }: { data: Promise<Response> }) => {
 	const product = (await data.then((res) => res.json())) as Product;
@@ -56,13 +56,13 @@ export const SingleProduct = async ({ data }: { data: Promise<Response> }) => {
 			</div>
 
 			<div className="col-span-full space-y-4 lg:col-span-2">
-				<div className="truncate text-xl font-medium text-white lg:text-2xl">
+				<div className="truncate font-medium text-white text-xl lg:text-2xl">
 					{product.name}
 				</div>
 
 				<ProductRating rating={product.rating} />
 
-				<div className="space-y-4 text-sm text-gray-200">
+				<div className="space-y-4 text-gray-200 text-sm">
 					<p>{product.description}</p>
 					<p>{product.description}</p>
 				</div>

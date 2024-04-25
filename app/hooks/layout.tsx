@@ -1,8 +1,8 @@
+import type React from "react";
 import { getCategories } from "#/app/api/categories/getCategories";
 import { LayoutHooks } from "#/app/hooks/_components/router-context-layout";
 import { ClickCounter } from "#/ui/click-counter";
 import { TabGroup } from "#/ui/tab-group";
-import React from "react";
 
 const title = "Hooks";
 

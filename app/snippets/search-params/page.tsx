@@ -1,6 +1,6 @@
+import { Suspense } from "react";
 import { Boundary } from "#/ui/boundary";
 import { ExternalLink } from "#/ui/external-link";
-import { Suspense } from "react";
 import ActiveLink from "./active-link";
 import Client from "./client";
 
@@ -27,7 +27,7 @@ export const dynamic = "force-dynamic";
 export default async function Page({ searchParams }: { searchParams: any }) {
 	return (
 		<div className="prose prose-sm prose-invert max-w-none">
-			<h1 className="text-lg font-bold">
+			<h1 className="font-bold text-lg">
 				Updating <code>searchParams</code>
 			</h1>
 			<p>

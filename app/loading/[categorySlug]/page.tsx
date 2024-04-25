@@ -1,6 +1,6 @@
+import { notFound } from "next/navigation";
 import type { Category } from "#/app/api/categories/category";
 import { SkeletonCard } from "#/ui/skeleton-card";
-import { notFound } from "next/navigation";
 
 export default async function Page({
 	params,
@@ -32,7 +32,7 @@ export default async function Page({
 
 	return (
 		<div className="space-y-4">
-			<h1 className="text-xl font-medium text-gray-400/80">{category.name}</h1>
+			<h1 className="font-medium text-gray-400/80 text-xl">{category.name}</h1>
 
 			<div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
 				{Array.from({ length: category.count }).map((_, i) => (

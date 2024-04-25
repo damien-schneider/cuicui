@@ -8,6 +8,9 @@
 		"lint-staged": "lint-staged",
 		"format:fix": "biome format --write ./app",
 		"format:check": "biome format --check ./app",
+		"lint:fix": "biome check --apply ./app",
+		"lint:fix-unsafe": "biome check --apply-unsafe ./app",
+		"lint:check": "biome check ./app",
 		"start": "next start",
 		"test": "pnpm format:check && pnpm lint"
 	},
@@ -15,7 +18,7 @@
 		"pre-commit": "lint-staged"
 	},
 	"lint-staged": {
-		"*": "biome format --write ./app"
+		"*": "biome format --write ./app && biome check ./app && next build"
 	},
 	"dependencies": {
 		"@heroicons/react": "2.1.3",

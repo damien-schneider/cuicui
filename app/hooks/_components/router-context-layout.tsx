@@ -1,10 +1,10 @@
 "use client";
 
-import { Boundary } from "#/ui/boundary";
 import {
 	useSelectedLayoutSegment,
 	useSelectedLayoutSegments,
 } from "next/navigation";
+import { Boundary } from "#/ui/boundary";
 
 export function LayoutHooks() {
 	const selectedLayoutSegment = useSelectedLayoutSegment();

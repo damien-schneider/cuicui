@@ -4,7 +4,7 @@ export default function Page() {
 	return (
 		<div className="space-y-9">
 			<div className="prose prose-sm prose-invert max-w-none">
-				<h1 className="text-xl font-bold">Client Component Hooks</h1>
+				<h1 className="font-bold text-xl">Client Component Hooks</h1>
 
 				<ul>
 					<li>

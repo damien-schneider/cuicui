@@ -1,8 +1,8 @@
 "use client";
 
-import { Tab } from "#/ui/tab";
 import clsx from "clsx";
 import React, { useEffect } from "react";
+import { Tab } from "#/ui/tab";
 
 const randomNumber = (min: number, max: number) =>
 	Math.floor(Math.random() * (max - min + 1) + min);

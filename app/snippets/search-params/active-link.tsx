@@ -17,12 +17,12 @@ export default function ActiveLink({
 
 	return (
 		<Link
-			className={clsx("rounded-lg px-3 py-1 text-sm font-medium no-underline", {
+			className={clsx("rounded-lg px-3 py-1 font-medium text-sm no-underline", {
 				"bg-gray-700 text-gray-100 hover:bg-gray-500 hover:text-white":
 					!isActive,
 				"bg-vercel-blue text-white": isActive,
 			})}
-			href={pathname + "?" + searchParams}
+			href={`${pathname}?${searchParams}`}
 		>
 			{children}
 		</Link>

@@ -3,7 +3,7 @@ import { ExternalLink } from "#/ui/external-link";
 export default function Page() {
 	return (
 		<div className="prose prose-sm prose-invert max-w-none">
-			<h1 className="text-xl font-bold">Route Groups</h1>
+			<h1 className="font-bold text-xl">Route Groups</h1>
 
 			<ul>
 				<li>

@@ -58,7 +58,7 @@ const SkeletonCard = () => (
 export default function Page() {
 	return (
 		<div className="space-y-4">
-			<h1 className="text-xl font-medium text-gray-400/80">
+			<h1 className="font-medium text-gray-400/80 text-xl">
 				Styled with Styled JSX
 			</h1>
 			<div className="container">
