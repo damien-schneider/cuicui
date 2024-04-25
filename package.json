@@ -6,11 +6,11 @@
 		"dev": "next dev",
 		"lint": "next lint",
 		"lint-staged": "lint-staged",
-		"format:fix": "biome format --write ./app",
-		"format:check": "biome format --check ./app",
-		"lint:fix": "biome check --apply ./app",
-		"lint:fix-unsafe": "biome check --apply-unsafe ./app",
-		"lint:check": "biome check ./app",
+		"format:fix": "biome format --write ./src",
+		"format:check": "biome format --check ./src",
+		"lint:fix": "biome check --apply ./src",
+		"lint:fix-unsafe": "biome check --apply-unsafe ./src",
+		"lint:check": "biome check ./src",
 		"start": "next start",
 		"test": "pnpm format:check && pnpm lint"
 	},
@@ -18,7 +18,7 @@
 		"pre-commit": "lint-staged"
 	},
 	"lint-staged": {
-		"*": "biome format --write ./app && biome check ./app && next build"
+		"*": "biome format --write ./src && biome check ./src && next build"
 	},
 	"dependencies": {
 		"@heroicons/react": "2.1.3",
