@@ -26,6 +26,9 @@ importers:
       next:
         specifier: 14.3.0-canary.9
         version: 14.3.0-canary.9(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      prismjs:
+        specifier: 1.29.0
+        version: 1.29.0
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -2108,6 +2111,10 @@ packages:
   pretty-ms@7.0.1:
     resolution: {integrity: sha512-973driJZvxiGOQ5ONsFhOF/DtzPMOMtgC11kCpUrPGMTgqp2q/1gwzCquocrN33is0VZ5GFHXZYMM9l6h67v2Q==}
     engines: {node: '>=10'}
+
+  prismjs@1.29.0:
+    resolution: {integrity: sha512-Kx/1w86q/epKcmte75LNrEoT+lX8pBpavuAbvJWRXar7Hz8jrtF+e3vY751p0R8H9HdArwaCTNDDzHg/ScJK1Q==}
+    engines: {node: '>=6'}
 
   promisepipe@3.0.0:
     resolution: {integrity: sha512-V6TbZDJ/ZswevgkDNpGt/YqNCiZP9ASfgU+p83uJE6NrGtvSGoOcHLiDCqkMs2+yg7F5qHdLV8d0aS8O26G/KA==}
@@ -4837,6 +4844,8 @@ snapshots:
   pretty-ms@7.0.1:
     dependencies:
       parse-ms: 2.1.0
+
+  prismjs@1.29.0: {}
 
   promisepipe@3.0.0: {}
 
