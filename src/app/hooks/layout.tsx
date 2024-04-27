@@ -7,44 +7,44 @@ import { TabGroup } from "#/src/ui/tab-group";
 const title = "Hooks";
 
 export const metadata = {
-	title,
-	openGraph: {
-		title,
-		images: [`/api/og?title=${title}`],
-	},
+  title,
+  openGraph: {
+    title,
+    images: [`/api/og?title=${title}`],
+  },
 };
 
 export default async function Layout({
-	children,
+  children,
 }: {
-	children: React.ReactNode;
+  children: React.ReactNode;
 }) {
-	const categories = await getCategories();
+  const categories = await getCategories();
 
-	return (
-		<div className="space-y-9">
-			<div className="flex justify-between">
-				<TabGroup
-					path="/hooks"
-					items={[
-						{
-							text: "Home",
-						},
-						...categories.map((x) => ({
-							text: x.name,
-							slug: x.slug,
-						})),
-					]}
-				/>
+  return (
+    <div className="space-y-9">
+      <div className="flex justify-between">
+        <TabGroup
+          path="/hooks"
+          items={[
+            {
+              text: "Home",
+            },
+            ...categories.map((x) => ({
+              text: x.name,
+              slug: x.slug,
+            })),
+          ]}
+        />
 
-				<div className="self-start">
-					<ClickCounter />
-				</div>
-			</div>
+        <div className="self-start">
+          <ClickCounter />
+        </div>
+      </div>
 
-			<LayoutHooks />
+      <LayoutHooks />
 
-			<div>{children}</div>
-		</div>
-	);
+      <div>{children}</div>
+    </div>
+  );
 }

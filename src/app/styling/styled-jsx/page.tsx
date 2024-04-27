@@ -1,14 +1,14 @@
 "use client";
 
 const SkeletonCard = () => (
-	<>
-		<div className="skeleton">
-			<div className="skeleton-img" />
-			<div className="skeleton-btn" />
-			<div className="skeleton-line-one" />
-			<div className="skeleton-line-two" />
-		</div>
-		<style jsx>{`
+  <>
+    <div className="skeleton">
+      <div className="skeleton-img" />
+      <div className="skeleton-btn" />
+      <div className="skeleton-line-one" />
+      <div className="skeleton-line-two" />
+    </div>
+    <style jsx>{`
       .skeleton {
         padding: 1rem /* 16px */;
         border-radius: 1rem /* 16px */;
@@ -52,22 +52,22 @@ const SkeletonCard = () => (
         width: 66.666667%;
       }
     `}</style>
-	</>
+  </>
 );
 
 export default function Page() {
-	return (
-		<div className="space-y-4">
-			<h1 className="font-medium text-gray-400/80 text-xl">
-				Styled with Styled JSX
-			</h1>
-			<div className="container">
-				<SkeletonCard />
-				<SkeletonCard />
-				<SkeletonCard />
-			</div>
+  return (
+    <div className="space-y-4">
+      <h1 className="font-medium text-gray-400/80 text-xl">
+        Styled with Styled JSX
+      </h1>
+      <div className="container">
+        <SkeletonCard />
+        <SkeletonCard />
+        <SkeletonCard />
+      </div>
 
-			<style jsx>{`
+      <style jsx>{`
         .container {
           display: grid;
           grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -80,6 +80,6 @@ export default function Page() {
           }
         }
       `}</style>
-		</div>
-	);
+    </div>
+  );
 }

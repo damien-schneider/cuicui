@@ -3,6 +3,12 @@
 	"organizeImports": {
 		"enabled": true
 	},
+	"javascript": {
+		"formatter": {
+			"enabled": true,
+			"indentStyle": "space"
+		}
+	},
 	"linter": {
 		"enabled": true,
 		"rules": {
