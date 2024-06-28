@@ -9,13 +9,20 @@
 			"indentStyle": "space"
 		}
 	},
+	"json": {
+		"formatter": {
+			"enabled": true
+		}
+	},
+	"css": {
+		"formatter": {
+			"enabled": true
+		}
+	},
 	"linter": {
 		"enabled": true,
 		"rules": {
-			"recommended": true,
-			"nursery": {
-				"useSortedClasses": "warn"
-			}
+			"recommended": true
 		}
 	}
 }

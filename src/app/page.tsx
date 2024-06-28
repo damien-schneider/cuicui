@@ -1,44 +1,58 @@
 import Link from "next/link";
 import { componentCategories } from "#/src/lib/component-categories";
+import { Badge1 } from "../components/cuicui/badges/badge1";
 import FullComponent from "../components/full-component";
-import { Badge1 } from "../components/badges/badge1";
+import GradientContainer from "../ui/gradient-container";
 
 export default function Page() {
   return (
-    <div className="space-y-8">
-      <h1 className="font-medium text-gray-300 text-xl">Examples</h1>
+    <div className="space-y-8 px-4 my-8">
+      <h1 className="font-medium text-gray-300 text-3xl">
+        CuiCui - Copy Paste quality React component
+      </h1>
+      <p className="text-sm text-neutral-500">
+        CuiCui is a modern UI copy paste library that helps you build beautiful
+        websites and applications. Its name "CuiCui" is for Quick UI.
+      </p>
       <div className="space-y-10 text-white">
-        {componentCategories.map((section) => {
-          return (
-            <div key={section.name} className="space-y-5">
-              <div className="font-semibold text-gray-400 text-xs uppercase tracking-wider">
-                {section.name}
-              </div>
+        {componentCategories.map((section) => (
+          <div key={section.name} className="space-y-5">
+            <p className="font-semibold text-gray-400 text-xs uppercase tracking-wider">
+              {section.name}
+            </p>
 
-              <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
-                {section.items.map((item) => {
-                  return (
-                    <Link
-                      href={`/${item.slug}`}
-                      key={item.name}
-                      className="group block space-y-1.5 rounded-lg bg-gray-900 px-5 py-3 hover:bg-gray-800"
+            <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
+              {section.items.map((item) => {
+                return (
+                  <Link
+                    href={`/${item.slug}`}
+                    key={item.name}
+                    className="group block rounded-lg"
+                  >
+                    <GradientContainer
+                      rounded="sm"
+                      classNameChild="z-30"
+                      classNameParent=""
+                      classNameBlur="z-20 opacity-5 blur-md group-hover:opacity-10 transition-all duration-150 ease-in-out"
                     >
-                      <div className="font-medium text-gray-200 group-hover:text-gray-50">
-                        {item.name}
-                      </div>
+                      <div className=" flex gap-2 flex-col p-2 group-hover:opacity-80 transition-opacity">
+                        <h4 className="font-medium dark:text-neutral-300 text-neutral-700 group-hover:translate-x-1 transition-transform">
+                          {item.name}
+                        </h4>
 
-                      {item.description ? (
-                        <div className="line-clamp-3 text-gray-400 text-sm group-hover:text-gray-300">
-                          {item.description}
-                        </div>
-                      ) : null}
-                    </Link>
-                  );
-                })}
-              </div>
+                        {item.description ? (
+                          <p className="text-neutral-500 text-sm">
+                            {item.description}
+                          </p>
+                        ) : null}
+                      </div>
+                    </GradientContainer>
+                  </Link>
+                );
+              })}
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
     </div>
   );

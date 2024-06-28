@@ -1,3 +1,59 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes gradient-animation {
+  0% {
+    -webkit-background-position: 0% 50%;
+    background-position: 0% 50%;
+  }
+  50% {
+    -webkit-background-position: 100% 50%;
+    background-position: 100% 50%;
+  }
+  100% {
+    -webkit-background-position: 0% 50%;
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-top-animation {
+    background-image: linear-gradient(
+        -45deg,
+        #ffcb47,
+        #e34ba9,
+        #369eff,
+        #95f3d9
+      );
+    -webkit-background-size: 400% 400%;
+    background-size: 400% 400%;
+    -webkit-animation: gradient-animation 5s ease infinite;
+    animation: gradient-animation 5s ease infinite;
+}
+
+@layer components{
+  .header-1 {
+    @apply font-medium text-neutral-800 dark:text-neutral-200 text-3xl tracking-tight leading-8;
+  }
+  .header-2 {
+    @apply font-medium text-neutral-800 dark:text-neutral-200 text-2xl tracking-tight leading-8;
+  }
+  .header-3 {
+    @apply font-medium text-neutral-800 dark:text-neutral-200 text-xl tracking-tight leading-8;
+  }
+  .header-4 {
+    @apply font-medium text-neutral-800 dark:text-neutral-200 text-lg tracking-tight leading-8;
+  }
+  .heading-5 {
+    @apply font-semibold text-neutral-800 dark:text-neutral-200 text-base tracking-tight;
+  }
+  .heading-6 {
+    @apply font-medium text-neutral-800 dark:text-neutral-200 text-sm tracking-tight ;
+  }
+  .body-1 {
+    @apply font-normal text-neutral-600 dark:text-neutral-400 text-base leading-6;
+  }
+  .comment-1 {
+    @apply font-normal text-neutral-500 dark:text-neutral-400 text-sm ;
+  }
+}

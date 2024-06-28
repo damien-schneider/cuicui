@@ -1,105 +1,73 @@
 export type Item = {
   name: string;
   slug: string;
-  description?: string;
+  description: string;
+  comingSoon?: boolean;
+  releaseDate?: Date;
 };
 
-export const componentCategories: { name: string; items: Item[] }[] = [
+export const componentCategories: {
+  name: string;
+  slug: string | null;
+  items: Item[];
+}[] = [
   {
-    name: "Simple UI",
+    name: "Info",
+    slug: null,
+    items: [
+      {
+        name: "Why another library?",
+        slug: "about",
+        description:
+          "CuiCui is a collection of components that I use in my projects. I wanted to share them with the world.",
+      },
+      {
+        name: "Changelog",
+        slug: "changelog",
+        description: "See the latest changes in CuiCui.",
+      },
+    ],
+  },
+
+  {
+    name: "Common UI",
+    slug: "common-ui",
     items: [
       {
         name: "Badges",
         slug: "badges",
         description: "Create simple badges with different styles",
+        releaseDate: new Date("2024-06-17"),
       },
       {
-        name: "Grouped Layouts",
-        slug: "route-groups",
-        description: "Organize routes without affecting URL paths",
-      },
-      {
-        name: "Parallel Routes",
-        slug: "parallel-routes",
-        description: "Render multiple pages in the same layout",
+        name: "Navigation",
+        slug: "navigation",
+        description: "Create simple navigation components",
+        releaseDate: new Date("2024-06-17"),
       },
     ],
   },
   {
-    name: "File Conventions",
+    name: "Marketing components",
+    slug: "marketing-components",
     items: [
       {
-        name: "Loading",
-        slug: "loading",
-        description:
-          "Create meaningful Loading UI for specific parts of an app",
+        name: "Features",
+        slug: "features",
+        description: "Showcase your product features with style",
+        releaseDate: new Date("2024-06-17"),
       },
       {
-        name: "Error",
-        slug: "error-handling",
-        description: "Create Error UI for specific parts of an app",
+        name: "Pricing Table",
+        slug: "pricing-table",
+        description: "Showcase your product pricing with style",
+        comingSoon: true,
       },
       {
-        name: "Not Found",
-        slug: "not-found",
-        description: "Create Not Found UI for specific parts of an app",
-      },
-    ],
-  },
-  {
-    name: "Data Fetching",
-    items: [
-      {
-        name: "Streaming with Suspense",
-        slug: "streaming",
-        description:
-          "Streaming data fetching from the server with React Suspense",
-      },
-      {
-        name: "Static Data",
-        slug: "ssg",
-        description: "Generate static pages",
-      },
-      {
-        name: "Dynamic Data",
-        slug: "ssr",
-        description: "Server-render pages",
-      },
-      {
-        name: "Incremental Static Regeneration",
-        slug: "isr",
-        description: "Get the best of both worlds between static & dynamic",
-      },
-    ],
-  },
-  {
-    name: "Components",
-    items: [
-      {
-        name: "Client Context",
-        slug: "context",
-        description:
-          "Pass context between Client Components that cross Server/Client Component boundary",
-      },
-    ],
-  },
-  {
-    name: "Misc",
-    items: [
-      {
-        name: "Client Component Hooks",
-        slug: "hooks",
-        description: "Preview the routing hooks available in Client Components",
-      },
-      {
-        name: "CSS and CSS-in-JS",
-        slug: "styling",
-        description: "Preview the supported styling solutions",
-      },
-      {
-        name: "Code Snippets",
-        slug: "snippets",
-        description: "A collection of useful App Router code snippets",
+        name: "Testimonials",
+        slug: "testimonials",
+        description: "Showcase your product testimonials with style",
+        releaseDate: new Date("2024-06-17"),
       },
     ],
   },

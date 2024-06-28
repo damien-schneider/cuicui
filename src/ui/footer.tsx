@@ -3,27 +3,14 @@
 export default function Footer({
   reactVersion,
   nextVersion,
-}: {
+}: Readonly<{
   reactVersion: string;
   nextVersion: string;
-}) {
+}>) {
   return (
     <div className="col-start-2 col-end-4 mt-28 flex items-center justify-between">
-      <style jsx>
-        {`
-          .power-by {
-            color: rgb(82 82 91);
-            display: inline-flex;
-            align-items: center;
-          }
-          .power-by-text {
-            margin-right: 0.25rem;
-          }
-        `}
-      </style>
-
-      <span className="power-by">
-        <span className="power-by-text">Powered by</span>
+      <span className="inline-flex items-center text-gray-500">
+        <span className="mr-1">Powered by</span>
         <svg height="20" viewBox="0 0 283 64" fill="none">
           <path
             fill="currentColor"

@@ -1,6 +1,7 @@
+export type Variant = `variant${number}`;
+
 export type VariantComponent = {
-  slug: `variant${number}`;
-  name: string;
-  component: () => React.JSX.Element;
+  variantName: string;
+  component: React.JSX.Element;
   code: string;
 };

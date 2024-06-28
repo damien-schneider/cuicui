@@ -1,13 +1,13 @@
-import { Boundary } from "#/src/ui/boundary";
+import GradientContainer from "../ui/gradient-container";
 
 export default function NotFound() {
   return (
-    <Boundary labels={["not-found.tsx"]} color="pink">
-      <div className="space-y-4 text-vercel-pink">
+    <GradientContainer>
+      <div className="space-y-4 p-2">
         <h2 className="font-bold text-lg">Not Found</h2>
 
         <p className="text-sm">Could not find requested resource</p>
       </div>
-    </Boundary>
+    </GradientContainer>
   );
 }
