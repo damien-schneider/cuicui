@@ -1,7 +1,5 @@
 import Link from "next/link";
 import { componentCategories } from "#/src/lib/component-categories";
-import { Badge1 } from "../components/cuicui/badges/badge1";
-import FullComponent from "../components/full-component";
 import GradientContainer from "../ui/gradient-container";
 
 export default function Page() {
