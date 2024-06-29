@@ -25,14 +25,14 @@ export default function CodeHighlighter({
   };
 
   return (
-    <div className="relative w-full">
+    <div className="w-full">
       <Button
         onClick={handleCopy(code)}
         variant="neutral"
         size="md-square"
         aria-label="Copy code to clipboard"
         title="Copy code to clipboard"
-        className="absolute top-2 right-2 group"
+        className="absolute top-2 right-2 group backdrop-blur-md"
         // disabled={copiedText === code}
       >
         <CopyIcon className="size-5 stroke-neutral-500 dark:stroke-neutral-400 group-hover:scale-95 transition-transform" />

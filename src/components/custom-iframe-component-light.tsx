@@ -3,7 +3,10 @@ import type React from "react";
 import Frame from "react-frame-component";
 
 import { cn } from "../utils/cn";
-import { getIframeContainerClassBasedOnSize } from "./full-component";
+import {
+  type IframeSizeType,
+  getIframeContainerClassBasedOnSize,
+} from "./full-component";
 
 const CustomIframeComponentLight = ({
   children,
@@ -12,7 +15,7 @@ const CustomIframeComponentLight = ({
 }: {
   children: React.ReactNode;
   className?: string;
-  size: "sm" | "md" | "lg";
+  size: IframeSizeType;
 }) => {
   return (
     <Frame

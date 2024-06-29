@@ -14,13 +14,14 @@ import type { Variant, VariantComponent } from "../lib/types/component";
 import Badge from "../ui/badge";
 import Button from "../ui/button";
 import CodeHighlighter from "../ui/code-highlighter";
-import { ScrollArea } from "../ui/shadcn-scrollarea";
+import { ScrollArea, ScrollBar } from "../ui/shadcn-scrollarea";
 import { cn } from "../utils/cn";
 import CustomIframeComponentDark from "./custom-iframe-component-dark";
 import CustomIframeComponentLight from "./custom-iframe-component-light";
 
-type TabType = "visual" | "code";
-type ViewSizeContainerType = "desktop" | "tablet" | "mobile";
+export type TabType = "visual" | "code";
+export type ViewSizeContainerType = "desktop" | "tablet" | "mobile";
+export type IframeSizeType = "xs" | "sm" | "md" | "lg";
 
 const isVariant = (value: string): value is Variant => {
   return /^\d+$/.test(value);
@@ -30,21 +31,17 @@ export default function FullComponent({
   componentList,
   title,
   description,
+  inspiration,
+  inspirationLink,
   size = "md",
 }: Readonly<{
   componentList: VariantComponent[];
   title: string;
   description: string;
-  size?: "sm" | "md" | "lg";
+  inspiration?: string;
+  inspirationLink?: string;
+  size?: IframeSizeType;
 }>) {
-  let containerSize = 700;
-  if (size === "sm") {
-    containerSize = 500;
-  }
-  if (size === "lg") {
-    containerSize = 900;
-  }
-
   const [tab, setTab] = useState<TabType>("visual");
   const [viewSizeContainer, setViewSizeContainer] =
     useState<ViewSizeContainerType>("desktop");
@@ -199,6 +196,7 @@ export default function FullComponent({
               getContainerCodeClassBasedOnSize(size),
             )}
           >
+            <ScrollBar orientation="horizontal" />
             <CodeHighlighter
               classNameContainer={"p-2"}
               code={codeToDisplay ?? "An error has occured"}
@@ -238,8 +236,10 @@ const getCodeToDisplay = (
   return null;
 };
 
-function getContainerCodeClassBasedOnSize(size: "sm" | "md" | "lg") {
+function getContainerCodeClassBasedOnSize(size: IframeSizeType) {
   switch (size) {
+    case "xs":
+      return "max-h-[200px] min-h-[200px]";
     case "sm":
       return "max-h-[400px] min-h-[400px]";
     case "md":
@@ -249,8 +249,10 @@ function getContainerCodeClassBasedOnSize(size: "sm" | "md" | "lg") {
   }
 }
 
-function getContainerClassBasedOnSize(size: "sm" | "md" | "lg") {
+function getContainerClassBasedOnSize(size: IframeSizeType) {
   switch (size) {
+    case "xs":
+      return "min-h-[200px] h-[200px]";
     case "sm":
       return "min-h-[400px] h-[400px]";
     case "md":
@@ -260,8 +262,10 @@ function getContainerClassBasedOnSize(size: "sm" | "md" | "lg") {
   }
 }
 
-function getContainerChildClassBasedOnSize(size: "sm" | "md" | "lg") {
+function getContainerChildClassBasedOnSize(size: IframeSizeType) {
   switch (size) {
+    case "xs":
+      return "min-h-[194px] h-[194px]";
     case "sm":
       return "min-h-[394px] h-[394px]";
     case "md":
@@ -280,8 +284,10 @@ function getIframeParentClasses(viewSizeContainer: ViewSizeContainerType) {
     "dark:bg-neutral-900 bg-neutral-50 rounded-md border border-neutral-500/20",
   );
 }
-export function getIframeContainerClassBasedOnSize(size: "sm" | "md" | "lg") {
+export function getIframeContainerClassBasedOnSize(size: IframeSizeType) {
   switch (size) {
+    case "xs":
+      return "*:min-h-[170px] h-[170px]";
     case "sm":
       return "*:min-h-[370px] h-[370px]";
     case "md":

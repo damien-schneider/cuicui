@@ -1,7 +1,10 @@
 "use client";
 import type React from "react";
 import Frame from "react-frame-component";
-import { getIframeContainerClassBasedOnSize } from "./full-component";
+import {
+  type IframeSizeType,
+  getIframeContainerClassBasedOnSize,
+} from "./full-component";
 
 const CustomIframeComponentDark = ({
   children,
@@ -10,7 +13,7 @@ const CustomIframeComponentDark = ({
 }: {
   children: React.ReactNode;
   className?: string;
-  size: "sm" | "md" | "lg";
+  size: IframeSizeType;
 }) => {
   return (
     <Frame

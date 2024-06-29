@@ -5,7 +5,7 @@ import GradientContainer from "../ui/gradient-container";
 export default function Page() {
   return (
     <div className="space-y-8 px-4 my-8">
-      <h1 className="font-medium text-gray-300 text-3xl">
+      <h1 className="font-medium dark:text-neutral-300 text-neutral-600 text-3xl tracking-tight">
         CuiCui - Copy Paste quality React component
       </h1>
       <p className="text-sm text-neutral-500">
@@ -15,7 +15,7 @@ export default function Page() {
       <div className="space-y-10 text-white">
         {componentCategories.map((section) => (
           <div key={section.name} className="space-y-5">
-            <p className="font-semibold text-gray-400 text-xs uppercase tracking-wider">
+            <p className="font-semibold text-neutral-400 text-xs uppercase tracking-wider">
               {section.name}
             </p>
 
