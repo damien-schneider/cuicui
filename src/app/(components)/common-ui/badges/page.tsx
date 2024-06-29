@@ -9,6 +9,7 @@ const BASE_COMPONENT_PATH =
 export default async function Page() {
   return (
     <FullComponent
+      size="sm"
       componentList={[
         {
           variantName: "Amber",

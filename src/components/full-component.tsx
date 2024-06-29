@@ -14,7 +14,7 @@ import type { Variant, VariantComponent } from "../lib/types/component";
 import Badge from "../ui/badge";
 import Button from "../ui/button";
 import CodeHighlighter from "../ui/code-highlighter";
-import ScrollArea from "../ui/scroll-area";
+import { ScrollArea } from "../ui/shadcn-scrollarea";
 import { cn } from "../utils/cn";
 import CustomIframeComponentDark from "./custom-iframe-component-dark";
 import CustomIframeComponentLight from "./custom-iframe-component-light";
@@ -160,48 +160,52 @@ export default function FullComponent({
           <Badge>No variant available</Badge>
         )}
       </menu>
-      <div
-        className={cn(
-          "flex min-h-96 max-w-full w-full items-center justify-center rounded-lg border border-neutral-500/20 p-0.5",
-        )}
-      >
-        {tab === "visual" ? (
-          <>
-            {resolvedTheme === "dark" ? (
-              <CustomIframeComponentDark
-                className={cn(
-                  "w-full flex items-center justify-center transition-all duration-300",
-                  viewSizeContainer === "desktop" && " max-w-screen-2xl",
-                  viewSizeContainer === "tablet" && "max-w-screen-sm",
-                  viewSizeContainer === "mobile" && "max-w-sm",
-                  `dark:bg-neutral-900 bg-neutral-50 rounded-md border border-neutral-500/20 h-[${containerSize}px]`,
-                )}
-                containerSize={containerSize}
-              >
-                {renderedComponent ?? <p>An error has occured</p>}
-              </CustomIframeComponentDark>
-            ) : (
-              <CustomIframeComponentLight
-                className={cn(
-                  "w-full flex items-center justify-center transition-all duration-300",
-                  viewSizeContainer === "desktop" && " max-w-screen-2xl",
-                  viewSizeContainer === "tablet" && "max-w-screen-sm",
-                  viewSizeContainer === "mobile" && "max-w-sm",
-                  `dark:bg-neutral-900 bg-neutral-50 rounded-md border border-neutral-500/20 h-[${containerSize}px]`,
-                )}
-                containerSize={containerSize}
-              >
-                {renderedComponent ?? <p>An error has occured</p>}
-              </CustomIframeComponentLight>
+
+      {tab === "visual" ? (
+        <div
+          className={cn(
+            "flex items-center justify-center rounded-lg border border-neutral-500/20 p-0.5",
+            getContainerClassBasedOnSize(size),
+          )}
+        >
+          {resolvedTheme === "dark" ? (
+            <CustomIframeComponentDark
+              className={cn(
+                getIframeParentClasses(viewSizeContainer),
+                getContainerChildClassBasedOnSize(size),
+              )}
+              size={size}
+            >
+              {renderedComponent ?? <p>An error has occured</p>}
+            </CustomIframeComponentDark>
+          ) : (
+            <CustomIframeComponentLight
+              className={cn(
+                getIframeParentClasses(viewSizeContainer),
+                getContainerChildClassBasedOnSize(size),
+              )}
+              size={size}
+            >
+              {renderedComponent ?? <p>An error has occured</p>}
+            </CustomIframeComponentLight>
+          )}
+        </div>
+      ) : (
+        <div className="p-0.5 rounded-lg border border-neutral-500/20">
+          <ScrollArea
+            // With a dynamic height, the code take its full size wich is a weird behaviour
+            classNameViewport={cn(
+              "w-full rounded-md bg-neutral-100 dark:bg-neutral-900  border border-neutral-500/20",
+              getContainerCodeClassBasedOnSize(size),
             )}
-          </>
-        ) : (
-          <CodeHighlighter
-            classNameContainer={`max-w-full w-full rounded-md bg-neutral-100 dark:bg-neutral-900 overflow-auto p-2 h-[${containerSize}px] border border-neutral-500/20`}
-            code={codeToDisplay ?? "An error has occured"}
-          />
-        )}
-      </div>
+          >
+            <CodeHighlighter
+              classNameContainer={"p-2"}
+              code={codeToDisplay ?? "An error has occured"}
+            />
+          </ScrollArea>
+        </div>
+      )}
     </div>
   );
 }
@@ -233,3 +237,56 @@ const getCodeToDisplay = (
   toast.error("Code was not found");
   return null;
 };
+
+function getContainerCodeClassBasedOnSize(size: "sm" | "md" | "lg") {
+  switch (size) {
+    case "sm":
+      return "max-h-[400px] min-h-[400px]";
+    case "md":
+      return "max-h-[700px] min-h-[700px]";
+    case "lg":
+      return "max-h-[900px] min-h-[900px]";
+  }
+}
+
+function getContainerClassBasedOnSize(size: "sm" | "md" | "lg") {
+  switch (size) {
+    case "sm":
+      return "min-h-[400px] h-[400px]";
+    case "md":
+      return "min-h-[700px] h-[700px]";
+    case "lg":
+      return "min-h-[900px] h-[900px]";
+  }
+}
+
+function getContainerChildClassBasedOnSize(size: "sm" | "md" | "lg") {
+  switch (size) {
+    case "sm":
+      return "min-h-[394px] h-[394px]";
+    case "md":
+      return "min-h-[694px] h-[694px]";
+    case "lg":
+      return "min-h-[894px] h-[894px]";
+  }
+}
+
+function getIframeParentClasses(viewSizeContainer: ViewSizeContainerType) {
+  return cn(
+    "w-full flex items-center justify-center transition-all duration-300",
+    viewSizeContainer === "desktop" && " max-w-screen-2xl",
+    viewSizeContainer === "tablet" && "max-w-screen-sm",
+    viewSizeContainer === "mobile" && "max-w-sm",
+    "dark:bg-neutral-900 bg-neutral-50 rounded-md border border-neutral-500/20",
+  );
+}
+export function getIframeContainerClassBasedOnSize(size: "sm" | "md" | "lg") {
+  switch (size) {
+    case "sm":
+      return "*:min-h-[370px] h-[370px]";
+    case "md":
+      return "*:min-h-[670px] h-[670px]";
+    case "lg":
+      return "*:min-h-[870px] h-[870px]";
+  }
+}

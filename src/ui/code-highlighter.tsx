@@ -25,7 +25,7 @@ export default function CodeHighlighter({
   };
 
   return (
-    <div className="relative w-full max-w-full">
+    <div className="relative w-full">
       <Button
         onClick={handleCopy(code)}
         variant="neutral"

@@ -12,7 +12,7 @@ import Button from "./button";
 import Byline from "./byline";
 import GradientContainer from "./gradient-container";
 import GradientText from "./gradient-text";
-import ScrollArea from "./scroll-area";
+import { ScrollArea } from "./shadcn-scrollarea";
 import ThemeSwitcher from "./theme-switcher";
 export function MobileNavbar({ className }: Readonly<{ className?: string }>) {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,15 +1,16 @@
 "use client";
 import type React from "react";
 import Frame from "react-frame-component";
+import { getIframeContainerClassBasedOnSize } from "./full-component";
 
 const CustomIframeComponentDark = ({
   children,
   className,
-  containerSize,
+  size,
 }: {
   children: React.ReactNode;
   className?: string;
-  containerSize: number;
+  size: "sm" | "md" | "lg";
 }) => {
   return (
     <Frame
@@ -24,11 +25,24 @@ const CustomIframeComponentDark = ({
               darkMode: 'selector'
               }
             </script>
+            <style>
+            body::-webkit-scrollbar {
+              width: 12px;               /* width of the entire scrollbar */
+            }
+            body::-webkit-scrollbar-track {
+              background: #171717;        /* color of the tracking area */
+            }
+            body::-webkit-scrollbar-thumb {
+              background-color: #a3a3a3;    /* color of the scroll thumb */
+              border-radius: 20px;       /* roundness of the scroll thumb */
+              border: 3px solid #171717;  /* creates padding around scroll thumb */
+            }
+            </style>
           </head>
           <body class="dark bg-neutral-900">
-            <div id="mountHere" class="p-4 *:flex *:items-center *:justify-center *:min-h-[${
-              containerSize - 40
-            }px]">
+            <div id="mountHere" class="p-4 *:flex *:items-center *:justify-center ${getIframeContainerClassBasedOnSize(
+              size,
+            )}">
             </div>
           </body>
         </html>

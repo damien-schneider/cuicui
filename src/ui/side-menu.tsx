@@ -17,8 +17,10 @@ import Badge from "./badge";
 import Byline from "./byline";
 import GradientContainer from "./gradient-container";
 import GradientText from "./gradient-text";
-import ScrollArea from "./scroll-area";
+
+import { ScrollArea } from "./shadcn-scrollarea";
 import ThemeSwitcher from "./theme-switcher";
+
 export function DesktopSideMenu({
   className,
 }: Readonly<{ className?: string }>) {
@@ -26,7 +28,7 @@ export function DesktopSideMenu({
     <div className={cn(className)}>
       <GradientContainer
         classNameParent="w-full max-h-full h-full"
-        classNameChild="overflow-auto h-full max-h-full flex flex-col justify-between"
+        classNameChild="h-full max-h-full flex flex-col justify-between"
       >
         <div className="flex items-center justify-between px-4 py-4">
           <Link href="/" className="group flex w-full items-center gap-x-2.5">
