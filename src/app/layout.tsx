@@ -43,7 +43,7 @@ export default function RootLayout({
               {/* <div className="gradient-top-animation absolute rotate-3 blur-[100px] h-48 w-[60vw] -right-[20vw] z-0 -top-24 opacity-20 pointer-events-none" /> */}
               <div className="w-full lg:pl-80">
                 {/* Add overflow-auto if layout width problems */}
-                <div className="w-full p-3 space-y-4 flex flex-col lg:pl-0 grow-0">
+                <div className="w-full p-3 space-y-4 flex flex-col lg:pl-0 grow-0  pb-24 lg:pb-0">
                   <AddressBar />
                   <GradientContainer rounded="sm" background="solid">
                     {/* Move overflow-auto to the previous comment if problems occurs */}

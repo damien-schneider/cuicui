@@ -8,11 +8,11 @@ export default function Byline({
   return (
     <GradientContainer rounded="sm">
       <div className={cn("block ", className)}>
-        <p className="text-gray-400 text-sm inline">By </p>
+        <p className="text-neutral-400 text-sm inline">By </p>
         <Link
           href="https://www.linkedin.com/in/schneider-damien/"
           title="Damien Schneider LinkedIn"
-          className="text-gray-400 text-sm hover:text-gray-100 inline"
+          className="text-neutral-400 text-sm hover:text-neutral-500 dark:hover:text-neutral-100 inline"
           target="_blank"
           rel="noreferrer"
           aria-label="Damien Schneider LinkedIn"
@@ -20,9 +20,9 @@ export default function Byline({
           Damien Schneider
         </Link>
 
-        <div className="text-gray-400 text-sm">
+        <div className="text-neutral-400 text-sm">
           <Link
-            className="underline decoration-dotted underline-offset-4 transition-colors hover:text-gray-300"
+            className="underline decoration-dotted underline-offset-4 transition-colors dark:hover:text-neutral-300 hover:text-neutral-500"
             href="https://github.com/damien-schneider"
             target="_blank"
             rel="noreferrer"
