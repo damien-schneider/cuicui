@@ -91,4 +91,16 @@ export const componentCategories: {
       },
     ],
   },
+  {
+    name: "Application UI",
+    slug: "application-ui",
+    items: [
+      {
+        name: "Settings",
+        slug: "settings",
+        description: "Create simple settings components",
+        releaseDate: new Date("2024-06-30"),
+      },
+    ],
+  },
 ];

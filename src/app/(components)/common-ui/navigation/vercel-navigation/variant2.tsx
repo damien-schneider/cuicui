@@ -10,25 +10,21 @@ const dataButtons = [
   { label: "Terms & conditions", href: "#" },
   { label: "Cuicui.day", href: "#" },
 ];
-export function VercelNavigationVariant1() {
-  const [elementFocused, setElementFocused] = useState<number | null>(null);
+export function VercelNavigationVariant2() {
+  const [parentFocused, setParentFocused] = useState<boolean>(false);
+  const [elementFocused, setElementFocused] = useState<number>(0);
 
-  const handleHoverButton = (index: number | null) => {
+  const handleOnClickButton = (index: number) => {
     setElementFocused(index);
   };
   return (
-    <nav
-      className="flex flex-col sm:flex-row"
-      onMouseLeave={() => {
-        handleHoverButton(null);
-      }}
-    >
+    <nav className="flex flex-col sm:flex-row">
       {dataButtons.map((button, index) => (
         <button
           type="button"
           key={button.label}
-          onMouseEnter={() => handleHoverButton(index)}
-          className="text-neutral-500 text-sm font-medium py-1 px-2 rounded relative whitespace-nowrap inline-flex w-fit"
+          onClick={() => handleOnClickButton(index)}
+          className="text-neutral-500 text-sm font-medium py-1 px-2 rounded relative whitespace-nowrap inline-flex w-fit dark:hover:text-neutral-400 hover:text-neutral-600 transition-colors"
         >
           {button.label}
           <AnimatePresence>
@@ -38,7 +34,7 @@ export function VercelNavigationVariant1() {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.2 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
                 layout
                 layoutId="focused-element"
               />

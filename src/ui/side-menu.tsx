@@ -117,9 +117,13 @@ function GlobalNavItem({
     >
       {item.name}
       {differenceInDays(new Date(), item.releaseDate ?? 0) < 24 && (
-        <Badge variant="lime" size="sm">
-          New
-        </Badge>
+        <GradientContainer
+          rounded="xs"
+          classNameChild="text-xs px-1 py-0"
+          classNameParent=""
+        >
+          <GradientText className="text-xs">New</GradientText>
+        </GradientContainer>
       )}
       {item.href && (
         <ArrowUpRightIcon className="size-4  text-black/40 dark:text-white/40 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
