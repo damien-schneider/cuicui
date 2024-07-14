@@ -1,3 +1,4 @@
+"use server";
 import { promises as fs } from "node:fs";
 import path from "node:path";
 
@@ -31,6 +32,10 @@ function getComponentPath({
     for (const item of category.items) {
       if (item.slug === componentSlug) {
         basePath = `${category.slug}/${item.slug}`;
+        console.log(
+          "\nHere is the basePath found where slug = slug:\n",
+          basePath,
+        );
         break;
       }
     }

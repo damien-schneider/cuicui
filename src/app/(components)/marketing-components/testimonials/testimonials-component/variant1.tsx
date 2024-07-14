@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react";
 import type React from "react";
 import { Fragment, useState } from "react";
-import CodeHighlighter from "#/src/ui/code-highlighter";
+
 const testimonials = [
   {
     content:
@@ -28,16 +28,7 @@ const testimonials = [
   },
 ];
 
-const codeBlock = `
-<div className="w-full bg-neutral-100 dark:bg-neutral-900 rounded-2xl p-8 overflow-hidden">
-      <h2 className="text-xl font-medium text-neutral-950 dark:text-neutral-50">
-        Testimonials
-      </h2>
-      <p className="text-sm text-neutral-500">
-        Why people love using Biltmore to get more done.
-      </p>
-`;
-export function Testimonials() {
+export function TestimonialsVariant1() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   function handleNextSlide() {
@@ -52,7 +43,6 @@ export function Testimonials() {
 
   return (
     <div className="w-full bg-neutral-100 dark:bg-neutral-900 rounded-2xl p-8 overflow-hidden ">
-      <CodeHighlighter code={codeBlock} />
       <h2 className="text-xl font-medium text-neutral-950 dark:text-neutral-50">
         Testimonials
       </h2>
