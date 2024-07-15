@@ -1,5 +1,7 @@
 import FullComponent from "#/src/components/full-component";
 import { getFileContentAsString } from "#/src/utils/get-file-content-as-string";
+import GradientQnAVariant1 from "./gradiant-qna/variant1";
+import GradientQnAVariant2 from "./gradiant-qna/variant2";
 import MarqueeVariant1 from "./marquee/variant1";
 import MarqueeVariant2 from "./marquee/variant2";
 import { TestimonialsVariant1 } from "./testimonials-component/variant1";
@@ -43,6 +45,30 @@ export default async function Page() {
           },
         ]}
         title="Marquee"
+        description="A simple marquee component with two variants, horizontal and vertical."
+      />
+      <FullComponent
+        size="lg"
+        componentList={[
+          {
+            variantName: "Double container",
+            component: <GradientQnAVariant1 />,
+            code: await getFileContentAsString({
+              componentSlug: "testimonials",
+              variantName: "gradiant-qna/variant1",
+            }),
+          },
+          {
+            variantName: "Simple container",
+            component: <GradientQnAVariant2 />,
+            code: await getFileContentAsString({
+              componentSlug: "testimonials",
+              variantName: "gradiant-qna/variant2",
+            }),
+          },
+        ]}
+        badges={["no-js"]}
+        title="Gradient Q&A"
         description="A simple marquee component with two variants, horizontal and vertical."
       />
     </>
