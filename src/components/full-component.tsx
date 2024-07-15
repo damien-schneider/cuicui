@@ -27,6 +27,13 @@ const isVariant = (value: string): value is Variant => {
   return /^\d+$/.test(value);
 };
 
+export type ComponentBadge =
+  | "new"
+  | "updated"
+  | "deprecated"
+  | "experimental"
+  | "no-js";
+
 export default function FullComponent({
   componentList,
   title,
@@ -34,6 +41,7 @@ export default function FullComponent({
   inspiration,
   inspirationLink,
   size = "md",
+  badges,
 }: Readonly<{
   componentList: VariantComponent[];
   title: string;
@@ -41,6 +49,7 @@ export default function FullComponent({
   inspiration?: string;
   inspirationLink?: string;
   size?: IframeSizeType;
+  badges?: string[];
 }>) {
   const [tab, setTab] = useState<TabType>("visual");
   const [viewSizeContainer, setViewSizeContainer] =
