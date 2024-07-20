@@ -7,6 +7,8 @@ import { useState } from "react";
 import { type Item, componentCategories } from "#/src/lib/component-categories";
 
 import { ArrowUpRightIcon, GithubIcon, MenuIcon } from "lucide-react";
+import Image from "next/image";
+import LogoLarge from "#/src/assets/logo/logo-large.png";
 import { cn } from "../utils/cn";
 import Button from "./button";
 import Byline from "./byline";
@@ -14,6 +16,7 @@ import GradientContainer from "./gradient-container";
 import GradientText from "./gradient-text";
 import { ScrollArea } from "./shadcn-scrollarea";
 import ThemeSwitcher from "./theme-switcher";
+
 export function MobileNavbar({ className }: Readonly<{ className?: string }>) {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -26,12 +29,13 @@ export function MobileNavbar({ className }: Readonly<{ className?: string }>) {
     >
       <GradientContainer
         classNameParent="flex flex-col w-full max-h-full backdrop-blur-lg rounded-b-none"
-        classNameChild="opacity-80 rounded-b-none h-full flex flex-col justify-between"
+        classNameChild="rounded-b-none h-full flex flex-col justify-between p-2"
+        background="solid"
       >
         <div>
           <div className="flex items-center justify-between px-4 py-4">
             <Link href="/" className="group flex w-full items-center gap-x-2.5">
-              <GradientText className="text-2xl">CuiCui</GradientText>
+              <Image src={LogoLarge} alt="Cuicui" width={120} />
             </Link>
             <ThemeSwitcher />
             <Button onClick={() => setIsOpen(!isOpen)}>
@@ -40,7 +44,7 @@ export function MobileNavbar({ className }: Readonly<{ className?: string }>) {
           </div>
           <GradientContainer
             rounded="sm"
-            classNameChild="hover:opacity-80 transition-opacity duration-150 ease-in-out py-2"
+            classNameChild="hover:opacity-80 transition-opacity duration-150 ease-in-out p-4"
             classNameParent=""
           >
             <Link

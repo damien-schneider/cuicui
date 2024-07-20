@@ -95,26 +95,33 @@ export default ({
   return (
     <div
       className={cn(
-        "from-sky-400/50 via-violet-500/50 to-orange-400/50 dark:from-violet-400/50 dark:via-amber-400/50 dark:to-rose-400/40 relative",
+        "relative",
         border && "p-px",
-        getGradientDirection(gradientDirection),
+        // getGradientDirection(gradientDirection),
         getRoundedValue(rounded, "parent"),
         classNameParent,
       )}
+      style={{
+        background: "linear-gradient(135deg, #3BC4F2, #7A69F9,#F26378,#F5833F)",
+      }}
     >
       <div
         className={cn(
-          "absolute blur-2xl -inset-2 -z-10 opacity-10 from-sky-400/70 via-violet-500/70 to-orange-400/70 dark:from-violet-400/70 dark:via-amber-400/70 dark:to-rose-400/70 pointer-events-none rounded-[inherit]",
-          getGradientDirection(gradientDirection),
+          "absolute blur-2xl -inset-2 -z-10 opacity-10 pointer-events-none rounded-[inherit]",
+          // getGradientDirection(gradientDirection),
           classNameBlur,
         )}
+        style={{
+          background:
+            "linear-gradient(135deg, #3BC4F2, #7A69F9,#F26378,#F5833F)",
+        }}
       />
       <div
         className={cn(
-          " px-5 py-1.5 rounded-[inherit]",
+          "rounded-[inherit]",
           background === "solid" && "bg-neutral-50 dark:bg-neutral-950",
           background === "glassy" &&
-            "bg-gradient-to-b from-white/95 to-white/85 dark:from-black/95 dark:to-black/85",
+            "bg-gradient-to-b from-white/95 to-white/90 dark:from-black/95 dark:to-black/85",
           getRoundedValue(rounded, "child"),
           classNameChild,
         )}

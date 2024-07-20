@@ -11,14 +11,15 @@ import { useState } from "react";
 import { type Item, componentCategories } from "#/src/lib/component-categories";
 
 import { differenceInDays } from "date-fns";
+import { ArrowUpRight, ArrowUpRightIcon, GithubIcon } from "lucide-react";
+import Image from "next/image";
 import { toast } from "sonner";
+import LogoLarge from "#/src/assets/logo/logo-large.png";
 import { cn } from "../utils/cn";
 import Badge from "./badge";
 import Byline from "./byline";
 import GradientContainer from "./gradient-container";
 import GradientText from "./gradient-text";
-
-import { ArrowUpRight, ArrowUpRightIcon, GithubIcon } from "lucide-react";
 import { ScrollArea } from "./shadcn-scrollarea";
 import ThemeSwitcher from "./theme-switcher";
 
@@ -26,57 +27,57 @@ export function DesktopSideMenu({
   className,
 }: Readonly<{ className?: string }>) {
   return (
-    <div className={cn(className)}>
-      <GradientContainer
-        classNameParent="w-full max-h-full h-full"
-        classNameChild="h-full max-h-full flex flex-col justify-between"
-      >
-        <div>
-          <div className="flex items-center justify-between px-4 py-4">
-            <Link href="/" className="group flex w-full items-center gap-x-2.5">
-              <GradientText className="text-2xl">CuiCui</GradientText>
-            </Link>
-            <ThemeSwitcher />
-          </div>
-          <GradientContainer
-            rounded="sm"
-            classNameChild="hover:opacity-80 transition-opacity duration-150 ease-in-out "
-            classNameParent=""
-          >
-            <Link
-              href="https://github.com/damien-schneider/cuicui"
-              className="flex gap-2 items-center  text-sm text-neutral-500 font-medium"
-            >
-              <GithubIcon className="size-5 fill-neutral-300 stroke-neutral-400 dark:stroke-neutral-500 dark:fill-neutral-600" />
-              Star this project on GitHub
-            </Link>
-          </GradientContainer>
+    <div
+      className={cn(
+        "p-3 top-1/2 z-50 hidden fixed lg:flex items-center w-80 max-h-dvh h-full -translate-y-1/2 flex-col justify-between",
+      )}
+    >
+      <div className="w-full">
+        <div className="flex items-center justify-between px-4 py-4">
+          <Link href="/" className="group flex w-full items-center gap-x-2.5">
+            <Image src={LogoLarge} alt="Cuicui" width={100} />
+          </Link>
+          <ThemeSwitcher />
         </div>
-        <ScrollArea className="">
-          <nav className="space-y-6 px-2 mt-5 mb-12">
-            {componentCategories.map((section) => {
-              return (
-                <div key={section.name}>
-                  <div className="mb-2 px-3 font-semibold text-neutral-500 dark:text-neutral-400 text-xs uppercase tracking-wider">
-                    <div>{section.name}</div>
-                  </div>
-
-                  <div className=" space-y-0.5">
-                    {section.items.map((item) => (
-                      <GlobalNavItem
-                        key={item.slug}
-                        item={item}
-                        parentSlug={section.slug}
-                      />
-                    ))}
-                  </div>
+        <GradientContainer
+          rounded="sm"
+          classNameChild="hover:opacity-80 transition-opacity duration-150 ease-in-out "
+          classNameParent="hover:scale-105 transition-transform"
+        >
+          <Link
+            href="https://github.com/damien-schneider/cuicui"
+            className="flex gap-2 items-center  text-sm text-neutral-500 font-medium p-2"
+          >
+            <GithubIcon className="size-5 fill-neutral-300 stroke-neutral-400 dark:stroke-neutral-500 dark:fill-neutral-600" />
+            Star this project on GitHub
+          </Link>
+        </GradientContainer>
+      </div>
+      <ScrollArea className="w-full ">
+        <nav className="space-y-6 px-2 mt-5 mb-12">
+          {componentCategories.map((section) => {
+            return (
+              <div key={section.name}>
+                <div className="mb-2 px-3 font-semibold text-neutral-500 dark:text-neutral-400 text-xs uppercase tracking-wider">
+                  <div>{section.name}</div>
                 </div>
-              );
-            })}
-          </nav>
-        </ScrollArea>
-        <Byline />
-      </GradientContainer>
+
+                <div className=" space-y-0.5">
+                  {section.items.map((item) => (
+                    <GlobalNavItem
+                      key={item.slug}
+                      item={item}
+                      parentSlug={section.slug}
+                    />
+                  ))}
+                </div>
+              </div>
+            );
+          })}
+        </nav>
+      </ScrollArea>
+      <Byline className="w-full" />
+
       {/* </div> */}
     </div>
   );

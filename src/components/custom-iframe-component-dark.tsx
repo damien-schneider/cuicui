@@ -1,5 +1,6 @@
 "use client";
 import type React from "react";
+import { useEffect, useState } from "react";
 import Frame from "react-frame-component";
 import {
   type IframeSizeType,
@@ -15,6 +16,15 @@ const CustomIframeComponentDark = ({
   className?: string;
   size: IframeSizeType;
 }) => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) {
+    return null;
+  }
   return (
     <Frame
       className={className}

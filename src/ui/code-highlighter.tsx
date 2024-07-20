@@ -1,6 +1,8 @@
+"use client";
 import { motion } from "framer-motion";
 import { CopyIcon } from "lucide-react";
 import { Highlight, type PrismTheme, themes } from "prism-react-renderer";
+import { useEffect, useState } from "react";
 import { toast } from "sonner";
 import "../styles/prism-js-custom.css";
 import { cn } from "../utils/cn";

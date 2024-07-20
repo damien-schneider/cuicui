@@ -2,6 +2,7 @@
 import type React from "react";
 import Frame from "react-frame-component";
 
+import { useEffect, useState } from "react";
 import { cn } from "../utils/cn";
 import {
   type IframeSizeType,
@@ -17,6 +18,15 @@ const CustomIframeComponentLight = ({
   className?: string;
   size: IframeSizeType;
 }) => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) {
+    return null;
+  }
   return (
     <Frame
       className={className}
