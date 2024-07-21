@@ -42,6 +42,7 @@ export default function FullComponent({
   inspirationLink,
   size = "md",
   badges,
+  isIframed = true,
 }: Readonly<{
   componentList: VariantComponent[];
   title: string;
@@ -50,6 +51,7 @@ export default function FullComponent({
   inspirationLink?: string;
   size?: IframeSizeType;
   badges?: string[];
+  isIframed?: boolean;
 }>) {
   const [tab, setTab] = useState<TabType>("visual");
   const [viewSizeContainer, setViewSizeContainer] =
@@ -174,27 +176,13 @@ export default function FullComponent({
             getContainerClassBasedOnSize(size),
           )}
         >
-          {resolvedTheme === "dark" ? (
-            <CustomIframeComponentDark
-              className={cn(
-                getIframeParentClasses(viewSizeContainer),
-                getContainerChildClassBasedOnSize(size),
-              )}
-              size={size}
-            >
-              {renderedComponent ?? <p>An error has occured</p>}
-            </CustomIframeComponentDark>
-          ) : (
-            <CustomIframeComponentLight
-              className={cn(
-                getIframeParentClasses(viewSizeContainer),
-                getContainerChildClassBasedOnSize(size),
-              )}
-              size={size}
-            >
-              {renderedComponent ?? <p>An error has occured</p>}
-            </CustomIframeComponentLight>
-          )}
+          <ComponentWrapper
+            isIframed={isIframed}
+            viewSizeContainer={viewSizeContainer}
+            size={size}
+          >
+            {renderedComponent ?? <p>An error has occured</p>}
+          </ComponentWrapper>
         </div>
       ) : (
         <div className="p-0.5 rounded-lg border border-neutral-500/20">
@@ -216,6 +204,57 @@ export default function FullComponent({
     </div>
   );
 }
+
+const ComponentWrapper = ({
+  isIframed = true,
+  viewSizeContainer,
+  size,
+  children,
+}: {
+  isIframed?: boolean;
+  viewSizeContainer: ViewSizeContainerType;
+  size: IframeSizeType;
+  children: React.ReactNode;
+}) => {
+  if (!isIframed) {
+    return (
+      <div
+        className={cn(
+          getIframeParentClasses(viewSizeContainer),
+          getContainerChildClassBasedOnSize(size),
+          "overflow-hidden",
+        )}
+      >
+        {children}
+      </div>
+    );
+  }
+  const { resolvedTheme } = useTheme();
+  if (resolvedTheme === "dark") {
+    return (
+      <CustomIframeComponentDark
+        className={cn(
+          getIframeParentClasses(viewSizeContainer),
+          getContainerChildClassBasedOnSize(size),
+        )}
+        size={size}
+      >
+        {children}
+      </CustomIframeComponentDark>
+    );
+  }
+  return (
+    <CustomIframeComponentLight
+      className={cn(
+        getIframeParentClasses(viewSizeContainer),
+        getContainerChildClassBasedOnSize(size),
+      )}
+      size={size}
+    >
+      {children}
+    </CustomIframeComponentLight>
+  );
+};
 
 const getComponentToDisplay = (
   componentList: VariantComponent[],

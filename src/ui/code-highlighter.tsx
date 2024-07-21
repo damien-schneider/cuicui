@@ -44,7 +44,7 @@ export default function CodeHighlighter({
       </pre> */}
       <Highlight code={code} language="tsx">
         {({ tokens, getLineProps, getTokenProps }) => (
-          <pre className={cn("", classNameContainer)}>
+          <pre className={cn("text-xs", classNameContainer)}>
             {tokens.map((line, index) => (
               // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
               <div key={index} {...getLineProps({ line, key: index })}>

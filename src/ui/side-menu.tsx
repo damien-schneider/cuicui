@@ -21,6 +21,7 @@ import Byline from "./byline";
 import GradientContainer from "./gradient-container";
 import GradientText from "./gradient-text";
 import { ScrollArea } from "./shadcn-scrollarea";
+import StarGithubProjectButton from "./star-github-project-button";
 import ThemeSwitcher from "./theme-switcher";
 
 export function DesktopSideMenu({
@@ -34,24 +35,15 @@ export function DesktopSideMenu({
     >
       <div className="w-full">
         <div className="flex items-center justify-between px-4 py-4">
-          <Link href="/" className="group flex w-full items-center gap-x-2.5">
-            <Image src={LogoLarge} alt="Cuicui" width={100} />
+          <Link
+            href="/"
+            className="group flex items-center gap-x-2.5 w-fit hover:scale-105 transition-transform"
+          >
+            <Image src={LogoLarge} alt="Cuicui logo" width={100} />
           </Link>
           <ThemeSwitcher />
         </div>
-        <GradientContainer
-          rounded="sm"
-          classNameChild="hover:opacity-80 transition-opacity duration-150 ease-in-out "
-          classNameParent="hover:scale-105 transition-transform"
-        >
-          <Link
-            href="https://github.com/damien-schneider/cuicui"
-            className="flex gap-2 items-center  text-sm text-neutral-500 font-medium p-2"
-          >
-            <GithubIcon className="size-5 fill-neutral-300 stroke-neutral-400 dark:stroke-neutral-500 dark:fill-neutral-600" />
-            Star this project on GitHub
-          </Link>
-        </GradientContainer>
+        <StarGithubProjectButton />
       </div>
       <ScrollArea className="w-full ">
         <nav className="space-y-6 px-2 mt-5 mb-12">

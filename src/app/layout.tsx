@@ -39,9 +39,13 @@ export default function RootLayout({
         <body className="dark:bg-neutral-950 bg-neutral-50">
           <Toaster />
           <ClientProvider>
-            <div className="max-w-screen-2xl mx-auto  w-screen relative">
-              <DesktopSideMenu />
-              {/* <div className="gradient-top-animation absolute rotate-3 blur-[100px] h-48 w-[60vw] -right-[20vw] z-0 -top-24 opacity-20 pointer-events-none" /> */}
+            <div className="max-w-screen-2xl mx-auto w-screen">
+              <DesktopSideMenu className="p-3 top-1/2 z-50 hidden fixed lg:flex items-center justify-center w-80 max-h-dvh h-full -translate-y-1/2" />
+              <div className="absolute top-0 left-0 bottom-0 right-0 overflow-hidden">
+                <div className="relative">
+                  <div className="gradient-top-animation absolute rotate-3 blur-[100px] h-48 w-[60vw] -right-[20vw] z-0 -top-24 opacity-20 pointer-events-none" />
+                </div>
+              </div>
               <div className="w-full lg:pl-80">
                 {/* Add overflow-auto if layout width problems */}
                 <div className="w-full p-3 h-[dvh] space-y-3">

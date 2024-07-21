@@ -15,6 +15,7 @@ import Byline from "./byline";
 import GradientContainer from "./gradient-container";
 import GradientText from "./gradient-text";
 import { ScrollArea } from "./shadcn-scrollarea";
+import StarGithubProjectButton from "./star-github-project-button";
 import ThemeSwitcher from "./theme-switcher";
 
 export function MobileNavbar({ className }: Readonly<{ className?: string }>) {
@@ -42,19 +43,7 @@ export function MobileNavbar({ className }: Readonly<{ className?: string }>) {
               <MenuIcon className="size-8" />
             </Button>
           </div>
-          <GradientContainer
-            rounded="sm"
-            classNameChild="hover:opacity-80 transition-opacity duration-150 ease-in-out p-4"
-            classNameParent=""
-          >
-            <Link
-              href="https://github.com/damien-schneider/cuicui"
-              className="flex gap-2 items-center  text-sm text-neutral-500 font-medium"
-            >
-              <GithubIcon className="size-5 fill-neutral-300 stroke-neutral-400 dark:stroke-neutral-500 dark:fill-neutral-600" />
-              Star this project on GitHub
-            </Link>
-          </GradientContainer>
+          <StarGithubProjectButton />
         </div>
         <ScrollArea>
           <nav className="space-y-6 px-2 pt-5 mb-24">
