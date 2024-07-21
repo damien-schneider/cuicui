@@ -103,4 +103,16 @@ export const componentCategories: {
       },
     ],
   },
+  {
+    name: "Other",
+    slug: "other",
+    items: [
+      {
+        name: "Cursors",
+        slug: "cursors",
+        description: "Create cursor effects",
+        releaseDate: new Date("2024-07-21"),
+      },
+    ],
+  },
 ];

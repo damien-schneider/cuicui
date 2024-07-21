@@ -37,9 +37,9 @@ const Testimonial = ({
   content: string;
 }) => {
   return (
-    <div className="bg-neutral-500/10 rounded-3xl overflow-hidden has-[:open]:bg-neutral-500/60 relative backdrop-blur-2xl">
-      <details className="p-4 peer group max-h-96 overflow-hidden transition-all duration-500 w-full open:pt-8 open:pl-8 ">
-        <summary className="flex cursor-pointer list-none items-center justify-between gap-4">
+    <div className="bg-neutral-500/10 hover:bg-neutral-500/20 border border-neutral-400/20 transition-all rounded-3xl overflow-hidden relative backdrop-blur-2xl">
+      <details className="peer group max-h-96 overflow-hidden transition-all w-full">
+        <summary className="flex cursor-pointer list-none items-center justify-between gap-4 p-4 group-open:pt-8 group-open:pl-8 duration-300  transition-all">
           <h6 className="text-lg tracking-tight text-neutral-600 dark:text-neutral-300 font-medium">
             {title}
           </h6>

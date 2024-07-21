@@ -6,7 +6,11 @@ export default function Byline({
   className,
 }: Readonly<{ className?: string }>) {
   return (
-    <GradientContainer rounded="sm">
+    <GradientContainer
+      rounded="sm"
+      classNameParent="w-full"
+      classNameChild="px-4 py-2"
+    >
       <div className={cn("block ", className)}>
         <p className="text-neutral-400 text-sm inline">By </p>
         <Link

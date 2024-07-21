@@ -29,9 +29,10 @@ export default function Page() {
                   >
                     <GradientContainer
                       rounded="sm"
-                      classNameChild="z-30"
-                      classNameParent=""
-                      classNameBlur="z-20 opacity-5 blur-md group-hover:opacity-10 transition-all duration-150 ease-in-out"
+                      classNameChild="z-30 bg-white"
+                      classNameParent="overflow-hidden"
+                      classNameBlur="z-20 opacity-0 blur-md group-hover:opacity-5 transition-all duration-150 ease-in-out"
+                      background="solid"
                     >
                       <div className=" flex gap-2 flex-col p-2 group-hover:opacity-80 transition-opacity">
                         <h4 className="font-medium dark:text-neutral-300 text-neutral-700 group-hover:translate-x-1 transition-transform">

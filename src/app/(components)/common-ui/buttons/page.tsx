@@ -3,6 +3,7 @@ import { getFileContentAsString } from "#/src/utils/get-file-content-as-string";
 import BeforeEffectButtonVariant1 from "./before-effect-button/variant1";
 import BeforeEffectButtonVariant2 from "./before-effect-button/variant2";
 import GrowingButtonVariant1 from "./growing-button/variant1";
+import ShinyRotatingBorderButtonVariant1 from "./shiny-rotating-border-button/variant1";
 
 const BASE_COMPONENT_PATH =
   "./src/app/(components)/marketing-components/features/";
@@ -46,6 +47,21 @@ export default async function Page() {
         ]}
         title="Dynamic button hover effect"
         description="Button with a hover effect that have a 'before' effect."
+      />
+      <FullComponent
+        size="xs"
+        componentList={[
+          {
+            variantName: "Shiny rotating border button",
+            component: <ShinyRotatingBorderButtonVariant1 />,
+            code: await getFileContentAsString({
+              componentSlug: "buttons",
+              variantName: "shiny-rotating-border-button/variant1",
+            }),
+          },
+        ]}
+        title="Shiny rotating border button"
+        description="Button with a shiny rotating border effect."
       />
     </>
   );

@@ -9,21 +9,18 @@ const testimonials = [
     content:
       'Biltmore has saved employees at Harmony an estimated 400+ hours in task prioritization and management. "It\'s an amazing tool that we highly recommend."',
     author: "John, Marketing Manager at Harmony",
-    imgSource: "https://randomuser/1",
     imgAlt: "John",
   },
   {
     content:
       '"I love how Biltmore adapts to my workflow. It\'s like having a personal assistant right at my fingertips!"',
     author: "James, Software Engineer at Sage",
-    imgSource: "https://randomuser/2",
     imgAlt: "James",
   },
   {
     content:
       "Users report an average 15% increase in productivity after using Biltmore, allowing the software to pay for itself.",
     author: "",
-    imgSource: "https://randomuser/3",
     imgAlt: "Peter",
   },
 ];
@@ -69,30 +66,26 @@ export function TestimonialsVariant1() {
       </div>
       <section className="flex mt-8 *:shrink-0 gap-2 w-full">
         {testimonials.map((testimonial, index) => (
-          <Fragment key={testimonial.content}>
-            <AnimatePresence mode="popLayout">
-              {index >= currentSlide && (
-                <motion.div
-                  initial={{ opacity: 0, x: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, x: 0, scale: 1 }}
-                  exit={{ opacity: 0, x: 0, scale: 0.8 }}
-                  transition={{ duration: 0.35, ease: "easeInOut" }}
-                  layout
-                  className="bg-white dark:bg-neutral-800 rounded-lg p-4 flex flex-col justify-between h-60 w-[24rem] shadow-sm"
-                >
-                  <div className="flex justify-end gap-2">
-                    <img alt={testimonial.imgAlt} src={testimonial.imgSource} />
-                  </div>
-                  <p className="tracking-tight font-medium leading-5 text-neutral-600 dark:text-neutral-400">
-                    {testimonial.content}
-                  </p>
-                  <p className="text-xs text-neutral-400 dark:text-neutral-500">
-                    {testimonial.author}
-                  </p>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </Fragment>
+          <AnimatePresence mode="popLayout" key={testimonial.content}>
+            {index >= currentSlide && (
+              <motion.div
+                initial={{ opacity: 0, x: 0, scale: 0.8 }}
+                animate={{ opacity: 1, x: 0, scale: 1 }}
+                exit={{ opacity: 0, x: 0, scale: 0.8 }}
+                transition={{ duration: 0.35, ease: "easeInOut" }}
+                layout
+                className="bg-white dark:bg-neutral-800 rounded-lg p-4 flex flex-col justify-between h-60 w-[24rem] shadow-sm"
+              >
+                <div className="size-7 bg-neutral-500/10 rounded-full" />
+                <p className="tracking-tight font-medium leading-5 text-neutral-600 dark:text-neutral-400">
+                  {testimonial.content}
+                </p>
+                <p className="text-xs text-neutral-400 dark:text-neutral-500">
+                  {testimonial.author}
+                </p>
+              </motion.div>
+            )}
+          </AnimatePresence>
         ))}
       </section>
     </div>

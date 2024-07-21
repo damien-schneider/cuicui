@@ -1,6 +1,8 @@
+"use client";
 import { motion } from "framer-motion";
 import { CopyIcon } from "lucide-react";
 import { Highlight, type PrismTheme, themes } from "prism-react-renderer";
+import { useEffect, useState } from "react";
 import { toast } from "sonner";
 import "../styles/prism-js-custom.css";
 import { cn } from "../utils/cn";
@@ -42,7 +44,7 @@ export default function CodeHighlighter({
       </pre> */}
       <Highlight code={code} language="tsx">
         {({ tokens, getLineProps, getTokenProps }) => (
-          <pre className={cn("", classNameContainer)}>
+          <pre className={cn("text-xs", classNameContainer)}>
             {tokens.map((line, index) => (
               // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
               <div key={index} {...getLineProps({ line, key: index })}>
