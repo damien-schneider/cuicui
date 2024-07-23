@@ -1,28 +1,41 @@
-# Next.js App Router Playground
+<div align="center">
+  <a href="https://github.com/damien-schneider/cuicui">
 
-Next.js recently introduced the App Router with support for:
 
-- **Layouts:** Easily share UI while preserving state and avoiding re-renders.
-- **Server Components:** Making server-first the default for the most dynamic applications.
-- **Streaming:** Display instant loading states and stream in updates.
-- **Suspense for Data Fetching:** `async`/`await` support and the `use` hook for component-level fetching.
+ <img src="https://github.com/damien-schneider/cuicui/blob/main/src/assets/logo/logo-large.png?raw=true" alt="Logo" width="210" height="60">
+  </a>
+  <!-- <h1 align="left">CuiCui - A high quality react copy paste components library</h1> -->
+  <hr></hr>
+  <p align="left">
+   An open-source animated components built with React, Typescript, Tailwind CSS, and Framer Motion.
+100% open-source, and customizable that can be copy pasted directly into your code base.
+  </p>
+  <p>
+   <a href="https://www.cuicui.day/">Visit site</a>
+    ·
+    <a href="https://github.com/damien-schneider/cuicui/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/damien-schneider/cuicui/issues">Request Feature</a>
+  </p>
+</div>
 
-The App Router can coexist with the existing `pages` directory for incremental adoption. While you **don't need to use the App Router** when upgrading to Next.js 13, we're laying the foundations to build complex interfaces while shipping less JavaScript.
+<!-- ABOUT THE PROJECT -->
 
-## Running Locally
+## About The Project
 
-1. Install dependencies:
+ open-source animated components built with React, Typescript, Tailwind CSS, and Framer Motion.
+100% open-source, and customizable.
 
-```sh
-pnpm install
-```
+If you want to join this journey, <a href="https://discord.gg/">join our discord community</a>
 
-2. Start the dev server:
+## License
 
-```sh
-pnpm dev
-```
+Licensed under the [MIT license.](https://github.com/damien-schneider/cuicui/blob/main/license.md)
 
-## Documentation
+## Contributing
 
-https://nextjs.org/docs
+visit this [Documentation](https://github.com/damien-schneider/cuicui/blob/main/contributing.md)
+
+### Commit Message Convention
+
+We are using Gitmoji for our commit messages. You can find the rules at [gitmoji.dev](https://gitmoji.dev/)
