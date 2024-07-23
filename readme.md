@@ -26,8 +26,6 @@
  open-source animated components built with React, Typescript, Tailwind CSS, and Framer Motion.
 100% open-source, and customizable.
 
-If you want to join this journey, <a href="https://discord.gg/">join our discord community</a>
-
 ## License
 
 Licensed under the [MIT license.](https://github.com/damien-schneider/cuicui/blob/main/license.md)
