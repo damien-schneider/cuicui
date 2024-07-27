@@ -13,7 +13,7 @@ export type ComponentBadge =
   | "experimental"
   | "no-js";
 
-export type LibraryBadge = "framer-motion" | "sonner";
+export type LibraryBadge = "framer-motion" | "sonner" | "lucide-react";
 
 export type FrameworkBadge =
   | "react"
