@@ -1,6 +1,7 @@
 import FullComponent from "#/src/components/full-component";
 import { getFileContentAsString } from "#/src/utils/get-file-content-as-string";
 import AdvancedBadgesVariant1 from "./advanced-badges/variant1";
+import ClerkBadgeVariant1 from "./clerk-badge/variant1";
 
 import { BadgeSimpleVariantAmber } from "./modern-simple-badges/variant1";
 import { BadgeSimpleVariantRed } from "./modern-simple-badges/variant2";
@@ -32,6 +33,23 @@ export default async function Page() {
         ]}
         title="Badge"
         description="Simple modern badge that can be used in any project with any artisitic style."
+      />
+      <FullComponent
+        size="xs"
+        componentList={[
+          {
+            variantName: "default",
+            component: <ClerkBadgeVariant1 />,
+            code: await getFileContentAsString({
+              componentSlug: "badges",
+              variantName: "clerk-badge/variant1",
+            }),
+          },
+        ]}
+        title="Clerk Badge"
+        description="Simple modern badge that can be used in any project with any artisitic style."
+        inspiration="Clerk"
+        inspirationLink="https://clerk.com/docs"
       />
       <FullComponent
         size="xs"
