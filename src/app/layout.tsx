@@ -3,9 +3,9 @@ import { ThemeProvider } from "next-themes";
 import { Toaster } from "sonner";
 import "#/src/styles/globals.css";
 import { AddressBar } from "#/src/ui/address-bar";
-import { DesktopSideMenu } from "#/src/ui/side-menu";
+import { DesktopSideMenu } from "#/src/ui/navigation/desktop-menu";
 import GradientContainer from "../ui/gradient-container";
-import { MobileNavbar } from "../ui/mobile-navbar";
+import { MobileMenu } from "../ui/navigation/mobile-menu";
 import { ScrollArea } from "../ui/shadcn-scrollarea";
 import ClientProvider from "./client-provider";
 
@@ -39,7 +39,7 @@ export default function RootLayout({
         <body className="dark:bg-neutral-950 bg-neutral-50">
           <Toaster />
           <ClientProvider>
-            <div className="max-w-screen-2xl mx-auto w-screen">
+            <div className="max-w-screen-2xl mx-auto">
               <DesktopSideMenu className="p-3 top-1/2 z-50 hidden fixed lg:flex items-center justify-center w-80 max-h-dvh h-full -translate-y-1/2" />
               <div className="absolute top-0 left-0 bottom-0 right-0 overflow-hidden">
                 <div className="relative">
@@ -60,7 +60,7 @@ export default function RootLayout({
                     {children}
                   </GradientContainer>
                 </div>
-                <MobileNavbar className="" />
+                <MobileMenu className="" />
               </div>
             </div>
           </ClientProvider>
