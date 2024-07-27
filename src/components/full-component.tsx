@@ -8,9 +8,16 @@ import {
   TabletIcon,
 } from "lucide-react";
 import { useTheme } from "next-themes";
+import Link from "next/link";
 import { useCallback, useMemo, useState } from "react";
 import { toast } from "sonner";
-import type { Variant, VariantComponent } from "../lib/types/component";
+import type {
+  ComponentBadge,
+  FrameworkBadge,
+  LibraryBadge,
+  Variant,
+  VariantComponent,
+} from "../lib/types/component";
 import Badge from "../ui/badge";
 import Button from "../ui/button";
 import CodeHighlighter from "../ui/code-highlighter";
@@ -27,13 +34,6 @@ const isVariant = (value: string): value is Variant => {
   return /^\d+$/.test(value);
 };
 
-export type ComponentBadge =
-  | "new"
-  | "updated"
-  | "deprecated"
-  | "experimental"
-  | "no-js";
-
 export default function FullComponent({
   componentList,
   title,
@@ -41,7 +41,9 @@ export default function FullComponent({
   inspiration,
   inspirationLink,
   size = "md",
-  badges,
+  frameworksBadges,
+  librariesBadges,
+  componentBadges,
   isIframed = true,
 }: Readonly<{
   componentList: VariantComponent[];
@@ -50,7 +52,9 @@ export default function FullComponent({
   inspiration?: string;
   inspirationLink?: string;
   size?: IframeSizeType;
-  badges?: string[];
+  frameworksBadges?: FrameworkBadge[];
+  librariesBadges?: LibraryBadge[];
+  componentBadges?: ComponentBadge[];
   isIframed?: boolean;
 }>) {
   const [tab, setTab] = useState<TabType>("visual");
@@ -201,6 +205,25 @@ export default function FullComponent({
           </ScrollArea>
         </div>
       )}
+      <p>
+        {inspiration && (
+          <p className="text-neutral-500 text-xs mt-4">
+            Inspired by{" "}
+            {inspirationLink ? (
+              <Link
+                href={inspirationLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-amber-500 hover:text-amber-600"
+              >
+                {inspiration}
+              </Link>
+            ) : (
+              <span>{inspiration}</span>
+            )}
+          </p>
+        )}
+      </p>
     </div>
   );
 }
