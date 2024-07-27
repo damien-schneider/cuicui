@@ -39,7 +39,8 @@
 		"react-dom": "18.2.0",
 		"react-frame-component": "5.2.7",
 		"sonner": "1.5.0",
-		"tailwind-merge": "2.3.0"
+		"tailwind-merge": "2.3.0",
+		"vaul": "0.9.1"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.7.1",
