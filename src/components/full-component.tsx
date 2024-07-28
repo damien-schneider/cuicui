@@ -8,14 +8,22 @@ import {
   TabletIcon,
 } from "lucide-react";
 import { useTheme } from "next-themes";
+import Link from "next/link";
 import { useCallback, useMemo, useState } from "react";
 import { toast } from "sonner";
-import type { Variant, VariantComponent } from "../lib/types/component";
+import type {
+  ComponentBadge,
+  FrameworkBadge,
+  LibraryBadge,
+  Variant,
+  VariantComponent,
+} from "../lib/types/component";
 import Badge from "../ui/badge";
 import Button from "../ui/button";
 import CodeHighlighter from "../ui/code-highlighter";
 import { ScrollArea, ScrollBar } from "../ui/shadcn-scrollarea";
 import { cn } from "../utils/cn";
+import BadgeList from "./badge-list";
 import CustomIframeComponentDark from "./custom-iframe-component-dark";
 import CustomIframeComponentLight from "./custom-iframe-component-light";
 
@@ -27,12 +35,7 @@ const isVariant = (value: string): value is Variant => {
   return /^\d+$/.test(value);
 };
 
-export type ComponentBadge =
-  | "new"
-  | "updated"
-  | "deprecated"
-  | "experimental"
-  | "no-js";
+// TODO : Use context to refactor everything
 
 export default function FullComponent({
   componentList,
@@ -41,7 +44,9 @@ export default function FullComponent({
   inspiration,
   inspirationLink,
   size = "md",
-  badges,
+  frameworksBadges,
+  librariesBadges,
+  componentBadges,
   isIframed = true,
 }: Readonly<{
   componentList: VariantComponent[];
@@ -50,7 +55,9 @@ export default function FullComponent({
   inspiration?: string;
   inspirationLink?: string;
   size?: IframeSizeType;
-  badges?: string[];
+  frameworksBadges?: FrameworkBadge[];
+  librariesBadges?: LibraryBadge[];
+  componentBadges?: ComponentBadge[];
   isIframed?: boolean;
 }>) {
   const [tab, setTab] = useState<TabType>("visual");
@@ -86,8 +93,23 @@ export default function FullComponent({
 
   return (
     <div>
+      {componentBadges && (
+        <div className="flex items-center gap-2">
+          {componentBadges?.map((badge) => (
+            <Badge variant="lime" size="sm" key={badge}>
+              {badge}
+            </Badge>
+          ))}
+        </div>
+      )}
       <h2 className="header-2">{title}</h2>
       <p className="text-neutral-400 text-sm mb-4">{description}</p>
+      {librariesBadges && (
+        <BadgeList title="Required librairies :" badgeList={librariesBadges} />
+      )}
+      {frameworksBadges && (
+        <BadgeList title="Used frameworks :" badgeList={frameworksBadges} />
+      )}
       <menu className="mb-2 flex justify-between items-end">
         <div className="inline-flex gap-2 rounded-lg border border-neutral-500/20 p-0.5">
           <Button
@@ -200,6 +222,23 @@ export default function FullComponent({
             />
           </ScrollArea>
         </div>
+      )}
+      {inspiration && (
+        <p className="text-neutral-500 text-xs mt-4">
+          Inspired by{" "}
+          {inspirationLink ? (
+            <Link
+              href={inspirationLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-amber-500 hover:text-amber-600"
+            >
+              {inspiration}
+            </Link>
+          ) : (
+            <span>{inspiration}</span>
+          )}
+        </p>
       )}
     </div>
   );

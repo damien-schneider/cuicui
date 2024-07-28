@@ -6,6 +6,10 @@ import { type HTMLAttributes, useState } from "react";
 import { toast } from "sonner";
 import { cn } from "#/src/utils/cn";
 
+//TODO : Improve by refactoring the different sections into their own components
+//TODO : Improve by adding a dark version
+//TODO : Add dimensions section with sliders
+
 const menuCategories = [
   { label: "Dimensions", slug: "dimensions", menuWidth: 320, menuHeight: 240 },
   {
@@ -46,10 +50,10 @@ export default function DynamicSettingsVariant1() {
         !isOpen && "hover:bg-neutral-800",
       )}
     >
-      <div>
+      <div className="h-full">
         <div
           className={cn(
-            "transition-all duration-300 flex flex-col justify-between gap-2",
+            "transition-all duration-300 flex flex-col justify-between gap-2 h-full",
           )}
         >
           <div
@@ -86,104 +90,92 @@ export default function DynamicSettingsVariant1() {
               />
             </button>
           </div>
-          <AnimatePresence mode="popLayout">
-            {isOpen && subMenuSelected === "aspect-ratio" && (
-              <motion.div
-                initial={{ opacity: 0, filter: "blur(4px)" }}
-                exit={{ opacity: 0, filter: "blur(4px)" }}
-                animate={{ opacity: 1, filter: "blur(0px)" }}
-                transition={{ duration: 1.2, type: "spring" }}
-                className="flex flex-col gap-4 "
-              >
-                <AspectRatioSection />
-                <div className="flex justify-between">
-                  <div className="flex items-center gap-2 ml-2">
-                    <div className="rounded-full size-2 bg-yellow-200" />
-                    <p className="text-sm text-neutral-500">Changes</p>
-                  </div>
-                  <button
-                    type="submit"
-                    className="text-neutral-800 bg-yellow-200 py-1 font-medium px-2 rounded-lg"
-                    onClick={() => {
-                      handleOpenSettings();
-                      toast.message("Changes done", {
-                        description:
-                          "Changes validated and applied successfully",
-                      });
-                    }}
-                  >
-                    Apply Changes
-                  </button>
+          {isOpen && subMenuSelected === "aspect-ratio" && (
+            <motion.div
+              initial={{ opacity: 0, filter: "blur(4px)" }}
+              animate={{ opacity: 1, filter: "blur(0px)" }}
+              transition={{ duration: 1.2, type: "spring" }}
+              className="flex flex-col gap-4 justify-between"
+            >
+              <AspectRatioSection />
+              <div className="flex justify-between">
+                <div className="flex items-center gap-2 ml-2">
+                  <div className="rounded-full size-2 bg-yellow-200" />
+                  <p className="text-sm text-neutral-500">Changes</p>
                 </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
-          <AnimatePresence mode="popLayout">
-            {isOpen && subMenuSelected === "prompt" && (
-              <motion.div
-                initial={{ opacity: 0, filter: "blur(4px)" }}
-                exit={{ opacity: 0, filter: "blur(4px)" }}
-                animate={{ opacity: 1, filter: "blur(0px)" }}
-                transition={{ duration: 1.2, type: "spring" }}
-                className="flex flex-col gap-4 "
-              >
-                <textarea
-                  placeholder="Add a new prompt"
-                  className="h-[120px] w-full resize-none rounded-[6px] bg-transparent px-2 py-[6px] text-sm text-white placeholder:text-white/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-200"
-                />
-                <div className="flex justify-between">
-                  <div className="flex items-center gap-2 ml-2">
-                    <div className="rounded-full size-2 bg-yellow-200" />
-                    <p className="text-sm text-neutral-500">Changes</p>
-                  </div>
-                  <button
-                    type="submit"
-                    className="text-neutral-800 bg-yellow-200 py-1 font-medium px-2 rounded-lg"
-                    onClick={() => {
-                      handleOpenSettings();
-                      toast.message("Changes done", {
-                        description:
-                          "Changes validated and applied successfully",
-                      });
-                    }}
-                  >
-                    Apply Changes
-                  </button>
+                <button
+                  type="submit"
+                  className="text-neutral-800 bg-yellow-200 py-1 font-medium px-2 rounded-lg"
+                  onClick={() => {
+                    handleOpenSettings();
+                    toast.message("Changes done", {
+                      description: "Changes validated and applied successfully",
+                    });
+                  }}
+                >
+                  Apply Changes
+                </button>
+              </div>
+            </motion.div>
+          )}
+          {isOpen && subMenuSelected === "prompt" && (
+            <motion.div
+              initial={{ opacity: 0, filter: "blur(4px)" }}
+              animate={{ opacity: 1, filter: "blur(0px)" }}
+              transition={{ duration: 1.2, type: "spring" }}
+              className="flex flex-col gap-4 justify-between h-full"
+            >
+              <textarea
+                placeholder="Add a new prompt"
+                className="h-[120px] w-full resize-none rounded-[6px] bg-transparent px-2 py-[6px] text-sm text-white placeholder:text-white/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-200"
+              />
+              <div className="flex justify-between">
+                <div className="flex items-center gap-2 ml-2">
+                  <div className="rounded-full size-2 bg-yellow-200" />
+                  <p className="text-sm text-neutral-500">Changes</p>
                 </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
-          <AnimatePresence mode="popLayout">
-            {isOpen && subMenuSelected === "dimensions" && (
-              <motion.div
-                initial={{ opacity: 0, filter: "blur(4px)" }}
-                exit={{ opacity: 0, filter: "blur(4px)" }}
-                animate={{ opacity: 1, filter: "blur(0px)" }}
-                transition={{ duration: 1.2, type: "spring" }}
-                className="flex flex-col gap-4 "
-              >
-                <div className="flex justify-between">
-                  <div className="flex items-center gap-2 ml-2">
-                    <div className="rounded-full size-2 bg-yellow-200" />
-                    <p className="text-sm text-neutral-500">Changes</p>
-                  </div>
-                  <button
-                    type="submit"
-                    className="text-neutral-800 bg-yellow-200 py-1 font-medium px-2 rounded-lg"
-                    onClick={() => {
-                      handleOpenSettings();
-                      toast.message("Changes done", {
-                        description:
-                          "Changes validated and applied successfully",
-                      });
-                    }}
-                  >
-                    Apply Changes
-                  </button>
+                <button
+                  type="submit"
+                  className="text-neutral-800 bg-yellow-200 py-1 font-medium px-2 rounded-lg"
+                  onClick={() => {
+                    handleOpenSettings();
+                    toast.message("Changes done", {
+                      description: "Changes validated and applied successfully",
+                    });
+                  }}
+                >
+                  Apply Changes
+                </button>
+              </div>
+            </motion.div>
+          )}
+          {isOpen && subMenuSelected === "dimensions" && (
+            <motion.div
+              initial={{ opacity: 0, filter: "blur(4px)" }}
+              animate={{ opacity: 1, filter: "blur(0px)" }}
+              transition={{ duration: 1.2, type: "spring" }}
+              className="flex flex-col gap-4 justify-between"
+            >
+              <div className="flex justify-between">
+                <div className="flex items-center gap-2 ml-2">
+                  <div className="rounded-full size-2 bg-yellow-200" />
+                  <p className="text-sm text-neutral-500">Changes</p>
                 </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
+                <button
+                  type="submit"
+                  className="text-neutral-800 bg-yellow-200 py-1 font-medium px-2 rounded-lg"
+                  onClick={() => {
+                    handleOpenSettings();
+                    toast.message("Changes done", {
+                      description: "Changes validated and applied successfully",
+                    });
+                  }}
+                >
+                  Apply Changes
+                </button>
+              </div>
+            </motion.div>
+          )}
         </div>
       </div>
     </motion.div>

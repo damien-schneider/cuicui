@@ -18,6 +18,8 @@ export default async function Page() {
           }),
         },
       ]}
+      librariesBadges={["framer-motion", "lucide-react", "sonner"]}
+      componentBadges={["updated"]}
       title="Dynamic Settings"
       description="Settings with lot of micro-interactions and animations."
       inspiration="UI Labs"
