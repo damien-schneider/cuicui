@@ -4,6 +4,7 @@ import * as Select from "@radix-ui/react-select";
 import {
   ChevronDownIcon,
   LaptopIcon,
+  RepeatIcon,
   SmartphoneIcon,
   TabletIcon,
 } from "lucide-react";
@@ -48,6 +49,7 @@ export default function FullComponent({
   librariesBadges,
   componentBadges,
   isIframed = true,
+  rerenderButton = false,
 }: Readonly<{
   componentList: VariantComponent[];
   title: string;
@@ -59,12 +61,15 @@ export default function FullComponent({
   librariesBadges?: LibraryBadge[];
   componentBadges?: ComponentBadge[];
   isIframed?: boolean;
+  rerenderButton?: boolean;
 }>) {
   const [tab, setTab] = useState<TabType>("visual");
   const [viewSizeContainer, setViewSizeContainer] =
     useState<ViewSizeContainerType>("desktop");
   const [selectedVariant, setSelectedVariant] = useState(1);
   const { resolvedTheme } = useTheme();
+  const [render, setRender] = useState(0);
+
   const handleTabChange = useCallback((newTab: TabType) => {
     setTab(newTab);
   }, []);
@@ -198,13 +203,26 @@ export default function FullComponent({
             getContainerClassBasedOnSize(size),
           )}
         >
-          <ComponentWrapper
-            isIframed={isIframed}
-            viewSizeContainer={viewSizeContainer}
-            size={size}
+          <div
+            className={cn(
+              getIframeParentClasses(viewSizeContainer),
+              getContainerChildClassBasedOnSize(size),
+              "dark:bg-neutral-900 bg-neutral-50 rounded-md border border-neutral-500/20",
+              "overflow-hidden relative",
+            )}
           >
-            {renderedComponent ?? <p>An error has occured</p>}
-          </ComponentWrapper>
+            {rerenderButton && <RerenderButton setRender={setRender} />}
+
+            <ComponentWrapper
+              isIframed={isIframed}
+              viewSizeContainer={viewSizeContainer}
+              size={size}
+              renderButton={rerenderButton}
+              key={render}
+            >
+              {renderedComponent ?? <p>An error has occured</p>}
+            </ComponentWrapper>
+          </div>
         </div>
       ) : (
         <div className="p-0.5 rounded-lg border border-neutral-500/20">
@@ -244,31 +262,41 @@ export default function FullComponent({
   );
 }
 
+const RerenderButton = ({
+  setRender,
+}: { setRender: React.Dispatch<React.SetStateAction<number>> }) => (
+  <button
+    type="button"
+    className="absolute top-2 right-2 px-2 py-1 group hover:bg-neutral-400/15 rounded-md items-center flex gap-1 transition-colors"
+    onClick={() => setRender((prev) => prev + 1)}
+  >
+    <div className="w-fit group-hover:max-w-20 max-w-0 overflow-hidden transition-all duration-500 ">
+      <p className=" whitespace-nowrap opacity-0 group-hover:opacity-100 duration-500 transition-opacity text-sm text-neutral-400">
+        Rerender
+      </p>
+    </div>
+    <RepeatIcon className="size-4 text-neutral-400" />
+  </button>
+);
+
 const ComponentWrapper = ({
   isIframed = true,
   viewSizeContainer,
   size,
+  renderButton,
   children,
 }: {
+  renderButton: boolean;
   isIframed?: boolean;
   viewSizeContainer: ViewSizeContainerType;
   size: IframeSizeType;
   children: React.ReactNode;
 }) => {
-  if (!isIframed) {
-    return (
-      <div
-        className={cn(
-          getIframeParentClasses(viewSizeContainer),
-          getContainerChildClassBasedOnSize(size),
-          "overflow-hidden",
-        )}
-      >
-        {children}
-      </div>
-    );
-  }
   const { resolvedTheme } = useTheme();
+
+  if (!isIframed) {
+    return <>{children}</>;
+  }
   if (resolvedTheme === "dark") {
     return (
       <CustomIframeComponentDark
@@ -368,7 +396,7 @@ function getIframeParentClasses(viewSizeContainer: ViewSizeContainerType) {
     viewSizeContainer === "desktop" && " max-w-screen-2xl",
     viewSizeContainer === "tablet" && "max-w-screen-sm",
     viewSizeContainer === "mobile" && "max-w-sm",
-    "dark:bg-neutral-900 bg-neutral-50 rounded-md border border-neutral-500/20",
+    "",
   );
 }
 export function getIframeContainerClassBasedOnSize(size: IframeSizeType) {

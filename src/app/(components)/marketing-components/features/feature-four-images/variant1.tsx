@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import "#/src/styles/globals.css";
 import { cn } from "#/src/utils/cn";
 
+//TODO : Improve mobile version to display the image down the corresponding text instead of at the full bottom
+
 const data = [
   {
     title: "Paramétrez votre CRA en 3 clicks",
@@ -127,7 +129,7 @@ function TextComponent({
     <div
       className={cn(
         "transition-colors rounded-lg",
-        isOpen ? "bg-yellow-600/10" : "saturate-0 opacity-50",
+        isOpen ? "bg-green-600/10" : "saturate-0 opacity-50",
       )}
     >
       <div className="w-full p-4 flex gap-4 items-center">

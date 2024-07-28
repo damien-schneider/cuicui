@@ -9,6 +9,11 @@ import { MobileMenu } from "../ui/navigation/mobile-menu";
 import { ScrollArea } from "../ui/shadcn-scrollarea";
 import ClientProvider from "./client-provider";
 
+import { DM_Sans } from "next/font/google";
+const font = DM_Sans({
+  subsets: ["latin"],
+  display: "swap",
+});
 export const metadata: Metadata = {
   title: {
     default: "CuiCui | Modern UI copy paste library",
@@ -33,10 +38,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className={font.className}>
       <ThemeProvider attribute="class">
         {/* <body className="dark:bg-[url('/grid-dark-mode.svg')] bg-[url('/grid-light-mode.svg')] dark:bg-gray-950 bg-gray-50"> */}
-        <body className="dark:bg-neutral-950 bg-neutral-50">
+        <body className="dark:bg-neutral-950 bg-neutral-50 ">
           <Toaster />
           <ClientProvider>
             <div className="max-w-screen-2xl mx-auto">
