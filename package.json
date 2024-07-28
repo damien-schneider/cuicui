@@ -38,6 +38,7 @@
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
 		"react-frame-component": "5.2.7",
+		"sharp": "0.33.4",
 		"sonner": "1.5.0",
 		"tailwind-merge": "2.3.0",
 		"vaul": "0.9.1"
