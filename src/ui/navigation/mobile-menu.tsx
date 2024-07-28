@@ -64,7 +64,7 @@ export function MobileMenu({ className }: Readonly<{ className?: string }>) {
               "linear-gradient(90deg, rgba(59, 196, 242, 0.2), rgba(122, 105, 249, 0.2), rgba(242, 99, 120, 0.2), rgba(245, 131, 63, 0.2))",
           }}
         />
-        <Drawer.Content className="z-50 bg-white rounded-t-2xl p-4 fixed bottom-0 left-0 right-0 max-h-[80dvh] flex flex-col">
+        <Drawer.Content className="z-50 bg-neutral-50 dark:bg-neutral-900 rounded-t-2xl p-4 fixed bottom-0 left-0 right-0 max-h-[80dvh] flex flex-col">
           <Drawer.Handle className="bg-neutral-400 mb-4  min-h-1" />
           <StarGithubProjectButton />
           <div className="overflow-y-scroll">
