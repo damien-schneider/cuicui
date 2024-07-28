@@ -67,7 +67,7 @@ export default async function Page() {
             }),
           },
         ]}
-        badges={["no-js"]}
+        componentBadges={["no-js"]}
         title="Gradient Q&A"
         description="A simple marquee component with two variants, horizontal and vertical."
       />
