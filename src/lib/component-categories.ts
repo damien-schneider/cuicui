@@ -51,7 +51,7 @@ export const componentCategories: {
         name: "Badges",
         slug: "badges",
         description: "Create simple badges with different styles",
-        releaseDate: new Date("2024-06-17"),
+        releaseDate: new Date("2024-06-29"),
       },
       {
         name: "Navigation",
@@ -63,7 +63,7 @@ export const componentCategories: {
         name: "Buttons",
         slug: "buttons",
         description: "Create simple buttons with different styles",
-        releaseDate: new Date("2024-07-17"),
+        releaseDate: new Date("2024-07-29"),
       },
     ],
   },
@@ -78,8 +78,8 @@ export const componentCategories: {
         releaseDate: new Date("2024-06-17"),
       },
       {
-        name: "Pricing Table",
-        slug: "pricing-table",
+        name: "Pricing Tables",
+        slug: "pricing-tables",
         description: "Showcase your product pricing with style",
         comingSoon: true,
       },
@@ -112,6 +112,13 @@ export const componentCategories: {
         slug: "cursors",
         description: "Create cursor effects",
         releaseDate: new Date("2024-07-21"),
+      },
+      {
+        name: "Transition wrappers",
+        slug: "transition-wrappers",
+        description:
+          "Create transition wrappers to animate any without changing your code components",
+        releaseDate: new Date("2024-07-29"),
       },
     ],
   },

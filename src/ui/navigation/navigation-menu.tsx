@@ -83,6 +83,15 @@ function GlobalNavItem({
           <GradientText className="text-xs">New</GradientText>
         </GradientContainer>
       )}
+      {item.comingSoon && (
+        <GradientContainer
+          rounded="xs"
+          classNameChild="text-xs px-1 py-0"
+          classNameParent=""
+        >
+          <GradientText className="text-xs">Coming soon</GradientText>
+        </GradientContainer>
+      )}
       {item.href && (
         <ArrowUpRightIcon className="size-4  text-black/40 dark:text-white/40 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
       )}
