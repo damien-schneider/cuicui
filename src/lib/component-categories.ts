@@ -65,6 +65,12 @@ export const componentCategories: {
         description: "Create simple buttons with different styles",
         releaseDate: new Date("2024-07-29"),
       },
+      {
+        name: "Skeletons",
+        slug: "skeletons",
+        description: "Create simple skeletons for loading states",
+        releaseDate: new Date("2024-08-01"),
+      },
     ],
   },
   {
@@ -81,7 +87,7 @@ export const componentCategories: {
         name: "Pricing Tables",
         slug: "pricing-tables",
         description: "Showcase your product pricing with style",
-        comingSoon: true,
+        releaseDate: new Date("2024-08-01"),
       },
       {
         name: "Testimonials",

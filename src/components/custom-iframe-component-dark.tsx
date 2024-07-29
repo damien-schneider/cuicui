@@ -3,8 +3,8 @@ import type React from "react";
 import { useEffect, useState } from "react";
 import Frame from "react-frame-component";
 import {
-  type IframeSizeType,
-  getIframeContainerClassBasedOnSize,
+  type ComponentHeightType,
+  getContainerHeightClass,
 } from "./full-component";
 
 const CustomIframeComponentDark = ({
@@ -14,7 +14,7 @@ const CustomIframeComponentDark = ({
 }: {
   children: React.ReactNode;
   className?: string;
-  size: IframeSizeType;
+  size: ComponentHeightType;
 }) => {
   const [isClient, setIsClient] = useState(false);
 
@@ -53,8 +53,8 @@ const CustomIframeComponentDark = ({
             </style>
           </head>
           <body class="dark bg-neutral-900">
-            <div id="mountHere" class="p-4 *:flex *:items-center *:justify-center ${getIframeContainerClassBasedOnSize(
-              size,
+            <div id="mountHere" class="p-4 *:flex *:items-center *:justify-center flex items-center justify-center *:w-full ${getContainerHeightClass(
+              { size, isIframe: true },
             )}">
             </div>
           </body>

@@ -5,8 +5,8 @@ import Frame from "react-frame-component";
 import { useEffect, useState } from "react";
 import { cn } from "../utils/cn";
 import {
-  type IframeSizeType,
-  getIframeContainerClassBasedOnSize,
+  type ComponentHeightType,
+  getContainerHeightClass,
 } from "./full-component";
 
 const CustomIframeComponentLight = ({
@@ -16,7 +16,7 @@ const CustomIframeComponentLight = ({
 }: {
   children: React.ReactNode;
   className?: string;
-  size: IframeSizeType;
+  size: ComponentHeightType;
 }) => {
   const [isClient, setIsClient] = useState(false);
 
@@ -55,8 +55,8 @@ const CustomIframeComponentLight = ({
             </style>
           </head>
           <body class="bg-neutral-50">
-            <div id="mountHere" class="p-4 *:flex *:items-center *:justify-center ${getIframeContainerClassBasedOnSize(
-              size,
+            <div id="mountHere" class="p-4 *:flex *:items-center *:justify-center flex items-center justify-center *:w-full ${getContainerHeightClass(
+              { size, isIframe: true },
             )}">
             </div>
           </body>

@@ -1,8 +1,9 @@
 import { differenceInDays } from "date-fns";
+import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRightIcon } from "lucide-react";
 import Link from "next/link";
 import { useSelectedLayoutSegments } from "next/navigation";
-import React from "react";
+import React, { useState } from "react";
 import { type Item, componentCategories } from "#/src/lib/component-categories";
 import { cn } from "#/src/utils/cn";
 import GradientContainer from "../gradient-container";
@@ -11,8 +12,17 @@ export default function NavigationMenu({
   isMobile,
   className,
 }: Readonly<{ isMobile?: boolean; className?: string }>) {
+  const [elementFocused, setElementFocused] = useState<number | string | null>(
+    null,
+  );
+  const handleHoverButton = (index: number | string | null) => {
+    setElementFocused(index);
+  };
   return (
-    <nav className={cn("space-y-6 px-2 mt-5 mb-12", className)}>
+    <nav
+      className={cn("space-y-6 px-2 mt-5 mb-12", className)}
+      onMouseLeave={() => handleHoverButton(null)}
+    >
       {componentCategories.map((section) => {
         return (
           <div key={section.name}>
@@ -21,13 +31,31 @@ export default function NavigationMenu({
             </div>
 
             <div className=" space-y-0.5">
-              {section.items.map((item) => (
-                <GlobalNavItem
+              {section.items.map((item, index) => (
+                <div
                   key={item.slug}
-                  item={item}
-                  parentSlug={section.slug}
-                  isMobile={isMobile}
-                />
+                  className="relative"
+                  onMouseEnter={() => handleHoverButton(item.slug)}
+                >
+                  <GlobalNavItem
+                    item={item}
+                    parentSlug={section.slug}
+                    isMobile={isMobile}
+                  />
+                  <AnimatePresence>
+                    {elementFocused === item.slug && (
+                      <motion.div
+                        className="absolute top-0 left-0 w-full h-full bg-neutral-200 dark:bg-neutral-800 rounded-md border border-neutral-500/10 -z-10"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.2 }}
+                        layout
+                        layoutId="navigation-element"
+                      />
+                    )}
+                  </AnimatePresence>
+                </div>
               ))}
             </div>
           </div>
@@ -67,7 +95,6 @@ function GlobalNavItem({
       className={cn(
         "group flex items-center justify-between rounded-md px-3 font-medium text-sm border border-transparent",
         isMobile ? "py-2" : "py-0.5",
-        " hover:bg-black/5 dark:hover:bg-white/20 hover:border-black/10 dark:hover:border-white/10 transition-colors duration-75",
         isActive
           ? "bg-black/5 dark:bg-white/10 dark:text-white/80 text-black/70"
           : "dark:text-white/40 text-black/40",

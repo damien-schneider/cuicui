@@ -23,14 +23,18 @@ import Badge from "../ui/badge";
 import Button from "../ui/button";
 import CodeHighlighter from "../ui/code-highlighter";
 import { ScrollArea, ScrollBar } from "../ui/shadcn-scrollarea";
+import {
+  ResizableHandle,
+  ResizablePanel,
+  ResizablePanelGroup,
+} from "../ui/shadcn/resizable";
 import { cn } from "../utils/cn";
 import BadgeList from "./badge-list";
 import CustomIframeComponentDark from "./custom-iframe-component-dark";
 import CustomIframeComponentLight from "./custom-iframe-component-light";
 
 export type TabType = "visual" | "code";
-export type ViewSizeContainerType = "desktop" | "tablet" | "mobile";
-export type IframeSizeType = "xs" | "sm" | "md" | "lg";
+export type ComponentHeightType = "xs" | "sm" | "md" | "lg" | "xl";
 
 const isVariant = (value: string): value is Variant => {
   return /^\d+$/.test(value);
@@ -56,7 +60,7 @@ export default function FullComponent({
   description: string;
   inspiration?: string;
   inspirationLink?: string;
-  size?: IframeSizeType;
+  size?: ComponentHeightType;
   frameworksBadges?: FrameworkBadge[];
   librariesBadges?: LibraryBadge[];
   componentBadges?: ComponentBadge[];
@@ -64,18 +68,13 @@ export default function FullComponent({
   rerenderButton?: boolean;
 }>) {
   const [tab, setTab] = useState<TabType>("visual");
-  const [viewSizeContainer, setViewSizeContainer] =
-    useState<ViewSizeContainerType>("desktop");
+
   const [selectedVariant, setSelectedVariant] = useState(1);
   const { resolvedTheme } = useTheme();
   const [render, setRender] = useState(0);
 
   const handleTabChange = useCallback((newTab: TabType) => {
     setTab(newTab);
-  }, []);
-
-  const handleViewSizeChange = useCallback((newSize: ViewSizeContainerType) => {
-    setViewSizeContainer(newSize);
   }, []);
 
   const handleVariantChange = useCallback((e: string) => {
@@ -132,29 +131,7 @@ export default function FullComponent({
             Code
           </Button>
         </div>
-        <div className="flex gap-1 h-fit rounded-lg border border-neutral-500/20 p-0.5">
-          <Button
-            variant="hover-only"
-            size="sm-square"
-            onClick={() => handleViewSizeChange("desktop")}
-          >
-            <LaptopIcon className="size-5" />
-          </Button>
-          <Button
-            variant="hover-only"
-            size="sm-square"
-            onClick={() => handleViewSizeChange("tablet")}
-          >
-            <TabletIcon className="size-5" />
-          </Button>
-          <Button
-            variant="hover-only"
-            size="sm-square"
-            onClick={() => handleViewSizeChange("mobile")}
-          >
-            <SmartphoneIcon className="size-5" />
-          </Button>
-        </div>
+
         {componentList.length > 1 ? (
           <Select.Root
             onValueChange={handleVariantChange}
@@ -203,26 +180,13 @@ export default function FullComponent({
             getContainerClassBasedOnSize(size),
           )}
         >
-          <div
-            className={cn(
-              getIframeParentClasses(viewSizeContainer),
-              getContainerChildClassBasedOnSize(size),
-              "dark:bg-neutral-900 bg-neutral-50 rounded-md border border-neutral-500/20",
-              "overflow-hidden relative",
-            )}
+          <ComponentWrapper
+            isIframed={isIframed}
+            viewSizeContainer={viewSizeContainer}
+            size={size}
           >
-            {rerenderButton && <RerenderButton setRender={setRender} />}
-
-            <ComponentWrapper
-              isIframed={isIframed}
-              viewSizeContainer={viewSizeContainer}
-              size={size}
-              renderButton={rerenderButton}
-              key={render}
-            >
-              {renderedComponent ?? <p>An error has occured</p>}
-            </ComponentWrapper>
-          </div>
+            {renderedComponent ?? <p>An error has occured</p>}
+          </ComponentWrapper>
         </div>
       ) : (
         <div className="p-0.5 rounded-lg border border-neutral-500/20">
@@ -230,7 +194,7 @@ export default function FullComponent({
             // With a dynamic height, the code take its full size wich is a weird behaviour
             classNameViewport={cn(
               "w-full rounded-md bg-neutral-100 dark:bg-neutral-900  border border-neutral-500/20",
-              getContainerCodeClassBasedOnSize(size),
+              getContainerHeightClass({ size }),
             )}
           >
             <ScrollBar orientation="horizontal" />
@@ -281,15 +245,13 @@ const RerenderButton = ({
 
 const ComponentWrapper = ({
   isIframed = true,
-  viewSizeContainer,
   size,
   renderButton,
   children,
 }: {
   renderButton: boolean;
   isIframed?: boolean;
-  viewSizeContainer: ViewSizeContainerType;
-  size: IframeSizeType;
+  size: ComponentHeightType;
   children: React.ReactNode;
 }) => {
   const { resolvedTheme } = useTheme();
@@ -301,8 +263,8 @@ const ComponentWrapper = ({
     return (
       <CustomIframeComponentDark
         className={cn(
-          getIframeParentClasses(viewSizeContainer),
-          getContainerChildClassBasedOnSize(size),
+          "w-full flex items-center justify-center transition-all duration-300",
+          getContainerHeightClass({ size }),
         )}
         size={size}
       >
@@ -313,8 +275,8 @@ const ComponentWrapper = ({
   return (
     <CustomIframeComponentLight
       className={cn(
-        getIframeParentClasses(viewSizeContainer),
-        getContainerChildClassBasedOnSize(size),
+        "w-full flex items-center justify-center transition-all duration-300",
+        getContainerHeightClass({ size }),
       )}
       size={size}
     >
@@ -351,40 +313,29 @@ const getCodeToDisplay = (
   return null;
 };
 
-function getContainerCodeClassBasedOnSize(size: IframeSizeType) {
+export function getContainerHeightClass({
+  size,
+  isIframe = false,
+}: {
+  size: ComponentHeightType;
+  isIframe?: boolean;
+}) {
   switch (size) {
     case "xs":
-      return "max-h-[200px] min-h-[200px]";
+      if (isIframe) {
+        return "max-h-[180px] min-h-[180px] h-[180px]";
+      }
+      return "max-h-[200px] min-h-[200px] h-[200px]";
     case "sm":
-      return "max-h-[400px] min-h-[400px]";
+      if (isIframe) {
+        return "max-h-[380px] min-h-[380px] h-[380px]";
+      }
+      return "max-h-[400px] min-h-[400px] h-[400px]";
     case "md":
-      return "max-h-[700px] min-h-[700px]";
-    case "lg":
-      return "max-h-[900px] min-h-[900px]";
-  }
-}
-
-function getContainerClassBasedOnSize(size: IframeSizeType) {
-  switch (size) {
-    case "xs":
-      return "min-h-[200px] h-[200px]";
-    case "sm":
-      return "min-h-[400px] h-[400px]";
-    case "md":
-      return "min-h-[700px] h-[700px]";
-    case "lg":
-      return "min-h-[900px] h-[900px]";
-  }
-}
-
-function getContainerChildClassBasedOnSize(size: IframeSizeType) {
-  switch (size) {
-    case "xs":
-      return "min-h-[194px] h-[194px]";
-    case "sm":
-      return "min-h-[394px] h-[394px]";
-    case "md":
-      return "min-h-[694px] h-[694px]";
+      if (isIframe) {
+        return "max-h-[680px] min-h-[680px] h-[680px]";
+      }
+      return "max-h-[700px] min-h-[700px] h-[700px]";
     case "lg":
       return "min-h-[894px] h-[894px]";
   }
@@ -396,7 +347,7 @@ function getIframeParentClasses(viewSizeContainer: ViewSizeContainerType) {
     viewSizeContainer === "desktop" && " max-w-screen-2xl",
     viewSizeContainer === "tablet" && "max-w-screen-sm",
     viewSizeContainer === "mobile" && "max-w-sm",
-    "",
+    "dark:bg-neutral-900 bg-neutral-50 rounded-md border border-neutral-500/20",
   );
 }
 export function getIframeContainerClassBasedOnSize(size: IframeSizeType) {
