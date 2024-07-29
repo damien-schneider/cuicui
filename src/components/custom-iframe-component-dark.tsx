@@ -53,7 +53,7 @@ const CustomIframeComponentDark = ({
             </style>
           </head>
           <body class="dark bg-neutral-900">
-            <div id="mountHere" class="p-4 *:flex *:items-center *:justify-center w-full ${getContainerHeightClass(
+            <div id="mountHere" class="p-4 *:flex *:items-center *:justify-center flex items-center justify-center *:w-full ${getContainerHeightClass(
               { size, isIframe: true },
             )}">
             </div>
