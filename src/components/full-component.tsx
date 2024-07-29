@@ -34,7 +34,7 @@ import CustomIframeComponentDark from "./custom-iframe-component-dark";
 import CustomIframeComponentLight from "./custom-iframe-component-light";
 
 export type TabType = "visual" | "code";
-export type ComponentHeightType = "xs" | "sm" | "md" | "lg";
+export type ComponentHeightType = "xs" | "sm" | "md" | "lg" | "xl";
 
 const isVariant = (value: string): value is Variant => {
   return /^\d+$/.test(value);
@@ -380,5 +380,10 @@ export function getContainerHeightClass({
         return "max-h-[880px] min-h-[880px] h-[880px]";
       }
       return "max-h-[900px] min-h-[900px] h-[900px]";
+    case "xl":
+      if (isIframe) {
+        return "max-h-[1080px] min-h-[1080px] h-[1080px]";
+      }
+      return "max-h-[1100px] min-h-[1100px] h-[1100px]";
   }
 }
