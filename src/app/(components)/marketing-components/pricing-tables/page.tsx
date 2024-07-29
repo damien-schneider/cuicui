@@ -1,26 +1,26 @@
 import ComingSoonCard from "#/src/components/coming-soon";
 import FullComponent from "#/src/components/full-component";
 import { getFileContentAsString } from "#/src/utils/get-file-content-as-string";
+import ManyOffersVariant1 from "./many-offers/variant1";
 
 export default async function Page() {
   return (
     <>
-      {/* <FullComponent
-        size="md"
+      <FullComponent
+        size="xl"
         componentList={[
           {
-            variantName: "On hover effect",
-            component: <TestimonialsVariant1 />,
+            variantName: "Many offers",
+            component: <ManyOffersVariant1 />,
             code: await getFileContentAsString({
-              componentSlug: "testimonials",
-              variantName: "/testimonials-component/variant1",
+              componentSlug: "pricing-tables",
+              variantName: "/many-offers/variant1",
             }),
           },
         ]}
-        title="Testimonials"
-        description="A simple testimonials component with a slider on click"
-      /> */}
-      <ComingSoonCard />
+        title="Pricing with many offers"
+        description="A pricing table with a lot of offers"
+      />
     </>
   );
 }
