@@ -21,6 +21,8 @@ export default async function Page() {
         ]}
         title="Classic Pulse Skeleton"
         description="A simple skeleton with a classic pulse effect for loading states"
+        inspiration="Shadcn/ui"
+        inspirationLink="https://ui.shadcn.com/docs/components/skeleton"
       />
       <FullComponent
         size="sm"
@@ -44,6 +46,8 @@ export default async function Page() {
         ]}
         title="Shiny Gradient Skeleton"
         description="An advanced skeleton with a shiny gradient effect for loading states"
+        inspiration="Delba"
+        inspirationLink="https://delba.dev/blog/animated-loading-skeletons-with-tailwind"
       />
     </>
   );

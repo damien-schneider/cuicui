@@ -20,6 +20,9 @@ export default async function Page() {
         ]}
         title="Pricing with many offers"
         description="A pricing table with a lot of offers"
+        inspiration="Artlist"
+        inspirationLink="https://artlist.io/pricing"
+        librariesBadges={["lucide-react"]}
       />
     </>
   );
