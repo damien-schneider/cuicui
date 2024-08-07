@@ -16,20 +16,49 @@ const font = DM_Sans({
 });
 export const metadata: Metadata = {
   title: {
-    default: "CuiCui | Modern UI copy paste library",
+    default:
+      "CuiCui | High-Quality React and Tailwind Components for Copy-Paste",
     template: "%s | CuiCui",
   },
   description:
     "CuiCui is a modern UI copy paste library that helps you build beautiful websites and applications.",
+  keywords:
+    "UI library, UI components, copy paste UI, web design, front-end development, modern UI, React, Tailwind CSS, TypeScript, JavaScript, Framer Motion",
+  authors: {
+    name: "Damien Schneider",
+    url: "https://github.com/damien-schneider",
+  },
   openGraph: {
-    title: "CuiCui | Modern UI copy paste library",
+    title: "CuiCui | High-Quality React and Tailwind Components for Copy-Paste",
     description:
-      "CuiCui is a modern UI copy paste library that helps you build beautiful websites and applications.",
-    images: ["/api/og?title=CuiCui modern UI copy paste library"],
+      "CuiCui is a modern UI copy paste library using React that helps you build beautiful websites and applications with customizable, and modern components.",
+    url: "https://www.cuicui.com",
+    type: "website",
+    locale: "en",
+    siteName: "CuiCui",
+    // images: [
+    //   {
+    //     url: "/api/og?title=CuiCui modern UI copy paste library",
+    //     width: 1200,
+    //     height: 630,
+    //     alt: "CuiCui | Modern UI Copy Paste React components Library",
+    //   },
+    // ],
   },
-  twitter: {
-    card: "summary_large_image",
-  },
+  // twitter: {
+  //   card: "summary_large_image",
+  //   site: "@CuiCuiUI",
+  //   creator: "@CuiCuiUI",
+  //   title: "CuiCui | Modern UI Copy Paste Library",
+  //   description:
+  //     "CuiCui is a modern UI copy paste library that helps you build beautiful websites and applications.",
+  //   images: [
+  //     {
+  //       url: "/api/og?title=CuiCui modern UI copy paste library",
+  //       alt: "CuiCui | Modern UI Copy Paste Library",
+  //     },
+  //   ],
+  // },
 };
 
 export default function RootLayout({
@@ -59,7 +88,7 @@ export default function RootLayout({
                     rounded="sm"
                     background="solid"
                     classNameParent=""
-                    classNameChild="px-8 py-10"
+                    classNameChild="px-8 py-10 min-h-[calc(100vh-6rem)]"
                   >
                     {/* Move overflow-auto to the previous comment if problems occurs */}
                     {children}
