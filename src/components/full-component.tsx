@@ -176,17 +176,56 @@ export default function FullComponent({
       {tab === "visual" ? (
         <div
           className={cn(
-            "flex items-center justify-center rounded-lg border border-neutral-500/20 p-0.5",
-            getContainerClassBasedOnSize(size),
+            "flex items-center justify-center rounded-lg border border-neutral-500/20 p-0.5 overflow-hidden",
           )}
         >
-          <ComponentWrapper
-            isIframed={isIframed}
-            viewSizeContainer={viewSizeContainer}
-            size={size}
+          <ResizablePanelGroup
+            direction="horizontal"
+            className={cn(
+              "w-full flex items-center justify-center h-full",
+              // getContainerChildClassBasedOnSize(size),
+            )}
           >
-            {renderedComponent ?? <p>An error has occured</p>}
-          </ComponentWrapper>
+            <ResizablePanel
+              defaultSize={100}
+              className="dark:bg-neutral-900 bg-neutral-50 rounded-md border border-neutral-500/20 relative"
+            >
+              {rerenderButton && <RerenderButton setRender={setRender} />}
+
+              <ComponentWrapper
+                isIframed={isIframed}
+                size={size}
+                renderButton={rerenderButton}
+                key={render}
+              >
+                {renderedComponent ?? <p>An error has occured</p>}
+              </ComponentWrapper>
+            </ResizablePanel>
+            <ResizableHandle withHandle className="-translate-x-2" />
+            <ResizablePanel defaultSize={0}>
+              <div className="flex h-full items-center justify-center" />
+            </ResizablePanel>
+          </ResizablePanelGroup>
+          {/* <div
+            className={cn(
+              getIframeParentClasses(viewSizeContainer),
+              getContainerChildClassBasedOnSize(size),
+              "dark:bg-neutral-900 bg-neutral-50 rounded-md border border-neutral-500/20",
+              "overflow-hidden relative",
+            )}
+          >
+            {rerenderButton && <RerenderButton setRender={setRender} />}
+
+            <ComponentWrapper
+              isIframed={isIframed}
+              viewSizeContainer={viewSizeContainer}
+              size={size}
+              renderButton={rerenderButton}
+              key={render}
+            >
+              {renderedComponent ?? <p>An error has occured</p>}
+            </ComponentWrapper>
+          </div> */}
         </div>
       ) : (
         <div className="p-0.5 rounded-lg border border-neutral-500/20">
@@ -257,7 +296,16 @@ const ComponentWrapper = ({
   const { resolvedTheme } = useTheme();
 
   if (!isIframed) {
-    return <>{children}</>;
+    return (
+      <div
+        className={cn(
+          "w-full flex items-center justify-center transition-all duration-300",
+          getContainerHeightClass({ size }),
+        )}
+      >
+        {children}
+      </div>
+    );
   }
   if (resolvedTheme === "dark") {
     return (
@@ -338,27 +386,7 @@ export function getContainerHeightClass({
       return "max-h-[700px] min-h-[700px] h-[700px]";
     case "lg":
       return "min-h-[894px] h-[894px]";
-  }
-}
-
-function getIframeParentClasses(viewSizeContainer: ViewSizeContainerType) {
-  return cn(
-    "w-full flex items-center justify-center transition-all duration-300",
-    viewSizeContainer === "desktop" && " max-w-screen-2xl",
-    viewSizeContainer === "tablet" && "max-w-screen-sm",
-    viewSizeContainer === "mobile" && "max-w-sm",
-    "dark:bg-neutral-900 bg-neutral-50 rounded-md border border-neutral-500/20",
-  );
-}
-export function getIframeContainerClassBasedOnSize(size: IframeSizeType) {
-  switch (size) {
-    case "xs":
-      return "*:min-h-[170px] h-[170px]";
-    case "sm":
-      return "*:min-h-[370px] h-[370px]";
-    case "md":
-      return "*:min-h-[670px] h-[670px]";
-    case "lg":
-      return "*:min-h-[870px] h-[870px]";
+    case "xl":
+      return "min-h-[1094px] h-[1094px]";
   }
 }
