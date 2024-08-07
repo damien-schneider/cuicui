@@ -11,7 +11,8 @@ export type ComponentBadge =
   | "updated"
   | "deprecated"
   | "experimental"
-  | "no-js";
+  | "no-js"
+  | "prefer-desktop";
 
 export type LibraryBadge = "framer-motion" | "sonner" | "lucide-react";
 
