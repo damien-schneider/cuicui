@@ -3,6 +3,7 @@ import { getFileContentAsString } from "#/src/utils/get-file-content-as-string";
 import DynamicCardsVariant1 from "./dynamic-cards/variant1";
 import DynamicCardsVariant2 from "./dynamic-cards/variant2";
 import FollowCursorVariant1 from "./follow-cursor/variant1";
+import FollowCursorVariant2 from "./follow-cursor/variant2";
 
 const BASE_COMPONENT_PATH =
   "./src/app/(components)/marketing-components/features/";
@@ -13,11 +14,19 @@ export default async function Page() {
         size="sm"
         componentList={[
           {
-            variantName: "Variant 1",
+            variantName: "Replace cursor",
             component: <FollowCursorVariant1 />,
             code: await getFileContentAsString({
               componentSlug: "cursors",
               variantName: "follow-cursor/variant1",
+            }),
+          },
+          {
+            variantName: "Keeping cursor",
+            component: <FollowCursorVariant2 />,
+            code: await getFileContentAsString({
+              componentSlug: "cursors",
+              variantName: "follow-cursor/variant2",
             }),
           },
         ]}
