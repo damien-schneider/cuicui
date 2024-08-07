@@ -1,9 +1,10 @@
 "use client";
 import React, { useRef, useEffect, useState } from "react";
+import { cn } from "#/src/utils/cn";
 
 export default function DynamicCardsVariant2() {
   return (
-    <div className="relative w-full h-full">
+    <div className="relative w-5/6 p-12">
       <div className="grid gap-2 md:grid-cols-2 grid-cols-1">
         <Card
           title="CuiCui"
@@ -43,7 +44,10 @@ const Card = ({
       className="relative overflow-hidden rounded-[20px] bg-white/10 p-2"
     >
       <div
-        className="size-40 rounded-full blur-3xl absolute top-[var(--y)] left-[var(--x)] -translate-x-1/2 -translate-y-1/2"
+        className={cn(
+          "size-40 rounded-full blur-3xl absolute top-[var(--y)] left-[var(--x)] -translate-x-1/2 -translate-y-1/2",
+          (x === null || y === null) && "hidden",
+        )}
         style={{
           background:
             "linear-gradient(135deg, #3BC4F2, #7A69F9,#F26378,#F5833F)",

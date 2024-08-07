@@ -30,9 +30,12 @@ export default async function Page() {
             }),
           },
         ]}
+        isResizable={false}
         isIframed={false}
+        isChildUsingHeightFull
         title="Cursor following effect"
         description="A cursor following effect that can be used in any project with any artisitic style"
+        componentBadges={["prefer-desktop"]}
       />
       <FullComponent
         size="md"
@@ -57,6 +60,8 @@ export default async function Page() {
         isIframed={false}
         title="Grid with cursor following border"
         description="A grid of cards with a cursor following border effect"
+        componentBadges={["prefer-desktop"]}
+        isResizable={false}
       />
     </>
   );
