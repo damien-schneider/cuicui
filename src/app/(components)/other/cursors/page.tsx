@@ -5,8 +5,6 @@ import DynamicCardsVariant2 from "./dynamic-cards/variant2";
 import FollowCursorVariant1 from "./follow-cursor/variant1";
 import FollowCursorVariant2 from "./follow-cursor/variant2";
 
-const BASE_COMPONENT_PATH =
-  "./src/app/(components)/marketing-components/features/";
 export default async function Page() {
   return (
     <>

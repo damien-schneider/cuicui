@@ -1,6 +1,6 @@
 import FullComponent from "#/src/components/full-component";
 import { getFileContentAsString } from "#/src/utils/get-file-content-as-string";
-import DynamicSettingsVariant1 from "./dynamic-settings/variant1";
+import { StepWithStickyColorVariant1 } from "./code/variant1";
 
 export default async function Page() {
   return (
@@ -9,19 +9,19 @@ export default async function Page() {
       componentList={[
         {
           variantName: "variant1",
-          component: <DynamicSettingsVariant1 />,
+          component: <StepWithStickyColorVariant1 />,
           code: await getFileContentAsString({
-            componentSlug: "settings",
-            variantName: "dynamic-settings/variant1",
+            componentSlug: "static-steppers",
+            variantName: "code/variant1",
           }),
         },
       ]}
       librariesBadges={["framer-motion", "lucide-react", "sonner"]}
       componentBadges={["updated"]}
-      title="Dynamic Settings"
-      description="Settings with lot of micro-interactions and animations."
-      inspiration="UI Labs"
-      inspirationLink="https://www.uilabs.dev/"
+      title="Simple static stepper"
+      description="A simple static stepper component to display a list of steps."
+      inspiration="Hooks Scriptkavi manual installation"
+      inspirationLink="https://hooks.scriptkavi.com/docs/hooks/battery"
     />
   );
 }

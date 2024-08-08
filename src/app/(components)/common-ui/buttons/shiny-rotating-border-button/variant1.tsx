@@ -6,7 +6,7 @@ export default function ShinyRotatingBorderButtonVariant1() {
   return (
     <button
       type="button"
-      className="bg-neutral-200 dark:bg-neutral-600 p-px relative rounded-full overflow-hidden group"
+      className="bg-neutral-200 dark:bg-neutral-600 p-px relative rounded-full overflow-hidden group active:scale-95 transition-transform"
     >
       <motion.div
         initial={{ top: 0, left: 0 }}

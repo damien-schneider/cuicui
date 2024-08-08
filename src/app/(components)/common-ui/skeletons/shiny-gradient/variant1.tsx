@@ -2,7 +2,7 @@
 
 import { cn } from "#/src/utils/cn";
 
-export function ShinyGradientVariant1() {
+export function ShinyGradientSkeletonVariant1() {
   return (
     <Skeleton className="rounded-2xl flex flex-col gap-5 w-48 bg-black/5 dark:bg-white/5 p-4">
       <div className="h-24 rounded-lg dark:bg-rose-100/10 bg-neutral-200 w-full" />
