@@ -23,3 +23,18 @@ export type FrameworkBadge =
   | "angular"
   | "web-components"
   | "next";
+
+export type PreviewComponent = {
+  component: ReactNode;
+  previewScale: number;
+};
+
+export type CategoryItem = {
+  name: string;
+  slug: string;
+  href?: string;
+  description: string;
+  comingSoon?: boolean;
+  releaseDate?: Date;
+  preview?: PreviewComponent;
+};

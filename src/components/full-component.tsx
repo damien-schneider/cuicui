@@ -111,14 +111,14 @@ export default function FullComponent({
         </div>
       )}
       <h2 className="header-2">{title}</h2>
-      <p className="text-neutral-400 text-sm mb-4">{description}</p>
+      <p className="caption-sm">{description}</p>
       {librariesBadges && (
         <BadgeList title="Required librairies :" badgeList={librariesBadges} />
       )}
       {frameworksBadges && (
         <BadgeList title="Used frameworks :" badgeList={frameworksBadges} />
       )}
-      <menu className="mb-2 flex justify-between items-end">
+      <menu className="mb-2 flex justify-between items-end mt-4">
         <div className="inline-flex gap-2 rounded-lg border border-neutral-500/20 p-0.5">
           <Button
             variant="hover-only"

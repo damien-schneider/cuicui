@@ -99,6 +99,15 @@ export default function AboutPage() {
             you to choose and combine styles to create something truly unique.
           </p>
         </section>
+        <section>
+          <h2>Dark & Light Mode</h2>
+          <p className="comment-1">
+            This high-quality component library supports both dark and light
+            mode, ensuring that your components look great no matter the user’s
+            preference. With a simple toggle, you can switch between modes and
+            see your components adapt seamlessly to the new color scheme.
+          </p>
+        </section>
       </main>
       <footer className="comment-1 mt-4">
         <p>

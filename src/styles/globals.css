@@ -56,4 +56,13 @@
   .comment-1 {
     @apply font-normal text-neutral-500 dark:text-neutral-400 text-sm ;
   }
+  .caption-md {
+    @apply font-normal text-neutral-500 dark:text-neutral-400 ;
+  }
+  .caption-sm {
+    @apply font-normal text-neutral-400 dark:text-neutral-500 text-xs ;
+  }
+  .uppercase-title {
+    @apply font-semibold text-neutral-400 dark:text-neutral-500 text-xs uppercase tracking-wider;
+  }
 }
