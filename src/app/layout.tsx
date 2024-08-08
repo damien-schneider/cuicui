@@ -36,29 +36,29 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en",
     siteName: "CuiCui",
-    // images: [
-    //   {
-    //     url: "/api/og?title=CuiCui modern UI copy paste library",
-    //     width: 1200,
-    //     height: 630,
-    //     alt: "CuiCui | Modern UI Copy Paste React components Library",
-    //   },
-    // ],
+    images: [
+      {
+        url: "/metadata/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "A preview of CuiCui's website with a sentence saying 'SaaS ready Copy-Paste React Components'.",
+      },
+    ],
   },
-  // twitter: {
-  //   card: "summary_large_image",
-  //   site: "@CuiCuiUI",
-  //   creator: "@CuiCuiUI",
-  //   title: "CuiCui | Modern UI Copy Paste Library",
-  //   description:
-  //     "CuiCui is a modern UI copy paste library that helps you build beautiful websites and applications.",
-  //   images: [
-  //     {
-  //       url: "/api/og?title=CuiCui modern UI copy paste library",
-  //       alt: "CuiCui | Modern UI Copy Paste Library",
-  //     },
-  //   ],
-  // },
+  twitter: {
+    card: "summary_large_image",
+    site: "@damien_schneid",
+    creator: "@damien_schneid",
+    title: "CuiCui | High-Quality React and Tailwind Components for Copy-Paste",
+    description:
+      "CuiCui is a modern UI copy paste library that helps you build beautiful websites and applications as easy as copy paste.",
+    images: [
+      {
+        url: "/metadata/opengraph-image.png",
+        alt: "A preview of CuiCui's website with a sentence saying 'SaaS ready Copy-Paste React Components'.",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
