@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     title: "CuiCui | High-Quality React and Tailwind Components for Copy-Paste",
     description:
       "CuiCui is a modern UI copy paste library using React that helps you build beautiful websites and applications with customizable, and modern components.",
-    url: "https://www.cuicui.com",
+    url: "https://www.cuicui.day",
     type: "website",
     locale: "en",
     siteName: "CuiCui",

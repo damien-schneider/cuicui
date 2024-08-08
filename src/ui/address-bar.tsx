@@ -63,7 +63,7 @@ export function AddressBar() {
               className="px-2 text-neutral-400 hover:opacity-70 transition-opacity"
               href="/"
             >
-              cuicui.com
+              cuicui.day
             </Link>
             {pathname ? (
               <>
