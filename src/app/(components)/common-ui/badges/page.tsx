@@ -6,8 +6,6 @@ import ClerkBadgeVariant1 from "./clerk-badge/variant1";
 import { BadgeSimpleVariantAmber } from "./modern-simple-badges/variant1";
 import { BadgeSimpleVariantRed } from "./modern-simple-badges/variant2";
 
-const BASE_COMPONENT_PATH =
-  "./src/app/(components)/marketing-components/features/";
 export default async function Page() {
   return (
     <>

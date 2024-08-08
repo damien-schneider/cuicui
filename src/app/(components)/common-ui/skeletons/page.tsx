@@ -1,7 +1,7 @@
 import FullComponent from "#/src/components/full-component";
 import { getFileContentAsString } from "#/src/utils/get-file-content-as-string";
 import { ClassicPulseVariant1 } from "./classic-pulse/variant1";
-import { ShinyGradientVariant1 } from "./shiny-gradient/variant1";
+import { ShinyGradientSkeletonVariant1 } from "./shiny-gradient/variant1";
 import { ShinyGradientVariant2 } from "./shiny-gradient/variant2";
 
 export default async function Page() {
@@ -29,7 +29,7 @@ export default async function Page() {
         componentList={[
           {
             variantName: "Horizontal",
-            component: <ShinyGradientVariant1 />,
+            component: <ShinyGradientSkeletonVariant1 />,
             code: await getFileContentAsString({
               componentSlug: "skeletons",
               variantName: "/shiny-gradient/variant1",

@@ -5,8 +5,6 @@ import BeforeEffectButtonVariant2 from "./before-effect-button/variant2";
 import GrowingButtonVariant1 from "./growing-button/variant1";
 import ShinyRotatingBorderButtonVariant1 from "./shiny-rotating-border-button/variant1";
 
-const BASE_COMPONENT_PATH =
-  "./src/app/(components)/marketing-components/features/";
 export default async function Page() {
   return (
     <>
@@ -23,7 +21,7 @@ export default async function Page() {
           },
         ]}
         title="Button"
-        description="Simple modern button that can be used in any project with any artisitic style."
+        description="Simple button with icon which grows on hover. Perfect for having small rarelly used buttons replacing an old tooltip."
       />
       <FullComponent
         size="xs"

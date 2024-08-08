@@ -2,8 +2,6 @@ import FullComponent from "#/src/components/full-component";
 import { getFileContentAsString } from "#/src/utils/get-file-content-as-string";
 import BlurAppearVariant1 from "./blur-appear/variant1";
 
-const BASE_COMPONENT_PATH =
-  "./src/app/(components)/marketing-components/features/";
 export default async function Page() {
   return (
     <>

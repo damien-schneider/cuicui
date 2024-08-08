@@ -4,8 +4,10 @@ import { ArrowUpRightIcon } from "lucide-react";
 import Link from "next/link";
 import { useSelectedLayoutSegments } from "next/navigation";
 import React, { useState } from "react";
-import { type Item, componentCategories } from "#/src/lib/component-categories";
+import { componentCategories } from "#/src/lib/component-categories";
+import type { CategoryItem } from "#/src/lib/types/component";
 import { cn } from "#/src/utils/cn";
+import { getCategoryHref } from "#/src/utils/get-component-href";
 import GradientContainer from "../gradient-container";
 import GradientText from "../gradient-text";
 export default function NavigationMenu({
@@ -70,7 +72,7 @@ function GlobalNavItem({
   parentSlug,
   isMobile,
 }: Readonly<{
-  item: Item;
+  item: CategoryItem;
   parentSlug: string | null;
   isMobile?: boolean;
 }>) {
@@ -78,19 +80,9 @@ function GlobalNavItem({
 
   const isActive = segments.some((segment) => segment === item.slug);
 
-  function getHref() {
-    if (item.href) {
-      return item.href;
-    }
-    if (parentSlug) {
-      return `/${parentSlug}/${item.slug}`;
-    }
-    return `/${item.slug}`;
-  }
-
   return (
     <Link
-      href={getHref()}
+      href={getCategoryHref({ item, parentSlug })}
       target={item.href ? "_blank" : undefined}
       className={cn(
         "group flex items-center justify-between rounded-md px-3 font-medium text-sm border border-transparent",

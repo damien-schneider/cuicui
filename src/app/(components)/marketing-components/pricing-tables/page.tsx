@@ -5,25 +5,23 @@ import ManyOffersVariant1 from "./many-offers/variant1";
 
 export default async function Page() {
   return (
-    <>
-      <FullComponent
-        size="xl"
-        componentList={[
-          {
-            variantName: "Many offers",
-            component: <ManyOffersVariant1 />,
-            code: await getFileContentAsString({
-              componentSlug: "pricing-tables",
-              variantName: "/many-offers/variant1",
-            }),
-          },
-        ]}
-        title="Pricing with many offers"
-        description="A pricing table with a lot of offers"
-        inspiration="Artlist"
-        inspirationLink="https://artlist.io/pricing"
-        librariesBadges={["lucide-react"]}
-      />
-    </>
+    <FullComponent
+      size="lg"
+      componentList={[
+        {
+          variantName: "Many offers",
+          component: <ManyOffersVariant1 />,
+          code: await getFileContentAsString({
+            componentSlug: "pricing-tables",
+            variantName: "/many-offers/variant1",
+          }),
+        },
+      ]}
+      title="Pricing with many offers"
+      description="A pricing table with a lot of offers"
+      inspiration="Artlist"
+      inspirationLink="https://artlist.io/pricing"
+      librariesBadges={["lucide-react"]}
+    />
   );
 }
