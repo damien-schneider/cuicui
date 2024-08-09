@@ -66,7 +66,6 @@ function AppIcon({
       <div
         className={cn(
           "size-16 group-hover:size-[4.75rem] transition-all duration-200 rounded-2xl inline pointer-events-none z-20 overflow-hidden group-hover:shadow-sm  shadow-inner bg-white dark:bg-gray-800 transform-gpu",
-
           withoutBackground ? "p-2" : "",
         )}
       >
