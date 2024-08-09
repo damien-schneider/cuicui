@@ -31,7 +31,7 @@ export const MainMenuCard = ({
       )}
       <div
         className={cn(
-          "size-40 rounded-full blur-3xl absolute top-[var(--y)] left-[var(--x)] -translate-x-1/2 -translate-y-1/2 group-hover:scale-[3] scale  transition-transform duration-300",
+          "size-40 rounded-full blur-3xl absolute top-[var(--y)] left-[var(--x)] -translate-x-1/2 -translate-y-1/2 group-hover:scale-[5] scale  transition-transform duration-300",
           (x === null || y === null) && "hidden",
         )}
         style={{
@@ -51,7 +51,7 @@ export const MainMenuCard = ({
             </div>
           ) : (
             <div
-              className=" pointer-events-none select-none"
+              className=" pointer-events-none select-none flex justify-center items-center w-full h-full"
               style={{
                 transform: `scale(${item.preview?.previewScale ?? 0.75})`,
               }}

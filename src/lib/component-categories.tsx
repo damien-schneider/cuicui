@@ -1,16 +1,16 @@
-import type { StaticImageData } from "next/image";
-import type { ReactNode } from "react";
-import BadgesPreview from "#/src/assets/components-preview/badges.png";
 import ModernDetailedKbdVariant1 from "../app/(components)/application-ui/kbd/modern-detailed-kbd/variant1";
 import DynamicSettingsVariant1 from "../app/(components)/application-ui/settings/dynamic-settings/variant1";
 import { StepWithStickyColorVariant1 } from "../app/(components)/application-ui/static-steppers/code/variant1";
 import ClerkBadgeVariant1 from "../app/(components)/common-ui/badges/clerk-badge/variant1";
 import ShinyRotatingBorderButtonVariant1 from "../app/(components)/common-ui/buttons/shiny-rotating-border-button/variant1";
+import Dock from "../app/(components)/common-ui/navigation/mac-dock/variant1";
 import { VercelNavigationVariant1 } from "../app/(components)/common-ui/navigation/vercel-navigation/variant1";
 import { ShinyGradientSkeletonVariant1 } from "../app/(components)/common-ui/skeletons/shiny-gradient/variant1";
 import { Variant1FeatureFourImages } from "../app/(components)/marketing-components/features/feature-four-images/variant1";
 import ManyOffersVariant1 from "../app/(components)/marketing-components/pricing-tables/many-offers/variant1";
 import MarqueeVariant1 from "../app/(components)/marketing-components/testimonials/marquee/variant1";
+import DynamicCardsVariant1 from "../app/(components)/other/cursors/dynamic-cards/variant1";
+import DynamicCardsVariant2 from "../app/(components)/other/cursors/dynamic-cards/variant2";
 import FollowCursorVariant1 from "../app/(components)/other/cursors/follow-cursor/variant1";
 import BlurAppearVariant1 from "../app/(components)/other/transition-wrappers/blur-appear/variant1";
 import type { CategoryItem, PreviewComponent } from "./types/component";
@@ -72,7 +72,7 @@ export const componentCategories: {
         description: "Create simple navigation components",
         releaseDate: new Date("2024-06-17"),
         preview: {
-          component: <VercelNavigationVariant1 />,
+          component: <Dock />,
           previewScale: 0.75,
         },
       },
@@ -193,7 +193,7 @@ export const componentCategories: {
         releaseDate: new Date("2024-07-21"),
         preview: {
           component: <FollowCursorVariant1 />,
-          previewScale: 1.5,
+          previewScale: 1,
         },
       },
       {
