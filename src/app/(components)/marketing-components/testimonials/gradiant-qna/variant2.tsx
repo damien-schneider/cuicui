@@ -75,10 +75,17 @@ const AdvancedGradiant = ({
           }
         `}
       </style>
-      <div className={cn("size-[400px] relative transition-all", className)}>
-        <div className="absolute top-0 left-0 grid place-items-center w-full h-full">
+      <div
+        className={cn(
+          "size-[400px] relative transition-all transform-gpu",
+          className,
+        )}
+      >
+        <div className="absolute top-0 left-0 grid place-items-center w-full h-full transform-gpu">
           <div
-            className={cn("w-full h-full blur-3xl opacity-80 rounded-full")}
+            className={cn(
+              "w-full h-full blur-3xl opacity-80 rounded-full transform-gpu",
+            )}
             style={{
               background:
                 "conic-gradient(#FF0080, #EE00FF, #00A6FF, #4797FF, #0044FF, #FF8000, #FF00CC)",
@@ -87,13 +94,15 @@ const AdvancedGradiant = ({
           />
         </div>
         <div
-          className="absolute top-0 left-0 grid place-items-center w-full h-full"
+          className="absolute top-0 left-0 grid place-items-center w-full h-full transform-gpu"
           style={{
             animation: "size-bounce 20s linear infinite",
           }}
         >
           <div
-            className={cn("size-[300px] absolute blur-2xl rounded-full")}
+            className={cn(
+              "size-[300px] absolute blur-2xl rounded-full transform-gpu",
+            )}
             style={{
               background: "conic-gradient(#FFF, #12B4E6, #DC4CFC)",
               animation: "spin-right 10s linear infinite",
@@ -101,14 +110,14 @@ const AdvancedGradiant = ({
           />
         </div>
         <div
-          className="absolute top-0 left-0 grid place-items-center w-full h-full"
+          className="absolute top-0 left-0 grid place-items-center w-full h-full transform-gpu"
           style={{
             animation: "size-bounce 10s linear infinite",
           }}
         >
           <div
             className={cn(
-              "size-[300px] absolute blur-2xl rounded-full opacity-80",
+              "size-[300px] absolute blur-2xl rounded-full opacity-80 transform-gpu",
             )}
             style={{
               background: "conic-gradient(#A6EFFF, #12ADE6, #4C63FC)",

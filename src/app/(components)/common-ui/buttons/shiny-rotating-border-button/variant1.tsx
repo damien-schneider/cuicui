@@ -21,7 +21,7 @@ export default function ShinyRotatingBorderButtonVariant1() {
           ease: "linear",
           repeat: Number.POSITIVE_INFINITY,
         }}
-        className="absolute size-8 z-10 -translate-x-1/2 -translate-y-1/2 blur-sm group-hover:scale-[3] duration-300 transition-transform"
+        className="absolute size-8 z-10 -translate-x-1/2 -translate-y-1/2 blur-sm group-hover:scale-[3] duration-300 transition-transform transform-gpu"
       >
         <motion.div
           animate={{
@@ -32,7 +32,7 @@ export default function ShinyRotatingBorderButtonVariant1() {
             ease: "linear",
             repeat: Number.POSITIVE_INFINITY,
           }}
-          className="rounded-full size-full"
+          className="rounded-full size-full transform-gpu"
           style={{
             background:
               "linear-gradient(135deg, #3BC4F2, #7A69F9, #F26378, #F5833F)",
@@ -55,7 +55,7 @@ export default function ShinyRotatingBorderButtonVariant1() {
             ease: "linear",
             repeat: Number.POSITIVE_INFINITY,
           }}
-          className="bg-clip-text group-hover:text-transparent text-neutral-600 dark:text-neutral-200 text-sm tracking-tighter transition-colors duration-300"
+          className="bg-clip-text group-hover:text-transparent text-neutral-600 dark:text-neutral-200 text-sm tracking-tighter transition-colors transform-gpu duration-500"
         >
           variant1
         </motion.p>

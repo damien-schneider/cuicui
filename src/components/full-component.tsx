@@ -287,11 +287,11 @@ const RerenderButton = ({
 }: { setRender: React.Dispatch<React.SetStateAction<number>> }) => (
   <button
     type="button"
-    className="absolute top-2 right-2 px-2 py-1 group hover:bg-neutral-400/15 rounded-md items-center flex gap-1 transition-colors"
+    className="absolute top-2 right-2 px-2 py-1 group hover:bg-neutral-400/15 rounded-md items-center flex gap-1 transition-colors transform-gpu"
     onClick={() => setRender((prev) => prev + 1)}
   >
-    <div className="w-fit group-hover:max-w-20 max-w-0 overflow-hidden transition-all duration-500 ">
-      <p className=" whitespace-nowrap opacity-0 group-hover:opacity-100 duration-500 transition-opacity text-sm text-neutral-400">
+    <div className="w-fit group-hover:max-w-20 max-w-0 overflow-hidden transition-all duration-500 transform-gpu">
+      <p className=" whitespace-nowrap opacity-0 group-hover:opacity-100 duration-500 transition-opacity text-sm text-neutral-400 transform-gpu">
         Rerender
       </p>
     </div>

@@ -22,16 +22,16 @@ export const MainMenuCard = ({
         "--y": `${y}px`,
       }}
       className={cn(
-        "relative overflow-hidden rounded-[20px] p-2 h-full group",
+        "relative overflow-hidden rounded-[20px] p-2 h-full group ",
         className,
       )}
     >
       {item.href && (
-        <ArrowUpRightIcon className="absolute top-2 right-2 text-neutral-700 dark:text-neutral-300 size-5 group-hover:opacity-100 group-hover:translate-y-0 opacity-0 translate-y-4 transition-all z-10" />
+        <ArrowUpRightIcon className="absolute top-2 right-2 text-neutral-700 dark:text-neutral-300 size-5 group-hover:opacity-100 group-hover:translate-y-0 opacity-0 translate-y-4 transition-all z-10 transform-gpu" />
       )}
       <div
         className={cn(
-          "size-40 rounded-full blur-3xl absolute top-[var(--y)] left-[var(--x)] -translate-x-1/2 -translate-y-1/2 group-hover:scale-[5] scale  transition-transform duration-300",
+          "size-40 rounded-full blur-3xl absolute top-[var(--y)] left-[var(--x)] -translate-x-1/2 -translate-y-1/2 group-hover:scale-[5] scale  transition-transform duration-300 transform-gpu",
           (x === null || y === null) && "hidden",
         )}
         style={{
@@ -51,7 +51,7 @@ export const MainMenuCard = ({
             </div>
           ) : (
             <div
-              className=" pointer-events-none select-none flex justify-center items-center w-full h-full"
+              className=" pointer-events-none select-none flex justify-center items-center w-full h-full transform-gpu"
               style={{
                 transform: `scale(${item.preview?.previewScale ?? 0.75})`,
               }}

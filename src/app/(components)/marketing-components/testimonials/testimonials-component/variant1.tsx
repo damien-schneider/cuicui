@@ -53,7 +53,7 @@ export function TestimonialsVariant1() {
           onClick={handlePreviousSlide}
           className="rounded-full group size-7 p-1.5 bg-white dark:bg-neutral-950 inline-flex items-center justify-center"
         >
-          <ArrowLeftIcon className="group-disabled:stroke-neutral-500/40 stroke-blue-500 transition-colors" />
+          <ArrowLeftIcon className="group-disabled:stroke-neutral-500/40 stroke-blue-500 transition-colors transform-gpu" />
         </button>
         <button
           disabled={currentSlide === testimonials.length - 1}
@@ -61,7 +61,7 @@ export function TestimonialsVariant1() {
           onClick={handleNextSlide}
           className="rounded-full group size-7 p-1.5 bg-white dark:bg-neutral-950  inline-flex items-center justify-center"
         >
-          <ArrowRightIcon className="group-disabled:stroke-neutral-500/40 stroke-blue-500 transition-colors" />
+          <ArrowRightIcon className="group-disabled:stroke-neutral-500/40 stroke-blue-500 transition-colors transform-gpu" />
         </button>
       </div>
       <section className="flex mt-8 *:shrink-0 gap-2 w-full">
@@ -74,7 +74,7 @@ export function TestimonialsVariant1() {
                 exit={{ opacity: 0, x: 0, scale: 0.8 }}
                 transition={{ duration: 0.35, ease: "easeInOut" }}
                 layout
-                className="bg-white dark:bg-neutral-800 rounded-lg p-4 flex flex-col justify-between h-60 w-[24rem] shadow-sm"
+                className="bg-white dark:bg-neutral-800 rounded-lg p-4 flex flex-col justify-between h-60 w-[24rem] shadow-sm transform-gpu"
               >
                 <div className="size-7 bg-neutral-500/10 rounded-full" />
                 <p className="tracking-tight font-medium leading-5 text-neutral-600 dark:text-neutral-400">

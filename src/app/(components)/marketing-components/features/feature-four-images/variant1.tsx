@@ -98,7 +98,7 @@ export function Variant1FeatureFourImages() {
                 src={item.srcImage}
                 alt={item.title}
                 className={cn(
-                  "rounded-lg absolute w-full object-cover transition-all duration-300 h-full",
+                  "rounded-lg absolute w-full object-cover transition-all duration-300 h-full transform-gpu",
                   featureOpen === index ? "scale-100" : "scale-70",
                   featureOpen > index ? "translate-y-full" : "",
                 )}
@@ -128,7 +128,7 @@ function TextComponent({
   return (
     <div
       className={cn(
-        "transition-colors rounded-lg",
+        "transition-colors rounded-lg transform-gpu",
         isOpen ? "bg-green-600/10" : "saturate-0 opacity-50",
       )}
     >
@@ -150,7 +150,7 @@ function TextComponent({
       </div>
       <div
         className={cn(
-          "overflow-hidden transition-all duration-500 text-left dark:text-gray-400 text-gray-600 w-full",
+          "overflow-hidden transition-all duration-500 text-left dark:text-gray-400 text-gray-600 w-full transform-gpu",
           isOpen ? " max-h-64" : "max-h-0",
         )}
       >

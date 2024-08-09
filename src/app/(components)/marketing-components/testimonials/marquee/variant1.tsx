@@ -36,7 +36,7 @@ export default function MarqueeVariant1() {
         }}
       >
         <div
-          className="flex gap-4 pr-4 w-[200%]"
+          className="flex gap-4 pr-4 w-[200%] transform-gpu"
           style={{
             animation: "marquee 15s linear infinite",
           }}

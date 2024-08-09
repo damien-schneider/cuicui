@@ -41,11 +41,11 @@ const Card = ({
         "--x": `${x}px`,
         "--y": `${y}px`,
       }}
-      className="relative overflow-hidden rounded-[20px] bg-white/10 p-2"
+      className="relative overflow-hidden rounded-[20px] bg-white/10 p-2 transform-gpu"
     >
       <div
         className={cn(
-          "size-40 rounded-full blur-3xl absolute top-[var(--y)] left-[var(--x)] -translate-x-1/2 -translate-y-1/2",
+          "size-40 rounded-full blur-3xl absolute top-[var(--y)] left-[var(--x)] -translate-x-1/2 -translate-y-1/2 transform-gpu",
           (x === null || y === null) && "hidden",
         )}
         style={{
