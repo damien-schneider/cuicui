@@ -193,7 +193,7 @@ export default function FullComponent({
             >
               <ResizablePanel
                 defaultSize={100}
-                className="dark:bg-neutral-900 bg-neutral-50 rounded-md border border-neutral-500/20 relative"
+                className="dark:bg-[#101010] bg-neutral-50 rounded-md border border-neutral-500/20 relative"
               >
                 {rerenderButton && <RerenderButton setRender={setRender} />}
 
