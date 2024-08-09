@@ -1,10 +1,27 @@
 import React from "react";
-import ComingSoonCard from "#/src/components/coming-soon";
 
-export default function Page() {
+import FullComponent from "#/src/components/full-component";
+import { getFileContentAsString } from "#/src/utils/get-file-content-as-string";
+import ModernDetailedKbdVariant1 from "./modern-detailed-kbd/variant1";
+
+export default async function Page() {
   return (
-    <div>
-      <ComingSoonCard />
-    </div>
+    <>
+      <FullComponent
+        size="xs"
+        componentList={[
+          {
+            variantName: "variant1",
+            component: <ModernDetailedKbdVariant1 />,
+            code: await getFileContentAsString({
+              componentSlug: "kbd",
+              variantName: "modern-detailed-kbd/variant1",
+            }),
+          },
+        ]}
+        title="Modern Mac Kbd"
+        description=""
+      />
+    </>
   );
 }
