@@ -20,6 +20,7 @@ export default async function Page() {
             }),
           },
         ]}
+        isIframed={false}
         title="Button"
         description="Simple button with icon which grows on hover. Perfect for having small rarelly used buttons replacing an old tooltip."
       />
@@ -58,6 +59,7 @@ export default async function Page() {
             }),
           },
         ]}
+        isIframed={false}
         title="Shiny rotating border button"
         description="Button with a shiny rotating border effect."
       />
