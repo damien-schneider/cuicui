@@ -1,6 +1,7 @@
 import type { StaticImageData } from "next/image";
 import type { ReactNode } from "react";
 import BadgesPreview from "#/src/assets/components-preview/badges.png";
+import ModernDetailedKbdVariant1 from "../app/(components)/application-ui/kbd/modern-detailed-kbd/variant1";
 import DynamicSettingsVariant1 from "../app/(components)/application-ui/settings/dynamic-settings/variant1";
 import { StepWithStickyColorVariant1 } from "../app/(components)/application-ui/static-steppers/code/variant1";
 import ClerkBadgeVariant1 from "../app/(components)/common-ui/badges/clerk-badge/variant1";
@@ -79,7 +80,7 @@ export const componentCategories: {
         name: "Buttons",
         slug: "buttons",
         description: "Create simple buttons with different styles",
-        releaseDate: new Date("2024-07-29"),
+        releaseDate: new Date("2024-08-9"),
         preview: {
           component: <ShinyRotatingBorderButtonVariant1 />,
           previewScale: 1.5,
@@ -173,7 +174,11 @@ export const componentCategories: {
         name: "Kbd",
         slug: "kbd",
         description: "Create simple accessible kbd shortcut",
-        comingSoon: true,
+        releaseDate: new Date("2024-08-09"),
+        preview: {
+          component: <ModernDetailedKbdVariant1 />,
+          previewScale: 1,
+        },
       },
     ],
   },
