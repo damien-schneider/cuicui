@@ -2,6 +2,7 @@ import ModernDetailedKbdVariant1 from "../app/(components)/application-ui/kbd/mo
 import DynamicSettingsVariant1 from "../app/(components)/application-ui/settings/dynamic-settings/variant1";
 import { StepWithStickyColorVariant1 } from "../app/(components)/application-ui/static-steppers/code/variant1";
 import ClerkBadgeVariant1 from "../app/(components)/common-ui/badges/clerk-badge/variant1";
+import ModernSimpleQuoteVariant1 from "../app/(components)/common-ui/blockquotes/modern-simple-quote/variant1";
 import ShinyRotatingBorderButtonVariant1 from "../app/(components)/common-ui/buttons/shiny-rotating-border-button/variant1";
 import Dock from "../app/(components)/common-ui/navigation/mac-dock/variant1";
 import { VercelNavigationVariant1 } from "../app/(components)/common-ui/navigation/vercel-navigation/variant1";
@@ -94,6 +95,16 @@ export const componentCategories: {
 
         preview: {
           component: <ShinyGradientSkeletonVariant1 />,
+          previewScale: 0.75,
+        },
+      },
+      {
+        name: "Blockquotes",
+        slug: "blockquotes",
+        description: "Create simple blockquotes with different styles",
+        releaseDate: new Date("2024-08-01"),
+        preview: {
+          component: <ModernSimpleQuoteVariant1 />,
           previewScale: 0.75,
         },
       },
@@ -206,6 +217,18 @@ export const componentCategories: {
           component: <BlurAppearVariant1 />,
           previewScale: 0.75,
         },
+      },
+      {
+        name: "Mock-ups",
+        slug: "mock-ups",
+        description:
+          "Create mock-ups without images, just with CSS and HTML for better performance, SEO and accessibility & also more micro-interactions",
+        // releaseDate: new Date("2024-07-29"),
+        comingSoon: true,
+        // preview: {
+        //   component: <BlurAppearVariant1 />,
+        //   previewScale: 0.75,
+        // },
       },
     ],
   },
