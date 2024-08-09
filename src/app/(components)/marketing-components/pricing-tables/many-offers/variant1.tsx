@@ -115,7 +115,7 @@ const OfferCard = ({
   return (
     <div
       className={cn(
-        "rounded-2xl border  hover:-translate-y-1 transition-all duration-300 ease-in-out overflow-hidden dark:bg-neutral-800/50 bg-neutral-800/95 hover:bg-neutral-800/100 h-full",
+        "rounded-2xl border  hover:-translate-y-1 transition-all duration-300 ease-in-out overflow-hidden dark:bg-neutral-800/50 bg-neutral-800/95 hover:bg-neutral-800/100 h-full transform-gpu",
         "dark:text-neutral-400 text-white",
         isBestValue ? "border-[#ed8445]" : "border-neutral-500/50 ",
       )}
@@ -148,7 +148,7 @@ const OfferCard = ({
         <button
           type="button"
           className={cn(
-            "py-2.5 px-12 rounded-full my-12 text-neutral-50  items-center justify-center inline-flex w-full hover:scale-105 transition-all font-semibold tracking-tight border border-neutral-400/20",
+            "py-2.5 px-12 rounded-full my-12 text-neutral-50  items-center justify-center inline-flex w-full hover:scale-105 transition-all font-semibold tracking-tight border border-neutral-400/20 transform-gpu",
             isBestValue
               ? " bg-gradient-to-br from-[#f6d4a1] to-[#ed8445]"
               : "bg-neutral-700  ",
@@ -201,7 +201,7 @@ export function SelectOfferTab({
           key={button}
           onClick={() => handleSwitchTab(button)}
           className={cn(
-            " text-lg tracking-tight font-semibold py-2.5 px-6  relative whitespace-nowrap inline-flex w-fit   transition-colors capitalize",
+            " text-lg tracking-tight font-semibold py-2.5 px-6  relative whitespace-nowrap inline-flex w-fit   transition-colors capitalize transform-gpu",
             selectedBilledType === button
               ? "dark:text-neutral-50 text-neutral-700"
               : "text-neutral-800 dark:text-neutral-300 dark:hover:text-neutral-300 hover:text-neutral-600 ",

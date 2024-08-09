@@ -93,8 +93,10 @@ export default function RootLayout({
                     classNameParent=""
                     classNameChild="px-8 py-10 min-h-[calc(100vh-6rem)]"
                   >
-                    {/* Move overflow-auto to the previous comment if problems occurs */}
-                    {children}
+                    <main className="">
+                      {/* Move overflow-auto to the previous comment if problems occurs */}
+                      {children}
+                    </main>
                   </GradientContainer>
                 </div>
                 <MobileMenu className="" />

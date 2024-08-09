@@ -5,10 +5,13 @@ export default function FollowCursorVariant1() {
   const { x, y, parentRef } = useMousePosition();
 
   return (
-    <div className="w-full h-full relative cursor-none" ref={parentRef}>
+    <div
+      className="w-full h-full relative cursor-none transform-gpu"
+      ref={parentRef}
+    >
       {x !== null && y !== null && (
         <div
-          className="size-6 bg-neutral-500/15 border border-neutral-500/20 rounded-full absolute -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+          className="size-6 bg-neutral-500/15 border border-neutral-500/20 rounded-full absolute -translate-x-1/2 -translate-y-1/2 pointer-events-none transform-gpu"
           style={{
             top: y,
             left: x,

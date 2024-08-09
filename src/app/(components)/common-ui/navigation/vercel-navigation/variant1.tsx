@@ -28,7 +28,7 @@ export function VercelNavigationVariant1() {
           type="button"
           key={button.label}
           onMouseEnter={() => handleHoverButton(index)}
-          className="text-neutral-500 text-sm font-medium py-1 px-2 rounded relative whitespace-nowrap inline-flex w-fit"
+          className="text-neutral-500 text-sm font-medium py-1 px-2 rounded relative whitespace-nowrap inline-flex w-fit "
         >
           {button.label}
           <AnimatePresence>

@@ -53,12 +53,12 @@ export default function DynamicSettingsVariant1() {
       <div className="h-full">
         <div
           className={cn(
-            "transition-all duration-300 flex flex-col justify-between gap-2 h-full",
+            "transition-all duration-300 flex flex-col justify-between gap-2 h-full transform-gpu",
           )}
         >
           <div
             className={cn(
-              "transition-all duration-300 flex items-center justify-between gap-2 group",
+              "transition-all duration-300 flex items-center justify-between gap-2 group transform-gpu",
             )}
           >
             {isOpen ? (
@@ -70,7 +70,7 @@ export default function DynamicSettingsVariant1() {
               <button
                 type="button"
                 className={cn(
-                  "flex gap-2 p-2 transition-all text-nowrap font-medium text-neutral-500 group-hover:text-neutral-50 text-sm",
+                  "flex gap-2 p-2 transition-all text-nowrap font-medium text-neutral-500 group-hover:text-neutral-50 text-sm transform-gpu",
                 )}
                 onClick={() => setIsOpen(true)}
               >
@@ -80,11 +80,11 @@ export default function DynamicSettingsVariant1() {
             <button
               onClick={() => handleOpenSettings()}
               type="button"
-              className="size-8 text-neutral-400 hover:text-neutral-300 transition-colors duration-500"
+              className="size-8 text-neutral-400 hover:text-neutral-300 transition-colors duration-500 transform-gpu"
             >
               <PlusIcon
                 className={cn(
-                  " transition-transform duration-300",
+                  " transition-transform duration-300 transform-gpu",
                   isOpen ? "rotate-45" : "rotate-0",
                 )}
               />
@@ -199,7 +199,7 @@ function AspectRatioSection() {
         <button
           key={item.label}
           className={cn(
-            "rounded-md inline-flex w-fit gap-2 items-center py-2 px-3  transition-colors duration-300",
+            "rounded-md inline-flex w-fit gap-2 items-center py-2 px-3  transition-colors duration-300 transform-gpu",
             index === selected
               ? "bg-yellow-200/10  text-yellow-200"
               : "text-neutral-500  hover:text-yellow-200",
@@ -238,7 +238,7 @@ function NavigationMenu({
           key={button.label}
           onClick={() => setSubMenuSelected(button.slug)}
           className={cn(
-            "text-neutral-500 text-sm font-medium py-1 px-2 rounded-md relative whitespace-nowrap inline-flex w-fit hover:text-neutral-50 transition-colors duration-300",
+            "text-neutral-500 text-sm font-medium py-1 px-2 rounded-md relative whitespace-nowrap inline-flex w-fit hover:text-neutral-50 transition-colors duration-300 transform-gpu",
             subMenuSelected === button.slug && "text-neutral-200",
           )}
         >

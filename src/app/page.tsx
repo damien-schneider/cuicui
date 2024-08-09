@@ -18,7 +18,7 @@ export default function Page() {
           <div key={section.name} className="space-y-5">
             <h3 className="uppercase-title">{section.name}</h3>
 
-            <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
+            <div className="grid grid-cols-1 gap-5 lg:grid-cols-2 transform-gpu">
               {section.items.map((item) => {
                 return (
                   <Link
@@ -27,7 +27,7 @@ export default function Page() {
                       item: item,
                     })}
                     key={item.name}
-                    className="group hover:scale-[1.01] hover:-translate-y-[2px] transition-all active:scale-95"
+                    className="group hover:scale-[1.01] hover:-translate-y-[2px] transition-all active:scale-95 rounded-[20px] overflow-hidden"
                   >
                     <MainMenuCard item={item} />
                   </Link>

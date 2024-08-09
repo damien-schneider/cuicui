@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* main * {
+  @apply  transform-gpu;
+} */
 @keyframes gradient-animation {
   0% {
     -webkit-background-position: 0% 50%;

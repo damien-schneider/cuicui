@@ -34,7 +34,7 @@ const Card = ({
   return (
     <div
       ref={parentRef}
-      className="relative overflow-hidden before:absolute before:inset-0 before:bg-[radial-gradient(var(--spotlight-size)_circle_at_var(--x)_var(--y),var(--spotlight-color-stops))] rounded-[--radius] bg-white/10 p-2 [--radius:theme(borderRadius.2xl)]"
+      className="relative overflow-hidden before:absolute before:inset-0 before:bg-[radial-gradient(var(--spotlight-size)_circle_at_var(--x)_var(--y),var(--spotlight-color-stops))] rounded-[--radius] bg-white/10 p-2 [--radius:theme(borderRadius.2xl)] transform-gpu"
       style={{
         //@ts-ignore : This is a valid css variable
         "--x": `${x}px`,
@@ -44,7 +44,7 @@ const Card = ({
         "--radius": "1rem",
       }}
     >
-      <div className="absolute inset-px rounded-[calc(var(--radius)-1px)] dark:bg-neutral-800 bg-neutral-100" />
+      <div className="absolute inset-px rounded-[calc(var(--radius)-1px)] dark:bg-neutral-800 bg-neutral-100 transform-gpu" />
 
       <div className="relative rounded-[calc(var(--radius)-4px)] bg-neutral-200 dark:bg-neutral-900 h-40" />
       <div className="relative px-4 pb-2 pt-4">
