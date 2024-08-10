@@ -20,6 +20,8 @@ export default async function Page() {
         isIframed={false}
         title="Cylindric 3D Carousel"
         description="A 3D carousel that rotates in a cylindrical way. It's perfect for showcasing multiple images or products."
+        inspiration="Ibelick lab"
+        inspirationLink="https://ibelick.com/lab/3d-photo-carousel"
       />
     </>
   );
