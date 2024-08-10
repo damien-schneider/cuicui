@@ -41,7 +41,7 @@ function Skeleton({
         className={cn(
           "shimmer",
           "before:bg-gradient-to-r before:from-transparent before:via-white/50 dark:before:via-rose-100/10 before:to-transparent before:absolute before:inset-0",
-          "relative isolate overflow-hidden transform-gpu before:transform-gpu",
+          "relative isolate overflow-hidden",
           className,
         )}
         {...props}
