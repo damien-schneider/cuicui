@@ -25,6 +25,7 @@
 		"@radix-ui/react-dialog": "1.1.1",
 		"@radix-ui/react-scroll-area": "1.1.0",
 		"@radix-ui/react-select": "2.0.0",
+		"@radix-ui/react-slider": "1.2.0",
 		"class-variance-authority": "0.7.0",
 		"clsx": "2.1.0",
 		"cmdk": "1.0.0",
