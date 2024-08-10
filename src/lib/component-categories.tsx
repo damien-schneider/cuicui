@@ -1,18 +1,24 @@
 import ModernDetailedKbdVariant1 from "../app/(components)/application-ui/kbd/modern-detailed-kbd/variant1";
 import DynamicSettingsVariant1 from "../app/(components)/application-ui/settings/dynamic-settings/variant1";
+import { ElasticSliderVariant1 } from "../app/(components)/application-ui/sliders/elastic-slider/variant1";
 import { StepWithStickyColorVariant1 } from "../app/(components)/application-ui/static-steppers/code/variant1";
 import ClerkBadgeVariant1 from "../app/(components)/common-ui/badges/clerk-badge/variant1";
 import ModernSimpleQuoteVariant1 from "../app/(components)/common-ui/blockquotes/modern-simple-quote/variant1";
 import ShinyRotatingBorderButtonVariant1 from "../app/(components)/common-ui/buttons/shiny-rotating-border-button/variant1";
+import { ModernInnerShadowCardVariant1 } from "../app/(components)/common-ui/cards/modern-inner-shadow/variant1";
 import Dock from "../app/(components)/common-ui/navigation/mac-dock/variant1";
 import { VercelNavigationVariant1 } from "../app/(components)/common-ui/navigation/vercel-navigation/variant1";
 import { ShinyGradientSkeletonVariant1 } from "../app/(components)/common-ui/skeletons/shiny-gradient/variant1";
+import { CarouselCylindricalVariant1 } from "../app/(components)/marketing-components/carousels/cylindric-3d-carousel/variant1";
 import { Variant1FeatureFourImages } from "../app/(components)/marketing-components/features/feature-four-images/variant1";
 import ManyOffersVariant1 from "../app/(components)/marketing-components/pricing-tables/many-offers/variant1";
 import MarqueeVariant1 from "../app/(components)/marketing-components/testimonials/marquee/variant1";
-import DynamicCardsVariant1 from "../app/(components)/other/cursors/dynamic-cards/variant1";
-import DynamicCardsVariant2 from "../app/(components)/other/cursors/dynamic-cards/variant2";
+
 import FollowCursorVariant1 from "../app/(components)/other/cursors/follow-cursor/variant1";
+import {
+  DotsPattern,
+  DotsPatternVariant1,
+} from "../app/(components)/other/patterns/dots-pattern/variant1";
 import BlurAppearVariant1 from "../app/(components)/other/transition-wrappers/blur-appear/variant1";
 import type { CategoryItem, PreviewComponent } from "./types/component";
 
@@ -38,11 +44,18 @@ export const componentCategories: {
           "Learn how to use CuiCui in your project. It's easy and simple.",
       },
       {
-        name: "Contribute | Roadmap",
+        name: "Contribute",
         href: "https://cuicui.featurebase.app/",
         slug: "contribute",
         description:
-          "Help us make CuiCui better. Contribute to the project on GitHub. We have a roadmap for the future.",
+          "Help us make CuiCui better. Contribute to the project with your ideas or directly on GitHub.",
+      },
+      {
+        name: "Roadmap",
+        href: "https://cuicui.featurebase.app/roadmap",
+        slug: "roadmap",
+        description:
+          "See what's coming next in CuiCui. We have a lot of cool stuff planned.",
       },
       {
         name: "Changelog",
@@ -115,6 +128,16 @@ export const componentCategories: {
         // releaseDate: new Date("2024-08-01"),
         comingSoon: true,
       },
+      {
+        name: "Cards",
+        slug: "cards",
+        description: "Create simple cards with different styles",
+        releaseDate: new Date("2024-08-10"),
+        preview: {
+          component: <ModernInnerShadowCardVariant1 />,
+          previewScale: 0.5,
+        },
+      },
     ],
   },
   {
@@ -154,6 +177,17 @@ export const componentCategories: {
           previewScale: 0.75,
         },
       },
+      {
+        name: "Carousels",
+        slug: "carousels",
+        description: "Showcase your product testimonials with style",
+        releaseDate: new Date("2024-08-10"),
+
+        preview: {
+          component: <CarouselCylindricalVariant1 />,
+          previewScale: 0.75,
+        },
+      },
     ],
   },
   {
@@ -188,6 +222,16 @@ export const componentCategories: {
         releaseDate: new Date("2024-08-09"),
         preview: {
           component: <ModernDetailedKbdVariant1 />,
+          previewScale: 1,
+        },
+      },
+      {
+        name: "Sliders",
+        slug: "sliders",
+        description: "Create simple sliders with different styles",
+        releaseDate: new Date("2024-08-10"),
+        preview: {
+          component: <ElasticSliderVariant1 />,
           previewScale: 1,
         },
       },
@@ -229,6 +273,17 @@ export const componentCategories: {
         //   component: <BlurAppearVariant1 />,
         //   previewScale: 0.75,
         // },
+      },
+      {
+        name: "Patterns",
+        slug: "patterns",
+        description:
+          "Create patterns without images, just with CSS and HTML for better performance, SEO and accessibility & also more micro-interactions",
+        releaseDate: new Date("2024-08-10"),
+        preview: {
+          component: <DotsPatternVariant1 />,
+          previewScale: 1,
+        },
       },
     ],
   },
