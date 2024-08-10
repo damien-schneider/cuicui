@@ -18,6 +18,7 @@ import {
   SpeakerIcon,
   UserIcon,
 } from "lucide-react";
+import { useId } from "react";
 import { cn } from "#/src/utils/cn";
 
 export function CarouselCylindricalVariant1() {
@@ -44,11 +45,11 @@ export function CarouselCylindricalVariant1() {
   const transform = useTransform(rotation, (value) => {
     return `rotate3d(0, 1, 0, ${value}deg)`;
   });
-
+  const id = useId();
   return (
-    <div className="relative h-[300px] w-full overflow-hidden">
+    <div className="relative h-[200px] w-full overflow-hidden">
       <div
-        className="flex h-full items-center justify-center bg-mauve-dark-2 neutral"
+        className="flex h-full items-center justify-center"
         style={{
           perspective: "1000px",
           transformStyle: "preserve-3d",
@@ -59,7 +60,7 @@ export function CarouselCylindricalVariant1() {
       >
         <motion.div
           drag="x"
-          className="relative flex h-full origin-center cursor-grab justify-center active:cursor-grabbing neutral"
+          className="relative flex h-full origin-center cursor-grab justify-center active:cursor-grabbing"
           style={{
             transform: transform,
             rotateY: rotation,
@@ -73,8 +74,8 @@ export function CarouselCylindricalVariant1() {
           {IconList.map((Item, index) => {
             return (
               <div
-                key={`face-${index}`}
-                className="absolute flex h-full origin-center items-center justify-center bg-mauve-dark-2 p-2  neutral"
+                key={`face-${id}`}
+                className="absolute flex h-full origin-center items-center justify-center bg-mauve-dark-2 p-2"
                 style={{
                   width: `${faceWidth}px`,
                   transform: `rotateY(${
