@@ -13,6 +13,7 @@ import { ScrollArea } from "../shadcn-scrollarea";
 import StarGithubProjectButton from "../star-github-project-button";
 import ThemeSwitcher from "../theme-switcher";
 import NavigationMenu from "./navigation-menu";
+import { SearchMenu } from "./search-menu";
 
 export function DesktopSideMenu({
   className,
@@ -34,6 +35,7 @@ export function DesktopSideMenu({
           <ThemeSwitcher />
         </div>
         <StarGithubProjectButton />
+        <SearchMenu />
       </div>
       <ScrollArea className="w-full ">
         <NavigationMenu />
