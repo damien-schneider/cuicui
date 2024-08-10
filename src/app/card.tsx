@@ -51,7 +51,9 @@ export const MainMenuCard = ({
             </div>
           ) : (
             <div
-              className=" pointer-events-none select-none flex justify-center items-center w-full h-full transform-gpu"
+              className={cn(
+                "pointer-events-none select-none flex justify-center items-center w-full h-full",
+              )}
               style={{
                 transform: `scale(${item.preview?.previewScale ?? 0.75})`,
               }}
