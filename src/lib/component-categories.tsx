@@ -25,11 +25,13 @@ import type { CategoryItem, PreviewComponent } from "./types/component";
 export const componentCategories: {
   name: string;
   slug: string | null;
+  noAlphabeticalSort?: boolean;
   items: CategoryItem[];
 }[] = [
   {
     name: "Info",
     slug: null,
+    noAlphabeticalSort: true,
     items: [
       {
         name: "Why another library?",

@@ -10,6 +10,7 @@ import { cn } from "#/src/utils/cn";
 import { getCategoryHref } from "#/src/utils/get-component-href";
 import GradientContainer from "../gradient-container";
 import GradientText from "../gradient-text";
+
 export default function NavigationMenu({
   isMobile,
   className,
@@ -20,21 +21,37 @@ export default function NavigationMenu({
   const handleHoverButton = (index: number | string | null) => {
     setElementFocused(index);
   };
+
+  function getSortedAlphabeticallyComponentCategory() {
+    // Sort only if section.noAlphabeticalSort is not true
+    return componentCategories.map((section) => {
+      if (section.noAlphabeticalSort) {
+        return section;
+      }
+      return {
+        ...section,
+        items: section.items.toSorted((a, b) => a.name.localeCompare(b.name)),
+      };
+    });
+  }
+  const sortedAlphabeticallyComponentCategory =
+    getSortedAlphabeticallyComponentCategory();
+
   return (
     <nav
       className={cn("space-y-6 px-2 mt-5 mb-12", className)}
       onMouseLeave={() => handleHoverButton(null)}
     >
-      {componentCategories.map((section) => {
+      {sortedAlphabeticallyComponentCategory.map((section) => {
         return (
           <div key={section.name}>
             <div className="mb-2 px-3 font-semibold text-neutral-500 dark:text-neutral-400 text-xs uppercase tracking-wider">
               <div>{section.name}</div>
             </div>
 
-            <div className=" space-y-0.5">
+            <ul className="space-y-0.5">
               {section.items.map((item, index) => (
-                <div
+                <li
                   key={item.slug}
                   className="relative"
                   onMouseEnter={() => handleHoverButton(item.slug)}
@@ -57,9 +74,9 @@ export default function NavigationMenu({
                       />
                     )}
                   </AnimatePresence>
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         );
       })}
