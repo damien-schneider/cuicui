@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import "#/src/styles/globals.css";
 import { cn } from "#/src/utils/cn";
@@ -36,7 +37,7 @@ const data = [
   },
 ];
 
-export function Variant1FeatureFourImages() {
+export function Variant2FeatureFourImages() {
   const [featureOpen, setFeatureOpen] = useState<number>(0);
   const [timer, setTimer] = useState<number>(0);
   useEffect(() => {
@@ -56,11 +57,11 @@ export function Variant1FeatureFourImages() {
   return (
     <div className="container">
       <div className="text-center mb-20">
-        <p className=" uppercase text-neutral-500 mb-2 text-sm font-medium">
+        <p className=" uppercase text-violet-500 mb-2 text-lg font-medium">
           How does it work ?
         </p>
 
-        <h2 className="text-3xl font-semibold tracking-tighter dark:text-neutral-300 text-neutral-800 mb-4">
+        <h2 className="text-3xl font-medium dark:text-gray-300 text-gray-800 mb-4 shrink-0">
           How to use the Easiest component librairy : Cuicui
         </h2>
       </div>
@@ -89,14 +90,16 @@ export function Variant1FeatureFourImages() {
         <div className="h-full">
           <div
             className={cn(
-              "relative h-96 md:h-[500px] w-full rounded-lg overflow-hidden",
+              "relative h-[500px]  w-full rounded-lg overflow-hidden",
             )}
           >
             {data.map((item, index) => (
-              <img
+              <Image
                 key={item.title}
                 src={item.srcImage}
                 alt={item.title}
+                width={400}
+                height={800}
                 className={cn(
                   "rounded-lg absolute w-full object-cover transition-all duration-300 h-[500px] transform-gpu",
                   featureOpen === index ? "scale-100" : "scale-70",
@@ -128,23 +131,21 @@ function TextComponent({
   return (
     <div
       className={cn(
-        "transition-all rounded-lg transform-gpu border",
-        isOpen
-          ? "bg-gradient-to-b from-neutral-200/15 to-neutral-200/5 dark:from-neutral-600/15 dark:to-neutral-600/5  dark:border-neutral-500/15 border-neutral-500/10 dark:shadow-[2px_4px_25px_0px_rgba(248,248,248,0.06)_inset] "
-          : "saturate-0 opacity-50 border-transparent scale-90",
+        "transition-colors rounded-lg transform-gpu",
+        isOpen ? "bg-violet-600/10" : "saturate-0 opacity-50",
       )}
     >
       <div className="w-full p-4 flex gap-4 items-center">
         <p
           className={cn(
-            "inline-flex size-8 rounded-md items-center justify-center text-neutral-600 bg-neutral-500/20 shrink-0",
+            "inline-flex size-8 rounded-md items-center justify-center text-violet-600 bg-violet-500/20",
           )}
         >
           {number}
         </p>
         <h2
           className={cn(
-            "text-xl font-medium dark:text-neutral-200 text-neutral-800 text-left",
+            "text-xl font-medium dark:text-gray-200 text-gray-800 text-left",
           )}
         >
           {title}
@@ -152,7 +153,7 @@ function TextComponent({
       </div>
       <div
         className={cn(
-          "overflow-hidden transition-all duration-500 text-left dark:text-neutral-400 text-neutral-600 w-full transform-gpu",
+          "overflow-hidden transition-all duration-500 text-left dark:text-gray-400 text-gray-600 w-full transform-gpu",
           isOpen ? " max-h-64" : "max-h-0",
         )}
       >
@@ -160,7 +161,7 @@ function TextComponent({
         <div className="w-full pb-4 px-4">
           <div className="h-1 relative rounded-full w-full overflow-hidden">
             <div
-              className={cn("absolute top-0 left-0 h-1 bg-neutral-500")}
+              className={cn("absolute top-0 left-0 h-1 bg-violet-500")}
               style={{ width: `${loadingWidthPercent}%` }}
             />
           </div>
