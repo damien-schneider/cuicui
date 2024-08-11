@@ -9,10 +9,10 @@ import { ModernInnerShadowCardVariant1 } from "../app/(components)/common-ui/car
 import Dock from "../app/(components)/common-ui/navigation/mac-dock/variant1";
 import { VercelNavigationVariant1 } from "../app/(components)/common-ui/navigation/vercel-navigation/variant1";
 import { ShinyGradientSkeletonVariant1 } from "../app/(components)/common-ui/skeletons/shiny-gradient/variant1";
-import { CarouselCylindricalVariant1 } from "../app/(components)/marketing-components/carousels/cylindric-3d-carousel/variant1";
-import { Variant1FeatureFourImages } from "../app/(components)/marketing-components/features/feature-four-images/variant1";
-import ManyOffersVariant1 from "../app/(components)/marketing-components/pricing-tables/many-offers/variant1";
-import MarqueeVariant1 from "../app/(components)/marketing-components/testimonials/marquee/variant1";
+import { CarouselCylindricalVariant1 } from "../app/(components)/marketing-ui/carousels/cylindric-3d-carousel/variant1";
+import { Variant1FeatureFourImages } from "../app/(components)/marketing-ui/features/feature-four-images/variant1";
+import ManyOffersVariant1 from "../app/(components)/marketing-ui/pricing-tables/many-offers/variant1";
+import MarqueeVariant1 from "../app/(components)/marketing-ui/testimonials/marquee/variant1";
 
 import FollowCursorVariant1 from "../app/(components)/other/cursors/follow-cursor/variant1";
 import {
@@ -143,9 +143,20 @@ export const componentCategories: {
     ],
   },
   {
-    name: "Marketing components",
-    slug: "marketing-components",
+    name: "Marketing UI",
+    slug: "marketing-ui",
     items: [
+      {
+        name: "Carousels",
+        slug: "carousels",
+        description: "Showcase your product testimonials with style",
+        releaseDate: new Date("2024-08-10"),
+
+        preview: {
+          component: <CarouselCylindricalVariant1 />,
+          previewScale: 0.75,
+        },
+      },
       {
         name: "Features",
         slug: "features",
@@ -169,6 +180,16 @@ export const componentCategories: {
         },
       },
       {
+        name: "Statistics",
+        slug: "statistics",
+        description: "Showcase your product statistics with style",
+        // releaseDate: new Date("2024-08-01"),
+        preview: {
+          component: <ManyOffersVariant1 />,
+          previewScale: 0.75,
+        },
+      },
+      {
         name: "Testimonials",
         slug: "testimonials",
         description: "Showcase your product testimonials with style",
@@ -176,17 +197,6 @@ export const componentCategories: {
 
         preview: {
           component: <MarqueeVariant1 />,
-          previewScale: 0.75,
-        },
-      },
-      {
-        name: "Carousels",
-        slug: "carousels",
-        description: "Showcase your product testimonials with style",
-        releaseDate: new Date("2024-08-10"),
-
-        preview: {
-          component: <CarouselCylindricalVariant1 />,
           previewScale: 0.75,
         },
       },
