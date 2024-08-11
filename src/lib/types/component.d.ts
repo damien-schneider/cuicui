@@ -1,3 +1,6 @@
+import type { LucideIcon } from "lucide-react";
+import type { ComponentBadgeList } from "../badges.const";
+
 export type Variant = `variant${number}`;
 
 export type VariantComponent = {
@@ -6,13 +9,7 @@ export type VariantComponent = {
   code: string;
 };
 
-export type ComponentBadge =
-  | "new"
-  | "updated"
-  | "deprecated"
-  | "experimental"
-  | "no-js"
-  | "prefer-desktop";
+export type ComponentBadgeSlug = (typeof ComponentBadgeList)[number]["slug"];
 
 export type LibraryBadge = "framer-motion" | "sonner" | "lucide-react";
 
@@ -37,4 +34,5 @@ export type CategoryItem = {
   comingSoon?: boolean;
   releaseDate?: Date;
   preview?: PreviewComponent;
+  icon?: LucideIcon;
 };

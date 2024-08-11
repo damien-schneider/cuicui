@@ -1,3 +1,26 @@
+import {
+  BarChart2Icon,
+  BookOpenTextIcon,
+  BoxSelectIcon,
+  BringToFrontIcon,
+  CircleUserRoundIcon,
+  CommandIcon,
+  CreditCard,
+  DollarSignIcon,
+  GalleryHorizontalIcon,
+  GripIcon,
+  ListOrderedIcon,
+  MenuIcon,
+  MonitorSmartphoneIcon,
+  MousePointerClickIcon,
+  PictureInPictureIcon,
+  QuoteIcon,
+  SettingsIcon,
+  SlidersHorizontalIcon,
+  SparkleIcon,
+  SquareArrowRightIcon,
+  TagIcon,
+} from "lucide-react";
 import ModernDetailedKbdVariant1 from "../app/(components)/application-ui/kbd/modern-detailed-kbd/variant1";
 import DynamicSettingsVariant1 from "../app/(components)/application-ui/settings/dynamic-settings/variant1";
 import { ElasticSliderVariant1 } from "../app/(components)/application-ui/sliders/elastic-slider/variant1";
@@ -78,12 +101,14 @@ export const componentCategories: {
         description: "Create simple avatars with different styles",
         // releaseDate: new Date("2024-08-01"),
         comingSoon: true,
+        icon: CircleUserRoundIcon,
       },
       {
         name: "Badges",
         slug: "badges",
         description: "Create simple badges with different styles",
         releaseDate: new Date("2024-06-29"),
+        icon: TagIcon,
         preview: {
           component: <ClerkBadgeVariant1 />,
           previewScale: 2,
@@ -94,6 +119,7 @@ export const componentCategories: {
         slug: "blockquotes",
         description: "Create simple blockquotes with different styles",
         releaseDate: new Date("2024-08-01"),
+        icon: QuoteIcon,
         preview: {
           component: <ModernSimpleQuoteVariant1 />,
           previewScale: 0.75,
@@ -104,6 +130,7 @@ export const componentCategories: {
         slug: "buttons",
         description: "Create simple buttons with different styles",
         releaseDate: new Date("2024-08-9"),
+        icon: SquareArrowRightIcon,
         preview: {
           component: <ShinyRotatingBorderButtonVariant1 />,
           previewScale: 1.5,
@@ -114,6 +141,7 @@ export const componentCategories: {
         slug: "cards",
         description: "Create simple cards with different styles",
         releaseDate: new Date("2024-08-10"),
+        icon: CreditCard,
         preview: {
           component: <ModernInnerShadowCardVariant1 />,
           previewScale: 0.5,
@@ -124,6 +152,7 @@ export const componentCategories: {
         slug: "navigation",
         description: "Create simple navigation components",
         releaseDate: new Date("2024-06-17"),
+        icon: MenuIcon,
         preview: {
           component: <Dock />,
           previewScale: 0.75,
@@ -134,7 +163,7 @@ export const componentCategories: {
         slug: "skeletons",
         description: "Create simple skeletons for loading states",
         releaseDate: new Date("2024-08-01"),
-
+        icon: BoxSelectIcon,
         preview: {
           component: <ShinyGradientSkeletonVariant1 />,
           previewScale: 0.75,
@@ -151,7 +180,7 @@ export const componentCategories: {
         slug: "carousels",
         description: "Showcase your product testimonials with style",
         releaseDate: new Date("2024-08-10"),
-
+        icon: GalleryHorizontalIcon,
         preview: {
           component: <CarouselCylindricalVariant1 />,
           previewScale: 0.75,
@@ -162,7 +191,7 @@ export const componentCategories: {
         slug: "features",
         description: "Showcase your product features with style",
         releaseDate: new Date("2024-06-17"),
-
+        icon: SparkleIcon,
         preview: {
           component: <Variant1FeatureFourImages />,
           previewScale: 0.3,
@@ -173,7 +202,7 @@ export const componentCategories: {
         slug: "pricing-tables",
         description: "Showcase your product pricing with style",
         releaseDate: new Date("2024-08-01"),
-
+        icon: DollarSignIcon,
         preview: {
           component: <ManyOffersVariant1 />,
           previewScale: 0.75,
@@ -183,7 +212,8 @@ export const componentCategories: {
         name: "Statistics",
         slug: "statistics",
         description: "Showcase your product statistics with style",
-        // releaseDate: new Date("2024-08-01"),
+        icon: BarChart2Icon,
+        releaseDate: new Date("2024-08-11"),
         preview: {
           component: <ManyOffersVariant1 />,
           previewScale: 0.75,
@@ -193,8 +223,8 @@ export const componentCategories: {
         name: "Testimonials",
         slug: "testimonials",
         description: "Showcase your product testimonials with style",
+        icon: BookOpenTextIcon,
         releaseDate: new Date("2024-07-17"),
-
         preview: {
           component: <MarqueeVariant1 />,
           previewScale: 0.75,
@@ -211,6 +241,7 @@ export const componentCategories: {
         slug: "kbd",
         description: "Create simple accessible kbd shortcut",
         releaseDate: new Date("2024-08-09"),
+        icon: CommandIcon,
         preview: {
           component: <ModernDetailedKbdVariant1 />,
           previewScale: 1,
@@ -221,7 +252,7 @@ export const componentCategories: {
         slug: "settings",
         description: "Create simple settings components",
         releaseDate: new Date("2024-06-30"),
-
+        icon: SettingsIcon,
         preview: {
           component: <DynamicSettingsVariant1 />,
           previewScale: 1.25,
@@ -232,6 +263,7 @@ export const componentCategories: {
         slug: "sliders",
         description: "Create simple sliders with different styles",
         releaseDate: new Date("2024-08-10"),
+        icon: SlidersHorizontalIcon,
         preview: {
           component: <ElasticSliderVariant1 />,
           previewScale: 1,
@@ -242,6 +274,7 @@ export const componentCategories: {
         slug: "static-steppers",
         description: "Create simple steppers with different styles",
         releaseDate: new Date("2024-08-01"),
+        icon: ListOrderedIcon,
         preview: {
           component: <StepWithStickyColorVariant1 />,
           previewScale: 0.75,
@@ -258,6 +291,7 @@ export const componentCategories: {
         slug: "cursors",
         description: "Create cursor effects",
         releaseDate: new Date("2024-07-21"),
+        icon: MousePointerClickIcon,
         preview: {
           component: <FollowCursorVariant1 />,
           previewScale: 1,
@@ -270,6 +304,7 @@ export const componentCategories: {
           "Create mock-ups without images, just with CSS and HTML for better performance, SEO and accessibility & also more micro-interactions",
         // releaseDate: new Date("2024-07-29"),
         comingSoon: true,
+        icon: MonitorSmartphoneIcon,
         // preview: {
         //   component: <BlurAppearVariant1 />,
         //   previewScale: 0.75,
@@ -281,6 +316,7 @@ export const componentCategories: {
         description:
           "Create patterns without images, just with CSS and HTML for better performance, SEO and accessibility & also more micro-interactions",
         releaseDate: new Date("2024-08-10"),
+        icon: GripIcon,
         preview: {
           component: <DotsPatternVariant1 />,
           previewScale: 1,
@@ -292,6 +328,7 @@ export const componentCategories: {
         description:
           "Create transition wrappers to animate any without changing your code components",
         releaseDate: new Date("2024-07-29"),
+        icon: BringToFrontIcon,
         preview: {
           component: <BlurAppearVariant1 />,
           previewScale: 0.75,
@@ -307,6 +344,7 @@ export const componentCategories: {
         name: "Picture in Picture",
         slug: "picture-in-picture",
         description: "Create a picture in picture mode for your videos",
+        icon: PictureInPictureIcon,
         comingSoon: true,
       },
     ],
