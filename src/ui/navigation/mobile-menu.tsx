@@ -11,7 +11,7 @@ import { useEffect, useState } from "react";
 import { Drawer } from "vaul";
 import LogoLarge from "#/src/assets/logo/logo-large.png";
 import { cn } from "#/src/utils/cn";
-import { ScrollArea } from "../shadcn-scrollarea";
+
 import StarGithubProjectButton from "../star-github-project-button";
 import ThemeSwitcher from "../theme-switcher";
 import NavigationMenu from "./navigation-menu";
@@ -33,6 +33,7 @@ export function MobileMenu({ className }: Readonly<{ className?: string }>) {
         className={cn(
           "flex lg:hidden",
           "w-full fixed bottom-0 left-0 justify-between p-2",
+          className,
         )}
       >
         <GradientContainer classNameChild="p-2.5 h-full flex items-center gap-4">

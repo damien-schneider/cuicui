@@ -9,7 +9,7 @@ import { cn } from "../../utils/cn";
 
 import Byline from "../byline";
 
-import { ScrollArea } from "../shadcn-scrollarea";
+import { ScrollArea } from "../shadcn/scrollarea";
 import StarGithubProjectButton from "../star-github-project-button";
 import ThemeSwitcher from "../theme-switcher";
 import NavigationMenu from "./navigation-menu";
@@ -22,6 +22,7 @@ export function DesktopSideMenu({
     <div
       className={cn(
         "p-3 top-1/2 z-50 hidden fixed lg:flex items-center w-80 max-h-dvh h-full -translate-y-1/2 flex-col justify-between",
+        className,
       )}
     >
       <div className="w-full">
