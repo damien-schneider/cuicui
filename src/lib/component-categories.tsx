@@ -73,6 +73,13 @@ export const componentCategories: {
     slug: "common-ui",
     items: [
       {
+        name: "Avatars",
+        slug: "avatars",
+        description: "Create simple avatars with different styles",
+        // releaseDate: new Date("2024-08-01"),
+        comingSoon: true,
+      },
+      {
         name: "Badges",
         slug: "badges",
         description: "Create simple badges with different styles",
@@ -83,12 +90,12 @@ export const componentCategories: {
         },
       },
       {
-        name: "Navigation",
-        slug: "navigation",
-        description: "Create simple navigation components",
-        releaseDate: new Date("2024-06-17"),
+        name: "Blockquotes",
+        slug: "blockquotes",
+        description: "Create simple blockquotes with different styles",
+        releaseDate: new Date("2024-08-01"),
         preview: {
-          component: <Dock />,
+          component: <ModernSimpleQuoteVariant1 />,
           previewScale: 0.75,
         },
       },
@@ -103,6 +110,26 @@ export const componentCategories: {
         },
       },
       {
+        name: "Cards",
+        slug: "cards",
+        description: "Create simple cards with different styles",
+        releaseDate: new Date("2024-08-10"),
+        preview: {
+          component: <ModernInnerShadowCardVariant1 />,
+          previewScale: 0.5,
+        },
+      },
+      {
+        name: "Navigation",
+        slug: "navigation",
+        description: "Create simple navigation components",
+        releaseDate: new Date("2024-06-17"),
+        preview: {
+          component: <Dock />,
+          previewScale: 0.75,
+        },
+      },
+      {
         name: "Skeletons",
         slug: "skeletons",
         description: "Create simple skeletons for loading states",
@@ -111,33 +138,6 @@ export const componentCategories: {
         preview: {
           component: <ShinyGradientSkeletonVariant1 />,
           previewScale: 0.75,
-        },
-      },
-      {
-        name: "Blockquotes",
-        slug: "blockquotes",
-        description: "Create simple blockquotes with different styles",
-        releaseDate: new Date("2024-08-01"),
-        preview: {
-          component: <ModernSimpleQuoteVariant1 />,
-          previewScale: 0.75,
-        },
-      },
-      {
-        name: "Avatars",
-        slug: "avatars",
-        description: "Create simple avatars with different styles",
-        // releaseDate: new Date("2024-08-01"),
-        comingSoon: true,
-      },
-      {
-        name: "Cards",
-        slug: "cards",
-        description: "Create simple cards with different styles",
-        releaseDate: new Date("2024-08-10"),
-        preview: {
-          component: <ModernInnerShadowCardVariant1 />,
-          previewScale: 0.5,
         },
       },
     ],
@@ -207,6 +207,16 @@ export const componentCategories: {
     slug: "application-ui",
     items: [
       {
+        name: "Kbd",
+        slug: "kbd",
+        description: "Create simple accessible kbd shortcut",
+        releaseDate: new Date("2024-08-09"),
+        preview: {
+          component: <ModernDetailedKbdVariant1 />,
+          previewScale: 1,
+        },
+      },
+      {
         name: "Settings",
         slug: "settings",
         description: "Create simple settings components",
@@ -218,26 +228,6 @@ export const componentCategories: {
         },
       },
       {
-        name: "Static Steppers",
-        slug: "static-steppers",
-        description: "Create simple steppers with different styles",
-        releaseDate: new Date("2024-08-01"),
-        preview: {
-          component: <StepWithStickyColorVariant1 />,
-          previewScale: 0.75,
-        },
-      },
-      {
-        name: "Kbd",
-        slug: "kbd",
-        description: "Create simple accessible kbd shortcut",
-        releaseDate: new Date("2024-08-09"),
-        preview: {
-          component: <ModernDetailedKbdVariant1 />,
-          previewScale: 1,
-        },
-      },
-      {
         name: "Sliders",
         slug: "sliders",
         description: "Create simple sliders with different styles",
@@ -245,6 +235,16 @@ export const componentCategories: {
         preview: {
           component: <ElasticSliderVariant1 />,
           previewScale: 1,
+        },
+      },
+      {
+        name: "Static Steppers",
+        slug: "static-steppers",
+        description: "Create simple steppers with different styles",
+        releaseDate: new Date("2024-08-01"),
+        preview: {
+          component: <StepWithStickyColorVariant1 />,
+          previewScale: 0.75,
         },
       },
     ],
@@ -261,17 +261,6 @@ export const componentCategories: {
         preview: {
           component: <FollowCursorVariant1 />,
           previewScale: 1,
-        },
-      },
-      {
-        name: "Transition wrappers",
-        slug: "transition-wrappers",
-        description:
-          "Create transition wrappers to animate any without changing your code components",
-        releaseDate: new Date("2024-07-29"),
-        preview: {
-          component: <BlurAppearVariant1 />,
-          previewScale: 0.75,
         },
       },
       {
@@ -295,6 +284,17 @@ export const componentCategories: {
         preview: {
           component: <DotsPatternVariant1 />,
           previewScale: 1,
+        },
+      },
+      {
+        name: "Transition wrappers",
+        slug: "transition-wrappers",
+        description:
+          "Create transition wrappers to animate any without changing your code components",
+        releaseDate: new Date("2024-07-29"),
+        preview: {
+          component: <BlurAppearVariant1 />,
+          previewScale: 0.75,
         },
       },
     ],
