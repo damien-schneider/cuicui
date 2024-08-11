@@ -1,6 +1,8 @@
+"use client";
 import Link from "next/link";
 import { componentCategories } from "#/src/lib/component-categories";
-import GradientContainer from "../ui/gradient-container";
+// import GradientContainer from "../ui/gradient-container";
+
 import { getCategoryHref } from "../utils/get-component-href";
 import { MainMenuCard } from "./card";
 
@@ -20,12 +22,13 @@ export default function Page() {
 
             <div className="grid grid-cols-1 gap-5 lg:grid-cols-2 transform-gpu">
               {section.items.map((item) => {
+                const href = getCategoryHref({
+                  parentSlug: section.slug,
+                  item: item,
+                });
                 return (
                   <Link
-                    href={getCategoryHref({
-                      parentSlug: section.slug,
-                      item: item,
-                    })}
+                    href={href}
                     key={item.name}
                     className="group hover:scale-[1.01] hover:-translate-y-[2px] transition-all active:scale-95 rounded-[20px] overflow-hidden"
                   >
