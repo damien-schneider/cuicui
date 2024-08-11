@@ -63,6 +63,9 @@
     @apply font-normal text-neutral-500 dark:text-neutral-400 ;
   }
   .caption-sm {
+    @apply font-normal text-neutral-400 dark:text-neutral-500 text-sm ;
+  }
+  .caption-xs {
     @apply font-normal text-neutral-400 dark:text-neutral-500 text-xs ;
   }
   .uppercase-title {
