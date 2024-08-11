@@ -1,6 +1,7 @@
 "use client";
 
-import * as Select from "@radix-ui/react-select";
+import { ScrollAreaScrollbar } from "@radix-ui/react-scroll-area";
+import { SelectTrigger } from "@radix-ui/react-select";
 import {
   ChevronDownIcon,
   LaptopIcon,
@@ -10,24 +11,33 @@ import {
 } from "lucide-react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
-import { useCallback, useMemo, useState } from "react";
+import { Fragment, useCallback, useMemo, useState } from "react";
 import { toast } from "sonner";
+import { ComponentBadgeList } from "../lib/badges.const";
 import type {
-  ComponentBadge,
+  ComponentBadgeSlug,
   FrameworkBadge,
   LibraryBadge,
   Variant,
   VariantComponent,
 } from "../lib/types/component";
 import Badge from "../ui/badge";
-import Button from "../ui/button";
 import CodeHighlighter from "../ui/code-highlighter";
-import { ScrollArea, ScrollBar } from "../ui/shadcn-scrollarea";
+import { Button } from "../ui/shadcn/button";
 import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
 } from "../ui/shadcn/resizable";
+import { ScrollArea, ScrollBar } from "../ui/shadcn/scrollarea";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectScrollUpButton,
+  SelectValue,
+} from "../ui/shadcn/select";
 import { cn } from "../utils/cn";
 import BadgeList from "./badge-list";
 import CustomIframeComponentDark from "./custom-iframe-component-dark";
@@ -40,7 +50,7 @@ const isVariant = (value: string): value is Variant => {
   return /^\d+$/.test(value);
 };
 
-// TODO : Use context to refactor everything
+// TODO : Use context to refactor everything into multiple components
 
 export default function FullComponent({
   componentList,
@@ -65,7 +75,7 @@ export default function FullComponent({
   size?: ComponentHeightType;
   frameworksBadges?: FrameworkBadge[];
   librariesBadges?: LibraryBadge[];
-  componentBadges?: ComponentBadge[];
+  componentBadges?: ComponentBadgeSlug[];
   isIframed?: boolean;
   isResizable?: boolean;
   rerenderButton?: boolean;
@@ -100,167 +110,136 @@ export default function FullComponent({
   );
 
   return (
-    <div>
-      {componentBadges && (
+    <div className="space-y-6">
+      {componentBadges && componentBadges.length !== 0 && (
         <div className="flex items-center gap-2">
-          {componentBadges?.map((badge) => (
-            <Badge variant="lime" size="sm" key={badge}>
-              {badge}
+          {ComponentBadgeList.filter((badge) =>
+            componentBadges.includes(badge.slug),
+          ).map((badge) => (
+            <Badge variant="lime" size="sm" key={badge.slug}>
+              {badge.name}
             </Badge>
           ))}
         </div>
       )}
-      <h2 className="header-2">{title}</h2>
-      <p className="caption-sm">{description}</p>
-      {librariesBadges && (
+      <div>
+        <h2 className="header-2">{title}</h2>
+        <p className="caption-sm">{description}</p>
+      </div>
+      {librariesBadges && librariesBadges.length !== 0 && (
         <BadgeList title="Required librairies :" badgeList={librariesBadges} />
       )}
-      {frameworksBadges && (
+      {frameworksBadges && frameworksBadges.length !== 0 && (
         <BadgeList title="Used frameworks :" badgeList={frameworksBadges} />
       )}
-      <menu className="mb-2 flex justify-between items-end mt-4">
-        <div className="inline-flex gap-2 rounded-lg border border-neutral-500/20 p-0.5">
-          <Button
-            variant="hover-only"
-            size="sm"
-            onClick={() => handleTabChange("visual")}
-          >
-            Visual
-          </Button>
-          <Button
-            size="sm"
-            variant="hover-only"
-            onClick={() => handleTabChange("code")}
-          >
-            Code
-          </Button>
-        </div>
 
-        {componentList.length > 1 ? (
-          <Select.Root
-            onValueChange={handleVariantChange}
-            value={String(selectedVariant)}
-          >
-            <div className="h-fit rounded-[10px] border border-neutral-500/20 p-0.5">
-              <Select.Trigger className="dark:hover:bg-neutral-900 hover:bg-neutral-200 rounded-lg px-2 h-8 min-w-28 focus-visible:outline-none inline-flex items-center justify-between transition-colors">
-                <Select.Value placeholder={selectedVariant} />
-                <ChevronDownIcon className="size-4" />
-              </Select.Trigger>
+      <div>
+        {componentList.length > 1 && (
+          <div>
+            <p className="caption-xs">Variants:</p>
+            <div className="py-1 mt-1">
+              <ScrollArea className=" w-full rounded-md">
+                <ScrollAreaScrollbar orientation="horizontal" />
+                <div className="flex gap-2">
+                  {componentList.map((variant, index) => (
+                    <Button
+                      key={`${index}-${variant.variantName}`}
+                      variant={
+                        selectedVariant === index + 1 ? "neutral" : "hover-only"
+                      }
+                      className="flex-nowrap"
+                      onClick={() => setSelectedVariant(index + 1)}
+                    >
+                      {variant.variantName}
+                    </Button>
+                  ))}
+                </div>
+              </ScrollArea>
             </div>
-            <Select.Portal>
-              <Select.Content className="rounded-lg dark:bg-neutral-900 bg-neutral-100 animate-in border border-neutral-500/20 p-0.5 ">
-                <Select.ScrollUpButton />
-                <Select.Viewport>
-                  <Select.Group className="space-y-1">
-                    {componentList.map((variant, index) => (
-                      <Select.Item
-                        key={`${index}-${variant.variantName}`}
-                        value={String(index + 1)}
-                        className="focus-visible:bg-neutral-200 dark:focus-visible:bg-neutral-800  px-2 py-0.5 focus-visible:outline-none rounded-md transition-colors cursor-pointer"
-                      >
-                        <Select.ItemIndicator />
-                        <Select.ItemText>{variant.variantName}</Select.ItemText>
-                      </Select.Item>
-                    ))}
-                  </Select.Group>
-                  <Select.Separator />
-                </Select.Viewport>
-                <Select.ScrollDownButton>
-                  <ChevronDownIcon />
-                </Select.ScrollDownButton>
-                <Select.Arrow />
-              </Select.Content>
-            </Select.Portal>
-          </Select.Root>
-        ) : (
-          <Badge>No variant available</Badge>
+          </div>
         )}
-      </menu>
-
-      {tab === "visual" ? (
         <div
           className={cn(
-            "flex items-center justify-center rounded-lg border border-neutral-500/20 p-0.5 overflow-hidden",
+            "rounded-lg border border-neutral-500/20 p-0.5",
+            tab === "visual" &&
+              "flex items-center flex-col justify-center overflow-hidden",
           )}
         >
-          {isResizable ? (
-            <ResizablePanelGroup
-              direction="horizontal"
-              className={cn(
-                "w-full flex items-center justify-center h-full",
-                // getContainerChildClassBasedOnSize(size),
+          <div className="flex gap-2 rounded-lg w-full mb-0.5">
+            <Button
+              variant="hover-only"
+              className="w-full"
+              onClick={() => handleTabChange("visual")}
+            >
+              Visual
+            </Button>
+            <Button
+              variant="hover-only"
+              className="w-full"
+              onClick={() => handleTabChange("code")}
+            >
+              Code
+            </Button>
+          </div>
+          {tab === "visual" ? (
+            isResizable ? (
+              <ResizablePanelGroup
+                direction="horizontal"
+                className={cn(
+                  "w-full flex items-center justify-center h-full",
+                  // getContainerChildClassBasedOnSize(size),
+                )}
+              >
+                <ResizablePanel
+                  defaultSize={100}
+                  className="dark:bg-[#101010] bg-neutral-50 rounded-md border border-neutral-500/20 relative"
+                >
+                  {rerenderButton && <RerenderButton setRender={setRender} />}
+
+                  <ComponentWrapper
+                    isIframed={isIframed}
+                    size={size}
+                    renderButton={rerenderButton}
+                    isChildUsingHeightFull={isChildUsingHeightFull}
+                    key={render}
+                  >
+                    {renderedComponent ?? <p>An error has occured</p>}
+                  </ComponentWrapper>
+                </ResizablePanel>
+                <ResizableHandle withHandle className="-translate-x-2" />
+                <ResizablePanel defaultSize={0}>
+                  <div className="flex h-full items-center justify-center" />
+                </ResizablePanel>
+              </ResizablePanelGroup>
+            ) : (
+              <ComponentWrapper
+                isIframed={isIframed}
+                size={size}
+                renderButton={rerenderButton}
+                isChildUsingHeightFull={isChildUsingHeightFull}
+                key={render}
+              >
+                {renderedComponent ?? <p>An error has occured</p>}
+              </ComponentWrapper>
+            )
+          ) : (
+            <ScrollArea
+              // With a dynamic height, the code take its full size wich is a weird behaviour
+              classNameViewport={cn(
+                "w-full rounded-md bg-neutral-100 dark:bg-neutral-900  border border-neutral-500/20",
+                getContainerHeightClass({ size }),
               )}
             >
-              <ResizablePanel
-                defaultSize={100}
-                className="dark:bg-[#101010] bg-neutral-50 rounded-md border border-neutral-500/20 relative"
-              >
-                {rerenderButton && <RerenderButton setRender={setRender} />}
-
-                <ComponentWrapper
-                  isIframed={isIframed}
-                  size={size}
-                  renderButton={rerenderButton}
-                  isChildUsingHeightFull={isChildUsingHeightFull}
-                  key={render}
-                >
-                  {renderedComponent ?? <p>An error has occured</p>}
-                </ComponentWrapper>
-              </ResizablePanel>
-              <ResizableHandle withHandle className="-translate-x-2" />
-              <ResizablePanel defaultSize={0}>
-                <div className="flex h-full items-center justify-center" />
-              </ResizablePanel>
-            </ResizablePanelGroup>
-          ) : (
-            <ComponentWrapper
-              isIframed={isIframed}
-              size={size}
-              renderButton={rerenderButton}
-              isChildUsingHeightFull={isChildUsingHeightFull}
-              key={render}
-            >
-              {renderedComponent ?? <p>An error has occured</p>}
-            </ComponentWrapper>
+              <ScrollBar orientation="horizontal" />
+              <CodeHighlighter
+                classNameContainer={"p-2"}
+                code={codeToDisplay ?? "An error has occured"}
+              />
+            </ScrollArea>
           )}
-          {/* <div
-            className={cn(
-              getIframeParentClasses(viewSizeContainer),
-              getContainerChildClassBasedOnSize(size),
-              "dark:bg-neutral-900 bg-neutral-50 rounded-md border border-neutral-500/20",
-              "overflow-hidden relative",
-            )}
-          >
-            {rerenderButton && <RerenderButton setRender={setRender} />}
+        </div>
+      </div>
 
-            <ComponentWrapper
-              isIframed={isIframed}
-              viewSizeContainer={viewSizeContainer}
-              size={size}
-              renderButton={rerenderButton}
-              key={render}
-            >
-              {renderedComponent ?? <p>An error has occured</p>}
-            </ComponentWrapper>
-          </div> */}
-        </div>
-      ) : (
-        <div className="p-0.5 rounded-lg border border-neutral-500/20">
-          <ScrollArea
-            // With a dynamic height, the code take its full size wich is a weird behaviour
-            classNameViewport={cn(
-              "w-full rounded-md bg-neutral-100 dark:bg-neutral-900  border border-neutral-500/20",
-              getContainerHeightClass({ size }),
-            )}
-          >
-            <ScrollBar orientation="horizontal" />
-            <CodeHighlighter
-              classNameContainer={"p-2"}
-              code={codeToDisplay ?? "An error has occured"}
-            />
-          </ScrollArea>
-        </div>
-      )}
       {inspiration && (
         <p className="text-neutral-500 text-xs mt-4">
           Inspired by{" "}
