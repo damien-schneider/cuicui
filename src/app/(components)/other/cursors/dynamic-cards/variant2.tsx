@@ -45,7 +45,7 @@ const Card = ({
     >
       <div
         className={cn(
-          "size-40 rounded-full blur-3xl absolute top-[var(--y)] left-[var(--x)] -translate-x-1/2 -translate-y-1/2 transform-gpu",
+          "size-40 rounded-full blur-3xl absolute top-[var(--y)] left-[var(--x)] -translate-x-1/2 -translate-y-1/2",
           (x === null || y === null) && "hidden",
         )}
         style={{
@@ -54,7 +54,7 @@ const Card = ({
         }}
       />
       <div className="absolute inset-px rounded-[19px] dark:bg-neutral-800/70 bg-neutral-100/70" />
-      <div className="relative rounded-2xl bg-white dark:bg-neutral-900/50 h-40 backdrop-blur-xl" />
+      <div className="relative  bg-white dark:bg-neutral-900/50 h-40 backdrop-blur-xl rounded-[15px]" />
       <div className="relative px-4 pb-2 pt-4">
         <h3 className="text-lg font-semibold text-neutral-800 dark:text-neutral-300">
           {title}
