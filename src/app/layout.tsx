@@ -6,7 +6,7 @@ import { AddressBar } from "#/src/ui/address-bar";
 import { DesktopSideMenu } from "#/src/ui/navigation/desktop-menu";
 import GradientContainer from "../ui/gradient-container";
 import { MobileMenu } from "../ui/navigation/mobile-menu";
-import { ScrollArea } from "../ui/shadcn-scrollarea";
+import { ScrollArea } from "../ui/shadcn/scrollarea";
 import ClientProvider from "./client-provider";
 
 import { DM_Sans } from "next/font/google";
@@ -77,7 +77,7 @@ export default function RootLayout({
           <Toaster />
           <ClientProvider>
             <div className="max-w-screen-2xl mx-auto">
-              <DesktopSideMenu className="p-3 top-1/2 z-50 hidden fixed lg:flex items-center justify-center w-80 max-h-dvh h-full -translate-y-1/2" />
+              <DesktopSideMenu />
               <div className="absolute top-0 left-0 bottom-0 right-0 overflow-hidden">
                 <div className="relative">
                   <div className="gradient-top-animation absolute rotate-3 blur-[100px] h-48 w-[60vw] -right-[20vw] z-0 -top-24 opacity-20 pointer-events-none" />
@@ -93,13 +93,13 @@ export default function RootLayout({
                     classNameParent=""
                     classNameChild="px-8 py-10 min-h-[calc(100vh-6rem)]"
                   >
-                    <main className="">
+                    <main>
                       {/* Move overflow-auto to the previous comment if problems occurs */}
                       {children}
                     </main>
                   </GradientContainer>
                 </div>
-                <MobileMenu className="" />
+                <MobileMenu />
               </div>
             </div>
           </ClientProvider>

@@ -1,6 +1,7 @@
+"use client";
 import { differenceInDays } from "date-fns";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowUpRightIcon } from "lucide-react";
+import { ArrowUpRightIcon, type LucideIcon } from "lucide-react";
 import Link from "next/link";
 import { useSelectedLayoutSegments } from "next/navigation";
 import React, { useState } from "react";
@@ -60,6 +61,7 @@ export default function NavigationMenu({
                     item={item}
                     parentSlug={section.slug}
                     isMobile={isMobile}
+                    icon={item.icon}
                   />
                   <AnimatePresence>
                     {elementFocused === item.slug && (
@@ -92,6 +94,7 @@ function GlobalNavItem({
   item: CategoryItem;
   parentSlug: string | null;
   isMobile?: boolean;
+  icon?: LucideIcon;
 }>) {
   const segments = useSelectedLayoutSegments();
 
@@ -109,7 +112,14 @@ function GlobalNavItem({
           : "dark:text-white/40 text-black/40",
       )}
     >
-      {item.name}
+      <div className="flex items-center gap-2 ">
+        {item.icon && (
+          <item.icon className="size-4 text-neutral-400 dark:text-neutral-500 transition-transform transform-gpu group-hover:scale-125" />
+        )}
+        <p className=" transition-transform group-hover:translate-x-0.5 transform-gpu tracking-tighter">
+          {item.name}
+        </p>
+      </div>
       {differenceInDays(new Date(), item.releaseDate ?? 0) < 24 && (
         <GradientContainer
           rounded="xs"

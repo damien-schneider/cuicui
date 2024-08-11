@@ -1,3 +1,26 @@
+import {
+  BarChart2Icon,
+  BookOpenTextIcon,
+  BoxSelectIcon,
+  BringToFrontIcon,
+  CircleUserRoundIcon,
+  CommandIcon,
+  CreditCard,
+  DollarSignIcon,
+  GalleryHorizontalIcon,
+  GripIcon,
+  ListOrderedIcon,
+  MenuIcon,
+  MonitorSmartphoneIcon,
+  MousePointerClickIcon,
+  PictureInPictureIcon,
+  QuoteIcon,
+  SettingsIcon,
+  SlidersHorizontalIcon,
+  SparkleIcon,
+  SquareArrowRightIcon,
+  TagIcon,
+} from "lucide-react";
 import ModernDetailedKbdVariant1 from "../app/(components)/application-ui/kbd/modern-detailed-kbd/variant1";
 import DynamicSettingsVariant1 from "../app/(components)/application-ui/settings/dynamic-settings/variant1";
 import { ElasticSliderVariant1 } from "../app/(components)/application-ui/sliders/elastic-slider/variant1";
@@ -9,10 +32,10 @@ import { ModernInnerShadowCardVariant1 } from "../app/(components)/common-ui/car
 import Dock from "../app/(components)/common-ui/navigation/mac-dock/variant1";
 import { VercelNavigationVariant1 } from "../app/(components)/common-ui/navigation/vercel-navigation/variant1";
 import { ShinyGradientSkeletonVariant1 } from "../app/(components)/common-ui/skeletons/shiny-gradient/variant1";
-import { CarouselCylindricalVariant1 } from "../app/(components)/marketing-components/carousels/cylindric-3d-carousel/variant1";
-import { Variant1FeatureFourImages } from "../app/(components)/marketing-components/features/feature-four-images/variant1";
-import ManyOffersVariant1 from "../app/(components)/marketing-components/pricing-tables/many-offers/variant1";
-import MarqueeVariant1 from "../app/(components)/marketing-components/testimonials/marquee/variant1";
+import { CarouselCylindricalVariant1 } from "../app/(components)/marketing-ui/carousels/cylindric-3d-carousel/variant1";
+import { Variant1FeatureFourImages } from "../app/(components)/marketing-ui/features/feature-four-images/variant1";
+import ManyOffersVariant1 from "../app/(components)/marketing-ui/pricing-tables/many-offers/variant1";
+import MarqueeVariant1 from "../app/(components)/marketing-ui/testimonials/marquee/variant1";
 
 import FollowCursorVariant1 from "../app/(components)/other/cursors/follow-cursor/variant1";
 import {
@@ -73,22 +96,32 @@ export const componentCategories: {
     slug: "common-ui",
     items: [
       {
+        name: "Avatars",
+        slug: "avatars",
+        description: "Create simple avatars with different styles",
+        // releaseDate: new Date("2024-08-01"),
+        comingSoon: true,
+        icon: CircleUserRoundIcon,
+      },
+      {
         name: "Badges",
         slug: "badges",
         description: "Create simple badges with different styles",
         releaseDate: new Date("2024-06-29"),
+        icon: TagIcon,
         preview: {
           component: <ClerkBadgeVariant1 />,
           previewScale: 2,
         },
       },
       {
-        name: "Navigation",
-        slug: "navigation",
-        description: "Create simple navigation components",
-        releaseDate: new Date("2024-06-17"),
+        name: "Blockquotes",
+        slug: "blockquotes",
+        description: "Create simple blockquotes with different styles",
+        releaseDate: new Date("2024-08-01"),
+        icon: QuoteIcon,
         preview: {
-          component: <Dock />,
+          component: <ModernSimpleQuoteVariant1 />,
           previewScale: 0.75,
         },
       },
@@ -97,9 +130,32 @@ export const componentCategories: {
         slug: "buttons",
         description: "Create simple buttons with different styles",
         releaseDate: new Date("2024-08-9"),
+        icon: SquareArrowRightIcon,
         preview: {
           component: <ShinyRotatingBorderButtonVariant1 />,
           previewScale: 1.5,
+        },
+      },
+      {
+        name: "Cards",
+        slug: "cards",
+        description: "Create simple cards with different styles",
+        releaseDate: new Date("2024-08-10"),
+        icon: CreditCard,
+        preview: {
+          component: <ModernInnerShadowCardVariant1 />,
+          previewScale: 0.5,
+        },
+      },
+      {
+        name: "Navigation",
+        slug: "navigation",
+        description: "Create simple navigation components",
+        releaseDate: new Date("2024-06-17"),
+        icon: MenuIcon,
+        preview: {
+          component: <Dock />,
+          previewScale: 0.75,
         },
       },
       {
@@ -107,51 +163,35 @@ export const componentCategories: {
         slug: "skeletons",
         description: "Create simple skeletons for loading states",
         releaseDate: new Date("2024-08-01"),
-
+        icon: BoxSelectIcon,
         preview: {
           component: <ShinyGradientSkeletonVariant1 />,
           previewScale: 0.75,
         },
       },
-      {
-        name: "Blockquotes",
-        slug: "blockquotes",
-        description: "Create simple blockquotes with different styles",
-        releaseDate: new Date("2024-08-01"),
-        preview: {
-          component: <ModernSimpleQuoteVariant1 />,
-          previewScale: 0.75,
-        },
-      },
-      {
-        name: "Avatars",
-        slug: "avatars",
-        description: "Create simple avatars with different styles",
-        // releaseDate: new Date("2024-08-01"),
-        comingSoon: true,
-      },
-      {
-        name: "Cards",
-        slug: "cards",
-        description: "Create simple cards with different styles",
-        releaseDate: new Date("2024-08-10"),
-        preview: {
-          component: <ModernInnerShadowCardVariant1 />,
-          previewScale: 0.5,
-        },
-      },
     ],
   },
   {
-    name: "Marketing components",
-    slug: "marketing-components",
+    name: "Marketing UI",
+    slug: "marketing-ui",
     items: [
+      {
+        name: "Carousels",
+        slug: "carousels",
+        description: "Showcase your product testimonials with style",
+        releaseDate: new Date("2024-08-10"),
+        icon: GalleryHorizontalIcon,
+        preview: {
+          component: <CarouselCylindricalVariant1 />,
+          previewScale: 0.75,
+        },
+      },
       {
         name: "Features",
         slug: "features",
         description: "Showcase your product features with style",
         releaseDate: new Date("2024-06-17"),
-
+        icon: SparkleIcon,
         preview: {
           component: <Variant1FeatureFourImages />,
           previewScale: 0.3,
@@ -162,7 +202,18 @@ export const componentCategories: {
         slug: "pricing-tables",
         description: "Showcase your product pricing with style",
         releaseDate: new Date("2024-08-01"),
-
+        icon: DollarSignIcon,
+        preview: {
+          component: <ManyOffersVariant1 />,
+          previewScale: 0.75,
+        },
+      },
+      {
+        name: "Statistics",
+        slug: "statistics",
+        description: "Showcase your product statistics with style",
+        icon: BarChart2Icon,
+        releaseDate: new Date("2024-08-11"),
         preview: {
           component: <ManyOffersVariant1 />,
           previewScale: 0.75,
@@ -172,21 +223,10 @@ export const componentCategories: {
         name: "Testimonials",
         slug: "testimonials",
         description: "Showcase your product testimonials with style",
+        icon: BookOpenTextIcon,
         releaseDate: new Date("2024-07-17"),
-
         preview: {
           component: <MarqueeVariant1 />,
-          previewScale: 0.75,
-        },
-      },
-      {
-        name: "Carousels",
-        slug: "carousels",
-        description: "Showcase your product testimonials with style",
-        releaseDate: new Date("2024-08-10"),
-
-        preview: {
-          component: <CarouselCylindricalVariant1 />,
           previewScale: 0.75,
         },
       },
@@ -197,34 +237,25 @@ export const componentCategories: {
     slug: "application-ui",
     items: [
       {
-        name: "Settings",
-        slug: "settings",
-        description: "Create simple settings components",
-        releaseDate: new Date("2024-06-30"),
-
-        preview: {
-          component: <DynamicSettingsVariant1 />,
-          previewScale: 1.25,
-        },
-      },
-      {
-        name: "Static Steppers",
-        slug: "static-steppers",
-        description: "Create simple steppers with different styles",
-        releaseDate: new Date("2024-08-01"),
-        preview: {
-          component: <StepWithStickyColorVariant1 />,
-          previewScale: 0.75,
-        },
-      },
-      {
         name: "Kbd",
         slug: "kbd",
         description: "Create simple accessible kbd shortcut",
         releaseDate: new Date("2024-08-09"),
+        icon: CommandIcon,
         preview: {
           component: <ModernDetailedKbdVariant1 />,
           previewScale: 1,
+        },
+      },
+      {
+        name: "Settings",
+        slug: "settings",
+        description: "Create simple settings components",
+        releaseDate: new Date("2024-06-30"),
+        icon: SettingsIcon,
+        preview: {
+          component: <DynamicSettingsVariant1 />,
+          previewScale: 1.25,
         },
       },
       {
@@ -232,9 +263,21 @@ export const componentCategories: {
         slug: "sliders",
         description: "Create simple sliders with different styles",
         releaseDate: new Date("2024-08-10"),
+        icon: SlidersHorizontalIcon,
         preview: {
           component: <ElasticSliderVariant1 />,
           previewScale: 1,
+        },
+      },
+      {
+        name: "Static Steppers",
+        slug: "static-steppers",
+        description: "Create simple steppers with different styles",
+        releaseDate: new Date("2024-08-01"),
+        icon: ListOrderedIcon,
+        preview: {
+          component: <StepWithStickyColorVariant1 />,
+          previewScale: 0.75,
         },
       },
     ],
@@ -248,20 +291,10 @@ export const componentCategories: {
         slug: "cursors",
         description: "Create cursor effects",
         releaseDate: new Date("2024-07-21"),
+        icon: MousePointerClickIcon,
         preview: {
           component: <FollowCursorVariant1 />,
           previewScale: 1,
-        },
-      },
-      {
-        name: "Transition wrappers",
-        slug: "transition-wrappers",
-        description:
-          "Create transition wrappers to animate any without changing your code components",
-        releaseDate: new Date("2024-07-29"),
-        preview: {
-          component: <BlurAppearVariant1 />,
-          previewScale: 0.75,
         },
       },
       {
@@ -271,6 +304,7 @@ export const componentCategories: {
           "Create mock-ups without images, just with CSS and HTML for better performance, SEO and accessibility & also more micro-interactions",
         // releaseDate: new Date("2024-07-29"),
         comingSoon: true,
+        icon: MonitorSmartphoneIcon,
         // preview: {
         //   component: <BlurAppearVariant1 />,
         //   previewScale: 0.75,
@@ -282,9 +316,22 @@ export const componentCategories: {
         description:
           "Create patterns without images, just with CSS and HTML for better performance, SEO and accessibility & also more micro-interactions",
         releaseDate: new Date("2024-08-10"),
+        icon: GripIcon,
         preview: {
           component: <DotsPatternVariant1 />,
           previewScale: 1,
+        },
+      },
+      {
+        name: "Transition wrappers",
+        slug: "transition-wrappers",
+        description:
+          "Create transition wrappers to animate any without changing your code components",
+        releaseDate: new Date("2024-07-29"),
+        icon: BringToFrontIcon,
+        preview: {
+          component: <BlurAppearVariant1 />,
+          previewScale: 0.75,
         },
       },
     ],
@@ -297,6 +344,7 @@ export const componentCategories: {
         name: "Picture in Picture",
         slug: "picture-in-picture",
         description: "Create a picture in picture mode for your videos",
+        icon: PictureInPictureIcon,
         comingSoon: true,
       },
     ],

@@ -4,7 +4,7 @@ export function ModernInnerShadowCardVariant1() {
   return (
     <div
       className={cn(
-        "rounded-2xl border text-card-foreground p-6 max-w-sm mx-auto group dark:border-white/10 border-neutral-500/10  ",
+        "rounded-2xl border p-6 max-w-sm group dark:border-white/10 border-neutral-500/10  ",
         "dark:shadow-[2px_4px_16px_0px_rgba(248,248,248,0.06)_inset]",
         "hover:scale-[1.01] transition-transform transform-gpu group",
         "bg-gray-50 dark:bg-neutral-800/80",

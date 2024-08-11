@@ -20,6 +20,7 @@ export default async function Page() {
         isIframed={false}
         title="Modern inner shadow card"
         description="A card that showcases a set of tools that you use to create your product."
+        componentBadges={["better-in-dark-mode"]}
       />
     </>
   );

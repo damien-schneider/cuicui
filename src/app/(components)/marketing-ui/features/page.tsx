@@ -2,6 +2,7 @@ import FullComponent from "#/src/components/full-component";
 import { getFileContentAsString } from "#/src/utils/get-file-content-as-string";
 import { AnimatedCardVariant1 } from "./animated-cards/variant1";
 import { Variant1FeatureFourImages } from "./feature-four-images/variant1";
+import { Variant2FeatureFourImages } from "./feature-four-images/variant2";
 
 export default async function Page() {
   return (
@@ -9,11 +10,19 @@ export default async function Page() {
       <FullComponent
         componentList={[
           {
-            variantName: "test",
+            variantName: "Sober colors",
             component: <Variant1FeatureFourImages />,
             code: await getFileContentAsString({
               componentSlug: "features",
               variantName: "feature-four-images/variant1",
+            }),
+          },
+          {
+            variantName: "Less animations with colors",
+            component: <Variant2FeatureFourImages />,
+            code: await getFileContentAsString({
+              componentSlug: "features",
+              variantName: "feature-four-images/variant2",
             }),
           },
         ]}
