@@ -37,6 +37,8 @@ import { Variant1FeatureFourImages } from "../app/(components)/marketing-ui/feat
 import ManyOffersVariant1 from "../app/(components)/marketing-ui/pricing-tables/many-offers/variant1";
 import MarqueeVariant1 from "../app/(components)/marketing-ui/testimonials/marquee/variant1";
 
+import Modern3dKbdVariant1 from "../app/(components)/application-ui/kbd/modern-3d-kbd/variant1";
+import { AnimatedNumberVariant1 } from "../app/(components)/marketing-ui/statistics/animated-on-scroll/variant1";
 import FollowCursorVariant1 from "../app/(components)/other/cursors/follow-cursor/variant1";
 import {
   DotsPattern,
@@ -215,8 +217,8 @@ export const componentCategories: {
         icon: BarChart2Icon,
         releaseDate: new Date("2024-08-11"),
         preview: {
-          component: <ManyOffersVariant1 />,
-          previewScale: 0.75,
+          component: <AnimatedNumberVariant1 />,
+          previewScale: 0.5,
         },
       },
       {
@@ -240,10 +242,10 @@ export const componentCategories: {
         name: "Kbd",
         slug: "kbd",
         description: "Create simple accessible kbd shortcut",
-        releaseDate: new Date("2024-08-09"),
+        releaseDate: new Date("2024-08-13"),
         icon: CommandIcon,
         preview: {
-          component: <ModernDetailedKbdVariant1 />,
+          component: <Modern3dKbdVariant1 />,
           previewScale: 1,
         },
       },
