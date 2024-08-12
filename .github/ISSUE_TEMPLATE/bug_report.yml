@@ -1,0 +1,87 @@
+name: "Bug report"
+description: Report an issue with the Cuicui library
+title: '[bug]: '
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Thanks for taking the time to report a bug. Please search open/closed issues before submitting, as the issue may have already been reported or addressed.
+
+  - type: markdown
+    attributes:
+      value: |
+        #### If you're unsure if this is a bug, consider opening a discussion instead:
+        - [Discussions](https://github.com/cuicui-project/discussions/new?category=general)
+
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Describe the bug
+      description: A clear and concise description of what the bug is. If you intend to submit a PR for this issue, please mention it here.
+      placeholder: Describe the bug...
+    validations:
+      required: true
+
+  - type: input
+    id: components-affected
+    attributes:
+      label: Affected Component(s)
+      description: Which Cuicui components are affected by this bug?
+      placeholder: ex. Button, Card, Carousel...
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: A step-by-step description of how to reproduce the bug.
+      placeholder: |
+        1. Go to '...'
+        2. Click on '....'
+        3. See error...
+    validations:
+      required: true
+
+  - type: input
+    id: codesandbox-stackblitz
+    attributes:
+      label: Codesandbox/StackBlitz Link
+      description: | 
+        A link to a CodeSandbox or StackBlitz that includes a minimal reproduction of the problem. If this is not applicable, you may link to a GitHub repository. Reports without a clear reproduction may be closed without warning.
+
+        > [!CAUTION]
+        > Skipping this step may result in your issue being labeled as `please add a reproduction` and subsequently closed.
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: "Please include relevant browser console and server logs. Text logs are preferred over images."
+      render: bash
+      validations:
+      required: false
+
+  - type: textarea
+    id: system-info
+    attributes:
+      label: System Info
+      description: Include information about your system, browsers, or any relevant binaries.
+      render: bash
+      placeholder: System details, browser versions, etc.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Before Submitting
+      description: By submitting this issue, you agree to follow our [Contributing Guidelines](https://github.com/cuicui-project/contributing).
+      options:
+        - label: I've researched and searched the documentation
+          required: true
+        - label: I've searched for existing issues
+          required: true
