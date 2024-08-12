@@ -1,0 +1,54 @@
+name: "Feature request"
+description: Create a feature request for the Cuicui library
+title: '[feat]: '
+labels: ['area: request']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Thank you for contributing to the Cuicui project! Please search open/closed issues before submitting, as the issue may have already been reported or addressed.
+
+  - type: markdown
+    attributes:
+      value: |
+        #### If you're unsure whether this is a bug or a feature request, please open a discussion instead:
+        - [Discussions](https://github.com/cuicui-project/discussions/new?category=general)
+
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: Feature Description
+      description: Describe the feature you would like to see in the Cuicui library.
+      placeholder: 'I think this feature would be great because...'
+    validations:
+      required: true
+
+  - type: input
+    id: components-affected
+    attributes:
+      label: Affected Component(s)
+      description: Indicate which components this feature request would affect, if any.
+      placeholder: ex. Button, Card, Carousel...
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: Provide any additional context or examples that could be relevant.
+      placeholder: ex. screenshots, links, code examples, etc.
+      value: 'Additional details here...'
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Before Submitting
+      description: By submitting this issue, you agree to follow our [Contributing Guidelines](https://github.com/cuicui-project/contributing).
+      options:
+        - label: I've researched and searched the documentation
+          required: true
+        - label: I've searched for existing issues and PRs
+          required: true
