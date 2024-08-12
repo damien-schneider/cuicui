@@ -63,22 +63,23 @@ export default function ModernAnimatedButtonVariant1() {
         }
       `}
       </style>
-      <div
+      <button
+        type="button"
         className="p-px rounded-full rotation-animation transition-all shadow-[0_0_20px_0_rgba(245,48,107,0.1)] hover:shadow-[0_0_20px_3px_rgba(245,49,108,.2)] hover:bg-[#782a2b] cursor-pointer conic-gradient dark:invert-0 invert hue-rotate-[190deg] dark:hue-rotate-0 transform-gpu"
         style={{
           background:
             "conic-gradient(from calc(var(--r2) - 80deg) at var(--x) 15px, transparent 0, #eca5a7 20%, transparent 25%), #452324",
         }}
       >
-        <p
+        <span
           className="flex flex-nowrap items-center h-7 px-3 font-medium tracking-tighter rounded-full pointer-events-none gap-2 py-1 text-sm
           bg-[#120d0e] text-[#eca5a7]"
         >
           <span>Advanced button</span>
-          <div className="h-5/6 w-px bg-neutral-700/50 " />
+          <span className="h-5/6 w-px bg-neutral-700/50" />
           <span className="text-neutral-500 ">Hover me</span>
-        </p>
-      </div>
+        </span>
+      </button>
     </>
   );
 }

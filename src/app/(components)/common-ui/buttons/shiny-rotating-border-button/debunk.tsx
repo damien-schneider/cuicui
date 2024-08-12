@@ -39,7 +39,7 @@ export default function ShinyRotatingBorderButtonVariant1() {
           }}
         />
       </motion.span>
-      <span className="relative z-10 rounded-full px-3 py-1 bg-white dark:bg-neutral-800 block">
+      <span className="relative z-10 rounded-full px-3 py-1 bg-white dark:bg-neutral-800/20 block">
         <motion.span
           animate={{
             backgroundImage: [
