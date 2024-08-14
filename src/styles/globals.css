@@ -45,10 +45,10 @@
     @apply font-medium text-neutral-800 dark:text-neutral-200 text-2xl tracking-tight leading-8 mb-3;
   }
   .header-3 {
-    @apply font-medium text-neutral-800 dark:text-neutral-200 text-xl tracking-tight leading-8 mb-2
+    @apply font-medium text-neutral-800 dark:text-neutral-200 text-xl tracking-tight leading-8 mb-3
   }
   .header-4 {
-    @apply font-medium text-neutral-800 dark:text-neutral-200 text-lg tracking-tight leading-7 mb-1
+    @apply font-medium text-neutral-800 dark:text-neutral-200 text-lg tracking-tight leading-7 mb-3
   }
   .header-5 {
     @apply font-semibold text-neutral-800 dark:text-neutral-200 text-base tracking-tight mb-1
@@ -75,7 +75,7 @@
     @apply font-semibold text-neutral-400 dark:text-neutral-500 text-xs uppercase tracking-wider;
   }
   .ul-md {
-    @apply font-normal text-neutral-700 dark:text-neutral-300 text-base leading-6 list-disc pl-5 space-y-1;
+    @apply font-normal text-neutral-700 dark:text-neutral-300 text-base leading-6 list-disc pl-5 space-y-1 mb-2;
   }
   .card {
     @apply bg-neutral-300/15 hover:bg-neutral-300/10 dark:bg-neutral-700/30 dark:hover:bg-neutral-700/10 transition-colors duration-300 rounded-lg pl-5 pr-3 py-3 border border-neutral-400/20 dark:border-neutral-400/10;
