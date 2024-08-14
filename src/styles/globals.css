@@ -1,9 +1,12 @@
+@import "./shad-cn.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* main * {
-  @apply  transform-gpu;
+
+/* * {
+  outline: 1px solid red;
 } */
 @keyframes gradient-animation {
   0% {
@@ -36,21 +39,21 @@
 
 @layer components{
   .header-1 {
-    @apply font-medium text-neutral-800 dark:text-neutral-200 text-3xl tracking-tight leading-8;
+    @apply font-medium text-neutral-800 dark:text-neutral-200 text-3xl tracking-tight leading-8 mb-4;
   }
   .header-2 {
-    @apply font-medium text-neutral-800 dark:text-neutral-200 text-2xl tracking-tight leading-8;
+    @apply font-medium text-neutral-800 dark:text-neutral-200 text-2xl tracking-tight leading-8 mb-3;
   }
   .header-3 {
-    @apply font-medium text-neutral-800 dark:text-neutral-200 text-xl tracking-tight leading-8;
+    @apply font-medium text-neutral-800 dark:text-neutral-200 text-xl tracking-tight leading-8 mb-2
   }
   .header-4 {
-    @apply font-medium text-neutral-800 dark:text-neutral-200 text-lg tracking-tight leading-8;
+    @apply font-medium text-neutral-800 dark:text-neutral-200 text-lg tracking-tight leading-7 mb-1
   }
-  .heading-5 {
-    @apply font-semibold text-neutral-800 dark:text-neutral-200 text-base tracking-tight;
+  .header-5 {
+    @apply font-semibold text-neutral-800 dark:text-neutral-200 text-base tracking-tight mb-1
   }
-  .heading-6 {
+  .header-6 {
     @apply font-medium text-neutral-800 dark:text-neutral-200 text-sm tracking-tight ;
   }
   .body-1 {
@@ -71,4 +74,11 @@
   .uppercase-title {
     @apply font-semibold text-neutral-400 dark:text-neutral-500 text-xs uppercase tracking-wider;
   }
+  .ul-md {
+    @apply font-normal text-neutral-700 dark:text-neutral-300 text-base leading-6 list-disc pl-5 space-y-1;
+  }
+  .card {
+    @apply bg-neutral-300/15 hover:bg-neutral-300/10 dark:bg-neutral-700/30 dark:hover:bg-neutral-700/10 transition-colors duration-300 rounded-lg pl-5 pr-3 py-3 border border-neutral-400/20 dark:border-neutral-400/10;
+  }
 }
+
