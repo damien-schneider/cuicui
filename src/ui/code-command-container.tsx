@@ -1,19 +1,10 @@
 "use client";
-import { ScrollAreaScrollbar } from "@radix-ui/react-scroll-area";
-import { SelectGroup } from "@radix-ui/react-select";
 import { ClipboardIcon } from "lucide-react";
-import { type ReactNode, useState } from "react";
 import { toast } from "sonner";
 import { cn } from "../utils/cn";
 import CodeHighlighter from "./code-highlighter";
 import { Button } from "./shadcn/button";
-import { ScrollArea } from "./shadcn/scrollarea";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-} from "./shadcn/select";
+import { ScrollArea, ScrollBar } from "./shadcn/scrollarea";
 
 import {
   PackageManagerList,
@@ -49,7 +40,7 @@ export const CodeContainer = ({
     return (
       <div className="block w-full relative card">
         <ScrollArea classNameViewport={cn("w-full ")}>
-          <ScrollAreaScrollbar orientation="horizontal" />
+          <ScrollBar orientation="horizontal" />
           <code className="text-nowrap pr-10 text-sm">
             <span className="text-neutral-400 dark:text-neutral-500">
               {getCodeByPackageManager(packageManager)}{" "}
@@ -120,8 +111,8 @@ export const CodeContainer = ({
   }
   return (
     <ScrollArea className="w-full">
-      <ScrollAreaScrollbar orientation="horizontal" />
-      <ScrollAreaScrollbar orientation="vertical" />
+      <ScrollBar orientation="horizontal" />
+      <ScrollBar orientation="vertical" />
       <CodeHighlighter
         code={children}
         classNameContainer={cn("card text-sm", className)}

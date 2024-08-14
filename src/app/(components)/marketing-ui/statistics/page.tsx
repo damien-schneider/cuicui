@@ -1,4 +1,3 @@
-import ComingSoonCard from "#/src/components/coming-soon";
 import FullComponent from "#/src/components/full-component";
 import { getFileContentAsString } from "#/src/utils/get-file-content-as-string";
 import { AnimatedNumberVariant1 } from "./animated-on-scroll/variant1";

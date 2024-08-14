@@ -39,14 +39,6 @@ export default function Dock() {
               }
               withoutBackground
             />
-            {/* <ScrollAreaPrimitive.ScrollAreaScrollbar
-                className="h-1 bg-gray-300 dark:bg-gray-600/60 rounded-b-lg"
-                orientation="horizontal"
-                >
-                <ScrollAreaPrimitive.ScrollAreaThumb className="h-full bg-gray-400 dark:bg-gray-600/40 rounded-lg" />
-                </ScrollAreaPrimitive.ScrollAreaScrollbar>
-                </ScrollAreaPrimitive.Viewport>
-                </ScrollAreaPrimitive.Root> */}
           </div>
         </div>
       </div>
@@ -57,10 +49,10 @@ export default function Dock() {
 function AppIcon({
   imgSrc,
   withoutBackground,
-}: {
+}: Readonly<{
   imgSrc: string | StaticImageData;
   withoutBackground?: boolean;
-}) {
+}>) {
   return (
     <div className=" p-2 pl-0 grid place-items-center cursor-pointer group z-20 w-fit">
       <div
