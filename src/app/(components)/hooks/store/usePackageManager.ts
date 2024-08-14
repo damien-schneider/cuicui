@@ -11,18 +11,22 @@ export type PackageManagerStore = {
 
 export const usePackageManager = create<PackageManagerStore>((set) => ({
   packageManager: getLocalStoragePackageManager(),
-  setPackageManager: (selectedPackageManager) => {
-    localStorage.setItem("selectedPackageManager", selectedPackageManager);
+  setPackageManager: (selectedPackageManager: PackageManagerType) => {
+    if (typeof window !== "undefined") {
+      localStorage.setItem("selectedPackageManager", selectedPackageManager);
+    }
     set(() => ({ packageManager: selectedPackageManager }));
   },
 }));
 
 function getLocalStoragePackageManager() {
-  const selectedPackageManager = localStorage.getItem(
-    "selectedPackageManager",
-  ) as PackageManagerType;
-  if (selectedPackageManager) {
-    return selectedPackageManager;
+  if (typeof window !== "undefined") {
+    const selectedPackageManager = localStorage.getItem(
+      "selectedPackageManager",
+    ) as PackageManagerType;
+    if (selectedPackageManager) {
+      return selectedPackageManager;
+    }
   }
   return "npm";
 }
