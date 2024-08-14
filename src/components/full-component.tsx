@@ -141,14 +141,14 @@ export default function FullComponent({
         >
           <div className="flex gap-2 rounded-lg w-full mb-0.5">
             <Button
-              variant="hover-only"
+              variant={tab === "visual" ? "neutral" : "hover-only"}
               className="w-full"
               onClick={() => handleTabChange("visual")}
             >
               Visual
             </Button>
             <Button
-              variant="hover-only"
+              variant={tab === "code" ? "neutral" : "hover-only"}
               className="w-full"
               onClick={() => handleTabChange("code")}
             >
