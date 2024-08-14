@@ -1,13 +1,12 @@
 "use client";
-import { motion } from "framer-motion";
-import { CopyIcon } from "lucide-react";
+
+import { ClipboardIcon } from "lucide-react";
 import { Highlight, type PrismTheme, themes } from "prism-react-renderer";
-import { useEffect, useState } from "react";
 import { toast } from "sonner";
 import "../styles/prism-js-custom.css";
 import { cn } from "../utils/cn";
 import { useCopyToClipboard } from "../utils/use-copy-to-clipboard";
-import Button from "./button";
+import { Button } from "./shadcn/button";
 export default function CodeHighlighter({
   code,
   classNameContainer,
@@ -29,15 +28,14 @@ export default function CodeHighlighter({
   return (
     <div className="w-full">
       <Button
+        type="button"
         onClick={handleCopy(code)}
-        variant="neutral"
-        size="md-square"
-        aria-label="Copy code to clipboard"
-        title="Copy code to clipboard"
-        className="absolute top-2 right-2 group backdrop-blur-md"
-        // disabled={copiedText === code}
+        variant="icon"
+        size="icon"
+        aria-label="Copy the code"
+        className="absolute top-2 right-2 p-1 bg-neutral-200 dark:bg-neutral-800"
       >
-        <CopyIcon className="size-5 stroke-neutral-500 dark:stroke-neutral-400 group-hover:scale-95 transition-transform" />
+        <ClipboardIcon className="size-5" />
       </Button>
       {/* <pre className="w-full break-words overflow-hidden">
         <code className="w-full">{code.trim()}</code>
