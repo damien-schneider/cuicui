@@ -47,7 +47,7 @@ export default function AboutPage() {
             code to suit their needs.
           </p>
           <section className="dark:bg-neutral-900 bg-neutral-100 border border-neutral-500/10 rounded-lg py-2 px-3 mt-8">
-            <h3 className="heading-5">And Why CuiCui?</h3>
+            <h3 className="header-5">And Why CuiCui?</h3>
             <p className="comment-1">
               The name "CuiCui" is can't be more explicit with its repetition of
               "UI". I believe that a good UI is the key to a delightful and
@@ -55,7 +55,7 @@ export default function AboutPage() {
               resembles "quick UI," emphasizing how easy it is to use.
               <br />
             </p>
-            <h5 className="heading-6">And most of all</h5>
+            <h5 className="header-6">And most of all</h5>
             <p className="comment-1">
               In French, "cui-cui" is an onomatopoeia for bird sounds, and...
               well, I think it sounds cute!

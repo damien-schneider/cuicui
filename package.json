@@ -23,6 +23,7 @@
 	},
 	"dependencies": {
 		"@radix-ui/react-dialog": "1.1.1",
+		"@radix-ui/react-dropdown-menu": "2.1.1",
 		"@radix-ui/react-scroll-area": "1.1.0",
 		"@radix-ui/react-select": "2.0.0",
 		"@radix-ui/react-slider": "1.2.0",
@@ -46,7 +47,8 @@
 		"sharp": "0.33.4",
 		"sonner": "1.5.0",
 		"tailwind-merge": "2.3.0",
-		"vaul": "0.9.1"
+		"vaul": "0.9.1",
+		"zustand": "4.5.4"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.7.1",

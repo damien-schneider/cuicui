@@ -6,8 +6,11 @@
 .tag{
 	@apply text-rose-400 dark:text-rose-400 !important;
 }
+.token.class-name {
+	@apply text-amber-500 dark:text-amber-400 !important;
+}
 .token.imports{
-	@apply text-rose-500 dark:text-rose-400 !important;
+	@apply text-amber-500 dark:text-amber-400 !important;
 }
 
 .token.tag.script.punctuation{
@@ -19,6 +22,7 @@
 .token.plain {
 		@apply text-blue-500 dark:text-blue-400 !important;
 }
+
 .token.operator {
 	@apply text-gray-400 dark:text-gray-500 !important;
 }

@@ -15,6 +15,7 @@ import {
   MousePointerClickIcon,
   PictureInPictureIcon,
   QuoteIcon,
+  SearchIcon,
   SettingsIcon,
   SlidersHorizontalIcon,
   SparkleIcon,
@@ -40,6 +41,7 @@ import MarqueeVariant1 from "../app/(components)/marketing-ui/testimonials/marqu
 import Modern3dKbdVariant1 from "../app/(components)/application-ui/kbd/modern-3d-kbd/variant1";
 import { AnimatedNumberVariant1 } from "../app/(components)/marketing-ui/statistics/animated-on-scroll/variant1";
 import FollowCursorVariant1 from "../app/(components)/other/cursors/follow-cursor/variant1";
+import GooglePixelVariant1 from "../app/(components)/other/mock-ups/smartphone/variant1";
 import {
   DotsPattern,
   DotsPatternVariant1,
@@ -250,6 +252,14 @@ export const componentCategories: {
         },
       },
       {
+        name: "Search Bars",
+        slug: "search-bars",
+        description: "Create simple search bars with different styles",
+        // releaseDate: new Date("2024-08-01"),
+        comingSoon: true,
+        icon: SearchIcon,
+      },
+      {
         name: "Settings",
         slug: "settings",
         description: "Create simple settings components",
@@ -304,13 +314,12 @@ export const componentCategories: {
         slug: "mock-ups",
         description:
           "Create mock-ups without images, just with CSS and HTML for better performance, SEO and accessibility & also more micro-interactions",
-        // releaseDate: new Date("2024-07-29"),
-        comingSoon: true,
+        releaseDate: new Date("2024-08-14"),
         icon: MonitorSmartphoneIcon,
-        // preview: {
-        //   component: <BlurAppearVariant1 />,
-        //   previewScale: 0.75,
-        // },
+        preview: {
+          component: <GooglePixelVariant1 />,
+          previewScale: 0.5,
+        },
       },
       {
         name: "Patterns",

@@ -1,14 +1,12 @@
-import { cn } from "../utils/cn";
+import { cn } from "#/src/utils/cn";
 
 export default ({
   children,
   classNameParent,
   classNameChild,
-  classNameBlur,
   rounded = "md",
   background = "glassy",
   border = true,
-  gradientDirection = "to-br",
 }: Readonly<{
   children: React.ReactNode;
   classNameParent?: string;
@@ -16,15 +14,6 @@ export default ({
   classNameBlur?: string;
   rounded?: "xs" | "sm" | "md" | "lg" | "full" | "none";
   background?: "glassy" | "solid";
-  gradientDirection?:
-    | "to-t"
-    | "to-b"
-    | "to-l"
-    | "to-r"
-    | "to-tl"
-    | "to-tr"
-    | "to-bl"
-    | "to-br";
   border?: boolean;
 }>) => {
   function getRoundedValue(
@@ -67,31 +56,6 @@ export default ({
     }
   }
 
-  function getGradientDirection(
-    gradientDirectionValue: typeof gradientDirection,
-  ) {
-    switch (gradientDirectionValue) {
-      case "to-t":
-        return "bg-gradient-to-t";
-      case "to-b":
-        return "bg-gradient-to-b";
-      case "to-l":
-        return "bg-gradient-to-l";
-      case "to-r":
-        return "bg-gradient-to-r";
-      case "to-tl":
-        return "bg-gradient-to-tl";
-      case "to-tr":
-        return "bg-gradient-to-tr";
-      case "to-bl":
-        return "bg-gradient-to-bl";
-      case "to-br":
-        return "bg-gradient-to-br";
-      default:
-        return "bg-gradient-to-b";
-    }
-  }
-
   return (
     <div
       className={cn(
@@ -105,17 +69,6 @@ export default ({
         background: "linear-gradient(135deg, #3BC4F2, #7A69F9,#F26378,#F5833F)",
       }}
     >
-      <div
-        className={cn(
-          "absolute blur-2xl -inset-2 -z-10 opacity-10 pointer-events-none rounded-[inherit]",
-          // getGradientDirection(gradientDirection),
-          classNameBlur,
-        )}
-        style={{
-          background:
-            "linear-gradient(135deg, #3BC4F2, #7A69F9,#F26378,#F5833F)",
-        }}
-      />
       <div
         className={cn(
           "rounded-[inherit]",
