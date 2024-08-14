@@ -17,7 +17,7 @@ const buttonVariants = cva(
         neutral:
           "bg-neutral-500/15 hover:bg-neutral-500/10 text-neutral-500 dark:text-neutral-400",
         "hover-only": "hover:bg-neutral-500/10 text-neutral-500",
-
+        icon: "dark:text-neutral-300 text-neutral-500 bg-neutral-800 dark:bg-neutral-700 border border-neutral-500/20 hover:scale-105 active:scale-90 transition-transform transform-gpu",
         gradient: "",
       },
       size: {
@@ -26,7 +26,7 @@ const buttonVariants = cva(
         md: "h-10 px-4 py-2 rounded-md px-4 text-sm font-medium",
         "md-square": "size-10 rounded-md",
         lg: "h-11 rounded-md px-8",
-        icon: "h-10 w-10",
+        icon: "rounded-md",
       },
     },
     defaultVariants: {
