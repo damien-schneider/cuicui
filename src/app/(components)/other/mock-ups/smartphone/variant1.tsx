@@ -1,17 +1,20 @@
 //TODO : Improve with better design (flex, gap, justify-center, items-center, w-full ...)
-export default function GooglePixelVariant1() {
+export function GooglePixelVariant1() {
   return (
-    <div className="device device-google-pixel-6-pro scale-[0.4] relative block box-border z-10 h-[862px] w-[404px]">
+    <div
+      id="device-google-pixel-6-pro"
+      className="relative block box-border z-10 h-[862px] w-[404px]"
+    >
       <div
         id="device-frame"
         className="box-border block z-10 bg-neutral-950 rounded-[28px] mx-0.5 pt-5 px-3 pb-6 h-[862px] w-[400px] shadow-[inset_0px_0px_12px_rgb(141,141,134),inset_0px_7px_0px_3px_rgb(253,253,252),inset_0px_-6px_0px_3px_rgb(253,253,252)]"
       >
         {/* CONTENT */}
-        <div
+        <img
           id="device-screen"
-          // alt="Google Pixel 6 Pro"
-          className="object-cover rounded-[27px] h-[816px] w-[376px] bg-gradient-to-b from-orange-200 to-neutral-100 dark:from-neutral-400 dark:to-neutral-500"
-          // src="https://devicescss.xyz/assets/img/bg-pixel-6.jpg"
+          alt="Google Pixel 6 Pro"
+          className="object-cover rounded-2xl h-[816px] w-[376px]"
+          src="https://devicescss.xyz/assets/img/bg-iphone-14-pro.jpg"
         />
       </div>
 
