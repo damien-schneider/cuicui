@@ -22,7 +22,7 @@ import {
   SquareArrowRightIcon,
   TagIcon,
 } from "lucide-react";
-import ModernDetailedKbdVariant1 from "../app/(components)/application-ui/kbd/modern-detailed-kbd/variant1";
+
 import DynamicSettingsVariant1 from "../app/(components)/application-ui/settings/dynamic-settings/variant1";
 import { ElasticSliderVariant1 } from "../app/(components)/application-ui/sliders/elastic-slider/variant1";
 import { StepWithStickyColorVariant1 } from "../app/(components)/application-ui/static-steppers/code/variant1";
@@ -31,7 +31,6 @@ import ModernSimpleQuoteVariant1 from "../app/(components)/common-ui/blockquotes
 import ShinyRotatingBorderButtonVariant1 from "../app/(components)/common-ui/buttons/shiny-rotating-border-button/variant1";
 import { ModernInnerShadowCardVariant1 } from "../app/(components)/common-ui/cards/modern-inner-shadow/variant1";
 import Dock from "../app/(components)/common-ui/navigation/mac-dock/variant1";
-import { VercelNavigationVariant1 } from "../app/(components)/common-ui/navigation/vercel-navigation/variant1";
 import { ShinyGradientSkeletonVariant1 } from "../app/(components)/common-ui/skeletons/shiny-gradient/variant1";
 import { CarouselCylindricalVariant1 } from "../app/(components)/marketing-ui/carousels/cylindric-3d-carousel/variant1";
 import { Variant1FeatureFourImages } from "../app/(components)/marketing-ui/features/feature-four-images/variant1";
@@ -41,13 +40,10 @@ import MarqueeVariant1 from "../app/(components)/marketing-ui/testimonials/marqu
 import Modern3dKbdVariant1 from "../app/(components)/application-ui/kbd/modern-3d-kbd/variant1";
 import { AnimatedNumberVariant1 } from "../app/(components)/marketing-ui/statistics/animated-on-scroll/variant1";
 import FollowCursorVariant1 from "../app/(components)/other/cursors/follow-cursor/variant1";
-import GooglePixelVariant1 from "../app/(components)/other/mock-ups/smartphone/variant1";
-import {
-  DotsPattern,
-  DotsPatternVariant1,
-} from "../app/(components)/other/patterns/dots-pattern/variant1";
+import { GooglePixelVariant1 } from "../app/(components)/other/mock-ups/smartphone/variant1";
+import { DotsPatternVariant1 } from "../app/(components)/other/patterns/dots-pattern/variant1";
 import BlurAppearVariant1 from "../app/(components)/other/transition-wrappers/blur-appear/variant1";
-import type { CategoryItem, PreviewComponent } from "./types/component";
+import type { CategoryItem } from "./types/component";
 
 export const componentCategories: {
   name: string;

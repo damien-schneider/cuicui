@@ -23,6 +23,7 @@ import {
 } from "../ui/shadcn/resizable";
 import { ScrollArea, ScrollBar } from "../ui/shadcn/scrollarea";
 
+import { NavigationMenu, NavigationMenuButton } from "../ui/navigation-menu";
 import { cn } from "../utils/cn";
 import BadgeList from "./badge-list";
 import StepToInstall from "./component-wrapper/step-to-install";
@@ -114,7 +115,24 @@ export default function FullComponent({
             <div className="py-1 mt-1">
               <ScrollArea className=" w-full rounded-md">
                 <ScrollAreaScrollbar orientation="horizontal" />
-                <div className="flex gap-2">
+                <NavigationMenu
+                  className="flex gap-0.5 mb-0.5"
+                  transitionTime={0.3}
+                >
+                  {componentList.map((variant, index) => (
+                    <NavigationMenuButton
+                      key={`${index}-${variant.variantName}`}
+                      className={cn(
+                        "w-fit p-3 inline-flex items-center justify-center",
+                      )}
+                      onClick={() => setSelectedVariant(index + 1)}
+                      isActive={selectedVariant === index + 1}
+                    >
+                      {variant.variantName}
+                    </NavigationMenuButton>
+                  ))}
+                </NavigationMenu>
+                {/* <div className="flex gap-2">
                   {componentList.map((variant, index) => (
                     <Button
                       key={`${index}-${variant.variantName}`}
@@ -127,7 +145,7 @@ export default function FullComponent({
                       {variant.variantName}
                     </Button>
                   ))}
-                </div>
+                </div> */}
               </ScrollArea>
             </div>
           </div>
@@ -139,22 +157,27 @@ export default function FullComponent({
               "flex items-center flex-col justify-center overflow-hidden",
           )}
         >
-          <div className="flex gap-2 rounded-lg w-full mb-0.5">
-            <Button
-              variant={tab === "visual" ? "neutral" : "hover-only"}
-              className="w-full"
+          <NavigationMenu
+            className="w-full flex gap-0.5 mb-0.5"
+            transitionTime={0.3}
+          >
+            <NavigationMenuButton
+              className={cn(
+                "w-full p-3 inline-flex items-center justify-center",
+              )}
               onClick={() => handleTabChange("visual")}
+              isActive={tab === "visual"}
             >
               Visual
-            </Button>
-            <Button
-              variant={tab === "code" ? "neutral" : "hover-only"}
-              className="w-full"
+            </NavigationMenuButton>
+            <NavigationMenuButton
+              className="w-full p-3 inline-flex items-center justify-center"
               onClick={() => handleTabChange("code")}
+              isActive={tab === "code"}
             >
               Code
-            </Button>
-          </div>
+            </NavigationMenuButton>
+          </NavigationMenu>
           {tab === "visual" ? (
             isResizable ? (
               <ResizablePanelGroup
