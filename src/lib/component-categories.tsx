@@ -39,10 +39,12 @@ import ManyOffersVariant1 from "../app/(components)/marketing-ui/pricing-tables/
 import MarqueeVariant1 from "../app/(components)/marketing-ui/testimonials/marquee/variant1";
 
 import Modern3dKbdVariant1 from "../app/(components)/application-ui/kbd/modern-3d-kbd/variant1";
+import { SearchBar } from "../app/(components)/application-ui/search-bars/growing-search/variant1";
 import FileDropzone from "../app/(components)/common-ui/inputs/droppable-file/variant1";
 import { AnimatedNumberVariant1 } from "../app/(components)/marketing-ui/statistics/animated-on-scroll/variant1";
 import FollowCursorVariant1 from "../app/(components)/other/cursors/follow-cursor/variant1";
 import { GooglePixelVariant1 } from "../app/(components)/other/mock-ups/smartphone/variant1";
+import { IPhone14ProVariant2 } from "../app/(components)/other/mock-ups/smartphone/variant2";
 import { DotsPatternVariant1 } from "../app/(components)/other/patterns/dots-pattern/variant1";
 import BlurAppearVariant1 from "../app/(components)/other/transition-wrappers/blur-appear/variant1";
 import type { CategoryItem } from "./types/component";
@@ -218,7 +220,7 @@ export const componentCategories: {
         icon: DollarSignIcon,
         preview: {
           component: <ManyOffersVariant1 />,
-          previewScale: 0.75,
+          previewScale: 0.2,
         },
       },
       {
@@ -264,9 +266,12 @@ export const componentCategories: {
         name: "Search Bars",
         slug: "search-bars",
         description: "Create simple search bars with different styles",
-        // releaseDate: new Date("2024-08-01"),
-        comingSoon: true,
+        releaseDate: new Date("2024-08-19"),
         icon: SearchIcon,
+        preview: {
+          component: <SearchBar />,
+          previewScale: 1,
+        },
       },
       {
         name: "Settings",
@@ -326,8 +331,8 @@ export const componentCategories: {
         releaseDate: new Date("2024-08-14"),
         icon: MonitorSmartphoneIcon,
         preview: {
-          component: <GooglePixelVariant1 />,
-          previewScale: 0.5,
+          component: <IPhone14ProVariant2 />,
+          previewScale: 0.2,
         },
       },
       {
