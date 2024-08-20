@@ -11,7 +11,7 @@ export default async function Page() {
           {
             variantName: "variant 1",
             component: <CarouselCylindricalVariant1 />,
-            code: await getFileContentAsString({
+            previewCode: await getFileContentAsString({
               componentSlug: "carousels",
               variantName: "cylindric-3d-carousel/variant1",
             }),

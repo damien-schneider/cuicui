@@ -11,7 +11,7 @@ export default async function Page() {
           {
             variantName: "Variant 1",
             component: <ModernInnerShadowCardVariant1 />,
-            code: await getFileContentAsString({
+            previewCode: await getFileContentAsString({
               componentSlug: "cards",
               variantName: "modern-inner-shadow/variant1",
             }),

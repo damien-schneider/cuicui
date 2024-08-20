@@ -14,7 +14,7 @@ export default async function Page() {
           {
             variantName: "Replace cursor",
             component: <FollowCursorVariant1 />,
-            code: await getFileContentAsString({
+            previewCode: await getFileContentAsString({
               componentSlug: "cursors",
               variantName: "follow-cursor/variant1",
             }),
@@ -22,7 +22,7 @@ export default async function Page() {
           {
             variantName: "Keeping cursor",
             component: <FollowCursorVariant2 />,
-            code: await getFileContentAsString({
+            previewCode: await getFileContentAsString({
               componentSlug: "cursors",
               variantName: "follow-cursor/variant2",
             }),
@@ -41,7 +41,7 @@ export default async function Page() {
           {
             variantName: "Gradient background",
             component: <DynamicCardsVariant2 />,
-            code: await getFileContentAsString({
+            previewCode: await getFileContentAsString({
               componentSlug: "cursors",
               variantName: "dynamic-cards/variant2",
             }),
@@ -49,7 +49,7 @@ export default async function Page() {
           {
             variantName: "Border only",
             component: <DynamicCardsVariant1 />,
-            code: await getFileContentAsString({
+            previewCode: await getFileContentAsString({
               componentSlug: "cursors",
               variantName: "dynamic-cards/variant1",
             }),

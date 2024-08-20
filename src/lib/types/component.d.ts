@@ -6,7 +6,8 @@ export type Variant = `variant${number}`;
 export type VariantComponent = {
   variantName: string;
   component: React.JSX.Element;
-  code: string;
+  previewCode: string;
+  componentCode?: string;
 };
 
 export type ComponentBadgeSlug = (typeof ComponentBadgeList)[number]["slug"];

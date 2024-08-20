@@ -15,7 +15,7 @@ export default async function Page() {
           {
             variantName: "On hover effect",
             component: <TestimonialsVariant1 />,
-            code: await getFileContentAsString({
+            previewCode: await getFileContentAsString({
               componentSlug: "testimonials",
               variantName: "/testimonials-component/variant1",
             }),
@@ -30,7 +30,7 @@ export default async function Page() {
           {
             variantName: "Horizontal",
             component: <MarqueeVariant1 />,
-            code: await getFileContentAsString({
+            previewCode: await getFileContentAsString({
               componentSlug: "testimonials",
               variantName: "marquee/variant1",
             }),
@@ -38,7 +38,7 @@ export default async function Page() {
           {
             variantName: "Vertical",
             component: <MarqueeVariant2 />,
-            code: await getFileContentAsString({
+            previewCode: await getFileContentAsString({
               componentSlug: "testimonials",
               variantName: "marquee/variant2",
             }),
@@ -53,7 +53,7 @@ export default async function Page() {
           {
             variantName: "Double container",
             component: <GradientQnAVariant1 />,
-            code: await getFileContentAsString({
+            previewCode: await getFileContentAsString({
               componentSlug: "testimonials",
               variantName: "gradiant-qna/variant1",
             }),
@@ -61,7 +61,7 @@ export default async function Page() {
           {
             variantName: "Simple container",
             component: <GradientQnAVariant2 />,
-            code: await getFileContentAsString({
+            previewCode: await getFileContentAsString({
               componentSlug: "testimonials",
               variantName: "gradiant-qna/variant2",
             }),

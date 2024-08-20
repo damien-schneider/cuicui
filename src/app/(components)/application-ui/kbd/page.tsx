@@ -14,7 +14,7 @@ export default async function Page() {
           {
             variantName: "variant1",
             component: <ModernDetailedKbdVariant1 />,
-            code: await getFileContentAsString({
+            previewCode: await getFileContentAsString({
               componentSlug: "kbd",
               variantName: "modern-detailed-kbd/variant1",
             }),
@@ -29,7 +29,7 @@ export default async function Page() {
           {
             variantName: "variant1",
             component: <Modern3dKbdVariant1 />,
-            code: await getFileContentAsString({
+            previewCode: await getFileContentAsString({
               componentSlug: "kbd",
               variantName: "modern-3d-kbd/variant1",
             }),

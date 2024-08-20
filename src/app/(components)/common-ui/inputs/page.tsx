@@ -11,9 +11,13 @@ export default async function Page() {
           {
             variantName: "Droppable Zone",
             component: <FileDropzone />,
-            code: await getFileContentAsString({
+            componentCode: await getFileContentAsString({
               componentSlug: "inputs",
               variantName: "/droppable-file/variant1",
+            }),
+            previewCode: await getFileContentAsString({
+              componentSlug: "inputs",
+              variantName: "/droppable-file/preview-variant1",
             }),
           },
         ]}

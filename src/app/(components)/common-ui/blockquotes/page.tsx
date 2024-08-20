@@ -11,7 +11,7 @@ export default async function Page() {
           {
             variantName: "On hover effect",
             component: <ModernSimpleQuoteVariant1 />,
-            code: await getFileContentAsString({
+            previewCode: await getFileContentAsString({
               componentSlug: "blockquotes",
               variantName: "/modern-simple-quote/variant1",
             }),

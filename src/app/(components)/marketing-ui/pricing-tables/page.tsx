@@ -11,7 +11,7 @@ export default async function Page() {
         {
           variantName: "Many offers",
           component: <ManyOffersVariant1 />,
-          code: await getFileContentAsString({
+          previewCode: await getFileContentAsString({
             componentSlug: "pricing-tables",
             variantName: "/many-offers/variant1",
           }),

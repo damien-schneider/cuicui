@@ -7,17 +7,17 @@ import { Button } from "./shadcn/button";
 import { ScrollArea, ScrollBar } from "./shadcn/scrollarea";
 
 import {
-  PackageManagerList,
-  type PackageManagerType,
-  getCodeByPackageManager,
-  usePackageManager,
-} from "../app/(components)/hooks/store/usePackageManager";
-import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "./shadcn/dropdown-menu";
+import {
+  PackageManagerList,
+  type PackageManagerType,
+  getCodeByPackageManager,
+  usePackageManager,
+} from "./store/use-package-manager";
 
 export const CodeContainer = ({
   children,
@@ -75,37 +75,6 @@ export const CodeContainer = ({
             ))}
           </DropdownMenuContent>
         </DropdownMenu>
-        {/* <Select
-          onValueChange={(value) => {
-            setPackageManager(value as PackageManagerType);
-            handleCopyToClipboard(value as PackageManagerType, children);
-          }}
-        >
-          <SelectTrigger
-            withIcon={false}
-            className={cn(
-              "flex items-center justify-center absolute top-1/2 -translate-y-1/2 right-2 size-8 p-1.5 bg-neutral-200 dark:bg-neutral-800",
-            )}
-            asChild
-          >
-            <button
-              type="button"
-              aria-label="Copy the code"
-              onClick={() => {
-                handleCopyToClipboard(packageManager, children);
-              }}
-            >
-              <ClipboardIcon className="size-5" />
-            </button>
-          </SelectTrigger>
-          <SelectContent align="end">
-            {PackageManagerList.map((item) => (
-              <SelectItem value={item} key={item}>
-                {item}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select> */}
       </div>
     );
   }

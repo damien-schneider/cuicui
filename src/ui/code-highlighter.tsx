@@ -3,9 +3,9 @@
 import { ClipboardIcon } from "lucide-react";
 import { Highlight, type PrismTheme, themes } from "prism-react-renderer";
 import { toast } from "sonner";
+import { useCopyToClipboard } from "#/src/ui/cuicui/hooks/use-copy-to-clipboard";
 import "../styles/prism-js-custom.css";
 import { cn } from "../utils/cn";
-import { useCopyToClipboard } from "../utils/use-copy-to-clipboard";
 import { Button } from "./shadcn/button";
 export default function CodeHighlighter({
   code,

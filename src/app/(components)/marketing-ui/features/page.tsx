@@ -12,7 +12,7 @@ export default async function Page() {
           {
             variantName: "Sober colors",
             component: <Variant1FeatureFourImages />,
-            code: await getFileContentAsString({
+            previewCode: await getFileContentAsString({
               componentSlug: "features",
               variantName: "feature-four-images/variant1",
             }),
@@ -20,7 +20,7 @@ export default async function Page() {
           {
             variantName: "Less animations with colors",
             component: <Variant2FeatureFourImages />,
-            code: await getFileContentAsString({
+            previewCode: await getFileContentAsString({
               componentSlug: "features",
               variantName: "feature-four-images/variant2",
             }),
@@ -35,7 +35,7 @@ export default async function Page() {
           {
             variantName: "test",
             component: <AnimatedCardVariant1 />,
-            code: await getFileContentAsString({
+            previewCode: await getFileContentAsString({
               componentSlug: "features",
               variantName: "animated-cards/variant1",
             }),
