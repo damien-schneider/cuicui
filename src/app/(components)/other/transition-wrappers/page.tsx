@@ -11,7 +11,7 @@ export default async function Page() {
           {
             variantName: "Blur appear",
             component: <BlurAppearVariant1 />,
-            code: await getFileContentAsString({
+            previewCode: await getFileContentAsString({
               componentSlug: "transition-wrappers",
               variantName: "blur-appear/variant1",
             }),

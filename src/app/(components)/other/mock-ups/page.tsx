@@ -13,7 +13,7 @@ export default async function Page() {
           {
             variantName: "Iphone 14",
             component: <IPhone14ProVariant2 />,
-            code: await getFileContentAsString({
+            previewCode: await getFileContentAsString({
               componentSlug: "mock-ups",
               variantName: "smartphone/variant2",
             }),
@@ -21,7 +21,7 @@ export default async function Page() {
           {
             variantName: "Google Pixel",
             component: <GooglePixelVariant1 />,
-            code: await getFileContentAsString({
+            previewCode: await getFileContentAsString({
               componentSlug: "mock-ups",
               variantName: "smartphone/variant1",
             }),
@@ -40,7 +40,7 @@ export default async function Page() {
           {
             variantName: "Macbook Pro",
             component: <MacbookVariant1 />,
-            code: await getFileContentAsString({
+            previewCode: await getFileContentAsString({
               componentSlug: "mock-ups",
               variantName: "laptops/variant1",
             }),

@@ -10,7 +10,7 @@ export default async function Page() {
         {
           variantName: "variant1",
           component: <StepWithStickyColorVariant1 />,
-          code: await getFileContentAsString({
+          previewCode: await getFileContentAsString({
             componentSlug: "static-steppers",
             variantName: "code/variant1",
           }),

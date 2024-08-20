@@ -13,7 +13,7 @@ export default async function Page() {
           {
             variantName: "variant1",
             component: <ElasticSliderVariant1 />,
-            code: await getFileContentAsString({
+            previewCode: await getFileContentAsString({
               componentSlug: "sliders",
               variantName: "elastic-slider/variant1",
             }),

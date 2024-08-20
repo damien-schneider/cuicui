@@ -13,7 +13,7 @@ export default async function Page() {
           {
             variantName: "Classic Pulse",
             component: <ClassicPulseVariant1 />,
-            code: await getFileContentAsString({
+            previewCode: await getFileContentAsString({
               componentSlug: "skeletons",
               variantName: "/classic-pulse/variant1",
             }),
@@ -30,7 +30,7 @@ export default async function Page() {
           {
             variantName: "Horizontal",
             component: <ShinyGradientSkeletonVariant1 />,
-            code: await getFileContentAsString({
+            previewCode: await getFileContentAsString({
               componentSlug: "skeletons",
               variantName: "/shiny-gradient/variant1",
             }),
@@ -38,7 +38,7 @@ export default async function Page() {
           {
             variantName: "Vertical",
             component: <ShinyGradientSkeletonVariant2 />,
-            code: await getFileContentAsString({
+            previewCode: await getFileContentAsString({
               componentSlug: "skeletons",
               variantName: "/shiny-gradient/variant2",
             }),

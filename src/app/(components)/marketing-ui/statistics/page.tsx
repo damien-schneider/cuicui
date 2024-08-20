@@ -12,7 +12,7 @@ export default async function Page() {
           {
             variantName: "Variant 1",
             component: <AnimatedNumberVariant1 />,
-            code: await getFileContentAsString({
+            previewCode: await getFileContentAsString({
               componentSlug: "statistics",
               variantName: "/animated-on-scroll/variant1",
             }),
@@ -31,7 +31,7 @@ export default async function Page() {
           {
             variantName: "Variant 1",
             component: <IncreaseToValueVariant1 />,
-            code: await getFileContentAsString({
+            previewCode: await getFileContentAsString({
               componentSlug: "statistics",
               variantName: "/increase-to-value/variant1",
             }),

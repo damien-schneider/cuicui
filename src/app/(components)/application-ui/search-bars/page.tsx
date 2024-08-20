@@ -13,7 +13,7 @@ export default async function Page() {
           {
             variantName: "With press effect",
             component: <GrowingSearchVariant1 />,
-            code: await getFileContentAsString({
+            previewCode: await getFileContentAsString({
               componentSlug: "search-bars",
               variantName: "growing-search/variant1",
             }),

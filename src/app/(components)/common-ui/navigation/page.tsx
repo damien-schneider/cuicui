@@ -13,7 +13,7 @@ export default async function Page() {
           {
             variantName: "On hover effect",
             component: <VercelNavigationVariant1 />,
-            code: await getFileContentAsString({
+            previewCode: await getFileContentAsString({
               componentSlug: "navigation",
               variantName: "/vercel-navigation/variant1",
             }),
@@ -21,7 +21,7 @@ export default async function Page() {
           {
             variantName: "On click effect",
             component: <VercelNavigationVariant2 />,
-            code: await getFileContentAsString({
+            previewCode: await getFileContentAsString({
               componentSlug: "navigation",
               variantName: "/vercel-navigation/variant2",
             }),
@@ -36,7 +36,7 @@ export default async function Page() {
           {
             variantName: "variant1",
             component: <Dock />,
-            code: await getFileContentAsString({
+            previewCode: await getFileContentAsString({
               componentSlug: "navigation",
               variantName: "/mac-dock/variant1",
             }),

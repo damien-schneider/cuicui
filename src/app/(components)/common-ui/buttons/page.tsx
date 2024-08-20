@@ -15,7 +15,7 @@ export default async function Page() {
           {
             variantName: "Amber",
             component: <GrowingButtonVariant1 />,
-            code: await getFileContentAsString({
+            previewCode: await getFileContentAsString({
               componentSlug: "buttons",
               variantName: "growing-button/variant1",
             }),
@@ -31,7 +31,7 @@ export default async function Page() {
           {
             variantName: "Default",
             component: <BeforeEffectButtonVariant1 />,
-            code: await getFileContentAsString({
+            previewCode: await getFileContentAsString({
               componentSlug: "buttons",
               variantName: "before-effect-button/variant1",
             }),
@@ -39,7 +39,7 @@ export default async function Page() {
           {
             variantName: "Advanced button",
             component: <BeforeEffectButtonVariant2 />,
-            code: await getFileContentAsString({
+            previewCode: await getFileContentAsString({
               componentSlug: "buttons",
               variantName: "before-effect-button/variant2",
             }),
@@ -54,7 +54,7 @@ export default async function Page() {
           {
             variantName: "Shiny rotating border button",
             component: <ShinyRotatingBorderButtonVariant1 />,
-            code: await getFileContentAsString({
+            previewCode: await getFileContentAsString({
               componentSlug: "buttons",
               variantName: "shiny-rotating-border-button/variant1",
             }),
@@ -70,7 +70,7 @@ export default async function Page() {
           {
             variantName: "Shiny rotating border button",
             component: <ModernAnimatedButtonVariant1 />,
-            code: await getFileContentAsString({
+            previewCode: await getFileContentAsString({
               componentSlug: "buttons",
               variantName: "shiny-rotating-border-button/variant1",
             }),

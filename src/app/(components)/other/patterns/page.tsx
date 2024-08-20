@@ -11,7 +11,7 @@ export default async function Page() {
           {
             variantName: "Variant 1",
             component: <DotsPatternVariant1 />,
-            code: await getFileContentAsString({
+            previewCode: await getFileContentAsString({
               componentSlug: "patterns",
               variantName: "dots-pattern/variant1",
             }),

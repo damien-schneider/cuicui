@@ -30,7 +30,7 @@ import StepToInstall from "./component-wrapper/step-to-install";
 import CustomIframeComponentDark from "./custom-iframe-component-dark";
 import CustomIframeComponentLight from "./custom-iframe-component-light";
 
-export type TabType = "visual" | "code";
+export type TabType = "preview" | "code-component" | "code-preview";
 export type ComponentHeightType = "xs" | "sm" | "md" | "lg" | "xl";
 
 // TODO : Use context to refactor everything into multiple components
@@ -64,7 +64,7 @@ export default function FullComponent({
   rerenderButton?: boolean;
   isChildUsingHeightFull?: boolean;
 }>) {
-  const [tab, setTab] = useState<TabType>("visual");
+  const [tab, setTab] = useState<TabType>("preview");
 
   const [selectedVariant, setSelectedVariant] = useState(1);
   const { resolvedTheme } = useTheme();
@@ -79,8 +79,12 @@ export default function FullComponent({
     [componentList, selectedVariant],
   );
 
-  const codeToDisplay = useMemo(
-    () => getCodeToDisplay(componentList, selectedVariant),
+  const codeComponent = useMemo(
+    () => getCodeToDisplay(componentList, selectedVariant, "component"),
+    [componentList, selectedVariant],
+  );
+  const codePreview = useMemo(
+    () => getCodeToDisplay(componentList, selectedVariant, "preview"),
     [componentList, selectedVariant],
   );
 
@@ -132,20 +136,6 @@ export default function FullComponent({
                     </NavigationMenuButton>
                   ))}
                 </NavigationMenu>
-                {/* <div className="flex gap-2">
-                  {componentList.map((variant, index) => (
-                    <Button
-                      key={`${index}-${variant.variantName}`}
-                      variant={
-                        selectedVariant === index + 1 ? "neutral" : "hover-only"
-                      }
-                      className="flex-nowrap"
-                      onClick={() => setSelectedVariant(index + 1)}
-                    >
-                      {variant.variantName}
-                    </Button>
-                  ))}
-                </div> */}
               </ScrollArea>
             </div>
           </div>
@@ -153,7 +143,7 @@ export default function FullComponent({
         <div
           className={cn(
             "rounded-lg border border-neutral-500/20 p-0.5",
-            tab === "visual" &&
+            tab === "preview" &&
               "flex items-center flex-col justify-center overflow-hidden",
           )}
         >
@@ -165,20 +155,32 @@ export default function FullComponent({
               className={cn(
                 "w-full p-3 inline-flex items-center justify-center",
               )}
-              onClick={() => handleTabChange("visual")}
-              isActive={tab === "visual"}
+              onClick={() => handleTabChange("preview")}
+              isActive={tab === "preview"}
             >
-              Visual
+              Preview
             </NavigationMenuButton>
-            <NavigationMenuButton
-              className="w-full p-3 inline-flex items-center justify-center"
-              onClick={() => handleTabChange("code")}
-              isActive={tab === "code"}
-            >
-              Code
-            </NavigationMenuButton>
+            {codePreview && (
+              <NavigationMenuButton
+                className="w-full p-3 inline-flex items-center justify-center"
+                onClick={() => handleTabChange("code-preview")}
+                isActive={tab === "code-preview"}
+              >
+                Preview Code
+              </NavigationMenuButton>
+            )}
+            {codeComponent && (
+              <NavigationMenuButton
+                className="w-full p-3 inline-flex items-center justify-center"
+                onClick={() => handleTabChange("code-component")}
+                isActive={tab === "code-component"}
+              >
+                Component Code
+              </NavigationMenuButton>
+            )}
           </NavigationMenu>
-          {tab === "visual" ? (
+
+          {tab === "preview" ? (
             isResizable ? (
               <ResizablePanelGroup
                 direction="horizontal"
@@ -219,6 +221,23 @@ export default function FullComponent({
                 {renderedComponent ?? <p>An error has occured</p>}
               </ComponentWrapper>
             )
+          ) : tab === "code-preview" ? (
+            <>
+              <ScrollArea
+                // With a dynamic height, the code take its full size wich is a weird behaviour
+                classNameViewport={cn(
+                  "w-full rounded-md bg-neutral-100 dark:bg-neutral-900  border border-neutral-500/20",
+                  getContainerHeightClass({ size }),
+                )}
+              >
+                <ScrollBar orientation="horizontal" />
+                <CodeHighlighter
+                  classNameContainer={"p-2"}
+                  code={codePreview ?? "An error has occured"}
+                />
+              </ScrollArea>
+              {codePreview && <StepToInstall code={codePreview} />}
+            </>
           ) : (
             <>
               <ScrollArea
@@ -231,10 +250,10 @@ export default function FullComponent({
                 <ScrollBar orientation="horizontal" />
                 <CodeHighlighter
                   classNameContainer={"p-2"}
-                  code={codeToDisplay ?? "An error has occured"}
+                  code={codeComponent ?? "An error has occured"}
                 />
               </ScrollArea>
-              {codeToDisplay && <StepToInstall code={codeToDisplay} />}
+              {codeComponent && <StepToInstall code={codeComponent} />}
             </>
           )}
         </div>
@@ -341,15 +360,25 @@ const getComponentToDisplay = (
   if (component) {
     return component;
   }
-  toast.error("Component was not found");
+  // toast.error("Component was not found");
   return null;
 };
 
 const getCodeToDisplay = (
   componentList: VariantComponent[],
   selectedVariant: number,
+  codeToDisplay: "preview" | "component",
 ) => {
-  const code = componentList[selectedVariant - 1]?.code;
+  if (codeToDisplay === "component") {
+    const code = componentList[selectedVariant - 1]?.componentCode;
+
+    if (code) {
+      return code;
+    }
+    // toast.error("Component code was not found");
+    return null;
+  }
+  const code = componentList[selectedVariant - 1]?.previewCode;
 
   if (code) {
     console.log(code);

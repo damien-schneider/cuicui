@@ -10,7 +10,7 @@ export default async function Page() {
         {
           variantName: "variant1",
           component: <DynamicSettingsVariant1 />,
-          code: await getFileContentAsString({
+          previewCode: await getFileContentAsString({
             componentSlug: "settings",
             variantName: "dynamic-settings/variant1",
           }),

@@ -15,7 +15,7 @@ export default async function Page() {
           {
             variantName: "Amber",
             component: <BadgeSimpleVariantAmber />,
-            code: await getFileContentAsString({
+            previewCode: await getFileContentAsString({
               componentSlug: "badges",
               variantName: "modern-simple-badges/variant1",
             }),
@@ -23,7 +23,7 @@ export default async function Page() {
           {
             variantName: "Red",
             component: <BadgeSimpleVariantRed />,
-            code: await getFileContentAsString({
+            previewCode: await getFileContentAsString({
               componentSlug: "badges",
               variantName: "modern-simple-badges/variant2",
             }),
@@ -38,7 +38,7 @@ export default async function Page() {
           {
             variantName: "default",
             component: <ClerkBadgeVariant1 />,
-            code: await getFileContentAsString({
+            previewCode: await getFileContentAsString({
               componentSlug: "badges",
               variantName: "clerk-badge/variant1",
             }),
@@ -55,7 +55,7 @@ export default async function Page() {
           {
             variantName: "variant1",
             component: <AdvancedBadgesVariant1 />,
-            code: await getFileContentAsString({
+            previewCode: await getFileContentAsString({
               componentSlug: "badges",
               variantName: "advanced-badges/variant1",
             }),
