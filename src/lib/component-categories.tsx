@@ -4,6 +4,8 @@ import {
   BoxSelectIcon,
   BringToFrontIcon,
   CircleUserRoundIcon,
+  ClipboardCopyIcon,
+  Code2Icon,
   CommandIcon,
   CreditCard,
   DollarSignIcon,
@@ -24,6 +26,9 @@ import {
   TextCursorInputIcon,
 } from "lucide-react";
 
+import PreviewCommandVariant1 from "../app/(components)/application-ui/code/command/preview-variant1";
+import Modern3dKbdVariant1 from "../app/(components)/application-ui/kbd/modern-3d-kbd/variant1";
+import { SearchBar } from "../app/(components)/application-ui/search-bars/growing-search/variant1";
 import DynamicSettingsVariant1 from "../app/(components)/application-ui/settings/dynamic-settings/variant1";
 import { ElasticSliderVariant1 } from "../app/(components)/application-ui/sliders/elastic-slider/variant1";
 import { StepWithStickyColorVariant1 } from "../app/(components)/application-ui/static-steppers/code/variant1";
@@ -31,17 +36,15 @@ import ClerkBadgeVariant1 from "../app/(components)/common-ui/badges/clerk-badge
 import ModernSimpleQuoteVariant1 from "../app/(components)/common-ui/blockquotes/modern-simple-quote/variant1";
 import ShinyRotatingBorderButtonVariant1 from "../app/(components)/common-ui/buttons/shiny-rotating-border-button/variant1";
 import { ModernInnerShadowCardVariant1 } from "../app/(components)/common-ui/cards/modern-inner-shadow/variant1";
+import FileDropzone from "../app/(components)/common-ui/inputs/droppable-file/variant1";
 import Dock from "../app/(components)/common-ui/navigation/mac-dock/variant1";
 import { ShinyGradientSkeletonVariant1 } from "../app/(components)/common-ui/skeletons/shiny-gradient/variant1";
+import PreviewCopyToClipboard from "../app/(components)/hooks/use-copy-to-clipboard/hook/preview-copy-to-clipboard";
 import { CarouselCylindricalVariant1 } from "../app/(components)/marketing-ui/carousels/cylindric-3d-carousel/variant1";
 import { Variant1FeatureFourImages } from "../app/(components)/marketing-ui/features/feature-four-images/variant1";
 import ManyOffersVariant1 from "../app/(components)/marketing-ui/pricing-tables/many-offers/variant1";
-import MarqueeVariant1 from "../app/(components)/marketing-ui/testimonials/marquee/variant1";
-
-import Modern3dKbdVariant1 from "../app/(components)/application-ui/kbd/modern-3d-kbd/variant1";
-import { SearchBar } from "../app/(components)/application-ui/search-bars/growing-search/variant1";
-import FileDropzone from "../app/(components)/common-ui/inputs/droppable-file/variant1";
 import { AnimatedNumberVariant1 } from "../app/(components)/marketing-ui/statistics/animated-on-scroll/variant1";
+import MarqueeVariant1 from "../app/(components)/marketing-ui/testimonials/marquee/variant1";
 import FollowCursorVariant1 from "../app/(components)/other/cursors/follow-cursor/variant1";
 import { GooglePixelVariant1 } from "../app/(components)/other/mock-ups/smartphone/variant1";
 import { IPhone14ProVariant2 } from "../app/(components)/other/mock-ups/smartphone/variant2";
@@ -252,6 +255,17 @@ export const componentCategories: {
     slug: "application-ui",
     items: [
       {
+        name: "Code",
+        slug: "code",
+        description: "Create simple code snippets with different styles",
+        releaseDate: new Date("2024-08-20"),
+        icon: Code2Icon,
+        preview: {
+          component: <PreviewCommandVariant1 />,
+          previewScale: 0.8,
+        },
+      },
+      {
         name: "Kbd",
         slug: "kbd",
         description: "Create simple accessible kbd shortcut",
@@ -371,6 +385,17 @@ export const componentCategories: {
         description: "Create a picture in picture mode for your videos",
         icon: PictureInPictureIcon,
         comingSoon: true,
+      },
+      {
+        name: "Copy to Clipboard",
+        slug: "use-copy-to-clipboard",
+        description: "Copy text to the clipboard",
+        icon: ClipboardCopyIcon,
+        releaseDate: new Date("2024-08-20"),
+        preview: {
+          component: <PreviewCopyToClipboard />,
+          previewScale: 0.8,
+        },
       },
     ],
   },
