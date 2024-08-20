@@ -23,18 +23,25 @@ export type StepToInstallType = {
 const possibleStepsList: StepToInstallType[] = [
   {
     idSlug: "cn",
-    title: "Add the cn function to your project",
+    title: "Add the cn util file to your project",
     find: [`import { cn } from "#/src/utils/cn"`],
     installProcess: (
       <div>
-        <p className="caption-sm mb-2">
+        <p className="caption-sm mb-2">./src/utils/cn.tsx</p>
+        <CodeContainer isCommand={false}>{`import { type ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}`}</CodeContainer>
+        {/* <p className="caption-sm mb-2">
           See the how to install in the Getting Started page
         </p>
         <Button asChild>
           <Link href="/getting-started#cn-function">
             Go to the Getting Started page
           </Link>
-        </Button>
+        </Button> */}
       </div>
     ),
   },
@@ -47,6 +54,13 @@ const possiblePackagesToInstall: PackageToInstallType[] = [
     find: [`from "framer-motion"`],
 
     packageName: "framer-motion",
+  },
+  {
+    idSlug: "cn-util",
+    title: "Add the cn util file to your project",
+    find: [`import { cn } from "#/src/utils/cn"`],
+
+    packageName: "clsx tailwind-merge ",
   },
   {
     idSlug: "lucide-react",
