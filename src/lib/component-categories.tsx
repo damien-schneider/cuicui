@@ -21,6 +21,7 @@ import {
   SparkleIcon,
   SquareArrowRightIcon,
   TagIcon,
+  TextCursorInputIcon,
 } from "lucide-react";
 
 import DynamicSettingsVariant1 from "../app/(components)/application-ui/settings/dynamic-settings/variant1";
@@ -39,6 +40,7 @@ import MarqueeVariant1 from "../app/(components)/marketing-ui/testimonials/marqu
 
 import Modern3dKbdVariant1 from "../app/(components)/application-ui/kbd/modern-3d-kbd/variant1";
 import { SearchBar } from "../app/(components)/application-ui/search-bars/growing-search/variant1";
+import FileDropzone from "../app/(components)/common-ui/inputs/droppable-file/variant1";
 import { AnimatedNumberVariant1 } from "../app/(components)/marketing-ui/statistics/animated-on-scroll/variant1";
 import FollowCursorVariant1 from "../app/(components)/other/cursors/follow-cursor/variant1";
 import { GooglePixelVariant1 } from "../app/(components)/other/mock-ups/smartphone/variant1";
@@ -147,6 +149,17 @@ export const componentCategories: {
         preview: {
           component: <ModernInnerShadowCardVariant1 />,
           previewScale: 0.5,
+        },
+      },
+      {
+        name: "Inputs",
+        slug: "inputs",
+        description: "Create simple inputs with different styles",
+        releaseDate: new Date("2024-08-20"),
+        icon: TextCursorInputIcon,
+        preview: {
+          component: <FileDropzone />,
+          previewScale: 1,
         },
       },
       {
