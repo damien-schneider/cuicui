@@ -9,12 +9,14 @@ import {
   CommandIcon,
   CreditCard,
   DollarSignIcon,
+  Fingerprint,
   GalleryHorizontalIcon,
   GripIcon,
   ListOrderedIcon,
   MenuIcon,
   MonitorSmartphoneIcon,
   MousePointerClickIcon,
+  PanelTopIcon,
   PictureInPictureIcon,
   QuoteIcon,
   SearchIcon,
@@ -26,6 +28,11 @@ import {
   TextCursorInputIcon,
 } from "lucide-react";
 
+import AuthenticationPreviewImage from "#/src/assets/components-preview/authentication.jpeg";
+import PricingPreviewImage from "#/src/assets/components-preview/pricing.png";
+
+import HalfSidedGlassMorphismAuthentication from "../app/(components)/application-ui/authentication/half-sided-glassmorphism/variant1";
+import FloatingGrowingBannerVariant1 from "../app/(components)/application-ui/banners/floating-growing-banner/variant1";
 import PreviewCommandVariant1 from "../app/(components)/application-ui/code/command/preview-variant1";
 import Modern3dKbdVariant1 from "../app/(components)/application-ui/kbd/modern-3d-kbd/variant1";
 import { SearchBar } from "../app/(components)/application-ui/search-bars/growing-search/variant1";
@@ -41,6 +48,7 @@ import Dock from "../app/(components)/common-ui/navigation/mac-dock/variant1";
 import { ShinyGradientSkeletonVariant1 } from "../app/(components)/common-ui/skeletons/shiny-gradient/variant1";
 import PreviewCopyToClipboard from "../app/(components)/hooks/use-copy-to-clipboard/hook/preview-copy-to-clipboard";
 import { CarouselCylindricalVariant1 } from "../app/(components)/marketing-ui/carousels/cylindric-3d-carousel/variant1";
+import { AnimatedCardVariant1 } from "../app/(components)/marketing-ui/features/animated-cards/variant1";
 import { Variant1FeatureFourImages } from "../app/(components)/marketing-ui/features/feature-four-images/variant1";
 import ManyOffersVariant1 from "../app/(components)/marketing-ui/pricing-tables/many-offers/variant1";
 import { AnimatedNumberVariant1 } from "../app/(components)/marketing-ui/statistics/animated-on-scroll/variant1";
@@ -211,8 +219,8 @@ export const componentCategories: {
         releaseDate: new Date("2024-06-17"),
         icon: SparkleIcon,
         preview: {
-          component: <Variant1FeatureFourImages />,
-          previewScale: 0.3,
+          component: <AnimatedCardVariant1 />,
+          previewScale: 0.8,
         },
       },
       {
@@ -223,6 +231,7 @@ export const componentCategories: {
         icon: DollarSignIcon,
         preview: {
           component: <ManyOffersVariant1 />,
+          previewImage: PricingPreviewImage,
           previewScale: 0.2,
         },
       },
@@ -254,6 +263,29 @@ export const componentCategories: {
     name: "Application UI",
     slug: "application-ui",
     items: [
+      {
+        name: "Authentication",
+        slug: "authentication",
+        description: "Create simple authentication components",
+        releaseDate: new Date("2024-08-21"),
+        icon: Fingerprint,
+        preview: {
+          component: <HalfSidedGlassMorphismAuthentication />,
+          previewScale: 1,
+          previewImage: AuthenticationPreviewImage,
+        },
+      },
+      {
+        name: "Banners",
+        slug: "banners",
+        description: "Create simple banners with different styles",
+        releaseDate: new Date("2024-08-21"),
+        icon: PanelTopIcon,
+        preview: {
+          component: <FloatingGrowingBannerVariant1 />,
+          previewScale: 0.8,
+        },
+      },
       {
         name: "Code",
         slug: "code",

@@ -25,6 +25,7 @@ export type FrameworkBadge =
 export type PreviewComponent = {
   component: ReactNode;
   previewScale: number;
+  previewImage?: StaticImageData;
 };
 
 export type CategoryItem = {
@@ -35,5 +36,6 @@ export type CategoryItem = {
   comingSoon?: boolean;
   releaseDate?: Date;
   preview?: PreviewComponent;
+  updatedDate?: Date;
   icon?: LucideIcon;
 };
