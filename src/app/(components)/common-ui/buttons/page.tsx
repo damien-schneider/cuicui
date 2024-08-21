@@ -79,6 +79,8 @@ export default async function Page() {
         isIframed={false}
         title="Shiny rotating border button"
         description="Button with a shiny rotating border effect."
+        inspiration="Raycast"
+        inspirationLink="https://www.raycast.com/"
       />
     </>
   );
