@@ -1,5 +1,6 @@
 "use client";
 import { ArrowUpRight, ArrowUpRightIcon } from "lucide-react";
+import Image from "next/image";
 import React, { useRef, useEffect, useState, type ReactNode } from "react";
 import { cn } from "#/src/utils/cn";
 import type { CategoryItem, PreviewComponent } from "../lib/types/component";
@@ -49,6 +50,13 @@ export const MainMenuCard = ({
                 Coming Soon
               </div>
             </div>
+          ) : item.preview?.previewImage ? (
+            <Image
+              className="object-cover w-full h-full"
+              width={600}
+              alt={`${item.name} preview`}
+              src={item.preview.previewImage}
+            />
           ) : (
             <div
               className={cn(
