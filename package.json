@@ -13,7 +13,8 @@
 		"lint:apply-unsafe": "biome check --apply-unsafe ./src",
 		"lint:check": "biome check ./src",
 		"start": "next start",
-		"test": "pnpm format:check && pnpm lint"
+		"lint-format:check": "pnpm format:check && pnpm lint",
+		"test": "vitest"
 	},
 	"git": {
 		"pre-commit": "lint-staged"
@@ -54,17 +55,22 @@
 		"@biomejs/biome": "1.7.1",
 		"@tailwindcss/forms": "0.5.7",
 		"@tailwindcss/typography": "0.5.12",
+		"@testing-library/dom": "10.4.0",
+		"@testing-library/react": "16.0.0",
 		"@types/node": "20.12.7",
 		"@types/prismjs": "1.26.4",
 		"@types/react": "18.2.79",
 		"@types/react-dom": "18.2.25",
+		"@vitejs/plugin-react": "4.3.1",
 		"autoprefixer": "10.4.19",
 		"eslint": "9.0.0",
 		"eslint-config-next": "14.2.2",
+		"jsdom": "25.0.0",
 		"lint-staged": "15.2.2",
 		"postcss": "8.4.38",
 		"tailwindcss": "3.4.3",
 		"tailwindcss-animate": "1.0.7",
-		"typescript": "5.4.5"
+		"typescript": "5.4.5",
+		"vitest": "2.0.5"
 	}
 }
