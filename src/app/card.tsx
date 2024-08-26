@@ -54,6 +54,7 @@ export const MainMenuCard = ({
             <Image
               className="object-cover w-full h-full"
               width={600}
+              height={400}
               alt={`${item.name} preview`}
               src={item.preview.previewImage}
             />

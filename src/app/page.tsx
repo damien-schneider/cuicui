@@ -6,7 +6,7 @@ import { componentCategories } from "#/src/lib/component-categories";
 import { getCategoryHref } from "../utils/get-component-href";
 import { MainMenuCard } from "./card";
 
-export default function Page() {
+export default function HomePage() {
   return (
     <div className="space-y-8 px-4 my-8">
       <h1 className="header-1">CuiCui - Copy Paste quality React component</h1>
