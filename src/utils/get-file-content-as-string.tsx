@@ -11,6 +11,7 @@ export async function getFileContentAsString({
   // console.log("\nHere is the filePath found :\n", filePath);
 
   if (!filePath) {
+    //TODO Write a test for this by looping through the categoriesList and checking that the code get from the file is not "An error occurred while trying to get the file path"
     console.error(`Path not found for component ${componentSlug}`);
     return "An error occurred while trying to get the file path";
     // throw new Error(`Path not found for component ${componentSlug}`);
@@ -42,7 +43,7 @@ function getComponentPath({
   for (const section of SectionsList) {
     for (const category of section.categoriesList) {
       if (category.slug === componentSlug) {
-        basePath = `${section.slug}/${category.slug}s`;
+        basePath = `${section.slug}/${category.slug}`;
         // console.log(
         //   "\nHere is the basePath found where slug = slug:\n",
         //   basePath,
