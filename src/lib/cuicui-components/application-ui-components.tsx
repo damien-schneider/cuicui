@@ -259,5 +259,3 @@ export const applicationUICategoriesList: CategoryType[] = [
     ],
   },
 ];
-
-//TODO: Write a test to check the file tree, and check if the slug is corresponding to the file path of each component
