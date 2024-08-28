@@ -1,28 +1,91 @@
 import { describe, expect, it } from "vitest";
-// import { extractCategoryFromPath } from "#/src/utils/component-categories-utils";
+import { SectionsList } from "#/src/lib/cuicui-components/sections-list";
+import { getFileContentAsString } from "#/src/utils/get-file-content-as-string";
 
-// describe("extractCategoryFromPath", () => {
-//   it("should return the correct UI path for /common-ui/badges?_rsc=txwvb", () => {
-//     const url = "/common-ui/badges?_rsc=txwvb";
-//     const result = extractCategoryFromPath(url);
-//     expect(result).toBe("common-ui");
-//   });
+describe("SectionsList", () => {
+  it("should have the correct number of sections", () => {
+    expect(SectionsList).toHaveLength(5);
+  });
 
-//   it("should return the correct UI path for /marketing-ui/features?_rsc=12veo", () => {
-//     const url = "/marketing-ui/features?_rsc=12veo";
-//     const result = extractCategoryFromPath(url);
-//     expect(result).toBe("marketing-ui");
-//   });
+  it("should have the correct section slugs", () => {
+    const sectionSlugs = SectionsList.map((section) => section.slug);
+    expect(sectionSlugs).toEqual([
+      "common-ui",
+      "marketing-ui",
+      "application-ui",
+      "other",
+      "hooks",
+    ]);
+  });
 
-//   it("should return null if no match is found", () => {
-//     const url = "/?query=abc";
-//     const result = extractCategoryFromPath(url);
-//     expect(result).toBeNull();
-//   });
+  it("category should have componentList === null if comingSoonCategory === true", () => {
+    for (const section of SectionsList) {
+      for (const category of section.categoriesList) {
+        if (category.comingSoonCategory) {
+          expect(category.componentList).toBeNull();
+          expect(category.componentList).not.toBeUndefined();
+        }
+      }
+    }
+  });
 
-//   it("should return null if the input is empty", () => {
-//     const url = "";
-//     const result = extractCategoryFromPath(url);
-//     expect(result).toBeNull();
-//   });
-// });
+  it("should not return error when reading the file code", async () => {
+    const testComponentCode = async (
+      slug: string,
+      variantName: string,
+      shouldError: boolean,
+    ) => {
+      const code = await getFileContentAsString({
+        componentSlug: slug,
+        variantName,
+      });
+      const errorMessage = `Failed for component slug: ${slug}, variant: ${variantName}`;
+
+      if (shouldError) {
+        expect(code, errorMessage).toMatch(/^An error occurred/);
+      } else {
+        expect(code, errorMessage).not.toMatch(/^An error occurred/);
+      }
+    };
+
+    for (const section of SectionsList) {
+      for (const category of section.categoriesList) {
+        if (category.componentList) {
+          for (const component of category.componentList) {
+            for (const variant of component.variantList) {
+              // Test without error
+              await testComponentCode(
+                category.slug,
+                `${component.slug}/${variant.slugPreviewFile}`,
+                false,
+              );
+
+              if (variant.slugComponentFile) {
+                await testComponentCode(
+                  category.slug,
+                  `${component.slug}/${variant.slugComponentFile}`,
+                  false,
+                );
+              }
+
+              // Test with forced error
+              await testComponentCode(
+                category.slug,
+                `${component.slug}/${variant.slugPreviewFile}error`,
+                true,
+              );
+
+              if (variant.slugComponentFile) {
+                await testComponentCode(
+                  category.slug,
+                  `${component.slug}/${variant.slugComponentFile}error`,
+                  true,
+                );
+              }
+            }
+          }
+        }
+      }
+    }
+  });
+});

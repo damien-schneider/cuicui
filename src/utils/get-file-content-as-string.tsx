@@ -27,7 +27,7 @@ export async function getFileContentAsString({
     // throw new Error(
     //   `Error reading file from path ${absolutePath}: ${JSON.stringify(err)}`,
     // );
-    return `Error reading file from path ${absolutePath}:
+    return `An error occurred while reading file from path ${absolutePath}:
 ${JSON.stringify(err)}`;
   }
 }
