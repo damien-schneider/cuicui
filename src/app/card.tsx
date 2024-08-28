@@ -1,16 +1,22 @@
 "use client";
-import { ArrowUpRight, ArrowUpRightIcon } from "lucide-react";
+import { ArrowUpRightIcon } from "lucide-react";
 import Image from "next/image";
-import React, { useRef, useEffect, useState, type ReactNode } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { cn } from "#/src/utils/cn";
-import type { CategoryItem, PreviewComponent } from "../lib/types/component";
+import type { CategoryType } from "../lib/types/component";
 
 export const MainMenuCard = ({
   className,
-  item,
+  category,
+  target,
+  nameIfNotCategory: name,
+  descriptionIfNotCategory: description,
 }: {
   className?: string;
-  item: CategoryItem;
+  category?: CategoryType;
+  target?: "_blank" | "_self";
+  nameIfNotCategory?: string;
+  descriptionIfNotCategory?: string;
 }) => {
   const { x, y, parentRef } = useMousePosition();
 
@@ -27,7 +33,7 @@ export const MainMenuCard = ({
         className,
       )}
     >
-      {item.href && (
+      {target === "_blank" && (
         <ArrowUpRightIcon className="absolute top-2 right-2 text-neutral-700 dark:text-neutral-300 size-5 group-hover:opacity-100 group-hover:translate-y-0 opacity-0 translate-y-4 transition-all z-10 transform-gpu" />
       )}
       <div
@@ -42,21 +48,21 @@ export const MainMenuCard = ({
       />
       <div className="absolute inset-px rounded-[19px] dark:bg-neutral-900/70 bg-neutral-100/90" />
 
-      {item.preview?.component || item.comingSoon ? (
+      {category?.previewCategory?.component || category?.comingSoonCategory ? (
         <div className="relative flex items-center justify-center w-full object-cover rounded-2xl bg-white/50 dark:bg-neutral-950/50 h-48 overflow-hidden">
-          {item.comingSoon ? (
+          {category.comingSoonCategory ? (
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="text-2xl font-semibold text-neutral-800 dark:text-neutral-300">
                 Coming Soon
               </div>
             </div>
-          ) : item.preview?.previewImage ? (
+          ) : category.previewCategory?.previewImage ? (
             <Image
               className="object-cover w-full h-full"
               width={600}
               height={400}
-              alt={`${item.name} preview`}
-              src={item.preview.previewImage}
+              alt={`${category.name} preview`}
+              src={category.previewCategory.previewImage}
             />
           ) : (
             <div
@@ -64,20 +70,22 @@ export const MainMenuCard = ({
                 "pointer-events-none select-none flex justify-center items-center w-full h-full",
               )}
               style={{
-                transform: `scale(${item.preview?.previewScale ?? 0.75})`,
+                transform: `scale(${
+                  category.previewCategory?.previewScale ?? 0.75
+                })`,
               }}
             >
-              {item.preview?.component}
+              {category.previewCategory?.component}
             </div>
           )}
         </div>
       ) : null}
       <div className="relative px-4 pb-2 pt-4">
         <h3 className="text-lg font-semibold text-neutral-800 dark:text-neutral-300">
-          {item.name}
+          {category?.name ?? name}
         </h3>
         <p className="mt-2 text-neutral-600 dark:text-neutral-400">
-          {item.description}
+          {category?.description ?? description}
         </p>
       </div>
     </div>

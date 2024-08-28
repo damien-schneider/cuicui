@@ -4,18 +4,17 @@ import { ScrollAreaScrollbar } from "@radix-ui/react-scroll-area";
 import { RepeatIcon } from "lucide-react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
-import { Fragment, useCallback, useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { toast } from "sonner";
 import { ComponentBadgeList } from "../lib/badges.const";
 import type {
   ComponentBadgeSlug,
   FrameworkBadge,
-  LibraryBadge,
   VariantComponent,
 } from "../lib/types/component";
 import Badge from "../ui/badge";
 import CodeHighlighter from "../ui/code-highlighter";
-import { Button } from "../ui/shadcn/button";
+
 import {
   ResizableHandle,
   ResizablePanel,
@@ -43,7 +42,6 @@ export default function FullComponent({
   inspirationLink,
   size = "md",
   frameworksBadges,
-  librariesBadges,
   componentBadges,
   isIframed = true,
   isResizable = true,
@@ -57,7 +55,6 @@ export default function FullComponent({
   inspirationLink?: string;
   size?: ComponentHeightType;
   frameworksBadges?: FrameworkBadge[];
-  librariesBadges?: LibraryBadge[];
   componentBadges?: ComponentBadgeSlug[];
   isIframed?: boolean;
   isResizable?: boolean;
@@ -105,9 +102,6 @@ export default function FullComponent({
         <h2 className="header-2">{title}</h2>
         <p className="caption-sm">{description}</p>
       </div>
-      {librariesBadges && librariesBadges.length !== 0 && (
-        <BadgeList title="Required librairies :" badgeList={librariesBadges} />
-      )}
       {frameworksBadges && frameworksBadges.length !== 0 && (
         <BadgeList title="Used frameworks :" badgeList={frameworksBadges} />
       )}
@@ -316,7 +310,7 @@ const ComponentWrapper = ({
     return (
       <div
         className={cn(
-          "w-full h-full flex  items-center justify-center ",
+          "w-full h-full flex items-center justify-center overflow-hidden",
           isChildUsingHeightFull && "flex-col *:flex-1",
           getContainerHeightClass({ size }),
         )}

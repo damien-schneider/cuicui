@@ -10,6 +10,12 @@ export async function getFileContentAsString({
   const filePath = getComponentPath({ componentSlug, variantName });
   // console.log("\nHere is the filePath found :\n", filePath);
 
+  if (!filePath) {
+    console.error(`Path not found for component ${componentSlug}`);
+    return "An error occurred while trying to get the file path";
+    // throw new Error(`Path not found for component ${componentSlug}`);
+  }
+
   // Convert relative path to an absolute path in a controlled manner
   const absolutePath = path.resolve(process.cwd(), filePath);
 
@@ -17,24 +23,26 @@ export async function getFileContentAsString({
     const data = await fs.readFile(absolutePath, "utf-8");
     return data;
   } catch (err) {
-    throw new Error(
-      `Error reading file from path ${absolutePath}: ${JSON.stringify(err)}`,
-    );
+    // throw new Error(
+    //   `Error reading file from path ${absolutePath}: ${JSON.stringify(err)}`,
+    // );
+    return `Error reading file from path ${absolutePath}:
+${JSON.stringify(err)}`;
   }
 }
 
-import { componentCategories } from "../lib/component-categories";
+import { SectionsList } from "#/src/lib/cuicui-components/sections-list";
 
 function getComponentPath({
   componentSlug,
   variantName,
-}: { componentSlug: string; variantName: string }): string {
+}: { componentSlug: string; variantName: string }) {
   let basePath: null | string = null;
 
-  for (const category of componentCategories) {
-    for (const item of category.items) {
-      if (item.slug === componentSlug) {
-        basePath = `${category.slug}/${item.slug}`;
+  for (const section of SectionsList) {
+    for (const category of section.categoriesList) {
+      if (category.slug === componentSlug) {
+        basePath = `${section.slug}/${category.slug}s`;
         // console.log(
         //   "\nHere is the basePath found where slug = slug:\n",
         //   basePath,
@@ -48,7 +56,8 @@ function getComponentPath({
   }
 
   if (!basePath) {
-    throw new Error(`Path not found for component ${componentSlug}`);
+    return null;
+    // throw new Error(`Path not found for component ${componentSlug}`);
   }
 
   return `./src/app/(components)/${basePath}/${variantName}.tsx`;

@@ -12,8 +12,6 @@ export type VariantComponent = {
 
 export type ComponentBadgeSlug = (typeof ComponentBadgeList)[number]["slug"];
 
-export type LibraryBadge = "framer-motion" | "sonner" | "lucide-react";
-
 export type FrameworkBadge =
   | "react"
   | "vue"
@@ -22,20 +20,84 @@ export type FrameworkBadge =
   | "web-components"
   | "next";
 
+// export type CategoryItem = {
+//   name: string;
+//   slug: string;
+//   href?: string;
+//   description: string;
+//   comingSoon?: boolean;
+//   releaseDate?: Date;
+//   preview?: PreviewComponent;
+//   updatedDate?: Date;
+//   icon?: LucideIcon;
+// };
+
+/*
+-----------------------------
+************ New ************
+-----------------------------
+*/
+
 export type PreviewComponent = {
   component: ReactNode;
   previewScale: number;
   previewImage?: StaticImageData;
 };
 
-export type CategoryItem = {
+/*
+------------------------------------
+************ Sections **************
+------------------------------------
+*/
+
+export type SectionType = {
   name: string;
   slug: string;
-  href?: string;
+  categoriesList: CategoryType[];
+};
+
+/*
+------------------------------------
+************ Categories ************
+------------------------------------
+*/
+
+type CategoryType = {
+  slug: string;
+  name: string;
   description: string;
-  comingSoon?: boolean;
-  releaseDate?: Date;
-  preview?: PreviewComponent;
-  updatedDate?: Date;
   icon?: LucideIcon;
+  comingSoonCategory?: boolean;
+  releaseDateCategory?: Date;
+  previewCategory?: PreviewComponent;
+  componentList: ComponentType[] | null;
+};
+
+/*
+------------------------------------
+************ Components ************
+------------------------------------
+*/
+
+export type ComponentType = {
+  title: string;
+  description: string;
+  releaseDateComponent?: Date;
+  isResizable?: boolean;
+  componentBadges?: ComponentBadgeSlug[];
+  isIframed?: boolean;
+  rerenderButton?: boolean;
+  isChildUsingHeightFull?: boolean;
+  inspiration?: string;
+  inspirationLink?: string;
+  sizePreview: ComponentHeightType;
+  slug: string;
+  variantList: ComponentVariantType[];
+};
+
+export type ComponentVariantType = {
+  name: string;
+  component: JSX.Element;
+  slugComponentFile?: string;
+  slugPreviewFile: string;
 };

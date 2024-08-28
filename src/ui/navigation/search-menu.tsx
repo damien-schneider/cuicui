@@ -1,19 +1,12 @@
 "use client";
 
-import {
-  Calculator,
-  Calendar,
-  CreditCard,
-  LinkIcon,
-  SearchIcon,
-  Settings,
-  Smile,
-  User,
-} from "lucide-react";
+import { LinkIcon, SearchIcon } from "lucide-react";
 import * as React from "react";
 
 import { useRouter } from "next/navigation";
-import { componentCategories } from "#/src/lib/component-categories";
+
+import { SectionsList } from "#/src/lib/cuicui-components/sections-list";
+import { firstMenuSection } from "#/src/lib/first-menu-section";
 import {
   CommandDialog,
   CommandEmpty,
@@ -62,26 +55,43 @@ export function SearchMenu() {
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>
 
-          {componentCategories.map((category) => (
-            <CommandGroup key={category.slug} heading={category.name}>
-              {category.items.map((item) => (
-                <CommandItem
-                  key={item.slug}
-                  onSelect={() => {
-                    if (item.href) {
-                      router.push(item.href);
-                    } else if (category.slug) {
-                      router.push(`/${category.slug}/${item.slug}`);
-                    } else {
-                      router.push(`/${item.slug}`);
-                    }
-                    setOpen(false);
-                  }}
-                >
-                  <LinkIcon className="mr-2 size-3 text-neutral-400" />
-                  <span>{item.name}</span>
-                </CommandItem>
-              ))}
+          <CommandGroup heading="Info">
+            {firstMenuSection.categoryList.map((category) => (
+              <CommandItem
+                key={category.slug}
+                onSelect={() => {
+                  if (category.href) {
+                    window.open(category.href, "_blank");
+                    return;
+                  }
+                  router.push(`/${category.slug}`);
+                  setOpen(false);
+                }}
+              >
+                <LinkIcon className="mr-2 size-3 text-neutral-400" />
+                <span>{category.name}</span>
+              </CommandItem>
+            ))}
+          </CommandGroup>
+
+          {SectionsList.map((section) => (
+            <CommandGroup key={section.slug} heading={section.name}>
+              {section.categoriesList.map((category) => {
+                const Icon = category.icon;
+                return (
+                  <CommandItem
+                    key={category.slug}
+                    onSelect={() => {
+                      router.push(`/${section.slug}/${category.slug}`);
+                      setOpen(false);
+                    }}
+                  >
+                    {Icon && <Icon className="mr-2 size-3 text-neutral-400" />}
+
+                    <span>{category.name}</span>
+                  </CommandItem>
+                );
+              })}
             </CommandGroup>
           ))}
         </CommandList>

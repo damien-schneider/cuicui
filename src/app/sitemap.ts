@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
-import { componentCategories } from "../lib/component-categories";
+
+import { SectionsList } from "#/src/lib/cuicui-components/new-component-categories";
 
 export const port = process.env.PORT ?? 3000;
 
@@ -18,28 +19,33 @@ const staticSitemap: MetadataRoute.Sitemap = [
     changeFrequency: "monthly",
     priority: 1,
   },
+  {
+    url: `${HOST}/about`,
+    lastModified: new Date("2024-08-14"),
+    changeFrequency: "monthly",
+    priority: 0.9,
+  },
+  {
+    url: `${HOST}/getting-started`,
+    lastModified: new Date("2024-08-14"),
+    changeFrequency: "monthly",
+    priority: 0.9,
+  },
 ];
 
 function getComponentsSitemap(): MetadataRoute.Sitemap {
   const componentSitemap: MetadataRoute.Sitemap = [];
-  componentCategories.flatMap((section) => {
-    for (const item of section.items) {
-      if (item.comingSoon) {
+  SectionsList.flatMap((section) => {
+    for (const category of section.categoriesList) {
+      if (category.comingSoonCategory) {
         return;
       }
-      if (!section.slug && item.slug && !item.href) {
+      if (section.slug && category.slug) {
         componentSitemap.push({
-          url: `${HOST}/${item.slug}`,
-          lastModified: item.releaseDate,
+          url: `${HOST}/${section.slug}/${category.slug}`,
+          lastModified: category.releaseDateCategory,
           changeFrequency: "monthly",
-          priority: 0.8,
-        });
-      } else if (section.slug && item.slug) {
-        componentSitemap.push({
-          url: `${HOST}/${section.slug}/${item.slug}`,
-          lastModified: item.releaseDate,
-          changeFrequency: "monthly",
-          priority: 0.8,
+          priority: 0.9,
         });
       }
     }
