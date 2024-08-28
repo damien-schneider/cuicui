@@ -1,9 +1,9 @@
 "use client";
 import { ClipboardIcon } from "lucide-react";
 import { toast } from "sonner";
-import { useCopyToClipboard } from "#/src/ui/cuicui/hooks/use-copy-to-clipboard";
+import { useCopyToClipboard } from "#/src/ui/cuicui/hooks/use-copy-to-clipboard/hook/use-copy-to-clipboard";
 
-export function CommandCode({ children }: { children: string }) {
+export function CommandCode({ children }: Readonly<{ children: string }>) {
   const [copiedText, copy] = useCopyToClipboard();
   const handleCopyCode = (code: string) => {
     copy(children);

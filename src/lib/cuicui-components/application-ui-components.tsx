@@ -8,19 +8,18 @@ import {
   SettingsIcon,
   SlidersHorizontalIcon,
 } from "lucide-react";
-import HalfSidedGlassMorphismAuthentication from "#/src/app/(components)/application-ui/authentication/half-sided-glassmorphism/variant1";
-import FloatingGrowingBannerVariant1 from "#/src/app/(components)/application-ui/banners/floating-growing-banner/variant1";
-import PreviewCommandVariant1 from "#/src/app/(components)/application-ui/code/command/preview-variant1";
-import Modern3dKbdVariant1 from "#/src/app/(components)/application-ui/kbd/modern-3d-kbd/variant1";
-import ModernDetailedKbdVariant1 from "#/src/app/(components)/application-ui/kbd/modern-detailed-kbd/variant1";
-import GrowingSearchVariant1, {
-  SearchBar,
-} from "#/src/app/(components)/application-ui/search-bars/growing-search/variant1";
-import DynamicSettingsVariant1 from "#/src/app/(components)/application-ui/settings/dynamic-settings/variant1";
-import { ElasticSliderVariant1 } from "#/src/app/(components)/application-ui/sliders/elastic-slider/variant1";
-import { StepWithStickyColorVariant1 } from "#/src/app/(components)/application-ui/static-steppers/code/variant1";
+
 import AuthenticationPreviewImage from "#/src/assets/components-preview/authentication.jpeg";
 import type { CategoryType } from "#/src/lib/types/component";
+import HalfSidedGlassMorphismAuthentication from "#/src/ui/cuicui/application-ui/authentication/half-sided-glassmorphism/variant1";
+import FloatingGrowingBannerVariant1 from "#/src/ui/cuicui/application-ui/banners/floating-growing-banner/variant1";
+import PreviewCommandVariant1 from "#/src/ui/cuicui/application-ui/code/command/preview-variant1";
+import Modern3dKbdVariant1 from "#/src/ui/cuicui/application-ui/kbd/modern-3d-kbd/variant1";
+import ModernDetailedKbdVariant1 from "#/src/ui/cuicui/application-ui/kbd/modern-detailed-kbd/variant1";
+import GrowingSearchVariant1 from "#/src/ui/cuicui/application-ui/search-bars/growing-search/variant1";
+import DynamicSettingsVariant1 from "#/src/ui/cuicui/application-ui/settings/dynamic-settings/variant1";
+import { ElasticSliderVariant1 } from "#/src/ui/cuicui/application-ui/sliders/elastic-slider/variant1";
+import { StepWithStickyColorVariant1 } from "#/src/ui/cuicui/application-ui/static-steppers/code/variant1";
 
 export const applicationUICategoriesList: CategoryType[] = [
   {

@@ -7,21 +7,19 @@ import {
 } from "lucide-react";
 
 import PricingPreviewImage from "#/src/assets/components-preview/pricing.png";
-
-import { CarouselCylindricalVariant1 } from "#/src/app/(components)/marketing-ui/carousels/cylindric-3d-carousel/variant1";
-import { AnimatedCardVariant1 } from "#/src/app/(components)/marketing-ui/features/animated-cards/variant1";
-import ManyOffersVariant1 from "#/src/app/(components)/marketing-ui/pricing-tables/many-offers/variant1";
-import { AnimatedNumberVariant1 } from "#/src/app/(components)/marketing-ui/statistics/animated-on-scroll/variant1";
-import MarqueeVariant1 from "#/src/app/(components)/marketing-ui/testimonials/marquee/variant1";
-import MarqueeVariant2 from "#/src/app/(components)/marketing-ui/testimonials/marquee/variant2";
-
-import { Variant1FeatureFourImages } from "#/src/app/(components)/marketing-ui/features/feature-four-images/variant1";
-import { Variant2FeatureFourImages } from "#/src/app/(components)/marketing-ui/features/feature-four-images/variant2";
-import IncreaseToValueVariant1 from "#/src/app/(components)/marketing-ui/statistics/increase-to-value/variant1";
-import GradientQnAVariant1 from "#/src/app/(components)/marketing-ui/testimonials/gradiant-qna/variant1";
-import GradientQnAVariant2 from "#/src/app/(components)/marketing-ui/testimonials/gradiant-qna/variant2";
-import { TestimonialsVariant1 } from "#/src/app/(components)/marketing-ui/testimonials/testimonials-component/variant1";
 import type { CategoryType } from "#/src/lib/types/component";
+import { CarouselCylindricalVariant1 } from "#/src/ui/cuicui/marketing-ui/carousels/cylindric-3d-carousel/variant1";
+import { AnimatedCardVariant1 } from "#/src/ui/cuicui/marketing-ui/features/animated-cards/variant1";
+import { Variant1FeatureFourImages } from "#/src/ui/cuicui/marketing-ui/features/feature-four-images/variant1";
+import { Variant2FeatureFourImages } from "#/src/ui/cuicui/marketing-ui/features/feature-four-images/variant2";
+import ManyOffersVariant1 from "#/src/ui/cuicui/marketing-ui/pricing-tables/many-offers/variant1";
+import { AnimatedNumberVariant1 } from "#/src/ui/cuicui/marketing-ui/statistics/animated-on-scroll/variant1";
+import IncreaseToValueVariant1 from "#/src/ui/cuicui/marketing-ui/statistics/increase-to-value/variant1";
+import GradientQnAVariant1 from "#/src/ui/cuicui/marketing-ui/testimonials/gradiant-qna/variant1";
+import GradientQnAVariant2 from "#/src/ui/cuicui/marketing-ui/testimonials/gradiant-qna/variant2";
+import MarqueeVariant1 from "#/src/ui/cuicui/marketing-ui/testimonials/marquee/variant1";
+import MarqueeVariant2 from "#/src/ui/cuicui/marketing-ui/testimonials/marquee/variant2";
+import { TestimonialsVariant1 } from "#/src/ui/cuicui/marketing-ui/testimonials/testimonials-component/variant1";
 
 export const marketingUIComponentList: CategoryType[] = [
   {
@@ -68,6 +66,7 @@ export const marketingUIComponentList: CategoryType[] = [
           "An auto-scrolling feature section with four images and text. It could be also used with videos or other content. Perfect to shocase in details multiple features of a product or service.",
         sizePreview: "md",
         slug: "feature-four-images",
+        isIframed: true,
         variantList: [
           {
             name: "Sober colors",

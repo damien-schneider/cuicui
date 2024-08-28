@@ -20,17 +20,7 @@ export type FrameworkBadge =
   | "web-components"
   | "next";
 
-// export type CategoryItem = {
-//   name: string;
-//   slug: string;
-//   href?: string;
-//   description: string;
-//   comingSoon?: boolean;
-//   releaseDate?: Date;
-//   preview?: PreviewComponent;
-//   updatedDate?: Date;
-//   icon?: LucideIcon;
-// };
+export type ComponentHeightType = "xs" | "sm" | "md" | "lg" | "xl";
 
 /*
 -----------------------------

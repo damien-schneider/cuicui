@@ -9,6 +9,7 @@ import { toast } from "sonner";
 import { ComponentBadgeList } from "../lib/badges.const";
 import type {
   ComponentBadgeSlug,
+  ComponentHeightType,
   FrameworkBadge,
   VariantComponent,
 } from "../lib/types/component";
@@ -30,7 +31,6 @@ import CustomIframeComponentDark from "./custom-iframe-component-dark";
 import CustomIframeComponentLight from "./custom-iframe-component-light";
 
 export type TabType = "preview" | "code-component" | "code-preview";
-export type ComponentHeightType = "xs" | "sm" | "md" | "lg" | "xl";
 
 // TODO : Use context to refactor everything into multiple components
 
@@ -199,7 +199,7 @@ export default function FullComponent({
                     {renderedComponent ?? <p>An error has occured</p>}
                   </ComponentWrapper>
                 </ResizablePanel>
-                <ResizableHandle withHandle className="-translate-x-2" />
+                <ResizableHandle withHandle className="-translate-x-2 z-50" />
                 <ResizablePanel defaultSize={0}>
                   <div className="flex h-full items-center justify-center" />
                 </ResizablePanel>

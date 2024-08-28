@@ -5,17 +5,16 @@ import {
   MousePointerClickIcon,
 } from "lucide-react";
 
-import FollowCursorVariant1 from "#/src/app/(components)/other/cursors/follow-cursor/variant1";
-import FollowCursorVariant2 from "#/src/app/(components)/other/cursors/follow-cursor/variant2";
-import MacbookVariant1 from "#/src/app/(components)/other/mock-ups/laptops/variant1";
-import { GooglePixelVariant1 } from "#/src/app/(components)/other/mock-ups/smartphone/variant1";
-import { IPhone14ProVariant2 } from "#/src/app/(components)/other/mock-ups/smartphone/variant2";
-import { DotsPatternVariant1 } from "#/src/app/(components)/other/patterns/dots-pattern/variant1";
-import BlurAppearVariant1 from "#/src/app/(components)/other/transition-wrappers/blur-appear/variant1";
-
-import DynamicCardsVariant1 from "#/src/app/(components)/other/cursors/dynamic-cards/variant1";
-import DynamicCardsVariant2 from "#/src/app/(components)/other/cursors/dynamic-cards/variant2";
 import type { CategoryType } from "#/src/lib/types/component";
+import DynamicCardsVariant1 from "#/src/ui/cuicui/other/cursors/dynamic-cards/variant1";
+import DynamicCardsVariant2 from "#/src/ui/cuicui/other/cursors/dynamic-cards/variant2";
+import FollowCursorVariant1 from "#/src/ui/cuicui/other/cursors/follow-cursor/variant1";
+import FollowCursorVariant2 from "#/src/ui/cuicui/other/cursors/follow-cursor/variant2";
+import MacbookVariant1 from "#/src/ui/cuicui/other/mock-ups/laptops/variant1";
+import { GooglePixelVariant1 } from "#/src/ui/cuicui/other/mock-ups/smartphone/variant1";
+import { IPhone14ProVariant2 } from "#/src/ui/cuicui/other/mock-ups/smartphone/variant2";
+import { DotsPatternVariant1 } from "#/src/ui/cuicui/other/patterns/dots-pattern/variant1";
+import BlurAppearVariant1 from "#/src/ui/cuicui/other/transition-wrappers/blur-appear/variant1";
 
 export const otherCategoriesList: CategoryType[] = [
   {

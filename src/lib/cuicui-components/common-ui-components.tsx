@@ -2,33 +2,31 @@ import {
   BoxSelectIcon,
   CircleUserRoundIcon,
   CreditCard,
+  Dock,
   MenuIcon,
   QuoteIcon,
   SquareArrowRightIcon,
   TagIcon,
   TextCursorInputIcon,
 } from "lucide-react";
-
-import AdvancedBadgesVariant1 from "#/src/app/(components)/common-ui/badges/advanced-badges/variant1";
-import ClerkBadgeVariant1 from "#/src/app/(components)/common-ui/badges/clerk-badge/variant1";
-import { BadgeSimpleVariantAmber } from "#/src/app/(components)/common-ui/badges/modern-simple-badges/variant1";
-import ModernSimpleQuoteVariant1 from "#/src/app/(components)/common-ui/blockquotes/modern-simple-quote/variant1";
-import BeforeEffectButtonVariant1 from "#/src/app/(components)/common-ui/buttons/before-effect-button/variant1";
-import BeforeEffectButtonVariant2 from "#/src/app/(components)/common-ui/buttons/before-effect-button/variant2";
-import GrowingButtonVariant1 from "#/src/app/(components)/common-ui/buttons/growing-button/variant1";
-import ModernAnimatedButtonVariant1 from "#/src/app/(components)/common-ui/buttons/modern-animated-button/variant1";
-import ShinyRotatingBorderButtonVariant1 from "#/src/app/(components)/common-ui/buttons/shiny-rotating-border-button/variant1";
-import { ModernInnerShadowCardVariant1 } from "#/src/app/(components)/common-ui/cards/modern-inner-shadow/variant1";
-import FileDropzone from "#/src/app/(components)/common-ui/inputs/droppable-file/variant1";
-import Dock from "#/src/app/(components)/common-ui/navigation/mac-dock/variant1";
-import { VercelNavigationVariant1 } from "#/src/app/(components)/common-ui/navigation/vercel-navigation/variant1";
-import { ClassicPulseVariant1 } from "#/src/app/(components)/common-ui/skeletons/classic-pulse/variant1";
-import { ShinyGradientSkeletonVariant1 } from "#/src/app/(components)/common-ui/skeletons/shiny-gradient/variant1";
-
-import { BadgeSimpleVariantRed } from "#/src/app/(components)/common-ui/badges/modern-simple-badges/variant2";
-import { VercelNavigationVariant2 } from "#/src/app/(components)/common-ui/navigation/vercel-navigation/variant2";
-import { ShinyGradientSkeletonVariant2 } from "#/src/app/(components)/common-ui/skeletons/shiny-gradient/variant2";
 import type { CategoryType } from "#/src/lib/types/component";
+import AdvancedBadgesVariant1 from "#/src/ui/cuicui/common-ui/badges/advanced-badges/variant1";
+import ClerkBadgeVariant1 from "#/src/ui/cuicui/common-ui/badges/clerk-badge/variant1";
+import { BadgeSimpleVariantAmber } from "#/src/ui/cuicui/common-ui/badges/modern-simple-badges/variant1";
+import { BadgeSimpleVariantRed } from "#/src/ui/cuicui/common-ui/badges/modern-simple-badges/variant2";
+import ModernSimpleQuoteVariant1 from "#/src/ui/cuicui/common-ui/blockquotes/modern-simple-quote/variant1";
+import BeforeEffectButtonVariant1 from "#/src/ui/cuicui/common-ui/buttons/before-effect-button/variant1";
+import BeforeEffectButtonVariant2 from "#/src/ui/cuicui/common-ui/buttons/before-effect-button/variant2";
+import GrowingButtonVariant1 from "#/src/ui/cuicui/common-ui/buttons/growing-button/variant1";
+import ModernAnimatedButtonVariant1 from "#/src/ui/cuicui/common-ui/buttons/modern-animated-button/variant1";
+import ShinyRotatingBorderButtonVariant1 from "#/src/ui/cuicui/common-ui/buttons/shiny-rotating-border-button/debunk";
+import { ModernInnerShadowCardVariant1 } from "#/src/ui/cuicui/common-ui/cards/modern-inner-shadow/variant1";
+import FileDropzone from "#/src/ui/cuicui/common-ui/inputs/droppable-file/variant1";
+import { VercelNavigationVariant1 } from "#/src/ui/cuicui/common-ui/navigation/vercel-navigation/variant1";
+import { VercelNavigationVariant2 } from "#/src/ui/cuicui/common-ui/navigation/vercel-navigation/variant2";
+import { ClassicPulseVariant1 } from "#/src/ui/cuicui/common-ui/skeletons/classic-pulse/variant1";
+import { ShinyGradientSkeletonVariant1 } from "#/src/ui/cuicui/common-ui/skeletons/shiny-gradient/variant1";
+import { ShinyGradientSkeletonVariant2 } from "#/src/ui/cuicui/common-ui/skeletons/shiny-gradient/variant2";
 
 export const commonUICategoriesList: CategoryType[] = [
   {

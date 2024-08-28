@@ -43,7 +43,7 @@ function getComponentPath({
   for (const section of SectionsList) {
     for (const category of section.categoriesList) {
       if (category.slug === componentSlug) {
-        basePath = `${section.slug}/${category.slug}`;
+        basePath = `${section.slug}/${category.slug}s`;
         // console.log(
         //   "\nHere is the basePath found where slug = slug:\n",
         //   basePath,
@@ -61,5 +61,5 @@ function getComponentPath({
     // throw new Error(`Path not found for component ${componentSlug}`);
   }
 
-  return `./src/app/(components)/${basePath}/${variantName}.tsx`;
+  return `./src/ui/cuicui/${basePath}/${variantName}.tsx`;
 }

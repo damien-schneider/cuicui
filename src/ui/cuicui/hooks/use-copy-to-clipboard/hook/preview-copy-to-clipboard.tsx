@@ -1,6 +1,6 @@
 "use client";
 
-import { useCopyToClipboard } from "./use-copy-to-clipboard";
+import { useCopyToClipboard } from "#/src/ui/cuicui/hooks/use-copy-to-clipboard/hook/use-copy-to-clipboard";
 
 export default function PreviewCopyToClipboard() {
   const [copiedText, copy] = useCopyToClipboard();

@@ -1,8 +1,7 @@
 import { ClipboardCopyIcon, PictureInPictureIcon } from "lucide-react";
 
-import PreviewCopyToClipboard from "#/src/app/(components)/hooks/use-copy-to-clipboard/hook/preview-copy-to-clipboard";
-
 import type { CategoryType } from "#/src/lib/types/component";
+import PreviewCopyToClipboard from "#/src/ui/cuicui/hooks/use-copy-to-clipboard/hook/preview-copy-to-clipboard";
 
 export const hooksCategoriesList: CategoryType[] = [
   {
@@ -25,7 +24,7 @@ export const hooksCategoriesList: CategoryType[] = [
     },
     componentList: [
       {
-        sizePreview: "xs",
+        sizePreview: "lg",
         slug: "hook",
         isIframed: false,
         title: "Copy to Clipboard",
