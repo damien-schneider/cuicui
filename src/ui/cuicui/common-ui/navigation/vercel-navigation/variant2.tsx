@@ -11,7 +11,6 @@ const dataButtons = [
   { label: "Cuicui.day", href: "#" },
 ];
 export function VercelNavigationVariant2() {
-  const [parentFocused, setParentFocused] = useState<boolean>(false);
   const [elementFocused, setElementFocused] = useState<number>(0);
 
   const handleOnClickButton = (index: number) => {

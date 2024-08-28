@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 
-export default function ShinyRotatingBorderButtonVariant1() {
+export default function ShinyRotatingBorderButtonDebunk() {
   return (
     <button
       type="button"
@@ -39,7 +39,7 @@ export default function ShinyRotatingBorderButtonVariant1() {
           }}
         />
       </motion.span>
-      <span className="relative z-10 rounded-full px-3 py-1 bg-white dark:bg-neutral-800/20 block">
+      <span className="relative z-10 rounded-full px-3 py-1 bg-white/20 dark:bg-neutral-800/20 block">
         <motion.span
           animate={{
             backgroundImage: [

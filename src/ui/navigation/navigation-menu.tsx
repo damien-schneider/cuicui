@@ -45,7 +45,7 @@ export default function NavigationMenu({
         {firstMenuSection.categoryList.map((category, index) => (
           <li
             key={category.slug}
-            className="relative"
+            className="relative list-none"
             onMouseEnter={() => handleHoverButton(category.slug)}
           >
             <GlobalNavItem
@@ -79,7 +79,7 @@ export default function NavigationMenu({
             {section.categoriesList.map((category, index) => (
               <li
                 key={category.slug}
-                className="relative"
+                className="relative list-none"
                 onMouseEnter={() => handleHoverButton(category.slug)}
               >
                 <GlobalNavItem

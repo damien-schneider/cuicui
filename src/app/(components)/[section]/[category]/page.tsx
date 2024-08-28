@@ -6,12 +6,12 @@ import { getFileContentAsString } from "#/src/utils/get-file-content-as-string";
 
 export default async function Page({
   params,
-}: {
+}: Readonly<{
   params: {
     section: string;
     category: string;
   };
-}) {
+}>) {
   const section = SectionsList.find(
     (section) => section.slug === params.section,
   );
@@ -25,11 +25,11 @@ export default async function Page({
   }
 
   // Use Promise.all to wait for all the async operations
-  if (!category.componentList) {
-    return notFound();
-  }
   if (category.comingSoonCategory) {
     return <ComingSoonCard />;
+  }
+  if (!category.componentList) {
+    return notFound();
   }
 
   //TODO: Refactor this to use async await functions instead of Promise.all
@@ -60,8 +60,6 @@ export default async function Page({
         })),
       ),
       isIframed: component.isIframed ?? false,
-      title: category.name,
-      description: category.description,
     })),
   );
 
@@ -77,6 +75,9 @@ export default async function Page({
           description={component.description}
           rerenderButton={component.rerenderButton}
           isResizable={component.isResizable}
+          inspiration={component.inspiration}
+          inspirationLink={component.inspirationLink}
+          isChildUsingHeightFull={component.isChildUsingHeightFull}
         />
       ))}
     </>

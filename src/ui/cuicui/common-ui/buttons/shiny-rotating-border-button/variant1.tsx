@@ -13,8 +13,6 @@ export default function ShinyRotatingBorderButtonVariant1() {
         animate={{
           top: ["50%", "0%", "50%", "100%", "50%"],
           left: ["0%", "50%", "100%", "50%", "0%"],
-          // top: ["10%", "0%", "15%", "85%", "90%", "80%", "10%"],
-          // left: ["10%", "50%", "85%", "85%", "50%", "0%", "10%"],
         }}
         transition={{
           duration: 3,

@@ -2,7 +2,6 @@ import {
   BoxSelectIcon,
   CircleUserRoundIcon,
   CreditCard,
-  Dock,
   MenuIcon,
   QuoteIcon,
   SquareArrowRightIcon,
@@ -19,9 +18,10 @@ import BeforeEffectButtonVariant1 from "#/src/ui/cuicui/common-ui/buttons/before
 import BeforeEffectButtonVariant2 from "#/src/ui/cuicui/common-ui/buttons/before-effect-button/variant2";
 import GrowingButtonVariant1 from "#/src/ui/cuicui/common-ui/buttons/growing-button/variant1";
 import ModernAnimatedButtonVariant1 from "#/src/ui/cuicui/common-ui/buttons/modern-animated-button/variant1";
-import ShinyRotatingBorderButtonVariant1 from "#/src/ui/cuicui/common-ui/buttons/shiny-rotating-border-button/debunk";
+import ShinyRotatingBorderButtonVariant1 from "#/src/ui/cuicui/common-ui/buttons/shiny-rotating-border-button/variant1";
 import { ModernInnerShadowCardVariant1 } from "#/src/ui/cuicui/common-ui/cards/modern-inner-shadow/variant1";
 import FileDropzone from "#/src/ui/cuicui/common-ui/inputs/droppable-file/variant1";
+import { Dock } from "#/src/ui/cuicui/common-ui/navigation/mac-dock/variant1";
 import { VercelNavigationVariant1 } from "#/src/ui/cuicui/common-ui/navigation/vercel-navigation/variant1";
 import { VercelNavigationVariant2 } from "#/src/ui/cuicui/common-ui/navigation/vercel-navigation/variant2";
 import { ClassicPulseVariant1 } from "#/src/ui/cuicui/common-ui/skeletons/classic-pulse/variant1";
@@ -182,9 +182,7 @@ export const commonUICategoriesList: CategoryType[] = [
         ],
         title: "Shiny rotating border button",
         description: "Button with a shiny rotating border effect.",
-        isIframed: false,
-        inspiration: "Raycast",
-        inspirationLink: "https://www.raycast.com/",
+        isIframed: true,
       },
       {
         sizePreview: "xs",
@@ -199,6 +197,8 @@ export const commonUICategoriesList: CategoryType[] = [
         title: "Modern Animated Button",
         description: "Button with a modern animated style.",
         isIframed: false,
+        inspiration: "Raycast",
+        inspirationLink: "https://www.raycast.com/",
       },
     ],
   },
@@ -288,7 +288,7 @@ export const commonUICategoriesList: CategoryType[] = [
         title: "Vercel Navigation",
         description:
           "A smooth and simple navigation bar inspired by Vercel, with modern transitions and animations.",
-        isIframed: false,
+        isIframed: true,
       },
       {
         sizePreview: "sm",

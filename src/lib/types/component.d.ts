@@ -59,6 +59,7 @@ type CategoryType = {
   icon?: LucideIcon;
   comingSoonCategory?: boolean;
   releaseDateCategory?: Date;
+  lastUpdateDateCategory?: Date;
   previewCategory?: PreviewComponent;
   componentList: ComponentType[] | null;
 };
@@ -73,6 +74,7 @@ export type ComponentType = {
   title: string;
   description: string;
   releaseDateComponent?: Date;
+  lastUpdatedDateComponent?: Date;
   isResizable?: boolean;
   componentBadges?: ComponentBadgeSlug[];
   isIframed?: boolean;
