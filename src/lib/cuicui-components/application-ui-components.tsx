@@ -7,6 +7,7 @@ import {
   SearchIcon,
   SettingsIcon,
   SlidersHorizontalIcon,
+  TableOfContentsIcon,
 } from "lucide-react";
 
 import AuthenticationPreviewImage from "#/src/assets/components-preview/authentication.jpeg";
@@ -20,6 +21,8 @@ import GrowingSearchVariant1 from "#/src/ui/cuicui/application-ui/search-bars/gr
 import DynamicSettingsVariant1 from "#/src/ui/cuicui/application-ui/settings/dynamic-settings/variant1";
 import { ElasticSliderVariant1 } from "#/src/ui/cuicui/application-ui/sliders/elastic-slider/variant1";
 import { StepWithStickyColorVariant1 } from "#/src/ui/cuicui/application-ui/static-steppers/code/variant1";
+import TableOfContentPreview from "#/src/ui/cuicui/application-ui/table-of-contents/modul-inspired/following-header-preview";
+import TableOfContent from "#/src/ui/cuicui/application-ui/table-of-contents/modul-inspired/following-headers";
 
 export const applicationUICategoriesList: CategoryType[] = [
   {
@@ -255,6 +258,39 @@ export const applicationUICategoriesList: CategoryType[] = [
         componentBadges: ["updated"],
         inspiration: "Hooks Scriptkavi manual installation",
         inspirationLink: "https://hooks.scriptkavi.com/docs/hooks/battery",
+      },
+    ],
+  },
+  {
+    slug: "table-of-contents",
+    name: "Table of Contents",
+    description: "Table of contents components",
+    releaseDateCategory: new Date("2024-08-28"),
+    icon: TableOfContentsIcon,
+    previewCategory: {
+      component: <StepWithStickyColorVariant1 />,
+      previewScale: 0.75,
+    },
+    componentList: [
+      {
+        sizePreview: "md",
+        slug: "modul-inspired",
+        lastUpdatedDateComponent: new Date("2024-08-28"),
+        variantList: [
+          {
+            name: "variant1",
+            component: <TableOfContentPreview />,
+            slugPreviewFile: "following-header-preview",
+            slugComponentFile: "following-headers",
+          },
+        ],
+        isResizable: false,
+        isIframed: false,
+        title: "Modul inspired table of contents",
+        description:
+          "An advanced animated table of contents component highlighting every sections on the screen.",
+        inspiration: "Modul",
+        inspirationLink: "https://www.modul.day",
       },
     ],
   },
