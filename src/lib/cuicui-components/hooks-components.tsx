@@ -1,8 +1,13 @@
-import { ClipboardCopyIcon, PictureInPictureIcon } from "lucide-react";
+import {
+  ClipboardCopyIcon,
+  PictureInPictureIcon,
+  ViewIcon,
+} from "lucide-react";
 
+import PreviewImageUseInView from "#/src/assets/components-preview/use-in-view.png";
 import type { CategoryType } from "#/src/lib/types/component";
 import PreviewCopyToClipboard from "#/src/ui/cuicui/hooks/use-copy-to-clipboard/hook/preview-copy-to-clipboard";
-
+import { PreviewUseInView } from "#/src/ui/cuicui/hooks/use-in-view/hook/preview-in-view";
 export const hooksCategoriesList: CategoryType[] = [
   {
     slug: "picture-in-picture",
@@ -35,6 +40,37 @@ export const hooksCategoriesList: CategoryType[] = [
             component: <PreviewCopyToClipboard />,
             slugComponentFile: "use-copy-to-clipboard",
             slugPreviewFile: "preview-copy-to-clipboard",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "use-in-view",
+    name: "Use in View",
+    description:
+      "A hook that allows you to know if an element is in the viewport",
+    releaseDateCategory: new Date("2024-08-28"),
+    icon: ViewIcon,
+    previewCategory: {
+      component: <PreviewUseInView />,
+      previewImage: PreviewImageUseInView,
+      previewScale: 0.8,
+    },
+    componentList: [
+      {
+        sizePreview: "lg",
+        slug: "hook",
+        isIframed: true,
+        title: "Use in View",
+        description:
+          "A hook that allows you to know if an element is in the viewport",
+        variantList: [
+          {
+            name: "variant 1",
+            component: <PreviewUseInView />,
+            slugComponentFile: "use-in-view",
+            slugPreviewFile: "preview-in-view",
           },
         ],
       },
