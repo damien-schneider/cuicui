@@ -43,7 +43,7 @@ function getComponentPath({
   for (const section of SectionsList) {
     for (const category of section.categoriesList) {
       if (category.slug === componentSlug) {
-        basePath = `${section.slug}/${category.slug}s`;
+        basePath = `${section.slug}/${category.slug}`;
         // console.log(
         //   "\nHere is the basePath found where slug = slug:\n",
         //   basePath,
