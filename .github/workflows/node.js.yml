@@ -20,5 +20,5 @@ jobs:
         standalone: true  # Install pnpm standalone, without setting up Node.js
 
     - run: pnpm install
-    - run: pnpm run build --if-present
+    - run: pnpm run build
     - run: pnpm test
