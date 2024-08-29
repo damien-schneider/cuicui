@@ -56,6 +56,7 @@ export default function NavigationMenu({
               Icon={null}
               target={category.href ? "newWindow" : "sameWindow"}
               isComingSoon={false}
+              updatedDate={null}
             />
             <AnimatePresence>
               {elementFocused === category.slug && (
@@ -90,6 +91,7 @@ export default function NavigationMenu({
                   Icon={category.icon ?? null}
                   target="sameWindow"
                   isComingSoon={category.comingSoonCategory ?? false}
+                  updatedDate={category.lastUpdateDateCategory ?? null}
                 />
                 <AnimatePresence>
                   {elementFocused === category.slug && (
@@ -120,6 +122,7 @@ function GlobalNavItem({
   Icon,
   isComingSoon,
   releaseDate,
+  updatedDate,
   target,
 }: Readonly<{
   isMobile?: boolean;
@@ -128,12 +131,16 @@ function GlobalNavItem({
   Icon: LucideIcon | null;
   isComingSoon: boolean;
   releaseDate: Date | null;
+  updatedDate: Date | null;
   target: "newWindow" | "sameWindow";
 }>) {
   const segments = useSelectedLayoutSegments();
   const splittedHref = href.split("/");
   const lastSegment = splittedHref[splittedHref.length - 1];
   const isActive = segments.some((segment) => segment === lastSegment);
+
+  const isNew = differenceInDays(new Date(), releaseDate ?? 0) < 21;
+  const isUpdated = differenceInDays(new Date(), updatedDate ?? 0) < 14;
 
   return (
     <Link
@@ -155,16 +162,8 @@ function GlobalNavItem({
           {name}
         </p>
       </div>
-      {differenceInDays(new Date(), releaseDate ?? 0) < 24 && (
-        <GradientContainer
-          rounded="xs"
-          classNameChild="text-xs px-1 py-0"
-          classNameParent=""
-        >
-          <GradientText className="text-xs">New</GradientText>
-        </GradientContainer>
-      )}
-      {isComingSoon && (
+      {}
+      {isComingSoon ? (
         <GradientContainer
           rounded="xs"
           classNameChild="text-xs px-1 py-0"
@@ -172,7 +171,23 @@ function GlobalNavItem({
         >
           <GradientText className="text-xs">Coming soon</GradientText>
         </GradientContainer>
-      )}
+      ) : isNew ? (
+        <GradientContainer
+          rounded="xs"
+          classNameChild="text-xs px-1 py-0"
+          classNameParent=""
+        >
+          <GradientText className="text-xs">New</GradientText>
+        </GradientContainer>
+      ) : isUpdated ? (
+        <GradientContainer
+          rounded="xs"
+          classNameChild="text-xs px-1 py-0"
+          classNameParent=""
+        >
+          <GradientText className="text-xs">Updated</GradientText>
+        </GradientContainer>
+      ) : null}
       {target === "newWindow" && (
         <ArrowUpRightIcon className="size-4  text-black/40 dark:text-white/40 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
       )}
