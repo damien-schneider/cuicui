@@ -24,6 +24,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'pnpm'
+        cache-dependency-path: '**/pnpm-lock.yaml' # Specify pnpm lock file for caching
 
     - name: Setup pnpm
       uses: pnpm/action-setup@v4.0.0
