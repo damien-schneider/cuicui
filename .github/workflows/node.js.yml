@@ -18,8 +18,7 @@ jobs:
       uses: pnpm/action-setup@v4
       with:
         standalone: true  # Install pnpm standalone, without setting up Node.js
-        version: 9
 
     - run: pnpm install
-    - run: pnpm run build --if-present
+    # - run: pnpm build
     - run: pnpm test

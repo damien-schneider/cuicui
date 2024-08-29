@@ -3,11 +3,9 @@ import type React from "react";
 import Frame from "react-frame-component";
 
 import { useEffect, useState } from "react";
-import { cn } from "../utils/cn";
-import {
-  type ComponentHeightType,
-  getContainerHeightClass,
-} from "./full-component";
+
+import type { ComponentHeightType } from "#/src/lib/types/component";
+import { getContainerHeightClass } from "./full-component";
 
 const CustomIframeComponentLight = ({
   children,
