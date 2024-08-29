@@ -1,4 +1,5 @@
 import {
+  AlertCircleIcon,
   Code2Icon,
   CommandIcon,
   FingerprintIcon,
@@ -7,24 +8,58 @@ import {
   SearchIcon,
   SettingsIcon,
   SlidersHorizontalIcon,
+  SunMoonIcon,
   TableOfContentsIcon,
 } from "lucide-react";
 
 import AuthenticationPreviewImage from "#/src/assets/components-preview/authentication.jpeg";
 import type { CategoryType } from "#/src/lib/types/component";
+import SimpleAlert from "#/src/ui/cuicui/application-ui/alert/simple-alert/simple-alert";
 import HalfSidedGlassMorphismAuthentication from "#/src/ui/cuicui/application-ui/authentication/half-sided-glassmorphism/variant1";
 import FloatingGrowingBannerVariant1 from "#/src/ui/cuicui/application-ui/banners/floating-growing-banner/variant1";
-import PreviewCommandVariant1 from "#/src/ui/cuicui/application-ui/code/command/preview-variant1";
+import CodeEditor from "#/src/ui/cuicui/application-ui/code/code-card/code-card";
+import { CodeCardPreview } from "#/src/ui/cuicui/application-ui/code/code-card/code-card-preview";
+import PreviewCommandVariant1 from "#/src/ui/cuicui/application-ui/code/code-snippet/preview-variant1";
 import Modern3dKbdVariant1 from "#/src/ui/cuicui/application-ui/kbd/modern-3d-kbd/variant1";
 import ModernDetailedKbdVariant1 from "#/src/ui/cuicui/application-ui/kbd/modern-detailed-kbd/variant1";
 import GrowingSearchVariant1 from "#/src/ui/cuicui/application-ui/search-bars/growing-search/variant1";
 import DynamicSettingsVariant1 from "#/src/ui/cuicui/application-ui/settings/dynamic-settings/variant1";
 import { ElasticSliderVariant1 } from "#/src/ui/cuicui/application-ui/sliders/elastic-slider/variant1";
+import SimpleModernSlider from "#/src/ui/cuicui/application-ui/sliders/simple-modern-slider/simple-modern-slider";
+import SimpleModernSliderWithMax from "#/src/ui/cuicui/application-ui/sliders/simple-modern-slider/simple-modern-slider-with-max";
 import { StepWithStickyColorVariant1 } from "#/src/ui/cuicui/application-ui/static-steppers/code/variant1";
 import TableOfContentPreview from "#/src/ui/cuicui/application-ui/table-of-contents/modul-inspired/following-header-preview";
 import TableOfContent from "#/src/ui/cuicui/application-ui/table-of-contents/modul-inspired/following-headers";
+import { ThemeSwitcherButton } from "#/src/ui/cuicui/application-ui/theme/theme-switcher/theme-switcher-button";
 
 export const applicationUICategoriesList: CategoryType[] = [
+  {
+    slug: "alert",
+    name: "Alert",
+    description: "Alert components",
+    releaseDateCategory: new Date("2024-08-29"),
+    icon: AlertCircleIcon,
+    previewCategory: {
+      component: <SimpleAlert />,
+      previewScale: 1,
+    },
+    componentList: [
+      {
+        isIframed: true,
+        sizePreview: "sm",
+        slug: "simple-alert",
+        variantList: [
+          {
+            name: "variant1",
+            component: <SimpleAlert />,
+            slugPreviewFile: "simple-alert",
+          },
+        ],
+        title: "Simple Alert",
+        description: "A simple alert component.",
+      },
+    ],
+  },
   {
     slug: "authentication",
     name: "Authentication",
@@ -85,16 +120,17 @@ export const applicationUICategoriesList: CategoryType[] = [
     name: "Code",
     description: "Code components with special interactions",
     releaseDateCategory: new Date("2024-08-20"),
+    lastUpdateDateCategory: new Date("2024-08-29"),
     icon: Code2Icon,
     previewCategory: {
-      component: <PreviewCommandVariant1 />,
+      component: <CodeCardPreview />,
       previewScale: 0.8,
     },
     componentList: [
       {
         isIframed: false,
         sizePreview: "xs",
-        slug: "command",
+        slug: "code-snippet",
         variantList: [
           {
             name: "variant1",
@@ -103,8 +139,25 @@ export const applicationUICategoriesList: CategoryType[] = [
             slugComponentFile: "variant1",
           },
         ],
-        title: "Command",
-        description: "A command component with a copy to clipboard button.",
+        title: "Code Snippet",
+        description:
+          "A code snippet component with a copy to clipboard button.",
+      },
+      {
+        isIframed: false,
+        sizePreview: "md",
+        slug: "code-card",
+        lastUpdatedDateComponent: new Date("2024-08-29"),
+        variantList: [
+          {
+            name: "variant1",
+            component: <CodeCardPreview />,
+            slugPreviewFile: "code-card-preview",
+            slugComponentFile: "code-card",
+          },
+        ],
+        title: "Code Card",
+        description: "A code card component with a copy to clipboard button.",
       },
     ],
   },
@@ -229,6 +282,24 @@ export const applicationUICategoriesList: CategoryType[] = [
         inspiration: "Build UI",
         inspirationLink: "https://buildui.com/recipes/elastic-slider",
       },
+      {
+        sizePreview: "xs",
+        slug: "simple-modern-slider",
+        variantList: [
+          {
+            name: "Smooth",
+            component: <SimpleModernSlider />,
+            slugPreviewFile: "simple-modern-slider",
+          },
+          {
+            name: "Min & max steps",
+            component: <SimpleModernSliderWithMax />,
+            slugPreviewFile: "simple-modern-slider-with-max",
+          },
+        ],
+        title: "Simple Modern Slider",
+        description: "Simple modern slider with micro animations.",
+      },
     ],
   },
   {
@@ -291,6 +362,32 @@ export const applicationUICategoriesList: CategoryType[] = [
           "An advanced animated table of contents component highlighting every sections on the screen.",
         inspiration: "Modul",
         inspirationLink: "https://www.modul.day",
+      },
+    ],
+  },
+  {
+    slug: "theme",
+    name: "Theme",
+    description: "Theme components",
+    releaseDateCategory: new Date("2024-08-29"),
+    icon: SunMoonIcon,
+    previewCategory: {
+      component: <ThemeSwitcherButton />,
+      previewScale: 1,
+    },
+    componentList: [
+      {
+        sizePreview: "xs",
+        slug: "theme-switcher",
+        variantList: [
+          {
+            name: "variant1",
+            component: <ThemeSwitcherButton />,
+            slugPreviewFile: "theme-switcher-button",
+          },
+        ],
+        title: "Theme Switcher",
+        description: "A theme switcher button.",
       },
     ],
   },
