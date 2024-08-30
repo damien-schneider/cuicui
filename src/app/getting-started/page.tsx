@@ -46,13 +46,13 @@ export default function Page() {
             <CodeContainer>clsx</CodeContainer>
           </StaticStep>
 
-          <StaticStep step={3} title="Create a 'cn.tsx' file">
+          <StaticStep step={3} title="Create a 'cn.ts' file">
             <p className="caption-md mb-2">
-              Create a <code>cn.tsx</code> file in your project's{" "}
+              Create a <code>cn.ts</code> file in your project's{" "}
               <code>utils</code> folder and add the following code:
             </p>
             <CodeContainer isCommand={false}>
-              {`// ./src/utils/cn.tsx
+              {`// ./src/utils/cn.ts
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 
