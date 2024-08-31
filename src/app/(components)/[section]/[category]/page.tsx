@@ -4,6 +4,19 @@ import FullComponent from "#/src/components/full-component";
 import { SectionsList } from "#/src/lib/cuicui-components/sections-list";
 import { getFileContentAsString } from "#/src/utils/get-file-content-as-string";
 
+export async function generateStaticParams() {
+  // Iterate over the SectionsList to create all possible combinations of section and category
+  const params = SectionsList.flatMap((section) =>
+    section.categoriesList.map((category) => ({
+      section: section.slug,
+      category: category.slug,
+    })),
+  );
+
+  // Return the generated params array
+  return params;
+}
+
 export default async function Page({
   params,
 }: Readonly<{
