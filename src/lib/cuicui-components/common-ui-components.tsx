@@ -19,6 +19,7 @@ import BeforeEffectButtonVariant2 from "#/src/ui/cuicui/common-ui/buttons/before
 import GrowingButtonVariant1 from "#/src/ui/cuicui/common-ui/buttons/growing-button/variant1";
 import ModernAnimatedButtonVariant1 from "#/src/ui/cuicui/common-ui/buttons/modern-animated-button/variant1";
 import ShinyRotatingBorderButtonVariant1 from "#/src/ui/cuicui/common-ui/buttons/shiny-rotating-border-button/variant1";
+import DynamicSquareBackgroundPreview from "#/src/ui/cuicui/common-ui/cards/dynamic-square-background/dynamic-square-background-preview";
 import { ModernInnerShadowCardVariant1 } from "#/src/ui/cuicui/common-ui/cards/modern-inner-shadow/variant1";
 import FileDropzone from "#/src/ui/cuicui/common-ui/inputs/droppable-file/variant1";
 import { Dock } from "#/src/ui/cuicui/common-ui/navigation/mac-dock/variant1";
@@ -209,7 +210,7 @@ export const commonUICategoriesList: CategoryType[] = [
     releaseDateCategory: new Date("2024-08-10"),
     icon: CreditCard,
     previewCategory: {
-      component: <ModernInnerShadowCardVariant1 />,
+      component: <DynamicSquareBackgroundPreview />,
       previewScale: 0.5,
     },
     componentList: [
@@ -228,6 +229,23 @@ export const commonUICategoriesList: CategoryType[] = [
           "A card that showcases a set of tools that you use to create your product.",
         isIframed: false,
         componentBadges: ["better-in-dark-mode"],
+      },
+      {
+        sizePreview: "sm",
+        slug: "dynamic-square-background",
+        variantList: [
+          {
+            name: "Variant 1",
+            component: <DynamicSquareBackgroundPreview />,
+            slugPreviewFile: "dynamic-square-background-preview",
+            slugComponentFile: "dynamic-square-background",
+          },
+        ],
+        title: "Dynamic Square Background",
+        description:
+          "A card to announce any new feature or product with a modern dynamic square background.",
+        isIframed: false,
+        // componentBadges: ["better-in-dark-mode"],
       },
     ],
   },
