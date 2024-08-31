@@ -1,5 +1,6 @@
 import {
   BoxSelectIcon,
+  CheckSquare2Icon,
   CircleUserRoundIcon,
   CreditCard,
   MenuIcon,
@@ -21,6 +22,8 @@ import ModernAnimatedButtonVariant1 from "#/src/ui/cuicui/common-ui/buttons/mode
 import ShinyRotatingBorderButtonVariant1 from "#/src/ui/cuicui/common-ui/buttons/shiny-rotating-border-button/variant1";
 import DynamicSquareBackgroundPreview from "#/src/ui/cuicui/common-ui/cards/dynamic-square-background/dynamic-square-background-preview";
 import { ModernInnerShadowCardVariant1 } from "#/src/ui/cuicui/common-ui/cards/modern-inner-shadow/variant1";
+import SimpleCheckbox from "#/src/ui/cuicui/common-ui/checkboxes/simple-checkbox/simple-checkbox";
+import SimpleCheckboxPreview from "#/src/ui/cuicui/common-ui/checkboxes/simple-checkbox/simple-checkbox-preview";
 import FileDropzone from "#/src/ui/cuicui/common-ui/inputs/droppable-file/variant1";
 import { Dock } from "#/src/ui/cuicui/common-ui/navigation/mac-dock/variant1";
 import { VercelNavigationVariant1 } from "#/src/ui/cuicui/common-ui/navigation/vercel-navigation/variant1";
@@ -246,6 +249,35 @@ export const commonUICategoriesList: CategoryType[] = [
           "A card to announce any new feature or product with a modern dynamic square background.",
         isIframed: false,
         // componentBadges: ["better-in-dark-mode"],
+      },
+    ],
+  },
+  {
+    slug: "checkboxes",
+    name: "Checkboxes",
+    description: "Checkboxes with various styles and interactions",
+    releaseDateCategory: new Date("2024-08-31"),
+    icon: CheckSquare2Icon,
+    previewCategory: {
+      component: <FileDropzone />,
+      previewScale: 1,
+    },
+    componentList: [
+      {
+        sizePreview: "sm",
+        slug: "simple-checkbox",
+        variantList: [
+          {
+            name: "Default",
+            component: <SimpleCheckboxPreview />,
+            slugPreviewFile: "simple-checkbox-preview",
+            slugComponentFile: "simple-checkbox",
+          },
+        ],
+        title: "Simple checkbox",
+        description:
+          "A simple checkbox that can be used in any project with simple artistic style.",
+        isIframed: false,
       },
     ],
   },
