@@ -75,7 +75,10 @@ export function SearchMenu() {
           </CommandGroup>
 
           {SectionsList.map((section) => (
-            <CommandGroup key={section.slug} heading={section.name}>
+            <CommandGroup
+              key={section.slug}
+              heading={`${section.name} category`}
+            >
               {section.categoriesList.map((category) => {
                 const Icon = category.icon;
                 return (
@@ -91,6 +94,35 @@ export function SearchMenu() {
                     <span>{category.name}</span>
                   </CommandItem>
                 );
+              })}
+            </CommandGroup>
+          ))}
+          {SectionsList.map((section) => (
+            <CommandGroup
+              key={section.slug}
+              heading={`${section.name} components`}
+            >
+              {section.categoriesList.map((category) => {
+                return category.componentList?.map((component) => {
+                  const Icon = category.icon;
+                  return (
+                    <CommandItem
+                      key={component.slug}
+                      onSelect={() => {
+                        router.push(
+                          `/${section.slug}/${category.slug}#${component.slug}`,
+                        );
+                        setOpen(false);
+                      }}
+                    >
+                      {Icon && (
+                        <Icon className="mr-1 size-2 text-neutral-400" />
+                      )}
+
+                      <span>{component.title}</span>
+                    </CommandItem>
+                  );
+                });
               })}
             </CommandGroup>
           ))}
