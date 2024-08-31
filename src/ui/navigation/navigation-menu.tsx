@@ -49,7 +49,7 @@ export default function NavigationMenu({
             onMouseEnter={() => handleHoverButton(category.slug)}
           >
             <GlobalNavItem
-              href={`/${category.slug}`}
+              href={category.href ?? `/${category.slug}`}
               isMobile={isMobile}
               releaseDate={null}
               name={category.name}
@@ -137,13 +137,18 @@ function GlobalNavItem({
   const segments = useSelectedLayoutSegments();
   const splittedHref = href.split("/");
   const lastSegment = splittedHref[splittedHref.length - 1];
-  const isActive = segments.some((segment) => segment === lastSegment);
+
+  let isActive = false;
+  if (segments) {
+    isActive = segments.some((segment) => segment === lastSegment);
+  }
 
   const isNew = differenceInDays(new Date(), releaseDate ?? 0) < 21;
   const isUpdated = differenceInDays(new Date(), updatedDate ?? 0) < 14;
 
   return (
     <Link
+      data-testid={`navigation-link-${name}`}
       href={href}
       target={target === "newWindow" ? "_blank" : undefined}
       className={cn(
