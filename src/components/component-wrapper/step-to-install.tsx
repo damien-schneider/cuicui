@@ -27,7 +27,7 @@ const possibleStepsList: StepToInstallType[] = [
     find: [`import { cn } from "#/src/utils/cn"`],
     installProcess: (
       <div>
-        <p className="caption-sm mb-2">./src/utils/cn.tsx</p>
+        <p className="caption-sm mb-2">./src/utils/cn.ts</p>
         <CodeContainer isCommand={false}>{`import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 
