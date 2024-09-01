@@ -1,4 +1,4 @@
-name: pnpm CI
+name: Check tests on PRs - pnpm CI
 
 on:
   push:
@@ -8,16 +8,22 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v4
 
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20.x'  # Ensures Node.js version 20.x is used
+        cache: 'pnpm'         # Caches pnpm dependencies
+
     - name: Setup pnpm
       uses: pnpm/action-setup@v4
       with:
-        standalone: true  # Install pnpm standalone, without setting up Node.js
+        # version: '8.x'        # You can specify pnpm version if needed
+        standalone: true      # Install pnpm standalone, without setting up Node.js
 
     - run: pnpm install
     # - run: pnpm build
