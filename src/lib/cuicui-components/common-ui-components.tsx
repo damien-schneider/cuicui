@@ -1,7 +1,9 @@
 import {
   BoxSelectIcon,
+  CheckSquare2Icon,
   CircleUserRoundIcon,
   CreditCard,
+  LoaderIcon,
   MenuIcon,
   QuoteIcon,
   SquareArrowRightIcon,
@@ -21,7 +23,11 @@ import ModernAnimatedButtonVariant1 from "#/src/ui/cuicui/common-ui/buttons/mode
 import ShinyRotatingBorderButtonVariant1 from "#/src/ui/cuicui/common-ui/buttons/shiny-rotating-border-button/variant1";
 import DynamicSquareBackgroundPreview from "#/src/ui/cuicui/common-ui/cards/dynamic-square-background/dynamic-square-background-preview";
 import { ModernInnerShadowCardVariant1 } from "#/src/ui/cuicui/common-ui/cards/modern-inner-shadow/variant1";
+import NotificationCardPreview from "#/src/ui/cuicui/common-ui/cards/notification-card/notification-card-preview";
+import SimpleCheckboxPreview from "#/src/ui/cuicui/common-ui/checkboxes/simple-checkbox/simple-checkbox-preview";
 import FileDropzone from "#/src/ui/cuicui/common-ui/inputs/droppable-file/variant1";
+
+import { ThreeDotSimpleLoader } from "#/src/ui/cuicui/common-ui/loaders/three-dot-simple-loader/three-dot-simple-loader";
 import { Dock } from "#/src/ui/cuicui/common-ui/navigation/mac-dock/variant1";
 import { VercelNavigationVariant1 } from "#/src/ui/cuicui/common-ui/navigation/vercel-navigation/variant1";
 import { VercelNavigationVariant2 } from "#/src/ui/cuicui/common-ui/navigation/vercel-navigation/variant2";
@@ -247,6 +253,52 @@ export const commonUICategoriesList: CategoryType[] = [
         isIframed: false,
         // componentBadges: ["better-in-dark-mode"],
       },
+      {
+        sizePreview: "sm",
+        slug: "notification-card",
+        variantList: [
+          {
+            name: "Variant 1",
+            component: <NotificationCardPreview />,
+            slugPreviewFile: "notification-card-preview",
+            slugComponentFile: "notification-card",
+          },
+        ],
+        title: "Notification Card",
+        description:
+          "A notification card with a date and time to show the user when the notification was sent.",
+        isIframed: false,
+        // componentBadges: ["better-in-dark-mode"],
+      },
+    ],
+  },
+  {
+    slug: "checkboxes",
+    name: "Checkboxes",
+    description: "Checkboxes with various styles and interactions",
+    releaseDateCategory: new Date("2024-08-31"),
+    icon: CheckSquare2Icon,
+    previewCategory: {
+      component: <SimpleCheckboxPreview />,
+      previewScale: 2,
+    },
+    componentList: [
+      {
+        sizePreview: "sm",
+        slug: "simple-checkbox",
+        variantList: [
+          {
+            name: "Default",
+            component: <SimpleCheckboxPreview />,
+            slugPreviewFile: "simple-checkbox-preview",
+            slugComponentFile: "simple-checkbox",
+          },
+        ],
+        title: "Simple checkbox",
+        description:
+          "A simple checkbox that can be used in any project with simple artistic style.",
+        isIframed: false,
+      },
     ],
   },
   {
@@ -273,6 +325,33 @@ export const commonUICategoriesList: CategoryType[] = [
         title: "Droppable File",
         description:
           "A file dropzone that shows a preview of the file when hovered.",
+        isIframed: false,
+      },
+    ],
+  },
+  {
+    slug: "loaders",
+    name: "Loaders",
+    description: "Loaders with various styles and effects",
+    releaseDateCategory: new Date("2024-08-31"),
+    icon: LoaderIcon,
+    previewCategory: {
+      component: <ThreeDotSimpleLoader />,
+      previewScale: 1.5,
+    },
+    componentList: [
+      {
+        sizePreview: "sm",
+        slug: "three-dot-simple-loader",
+        variantList: [
+          {
+            name: "Default",
+            component: <ThreeDotSimpleLoader />,
+            slugPreviewFile: "three-dot-simple-loader",
+          },
+        ],
+        title: "Three Dot Simple Loader",
+        description: "A simple loader with three dots that bounce up and down.",
         isIframed: false,
       },
     ],
