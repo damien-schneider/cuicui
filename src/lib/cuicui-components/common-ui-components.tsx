@@ -27,6 +27,8 @@ import NotificationCardPreview from "#/src/ui/cuicui/common-ui/cards/notificatio
 import SimpleCheckboxPreview from "#/src/ui/cuicui/common-ui/checkboxes/simple-checkbox/simple-checkbox-preview";
 import FileDropzone from "#/src/ui/cuicui/common-ui/inputs/droppable-file/variant1";
 
+import NineDotGridRandom from "#/src/ui/cuicui/common-ui/loaders/three-dot-simple-loader/nine-dot-grid-random";
+import ThreeDotLoaderGrowing from "#/src/ui/cuicui/common-ui/loaders/three-dot-simple-loader/three-dot-loader-growing";
 import { ThreeDotSimpleLoader } from "#/src/ui/cuicui/common-ui/loaders/three-dot-simple-loader/three-dot-simple-loader";
 import { Dock } from "#/src/ui/cuicui/common-ui/navigation/mac-dock/variant1";
 import { VercelNavigationVariant1 } from "#/src/ui/cuicui/common-ui/navigation/vercel-navigation/variant1";
@@ -345,9 +347,19 @@ export const commonUICategoriesList: CategoryType[] = [
         slug: "three-dot-simple-loader",
         variantList: [
           {
-            name: "Default",
+            name: "3 Bouncing",
             component: <ThreeDotSimpleLoader />,
             slugPreviewFile: "three-dot-simple-loader",
+          },
+          {
+            name: "3 Growing",
+            component: <ThreeDotLoaderGrowing />,
+            slugPreviewFile: "three-dot-loader-growing",
+          },
+          {
+            name: "9 Random grid",
+            component: <NineDotGridRandom />,
+            slugPreviewFile: "three-dot-loader-growing",
           },
         ],
         title: "Three Dot Simple Loader",
