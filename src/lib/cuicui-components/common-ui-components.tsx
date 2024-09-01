@@ -279,8 +279,8 @@ export const commonUICategoriesList: CategoryType[] = [
     releaseDateCategory: new Date("2024-08-31"),
     icon: CheckSquare2Icon,
     previewCategory: {
-      component: <FileDropzone />,
-      previewScale: 1,
+      component: <SimpleCheckboxPreview />,
+      previewScale: 2,
     },
     componentList: [
       {
@@ -336,8 +336,8 @@ export const commonUICategoriesList: CategoryType[] = [
     releaseDateCategory: new Date("2024-08-31"),
     icon: LoaderIcon,
     previewCategory: {
-      component: <LoaderIcon />,
-      previewScale: 1,
+      component: <ThreeDotSimpleLoader />,
+      previewScale: 1.5,
     },
     componentList: [
       {

@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 
 import AuthenticationPreviewImage from "#/src/assets/components-preview/authentication.jpeg";
+import TableOfContentPreviewImage from "#/src/assets/components-preview/table-of-content.png";
 import type { CategoryType } from "#/src/lib/types/component";
 import SimpleAlert from "#/src/ui/cuicui/application-ui/alert/simple-alert/simple-alert";
 import HalfSidedGlassMorphismAuthentication from "#/src/ui/cuicui/application-ui/authentication/half-sided-glassmorphism/variant1";
@@ -340,6 +341,7 @@ export const applicationUICategoriesList: CategoryType[] = [
     icon: TableOfContentsIcon,
     previewCategory: {
       component: <StepWithStickyColorVariant1 />,
+      previewImage: TableOfContentPreviewImage,
       previewScale: 0.75,
     },
     componentList: [
