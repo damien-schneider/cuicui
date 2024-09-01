@@ -24,8 +24,9 @@ export default function HomePage() {
             {firstMenuSection.categoryList.map((category) => {
               return (
                 <Link
-                  href={`/${category.slug}`}
+                  href={category.href ?? `/${category.slug}`}
                   key={category.name}
+                  data-testid={`home-navigation-link-${category.name}`}
                   className="group hover:scale-[1.01] hover:-translate-y-[2px] transition-all active:scale-95 rounded-[20px] overflow-hidden"
                 >
                   <MainMenuCard
