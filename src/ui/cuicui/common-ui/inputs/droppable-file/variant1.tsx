@@ -1,6 +1,6 @@
 "use client";
 import { AnimatePresence, motion } from "framer-motion";
-import { CheckCircle, File, Trash2, Upload } from "lucide-react";
+import { File, Trash2, Upload } from "lucide-react";
 import type React from "react";
 import { type DragEvent, useRef, useState } from "react";
 
