@@ -13,6 +13,7 @@ import { AnimatedCardVariant1 } from "#/src/ui/cuicui/marketing-ui/features/anim
 import { Variant1FeatureFourImages } from "#/src/ui/cuicui/marketing-ui/features/feature-four-images/variant1";
 import { Variant2FeatureFourImages } from "#/src/ui/cuicui/marketing-ui/features/feature-four-images/variant2";
 import ManyOffersVariant1 from "#/src/ui/cuicui/marketing-ui/pricing-tables/many-offers/variant1";
+import AnimatedCounterPreview from "#/src/ui/cuicui/marketing-ui/statistics/animated-counter/animated-counter-preview";
 import { AnimatedNumberVariant1 } from "#/src/ui/cuicui/marketing-ui/statistics/animated-on-scroll/variant1";
 import IncreaseToValueVariant1 from "#/src/ui/cuicui/marketing-ui/statistics/increase-to-value/variant1";
 import GradientQnAVariant1 from "#/src/ui/cuicui/marketing-ui/testimonials/gradiant-qna/variant1";
@@ -117,6 +118,7 @@ export const marketingUIComponentList: CategoryType[] = [
         description: "A pricing table with a lot of offers",
         inspiration: "Artlist",
         inspirationLink: "https://artlist.io/pricing",
+        isIframed: true,
         variantList: [
           {
             name: "Many Offers Table",
@@ -168,6 +170,23 @@ export const marketingUIComponentList: CategoryType[] = [
             slugPreviewFile: "variant1",
           },
         ],
+      },
+      {
+        sizePreview: "sm",
+        slug: "animated-counter",
+        rerenderButton: true,
+        title: "Animated Counter",
+        description: "Show numbers that animate automatically when updated.",
+        variantList: [
+          {
+            name: "Increase To Value",
+            component: <AnimatedCounterPreview />,
+            slugPreviewFile: "animated-counter-preview",
+            slugComponentFile: "animated-counter",
+          },
+        ],
+        inspiration: "Build UI",
+        inspirationLink: "https://buildui.com/recipes/animated-counter",
       },
     ],
   },
