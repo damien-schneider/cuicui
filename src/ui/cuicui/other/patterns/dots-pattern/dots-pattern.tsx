@@ -13,18 +13,6 @@ type DotPatternProps = {
   className?: string;
 };
 
-export function DotsPatternVariant1() {
-  return (
-    <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden">
-      <DotsPattern
-        className={cn(
-          "[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]",
-        )}
-      />
-    </div>
-  );
-}
-
 export function DotsPattern({
   width = 16,
   height = 16,
