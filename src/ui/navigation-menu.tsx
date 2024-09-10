@@ -97,7 +97,7 @@ export const NavigationMenuButton: React.FC<NavigationButtonProps> = ({
       <AnimatePresence>
         {isFocused && (
           <motion.div
-            className="absolute top-0 left-0 right-0 bottom-0 bg-neutral-200 dark:bg-neutral-900 rounded-md -z-10 group-active:bg-neutral-300 transition-colors group-hover:bg-neutral-200/80 dark:group-hover:bg-neutral-900/80 dark:group-active:bg-neutral-800"
+            className="absolute top-0 left-0 right-0 bottom-0 bg-neutral-200 dark:bg-neutral-900 rounded-md -z-10 group-active:bg-neutral-300 border group-active:border-neutral-400/30 border-neutral-400/5 transition-colors group-hover:bg-neutral-200/80 dark:group-hover:bg-neutral-900/80 dark:group-active:bg-neutral-800"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
