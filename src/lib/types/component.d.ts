@@ -59,7 +59,6 @@ type CategoryType = {
   icon?: LucideIcon;
   comingSoonCategory?: boolean;
   releaseDateCategory?: Date;
-  lastUpdateDateCategory?: Date;
   previewCategory?: PreviewComponent;
   componentList: ComponentType[] | null;
 };
