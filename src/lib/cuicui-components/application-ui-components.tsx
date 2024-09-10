@@ -121,7 +121,6 @@ export const applicationUICategoriesList: CategoryType[] = [
     name: "Code",
     description: "Code components with special interactions",
     releaseDateCategory: new Date("2024-08-20"),
-    lastUpdateDateCategory: new Date("2024-08-29"),
     icon: Code2Icon,
     previewCategory: {
       component: <CodeCardPreview />,
