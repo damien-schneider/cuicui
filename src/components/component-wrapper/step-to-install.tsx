@@ -80,8 +80,13 @@ const possiblePackagesToInstall: PackageToInstallType[] = [
     idSlug: "tailwind-merge",
     title: "Add tailwind-merge to your project",
     find: [`from "tailwind-merge"`],
-
     packageName: "tailwind-merge",
+  },
+  {
+    idSlug: "embla-carousel-react",
+    title: "Add embla-carousel-react to your project",
+    find: [`from "embla-carousel-react"`],
+    packageName: "embla-carousel-react",
   },
   {
     idSlug: "clsx",
@@ -168,6 +173,12 @@ export default function StepToInstall({ code }: Readonly<{ code: string }>) {
             Copy the component code
           </Button>
         </StaticStep>
+        <StaticStep
+          step={(stepList?.length ?? 0) + 3}
+          title={
+            "Update the import paths (if needed), to match your project setup."
+          }
+        />
       </div>
     );
   }
