@@ -27,6 +27,7 @@ import NotificationCardPreview from "#/src/ui/cuicui/common-ui/cards/notificatio
 import SimpleCheckboxPreview from "#/src/ui/cuicui/common-ui/checkboxes/simple-checkbox/simple-checkbox-preview";
 import FileDropzone from "#/src/ui/cuicui/common-ui/inputs/droppable-file/variant1";
 
+import HoverEffectCardPreview from "#/src/ui/cuicui/common-ui/cards/hover-effect-card/hover-effect-card-preview";
 import NineDotGridRandom from "#/src/ui/cuicui/common-ui/loaders/three-dot-simple-loader/nine-dot-grid-random";
 import ThreeDotLoaderGrowing from "#/src/ui/cuicui/common-ui/loaders/three-dot-simple-loader/three-dot-loader-growing";
 import { ThreeDotSimpleLoader } from "#/src/ui/cuicui/common-ui/loaders/three-dot-simple-loader/three-dot-simple-loader";
@@ -271,6 +272,23 @@ export const commonUICategoriesList: CategoryType[] = [
           "A notification card with a date and time to show the user when the notification was sent.",
         isIframed: false,
         // componentBadges: ["better-in-dark-mode"],
+      },
+      {
+        sizePreview: "sm",
+        slug: "hover-effect-card",
+        variantList: [
+          {
+            name: "Variant 1",
+            component: <HoverEffectCardPreview />,
+            slugPreviewFile: "hover-effect-card-preview",
+            slugComponentFile: "hover-effect-card",
+          },
+        ],
+        title: "Hover Effect Card",
+        description:
+          "A card with a hover effect that rotates on hover. Only CSS.",
+        isIframed: true,
+        componentBadges: ["no-js"],
       },
     ],
   },
