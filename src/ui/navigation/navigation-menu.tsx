@@ -34,6 +34,18 @@ export default function NavigationMenu({
     });
   }
 
+  function getClosestUpdatedComponentDate(dateList: (Date | null)[]) {
+    return dateList.reduce((acc, date) => {
+      if (!date) {
+        return acc;
+      }
+      if (!acc) {
+        return date;
+      }
+      return date > acc ? date : acc;
+    });
+  }
+
   const alphabeticallySortedSectionList = getAlphabeticallySortedSectionList();
 
   return (
@@ -77,37 +89,49 @@ export default function NavigationMenu({
       {alphabeticallySortedSectionList.map((section) => {
         return (
           <SectionWrapper key={section.slug} name={section.name}>
-            {section.categoriesList.map((category, index) => (
-              <li
-                key={category.slug}
-                className="relative list-none"
-                onMouseEnter={() => handleHoverButton(category.slug)}
-              >
-                <GlobalNavItem
-                  href={`/${section.slug}/${category.slug}`}
-                  isMobile={isMobile}
-                  releaseDate={category.releaseDateCategory ?? null}
-                  name={category.name}
-                  Icon={category.icon ?? null}
-                  target="sameWindow"
-                  isComingSoon={category.comingSoonCategory ?? false}
-                  updatedDate={category.lastUpdateDateCategory ?? null}
-                />
-                <AnimatePresence>
-                  {elementFocused === category.slug && (
-                    <motion.div
-                      className="absolute top-0 left-0 w-full h-full bg-neutral-200 dark:bg-neutral-800 rounded-md border border-neutral-500/10 -z-10"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.2 }}
-                      layout
-                      layoutId="navigation-element"
-                    />
-                  )}
-                </AnimatePresence>
-              </li>
-            ))}
+            {section.categoriesList.map((category, index) => {
+              const listOfUpdatedDates = category.componentList?.map(
+                (component) => component.lastUpdatedDateComponent ?? null,
+              );
+              // remove undefined values
+              let closestUpdatedDate: null | Date = null;
+              if (listOfUpdatedDates) {
+                closestUpdatedDate =
+                  getClosestUpdatedComponentDate(listOfUpdatedDates);
+              }
+
+              return (
+                <li
+                  key={category.slug}
+                  className="relative list-none"
+                  onMouseEnter={() => handleHoverButton(category.slug)}
+                >
+                  <GlobalNavItem
+                    href={`/${section.slug}/${category.slug}`}
+                    isMobile={isMobile}
+                    releaseDate={category.releaseDateCategory ?? null}
+                    name={category.name}
+                    Icon={category.icon ?? null}
+                    target="sameWindow"
+                    isComingSoon={category.comingSoonCategory ?? false}
+                    updatedDate={closestUpdatedDate}
+                  />
+                  <AnimatePresence>
+                    {elementFocused === category.slug && (
+                      <motion.div
+                        className="absolute top-0 left-0 w-full h-full bg-neutral-200 dark:bg-neutral-800 rounded-md border border-neutral-500/10 -z-10"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.2 }}
+                        layout
+                        layoutId="navigation-element"
+                      />
+                    )}
+                  </AnimatePresence>
+                </li>
+              );
+            })}
           </SectionWrapper>
         );
       })}
