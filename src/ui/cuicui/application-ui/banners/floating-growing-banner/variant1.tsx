@@ -56,14 +56,14 @@ export default function FloatingGrowingBannerVariant1() {
           className={cn(
             "px-2 py-1 rounded-lg w-56",
             "group-hover:opacity-100 opacity-0 group-hover:blur-0 blur-md  transition-all duration-1000",
-            " bg-white outline-none ring-0",
+            " bg-indigo-200/30 outline-none ring-0 z-20",
             // Position
-            "absolute top-1/2 -translate-y-1/2 right-2 shadow-sm ",
+            "absolute top-1/2 -translate-y-1/2 right-2",
             // Text
-            "placeholder:text-neutral-400 text-neutral-600 tracking-tighter text-sm",
+            "placeholder:text-white/60 text-white tracking-tighter text-sm",
             inputValue && " mr-6",
           )}
-          placeholder="Email"
+          placeholder="email@example.com"
         />
         <button
           type="button"
@@ -76,7 +76,7 @@ export default function FloatingGrowingBannerVariant1() {
         >
           <SendHorizontalIcon
             className={cn(
-              "size-5 text-white transition-all duration-300 hover:scale-110",
+              "size-5 text-white transition-all duration-300 hover:scale-110 z-10",
             )}
           />
         </button>
