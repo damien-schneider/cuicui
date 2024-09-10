@@ -15,7 +15,8 @@ import { AirpodsPro } from "#/src/ui/cuicui/other/mock-ups/airpods/airpods-pro";
 import MacbookVariant1 from "#/src/ui/cuicui/other/mock-ups/laptops/variant1";
 import { GooglePixelVariant1 } from "#/src/ui/cuicui/other/mock-ups/smartphone/variant1";
 import { IPhone14ProVariant2 } from "#/src/ui/cuicui/other/mock-ups/smartphone/variant2";
-import { DotsPatternVariant1 } from "#/src/ui/cuicui/other/patterns/dots-pattern/variant1";
+import { DotsPatternPreview } from "#/src/ui/cuicui/other/patterns/dots-pattern/dots-pattern-preview";
+import MovingBandsPreview from "#/src/ui/cuicui/other/patterns/moving-bands/moving-bands-preview";
 import BlurAppearVariant1 from "#/src/ui/cuicui/other/transition-wrappers/blur-appear/variant1";
 
 export const otherCategoriesList: CategoryType[] = [
@@ -135,6 +136,7 @@ export const otherCategoriesList: CategoryType[] = [
         sizePreview: "lg",
         slug: "airpods",
         isIframed: true,
+        lastUpdatedDateComponent: new Date("2024-09-10"),
         isChildUsingHeightFull: true,
         title: "Airpods mock-up",
         description:
@@ -164,7 +166,7 @@ export const otherCategoriesList: CategoryType[] = [
     releaseDateCategory: new Date("2024-08-10"),
     icon: GripIcon,
     previewCategory: {
-      component: <DotsPatternVariant1 />,
+      component: <MovingBandsPreview />,
       previewScale: 1,
     },
     componentList: [
@@ -179,12 +181,33 @@ export const otherCategoriesList: CategoryType[] = [
         variantList: [
           {
             name: "Variant 1",
-            component: <DotsPatternVariant1 />,
-            slugPreviewFile: "variant1",
+            component: <DotsPatternPreview />,
+            slugPreviewFile: "dots-pattern-preview",
+            slugComponentFile: "dots-pattern",
           },
         ],
         inspiration: "Magic UI",
         inspirationLink: "https://magicui.design/docs/components/dot-pattern",
+      },
+      {
+        sizePreview: "sm",
+        slug: "moving-bands",
+        isIframed: false,
+        isChildUsingHeightFull: true,
+        lastUpdatedDateComponent: new Date("2024-09-10"),
+        title: "Moving bands pattern",
+        description:
+          "Create a moving bands pattern without images, just with CSS and HTML for better performance.",
+        variantList: [
+          {
+            name: "Variant 1",
+            component: <MovingBandsPreview />,
+            slugComponentFile: "moving-bands",
+            slugPreviewFile: "moving-bands-preview",
+          },
+        ],
+        // inspiration: "Magic UI",
+        // inspirationLink: "https://magicui.design/docs/components/dot-pattern",
       },
     ],
   },
