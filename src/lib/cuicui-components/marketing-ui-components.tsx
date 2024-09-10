@@ -9,6 +9,7 @@ import {
 import PricingPreviewImage from "#/src/assets/components-preview/pricing.png";
 import type { CategoryType } from "#/src/lib/types/component";
 import { CarouselCylindricalVariant1 } from "#/src/ui/cuicui/marketing-ui/carousels/cylindric-3d-carousel/variant1";
+import { SimpleCarouselPreview } from "#/src/ui/cuicui/marketing-ui/carousels/simple-carousel/simple-carousel-preview";
 import { AnimatedCardVariant1 } from "#/src/ui/cuicui/marketing-ui/features/animated-cards/variant1";
 import { Variant1FeatureFourImages } from "#/src/ui/cuicui/marketing-ui/features/feature-four-images/variant1";
 import { Variant2FeatureFourImages } from "#/src/ui/cuicui/marketing-ui/features/feature-four-images/variant2";
@@ -30,10 +31,27 @@ export const marketingUIComponentList: CategoryType[] = [
     releaseDateCategory: new Date("2024-08-10"),
     icon: GalleryHorizontalIcon,
     previewCategory: {
-      component: <CarouselCylindricalVariant1 />,
-      previewScale: 0.75,
+      component: <SimpleCarouselPreview />,
+      previewScale: 0.5,
     },
     componentList: [
+      {
+        title: "Simple Carousel",
+        description:
+          "A simple carousel that allows you to navigate through multiple images or products.",
+        sizePreview: "md",
+        slug: "simple-carousel",
+        lastUpdatedDateComponent: new Date("2024-09-10"),
+        isIframed: false,
+        variantList: [
+          {
+            name: "Simple Carousel",
+            component: <SimpleCarouselPreview />,
+            slugPreviewFile: "simple-carousel-preview",
+            slugComponentFile: "simple-carousel",
+          },
+        ],
+      },
       {
         title: "Cylindric 3D Carousel",
         description:
@@ -177,6 +195,7 @@ export const marketingUIComponentList: CategoryType[] = [
         rerenderButton: true,
         title: "Animated Counter",
         description: "Show numbers that animate automatically when updated.",
+        lastUpdatedDateComponent: new Date("2024-09-10"),
         variantList: [
           {
             name: "Increase To Value",

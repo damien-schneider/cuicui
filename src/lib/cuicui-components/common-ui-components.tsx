@@ -276,6 +276,7 @@ export const commonUICategoriesList: CategoryType[] = [
       {
         sizePreview: "sm",
         slug: "hover-effect-card",
+        lastUpdatedDateComponent: new Date("2024-09-10"),
         variantList: [
           {
             name: "Variant 1",
