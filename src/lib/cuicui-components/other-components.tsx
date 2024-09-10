@@ -10,6 +10,8 @@ import DynamicCardsVariant1 from "#/src/ui/cuicui/other/cursors/dynamic-cards/va
 import DynamicCardsVariant2 from "#/src/ui/cuicui/other/cursors/dynamic-cards/variant2";
 import FollowCursorVariant1 from "#/src/ui/cuicui/other/cursors/follow-cursor/variant1";
 import FollowCursorVariant2 from "#/src/ui/cuicui/other/cursors/follow-cursor/variant2";
+import { Airpods } from "#/src/ui/cuicui/other/mock-ups/airpods/airpods";
+import { AirpodsPro } from "#/src/ui/cuicui/other/mock-ups/airpods/airpods-pro";
 import MacbookVariant1 from "#/src/ui/cuicui/other/mock-ups/laptops/variant1";
 import { GooglePixelVariant1 } from "#/src/ui/cuicui/other/mock-ups/smartphone/variant1";
 import { IPhone14ProVariant2 } from "#/src/ui/cuicui/other/mock-ups/smartphone/variant2";
@@ -118,7 +120,7 @@ export const otherCategoriesList: CategoryType[] = [
         isChildUsingHeightFull: true,
         title: "Laptop mock-up",
         description:
-          "Create a laptop mock-up with CSS and HTML for better performance, SEO and accessibility & also more micro-interactions",
+          "Create a laptop mock-up with CSS and HTML for better performance",
         variantList: [
           {
             name: "Macbook Pro",
@@ -128,6 +130,29 @@ export const otherCategoriesList: CategoryType[] = [
         ],
         inspiration: "Devices CSS",
         inspirationLink: "https://devicescss.xyz/laptops.html#macbook-pro",
+      },
+      {
+        sizePreview: "lg",
+        slug: "airpods",
+        isIframed: true,
+        isChildUsingHeightFull: true,
+        title: "Airpods mock-up",
+        description:
+          "Create a airpods mock-up with CSS and HTML for better performance",
+        variantList: [
+          {
+            name: "Airpods Pro",
+            component: <AirpodsPro />,
+            slugPreviewFile: "airpods-pro",
+          },
+          {
+            name: "Airpods",
+            component: <Airpods />,
+            slugPreviewFile: "airpods",
+          },
+        ],
+        inspiration: "Spacious74 on Uiverse",
+        inspirationLink: "https://uiverse.io/Spacious74/wicked-rat-71",
       },
     ],
   },
