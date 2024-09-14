@@ -19,6 +19,14 @@
   </p>
 </div>
 
+## Table of Contents
+
+- [About The Project](#about-the-project)
+- [License](#license)
+- [Contributing](#contributing)
+  - [Commit Message Convention](#commit-message-convention)
+- [Activity](#activity)
+
 <!-- ABOUT THE PROJECT -->
 
 ## About The Project
@@ -37,3 +45,7 @@ visit this [Documentation](https://github.com/damien-schneider/cuicui/blob/main/
 ### Commit Message Convention
 
 We are using Gitmoji for our commit messages. You can find the rules at [gitmoji.dev](https://gitmoji.dev/)
+
+# Activity
+
+![Alt](https://repobeats.axiom.co/api/embed/c72a9b3db3d7872f458beaa4db837cc58136ba99.svg "Repobeats analytics image")
