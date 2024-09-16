@@ -16,8 +16,7 @@ import ClerkBadgeVariant1 from "#/src/ui/cuicui/common-ui/badges/clerk-badge/var
 import { BadgeSimpleVariantAmber } from "#/src/ui/cuicui/common-ui/badges/modern-simple-badges/variant1";
 import { BadgeSimpleVariantRed } from "#/src/ui/cuicui/common-ui/badges/modern-simple-badges/variant2";
 import ModernSimpleQuoteVariant1 from "#/src/ui/cuicui/common-ui/blockquotes/modern-simple-quote/variant1";
-import BeforeEffectButtonVariant1 from "#/src/ui/cuicui/common-ui/buttons/before-effect-button/variant1";
-import BeforeEffectButtonVariant2 from "#/src/ui/cuicui/common-ui/buttons/before-effect-button/variant2";
+
 import GrowingButtonVariant1 from "#/src/ui/cuicui/common-ui/buttons/growing-button/variant1";
 import ModernAnimatedButtonVariant1 from "#/src/ui/cuicui/common-ui/buttons/modern-animated-button/variant1";
 import ShinyRotatingBorderButtonVariant1 from "#/src/ui/cuicui/common-ui/buttons/shiny-rotating-border-button/variant1";
@@ -27,7 +26,11 @@ import NotificationCardPreview from "#/src/ui/cuicui/common-ui/cards/notificatio
 import SimpleCheckboxPreview from "#/src/ui/cuicui/common-ui/checkboxes/simple-checkbox/simple-checkbox-preview";
 import FileDropzone from "#/src/ui/cuicui/common-ui/inputs/droppable-file/variant1";
 
+import PreviewBeforeEffectButtonAdvancedButton from "#/src/ui/cuicui/common-ui/buttons/before-effect-button/preview-advanced-button";
+import PreviewBeforeEffectButtonDefault from "#/src/ui/cuicui/common-ui/buttons/before-effect-button/preview-default";
+import PreviewBeforeEffectButtonHoverOnly from "#/src/ui/cuicui/common-ui/buttons/before-effect-button/preview-hover-only";
 import HoverEffectCardPreview from "#/src/ui/cuicui/common-ui/cards/hover-effect-card/hover-effect-card-preview";
+import { PreviewModernSimpleInput } from "#/src/ui/cuicui/common-ui/inputs/modern-simple-input/preview-simple-modern-input";
 import NineDotGridRandom from "#/src/ui/cuicui/common-ui/loaders/three-dot-simple-loader/nine-dot-grid-random";
 import ThreeDotLoaderGrowing from "#/src/ui/cuicui/common-ui/loaders/three-dot-simple-loader/three-dot-loader-growing";
 import { ThreeDotSimpleLoader } from "#/src/ui/cuicui/common-ui/loaders/three-dot-simple-loader/three-dot-simple-loader";
@@ -166,14 +169,19 @@ export const commonUICategoriesList: CategoryType[] = [
         slug: "before-effect-button",
         variantList: [
           {
-            name: "Default",
-            component: <BeforeEffectButtonVariant1 />,
-            slugPreviewFile: "variant1",
+            name: "Hover only",
+            component: <PreviewBeforeEffectButtonHoverOnly />,
+            slugPreviewFile: "preview-hover-only",
+          },
+          {
+            name: "Simple",
+            component: <PreviewBeforeEffectButtonDefault />,
+            slugPreviewFile: "preview-default",
           },
           {
             name: "Advanced button",
-            component: <BeforeEffectButtonVariant2 />,
-            slugPreviewFile: "variant2",
+            component: <PreviewBeforeEffectButtonAdvancedButton />,
+            slugPreviewFile: "preview-advanced-button",
           },
         ],
         title: "Dynamic button hover effect",
@@ -336,6 +344,7 @@ export const commonUICategoriesList: CategoryType[] = [
       {
         sizePreview: "sm",
         slug: "droppable-file",
+        lastUpdatedDateComponent: new Date("2024-08-20"),
         variantList: [
           {
             name: "Droppable Zone",
@@ -346,6 +355,23 @@ export const commonUICategoriesList: CategoryType[] = [
         title: "Droppable File",
         description:
           "A file dropzone that shows a preview of the file when hovered.",
+        isIframed: false,
+      },
+      {
+        sizePreview: "sm",
+        slug: "modern-simple-input",
+        lastUpdatedDateComponent: new Date("2024-09-16"),
+        variantList: [
+          {
+            name: "Variant 1",
+            component: <PreviewModernSimpleInput />,
+            slugPreviewFile: "preview-simple-modern-input",
+            slugComponentFile: "modern-simple-input",
+          },
+        ],
+        title: "Modern Simple Input",
+        description:
+          "A simple input that can be used in any project with any artistic style.",
         isIframed: false,
       },
     ],
