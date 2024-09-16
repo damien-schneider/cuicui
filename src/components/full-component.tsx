@@ -375,7 +375,7 @@ const getCodeToDisplay = (
   const code = componentList[selectedVariant - 1]?.previewCode;
 
   if (code) {
-    console.log(code);
+    // console.log(code);
     return code;
   }
 

@@ -1,5 +1,6 @@
 import {
   AlertCircleIcon,
+  BatteryChargingIcon,
   Code2Icon,
   CommandIcon,
   FingerprintIcon,
@@ -15,9 +16,12 @@ import {
 import AuthenticationPreviewImage from "#/src/assets/components-preview/authentication.jpeg";
 import TableOfContentPreviewImage from "#/src/assets/components-preview/table-of-content.png";
 import type { CategoryType } from "#/src/lib/types/component";
+import ModernGlassyAlert from "#/src/ui/cuicui/application-ui/alert/modern-glassy-alert/modern-glassy-alert";
+import PreviewModernGlassyAlert from "#/src/ui/cuicui/application-ui/alert/modern-glassy-alert/preview-modern-glassy-alert";
 import SimpleAlert from "#/src/ui/cuicui/application-ui/alert/simple-alert/simple-alert";
 import HalfSidedGlassMorphismAuthentication from "#/src/ui/cuicui/application-ui/authentication/half-sided-glassmorphism/variant1";
 import FloatingGrowingBannerVariant1 from "#/src/ui/cuicui/application-ui/banners/floating-growing-banner/variant1";
+import { PreviewBatteryIndicator } from "#/src/ui/cuicui/application-ui/battery/battery-indicator/preview-battery-indicator";
 import CodeEditor from "#/src/ui/cuicui/application-ui/code/code-card/code-card";
 import { CodeCardPreview } from "#/src/ui/cuicui/application-ui/code/code-card/code-card-preview";
 import PreviewCommandVariant1 from "#/src/ui/cuicui/application-ui/code/code-snippet/preview-variant1";
@@ -46,6 +50,7 @@ export const applicationUICategoriesList: CategoryType[] = [
     },
     componentList: [
       {
+        lastUpdatedDateComponent: new Date("2024-08-29"),
         isIframed: true,
         sizePreview: "sm",
         slug: "simple-alert",
@@ -58,6 +63,22 @@ export const applicationUICategoriesList: CategoryType[] = [
         ],
         title: "Simple Alert",
         description: "A simple alert component.",
+      },
+      {
+        isIframed: true,
+        sizePreview: "sm",
+        slug: "modern-glassy-alert",
+        lastUpdatedDateComponent: new Date("2024-09-16"),
+        variantList: [
+          {
+            name: "variant1",
+            component: <PreviewModernGlassyAlert />,
+            slugPreviewFile: "preview-modern-glassy-alert",
+            slugComponentFile: "modern-glassy-alert",
+          },
+        ],
+        title: "Modern Glassy Alert",
+        description: "A modern glassy alert component.",
       },
     ],
   },
@@ -113,6 +134,34 @@ export const applicationUICategoriesList: CategoryType[] = [
         ],
         title: "Floating Growing Banner",
         description: "A floating growing banner component.",
+      },
+    ],
+  },
+  {
+    slug: "battery",
+    name: "Battery",
+    description: "Battery components",
+    releaseDateCategory: new Date("2024-08-21"),
+    icon: BatteryChargingIcon,
+    previewCategory: {
+      component: <PreviewBatteryIndicator />,
+      previewScale: 1,
+    },
+    componentList: [
+      {
+        isIframed: false,
+        sizePreview: "sm",
+        slug: "battery-indicator",
+        variantList: [
+          {
+            name: "Battery Indicator",
+            component: <PreviewBatteryIndicator />,
+            slugPreviewFile: "preview-battery-indicator",
+            slugComponentFile: "battery-indicator",
+          },
+        ],
+        title: "Battery Indicator",
+        description: "A battery indicator component.",
       },
     ],
   },
