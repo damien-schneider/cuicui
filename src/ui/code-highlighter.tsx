@@ -13,7 +13,7 @@ export default function CodeHighlighter({
   classNameContainer,
 }: Readonly<{ code: string; classNameContainer?: string }>) {
   const [copiedText, copy] = useCopyToClipboard();
-  console.log("\nCODE DANS LE HIGHLIGHT\n", code);
+  // console.log("\nCODE DANS LE HIGHLIGHT\n", code);
   const handleCopy = (text: string) => () => {
     copy(text)
       .then(() => {

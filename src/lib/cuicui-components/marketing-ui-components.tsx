@@ -6,7 +6,9 @@ import {
   SparkleIcon,
 } from "lucide-react";
 
+import CarouselsPreviewImage from "#/src/assets/components-preview/caroussel.png";
 import PricingPreviewImage from "#/src/assets/components-preview/pricing.png";
+
 import type { CategoryType } from "#/src/lib/types/component";
 import { CarouselCylindricalVariant1 } from "#/src/ui/cuicui/marketing-ui/carousels/cylindric-3d-carousel/variant1";
 import { SimpleCarouselPreview } from "#/src/ui/cuicui/marketing-ui/carousels/simple-carousel/simple-carousel-preview";
@@ -32,6 +34,7 @@ export const marketingUIComponentList: CategoryType[] = [
     icon: GalleryHorizontalIcon,
     previewCategory: {
       component: <SimpleCarouselPreview />,
+      previewImage: CarouselsPreviewImage,
       previewScale: 0.5,
     },
     componentList: [
