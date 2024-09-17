@@ -25,7 +25,7 @@ export const BatteryIndicator: React.FC<BatteryInfoProps> = ({
   dischargingTime,
   className,
 }) => {
-  const batteryLevel = level ?? 0;
+  const batteryLevel = Math.round(level) ?? 0;
 
   const getBatteryIcon = (level: number, isCharging: boolean | null) => {
     if (isCharging)
