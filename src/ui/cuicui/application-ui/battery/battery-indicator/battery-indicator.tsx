@@ -65,7 +65,7 @@ export const BatteryIndicator: React.FC<BatteryInfoProps> = ({
       {getBatteryIcon(level, isCharging)}
       <div className="flex flex-col">
         <span className={`text-sm font-medium ${getTextColor(level)}`}>
-          {level !== null ? `${batteryLevel}%` : 'Unavailable' /* Mayby add question mark ?  */}
+          {level !== null ? `${batteryLevel}%` : 'Unavailable'}
         </span>
         <span className="text-xs text-neutral-500 flex items-center">
           {isCharging ? (
