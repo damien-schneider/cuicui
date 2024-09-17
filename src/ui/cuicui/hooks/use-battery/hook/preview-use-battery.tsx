@@ -1,6 +1,6 @@
 "use client";
 import { BatteryIndicator } from "#/src/ui/cuicui/application-ui/battery/battery-indicator/battery-indicator";
-import { ThreeDotSimpleLoader } from "#/src/ui/cuicui/common-ui/loaders/three-dot-simple-loader/three-dot-simple-loader";
+import { ThreeDotSimpleLoader } from "#/src/ui/cuicui/common-ui/loaders/three-dot-simple-loader/three-dot-simple-loader"; // Unrequired
 import { useBattery } from "#/src/ui/cuicui/hooks/use-battery/hook/use-battery";
 
 export const PreviewUseBattery = () => {
