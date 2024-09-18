@@ -4,6 +4,7 @@ import {
   Code2Icon,
   CommandIcon,
   FingerprintIcon,
+  FolderTreeIcon,
   ListOrderedIcon,
   PanelTopIcon,
   SearchIcon,
@@ -36,6 +37,7 @@ import { StepWithStickyColorVariant1 } from "#/src/ui/cuicui/application-ui/stat
 import TableOfContentPreview from "#/src/ui/cuicui/application-ui/table-of-contents/modul-inspired/following-header-preview";
 import TableOfContent from "#/src/ui/cuicui/application-ui/table-of-contents/modul-inspired/following-headers";
 import { ThemeSwitcherButton } from "#/src/ui/cuicui/application-ui/theme/theme-switcher/theme-switcher-button";
+import { PreviewRecursiveTree } from "#/src/ui/cuicui/application-ui/tree/recursive-tree/preview-recursive-tree";
 
 export const applicationUICategoriesList: CategoryType[] = [
   {
@@ -427,6 +429,7 @@ export const applicationUICategoriesList: CategoryType[] = [
     },
     componentList: [
       {
+        isIframed: false,
         sizePreview: "xs",
         slug: "theme-switcher",
         variantList: [
@@ -438,6 +441,35 @@ export const applicationUICategoriesList: CategoryType[] = [
         ],
         title: "Theme Switcher",
         description: "A theme switcher button.",
+      },
+    ],
+  },
+  {
+    slug: "tree",
+    name: "Tree",
+    description: "Tree components",
+    releaseDateCategory: new Date("2024-09-18"),
+    icon: FolderTreeIcon,
+    previewCategory: {
+      component: <PreviewRecursiveTree />,
+      previewScale: 1,
+    },
+    componentList: [
+      {
+        isIframed: false,
+        sizePreview: "lg",
+        slug: "recursive-tree",
+        variantList: [
+          {
+            name: "variant1",
+            component: <PreviewRecursiveTree />,
+            slugPreviewFile: "preview-recursive-tree",
+            slugComponentFile: "recursive-tree",
+          },
+        ],
+        title: "Recursive Tree",
+        description:
+          "A tree component with recursive children. Without any limit with animated collapse and without needing to know the depth or to specify parent component.",
       },
     ],
   },
