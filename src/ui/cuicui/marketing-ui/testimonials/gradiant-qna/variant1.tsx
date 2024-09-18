@@ -1,6 +1,8 @@
-import { ChevronDownIcon } from "lucide-react";
-import React from "react";
+"use client"
+import { useRef } from 'react';
+import { motion } from "framer-motion";
 import { cn } from "#/src/utils/cn";
+import { ToogleIcon } from './toggle-icon';
 
 export default function GradientQnAVariant1() {
   return (
@@ -36,14 +38,17 @@ const Testimonial = ({
   title: string;
   content: string;
 }) => {
+  const detailsRef = useRef<HTMLElement | null>(null)
+  const details = detailsRef?.current;
+
   return (
     <div className="bg-neutral-500/10 hover:bg-neutral-500/20 border border-neutral-400/20 transition-all rounded-3xl overflow-hidden relative backdrop-blur-2xl">
-      <details className="peer group max-h-96 overflow-hidden transition-all w-full transform-gpu">
+      <details ref={detailsRef} className="peer group max-h-96 overflow-hidden transition-all w-full transform-gpu">
         <summary className="flex cursor-pointer list-none items-center justify-between gap-4 p-4 group-open:pt-8 group-open:pl-8 duration-300  transition-all transform-gpu">
           <h6 className="text-lg tracking-tight text-neutral-600 dark:text-neutral-300 font-medium">
             {title}
           </h6>
-          <ChevronDownIcon className="size-5 group-open:-rotate-180 transition-all absolute top-5 right-5  text-neutral-600 dark:text-neutral-300 transform-gpu" />
+          <ToogleIcon detailsRef={detailsRef} />
         </summary>
       </details>
 
