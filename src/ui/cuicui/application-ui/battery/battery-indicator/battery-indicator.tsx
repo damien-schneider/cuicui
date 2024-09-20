@@ -1,10 +1,10 @@
 import {
-  Battery,
-  BatteryCharging,
-  BatteryFull,
-  BatteryLow,
-  BatteryMedium,
-  BatteryWarning,
+  BatteryChargingIcon,
+  BatteryFullIcon,
+  BatteryIcon,
+  BatteryLowIcon,
+  BatteryMediumIcon,
+  BatteryWarningIcon,
   InfinityIcon,
 } from "lucide-react";
 import type React from "react";
@@ -25,16 +25,18 @@ export const BatteryIndicator: React.FC<BatteryInfoProps> = ({
   dischargingTime,
   className,
 }) => {
-
   const getBatteryIcon = (level: number | null, isCharging: boolean | null) => {
-    if (level === null) return <Battery className="w-5 h-5 text-orange-500" />;
+    if (level === null)
+      return <BatteryIcon className="size-5 text-orange-500" />;
     if (isCharging)
-      return <BatteryCharging className="w-5 h-5 text-blue-500" />;
+      return <BatteryChargingIcon className="size-5 text-blue-500" />;
     if (level >= 90)
-      return <BatteryFull className="w-5 h-5 text-emerald-500" />;
-    if (level >= 50) return <BatteryMedium className="w-5 h-5 text-lime-500" />;
-    if (level >= 20) return <BatteryLow className="w-5 h-5 text-yellow-500" />;
-    return <BatteryWarning className="w-5 h-5 text-red-500" />;
+      return <BatteryFullIcon className="size-5 text-emerald-500" />;
+    if (level >= 50)
+      return <BatteryMediumIcon className="size-5 text-lime-500" />;
+    if (level >= 20)
+      return <BatteryLowIcon className="size-5 text-yellow-500" />;
+    return <BatteryWarningIcon className="size-5 text-red-500" />;
   };
 
   const getTextColor = (level: number | null) => {
@@ -47,7 +49,7 @@ export const BatteryIndicator: React.FC<BatteryInfoProps> = ({
   const formatTime = (time: number | null) => {
     if (time === null) return "";
     if (!Number.isFinite(time))
-      return <InfinityIcon className="w-3 h-3 inline" />;
+      return <InfinityIcon className="size-3 inline" />;
     const hours = Math.floor(time / 3600);
     const minutes = Math.floor((time % 3600) / 60);
     if (hours > 23) return ">1d";
@@ -64,7 +66,9 @@ export const BatteryIndicator: React.FC<BatteryInfoProps> = ({
       {getBatteryIcon(level, isCharging)}
       <div className="flex flex-col">
         <span className={`text-sm font-medium ${getTextColor(level)}`}>
-          {level ? `${Math.round(level)}%` /* Round the battery level */ : 'Unavailable'}
+          {level
+            ? `${Math.round(level)}%` /* Round the battery level */
+            : "Unavailable"}
         </span>
         <span className="text-xs text-neutral-500 flex items-center">
           {isCharging ? (
