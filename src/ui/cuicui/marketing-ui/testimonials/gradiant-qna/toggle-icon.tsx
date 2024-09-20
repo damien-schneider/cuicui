@@ -1,51 +1,42 @@
 "use client"
 import { useState, useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
 
 export const ToogleIcon = ({ detailsRef }: { detailsRef: HTMLElement }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   useEffect(() => {
     const details = detailsRef?.current
     if (!details) return
 
     const handleToggle = () => {
-      setIsOpen(details.open)
+      setIsExpanded(details.open)
     }
 
     details.addEventListener('toggle', handleToggle)
     return () => details.removeEventListener('toggle', handleToggle)
   }, [])
 
-  const variants = {
-    arrow: { d: "M19 9L12 16L5 9" },
-    minus: { d: "M5 12H19" }
-  }
-
   return (
     <button
-      className="size-5 group-open:-rotate-180 transition-all absolute top-5 right-5  text-neutral-600 dark:text-neutral-300 transform-gpu"
+      className="relative size-5 group-open:-rotate-180 transition-all top-1 right-5 text-neutral-600 dark:text-neutral-300 transform-gpu"
+      aria-expanded={isExpanded}
     >
-      <motion.svg
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className="text-gray-600"
-      >
-        <motion.path
-          d={variants.arrow.d}
-          variants={variants}
-          initial="arrow"
-          animate={isOpen ? "arrow" : "minus"}
-          transition={{ duration: 0.3 }}
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
+       <div className="absolute inset-0 flex items-center justify-center">
+        <div
+          className={`
+            w-3 h-0.5 bg-current
+            transition-all duration-500 ease-in-out transform-gpu
+            ${isExpanded ? '-rotate-45 translate-y-0.5 translate-x-0.5' : 'rotate-0'}
+          `}
         />
-      </motion.svg>
+        <div
+          className={`
+            w-3 h-0.5 bg-current
+            transition-all duration-500 ease-in-out transform-gpu
+            ${isExpanded ? 'rotate-45 translate-y-0.5 -translate-x-0.5' : 'rotate-0'}
+          `}
+        />
+      </div>
     </button>
   )
 }
