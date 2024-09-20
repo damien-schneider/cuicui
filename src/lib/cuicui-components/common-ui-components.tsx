@@ -43,7 +43,6 @@ import { ShinyGradientSkeletonVariant1 } from "#/src/ui/cuicui/common-ui/skeleto
 import { ShinyGradientSkeletonVariant2 } from "#/src/ui/cuicui/common-ui/skeletons/shiny-gradient/variant2";
 import { CircularBarsSpinnerLoader } from "#/src/ui/cuicui/common-ui/loaders/spinner-loader/circular-bars-spinner-loader";
 import { DualRingSpinnerLoader } from "#/src/ui/cuicui/common-ui/loaders/spinner-loader/dual-ring-spinner-loader";
-import RadioButtonGroupPreview from "#/src/ui/cuicui/common-ui/checkboxes/radio-button/radio-group-preview";
 
 export const commonUICategoriesList: CategoryType[] = [
   {
@@ -330,22 +329,6 @@ export const commonUICategoriesList: CategoryType[] = [
         title: "Simple checkbox",
         description:
           "A simple checkbox that can be used in any project with simple artistic style.",
-        isIframed: false,
-      },
-      {
-        sizePreview: "sm",
-        slug: "radio-button",
-        variantList: [
-          {
-            name: "Default",
-            component: <RadioButtonGroupPreview />,
-            slugPreviewFile: "radio-group-preview",
-            slugComponentFile: "radio-button-group",
-          },
-        ],
-        title: "Radio button group",
-        description:
-          "A radio button group that can be used in any project with simple artistic style.",
         isIframed: false,
       },
     ],
