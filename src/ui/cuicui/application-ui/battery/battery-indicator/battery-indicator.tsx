@@ -25,9 +25,9 @@ export const BatteryIndicator: React.FC<BatteryInfoProps> = ({
   dischargingTime,
   className,
 }) => {
-  const batteryLevel = level ?? 0;
 
-  const getBatteryIcon = (level: number, isCharging: boolean | null) => {
+  const getBatteryIcon = (level: number | null, isCharging: boolean | null) => {
+    if (level === null) return <Battery className="w-5 h-5 text-orange-500" />;
     if (isCharging)
       return <BatteryCharging className="w-5 h-5 text-blue-500" />;
     if (level >= 90)
@@ -37,7 +37,8 @@ export const BatteryIndicator: React.FC<BatteryInfoProps> = ({
     return <BatteryWarning className="w-5 h-5 text-red-500" />;
   };
 
-  const getTextColor = (level: number) => {
+  const getTextColor = (level: number | null) => {
+    if (level === null) return "text-orange-500";
     if (level >= 50) return "text-emerald-500";
     if (level >= 20) return "text-yellow-500";
     return "text-red-500";
@@ -60,10 +61,10 @@ export const BatteryIndicator: React.FC<BatteryInfoProps> = ({
         className,
       )}
     >
-      {getBatteryIcon(batteryLevel, isCharging)}
+      {getBatteryIcon(level, isCharging)}
       <div className="flex flex-col">
-        <span className={`text-sm font-medium ${getTextColor(batteryLevel)}`}>
-          {batteryLevel}%
+        <span className={`text-sm font-medium ${getTextColor(level)}`}>
+          {level ? `${Math.round(level)}%` /* Round the battery level */ : 'Unavailable'}
         </span>
         <span className="text-xs text-neutral-500 flex items-center">
           {isCharging ? (
