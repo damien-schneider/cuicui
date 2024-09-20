@@ -1,6 +1,10 @@
-import React from "react";
-
-export const CircularBarsSpinnerLoader = () => {
+export const CircularBarsSpinnerLoader = ({
+  numberOfBars = 12,
+  width = 3,
+  height = 16,
+}) => {
+  const animationDuration = 1.5;
+  const delay = animationDuration / numberOfBars;
   return (
     <>
       <style>
@@ -8,24 +12,41 @@ export const CircularBarsSpinnerLoader = () => {
           @keyframes circular-bars {
             0% {
               opacity: 1;
+              rotate: 0deg;
+              scale: 1;
+            }
+            70% {
+              opacity: 0;
+              rotate: -40deg;
+              scale: 0.9;
             }
             100% {
-              opacity: 0;
+              opacity: 1;
+              rotate: 0deg;
+              scale: 1;
             }
           }
         `}
       </style>
-      <div className="relative flex justify-center items-center w-12 h-12">
-        {[...Array(12)].map((_, index) => (
+      <div
+        className="relative flex justify-center items-center size-12"
+        aria-hidden="true"
+      >
+        {[...Array(numberOfBars)].map((_, index) => (
           <div
-            key={index}
-            className="absolute dark:invert w-1 h-4 bg-neutral-800"
+            // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
+            key={`circular-bars-spinner-loader-bar-${index}`}
+            className="absolute dark:invert bg-neutral-700 rounded-[1px]"
             style={{
-              transform: `rotate(${index * 30}deg) translate(6px, -10px)`,
-              animation: "circular-bars 1.2s linear infinite",
-              animationDelay: `-${index * 0.1}s`,
+              width: `${width}px`,
+              height: `${height}px`,
+              transform: `rotate(${
+                index * (360 / numberOfBars)
+              }deg) translateX(6px) translateY(-16px)`,
+              animation: `circular-bars ${animationDuration}s ease-in-out infinite`,
+              animationDelay: `-${index * delay}s`,
             }}
-          ></div>
+          />
         ))}
         <span className="sr-only">Loading...</span>
       </div>
