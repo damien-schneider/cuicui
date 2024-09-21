@@ -1,9 +1,5 @@
-"use client"
-import { useRef } from 'react';
 import React from "react";
 import { cn } from "#/src/utils/cn";
-import { ToogleIcon } from './toggle-icon';
-
 export default function GradientQnAVariant2() {
   return (
     <div className="">
@@ -38,17 +34,14 @@ const Testimonial = ({
   title: string;
   content: string;
 }) => {
-  const detailsRef = useRef<HTMLElement | null>(null)
-  const details = detailsRef?.current;
-
   return (
     <div className="bg-neutral-500/10 hover:bg-neutral-500/20 rounded-3xl overflow-hidden has-[:open]:bg-neutral-500/60 relative backdrop-blur-2xl">
-      <details ref={detailsRef} className="peer group max-h-96 overflow-hidden transition-all duration-500 w-full">
+      <details className="peer group max-h-96 overflow-hidden transition-all duration-500 w-full">
         <summary className="flex cursor-pointer items-center justify-between gap-4 p-4 group-open:pt-8 group-open:pl-8 transition-all duration-300">
           <h6 className="text-lg tracking-tight text-neutral-600 dark:text-neutral-300 font-medium">
             {title}
           </h6>
-          <ToogleIcon detailsRef={detailsRef} />
+          <ToggleIcon />
         </summary>
       </details>
 
@@ -59,11 +52,7 @@ const Testimonial = ({
   );
 };
 
-const AdvancedGradiant = ({
-  className,
-}: {
-  className?: string;
-}) => {
+const AdvancedGradiant = ({ className }: { className?: string }) => {
   return (
     <>
       <style>
@@ -83,13 +72,13 @@ const AdvancedGradiant = ({
       <div
         className={cn(
           "size-[400px] relative transition-all transform-gpu",
-          className,
+          className
         )}
       >
         <div className="absolute top-0 left-0 grid place-items-center w-full h-full transform-gpu">
           <div
             className={cn(
-              "w-full h-full blur-3xl opacity-80 rounded-full transform-gpu",
+              "w-full h-full blur-3xl opacity-80 rounded-full transform-gpu"
             )}
             style={{
               background:
@@ -106,7 +95,7 @@ const AdvancedGradiant = ({
         >
           <div
             className={cn(
-              "size-[300px] absolute blur-2xl rounded-full transform-gpu",
+              "size-[300px] absolute blur-2xl rounded-full transform-gpu"
             )}
             style={{
               background: "conic-gradient(#FFF, #12B4E6, #DC4CFC)",
@@ -122,7 +111,7 @@ const AdvancedGradiant = ({
         >
           <div
             className={cn(
-              "size-[300px] absolute blur-2xl rounded-full opacity-80 transform-gpu",
+              "size-[300px] absolute blur-2xl rounded-full opacity-80 transform-gpu"
             )}
             style={{
               background: "conic-gradient(#A6EFFF, #12ADE6, #4C63FC)",
@@ -132,5 +121,20 @@ const AdvancedGradiant = ({
         </div>
       </div>
     </>
+  );
+};
+
+const ToggleIcon = () => {
+  return (
+    <button
+      type="button"
+      aria-label="Toggle menu"
+      className="relative size-5 text-neutral-600 dark:text-neutral-300"
+    >
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="w-3 h-0.5 bg-current transition duration-500 translate-x-0.5 ease-in-out transform-gpu group-open:rotate-0 rotate-45" />
+        <div className="w-3 h-0.5 bg-current transition -translate-x-0.5 duration-500 ease-in-out transform-gpu group-open:rotate-0 -rotate-45" />
+      </div>
+    </button>
   );
 };
