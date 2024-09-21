@@ -1,5 +1,3 @@
-import React from "react";
-
 export const DualRingSpinnerLoader = () => {
   return (
     <>
@@ -7,34 +5,35 @@ export const DualRingSpinnerLoader = () => {
         {`
           @keyframes spin {
             0% {
-              transform: rotate(0deg);
+              rotate: 0deg;
+              scale: 1;
+            }
+            30% {
+              rotate: 20deg;
+              scale: 0.9;
             }
             100% {
-              transform: rotate(360deg);
+              rotate: -360deg;
+              scale: 1;
             }
-          }
-
-          @keyframes spin-reverse {
-            0% {
-              transform: rotate(0deg);
-            }
-            100% {
-              transform: rotate(-360deg);
-            }
-          }
-
-          .animate-spin-reverse {
-            animation: spin-reverse 2s linear infinite;
-          }
-          
-          .animate-spin-slow {
-            animation: spin 1.5s linear infinite;
           }
         `}
       </style>
       <div className="relative flex justify-center items-center">
-        <div className="w-12 h-12 dark:invert border-4 border-neutral-800 border-t-transparent rounded-full animate-spin-slow"></div>
-        <div className="absolute w-10 h-10  dark:invert border-4 border-neutral-600 border-b-transparent rounded-full animate-spin-reverse"></div>
+        <div
+          className="size-12 dark:invert border-4 border-neutral-700 border-t-transparent rounded-full ease-in-out repeat-infinite"
+          style={{
+            animationName: "spin",
+            animationDuration: "1.5s",
+          }}
+        />
+        <div
+          className="absolute size-9  dark:invert border-4 border-neutral-700 border-b-transparent rounded-full ease-in-out repeat-infinite direction-reverse"
+          style={{
+            animationName: "spin",
+            animationDuration: "2s",
+          }}
+        />
         <span className="sr-only">Loading...</span>
       </div>
     </>
