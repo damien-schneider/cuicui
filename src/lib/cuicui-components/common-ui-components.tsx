@@ -31,18 +31,18 @@ import PreviewBeforeEffectButtonDefault from "#/src/ui/cuicui/common-ui/buttons/
 import PreviewBeforeEffectButtonHoverOnly from "#/src/ui/cuicui/common-ui/buttons/before-effect-button/preview-hover-only";
 import HoverEffectCardPreview from "#/src/ui/cuicui/common-ui/cards/hover-effect-card/hover-effect-card-preview";
 import { PreviewModernSimpleInput } from "#/src/ui/cuicui/common-ui/inputs/modern-simple-input/preview-simple-modern-input";
+import { CircularBarsSpinnerLoader } from "#/src/ui/cuicui/common-ui/loaders/spinner-loader/circular-bars-spinner-loader";
+import { DualRingSpinnerLoader } from "#/src/ui/cuicui/common-ui/loaders/spinner-loader/dual-ring-spinner-loader";
+import { SpinnerLoader } from "#/src/ui/cuicui/common-ui/loaders/spinner-loader/spinner-loader";
 import NineDotGridRandom from "#/src/ui/cuicui/common-ui/loaders/three-dot-simple-loader/nine-dot-grid-random";
 import ThreeDotLoaderGrowing from "#/src/ui/cuicui/common-ui/loaders/three-dot-simple-loader/three-dot-loader-growing";
 import { ThreeDotSimpleLoader } from "#/src/ui/cuicui/common-ui/loaders/three-dot-simple-loader/three-dot-simple-loader";
-import { SpinnerLoader } from "#/src/ui/cuicui/common-ui/loaders/spinner-loader/spinner-loader";
 import { Dock } from "#/src/ui/cuicui/common-ui/navigation/mac-dock/variant1";
 import { VercelNavigationVariant1 } from "#/src/ui/cuicui/common-ui/navigation/vercel-navigation/variant1";
 import { VercelNavigationVariant2 } from "#/src/ui/cuicui/common-ui/navigation/vercel-navigation/variant2";
 import { ClassicPulseVariant1 } from "#/src/ui/cuicui/common-ui/skeletons/classic-pulse/variant1";
-import { ShinyGradientSkeletonVariant1 } from "#/src/ui/cuicui/common-ui/skeletons/shiny-gradient/variant1";
-import { ShinyGradientSkeletonVariant2 } from "#/src/ui/cuicui/common-ui/skeletons/shiny-gradient/variant2";
-import { CircularBarsSpinnerLoader } from "#/src/ui/cuicui/common-ui/loaders/spinner-loader/circular-bars-spinner-loader";
-import { DualRingSpinnerLoader } from "#/src/ui/cuicui/common-ui/loaders/spinner-loader/dual-ring-spinner-loader";
+import { ShinyGradientSkeletonHorizontal } from "#/src/ui/cuicui/common-ui/skeletons/shiny-gradient/skeleton-shiny-gradient-horizontal";
+import { ShinyGradientSkeletonVertical } from "#/src/ui/cuicui/common-ui/skeletons/shiny-gradient/skeleton-shiny-gradient-vertical";
 
 export const commonUICategoriesList: CategoryType[] = [
   {
@@ -496,13 +496,14 @@ export const commonUICategoriesList: CategoryType[] = [
     releaseDateCategory: new Date("2024-08-01"),
     icon: BoxSelectIcon,
     previewCategory: {
-      component: <ShinyGradientSkeletonVariant1 />,
+      component: <ShinyGradientSkeletonHorizontal />,
       previewScale: 0.75,
     },
     componentList: [
       {
         sizePreview: "sm",
         slug: "classic-pulse",
+        lastUpdatedDateComponent: new Date("2024-08-01"),
         variantList: [
           {
             name: "Classic Pulse",
@@ -519,16 +520,19 @@ export const commonUICategoriesList: CategoryType[] = [
       {
         sizePreview: "sm",
         slug: "shiny-gradient",
+        lastUpdatedDateComponent: new Date("2024-09-21"),
         variantList: [
           {
             name: "Horizontal",
-            component: <ShinyGradientSkeletonVariant1 />,
-            slugPreviewFile: "variant1",
+            component: <ShinyGradientSkeletonHorizontal />,
+            slugPreviewFile: "skeleton-shiny-gradient-horizontal",
+            slugComponentFile: "skeleton-shiny-gradient",
           },
           {
             name: "Vertical",
-            component: <ShinyGradientSkeletonVariant2 />,
-            slugPreviewFile: "variant2",
+            component: <ShinyGradientSkeletonVertical />,
+            slugPreviewFile: "skeleton-shiny-gradient-vertical",
+            slugComponentFile: "skeleton-shiny-gradient",
           },
         ],
         title: "Shiny Gradient Skeleton",

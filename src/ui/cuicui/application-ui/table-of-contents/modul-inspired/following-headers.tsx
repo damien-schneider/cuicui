@@ -1,5 +1,6 @@
 "use client";
-import { ShinyGradientSkeletonVariant1 } from "#/src/ui/cuicui/common-ui/skeletons/shiny-gradient/variant1";
+
+import { ShinyGradientSkeletonHorizontal } from "#/src/ui/cuicui/common-ui/skeletons/shiny-gradient/skeleton-shiny-gradient-horizontal";
 import { cn } from "#/src/utils/cn";
 
 import { AnimatePresence, motion } from "framer-motion";
@@ -182,7 +183,7 @@ const TableOfContent = ({
     return headings[index - 1]?.id;
   }
 
-  if (headings.length === 0) return <ShinyGradientSkeletonVariant1 />;
+  if (headings.length === 0) return <ShinyGradientSkeletonHorizontal />;
 
   return (
     <nav className={cn("dark:bg-neutral-800 bg-white", className)} {...props}>
