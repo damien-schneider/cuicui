@@ -34,12 +34,15 @@ import { PreviewModernSimpleInput } from "#/src/ui/cuicui/common-ui/inputs/moder
 import NineDotGridRandom from "#/src/ui/cuicui/common-ui/loaders/three-dot-simple-loader/nine-dot-grid-random";
 import ThreeDotLoaderGrowing from "#/src/ui/cuicui/common-ui/loaders/three-dot-simple-loader/three-dot-loader-growing";
 import { ThreeDotSimpleLoader } from "#/src/ui/cuicui/common-ui/loaders/three-dot-simple-loader/three-dot-simple-loader";
+import { SpinnerLoader } from "#/src/ui/cuicui/common-ui/loaders/spinner-loader/spinner-loader";
 import { Dock } from "#/src/ui/cuicui/common-ui/navigation/mac-dock/variant1";
 import { VercelNavigationVariant1 } from "#/src/ui/cuicui/common-ui/navigation/vercel-navigation/variant1";
 import { VercelNavigationVariant2 } from "#/src/ui/cuicui/common-ui/navigation/vercel-navigation/variant2";
 import { ClassicPulseVariant1 } from "#/src/ui/cuicui/common-ui/skeletons/classic-pulse/variant1";
 import { ShinyGradientSkeletonVariant1 } from "#/src/ui/cuicui/common-ui/skeletons/shiny-gradient/variant1";
 import { ShinyGradientSkeletonVariant2 } from "#/src/ui/cuicui/common-ui/skeletons/shiny-gradient/variant2";
+import { CircularBarsSpinnerLoader } from "#/src/ui/cuicui/common-ui/loaders/spinner-loader/circular-bars-spinner-loader";
+import { DualRingSpinnerLoader } from "#/src/ui/cuicui/common-ui/loaders/spinner-loader/dual-ring-spinner-loader";
 
 export const commonUICategoriesList: CategoryType[] = [
   {
@@ -409,6 +412,30 @@ export const commonUICategoriesList: CategoryType[] = [
         ],
         title: "Three Dot Simple Loader",
         description: "A simple loader with three dots that bounce up and down.",
+        isIframed: false,
+      },
+      {
+        sizePreview: "sm",
+        slug: "spinner-loader",
+        variantList: [
+          {
+            name: "Spinner",
+            component: <SpinnerLoader />,
+            slugPreviewFile: "spinner-loader",
+          },
+          {
+            name: "Circular Bars",
+            component: <CircularBarsSpinnerLoader />,
+            slugPreviewFile: "circular-bars-spinner-loader",
+          },
+          {
+            name: "Dual Ring",
+            component: <DualRingSpinnerLoader />,
+            slugPreviewFile: "dual-ring-spinner-loader",
+          },
+        ],
+        title: "Spinner Loader",
+        description: "A simple circular loader",
         isIframed: false,
       },
     ],
