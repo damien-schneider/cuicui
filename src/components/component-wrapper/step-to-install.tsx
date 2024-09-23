@@ -1,10 +1,7 @@
-import Link from "next/link";
 import React, { type ReactNode } from "react";
-import { toast } from "sonner";
+import CopyToClipboardButton from "#/src/components/component-wrapper/copy-to-clipboard-button";
 import { CodeContainer } from "#/src/ui/code-command-container";
-import { Button } from "#/src/ui/shadcn/button";
 import { StaticStep } from "#/src/ui/stepper";
-import { cn } from "#/src/utils/cn";
 
 export type PackageToInstallType = {
   idSlug: string;
@@ -178,14 +175,15 @@ export default function StepToInstall({ code }: Readonly<{ code: string }>) {
           step={(stepList?.length ?? 0) + 2}
           title="Copy paste the component"
         >
-          <Button
+          <CopyToClipboardButton code={code} />
+          {/* <Button
             onClick={() => {
               navigator.clipboard.writeText(code);
               toast.success("Copied the code");
             }}
           >
             Copy the component code
-          </Button>
+          </Button> */}
         </StaticStep>
         <StaticStep
           step={(stepList?.length ?? 0) + 3}
@@ -201,14 +199,15 @@ export default function StepToInstall({ code }: Readonly<{ code: string }>) {
       <p className="caption-sm mb-2">
         Nothing is needed to install, just copy paste the code :
       </p>
-      <Button
+      <CopyToClipboardButton code={code} />
+      {/* <Button
         onClick={() => {
           navigator.clipboard.writeText(code);
           toast.success("Copied the code");
         }}
       >
         Copy the component code
-      </Button>
+      </Button> */}
     </div>
   );
 }

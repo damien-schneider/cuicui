@@ -1,62 +1,27 @@
-"use client";
+// import { Highlight, type PrismTheme, themes } from "prism-react-renderer";
 
-import { ClipboardIcon } from "lucide-react";
-import { Highlight, type PrismTheme, themes } from "prism-react-renderer";
-import { toast } from "sonner";
-
-import { useCopyToClipboard } from "#/src/ui/cuicui/hooks/use-copy-to-clipboard/hook/use-copy-to-clipboard";
-import "../styles/prism-js-custom.css";
+import type { HTMLAttributes } from "react";
+import CopyToClipboardButton from "#/src/components/component-wrapper/copy-to-clipboard-button";
+import ShikiCode from "#/src/ui/cuicui/application-ui/code/advanced-code-block/code-highlighter";
+// import "../styles/prism-js-custom.css";
 import { cn } from "../utils/cn";
-import { Button } from "./shadcn/button";
 export default function CodeHighlighter({
   code,
-  classNameContainer,
-}: Readonly<{ code: string; classNameContainer?: string }>) {
-  const [copiedText, copy] = useCopyToClipboard();
-  // console.log("\nCODE DANS LE HIGHLIGHT\n", code);
-  const handleCopy = (text: string) => () => {
-    copy(text)
-      .then(() => {
-        console.log("Copied!", { text });
-        toast.success("Code copied to clipboard!");
-      })
-      .catch((error) => {
-        console.error("Failed to copy!", error);
-        toast.error("Failed to copy code to clipboard!");
-      });
-  };
-
+  className,
+  ...props
+}: Readonly<
+  { code: string; className?: string } & HTMLAttributes<HTMLDivElement>
+>) {
   return (
-    <div className="w-full">
-      <Button
-        type="button"
-        onClick={handleCopy(code)}
-        variant="icon"
-        size="icon"
-        aria-label="Copy the code"
-        className="absolute top-2 right-2 p-1 bg-neutral-200 dark:bg-neutral-800"
-      >
-        <ClipboardIcon className="size-5" />
-      </Button>
-      {/* <pre className="w-full break-words overflow-hidden">
-        <code className="w-full">{code.trim()}</code>
-      </pre> */}
-      <Highlight code={code} language="tsx">
-        {({ tokens, getLineProps, getTokenProps }) => (
-          <pre className={cn("text-xs", classNameContainer)}>
-            {tokens.map((line, index) => (
-              // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
-              <div key={index} {...getLineProps({ line, key: index })}>
-                {line.map((token, index) => (
-                  // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
-                  <span key={index} {...getTokenProps({ token, index })} />
-                ))}
-              </div>
-            ))}
-          </pre>
-        )}
-      </Highlight>
-    </div>
+    <>
+      <CopyToClipboardButton code={code} />
+      <ShikiCode
+        code={code}
+        lang="typescript"
+        theme="github-light"
+        className={cn("text-sm", className)}
+      />
+    </>
   );
 }
 

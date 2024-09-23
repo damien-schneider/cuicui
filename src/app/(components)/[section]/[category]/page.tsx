@@ -1,7 +1,16 @@
 import { notFound } from "next/navigation";
+import { Fragment } from "react";
+import { fetchComponentData } from "#/src/app/(components)/[section]/[category]/process-variant-data";
 import ComingSoonCard from "#/src/components/coming-soon";
-import FullComponent from "#/src/components/component-wrapper/full-component";
+import HeaderComponent from "#/src/components/component-wrapper/header-component";
+import InspirationComponentFooter from "#/src/components/component-wrapper/inspiration-component-footer";
+import VariantTabs from "#/src/components/component-wrapper/variant-tabs";
 import { SectionsList } from "#/src/lib/cuicui-components/sections-list";
+import type {
+  CategoryType,
+  ComponentType,
+  ComponentVariantType,
+} from "#/src/lib/types/component";
 import { getFileContentAsString } from "#/src/utils/get-file-content-as-string";
 
 export async function generateStaticParams() {
@@ -37,7 +46,6 @@ export default async function Page({
     return notFound();
   }
 
-  // Use Promise.all to wait for all the async operations
   if (category.comingSoonCategory) {
     return <ComingSoonCard />;
   }
@@ -45,54 +53,35 @@ export default async function Page({
     return notFound();
   }
 
-  //TODO: Refactor this to use async await functions instead of Promise.all
-  const componentList = await Promise.all(
-    category.componentList.map(async (component) => ({
-      ...component,
-      size: component.sizePreview,
-      componentList: await Promise.all(
-        component.variantList.map(async (variant) => ({
-          variantName: variant.name,
-          component: variant.component,
-
-          previewCode: await getFileContentAsString({
-            componentSlug: category.slug,
-            variantName: `${component.slug}/${
-              variant.slugPreviewFile ?? variant.name
-            }`,
-          }),
-
-          componentCode: variant.slugComponentFile
-            ? await getFileContentAsString({
-                componentSlug: category.slug,
-                variantName: `${component.slug}/${
-                  variant.slugComponentFile ?? variant.name
-                }`,
-              })
-            : undefined,
-        })),
-      ),
-      isIframed: component.isIframed ?? false,
-    })),
-  );
+  const componentList = await fetchComponentData({
+    categorySlug: category.slug,
+    componentList: category.componentList,
+  });
 
   return (
-    <>
+    <div className="space-y-6">
       {componentList.map((component) => (
-        <FullComponent
-          key={component.title}
-          size={component.size}
-          componentList={component.componentList}
-          isIframed={component.isIframed}
-          title={component.title}
-          description={component.description}
-          rerenderButton={component.rerenderButton}
-          isResizable={component.isResizable}
-          inspiration={component.inspiration}
-          inspirationLink={component.inspirationLink}
-          isChildUsingHeightFull={component.isChildUsingHeightFull}
-        />
+        <Fragment key={component.title}>
+          <HeaderComponent
+            componentBadges={component.componentBadges}
+            title={component.title}
+            description={component.description}
+          />
+          <VariantTabs
+            key={component.title}
+            size={component.sizePreview}
+            componentList={component.componentList}
+            isIframed={component.isIframed}
+            rerenderButton={component.rerenderButton}
+            isResizable={component.isResizable}
+            isChildUsingHeightFull={component.isChildUsingHeightFull}
+          />
+          <InspirationComponentFooter
+            inspiration={component.inspiration}
+            inspirationLink={component.inspirationLink}
+          />
+        </Fragment>
       ))}
-    </>
+    </div>
   );
 }

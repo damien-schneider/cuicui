@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
-import { ThemeProvider } from "next-themes";
 import { Toaster } from "sonner";
 import "#/src/styles/globals.css";
 import { AddressBar } from "#/src/ui/address-bar";
 import { DesktopSideMenu } from "#/src/ui/navigation/desktop-menu";
 import { MobileMenu } from "../ui/navigation/mobile-menu";
-import ClientProvider from "./client-provider";
 
 import { DM_Sans } from "next/font/google";
+import Providers from "#/src/app/providers";
 const font = DM_Sans({
   subsets: ["latin"],
   display: "swap",
@@ -70,40 +69,39 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className={font.className}>
-      <ThemeProvider attribute="class">
+      <Providers>
         {/* <body className="dark:bg-[url('/grid-dark-mode.svg')] bg-[url('/grid-light-mode.svg')] dark:bg-gray-950 bg-gray-50"> */}
         <body className="dark:bg-neutral-950 bg-neutral-50 ">
           <Toaster />
-          <ClientProvider>
-            <div className="max-w-screen-2xl mx-auto">
-              <DesktopSideMenu />
-              {/* <div className="absolute top-0 left-0 bottom-0 right-0 overflow-hidden">
+
+          <div className="max-w-screen-2xl mx-auto">
+            <DesktopSideMenu />
+            {/* <div className="absolute top-0 left-0 bottom-0 right-0 overflow-hidden">
                 <div className="relative">
                   <div className="gradient-top-animation absolute rotate-3 blur-[100px] h-48 w-[60vw] -right-[20vw] z-0 -top-24 opacity-20 pointer-events-none" />
                 </div>
               </div> */}
-              <div className="lg:ml-80">
-                {/* Add overflow-auto if layout width problems */}
+            <div className="lg:ml-80">
+              {/* Add overflow-auto if layout width problems */}
 
-                <AddressBar />
-                {/* <GradientContainer
+              <AddressBar />
+              {/* <GradientContainer
                     rounded="sm"
                     background="solid"
                     classNameParent=""
                     classNameChild="px-8 py-10 min-h-[calc(100vh-6rem)]"
                   > */}
-                <main className=" p-4 md:p-6 pt-12 pb-20">
-                  {/* Move overflow-auto to the previous comment if problems occurs */}
-                  {children}
-                </main>
-                {/* </GradientContainer> */}
+              <main className=" p-4 md:p-6 pt-12 pb-20">
+                {/* Move overflow-auto to the previous comment if problems occurs */}
+                {children}
+              </main>
+              {/* </GradientContainer> */}
 
-                <MobileMenu />
-              </div>
+              <MobileMenu />
             </div>
-          </ClientProvider>
+          </div>
         </body>
-      </ThemeProvider>
+      </Providers>
     </html>
   );
 }
