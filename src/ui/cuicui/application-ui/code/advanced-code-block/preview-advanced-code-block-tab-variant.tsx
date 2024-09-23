@@ -58,18 +58,10 @@ export default function PreviewAdvancedCodeBlockTabVariant() {
         {codeToDisplay.map((code) => (
           <Tabs.Content key={code.slug} value={code.slug}>
             <AdvancedCodeBlock
-              className="hidden dark:flex bg-transparent rounded-t-none"
+              className=" bg-transparent rounded-t-none"
               fileName={code.fileName}
               code={code.code}
               lang={code.lang}
-              theme="github-dark"
-            />
-            <AdvancedCodeBlock
-              className="dark:hidden flex bg-transparent rounded-t-none"
-              fileName={code.fileName}
-              code={code.code}
-              lang={code.lang}
-              theme="github-light"
             />
           </Tabs.Content>
         ))}

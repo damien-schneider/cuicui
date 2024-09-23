@@ -10,14 +10,6 @@ export default function PreviewAdvancedCodeBlock() {
   return (
     <div className="p-2 max-w-2xl w-full">
       <AdvancedCodeBlock
-        className="hidden dark:flex"
-        fileName="./explanations.ts"
-        code={codeToDisplay}
-        lang="typescript"
-        theme="github-dark"
-      />
-      <AdvancedCodeBlock
-        className="dark:hidden flex"
         fileName="./explanations.ts"
         code={codeToDisplay}
         lang="typescript"

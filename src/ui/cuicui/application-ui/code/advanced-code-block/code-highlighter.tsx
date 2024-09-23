@@ -16,7 +16,10 @@ export async function ShikiCode({ code, lang, theme, className }: ShikiProps) {
 
   return (
     <div
-      className={cn("*:bg-transparent", className)}
+      className={cn(
+        "*:bg-transparent dark:invert hue-rotate-0 dark:hue-rotate-180",
+        className,
+      )}
       // biome-ignore lint/security/noDangerouslySetInnerHtml: <Done server side, no worries>
       dangerouslySetInnerHTML={{ __html: html }}
     />

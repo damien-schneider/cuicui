@@ -12,11 +12,11 @@ type AdvancedBlockProps = {
   className?: string;
 };
 
-export const AdvancedCodeBlock = ({
+export const AdvancedCodeBlock = async ({
   code,
   fileName,
   lang = "typescript",
-  theme = "nord",
+  theme = "github-light",
   className,
   ...props
 }: AdvancedBlockProps & HTMLAttributes<HTMLDivElement>) => {
