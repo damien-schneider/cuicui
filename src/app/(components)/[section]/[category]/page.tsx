@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import ComingSoonCard from "#/src/components/coming-soon";
-import FullComponent from "#/src/components/full-component";
+import FullComponent from "#/src/components/component-wrapper/full-component";
 import { SectionsList } from "#/src/lib/cuicui-components/sections-list";
 import { getFileContentAsString } from "#/src/utils/get-file-content-as-string";
 

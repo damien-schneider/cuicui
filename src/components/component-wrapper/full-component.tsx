@@ -1,36 +1,52 @@
 "use client";
-
 import { ScrollAreaScrollbar } from "@radix-ui/react-scroll-area";
+import * as Tabs from "@radix-ui/react-tabs";
 import { RepeatIcon } from "lucide-react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
-import { useCallback, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { toast } from "sonner";
-import { ComponentBadgeList } from "../lib/badges.const";
+import { ComponentBadgeList } from "../../lib/badges.const";
 import type {
   ComponentBadgeSlug,
   ComponentHeightType,
   FrameworkBadge,
   VariantComponent,
-} from "../lib/types/component";
-import Badge from "../ui/badge";
-import CodeHighlighter from "../ui/code-highlighter";
+} from "../../lib/types/component";
+import Badge from "../../ui/badge";
+import CodeHighlighter from "../../ui/code-highlighter";
+import "./full-component.css";
 
 import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "../ui/shadcn/resizable";
-import { ScrollArea, ScrollBar } from "../ui/shadcn/scrollarea";
+} from "../../ui/shadcn/resizable";
+import { ScrollArea, ScrollBar } from "../../ui/shadcn/scrollarea";
 
-import { NavigationMenu, NavigationMenuButton } from "../ui/navigation-menu";
-import { cn } from "../utils/cn";
-import BadgeList from "./badge-list";
-import StepToInstall from "./component-wrapper/step-to-install";
-import CustomIframeComponentDark from "./custom-iframe-component-dark";
-import CustomIframeComponentLight from "./custom-iframe-component-light";
+import { NavigationMenu, NavigationMenuButton } from "../../ui/navigation-menu";
+import { cn } from "../../utils/cn";
+import BadgeList from "../badge-list";
+import CustomIframeComponentDark from "../custom-iframe-component-dark";
+import CustomIframeComponentLight from "../custom-iframe-component-light";
+import StepToInstall from "./step-to-install";
 
 export type TabType = "preview" | "code-component" | "code-preview";
+
+const tabs = [
+  {
+    name: "Preview",
+    value: "preview",
+  },
+  {
+    name: "Preview Code",
+    value: "code-preview",
+  },
+  {
+    name: "Component Code",
+    value: "code-component",
+  },
+];
 
 // TODO : Use context to refactor everything into multiple components
 
@@ -61,15 +77,9 @@ export default function FullComponent({
   rerenderButton?: boolean;
   isChildUsingHeightFull?: boolean;
 }>) {
-  const [tab, setTab] = useState<TabType>("preview");
-
   const [selectedVariant, setSelectedVariant] = useState(1);
-  const { resolvedTheme } = useTheme();
-  const [render, setRender] = useState(0);
 
-  const handleTabChange = useCallback((newTab: TabType) => {
-    setTab(newTab);
-  }, []);
+  const [render, setRender] = useState(0);
 
   const renderedComponent = useMemo(
     () => getComponentToDisplay(componentList, selectedVariant),
@@ -134,7 +144,119 @@ export default function FullComponent({
             </div>
           </div>
         )}
-        <div
+
+        <Tabs.Root defaultValue="preview">
+          <Tabs.List
+            className={cn(
+              "p-0.5 flex items-center w-full *:py-2 *:w-full  *:data-[state=active]:bg-neutral-400/15 *:data-[state=active]:text-neutral-900 *:data-[state=active]:rounded-lg *:data-[state=active]:border-neutral-500/20",
+            )}
+          >
+            {tabs.map((tab) => {
+              if (
+                (tab.value === "code-preview" && codePreview) ||
+                (tab.value === "code-component" && codeComponent) ||
+                tab.value === "preview"
+              ) {
+                return (
+                  <Tabs.Trigger
+                    key={tab.value}
+                    value={tab.value}
+                    className={cn(
+                      "group relative font-medium text-sm transition-colors  tracking-tighter pt-3 pr-2 pb-2 pl-2",
+                    )}
+                  >
+                    <span className="group-data-[state=active]:from-sky-400 group-data-[state=active]:via-violet-500 group-data-[state=active]:to-orange-400 dark:from-neutral-300 dark:to-neutral-600 from-neutral-800 to-neutral-400 bg-clip-text text-transparent bg-gradient-to-br font-medium p-1">
+                      {tab.name}
+                    </span>
+                    {/* TODO: Can be converted probably with after: or before: */}
+                    <div
+                      className={cn(
+                        "absolute left-2 right-2 -bottom-px rounded-full h-0.5 dark:h-px transition-transform transform-gpu duration-300",
+                        "group-data-[state=active]:scale-100 scale-0",
+                        "gradient-underline", // Custom class for gradient underline
+                      )}
+                    />
+                  </Tabs.Trigger>
+                );
+              }
+            })}
+          </Tabs.List>
+          <Tabs.Content value="preview">
+            {isResizable ? (
+              <ResizablePanelGroup
+                direction="horizontal"
+                className={cn(
+                  "w-full flex items-center justify-center h-full",
+                  // getContainerChildClassBasedOnSize(size),
+                )}
+              >
+                <ResizablePanel
+                  defaultSize={100}
+                  className="dark:bg-[#101010] bg-neutral-50 rounded-md border border-neutral-500/20 relative"
+                >
+                  {rerenderButton && <RerenderButton setRender={setRender} />}
+
+                  <ComponentWrapper
+                    isIframed={isIframed}
+                    size={size}
+                    renderButton={rerenderButton}
+                    isChildUsingHeightFull={isChildUsingHeightFull}
+                    key={render}
+                  >
+                    {renderedComponent ?? <p>An error has occured</p>}
+                  </ComponentWrapper>
+                </ResizablePanel>
+                <ResizableHandle withHandle className="-translate-x-2 z-50" />
+                <ResizablePanel defaultSize={0}>
+                  <div className="flex h-full items-center justify-center" />
+                </ResizablePanel>
+              </ResizablePanelGroup>
+            ) : (
+              <ComponentWrapper
+                isIframed={isIframed}
+                size={size}
+                renderButton={rerenderButton}
+                isChildUsingHeightFull={isChildUsingHeightFull}
+                key={render}
+              >
+                {renderedComponent ?? <p>An error has occured</p>}
+              </ComponentWrapper>
+            )}
+          </Tabs.Content>
+          <Tabs.Content value="code-preview">
+            <ScrollArea
+              // With a dynamic height, the code take its full size wich is a weird behaviour
+              classNameViewport={cn(
+                "w-full rounded-md bg-neutral-100 dark:bg-neutral-900  border border-neutral-500/20",
+                getContainerHeightClass({ size }),
+              )}
+            >
+              <ScrollBar orientation="horizontal" />
+              <CodeHighlighter
+                classNameContainer={"p-2"}
+                code={codePreview ?? "An error has occured"}
+              />
+            </ScrollArea>
+            {codePreview && <StepToInstall code={codePreview} />}
+          </Tabs.Content>
+          <Tabs.Content value="code-component">
+            <ScrollArea
+              // With a dynamic height, the code take its full size wich is a weird behaviour
+              classNameViewport={cn(
+                "w-full rounded-md bg-neutral-100 dark:bg-neutral-900  border border-neutral-500/20",
+                getContainerHeightClass({ size }),
+              )}
+            >
+              <ScrollBar orientation="horizontal" />
+              <CodeHighlighter
+                classNameContainer={"p-2"}
+                code={codeComponent ?? "An error has occured"}
+              />
+            </ScrollArea>
+            {codeComponent && <StepToInstall code={codeComponent} />}
+          </Tabs.Content>
+        </Tabs.Root>
+        {/* <div
           className={cn(
             "rounded-lg border border-neutral-500/20 p-0.5",
             tab === "preview" &&
@@ -250,7 +372,7 @@ export default function FullComponent({
               {codeComponent && <StepToInstall code={codeComponent} />}
             </>
           )}
-        </div>
+        </div> */}
       </div>
 
       {inspiration && (

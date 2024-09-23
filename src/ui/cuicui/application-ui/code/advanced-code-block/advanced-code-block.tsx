@@ -12,7 +12,7 @@ type AdvancedBlockProps = {
   className?: string;
 };
 
-export const AdvancedCodeBlock = async ({
+export const AdvancedCodeBlock = ({
   code,
   fileName,
   lang = "typescript",

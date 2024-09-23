@@ -1,0 +1,14 @@
+/* Tabs.css */
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(to right, #3BC4F2, #7A69F9, #F26378, #F5833F);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Gradient Underline */
+.gradient-underline {
+  background: linear-gradient(to right, #3BC4F2, #7A69F9, #F26378, #F5833F);
+}
