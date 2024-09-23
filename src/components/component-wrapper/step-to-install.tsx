@@ -1,10 +1,7 @@
-import Link from "next/link";
 import React, { type ReactNode } from "react";
-import { toast } from "sonner";
+import CopyToClipboardButton from "#/src/components/component-wrapper/copy-to-clipboard-button";
 import { CodeContainer } from "#/src/ui/code-command-container";
-import { Button } from "#/src/ui/shadcn/button";
 import { StaticStep } from "#/src/ui/stepper";
-import { cn } from "#/src/utils/cn";
 
 export type PackageToInstallType = {
   idSlug: string;
@@ -52,28 +49,30 @@ const possiblePackagesToInstall: PackageToInstallType[] = [
     idSlug: "framer-motion",
     title: "Add framer-motion to your project",
     find: [`from "framer-motion"`],
-
     packageName: "framer-motion",
+  },
+  {
+    idSlug: "shiki",
+    title: "Add shiki to your project",
+    find: [`from "shiki"`],
+    packageName: "shiki",
   },
   {
     idSlug: "cn-util",
     title: "Add the cn util file to your project",
     find: [`import { cn } from "#/src/utils/cn"`],
-
     packageName: "clsx tailwind-merge ",
   },
   {
     idSlug: "lucide-react",
     title: "Add lucide-react to your project",
     find: [`from "lucide-react"`],
-
     packageName: "lucide-react",
   },
   {
     idSlug: "sonner",
     title: "Add sonner to your project",
     find: [`from "sonner"`],
-
     packageName: "sonner",
   },
   {
@@ -99,8 +98,20 @@ const possiblePackagesToInstall: PackageToInstallType[] = [
     idSlug: "class-variance-authority",
     title: "Add class-variance-authority to your project",
     find: [`from "class-variance-authority"`],
-
     packageName: "class-variance-authority",
+  },
+  // --- Radix Primitives ---
+  {
+    idSlug: "radix-ui/react-tabs",
+    title: "Add @radix-ui/react-tabs to your project",
+    find: [`from "@radix-ui/react-tabs"`],
+    packageName: "@radix-ui/react-tabs",
+  },
+  {
+    idSlug: "radix-ui/react-popover",
+    title: "Add @radix-ui/react-popover to your project",
+    find: [`from "@radix-ui/react-popover"`],
+    packageName: "@radix-ui/react-popover",
   },
 ];
 
@@ -164,14 +175,15 @@ export default function StepToInstall({ code }: Readonly<{ code: string }>) {
           step={(stepList?.length ?? 0) + 2}
           title="Copy paste the component"
         >
-          <Button
+          <CopyToClipboardButton code={code} />
+          {/* <Button
             onClick={() => {
               navigator.clipboard.writeText(code);
               toast.success("Copied the code");
             }}
           >
             Copy the component code
-          </Button>
+          </Button> */}
         </StaticStep>
         <StaticStep
           step={(stepList?.length ?? 0) + 3}
@@ -187,14 +199,15 @@ export default function StepToInstall({ code }: Readonly<{ code: string }>) {
       <p className="caption-sm mb-2">
         Nothing is needed to install, just copy paste the code :
       </p>
-      <Button
+      <CopyToClipboardButton code={code} />
+      {/* <Button
         onClick={() => {
           navigator.clipboard.writeText(code);
           toast.success("Copied the code");
         }}
       >
         Copy the component code
-      </Button>
+      </Button> */}
     </div>
   );
 }

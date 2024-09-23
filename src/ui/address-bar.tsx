@@ -38,7 +38,7 @@ export function AddressBar() {
   const pathname = usePathname();
 
   return (
-    <div className="p-2 sticky top-0 z-10">
+    <div className="p-2 sticky top-0 z-20">
       <GradientContainer
         rounded="sm"
         classNameParent=""

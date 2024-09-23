@@ -46,7 +46,7 @@ const pricingData: OfferCardProps[] = [
     infos: ["30 users included", "15 GB of storage", "Phone and email support"],
   },
   {
-    title: "Enterprise",
+    title: "Custom",
     description: "For large businesses",
     price: {
       monthly: 59,
