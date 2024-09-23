@@ -4,7 +4,7 @@ import type { ComponentBadgeList } from "../badges.const";
 export type Variant = `variant${number}`;
 
 export type VariantComponent = {
-  variantName: string;
+  name: string;
   component: React.JSX.Element;
   previewCode: string;
   componentCode?: string;
@@ -85,6 +85,12 @@ export type ComponentType = {
   slug: string;
   variantList: ComponentVariantType[];
 };
+
+/*
+------------------------------------
+************ Variants ************
+------------------------------------
+*/
 
 export type ComponentVariantType = {
   name: string;

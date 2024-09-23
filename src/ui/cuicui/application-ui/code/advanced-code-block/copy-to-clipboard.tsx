@@ -3,13 +3,12 @@
 import { CheckIcon, CopyIcon } from "lucide-react";
 import { useState } from "react";
 
-export default function CopyToClipboard({ code }: { code: string }) {
+export default function CopyToClipboard({ code }: Readonly<{ code: string }>) {
   const [isCopied, setIsCopied] = useState(false);
   const copyToClipboard = async () => {
     try {
       await navigator.clipboard.writeText(code);
       setIsCopied(true);
-      console.log("Copied to clipboard");
     } catch (error) {
       console.error("Error copying to clipboard", error);
     } finally {

@@ -20,7 +20,7 @@ export const authenticationCategory: CategoryType = {
       slug: "half-sided-glassmorphism",
       variantList: [
         {
-          name: "variant1",
+          name: "Default",
           component: <HalfSidedGlassMorphismAuthentication />,
           slugPreviewFile: "variant1",
         },

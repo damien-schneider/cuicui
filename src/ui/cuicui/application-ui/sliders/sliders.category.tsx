@@ -20,7 +20,7 @@ export const slidersCategory: CategoryType = {
       slug: "elastic-slider",
       variantList: [
         {
-          name: "variant1",
+          name: "Default",
           component: <ElasticSliderVariant1 />,
           slugPreviewFile: "variant1",
         },

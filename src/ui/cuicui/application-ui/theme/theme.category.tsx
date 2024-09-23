@@ -19,7 +19,7 @@ export const themeCategory: CategoryType = {
       slug: "theme-switcher",
       variantList: [
         {
-          name: "variant1",
+          name: "Default",
           component: <ThemeSwitcherButton />,
           slugPreviewFile: "theme-switcher-button",
         },

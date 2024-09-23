@@ -1,6 +1,6 @@
 import type { HTMLAttributes } from "react";
 import type { BundledLanguage, BundledTheme } from "shiki";
-import { ShikiCode } from "#/src/ui/cuicui/application-ui/code/advanced-code-block/code-highlighter";
+import ShikiCode from "#/src/ui/cuicui/application-ui/code/advanced-code-block/code-highlighter";
 import CopyToClipboard from "#/src/ui/cuicui/application-ui/code/advanced-code-block/copy-to-clipboard";
 import { cn } from "#/src/utils/cn";
 

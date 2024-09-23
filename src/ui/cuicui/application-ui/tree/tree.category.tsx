@@ -19,7 +19,7 @@ export const treeCategory: CategoryType = {
       slug: "recursive-tree",
       variantList: [
         {
-          name: "variant1",
+          name: "Default",
           component: <PreviewRecursiveTree />,
           slugPreviewFile: "preview-recursive-tree",
           slugComponentFile: "recursive-tree",

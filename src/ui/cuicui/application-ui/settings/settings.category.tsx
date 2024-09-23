@@ -18,7 +18,7 @@ export const settingsCategory: CategoryType = {
       slug: "dynamic-settings",
       variantList: [
         {
-          name: "variant1",
+          name: "Default",
           component: <DynamicSettingsVariant1 />,
           slugPreviewFile: "variant1",
         },

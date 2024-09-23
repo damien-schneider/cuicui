@@ -1,9 +1,8 @@
-"use client";
 import { type VariantProps, cva } from "class-variance-authority";
-import { CheckCheckIcon, CheckIcon } from "lucide-react";
+import { CheckIcon } from "lucide-react";
 import type React from "react";
 import type { ReactNode } from "react";
-import { orange, yellow } from "tailwindcss/colors";
+
 import { cn } from "#/src/utils/cn";
 
 export default function AdvancedBadgesVariant1() {

@@ -19,7 +19,7 @@ export const kbdCategory: CategoryType = {
       slug: "modern-detailed-kbd",
       variantList: [
         {
-          name: "variant1",
+          name: "Default",
           component: <ModernDetailedKbdVariant1 />,
           slugPreviewFile: "variant1",
         },
@@ -33,7 +33,7 @@ export const kbdCategory: CategoryType = {
       slug: "modern-3d-kbd",
       variantList: [
         {
-          name: "variant1",
+          name: "Default",
           component: <Modern3dKbdVariant1 />,
           slugPreviewFile: "variant1",
         },

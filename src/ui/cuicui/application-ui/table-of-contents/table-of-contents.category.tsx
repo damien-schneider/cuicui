@@ -22,7 +22,7 @@ export const tableOfContentCategory: CategoryType = {
       lastUpdatedDateComponent: new Date("2024-08-28"),
       variantList: [
         {
-          name: "variant1",
+          name: "Default",
           component: <TableOfContentPreview />,
           slugPreviewFile: "following-header-preview",
           slugComponentFile: "following-headers",

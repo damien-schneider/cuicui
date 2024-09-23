@@ -18,7 +18,7 @@ export const staticSteppersCategory: CategoryType = {
       slug: "code",
       variantList: [
         {
-          name: "variant1",
+          name: "Default",
           component: <StepWithStickyColorVariant1 />,
           slugPreviewFile: "variant1",
         },

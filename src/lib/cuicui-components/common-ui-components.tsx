@@ -88,7 +88,7 @@ export const commonUICategoriesList: CategoryType[] = [
         slug: "clerk-badge",
         variantList: [
           {
-            name: "default",
+            name: "Default",
             component: <ClerkBadgeVariant1 />,
             slugPreviewFile: "variant1",
           },
@@ -104,7 +104,7 @@ export const commonUICategoriesList: CategoryType[] = [
         slug: "advanced-badges",
         variantList: [
           {
-            name: "variant1",
+            name: "Default",
             component: <AdvancedBadgesVariant1 />,
             slugPreviewFile: "variant1",
           },
@@ -196,7 +196,7 @@ export const commonUICategoriesList: CategoryType[] = [
         slug: "shiny-rotating-border-button",
         variantList: [
           {
-            name: "variant1",
+            name: "Default",
             component: <ShinyRotatingBorderButtonVariant1 />,
             slugPreviewFile: "variant1",
           },
@@ -476,7 +476,7 @@ export const commonUICategoriesList: CategoryType[] = [
         slug: "mac-dock",
         variantList: [
           {
-            name: "variant1",
+            name: "Default",
             component: <Dock />,
             slugPreviewFile: "variant1",
           },

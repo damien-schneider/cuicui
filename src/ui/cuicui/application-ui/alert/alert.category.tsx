@@ -22,7 +22,7 @@ export const alertCategory: CategoryType = {
       slug: "simple-alert",
       variantList: [
         {
-          name: "variant1",
+          name: "Default",
           component: <SimpleAlert />,
           slugPreviewFile: "simple-alert",
         },
@@ -37,7 +37,7 @@ export const alertCategory: CategoryType = {
       lastUpdatedDateComponent: new Date("2024-09-16"),
       variantList: [
         {
-          name: "variant1",
+          name: "Default",
           component: <PreviewModernGlassyAlert />,
           slugPreviewFile: "preview-modern-glassy-alert",
           slugComponentFile: "modern-glassy-alert",

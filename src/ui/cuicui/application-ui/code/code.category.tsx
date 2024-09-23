@@ -22,7 +22,7 @@ export const codeCategory: CategoryType = {
       slug: "code-snippet",
       variantList: [
         {
-          name: "variant1",
+          name: "Default",
           component: <PreviewCommandVariant1 />,
           slugPreviewFile: "preview-variant1",
           slugComponentFile: "variant1",
@@ -38,7 +38,7 @@ export const codeCategory: CategoryType = {
       lastUpdatedDateComponent: new Date("2024-08-29"),
       variantList: [
         {
-          name: "variant1",
+          name: "Default",
           component: <CodeCardPreview />,
           slugPreviewFile: "code-card-preview",
           slugComponentFile: "code-card",

@@ -7,7 +7,7 @@ export const inlineCodeComponent: ComponentType = {
   slug: "inline-code",
   variantList: [
     {
-      name: "variant1",
+      name: "Default",
       component: <InlineCode />,
       slugPreviewFile: "inline-code",
     },

@@ -1,6 +1,7 @@
-"use server";
 import { type BundledLanguage, type BundledTheme, codeToHtml } from "shiki";
 import { cn } from "#/src/utils/cn";
+
+import type { HTMLAttributes } from "react";
 import "./style.css";
 type ShikiProps = {
   code: string;
@@ -8,7 +9,13 @@ type ShikiProps = {
   theme: BundledTheme;
   className?: string;
 };
-export async function ShikiCode({ code, lang, theme, className }: ShikiProps) {
+export default async function ShikiCode({
+  code,
+  lang,
+  theme,
+  className,
+  ...props
+}: Readonly<ShikiProps> & HTMLAttributes<HTMLDivElement>) {
   const html = await codeToHtml(code, {
     lang,
     theme,
@@ -17,10 +24,11 @@ export async function ShikiCode({ code, lang, theme, className }: ShikiProps) {
   return (
     <div
       className={cn(
-        "*:bg-transparent dark:invert hue-rotate-0 dark:hue-rotate-180",
+        "*:bg-transparent invert-0 dark:invert hue-rotate-0 dark:hue-rotate-180 text-sm",
         className,
       )}
-      // biome-ignore lint/security/noDangerouslySetInnerHtml: <Done server side, no worries>
+      {...props}
+      // biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
       dangerouslySetInnerHTML={{ __html: html }}
     />
   );
