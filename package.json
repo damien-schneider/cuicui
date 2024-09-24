@@ -14,7 +14,8 @@
 		"lint:check": "biome check ./src",
 		"start": "next start",
 		"lint-format:check": "pnpm format:check && pnpm lint",
-		"test": "vitest"
+		"test": "vitest",
+		"generate-package-list-check": "node scripts/generate-package-list-check.js"
 	},
 	"git": {
 		"pre-commit": "lint-staged"
