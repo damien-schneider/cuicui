@@ -81,4 +81,10 @@ export const packageCheckListToInstall: PackageToInstallType[] = [
     find: [`from "@uiw/react-signature"`],
     packageName: "@uiw/react-signature",
   },
+  {
+    idSlug: "jsbarcode",
+    title: "Add jsbarcode to your project",
+    find: [`from "jsbarcode"`],
+    packageName: "jsbarcode",
+  },
 ];
