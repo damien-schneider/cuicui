@@ -40,15 +40,15 @@ export const Tree = ({
       >
         {hasChildren && (
           <button
-            type="button"
-            onClick={toggleCollapse}
+            aria-expanded={!collapsed}
             className={cn(
               "inline-flex items-center justify-center relative focus:outline-none size-6 m-1",
               " before:inset-0 before:bg-neutral-400/10 before:rounded-md before:absolute before:transition before:border before:border-neutral-400/10 before:opacity-0 before:scale-75",
               " hover:before:opacity-100 hover:before:scale-100",
               hasChildren ? "cursor-pointer" : "cursor-default",
             )}
-            aria-expanded={!collapsed}
+            onClick={toggleCollapse}
+            type="button"
           >
             {collapsed ? (
               <FolderIcon
@@ -77,26 +77,26 @@ export const Tree = ({
         <AnimatePresence initial={false}>
           {!collapsed && (
             <motion.div
-              initial={{
-                height: 0,
-                opacity: 0,
-                translateY: -10,
-                translateX: -10,
-              }}
               animate={{
                 height: "auto",
                 opacity: 1,
                 translateY: 0,
                 translateX: 0,
               }}
+              className="overflow-hidden"
               exit={{
                 height: 0,
                 opacity: 0,
                 translateY: -10,
                 translateX: -10,
               }}
+              initial={{
+                height: 0,
+                opacity: 0,
+                translateY: -10,
+                translateX: -10,
+              }}
               transition={{ duration: 0.2 }}
-              className="overflow-hidden"
             >
               {React.Children.map(children, (child) => {
                 return React.isValidElement<TreeProps>(child)
