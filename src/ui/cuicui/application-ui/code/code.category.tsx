@@ -2,6 +2,8 @@ import { Code2Icon } from "lucide-react";
 import type { CategoryType } from "#/src/lib/types/component";
 import { advancedCodeBlockComponent } from "#/src/ui/cuicui/application-ui/code/advanced-code-block/advanced-code-block.component";
 import { CodeCardPreview } from "#/src/ui/cuicui/application-ui/code/code-card/code-card-preview";
+import { codeCardComponent } from "#/src/ui/cuicui/application-ui/code/code-card/code-card.component";
+import { codeSnippetComponent } from "#/src/ui/cuicui/application-ui/code/code-snippet/code-snippet.component";
 import PreviewCommandVariant1 from "#/src/ui/cuicui/application-ui/code/code-snippet/preview-variant1";
 import { inlineCodeComponent } from "#/src/ui/cuicui/application-ui/code/inline-code/inline-code.component";
 
@@ -16,37 +18,8 @@ export const codeCategory: CategoryType = {
     previewScale: 0.8,
   },
   componentList: [
-    {
-      isIframed: false,
-      sizePreview: "xs",
-      slug: "code-snippet",
-      variantList: [
-        {
-          name: "Default",
-          component: <PreviewCommandVariant1 />,
-          slugPreviewFile: "preview-variant1",
-          slugComponentFile: "variant1",
-        },
-      ],
-      title: "Code Snippet",
-      description: "A code snippet component with a copy to clipboard button.",
-    },
-    {
-      isIframed: false,
-      sizePreview: "md",
-      slug: "code-card",
-      lastUpdatedDateComponent: new Date("2024-08-29"),
-      variantList: [
-        {
-          name: "Default",
-          component: <CodeCardPreview />,
-          slugPreviewFile: "code-card-preview",
-          slugComponentFile: "code-card",
-        },
-      ],
-      title: "Code Card",
-      description: "A code card component with a copy to clipboard button.",
-    },
+    codeSnippetComponent,
+    codeCardComponent,
     inlineCodeComponent,
     advancedCodeBlockComponent,
   ],

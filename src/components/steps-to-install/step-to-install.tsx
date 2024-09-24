@@ -1,21 +1,8 @@
-import React, { type ReactNode } from "react";
 import CopyToClipboardButton from "#/src/components/component-wrapper/copy-to-clipboard-button";
+import { packageCheckListToInstall } from "#/src/components/steps-to-install/package-check-list";
+import type { StepToInstallType } from "#/src/components/steps-to-install/packages";
 import { CodeContainer } from "#/src/ui/code-command-container";
 import { StaticStep } from "#/src/ui/stepper";
-
-export type PackageToInstallType = {
-  idSlug: string;
-  title: string;
-  find: string[];
-  packageName: string;
-};
-
-export type StepToInstallType = {
-  idSlug: string;
-  title: string;
-  find: string[];
-  installProcess: JSX.Element;
-};
 
 const possibleStepsList: StepToInstallType[] = [
   {
@@ -31,87 +18,8 @@ import { twMerge } from "tailwind-merge";
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }`}</CodeContainer>
-        {/* <p className="caption-sm mb-2">
-          See the how to install in the Getting Started page
-        </p>
-        <Button asChild>
-          <Link href="/getting-started#cn-function">
-            Go to the Getting Started page
-          </Link>
-        </Button> */}
       </div>
     ),
-  },
-];
-
-const possiblePackagesToInstall: PackageToInstallType[] = [
-  {
-    idSlug: "framer-motion",
-    title: "Add framer-motion to your project",
-    find: [`from "framer-motion"`],
-    packageName: "framer-motion",
-  },
-  {
-    idSlug: "shiki",
-    title: "Add shiki to your project",
-    find: [`from "shiki"`],
-    packageName: "shiki",
-  },
-  {
-    idSlug: "cn-util",
-    title: "Add the cn util file to your project",
-    find: [`import { cn } from "#/src/utils/cn"`],
-    packageName: "clsx tailwind-merge ",
-  },
-  {
-    idSlug: "lucide-react",
-    title: "Add lucide-react to your project",
-    find: [`from "lucide-react"`],
-    packageName: "lucide-react",
-  },
-  {
-    idSlug: "sonner",
-    title: "Add sonner to your project",
-    find: [`from "sonner"`],
-    packageName: "sonner",
-  },
-  {
-    idSlug: "tailwind-merge",
-    title: "Add tailwind-merge to your project",
-    find: [`from "tailwind-merge"`],
-    packageName: "tailwind-merge",
-  },
-  {
-    idSlug: "embla-carousel-react",
-    title: "Add embla-carousel-react to your project",
-    find: [`from "embla-carousel-react"`],
-    packageName: "embla-carousel-react",
-  },
-  {
-    idSlug: "clsx",
-    title: "Add clsx to your project",
-    find: [`from "clsx"`],
-
-    packageName: "clsx",
-  },
-  {
-    idSlug: "class-variance-authority",
-    title: "Add class-variance-authority to your project",
-    find: [`from "class-variance-authority"`],
-    packageName: "class-variance-authority",
-  },
-  // --- Radix Primitives ---
-  {
-    idSlug: "radix-ui/react-tabs",
-    title: "Add @radix-ui/react-tabs to your project",
-    find: [`from "@radix-ui/react-tabs"`],
-    packageName: "@radix-ui/react-tabs",
-  },
-  {
-    idSlug: "radix-ui/react-popover",
-    title: "Add @radix-ui/react-popover to your project",
-    find: [`from "@radix-ui/react-popover"`],
-    packageName: "@radix-ui/react-popover",
   },
 ];
 
@@ -119,7 +27,7 @@ export default function StepToInstall({ code }: Readonly<{ code: string }>) {
   function getPackageNameListToInstall(code: string) {
     const packageListToInstall: string[] = [];
 
-    for (const installStep of possiblePackagesToInstall) {
+    for (const installStep of packageCheckListToInstall) {
       if (installStep.find.some((find) => code.includes(find))) {
         if (installStep.packageName) {
           packageListToInstall.push(installStep.packageName);
@@ -176,14 +84,6 @@ export default function StepToInstall({ code }: Readonly<{ code: string }>) {
           title="Copy paste the component"
         >
           <CopyToClipboardButton code={code} />
-          {/* <Button
-            onClick={() => {
-              navigator.clipboard.writeText(code);
-              toast.success("Copied the code");
-            }}
-          >
-            Copy the component code
-          </Button> */}
         </StaticStep>
         <StaticStep
           step={(stepList?.length ?? 0) + 3}
@@ -200,14 +100,6 @@ export default function StepToInstall({ code }: Readonly<{ code: string }>) {
         Nothing is needed to install, just copy paste the code :
       </p>
       <CopyToClipboardButton code={code} />
-      {/* <Button
-        onClick={() => {
-          navigator.clipboard.writeText(code);
-          toast.success("Copied the code");
-        }}
-      >
-        Copy the component code
-      </Button> */}
     </div>
   );
 }
