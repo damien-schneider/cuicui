@@ -2,13 +2,11 @@ import * as Tabs from "@radix-ui/react-tabs";
 
 import "./full-component.css";
 
-import type React from "react";
-import { Fragment } from "react";
 import {
   ComponentWrapper,
   getContainerHeightClass,
 } from "#/src/components/component-wrapper/component-wrapper";
-import StepToInstall from "#/src/components/component-wrapper/step-to-install";
+import StepToInstall from "#/src/components/steps-to-install/step-to-install";
 import type {
   ComponentHeightType,
   VariantComponent,
