@@ -1,5 +1,3 @@
-// import { Highlight, type PrismTheme, themes } from "prism-react-renderer";
-
 import type { HTMLAttributes } from "react";
 import CopyToClipboardButton from "#/src/components/component-wrapper/copy-to-clipboard-button";
 import ShikiCode from "#/src/ui/cuicui/application-ui/code/advanced-code-block/code-highlighter";
