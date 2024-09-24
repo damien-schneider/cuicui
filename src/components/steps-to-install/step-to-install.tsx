@@ -1,6 +1,6 @@
 import CopyToClipboardButton from "#/src/components/component-wrapper/copy-to-clipboard-button";
-import { packageCheckListToInstall } from "#/src/components/steps-to-install/package-check-list";
 import type { StepToInstallType } from "#/src/components/steps-to-install/packages";
+import { packageCheckListToInstall } from "#/src/lib/generated-package-check-list-to-install";
 import { CodeContainer } from "#/src/ui/code-command-container";
 import { StaticStep } from "#/src/ui/stepper";
 

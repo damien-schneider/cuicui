@@ -56,6 +56,9 @@ importers:
       fs-extra:
         specifier: 11.2.0
         version: 11.2.0
+      jsbarcode:
+        specifier: 3.11.6
+        version: 3.11.6
       lucide-react:
         specifier: 0.427.0
         version: 0.427.0(react@18.2.0)
@@ -2602,6 +2605,9 @@ packages:
   js-yaml@4.1.0:
     resolution: {integrity: sha512-wpxZs9NoxZaJESJGIZTyDEaYpl0FKSA+FB9aJiyemKhMwkxQg63h4T1KJgUGHpTqPDNRcmmYLugrRjJlBtWvRA==}
     hasBin: true
+
+  jsbarcode@3.11.6:
+    resolution: {integrity: sha512-G5TKGyKY1zJo0ZQKFM1IIMfy0nF2rs92BLlCz+cU4/TazIc4ZH+X1GYeDRt7TKjrYqmPfTjwTBkU/QnQlsYiuA==}
 
   jsdom@25.0.0:
     resolution: {integrity: sha512-OhoFVT59T7aEq75TVw9xxEfkXgacpqAhQaYgP9y/fDqWQCMB/b1H66RfmPm/MaeaAIU9nDwMOVTlPN51+ao6CQ==}
@@ -6315,6 +6321,8 @@ snapshots:
   js-yaml@4.1.0:
     dependencies:
       argparse: 2.0.1
+
+  jsbarcode@3.11.6: {}
 
   jsdom@25.0.0:
     dependencies:

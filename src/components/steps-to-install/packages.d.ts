@@ -1,6 +1,4 @@
 export type PackageToInstallType = {
-  idSlug: string;
-  title: string;
   find: string[];
   packageName: string;
 };

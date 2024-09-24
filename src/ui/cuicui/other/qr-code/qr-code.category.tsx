@@ -1,5 +1,6 @@
 import { QrCodeIcon } from "lucide-react";
 import type { CategoryType } from "#/src/lib/types/component";
+import { BarCodeGeneratorComponent } from "#/src/ui/cuicui/other/qr-code/bar-code-generator/bar-code-generator.component";
 import { QRCodeGeneratorComponent } from "#/src/ui/cuicui/other/qr-code/qr-code-generator/qr-code-generator.component";
 
 export const qrCodeCategory: CategoryType = {
@@ -12,5 +13,5 @@ export const qrCodeCategory: CategoryType = {
     component: QRCodeGeneratorComponent.variantList[0].component,
     previewScale: 1,
   },
-  componentList: [QRCodeGeneratorComponent],
+  componentList: [QRCodeGeneratorComponent, BarCodeGeneratorComponent],
 };
