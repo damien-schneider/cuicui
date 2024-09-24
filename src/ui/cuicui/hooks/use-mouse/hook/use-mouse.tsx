@@ -1,22 +1,23 @@
+"use client";
 import { type RefObject, useLayoutEffect, useRef, useState } from "react";
 
 interface MouseState {
-  x: number;
-  y: number;
-  elementX: number;
-  elementY: number;
-  elementPositionX: number;
-  elementPositionY: number;
+  x: number | null;
+  y: number | null;
+  elementX: number | null;
+  elementY: number | null;
+  elementPositionX: number | null;
+  elementPositionY: number | null;
 }
 
 export function useMouse(): [MouseState, RefObject<HTMLDivElement>] {
   const [state, setState] = useState<MouseState>({
-    x: 0,
-    y: 0,
-    elementX: 0,
-    elementY: 0,
-    elementPositionX: 0,
-    elementPositionY: 0,
+    x: null,
+    y: null,
+    elementX: null,
+    elementY: null,
+    elementPositionX: null,
+    elementPositionY: null,
   });
 
   const ref = useRef<HTMLDivElement | null>(null);

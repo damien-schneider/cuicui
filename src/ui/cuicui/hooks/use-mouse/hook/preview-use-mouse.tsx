@@ -15,13 +15,13 @@ export default function PreviewUseMouse() {
         <br />
         y: {mouse.y}
         <br />
-        elementX : {mouse.elementX.toFixed()}
+        elementX : {mouse.elementX?.toFixed()}
         <br />
-        elementY : {mouse.elementY.toFixed()}
+        elementY : {mouse.elementY?.toFixed()}
         <br />
-        elementPositionX : {mouse.elementPositionX.toFixed()}
+        elementPositionX : {mouse.elementPositionX?.toFixed()}
         <br />
-        elementPositionY : {mouse.elementPositionY.toFixed()}
+        elementPositionY : {mouse.elementPositionY?.toFixed()}
         <br />
       </p>
     </div>

@@ -1,5 +1,5 @@
 import { commonUICategoriesList } from "#/src/lib/cuicui-components/common-ui-components";
-import { hooksCategoriesList } from "#/src/lib/cuicui-components/hooks-components";
+
 import { marketingUIComponentList } from "#/src/lib/cuicui-components/marketing-ui-components";
 
 import { applicationUiCategoryList } from "#/src/ui/cuicui/application-ui/application-ui.section";
