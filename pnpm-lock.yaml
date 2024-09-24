@@ -32,6 +32,9 @@ importers:
       '@radix-ui/react-tooltip':
         specifier: 1.1.2
         version: 1.1.2(@types/react-dom@18.2.25)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@uiw/react-signature':
+        specifier: 1.3.1
+        version: 1.3.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       class-variance-authority:
         specifier: 0.7.0
         version: 0.7.0
@@ -65,12 +68,6 @@ importers:
       path:
         specifier: 0.12.7
         version: 0.12.7
-      prism-react-renderer:
-        specifier: 2.3.1
-        version: 2.3.1(react@18.2.0)
-      prismjs:
-        specifier: 1.29.0
-        version: 1.29.0
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -117,9 +114,6 @@ importers:
       '@types/node':
         specifier: 20.12.7
         version: 20.12.7
-      '@types/prismjs':
-        specifier: 1.26.4
-        version: 1.26.4
       '@types/react':
         specifier: 18.2.79
         version: 18.2.79
@@ -1522,9 +1516,6 @@ packages:
   '@types/node@20.12.7':
     resolution: {integrity: sha512-wq0cICSkRLVaf3UGLMGItu/PtdY7oaXaI/RVU+xliKVOtRna3PRY57ZDfztpDL0n11vfymMUnXv8QwYCO7L1wg==}
 
-  '@types/prismjs@1.26.4':
-    resolution: {integrity: sha512-rlAnzkW2sZOjbqZ743IHUhFcvzaGbqijwOu8QZnZCjfQzBqFE3s4lOTJEsxikImav9uzz/42I+O7YUs1mWgMlg==}
-
   '@types/prop-types@15.7.5':
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
 
@@ -1567,6 +1558,12 @@ packages:
   '@typescript-eslint/visitor-keys@7.2.0':
     resolution: {integrity: sha512-c6EIQRHhcpl6+tO8EMR+kjkkV+ugUNXOmeASA1rlzkd8EPIriavpWoiEz1HR/VLhbVIdhqnV6E7JZm00cBDx2A==}
     engines: {node: ^16.0.0 || >=18.0.0}
+
+  '@uiw/react-signature@1.3.1':
+    resolution: {integrity: sha512-qmuaXCKc4tRmc+qdysS1vjUBd9dBwLYVjdCOhCAxEExyl9KjgqmGN3rA/bwOteevPXFerHcEcXpNIIgwJjhVhA==}
+    peerDependencies:
+      react: '>=16.9.0'
+      react-dom: '>=16.9.0'
 
   '@ungap/structured-clone@1.2.0':
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
@@ -2958,6 +2955,9 @@ packages:
     resolution: {integrity: sha512-vE7JKRyES09KiunauX7nd2Q9/L7lhok4smP9RZTDeD4MVs72Dp2qNFVz39Nz5a0FVEW0BJR6C0DYrq6unoziZA==}
     engines: {node: '>= 14.16'}
 
+  perfect-freehand@1.2.2:
+    resolution: {integrity: sha512-eh31l019WICQ03pkF3FSzHxB8n07ItqIQ++G5UV8JX0zVOXzgTGCqnRR0jJ2h9U8/2uW4W4mtGJELt9kEV0CFQ==}
+
   picocolors@1.0.0:
     resolution: {integrity: sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==}
 
@@ -3045,15 +3045,6 @@ packages:
   pretty-format@27.5.1:
     resolution: {integrity: sha512-Qb1gy5OrP5+zDf2Bvnzdl3jsTf1qXVMazbvCoKhtKqVs4/YK4ozX4gKQJJVyNe+cajNPn0KoC0MC3FUmaHWEmQ==}
     engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
-
-  prism-react-renderer@2.3.1:
-    resolution: {integrity: sha512-Rdf+HzBLR7KYjzpJ1rSoxT9ioO85nZngQEoFIhL07XhtJHlCU3SOz0GJ6+qvMyQe0Se+BV3qpe6Yd/NmQF5Juw==}
-    peerDependencies:
-      react: '>=16.0.0'
-
-  prismjs@1.29.0:
-    resolution: {integrity: sha512-Kx/1w86q/epKcmte75LNrEoT+lX8pBpavuAbvJWRXar7Hz8jrtF+e3vY751p0R8H9HdArwaCTNDDzHg/ScJK1Q==}
-    engines: {node: '>=6'}
 
   process@0.11.10:
     resolution: {integrity: sha512-cdGef/drWFoydD1JsMzuFf8100nZl+GT+yacc2bEced5f9Rjk4z+WtFUTBu9PhOi9j/jfmBPu0mMEY4wIdAF8A==}
@@ -5038,8 +5029,6 @@ snapshots:
     dependencies:
       undici-types: 5.26.5
 
-  '@types/prismjs@1.26.4': {}
-
   '@types/prop-types@15.7.5': {}
 
   '@types/react-dom@18.2.25':
@@ -5092,6 +5081,12 @@ snapshots:
     dependencies:
       '@typescript-eslint/types': 7.2.0
       eslint-visitor-keys: 3.4.3
+
+  '@uiw/react-signature@1.3.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+    dependencies:
+      perfect-freehand: 1.2.2
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
 
   '@ungap/structured-clone@1.2.0': {}
 
@@ -6693,6 +6688,8 @@ snapshots:
 
   pathval@2.0.0: {}
 
+  perfect-freehand@1.2.2: {}
+
   picocolors@1.0.0: {}
 
   picocolors@1.0.1: {}
@@ -6769,14 +6766,6 @@ snapshots:
       ansi-regex: 5.0.1
       ansi-styles: 5.2.0
       react-is: 17.0.2
-
-  prism-react-renderer@2.3.1(react@18.2.0):
-    dependencies:
-      '@types/prismjs': 1.26.4
-      clsx: 2.1.0
-      react: 18.2.0
-
-  prismjs@1.29.0: {}
 
   process@0.11.10: {}
 
