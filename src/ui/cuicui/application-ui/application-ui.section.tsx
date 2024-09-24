@@ -6,6 +6,7 @@ import { codeCategory } from "#/src/ui/cuicui/application-ui/code/code.category"
 import { kbdCategory } from "#/src/ui/cuicui/application-ui/kbd/kbd.category";
 import { searchBarsCategory } from "#/src/ui/cuicui/application-ui/search-bars/search-bars.category";
 import { settingsCategory } from "#/src/ui/cuicui/application-ui/settings/settings.category";
+import { signatureCategory } from "#/src/ui/cuicui/application-ui/signature/signature.category";
 import { slidersCategory } from "#/src/ui/cuicui/application-ui/sliders/sliders.category";
 import { staticSteppersCategory } from "#/src/ui/cuicui/application-ui/static-steppers/static-steppers.category";
 import { themeCategory } from "#/src/ui/cuicui/application-ui/theme/theme.category";
@@ -19,6 +20,7 @@ export const applicationUiCategoryList: CategoryType[] = [
   kbdCategory,
   searchBarsCategory,
   settingsCategory,
+  signatureCategory,
   slidersCategory,
   staticSteppersCategory,
   themeCategory,
