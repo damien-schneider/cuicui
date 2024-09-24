@@ -19,7 +19,7 @@ const commentStatement =
   "// This is an automated generated file with the ./scripts/generate-package-list-check.ts script\n";
 
 // biome-ignore lint/style/noUnusedTemplateLiteral: <We need template litterals in the final file>
-const exportStatementStart = `export const packageCheckListToInstall: PackageToInstallType[] = [\n`;
+const exportStatementStart = `export const packageCheckListToInstall: PackageToInstallType[] = [`;
 
 // biome-ignore lint/style/noUnusedTemplateLiteral: <We need template litterals in the final file>
 const exportStatementEnd = `];\n`;
