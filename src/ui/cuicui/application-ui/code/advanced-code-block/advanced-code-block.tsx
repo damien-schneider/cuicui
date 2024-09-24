@@ -23,21 +23,21 @@ export const AdvancedCodeBlock = ({
   return (
     <figure
       className={cn(
-        "relative flex leading-6 flex-wrap bg-neutral-200/70 dark:bg-[rgb(33,33,38)] rounded-2xl flex-col -mt-1 w-full text-white",
+        "-mt-1 relative flex w-full flex-col flex-wrap rounded-2xl bg-neutral-200/70 text-white leading-6 dark:bg-[rgb(33,33,38)]",
         className,
       )}
       {...props}
     >
       <div className="flex items-center justify-between px-5 py-3">
-        <figcaption className="mr-[-48px] max-w-full text-xs font-medium text-neutral-600 dark:text-neutral-200 whitespace-nowrap">
+        <figcaption className="mr-[-48px] max-w-full whitespace-nowrap font-medium text-neutral-600 text-xs dark:text-neutral-200">
           <span>{fileName ?? <br />}</span>
         </figcaption>
         <CopyToClipboard code={code} />
       </div>
       <div className="w-full px-1 pb-1">
-        <div className="relative isolate overflow-hidden rounded-xl border-t dark:border-white/15 border-white/80 shadow-sm shadow-black/5 dark:shadow-black/10">
+        <div className="relative isolate overflow-hidden rounded-xl border-white/80 border-t shadow-black/5 shadow-sm dark:border-white/15 dark:shadow-black/10">
           <pre
-            className="text-sm overflow-x-auto overflow-y-auto bg-white/50 dark:bg-zinc-700/50 py-4 leading-6 text-white"
+            className="overflow-x-auto overflow-y-auto bg-white/50 py-4 text-sm text-white leading-6 dark:bg-zinc-700/50"
             style={{ paddingRight: "10px" }}
           >
             <ShikiCode code={code} lang={lang} theme={theme} />

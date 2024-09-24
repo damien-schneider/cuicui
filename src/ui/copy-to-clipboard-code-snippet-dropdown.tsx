@@ -20,7 +20,7 @@ import {
   usePackageManager,
 } from "./store/use-package-manager";
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function SnippetCommandCard({
   code,
@@ -47,7 +47,7 @@ export default function SnippetCommandCard({
   }, [isCopied]);
 
   return (
-    <div className="block w-full relative card">
+    <div className="card relative block w-full">
       <ScrollArea classNameViewport={cn("w-full ")}>
         <ScrollBar orientation="horizontal" />
         <code className="text-nowrap pr-10 text-sm">
@@ -58,12 +58,12 @@ export default function SnippetCommandCard({
         </code>
       </ScrollArea>
       <DropdownMenu>
-        <DropdownMenuTrigger asChild>
+        <DropdownMenuTrigger asChild={true}>
           <Button
-            variant="icon"
-            size="icon"
             aria-label="Copy the code"
-            className="absolute top-2 right-2 p-1 bg-neutral-200 dark:bg-neutral-800"
+            className="absolute top-2 right-2 bg-neutral-200 p-1 dark:bg-neutral-800"
+            size="icon"
+            variant="icon"
           >
             {isCopied ? (
               <CheckIcon className="size-5" />

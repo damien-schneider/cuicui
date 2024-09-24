@@ -15,7 +15,7 @@ export default function MovingBands({
         }`}
       </style>
       <div
-        className="w-full h-full flex justify-center items-center bg-transparent"
+        className="flex h-full w-full items-center justify-center bg-transparent"
         style={{
           background:
             "linear-gradient(135deg, rgb(126,126,126,0.3) 25%, rgb(126,126,126,0.1) 25%, rgb(126,126,126,0.1) 50%, rgb(126,126,126,0.3) 50%, rgb(126,126,126,0.3) 75%, rgb(126,126,126,0.1) 75%, rgb(126,126,126,0.1) 100%)",

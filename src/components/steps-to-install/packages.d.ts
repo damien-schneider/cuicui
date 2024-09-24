@@ -1,3 +1,5 @@
+import type { JSX } from "react";
+
 export type PackageToInstallType = {
   find: string[];
   packageName: string;

@@ -2,18 +2,18 @@ import TableOfContent from "#/src/ui/cuicui/application-ui/table-of-contents/mod
 
 export default function TableOfContentPreview() {
   return (
-    <div className="w-full relative flex gap-8 flex-col md:flex-row">
+    <div className="relative flex w-full flex-col gap-8 md:flex-row">
       <TableOfContent
+        className="w-full rounded-lg p-2 md:w-72"
         idOfParentContainer="parent-content"
-        className="p-2 rounded-lg md:w-72 w-full"
       />
       <div className="w-full">
-        <p className="text-xs text-neutral-500 mb-2">
+        <p className="mb-2 text-neutral-500 text-xs">
           Scroll the section below
         </p>
         <div
+          className="h-96 w-full space-y-20 overflow-scroll rounded-xl bg-neutral-500/10 p-8"
           id="parent-content"
-          className="space-y-20 overflow-scroll h-96 bg-neutral-500/10 p-8 rounded-xl w-full"
         >
           <h1>Table of content preview</h1>
           <LoremIpsum />

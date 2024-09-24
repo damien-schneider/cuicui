@@ -1,5 +1,4 @@
 import Link from "next/link";
-import React from "react";
 
 export default function InspirationComponentFooter({
   inspiration,
@@ -13,14 +12,14 @@ export default function InspirationComponentFooter({
   }
 
   return (
-    <p className="text-neutral-500 text-xs mt-4">
+    <p className="mt-4 text-neutral-500 text-xs">
       Inspired by{" "}
       {inspirationLink ? (
         <Link
-          href={inspirationLink}
-          target="_blank"
-          rel="noopener noreferrer"
           className="text-amber-500 hover:text-amber-600"
+          href={inspirationLink}
+          rel="noopener noreferrer"
+          target="_blank"
         >
           {inspiration}
         </Link>

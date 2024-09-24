@@ -1,8 +1,7 @@
 "use client";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react";
-import type React from "react";
-import { Fragment, useState } from "react";
+import { useState } from "react";
 
 const testimonials = [
   {
@@ -39,48 +38,48 @@ export function TestimonialsVariant1() {
   }
 
   return (
-    <div className="w-full bg-neutral-100 dark:bg-neutral-900 rounded-2xl p-8 overflow-hidden ">
-      <h2 className="text-xl font-medium text-neutral-950 dark:text-neutral-50">
+    <div className="w-full overflow-hidden rounded-2xl bg-neutral-100 p-8 dark:bg-neutral-900 ">
+      <h2 className="font-medium text-neutral-950 text-xl dark:text-neutral-50">
         Testimonials
       </h2>
-      <p className="text-sm text-neutral-500">
+      <p className="text-neutral-500 text-sm">
         Why people love using Biltmore to get more done.
       </p>
-      <div className="flex gap-2 justify-end">
+      <div className="flex justify-end gap-2">
         <button
+          className="group inline-flex size-7 items-center justify-center rounded-full bg-white p-1.5 dark:bg-neutral-950"
           disabled={currentSlide === 0}
-          type="button"
           onClick={handlePreviousSlide}
-          className="rounded-full group size-7 p-1.5 bg-white dark:bg-neutral-950 inline-flex items-center justify-center"
+          type="button"
         >
-          <ArrowLeftIcon className="group-disabled:stroke-neutral-500/40 stroke-blue-500 transition-colors transform-gpu" />
+          <ArrowLeftIcon className="transform-gpu stroke-blue-500 transition-colors group-disabled:stroke-neutral-500/40" />
         </button>
         <button
+          className="group inline-flex size-7 items-center justify-center rounded-full bg-white p-1.5 dark:bg-neutral-950"
           disabled={currentSlide === testimonials.length - 1}
-          type="button"
           onClick={handleNextSlide}
-          className="rounded-full group size-7 p-1.5 bg-white dark:bg-neutral-950  inline-flex items-center justify-center"
+          type="button"
         >
-          <ArrowRightIcon className="group-disabled:stroke-neutral-500/40 stroke-blue-500 transition-colors transform-gpu" />
+          <ArrowRightIcon className="transform-gpu stroke-blue-500 transition-colors group-disabled:stroke-neutral-500/40" />
         </button>
       </div>
-      <section className="flex mt-8 *:shrink-0 gap-2 w-full">
+      <section className="mt-8 flex w-full gap-2 *:shrink-0">
         {testimonials.map((testimonial, index) => (
-          <AnimatePresence mode="popLayout" key={testimonial.content}>
+          <AnimatePresence key={testimonial.content} mode="popLayout">
             {index >= currentSlide && (
               <motion.div
-                initial={{ opacity: 0, x: 0, scale: 0.8 }}
                 animate={{ opacity: 1, x: 0, scale: 1 }}
+                className="flex h-60 w-[24rem] transform-gpu flex-col justify-between rounded-lg bg-white p-4 shadow-sm dark:bg-neutral-800"
                 exit={{ opacity: 0, x: 0, scale: 0.8 }}
+                initial={{ opacity: 0, x: 0, scale: 0.8 }}
+                layout={true}
                 transition={{ duration: 0.35, ease: "easeInOut" }}
-                layout
-                className="bg-white dark:bg-neutral-800 rounded-lg p-4 flex flex-col justify-between h-60 w-[24rem] shadow-sm transform-gpu"
               >
-                <div className="size-7 bg-neutral-500/10 rounded-full" />
-                <p className="tracking-tight font-medium leading-5 text-neutral-600 dark:text-neutral-400">
+                <div className="size-7 rounded-full bg-neutral-500/10" />
+                <p className="font-medium text-neutral-600 leading-5 tracking-tight dark:text-neutral-400">
                   {testimonial.content}
                 </p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500">
+                <p className="text-neutral-400 text-xs dark:text-neutral-500">
                   {testimonial.author}
                 </p>
               </motion.div>

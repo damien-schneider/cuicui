@@ -85,7 +85,7 @@ const useNetworkStateSubscribe = (callback: () => void): (() => void) => {
 };
 
 const getNetworkStateServerSnapshot = (): never => {
-  throw Error("useNetworkState is a client-only hook");
+  throw new Error("useNetworkState is a client-only hook");
 };
 
 export function useNetworkStatus(): NetworkState {

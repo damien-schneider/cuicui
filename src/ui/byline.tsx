@@ -7,31 +7,31 @@ export default function Byline({
 }: Readonly<{ className?: string }>) {
   return (
     <GradientContainer
-      rounded="sm"
-      classNameParent="w-full"
       classNameChild="px-4 py-2"
+      classNameParent="w-full"
+      rounded="sm"
     >
       <div className={cn("block ", className)}>
-        <p className="text-neutral-400 text-sm inline">By </p>
+        <p className="inline text-neutral-400 text-sm">By </p>
         <Link
-          href="https://www.linkedin.com/in/schneider-damien/"
-          title="Damien Schneider LinkedIn"
-          className="text-neutral-400 text-sm hover:text-neutral-500 dark:hover:text-neutral-100 inline"
-          target="_blank"
-          rel="noreferrer"
           aria-label="Damien Schneider LinkedIn"
+          className="inline text-neutral-400 text-sm hover:text-neutral-500 dark:hover:text-neutral-100"
+          href="https://www.linkedin.com/in/schneider-damien/"
+          rel="noreferrer"
+          target="_blank"
+          title="Damien Schneider LinkedIn"
         >
           Damien Schneider
         </Link>
 
         <div className="text-neutral-400 text-sm">
           <Link
-            className="underline decoration-dotted underline-offset-4 transition-colors dark:hover:text-neutral-300 hover:text-neutral-500"
-            href="https://github.com/damien-schneider"
-            target="_blank"
-            rel="noreferrer"
-            title="View my GitHub"
             aria-label="View my GitHub"
+            className="underline decoration-dotted underline-offset-4 transition-colors hover:text-neutral-500 dark:hover:text-neutral-300"
+            href="https://github.com/damien-schneider"
+            rel="noreferrer"
+            target="_blank"
+            title="View my GitHub"
           >
             View my GitHub
           </Link>

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import React from "react";
 
 export default function DynamicSquareBackground({
   title,
@@ -28,23 +27,23 @@ export default function DynamicSquareBackground({
         }
       `}
       </style>
-      <div className="py-4 px-8 w-80 rounded-xl border border-neutral-400/20 relative overflow-hidden flex flex-col shadow-sm gap-8 dark:shadow-black">
+      <div className="relative flex w-80 flex-col gap-8 overflow-hidden rounded-xl border border-neutral-400/20 px-8 py-4 shadow-sm dark:shadow-black">
         <DecorativeTilesBackground />
         <div className="z-20">
           <div className="">
-            <h3 className="inline text-xl font-semibold text-neutral-900 dark:text-neutral-100">
+            <h3 className="inline font-semibold text-neutral-900 text-xl dark:text-neutral-100">
               {title}
             </h3>
-            <p className="inline align-top  border border-neutral-900 dark:border-neutral-400 font-medium tracking-tight text-xs uppercase px-0.5 rounded-sm ml-2">
+            <p className="ml-2 inline rounded-sm border border-neutral-900 px-0.5 align-top font-medium text-xs uppercase tracking-tight dark:border-neutral-400">
               {tag}
             </p>
           </div>
-          <p className="text-neutral-500 dark:text-neutral-400 mt-1">
+          <p className="mt-1 text-neutral-500 dark:text-neutral-400">
             {description}
           </p>
         </div>
         <Link
-          className="z-20 h-12 inline-flex w-full justify-center items-center rounded-lg bg-neutral-200/20 dark:bg-neutral-500/20 dark:hover:bg-neutral-500/40 hover:bg-neutral-200/50 transition-colors backdrop-blur-md border border-neutral-500/15 hover:border-neutral-500/30 dark:text-neutral-300 text-neutral-600 font-medium"
+          className="z-20 inline-flex h-12 w-full items-center justify-center rounded-lg border border-neutral-500/15 bg-neutral-200/20 font-medium text-neutral-600 backdrop-blur-md transition-colors hover:border-neutral-500/30 hover:bg-neutral-200/50 dark:bg-neutral-500/20 dark:text-neutral-300 dark:hover:bg-neutral-500/40"
           href={buttonHref}
         >
           {buttonText}
@@ -62,26 +61,26 @@ const DecorativeTilesBackground = () => {
   return (
     <div
       aria-hidden="true"
-      className="flex flex-wrap absolute inset-0 select-none pointer-events-none z-10"
+      className="pointer-events-none absolute inset-0 z-10 flex select-none flex-wrap"
     >
       {Array.from({ length: rows }).map((_, rowIndex) => {
         return (
           <div
+            className="flex h-[16px] w-full border-neutral-500/20 border-b border-dashed"
             // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
             key={`line-${rowIndex}`}
-            className="w-full h-[16px] flex border-b border-neutral-500/20 border-dashed"
           >
             {Array.from({ length: columns }).map((_, colIndex) => {
               const delay = Math.random() * animationDuration;
 
               return (
                 <div
-                  className="relative w-[15px] h-[16px] border-r border-dashed border-neutral-500/20"
+                  className="relative h-[16px] w-[15px] border-neutral-500/20 border-r border-dashed"
                   // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
                   key={`tile-${colIndex}`}
                 >
                   <div
-                    className=" w-[15px] h-[16px] inset-0 dark:bg-sky-400/15 bg-sky-600/10"
+                    className=" inset-0 h-[16px] w-[15px] bg-sky-600/10 dark:bg-sky-400/15"
                     style={{
                       opacity: 0, // Start with opacity 0
                       animationName: "tiles",

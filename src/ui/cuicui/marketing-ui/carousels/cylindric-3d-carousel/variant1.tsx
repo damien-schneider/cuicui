@@ -59,23 +59,23 @@ export function CarouselCylindricalVariant1() {
         }}
       >
         <motion.div
-          drag="x"
+          animate={controls}
           className="relative flex h-full origin-center cursor-grab justify-center active:cursor-grabbing"
+          drag="x"
+          onDrag={handleDrag}
+          onDragEnd={handleDragEnd}
           style={{
             transform: transform,
             rotateY: rotation,
             width: cylinderWidth,
             transformStyle: "preserve-3d",
           }}
-          onDrag={handleDrag}
-          onDragEnd={handleDragEnd}
-          animate={controls}
         >
           {IconList.map((Item, index) => {
             return (
               <div
-                key={`face-${id}`}
                 className="absolute flex h-full origin-center items-center justify-center bg-mauve-dark-2 p-2"
+                key={`face-${id}`}
                 style={{
                   width: `${faceWidth}px`,
                   transform: `rotateY(${
@@ -85,14 +85,14 @@ export function CarouselCylindricalVariant1() {
               >
                 <div
                   className={cn(
-                    "group h-20 w-full rounded-xl flex items-center justify-center",
-                    "rounded-2xl border text-card-foreground p-6 max-w-sm mx-auto dark:border-white/10 border-neutral-500/10  ",
+                    "group flex h-20 w-full items-center justify-center rounded-xl",
+                    "mx-auto max-w-sm rounded-2xl border border-neutral-500/10 p-6 text-card-foreground dark:border-white/10 ",
                     "dark:shadow-[2px_4px_16px_0px_rgba(248,248,248,0.06)_inset]",
-                    "hover:scale-110 transition-transform neutral group",
+                    "neutral group transition-transform hover:scale-110",
                     "bg-neutral-100/90 dark:bg-neutral-800/90",
                   )}
                 >
-                  <Item className="size-8 text-neutral-700 dark:text-neutral-300 group-hover:scale-150 transition-transform neutral" />
+                  <Item className="neutral size-8 text-neutral-700 transition-transform group-hover:scale-150 dark:text-neutral-300" />
                 </div>
               </div>
             );

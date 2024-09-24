@@ -1,6 +1,6 @@
 "use client";
 import { QRCodeSVG } from "qrcode.react";
-import { useRef, useState } from "react";
+import { type RefObject, useRef, useState } from "react";
 
 import { ModernSimpleInput } from "#/src/ui/cuicui/common-ui/inputs/modern-simple-input/modern-simple-input";
 import { useCopyToClipboard } from "#/src/ui/cuicui/hooks/use-copy-to-clipboard/hook/use-copy-to-clipboard";
@@ -17,9 +17,11 @@ export const QrCodeGenerator = () => {
   const svgRef = useRef<SVGSVGElement>(null);
 
   // Function to handle SVG download
-  const handleDownloadSVG = () => {
+  const handleDownloadSvg = () => {
     const svgNode = svgRef.current;
-    if (!svgNode) return;
+    if (!svgNode) {
+      return;
+    }
 
     const serializer = new XMLSerializer();
     const svgString = serializer.serializeToString(svgNode);
@@ -35,22 +37,14 @@ export const QrCodeGenerator = () => {
   return (
     <div className="flex flex-col items-center gap-4">
       <ModernSimpleInput
-        value={value}
-        className="text-center w-80"
+        className="w-80 text-center"
         onChange={(e) => setValue(e.target.value)}
+        value={value}
       />
       <QRCodeSVG
-        ref={svgRef}
-        className="dark:bg-white rounded-md"
-        value={value}
-        title={value}
-        size={200}
         bgColor={"#ffffff00"}
+        className="rounded-md dark:bg-white"
         fgColor={"#2E5FFF"}
-        level="H"
-        marginSize={2}
-        minVersion={4}
-        // Uncomment and customize the following if you want to add an image to the QR code
         imageSettings={{
           src: "https://www.modul.day/favicon.ico",
           x: undefined,
@@ -60,23 +54,31 @@ export const QrCodeGenerator = () => {
           opacity: 1,
           excavate: true,
         }}
+        level="H"
+        marginSize={2}
+        minVersion={4}
+        ref={svgRef}
+        size={200}
+        title={value}
+        // Uncomment and customize the following if you want to add an image to the QR code
+        value={value}
       />
-      <div className="flex flex-col gap-2 *:px-3 *:py-1.5 *:border *:border-neutral-400/10 *:bg-neutral-400/20 *:text-neutral-600 *:dark:text-neutral-300 *:transition-transform *:transform-gpu *:rounded-lg">
+      <div className="flex flex-col gap-2 *:transform-gpu *:rounded-lg *:border *:border-neutral-400/10 *:bg-neutral-400/20 *:px-3 *:py-1.5 *:text-neutral-600 *:transition-transform *:dark:text-neutral-300">
         <button
-          type="button"
-          onClick={handleDownloadSVG}
           className="hover:scale-90"
+          onClick={handleDownloadSvg}
+          type="button"
         >
           Download SVG
         </button>
         <button
-          type="button"
+          className="hover:scale-90"
           onClick={() => {
             if (svgRef.current) {
-              handleDownloadPNG(svgRef.current);
+              handleDownloadPng(svgRef.current);
             }
           }}
-          className="hover:scale-90"
+          type="button"
         >
           Download PNG
         </button>
@@ -86,25 +88,23 @@ export const QrCodeGenerator = () => {
   );
 };
 
-const CopySvgButton = ({
-  svgRef,
-}: { svgRef: React.RefObject<SVGSVGElement> }) => {
-  const [copiedText, copyTextToClipboard, isCopied] = useCopyToClipboard();
+const CopySvgButton = ({ svgRef }: { svgRef: RefObject<SVGSVGElement> }) => {
+  const [_copiedText, copyTextToClipboard, isCopied] = useCopyToClipboard();
 
-  const handleCopySVG = (svgNode: SVGSVGElement) => {
+  const handleCopySvg = (svgNode: SVGSVGElement) => {
     const serializer = new XMLSerializer();
     const svgString = serializer.serializeToString(svgNode);
     copyTextToClipboard(svgString);
   };
   return (
     <button
-      type="button"
+      className="hover:scale-90"
       onClick={() => {
         if (svgRef.current) {
-          handleCopySVG(svgRef.current);
+          handleCopySvg(svgRef.current);
         }
       }}
-      className="hover:scale-90"
+      type="button"
     >
       {isCopied ? "Copied!" : "Copy SVG"}
     </button>
@@ -112,7 +112,7 @@ const CopySvgButton = ({
 };
 
 // Function to handle PNG download
-const handleDownloadPNG = (svgNode: SVGSVGElement) => {
+const handleDownloadPng = (svgNode: SVGSVGElement) => {
   const serializer = new XMLSerializer();
   const svgString = serializer.serializeToString(svgNode);
   const svgData = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(
@@ -127,7 +127,7 @@ const handleDownloadPNG = (svgNode: SVGSVGElement) => {
     canvas.height = img.height;
     const ctx = canvas.getContext("2d");
     if (!ctx) {
-      console.error("Canvas context is null");
+      alert("Failed to convert SVG to PNG.");
       return;
     }
 
@@ -142,8 +142,7 @@ const handleDownloadPNG = (svgNode: SVGSVGElement) => {
   };
 
   // Handle image loading errors
-  img.onerror = (err) => {
-    console.error("Failed to load SVG as image", err);
+  img.onerror = () => {
     alert("Failed to convert SVG to PNG.");
   };
 

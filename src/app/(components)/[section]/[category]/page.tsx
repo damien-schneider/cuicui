@@ -6,12 +6,6 @@ import HeaderComponent from "#/src/components/component-wrapper/header-component
 import InspirationComponentFooter from "#/src/components/component-wrapper/inspiration-component-footer";
 import VariantTabs from "#/src/components/component-wrapper/variant-tabs";
 import { SectionsList } from "#/src/lib/cuicui-components/sections-list";
-import type {
-  CategoryType,
-  ComponentType,
-  ComponentVariantType,
-} from "#/src/lib/types/component";
-import { getFileContentAsString } from "#/src/utils/get-file-content-as-string";
 
 export async function generateStaticParams() {
   // Iterate over the SectionsList to create all possible combinations of section and category
@@ -64,17 +58,17 @@ export default async function Page({
         <Fragment key={component.title}>
           <HeaderComponent
             componentBadges={component.componentBadges}
-            title={component.title}
             description={component.description}
+            title={component.title}
           />
           <VariantTabs
-            key={component.title}
-            size={component.sizePreview}
             componentList={component.componentList}
-            isIframed={component.isIframed}
-            rerenderButton={component.rerenderButton}
-            isResizable={component.isResizable}
             isChildUsingHeightFull={component.isChildUsingHeightFull}
+            isIframed={component.isIframed}
+            isResizable={component.isResizable}
+            key={component.title}
+            rerenderButton={component.rerenderButton}
+            size={component.sizePreview}
           />
           <InspirationComponentFooter
             inspiration={component.inspiration}

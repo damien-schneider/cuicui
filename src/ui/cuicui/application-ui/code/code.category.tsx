@@ -4,7 +4,6 @@ import { advancedCodeBlockComponent } from "#/src/ui/cuicui/application-ui/code/
 import { CodeCardPreview } from "#/src/ui/cuicui/application-ui/code/code-card/code-card-preview";
 import { codeCardComponent } from "#/src/ui/cuicui/application-ui/code/code-card/code-card.component";
 import { codeSnippetComponent } from "#/src/ui/cuicui/application-ui/code/code-snippet/code-snippet.component";
-import PreviewCommandVariant1 from "#/src/ui/cuicui/application-ui/code/code-snippet/preview-variant1";
 import { inlineCodeComponent } from "#/src/ui/cuicui/application-ui/code/inline-code/inline-code.component";
 
 export const codeCategory: CategoryType = {

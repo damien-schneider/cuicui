@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function ThreeDotLoaderGrowing() {
   const animationDuration = 1;
 
@@ -21,10 +19,10 @@ export default function ThreeDotLoaderGrowing() {
         `}
       </style>
       <div className="flex gap-2">
-        {[...Array(3)].map((_, index) => (
+        {[...new Array(3)].map((_, index) => (
           <div
+            className="size-5 origin-center rounded-xl bg-neutral-800 dark:invert"
             key={index.toString()}
-            className="bg-neutral-800 dark:invert size-5 rounded-xl origin-center"
             style={{
               animationName: "three-dot-loader-growing",
               animationDuration: `${animationDuration}s`,

@@ -8,12 +8,12 @@ export default function AnimatedTabMotionDiv({
 }: React.HTMLProps<HTMLDivElement> & MotionProps) {
   return (
     <motion.div
-      layout
-      initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
+      className={cn("absolute inset-0 z-30", className)}
       exit={{ opacity: 0, scale: 0.9 }}
+      initial={{ opacity: 0, scale: 0.95 }}
+      layout={true}
       transition={{ duration: 0.2 }}
-      className={cn("absolute inset-0 z-30 ")}
       {...props}
     />
   );

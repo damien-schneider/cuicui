@@ -1,6 +1,5 @@
 "use client";
-import { motion, useScroll } from "framer-motion";
-import { type ReactNode, useRef } from "react";
+import type { ReactNode } from "react";
 import { cn } from "#/src/utils/cn";
 
 const dataSteps = [
@@ -45,14 +44,14 @@ const StaticStep = ({
 }) => {
   return (
     <div className="flex gap-6 ">
-      <div className="flex-col flex items-center">
-        <p className="flex items-center justify-center size-8 rounded-full bg-neutral-100 dark:bg-neutral-800 dark:hover:bg-neutral-800/80 text-sm font-medium select-none flex-none text-neutral-700 dark:text-neutral-50 border-neutral-400/20 border dark:border-neutral-400/10">
+      <div className="flex flex-col items-center">
+        <p className="flex size-8 flex-none select-none items-center justify-center rounded-full border border-neutral-400/20 bg-neutral-100 font-medium text-neutral-700 text-sm dark:border-neutral-400/10 dark:bg-neutral-800 dark:text-neutral-50 dark:hover:bg-neutral-800/80">
           {step}
         </p>
-        <div className="w-px h-full relative rounded-full bg-neutral-200 dark:bg-neutral-700 my-2" />
+        <div className="relative my-2 h-full w-px rounded-full bg-neutral-200 dark:bg-neutral-700" />
       </div>
       <div className="mb-4 w-full">
-        <h6 className="text-lg ml-1 font-medium tracking-tight mb-4 text-neutral-700 dark:text-neutral-50">
+        <h6 className="mb-4 ml-1 font-medium text-lg text-neutral-700 tracking-tight dark:text-neutral-50">
           {title}
         </h6>
         {children}
@@ -63,10 +62,10 @@ const StaticStep = ({
 
 const CodeContainer = ({ children }: { children: ReactNode }) => {
   return (
-    <div className="w-full h-fit bg-neutral-100 dark:bg-neutral-800 dark:hover:bg-neutral-800/80 transition-colors duration-300 rounded-lg px-5 py-3 border border-neutral-400/20 dark:border-neutral-400/10">
+    <div className="h-fit w-full rounded-lg border border-neutral-400/20 bg-neutral-100 px-5 py-3 transition-colors duration-300 dark:border-neutral-400/10 dark:bg-neutral-800 dark:hover:bg-neutral-800/80">
       <code
         className={cn(
-          "text-neutral-500 dark:text-neutral-300 text-sm  whitespace-pre-wrap",
+          "whitespace-pre-wrap text-neutral-500 text-sm dark:text-neutral-300",
         )}
       >
         {children}

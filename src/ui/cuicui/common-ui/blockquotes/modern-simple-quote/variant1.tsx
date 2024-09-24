@@ -1,11 +1,10 @@
 import { QuoteIcon } from "lucide-react";
-import React from "react";
 
 export default function ModernSimpleQuoteVariant1() {
   return (
     <BlockQuote
-      quote="I have not failed. I've just found 10,000 ways that won't work."
       author="Thomas A. Edison"
+      quote="I have not failed. I've just found 10,000 ways that won't work."
     />
   );
 }
@@ -18,19 +17,19 @@ const BlockQuote = ({
   author: string;
 }) => {
   return (
-    <blockquote className="bg-amber-500/15 text-amber-700 dark:bg-amber-500/10 dark:text-amber-400 border-l-4 border-amber-500/70 py-2 px-4 rounded-xl">
+    <blockquote className="rounded-xl border-amber-500/70 border-l-4 bg-amber-500/15 px-4 py-2 text-amber-700 dark:bg-amber-500/10 dark:text-amber-400">
       <p className="inline italic">
         <QuoteIcon
           aria-hidden="true"
-          className="size-3 mr-1 fill-amber-700 stroke-none -translate-y-1 inline"
+          className="-translate-y-1 mr-1 inline size-3 fill-amber-700 stroke-none"
         />
         {quote}
         <QuoteIcon
           aria-hidden="true"
-          className="size-3 ml-1 fill-amber-700 stroke-none translate-y-1 inline"
+          className="ml-1 inline size-3 translate-y-1 fill-amber-700 stroke-none"
         />
       </p>
-      <p className="text-sm text-end tracking-tighter italic font-semibold mt-1.5">
+      <p className="mt-1.5 text-end font-semibold text-sm italic tracking-tighter">
         {author}
       </p>
     </blockquote>

@@ -15,7 +15,7 @@ const MAX_OVERFLOW = 50;
 
 export function ElasticSliderVariant1() {
   return (
-    <div className="flex flex-col items-center justify-center gap-4 w-48">
+    <div className="flex w-48 flex-col items-center justify-center gap-4">
       <Slider />
     </div>
   );
@@ -52,15 +52,15 @@ function Slider() {
   return (
     <>
       <motion.div
-        onHoverStart={() => animate(scale, 1.2)}
+        className="flex w-full touch-none select-none items-center justify-center gap-3"
         onHoverEnd={() => animate(scale, 1)}
-        onTouchStart={() => animate(scale, 1.2)}
+        onHoverStart={() => animate(scale, 1.2)}
         onTouchEnd={() => animate(scale, 1)}
+        onTouchStart={() => animate(scale, 1.2)}
         style={{
           scale,
           opacity: useTransform(scale, [1, 1.2], [0.7, 1]),
         }}
-        className="flex w-full touch-none select-none items-center justify-center gap-3"
       >
         <motion.div
           animate={{
@@ -73,25 +73,26 @@ function Slider() {
             ),
           }}
         >
-          <VolumeXIcon className="size-5 translate-x-0 translate-y-0 dark:text-neutral-200 text-neutral-800" />
+          <VolumeXIcon className="size-5 translate-x-0 translate-y-0 text-neutral-800 dark:text-neutral-200" />
         </motion.div>
 
         <RadixSlider.Root
-          ref={ref}
-          value={[volume]}
-          onValueChange={([v]) => setVolume(Math.floor(v))}
-          step={0.01}
           className="relative flex w-full max-w-[200px] grow cursor-grab touch-none select-none items-center py-4 active:cursor-grabbing"
+          onLostPointerCapture={() => {
+            animate(overflow, 0, { type: "spring", bounce: 0.5 });
+          }}
           onPointerMove={(e) => {
             if (e.buttons > 0) {
               clientX.jump(e.clientX);
             }
           }}
-          onLostPointerCapture={() => {
-            animate(overflow, 0, { type: "spring", bounce: 0.5 });
-          }}
+          onValueChange={([v]) => setVolume(Math.floor(v))}
+          ref={ref}
+          step={0.01}
+          value={[volume]}
         >
           <motion.div
+            className="flex grow"
             style={{
               scaleX: useTransform(() => {
                 if (ref.current) {
@@ -112,7 +113,6 @@ function Slider() {
               marginTop: useTransform(scale, [1, 1.2], [0, -3]),
               marginBottom: useTransform(scale, [1, 1.2], [0, -3]),
             }}
-            className="flex grow"
           >
             <RadixSlider.Track className="relative isolate h-full grow overflow-hidden rounded-full bg-neutral-500/40">
               <RadixSlider.Range className="absolute h-full bg-neutral-700 dark:bg-neutral-200" />
@@ -132,10 +132,10 @@ function Slider() {
             ),
           }}
         >
-          <Volume2Icon className="size-5 translate-x-0 translate-y-0 dark:text-neutral-200 text-neutral-800" />
+          <Volume2Icon className="size-5 translate-x-0 translate-y-0 text-neutral-800 dark:text-neutral-200" />
         </motion.div>
       </motion.div>
-      <p className="text-neutral-500 absolute -translate-y-4 text-xs font-medium tracking-tighter">
+      <p className="-translate-y-4 absolute font-medium text-neutral-500 text-xs tracking-tighter">
         {volume}
       </p>
     </>

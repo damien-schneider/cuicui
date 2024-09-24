@@ -34,19 +34,19 @@ export function AnimatedNumberVariant1() {
 
   return (
     <div
-      className="h-80 border border-neutral-500/40 rounded-3xl overflow-y-auto w-full dark:text-white text-lg relative"
+      className="relative h-80 w-full overflow-y-auto rounded-3xl border border-neutral-500/40 text-lg dark:text-white"
       ref={containerRef}
     >
       {/* <div className="h-screen p-12 bg-neutral-500/10">Section 1</div> */}
       <div className={cn("h-[200dvh] w-full")}>
         <div className="sticky top-4 p-4">
-          <p className=" text-neutral-600 dark:text-neutral-300 text-lg font-bold">
+          <p className=" font-bold text-lg text-neutral-600 dark:text-neutral-300">
             Visitors each days :
           </p>
           <AnimatedNumber
             className={cn(
-              "tracking-tighter font-bold text-6xl",
-              "bg-gradient-to-b from-neutral-700 to-neutral-800/60 dark:from-neutral-200 dark:to-neutral-200/60 bg-clip-text text-transparent",
+              "font-bold text-6xl tracking-tighter",
+              "bg-gradient-to-b from-neutral-700 to-neutral-800/60 bg-clip-text text-transparent dark:from-neutral-200 dark:to-neutral-200/60",
             )}
             value={
               // This is necessary, otherwise the value will not reach perfectly the end
@@ -63,7 +63,6 @@ export function AnimatedNumberVariant1() {
 }
 
 function AnimatedNumber({
-  from,
   value,
   className,
 }: Readonly<{ from?: number; value: number; className?: string }>) {

@@ -39,5 +39,7 @@ export function getCodeByPackageManager(packageManager: PackageManagerType) {
       return "yarn add";
     case "pnpm":
       return "pnpm add";
+    default:
+      return "npm install";
   }
 }

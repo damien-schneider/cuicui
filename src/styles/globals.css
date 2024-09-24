@@ -1,13 +1,14 @@
 @import "./shad-cn.css";
+@import "./components.css";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 /* * {
   outline: 1px solid red;
 } */
+
 @keyframes gradient-animation {
   0% {
     -webkit-background-position: 0% 50%;
@@ -24,61 +25,9 @@
 }
 
 .gradient-top-animation {
-    background-image: linear-gradient(
-        -45deg,
-        #ffcb47,
-        #e34ba9,
-        #369eff,
-        #95f3d9
-      );
-    -webkit-background-size: 400% 400%;
-    background-size: 400% 400%;
-    -webkit-animation: gradient-animation 5s ease infinite;
-    animation: gradient-animation 5s ease infinite;
+  background-image: linear-gradient(-45deg, #ffcb47, #e34ba9, #369eff, #95f3d9);
+  -webkit-background-size: 400% 400%;
+  background-size: 400% 400%;
+  -webkit-animation: gradient-animation 5s ease infinite;
+  animation: gradient-animation 5s ease infinite;
 }
-
-@layer components{
-  .header-1 {
-    @apply font-medium text-neutral-800 dark:text-neutral-200 text-3xl tracking-tight leading-8 mb-4;
-  }
-  .header-2 {
-    @apply font-medium text-neutral-800 dark:text-neutral-200 text-2xl tracking-tight leading-8 mb-3;
-  }
-  .header-3 {
-    @apply font-medium text-neutral-800 dark:text-neutral-200 text-xl tracking-tight leading-8 mb-3
-  }
-  .header-4 {
-    @apply font-medium text-neutral-800 dark:text-neutral-200 text-lg tracking-tight leading-7 mb-3
-  }
-  .header-5 {
-    @apply font-semibold text-neutral-800 dark:text-neutral-200 text-base tracking-tight mb-1
-  }
-  .header-6 {
-    @apply font-medium text-neutral-800 dark:text-neutral-200 text-sm tracking-tight ;
-  }
-  .body-1 {
-    @apply font-normal text-neutral-600 dark:text-neutral-400 text-base leading-6;
-  }
-  .comment-1 {
-    @apply font-normal text-neutral-500 dark:text-neutral-400 text-sm ;
-  }
-  .caption-md {
-    @apply font-normal text-neutral-500 dark:text-neutral-400 ;
-  }
-  .caption-sm {
-    @apply font-normal text-neutral-400 dark:text-neutral-500 text-sm ;
-  }
-  .caption-xs {
-    @apply font-normal text-neutral-400 dark:text-neutral-500 text-xs ;
-  }
-  .uppercase-title {
-    @apply font-semibold text-neutral-400 dark:text-neutral-500 text-xs uppercase tracking-wider;
-  }
-  .ul-md {
-    @apply font-normal text-neutral-700 dark:text-neutral-300 text-base leading-6 list-disc pl-5 space-y-1 mb-2;
-  }
-  .card {
-    @apply bg-neutral-300/15 hover:bg-neutral-300/10 dark:bg-neutral-700/30 dark:hover:bg-neutral-700/10 transition-colors duration-300 rounded-lg pl-5 pr-3 py-3 border border-neutral-400/20 dark:border-neutral-400/10;
-  }
-}
-

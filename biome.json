@@ -1,28 +1,58 @@
 {
-	"$schema": "https://biomejs.dev/schemas/1.7.1/schema.json",
-	"organizeImports": {
-		"enabled": true
-	},
-	"javascript": {
-		"formatter": {
-			"enabled": true,
-			"indentStyle": "space"
-		}
-	},
-	"json": {
-		"formatter": {
-			"enabled": true
-		}
-	},
-	"css": {
-		"formatter": {
-			"enabled": true
-		}
-	},
-	"linter": {
-		"enabled": true,
-		"rules": {
-			"recommended": true
-		}
-	}
+  "$schema": "https://biomejs.dev/schemas/1.9.2/schema.json",
+  "organizeImports": {
+    "enabled": true
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space"
+  },
+  "assists": {
+    "actions": {
+      "source": {
+        "useSortedKeys": "on",
+        "sortJsxProps": "on"
+      }
+    },
+    "enabled": true
+  },
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git"
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "a11y": {
+        "all": true
+      },
+      "complexity": {
+        "all": true
+      },
+      "correctness": {
+        "all": true,
+        "useImportExtensions": "off",
+        "noNodejsModules": "off"
+      },
+      "performance": {
+        "all": true
+      },
+      "security": {
+        "all": true
+      },
+      "style": {
+        "all": true,
+        "noDefaultExport": "warn",
+        "noNamespaceImport": "info"
+      },
+      "suspicious": {
+        "all": true,
+        "noReactSpecificProps": "off",
+        "noConsole": "info"
+      },
+      "nursery": {
+        "useSortedClasses": "warn"
+      }
+    }
+  }
 }

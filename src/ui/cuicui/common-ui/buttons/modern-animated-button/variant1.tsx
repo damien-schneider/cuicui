@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function ModernAnimatedButtonVariant1() {
   return (
     <>
@@ -64,17 +62,14 @@ export default function ModernAnimatedButtonVariant1() {
       `}
       </style>
       <button
-        type="button"
-        className="p-px rounded-full rotation-animation transition-all shadow-[0_0_20px_0_rgba(245,48,107,0.1)] hover:shadow-[0_0_20px_3px_rgba(245,49,108,.2)] hover:bg-[#782a2b] cursor-pointer conic-gradient dark:invert-0 invert hue-rotate-[190deg] dark:hue-rotate-0 transform-gpu"
+        className="rotation-animation conic-gradient transform-gpu cursor-pointer rounded-full p-px shadow-[0_0_20px_0_rgba(245,48,107,0.1)] hue-rotate-[190deg] invert transition-all hover:bg-[#782a2b] hover:shadow-[0_0_20px_3px_rgba(245,49,108,.2)] dark:hue-rotate-0 dark:invert-0"
         style={{
           background:
             "conic-gradient(from calc(var(--r2) - 80deg) at var(--x) 15px, transparent 0, #eca5a7 20%, transparent 25%), #452324",
         }}
+        type="button"
       >
-        <span
-          className="flex flex-nowrap items-center h-7 px-3 font-medium tracking-tighter rounded-full pointer-events-none gap-2 py-1 text-sm
-          bg-[#120d0e] text-[#eca5a7]"
-        >
+        <span className="pointer-events-none flex h-7 flex-nowrap items-center gap-2 rounded-full bg-[#120d0e] px-3 py-1 font-medium text-[#eca5a7] text-sm tracking-tighter">
           <span>Advanced button</span>
           <span className="h-5/6 w-px bg-neutral-700/50" />
           <span className="text-neutral-500 ">Hover me</span>

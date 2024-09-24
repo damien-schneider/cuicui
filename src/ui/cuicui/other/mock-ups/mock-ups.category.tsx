@@ -5,7 +5,7 @@ import { Airpods } from "#/src/ui/cuicui/other/mock-ups/airpods/airpods";
 import { AirpodsPro } from "#/src/ui/cuicui/other/mock-ups/airpods/airpods-pro";
 import MacbookVariant1 from "#/src/ui/cuicui/other/mock-ups/laptops/variant1";
 import { GooglePixelVariant1 } from "#/src/ui/cuicui/other/mock-ups/smartphone/variant1";
-import { IPhone14ProVariant2 } from "#/src/ui/cuicui/other/mock-ups/smartphone/variant2";
+import { Iphone14ProVariant2 } from "#/src/ui/cuicui/other/mock-ups/smartphone/variant2";
 
 export const mockUpsCategory: CategoryType = {
   slug: "mock-ups",
@@ -15,7 +15,7 @@ export const mockUpsCategory: CategoryType = {
   releaseDateCategory: new Date("2024-08-14"),
   icon: MonitorSmartphoneIcon,
   previewCategory: {
-    component: <IPhone14ProVariant2 />,
+    component: <Iphone14ProVariant2 />,
     previewScale: 0.2,
   },
   componentList: [
@@ -30,7 +30,7 @@ export const mockUpsCategory: CategoryType = {
       variantList: [
         {
           name: "Iphone 14",
-          component: <IPhone14ProVariant2 />,
+          component: <Iphone14ProVariant2 />,
           slugPreviewFile: "variant2",
         },
         {

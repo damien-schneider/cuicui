@@ -64,7 +64,7 @@ export default function StepToInstall({ code }: Readonly<{ code: string }>) {
     return (
       <div className="flex flex-col gap-2 p-4">
         <h4 className="header-4">Steps needed for this component</h4>
-        {stepList?.map((step, index) => (
+        {stepList?.map((step, _index) => (
           <StaticStep key={step.idSlug} step={1} title={step.title}>
             {step.installProcess}
           </StaticStep>
@@ -74,7 +74,7 @@ export default function StepToInstall({ code }: Readonly<{ code: string }>) {
             step={(stepList?.length ?? 0) + 1}
             title="Install the required packages"
           >
-            <CodeContainer isCommand>
+            <CodeContainer isCommand={true}>
               {packageListStringToInstall}
             </CodeContainer>
           </StaticStep>

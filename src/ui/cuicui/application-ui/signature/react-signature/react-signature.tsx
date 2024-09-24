@@ -7,7 +7,6 @@ import {
   Eraser,
   RefreshCcwIcon,
 } from "lucide-react";
-import type React from "react";
 import { type ComponentProps, useRef, useState } from "react";
 import { useCopyToClipboard } from "#/src/ui/cuicui/hooks/use-copy-to-clipboard/hook/use-copy-to-clipboard";
 import { cn } from "#/src/utils/cn";
@@ -34,28 +33,28 @@ export function ReactSignature({
     <div className="flex flex-col gap-2">
       <p className="text-neutral-500 text-sm tracking-tight">Just sign here</p>
       <Signature
+        className={cn(
+          "h-28 w-80 rounded-lg border border-neutral-500/20 bg-neutral-500/10",
+          readonly
+            ? "cursor-not-allowed fill-neutral-500"
+            : "fill-neutral-800 dark:fill-neutral-200",
+          className,
+        )}
         options={{
           smoothing: 0,
           streamline: 0.8,
           thinning: 0.7,
         }}
         readonly={readonly}
-        className={cn(
-          "w-80 h-28 rounded-lg border border-neutral-500/20 bg-neutral-500/10",
-          readonly
-            ? "cursor-not-allowed fill-neutral-500"
-            : "fill-neutral-800 dark:fill-neutral-200",
-          className,
-        )}
         {...props}
         ref={$svg}
       />
       <div className="flex justify-end gap-1 text-neutral-700 dark:text-neutral-200">
-        <ValidateButton readonly={readonly} onClick={handleValidate} />
+        <ValidateButton onClick={handleValidate} readonly={readonly} />
         {readonly && (
           <>
             <DownloadButton svgElement={$svg.current?.svg} />
-            <CopySVGButton svgElement={$svg.current?.svg} />
+            <CopySvgButton svgElement={$svg.current?.svg} />
           </>
         )}
         {!readonly && <ClearButton onClick={handleClear} />}
@@ -64,7 +63,7 @@ export function ReactSignature({
   );
 }
 
-function prepareSVGElement(svgElement: SVGSVGElement) {
+function prepareSvgElement(svgElement: SVGSVGElement) {
   const svgelm = svgElement.cloneNode(true) as SVGSVGElement;
   const clientWidth = svgElement.clientWidth;
   const clientHeight = svgElement.clientHeight;
@@ -84,9 +83,9 @@ function ValidateButton({
 }>) {
   return (
     <button
-      type="button"
+      className="inline-grid size-8 place-content-center rounded-md border border-neutral-500/10 bg-neutral-500/10 hover:bg-neutral-500/20"
       onClick={onClick}
-      className="size-8 inline-grid place-content-center border border-neutral-500/10 bg-neutral-500/10 rounded-md hover:bg-neutral-500/20"
+      type="button"
     >
       {readonly ? (
         <>
@@ -109,9 +108,11 @@ function DownloadButton({
   svgElement: SVGSVGElement | undefined | null;
 }>) {
   const handleDownloadImage = () => {
-    if (!svgElement) return;
+    if (!svgElement) {
+      return;
+    }
 
-    const { svgelm, clientWidth, clientHeight } = prepareSVGElement(svgElement);
+    const { svgelm, clientWidth, clientHeight } = prepareSvgElement(svgElement);
 
     const data = new XMLSerializer().serializeToString(svgelm);
     const canvas = document.createElement("canvas");
@@ -133,9 +134,9 @@ function DownloadButton({
 
   return (
     <button
-      type="button"
+      className="inline-grid size-8 place-content-center rounded-md border border-neutral-500/10 bg-neutral-500/10 hover:bg-neutral-500/20"
       onClick={handleDownloadImage}
-      className="size-8 inline-grid place-content-center border border-neutral-500/10 bg-neutral-500/10 rounded-md hover:bg-neutral-500/20"
+      type="button"
     >
       <DownloadIcon className="size-5" />
       <span className="sr-only">Download</span>
@@ -143,25 +144,27 @@ function DownloadButton({
   );
 }
 
-function CopySVGButton({
+function CopySvgButton({
   svgElement,
 }: Readonly<{
   svgElement: SVGSVGElement | undefined | null;
 }>) {
   const [_, copyText, isCopied] = useCopyToClipboard();
 
-  const handleCopySVG = () => {
-    if (!svgElement) return;
+  const handleCopySvg = () => {
+    if (!svgElement) {
+      return;
+    }
 
-    const { svgelm } = prepareSVGElement(svgElement);
+    const { svgelm } = prepareSvgElement(svgElement);
     copyText(svgelm.outerHTML);
   };
 
   return (
     <button
+      className="inline-flex items-center gap-1 rounded-md border border-neutral-500/10 bg-neutral-500/10 px-1 text-sm tracking-tight hover:bg-neutral-500/20"
+      onClick={handleCopySvg}
       type="button"
-      onClick={handleCopySVG}
-      className="inline-flex px-1 text-sm tracking-tight items-center gap-1 border border-neutral-500/10 bg-neutral-500/10 rounded-md hover:bg-neutral-500/20"
     >
       {isCopied ? (
         <>
@@ -181,9 +184,9 @@ function CopySVGButton({
 function ClearButton({ onClick }: Readonly<{ onClick: () => void }>) {
   return (
     <button
-      type="button"
+      className="inline-grid size-8 place-content-center rounded-md border border-neutral-500/10 bg-neutral-500/10 hover:bg-neutral-500/20"
       onClick={onClick}
-      className="size-8 inline-grid place-content-center border border-neutral-500/10 bg-neutral-500/10 rounded-md hover:bg-neutral-500/20"
+      type="button"
     >
       <Eraser className="size-5" />
       <span className="sr-only">Clear</span>

@@ -1,11 +1,9 @@
-import React from "react";
-
 const CodeEditor = ({ code }: { code: string }) => {
   return (
-    <div className="max-w-md group rounded-2xl shadow-sm bg-white dark:bg-neutral-800 overflow-hidden border border-neutral-500/15 transform-gpu hover:-translate-x-1 transition-transform">
+    <div className="group hover:-translate-x-1 max-w-md transform-gpu overflow-hidden rounded-2xl border border-neutral-500/15 bg-white shadow-sm transition-transform dark:bg-neutral-800">
       <div className="flex items-end">
         <span
-          className=" text-end  font-medium tracking-widest  pb-4 pl-2 pr-0.5 text-sm  dark:text-neutral-500 text-neutral-400"
+          className=" pr-0.5 pb-4 pl-2 text-end font-medium text-neutral-400 text-sm tracking-widest dark:text-neutral-500"
           style={{
             writingMode: "sideways-lr",
             textOrientation: "mixed",
@@ -13,9 +11,9 @@ const CodeEditor = ({ code }: { code: string }) => {
         >
           CSS
         </span>
-        <div className="px-4 py-2 w-full bg-white shadow-lg  dark:shadow-neutral-900 dark:bg-neutral-800  shadow-neutral-600/20 group-hover:translate-x-1 transition-transform transform-gpu rounded-2xl  border-l border-neutral-500/15">
+        <div className="w-full transform-gpu rounded-2xl border-neutral-500/15 border-l bg-white px-4 py-2 shadow-lg shadow-neutral-600/20 transition-transform group-hover:translate-x-1 dark:bg-neutral-800 dark:shadow-neutral-900">
           <pre className="pr-4">
-            <code className="code dark:text-neutral-300 text-neutral-600 text-sm">
+            <code className="code text-neutral-600 text-sm dark:text-neutral-300">
               {code}
             </code>
           </pre>

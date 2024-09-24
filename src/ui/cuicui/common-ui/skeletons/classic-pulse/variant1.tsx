@@ -1,5 +1,6 @@
 "use client";
 
+import type { HTMLAttributes } from "react";
 import { cn } from "#/src/utils/cn";
 
 export function ClassicPulseVariant1() {
@@ -17,7 +18,7 @@ export function ClassicPulseVariant1() {
 function Skeleton({
   className,
   ...props
-}: Readonly<React.HTMLAttributes<HTMLDivElement>>) {
+}: Readonly<HTMLAttributes<HTMLDivElement>>) {
   return (
     <div
       className={cn("animate-pulse rounded-xl bg-neutral-500/30", className)}

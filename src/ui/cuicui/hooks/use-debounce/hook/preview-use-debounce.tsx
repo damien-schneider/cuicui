@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 import { ModernSimpleInput } from "#/src/ui/cuicui/common-ui/inputs/modern-simple-input/modern-simple-input";
 import { useDebounce } from "#/src/ui/cuicui/hooks/use-debounce/hook/use-debounce";
 
@@ -8,18 +8,18 @@ export default function PreviewUseDebounce() {
   const delay = 500;
   const debouncedValue = useDebounce(value, delay);
   return (
-    <div className="space-y-6 relative">
+    <div className="relative space-y-6">
       <ModernSimpleInput
         className="w-72"
+        onChange={(e) => setValue(e.target.value)}
+        placeholder="Type something..."
         type="text"
         value={value}
-        placeholder="Type something..."
-        onChange={(e) => setValue(e.target.value)}
       />
 
       {debouncedValue && (
         <p className=" absolute top-full">
-          <span className="font-medium tracking-tighter text-neutral-500">
+          <span className="font-medium text-neutral-500 tracking-tighter">
             Debounced value:
           </span>
           <br />
@@ -28,7 +28,7 @@ export default function PreviewUseDebounce() {
         </p>
       )}
       {value !== debouncedValue && (
-        <p className="text-neutral-400 text-xs absolute -bottom-6">
+        <p className="-bottom-6 absolute text-neutral-400 text-xs">
           (Value will update in {delay}ms)
         </p>
       )}

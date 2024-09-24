@@ -5,17 +5,17 @@ import { useCopyToClipboard } from "#/src/ui/cuicui/hooks/use-copy-to-clipboard/
 
 export function CommandCode({ children }: Readonly<{ children: string }>) {
   const [copiedText, copy] = useCopyToClipboard();
-  const handleCopyCode = (code: string) => {
+  const handleCopyCode = (_code: string) => {
     copy(children);
     toast.success(`Command copied: ${copiedText}`);
   };
   return (
     <button
-      type="button"
+      className="flex transform-gpu items-center justify-between gap-5 rounded-full bg-amber-300/20 px-5 py-3 text-amber-800 tracking-tighter transition-all hover:bg-amber-300/15 active:scale-90 active:bg-amber-300/30 dark:text-amber-400"
       onClick={() => handleCopyCode(children)}
-      className="bg-amber-300/20 hover:bg-amber-300/15 active:bg-amber-300/30 active:scale-90 transition-all transform-gpu flex gap-5 items-center justify-between py-3 px-5 rounded-full text-amber-800 dark:text-amber-400 tracking-tighter"
+      type="button"
     >
-      <code className=" text-left whitespace-nowrap overflow-hidden overflow-ellipsis">
+      <code className=" overflow-hidden overflow-ellipsis whitespace-nowrap text-left">
         {children}
       </code>
       <ClipboardIcon className=" size-5" />

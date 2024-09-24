@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRightIcon, type LucideIcon } from "lucide-react";
 import Link from "next/link";
 import { useSelectedLayoutSegments } from "next/navigation";
-import React, { type ReactNode, useState } from "react";
+import { type ReactNode, useState } from "react";
 import { SectionsList } from "#/src/lib/cuicui-components/sections-list";
 import { firstMenuSection } from "#/src/lib/first-menu-section";
 import { cn } from "#/src/utils/cn";
@@ -50,36 +50,36 @@ export default function NavigationMenu({
 
   return (
     <nav
-      className={cn("space-y-6 px-2 mt-5 mb-12", className)}
+      className={cn("mt-5 mb-12 space-y-6 px-2", className)}
       onMouseLeave={() => handleHoverButton(null)}
     >
       <SectionWrapper name={firstMenuSection.name}>
-        {firstMenuSection.categoryList.map((category, index) => (
+        {firstMenuSection.categoryList.map((category, _index) => (
           <li
-            key={category.slug}
             className="relative list-none"
+            key={category.slug}
             onMouseEnter={() => handleHoverButton(category.slug)}
           >
             <GlobalNavItem
-              href={category.href ?? `/${category.slug}`}
-              isMobile={isMobile}
-              releaseDate={null}
-              name={category.name}
               Icon={null}
-              target={category.href ? "newWindow" : "sameWindow"}
+              href={category.href ?? `/${category.slug}`}
               isComingSoon={false}
+              isMobile={isMobile}
+              name={category.name}
+              releaseDate={null}
+              target={category.href ? "newWindow" : "sameWindow"}
               updatedDate={null}
             />
             <AnimatePresence>
               {elementFocused === category.slug && (
                 <motion.div
-                  className="absolute top-0 left-0 w-full h-full bg-neutral-200 dark:bg-neutral-800 rounded-md border border-neutral-500/10 -z-10"
-                  initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
+                  className="-z-10 absolute top-0 left-0 h-full w-full rounded-md border border-neutral-500/10 bg-neutral-200 dark:bg-neutral-800"
                   exit={{ opacity: 0 }}
-                  transition={{ duration: 0.2 }}
-                  layout
+                  initial={{ opacity: 0 }}
+                  layout={true}
                   layoutId="navigation-element"
+                  transition={{ duration: 0.2 }}
                 />
               )}
             </AnimatePresence>
@@ -89,7 +89,7 @@ export default function NavigationMenu({
       {alphabeticallySortedSectionList.map((section) => {
         return (
           <SectionWrapper key={section.slug} name={section.name}>
-            {section.categoriesList.map((category, index) => {
+            {section.categoriesList.map((category, _index) => {
               const listOfUpdatedDates = category.componentList?.map(
                 (component) => component.lastUpdatedDateComponent ?? null,
               );
@@ -102,30 +102,30 @@ export default function NavigationMenu({
 
               return (
                 <li
-                  key={category.slug}
                   className="relative list-none"
+                  key={category.slug}
                   onMouseEnter={() => handleHoverButton(category.slug)}
                 >
                   <GlobalNavItem
-                    href={`/${section.slug}/${category.slug}`}
-                    isMobile={isMobile}
-                    releaseDate={category.releaseDateCategory ?? null}
-                    name={category.name}
                     Icon={category.icon ?? null}
-                    target="sameWindow"
+                    href={`/${section.slug}/${category.slug}`}
                     isComingSoon={category.comingSoonCategory ?? false}
+                    isMobile={isMobile}
+                    name={category.name}
+                    releaseDate={category.releaseDateCategory ?? null}
+                    target="sameWindow"
                     updatedDate={closestUpdatedDate}
                   />
                   <AnimatePresence>
                     {elementFocused === category.slug && (
                       <motion.div
-                        className="absolute top-0 left-0 w-full h-full bg-neutral-200 dark:bg-neutral-800 rounded-md border border-neutral-500/10 -z-10"
-                        initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
+                        className="-z-10 absolute top-0 left-0 h-full w-full rounded-md border border-neutral-500/10 bg-neutral-200 dark:bg-neutral-800"
                         exit={{ opacity: 0 }}
-                        transition={{ duration: 0.2 }}
-                        layout
+                        initial={{ opacity: 0 }}
+                        layout={true}
                         layoutId="navigation-element"
+                        transition={{ duration: 0.2 }}
                       />
                     )}
                   </AnimatePresence>
@@ -152,6 +152,7 @@ function GlobalNavItem({
   isMobile?: boolean;
   href: string;
   name: string;
+  // biome-ignore lint/style/useNamingConvention: <As it is JSX, we have to call it with caps>
   Icon: LucideIcon | null;
   isComingSoon: boolean;
   releaseDate: Date | null;
@@ -172,53 +173,53 @@ function GlobalNavItem({
 
   return (
     <Link
+      className={cn(
+        "group flex items-center justify-between rounded-md border border-transparent px-3 font-medium text-sm",
+        isMobile ? "py-2" : "py-0.5",
+        isActive
+          ? "bg-black/5 text-black/70 dark:bg-white/10 dark:text-white/80"
+          : "text-black/40 dark:text-white/40",
+      )}
       data-testid={`navigation-link-${name}`}
       href={href}
       target={target === "newWindow" ? "_blank" : undefined}
-      className={cn(
-        "group flex items-center justify-between rounded-md px-3 font-medium text-sm border border-transparent",
-        isMobile ? "py-2" : "py-0.5",
-        isActive
-          ? "bg-black/5 dark:bg-white/10 dark:text-white/80 text-black/70"
-          : "dark:text-white/40 text-black/40",
-      )}
     >
       <div className="flex items-center gap-2 ">
         {Icon && (
-          <Icon className="size-4 text-neutral-400 dark:text-neutral-500 transition-transform transform-gpu group-hover:scale-125" />
+          <Icon className="size-4 transform-gpu text-neutral-400 transition-transform group-hover:scale-125 dark:text-neutral-500" />
         )}
-        <p className=" transition-transform group-hover:translate-x-0.5 transform-gpu tracking-tighter">
+        <p className=" transform-gpu tracking-tighter transition-transform group-hover:translate-x-0.5">
           {name}
         </p>
       </div>
       {}
       {isComingSoon ? (
         <GradientContainer
-          rounded="xs"
           classNameChild="text-xs px-1 py-0"
           classNameParent=""
+          rounded="xs"
         >
           <GradientText className="text-xs">Coming soon</GradientText>
         </GradientContainer>
       ) : isNew ? (
         <GradientContainer
-          rounded="xs"
           classNameChild="text-xs px-1 py-0"
           classNameParent=""
+          rounded="xs"
         >
           <GradientText className="text-xs">New</GradientText>
         </GradientContainer>
       ) : isUpdated ? (
         <GradientContainer
-          rounded="xs"
           classNameChild="text-xs px-1 py-0"
           classNameParent=""
+          rounded="xs"
         >
           <GradientText className="text-xs">Updated</GradientText>
         </GradientContainer>
       ) : null}
       {target === "newWindow" && (
-        <ArrowUpRightIcon className="size-4  text-black/40 dark:text-white/40 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+        <ArrowUpRightIcon className="group-hover:-translate-y-0.5 size-4 text-black/40 transition-transform group-hover:translate-x-0.5 dark:text-white/40" />
       )}
     </Link>
   );
@@ -233,7 +234,7 @@ const SectionWrapper = ({
 }) => {
   return (
     <div>
-      <div className="mb-2 px-3 font-semibold text-neutral-500 dark:text-neutral-400 text-xs uppercase tracking-wider">
+      <div className="mb-2 px-3 font-semibold text-neutral-500 text-xs uppercase tracking-wider dark:text-neutral-400">
         <div>{name}</div>
       </div>
       {children}

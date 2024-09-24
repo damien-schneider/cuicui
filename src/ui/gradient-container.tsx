@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { cn } from "#/src/utils/cn";
 
 export default ({
@@ -8,7 +9,7 @@ export default ({
   background = "glassy",
   border = true,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
   classNameParent?: string;
   classNameChild?: string;
   classNameBlur?: string;

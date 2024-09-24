@@ -15,10 +15,10 @@ export const CodeContainer = ({
     return <SnippetCommandCard code={children} />;
   }
   return (
-    <ScrollArea className="w-full card">
+    <ScrollArea className="card w-full">
       <ScrollBar orientation="horizontal" />
       <ScrollBar orientation="vertical" />
-      <CodeHighlighter code={children} className={cn("text-sm", className)} />
+      <CodeHighlighter className={cn("text-sm", className)} code={children} />
     </ScrollArea>
   );
 };

@@ -8,9 +8,9 @@ export default function FollowCursorHideCursor() {
   const translate3d = `translate3d(${mouse.elementX}px, ${mouse.elementY}px, 0)`;
 
   return (
-    <div className="w-full h-full relative cursor-none" ref={parentRef}>
+    <div className="relative h-full w-full cursor-none" ref={parentRef}>
       <div
-        className="size-6 bg-neutral-500/15 border border-neutral-500/20 rounded-full absolute pointer-events-none -top-3 -left-3"
+        className="-top-3 -left-3 pointer-events-none absolute size-6 rounded-full border border-neutral-500/20 bg-neutral-500/15"
         style={{
           transform: translate3d,
         }}

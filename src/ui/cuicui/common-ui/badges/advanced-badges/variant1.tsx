@@ -1,6 +1,5 @@
 import { type VariantProps, cva } from "class-variance-authority";
 import { CheckIcon } from "lucide-react";
-import type React from "react";
 import type { ReactNode } from "react";
 
 import { cn } from "#/src/utils/cn";
@@ -8,11 +7,11 @@ import { cn } from "#/src/utils/cn";
 export default function AdvancedBadgesVariant1() {
   const colors = Object.keys(badgeColorVariants) as ColorType[];
   return (
-    <div className="w-full h-full space-y-4">
+    <div className="h-full w-full space-y-4">
       <p className="text-neutral-400">With icon & without border</p>
       <div className="flex flex-wrap gap-4">
         {colors.map((color) => (
-          <AdvancedColorfulBadges key={color} color={color} rounded="lg">
+          <AdvancedColorfulBadges color={color} key={color} rounded="lg">
             <CheckIcon className="size-4" />
             {color}
           </AdvancedColorfulBadges>
@@ -22,9 +21,9 @@ export default function AdvancedBadgesVariant1() {
       <div className="flex flex-wrap gap-4">
         {colors.map((color) => (
           <AdvancedColorfulBadges
-            key={color}
+            border={true}
             color={color}
-            border
+            key={color}
             rounded="full"
           >
             {color}

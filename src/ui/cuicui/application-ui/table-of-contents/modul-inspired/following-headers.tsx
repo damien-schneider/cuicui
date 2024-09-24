@@ -68,7 +68,9 @@ const TableOfContent = ({
       const firstChildRect = firstChild.getBoundingClientRect();
 
       // Calculate relative coordinates from the ol element
-      if (!refTableOfContentList.current) return;
+      if (!refTableOfContentList.current) {
+        return;
+      }
       setBottomCoordinate(
         lastChildRect.bottom -
           refTableOfContentList.current.getBoundingClientRect().top,
@@ -81,14 +83,16 @@ const TableOfContent = ({
   }, [activeTableOfContentIds]);
 
   useEffect(() => {
-    if (!headings) return;
+    if (!headings) {
+      return;
+    }
     if (activeIds.length > 0) {
       const previousHeading = getPreviousHeading(activeIds[0], headings);
-      if (!previousHeading) {
-        setActiveTableOfContentIds(activeIds);
-      } else {
+      if (previousHeading) {
         const activeIdsWithPreviousHeading = [previousHeading, ...activeIds];
         setActiveTableOfContentIds(activeIdsWithPreviousHeading);
+      } else {
+        setActiveTableOfContentIds(activeIds);
       }
     } else {
       // Keep the previous active ids if there are no active ids but without the first one
@@ -102,10 +106,14 @@ const TableOfContent = ({
   }, [activeIds, headings]);
 
   useEffect(() => {
-    if (typeof document === "undefined") return;
+    if (typeof document === "undefined") {
+      return;
+    }
 
     const content = document.getElementById(idOfParentContainer);
-    if (!content) return;
+    if (!content) {
+      return;
+    }
 
     const headingElements = Array.from(
       content.querySelectorAll("h1, h2, h3, h4, h5, h6"),
@@ -179,72 +187,76 @@ const TableOfContent = ({
 
   function getPreviousHeading(id: string, headings: Heading[]) {
     const index = headings.findIndex((heading) => heading.id === id);
-    if (index === 0) return null;
+    if (index === 0) {
+      return null;
+    }
     return headings[index - 1]?.id;
   }
 
-  if (headings.length === 0) return <ShinyGradientSkeletonHorizontal />;
+  if (headings.length === 0) {
+    return <ShinyGradientSkeletonHorizontal />;
+  }
 
   return (
-    <nav className={cn("dark:bg-neutral-800 bg-white", className)} {...props}>
-      <ol ref={refTableOfContentList} className="relative overflow-hidden ">
-        {headings.map((heading, index) => {
+    <nav className={cn("bg-white dark:bg-neutral-800", className)} {...props}>
+      <ol className="relative overflow-hidden " ref={refTableOfContentList}>
+        {headings.map((heading, _index) => {
           return (
             <li
+              className="group relative px-1 text-neutral-500 hover:text-neutral-800 dark:hover:text-neutral-100"
               id={`${heading.id}-table-of-content-item`}
               key={heading.id}
-              className="relative group px-1 hover:text-neutral-800 text-neutral-500 dark:hover:text-neutral-100"
             >
               <div
                 aria-hidden="true"
-                className="absolute left-0 top-px bg-white dark:bg-neutral-800 z-20 h-full select-none pointer-events-none"
+                className="pointer-events-none absolute top-px left-0 z-20 h-full select-none bg-white dark:bg-neutral-800"
                 style={{
                   width: `${(heading.level - 1) * 8 - 1}px`,
                 }}
               />
               <div
                 aria-hidden="true"
-                className="absolute w-full bg-white dark:bg-neutral-800 h-full z-20 select-none pointer-events-none"
+                className="pointer-events-none absolute z-20 h-full w-full select-none bg-white dark:bg-neutral-800"
                 style={{
                   left: `${(heading.level - 1) * 8}px`,
                 }}
               />
               <Link
-                href={`#${heading.id}`}
-                style={{
-                  marginLeft: `${(heading.level - 1) * 8}px`,
-                }}
                 className={cn(
-                  "block relative hover:translate-x-0.5 py-1.5 tracking-tight pl-2 text-sm transition-all transform-gpu pr-5 z-30 leading-4",
+                  "relative z-30 block transform-gpu py-1.5 pr-5 pl-2 text-sm leading-4 tracking-tight transition-all hover:translate-x-0.5",
                   // Before element : positionning
-                  "before:absolute before:bottom-0.5 before:right-0 before:left-0 before:top-0.5 ",
+                  "before:absolute before:top-0.5 before:right-0 before:bottom-0.5 before:left-0 ",
                   // Before element : animation
-                  "before:rounded-lg before:bg-neutral-400/10 before:opacity-0 before:group-hover:opacity-100 before:transition-all before:transform-gpu before:scale-x-75 before:duration-300 group-hover:before:scale-100 before:scale-y-50",
+                  "before:scale-x-75 before:scale-y-50 before:transform-gpu before:rounded-lg before:bg-neutral-400/10 before:opacity-0 before:transition-all before:duration-300 group-hover:before:scale-100 before:group-hover:opacity-100",
                   (heading.level === 1 || heading.level === 2) &&
                     "font-semibold",
                   heading.level === 3 && "font-normal",
                 )}
+                href={`#${heading.id}`}
+                style={{
+                  marginLeft: `${(heading.level - 1) * 8}px`,
+                }}
               >
                 {heading.text}
               </Link>
-              <ChevronRight className="size-4 transition-all transform-gpu group-hover:opacity-100 opacity-0 ml-1 absolute top-1/2 -translate-y-1/2 right-1 translate-x-1 group-hover:translate-x-0" />
+              <ChevronRight className="-translate-y-1/2 absolute top-1/2 right-1 ml-1 size-4 translate-x-1 transform-gpu opacity-0 transition-all group-hover:translate-x-0 group-hover:opacity-100" />
             </li>
           );
         })}
         <AnimatePresence>
           {firstActiveHeading2 && lastActiveHeading2 && (
             <motion.div
-              layout
-              layoutId="active-bar"
-              initial={{ opacity: 0, y: -100 }}
               animate={{ opacity: 1, y: 0 }}
+              className="pointer-events-none absolute z-10 w-full select-none bg-blue-500"
               exit={{ opacity: 0, y: -100 }}
-              className="absolute w-full bg-blue-500 select-none pointer-events-none z-10"
-              transition={{ duration: 0.3, ease: "easeOut" }}
+              initial={{ opacity: 0, y: -100 }}
+              layout={true}
+              layoutId="active-bar"
               style={{
                 top: topCoordinate,
                 bottom: `calc(100% - ${bottomCoordinate}px)`,
               }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
             />
           )}
         </AnimatePresence>

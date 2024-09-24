@@ -7,7 +7,7 @@ export default function PreviewUseMouse() {
 
   return (
     <div
-      className=" relative bg-neutral-400/10 border border-neutral-400/10 w-96 h-fit rounded-lg p-4"
+      className=" relative h-fit w-96 rounded-lg border border-neutral-400/10 bg-neutral-400/10 p-4"
       ref={parentRef}
     >
       <p className=" text-neutral-500">

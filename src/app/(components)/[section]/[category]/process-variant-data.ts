@@ -1,6 +1,4 @@
 import type {
-  CategoryType,
-  ComponentHeightType,
   ComponentType,
   ComponentVariantType,
 } from "#/src/lib/types/component";

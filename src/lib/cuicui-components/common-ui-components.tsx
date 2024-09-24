@@ -44,7 +44,7 @@ import { ClassicPulseVariant1 } from "#/src/ui/cuicui/common-ui/skeletons/classi
 import { ShinyGradientSkeletonHorizontal } from "#/src/ui/cuicui/common-ui/skeletons/shiny-gradient/skeleton-shiny-gradient-horizontal";
 import { ShinyGradientSkeletonVertical } from "#/src/ui/cuicui/common-ui/skeletons/shiny-gradient/skeleton-shiny-gradient-vertical";
 
-export const commonUICategoriesList: CategoryType[] = [
+export const commonUiCategoriesList: CategoryType[] = [
   {
     slug: "avatars",
     name: "Avatars",

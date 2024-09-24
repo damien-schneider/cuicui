@@ -19,16 +19,16 @@ export const DualRingSpinnerLoader = () => {
           }
         `}
       </style>
-      <div className="relative flex justify-center items-center">
+      <div className="relative flex items-center justify-center">
         <div
-          className="size-12 dark:invert border-4 border-neutral-700 border-t-transparent rounded-full ease-in-out repeat-infinite"
+          className="repeat-infinite size-12 rounded-full border-4 border-neutral-700 border-t-transparent ease-in-out dark:invert"
           style={{
             animationName: "spin",
             animationDuration: "1.5s",
           }}
         />
         <div
-          className="absolute size-9  dark:invert border-4 border-neutral-700 border-b-transparent rounded-full ease-in-out repeat-infinite direction-reverse"
+          className="repeat-infinite direction-reverse absolute size-9 rounded-full border-4 border-neutral-700 border-b-transparent ease-in-out dark:invert"
           style={{
             animationName: "spin",
             animationDuration: "2s",

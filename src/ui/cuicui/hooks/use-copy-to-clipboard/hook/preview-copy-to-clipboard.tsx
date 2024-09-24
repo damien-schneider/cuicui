@@ -8,22 +8,22 @@ export default function PreviewCopyToClipboard() {
     <div className="relative">
       <div className="flex flex-col gap-2">
         <button
-          type="button"
+          className="rounded-xl bg-neutral-500/20 px-4 py-2 font-medium text-neutral-700 tracking-tighter hover:bg-neutral-500/30 dark:text-white"
           onClick={() => copy("Hello world!")}
-          className="bg-neutral-500/20 hover:bg-neutral-500/30 dark:text-white text-neutral-700 font-medium tracking-tighter py-2 px-4 rounded-xl"
+          type="button"
         >
           Copy "Hello world!"
         </button>
         <button
-          type="button"
+          className="rounded-xl bg-neutral-500/20 px-4 py-2 font-medium text-neutral-700 tracking-tighter hover:bg-neutral-500/30 dark:text-white"
           onClick={() => copy("")}
-          className="bg-neutral-500/20 hover:bg-neutral-500/30 dark:text-white text-neutral-700 font-medium tracking-tighter py-2 px-4 rounded-xl"
+          type="button"
         >
           Reset by copying nothing
         </button>
       </div>
       {copiedText && (
-        <p className="absolute -top-6 left-1/2 text-neutral-500 text-sm tracking-tighter -translate-x-1/2 inline-flex whitespace-nowrap">
+        <p className="-top-6 -translate-x-1/2 absolute left-1/2 inline-flex whitespace-nowrap text-neutral-500 text-sm tracking-tighter">
           Copied: {copiedText}
         </p>
       )}

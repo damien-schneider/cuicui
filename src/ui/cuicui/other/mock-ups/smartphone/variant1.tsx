@@ -2,41 +2,41 @@
 export function GooglePixelVariant1() {
   return (
     <div
+      className="relative z-10 box-border block h-[862px] w-[404px]"
       id="device-google-pixel-6-pro"
-      className="relative block box-border z-10 h-[862px] w-[404px]"
     >
       <div
+        className="z-10 mx-0.5 box-border block h-[862px] w-[400px] rounded-[28px] bg-neutral-950 px-3 pt-5 pb-6 shadow-[inset_0px_0px_12px_rgb(141,141,134),inset_0px_7px_0px_3px_rgb(253,253,252),inset_0px_-6px_0px_3px_rgb(253,253,252)]"
         id="device-frame"
-        className="box-border block z-10 bg-neutral-950 rounded-[28px] mx-0.5 pt-5 px-3 pb-6 h-[862px] w-[400px] shadow-[inset_0px_0px_12px_rgb(141,141,134),inset_0px_7px_0px_3px_rgb(253,253,252),inset_0px_-6px_0px_3px_rgb(253,253,252)]"
       >
         {/* CONTENT */}
         <img
-          id="device-screen"
           alt="Google Pixel 6 Pro"
-          className="object-cover rounded-2xl h-[816px] w-[376px]"
+          className="h-[816px] w-[376px] rounded-2xl object-cover"
+          id="device-screen"
           src="https://devicescss.xyz/assets/img/bg-iphone-14-pro.jpg"
         />
       </div>
 
       <div
+        className="absolute top-0 left-1/2 ml-[-147px] box-border block h-[10px] w-[294px] bg-gradient-to-b from-stone-400 via-30% via-stone-300 to-stone-300"
         id="device-header"
-        className="box-border block bg-gradient-to-b from-stone-400 via-stone-300 to-stone-300 via-30% h-[10px] left-1/2 ml-[-147px] top-0 w-[294px] absolute"
       />
       <div
+        className="-ml-3 -mt-3 absolute top-[39px] left-1/2 box-border block size-6 rounded-full bg-neutral-950"
         id="device-sensors"
-        className="box-border block bg-neutral-950 rounded-full size-6 absolute left-1/2 -ml-3 -mt-3 top-[39px]"
         style={{
           marginLeft: "-11px",
           marginTop: "-11px",
         }}
       />
       <div
+        className="absolute top-[306px] right-0 box-border block h-[102px] w-[3px] bg-stone-400"
         id="device-btns"
-        className="box-border block bg-stone-400 absolute right-0 top-[306px] w-[3px] h-[102px]"
       />
       <div
+        className="absolute top-[194px] right-0 box-border block h-[58px] w-[3px] bg-stone-400"
         id="device-power"
-        className="box-border block bg-stone-400 h-[58px] w-[3px] absolute right-0 top-[194px]"
       />
     </div>
   );

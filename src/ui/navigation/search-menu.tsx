@@ -14,8 +14,6 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-  CommandSeparator,
-  CommandShortcut,
 } from "#/src/ui/shadcn/command";
 
 export function SearchMenu() {
@@ -36,21 +34,21 @@ export function SearchMenu() {
   return (
     <>
       <button
-        type="button"
-        className="text-sm group text-muted-foreground w-full p-2 bg-neutral-500/10 hover:bg-neutral-500/20 rounded-lg flex items-center justify-between border border-transparent transform-gpu transition-all mt-2"
+        className="group mt-2 flex w-full transform-gpu items-center justify-between rounded-lg border border-transparent bg-neutral-500/10 p-2 text-muted-foreground text-sm transition-all hover:bg-neutral-500/20"
         onClick={() => setOpen((open) => !open)}
+        type="button"
       >
-        <p className="inline text-neutral-500 font-medium text-sm">
-          <SearchIcon className="size-5 mr-2 inline" />
-          <span className="group-hover:ml-0.5 transition-all transform-gpu">
+        <p className="inline font-medium text-neutral-500 text-sm">
+          <SearchIcon className="mr-2 inline size-5" />
+          <span className="transform-gpu transition-all group-hover:ml-0.5">
             Search
           </span>
         </p>
-        <kbd className="pointer-events-none inline-flex h-5 select-none items-center bg-neutral-50 dark:bg-neutral-950 gap-1 rounded px-1.5 font-mono text-xs font-medium text-neutral-500 opacity-100 tracking-tighter">
+        <kbd className="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded bg-neutral-50 px-1.5 font-medium font-mono text-neutral-500 text-xs tracking-tighter opacity-100 dark:bg-neutral-950">
           ⌘ K
         </kbd>
       </button>
-      <CommandDialog open={open} onOpenChange={setOpen}>
+      <CommandDialog onOpenChange={setOpen} open={open}>
         <CommandInput placeholder="Type a command or search..." />
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>
@@ -76,8 +74,8 @@ export function SearchMenu() {
 
           {SectionsList.map((section) => (
             <CommandGroup
-              key={section.slug}
               heading={`${section.name} category`}
+              key={section.slug}
             >
               {section.categoriesList.map((category) => {
                 const Icon = category.icon;
@@ -99,8 +97,8 @@ export function SearchMenu() {
           ))}
           {SectionsList.map((section) => (
             <CommandGroup
-              key={section.slug}
               heading={`${section.name} components`}
+              key={section.slug}
             >
               {section.categoriesList.map((category) => {
                 return category.componentList?.map((component) => {

@@ -8,7 +8,7 @@ import { MainMenuCard } from "./card";
 
 export default function HomePage() {
   return (
-    <div className="space-y-8 px-4 my-8">
+    <div className="my-8 space-y-8 px-4">
       <h1 className="header-1">CuiCui - Copy Paste quality React component</h1>
       <p className="caption-md ">
         CuiCui is a modern UI copy paste library that helps you build beautiful
@@ -20,13 +20,13 @@ export default function HomePage() {
         <div className="space-y-5">
           <h3 className="uppercase-title">{firstMenuSection.name}</h3>
 
-          <div className="grid grid-cols-1 gap-5 lg:grid-cols-2 transform-gpu">
+          <div className="grid transform-gpu grid-cols-1 gap-5 lg:grid-cols-2">
             {firstMenuSection.categoryList.map((category) => {
               return (
                 <Link
+                  data-testid={`home-navigation-link-${category.name}`}
                   href={category.href ?? `/${category.slug}`}
                   key={category.name}
-                  data-testid={`home-navigation-link-${category.name}`}
                 >
                   <GradientCard
                     description={category.description}
@@ -40,7 +40,7 @@ export default function HomePage() {
         </div>
 
         {SectionsList.map((section) => (
-          <div key={section.name} className="space-y-5">
+          <div className="space-y-5" key={section.name}>
             <h3 className="uppercase-title">{section.name}</h3>
 
             <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">

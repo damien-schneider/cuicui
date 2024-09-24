@@ -24,7 +24,7 @@ export default async function ShikiCode({
   return (
     <div
       className={cn(
-        "*:bg-transparent invert-0 dark:invert hue-rotate-0 dark:hue-rotate-180 text-sm",
+        "text-sm hue-rotate-0 invert-0 *:bg-transparent dark:hue-rotate-180 dark:invert",
         className,
       )}
       {...props}

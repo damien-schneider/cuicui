@@ -20,28 +20,30 @@ export function MobileMenu({ className }: Readonly<{ className?: string }>) {
   const pathname = usePathname();
 
   useEffect(() => {
-    if (!pathname) return;
+    if (!pathname) {
+      return;
+    }
     setIsDrawerOpen(false);
   }, [pathname]);
 
   return (
     <Drawer.Root
-      open={isDrawerOpen}
       onOpenChange={(isOpen) => setIsDrawerOpen(isOpen)}
+      open={isDrawerOpen}
     >
       <div
         className={cn(
           "flex lg:hidden",
-          "w-full fixed bottom-0 left-0 justify-between p-2",
+          "fixed bottom-0 left-0 w-full justify-between p-2",
           className,
         )}
       >
         <GradientContainer classNameChild="p-2.5 h-full flex items-center gap-4">
           <Link
+            className="group flex w-fit items-center gap-x-2.5 transition-transform hover:scale-105"
             href="/"
-            className="group flex items-center gap-x-2.5 w-fit hover:scale-105 transition-transform"
           >
-            <Image src={LogoLarge} alt="Cuicui logo" width={100} />
+            <Image alt="Cuicui logo" src={LogoLarge} width={100} />
           </Link>
           <ThemeSwitcher />
         </GradientContainer>
@@ -54,7 +56,7 @@ export function MobileMenu({ className }: Readonly<{ className?: string }>) {
 
       <Drawer.Portal>
         <Drawer.Overlay
-          className="fixed inset-0  backdrop-blur-sm z-50"
+          className="fixed inset-0 z-50 backdrop-blur-sm"
           // style={{
           //   background:
           //     "linear-gradient(135deg, #3BC4F2, #7A69F9,#F26378,#F5833F)",
@@ -65,11 +67,11 @@ export function MobileMenu({ className }: Readonly<{ className?: string }>) {
               "linear-gradient(90deg, rgba(59, 196, 242, 0.2), rgba(122, 105, 249, 0.2), rgba(242, 99, 120, 0.2), rgba(245, 131, 63, 0.2))",
           }}
         />
-        <Drawer.Content className="z-50 bg-neutral-50 dark:bg-neutral-900 rounded-t-2xl p-4 fixed bottom-0 left-0 right-0 max-h-[80dvh] flex flex-col">
-          <Drawer.Handle className="bg-neutral-400 mb-4  min-h-1" />
+        <Drawer.Content className="fixed right-0 bottom-0 left-0 z-50 flex max-h-[80dvh] flex-col rounded-t-2xl bg-neutral-50 p-4 dark:bg-neutral-900">
+          <Drawer.Handle className="mb-4 min-h-1 bg-neutral-400" />
           <StarGithubProjectButton />
           <div className="overflow-y-scroll">
-            <NavigationMenu isMobile />
+            <NavigationMenu isMobile={true} />
           </div>
           <Byline />
         </Drawer.Content>

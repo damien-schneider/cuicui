@@ -1,5 +1,5 @@
 import { type VariantProps, cva } from "class-variance-authority";
-import { type HTMLMotionProps, type MotionProps, motion } from "framer-motion";
+import { type HTMLMotionProps, motion } from "framer-motion";
 import type React from "react";
 import { cn } from "../utils/cn";
 import GradientContainer from "./gradient-container";
@@ -69,10 +69,10 @@ export default ({
 
   return (
     <motion.button
-      whileTap={{ scale: 0.9 }}
-      transition={{ duration: 0.05 }}
       className={cn(buttonVariants({ variant, size }), className)}
+      transition={{ duration: 0.05 }}
       type={type}
+      whileTap={{ scale: 0.9 }}
       {...props}
     >
       {children}

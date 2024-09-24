@@ -21,17 +21,17 @@ export function DesktopSideMenu({
   return (
     <div
       className={cn(
-        "p-3 top-1/2 z-50 hidden fixed lg:flex items-center w-80 max-h-dvh h-full -translate-y-1/2 flex-col justify-between",
+        "-translate-y-1/2 fixed top-1/2 z-50 hidden h-full max-h-dvh w-80 flex-col items-center justify-between p-3 lg:flex",
         className,
       )}
     >
       <div className="w-full">
         <div className="flex items-center justify-between px-4 py-4">
           <Link
+            className="group flex w-fit items-center gap-x-2.5 transition-transform hover:scale-105"
             href="/"
-            className="group flex items-center gap-x-2.5 w-fit hover:scale-105 transition-transform"
           >
-            <Image src={LogoLarge} alt="Cuicui logo" width={100} />
+            <Image alt="Cuicui logo" src={LogoLarge} width={100} />
           </Link>
           <ThemeSwitcher />
         </div>
