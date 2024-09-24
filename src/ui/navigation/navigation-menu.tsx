@@ -43,7 +43,7 @@ export default function NavigationMenu({
         return date;
       }
       return date > acc ? date : acc;
-    });
+    }, null);
   }
 
   const alphabeticallySortedSectionList = getAlphabeticallySortedSectionList();

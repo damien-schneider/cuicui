@@ -1,4 +1,4 @@
-import type { CategoryType } from "#/src/lib/types/component";
+import type { SectionType } from "#/src/lib/types/component";
 import { alertCategory } from "#/src/ui/cuicui/application-ui/alert/alert.category";
 import { authenticationCategory } from "#/src/ui/cuicui/application-ui/authentication/authentication.category";
 import { batteryCategory } from "#/src/ui/cuicui/application-ui/battery/battery.category";
@@ -12,17 +12,21 @@ import { staticSteppersCategory } from "#/src/ui/cuicui/application-ui/static-st
 import { themeCategory } from "#/src/ui/cuicui/application-ui/theme/theme.category";
 import { treeCategory } from "#/src/ui/cuicui/application-ui/tree/tree.category";
 
-export const applicationUiCategoryList: CategoryType[] = [
-  alertCategory,
-  authenticationCategory,
-  batteryCategory,
-  codeCategory,
-  kbdCategory,
-  searchBarsCategory,
-  settingsCategory,
-  signatureCategory,
-  slidersCategory,
-  staticSteppersCategory,
-  themeCategory,
-  treeCategory,
-];
+export const applicationUiCategoryList: SectionType = {
+  name: "Application UI",
+  slug: "application-ui",
+  categoriesList: [
+    alertCategory,
+    authenticationCategory,
+    batteryCategory,
+    codeCategory,
+    kbdCategory,
+    searchBarsCategory,
+    settingsCategory,
+    signatureCategory,
+    slidersCategory,
+    staticSteppersCategory,
+    themeCategory,
+    treeCategory,
+  ],
+};

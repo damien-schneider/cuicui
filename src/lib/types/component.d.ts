@@ -56,9 +56,9 @@ type CategoryType = {
   slug: string;
   name: string;
   description: string;
-  icon?: LucideIcon;
+  icon: LucideIcon;
   comingSoonCategory?: boolean;
-  releaseDateCategory?: Date;
+  releaseDateCategory: Date;
   previewCategory?: PreviewComponent;
   componentList: ComponentType[] | null;
 };
