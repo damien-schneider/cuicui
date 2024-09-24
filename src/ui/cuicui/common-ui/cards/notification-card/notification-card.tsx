@@ -1,21 +1,19 @@
-import React from "react";
-
 export default function NotificationCard({
   date,
   title,
   description,
 }: Readonly<{ date: Date; title: string; description: string }>) {
   return (
-    <div className="w-full max-w-72 h-20 dark:bg-neutral-800 bg-neutral-100 rounded-2xl flex items-center justify-start backdrop-blur-[10px] transition ease-in-out duration-150 hover:scale-105 cursor-pointer border hover:border-neutral-500/20 border-transparent">
-      <div className="w-[50px] h-[50px] ml-[14px] rounded-[10px] bg-gradient-to-br from-neutral-500/20 to-neutral-500/10" />
-      <div className="w-[calc(100%-90px)] ml-[10px] dark:text-neutral-300 text-neutral-700">
+    <div className="flex h-20 w-full max-w-72 cursor-pointer items-center justify-start rounded-2xl border border-transparent bg-neutral-100 backdrop-blur-[10px] transition duration-150 ease-in-out hover:scale-105 hover:border-neutral-500/20 dark:bg-neutral-800">
+      <div className="ml-[14px] h-[50px] w-[50px] rounded-[10px] bg-gradient-to-br from-neutral-500/20 to-neutral-500/10" />
+      <div className="ml-[10px] w-[calc(100%-90px)] text-neutral-700 dark:text-neutral-300">
         <div className="flex items-center justify-between">
-          <p className="text-[16px] font-bold">{title}</p>
-          <span className="text-[10px]  dark:text-neutral-500 text-neutral-400">
+          <p className="font-bold text-[16px]">{title}</p>
+          <span className="text-[10px] text-neutral-400 dark:text-neutral-500">
             {date.toLocaleTimeString()}
           </span>
         </div>
-        <p className="text-xs font-light line-clamp-2">{description}</p>
+        <p className="line-clamp-2 font-light text-xs">{description}</p>
       </div>
     </div>
   );

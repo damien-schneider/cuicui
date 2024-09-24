@@ -1,4 +1,3 @@
-import React from "react";
 import { CodeContainer } from "#/src/ui/code-command-container";
 import { StaticStep } from "#/src/ui/stepper";
 
@@ -25,7 +24,7 @@ export default function Page() {
         <h3 className="header-5">
           Benefits of Using the <code>cn</code> function
         </h3>
-        <ul className="ul-md list-disc list-inside">
+        <ul className="ul-md list-inside list-disc">
           <li>
             Readable and maintainable className strings, with easy inline
             comments for styles.

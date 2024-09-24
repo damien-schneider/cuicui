@@ -1,7 +1,7 @@
 export const SpinnerLoader = () => {
   return (
-    <div className="flex justify-center items-center" aria-hidden="true">
-      <div className="size-10 border-4 dark:invert border-t-transparent border-neutral-700 rounded-full animate-spin" />
+    <div aria-hidden="true" className="flex items-center justify-center">
+      <div className="size-10 animate-spin rounded-full border-4 border-neutral-700 border-t-transparent dark:invert" />
       <span className="sr-only">Loading...</span>
     </div>
   );

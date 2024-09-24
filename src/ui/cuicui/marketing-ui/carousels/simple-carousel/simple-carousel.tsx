@@ -97,7 +97,7 @@ const Carousel = React.forwardRef<
     );
 
     React.useEffect(() => {
-      if (!emblaApi || !setApi) {
+      if (!(emblaApi && setApi)) {
         return;
       }
 
@@ -133,11 +133,10 @@ const Carousel = React.forwardRef<
         }}
       >
         <div
-          ref={ref}
-          onKeyDownCapture={handleKeyDown}
-          className={cn("relative", className)}
-          role="region"
           aria-roledescription="carousel"
+          className={cn("relative", className)}
+          onKeyDownCapture={handleKeyDown}
+          ref={ref}
           {...props}
         >
           {children}
@@ -155,14 +154,14 @@ const CarouselContent = React.forwardRef<
   const { carouselRef, orientation } = useCarousel();
 
   return (
-    <div ref={carouselRef} className="overflow-hidden rounded-xl">
+    <div className="overflow-hidden rounded-xl" ref={carouselRef}>
       <div
-        ref={ref}
         className={cn(
           "flex",
           orientation === "horizontal" ? "-ml-4" : "-mt-4 flex-col",
           className,
         )}
+        ref={ref}
         {...props}
       />
     </div>
@@ -178,14 +177,14 @@ const CarouselItem = React.forwardRef<
 
   return (
     <div
-      ref={ref}
-      role="group"
       aria-roledescription="slide"
       className={cn(
         "min-w-0 shrink-0 grow-0 basis-full",
         orientation === "horizontal" ? "pl-4" : "pt-4",
         className,
       )}
+      ref={ref}
+      role="group"
       {...props}
     />
   );
@@ -211,29 +210,31 @@ const CarouselDots = React.forwardRef<
       setCurrent(api.selectedScrollSnap() + 1);
     });
   }, [api]);
-  if (count === null) return null;
+  if (count === null) {
+    return null;
+  }
   return (
     <div
-      ref={ref}
       className={cn(
-        "flex absolute bottom-2 left-1/2 hover:scale-105 duration-300 -translate-x-1/2 gap-2 rounded-full p-2 bg-white/50 backdrop-blur-sm dark:bg-black/40 border border-white/20 dark:border-black/10 transition-all",
+        "-translate-x-1/2 absolute bottom-2 left-1/2 flex gap-2 rounded-full border border-white/20 bg-white/50 p-2 backdrop-blur-sm transition-all duration-300 hover:scale-105 dark:border-black/10 dark:bg-black/40",
         className,
       )}
+      ref={ref}
       {...props}
     >
       {count &&
         Array.from({ length: count }).map((_, index) => (
           <button
-            // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
-            key={`dot-cuicui-carousel-${index}`}
-            type="button"
             className={cn(
               "size-4 rounded-full border transition-all",
               index === current - 1
-                ? "bg-black/40 dark:bg-white/40 border-black/30 dark:border-white/30"
-                : "bg-black/20 dark:bg-white/20 border-black/10 dark:border-white/10 scale-75",
+                ? "border-black/30 bg-black/40 dark:border-white/30 dark:bg-white/40"
+                : "scale-75 border-black/10 bg-black/20 dark:border-white/10 dark:bg-white/20",
             )}
+            // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
+            key={`dot-cuicui-carousel-${index}`}
             onClick={() => api?.scrollTo(index)}
+            type="button"
           >
             <span className="sr-only">Go to slide {index + 1}</span>
           </button>
@@ -250,18 +251,18 @@ const CarouselPrevious = React.forwardRef<
 
   return (
     <button
-      type="button"
-      ref={ref}
       className={cn(
-        "absolute size-8 rounded-full dark:bg-black/40 border border-white/20 dark:border-black/10 bg-white/50 backdrop-blur-sm grid place-content-center active:scale-75 transition-all",
-        "disabled:dark:bg-black/10 disabled:bg-white/10 disabled:cursor-not-allowed hover:scale-105 transform-gpu",
+        "absolute grid size-8 place-content-center rounded-full border border-white/20 bg-white/50 backdrop-blur-sm transition-all active:scale-75 dark:border-black/10 dark:bg-black/40",
+        "transform-gpu hover:scale-105 disabled:cursor-not-allowed disabled:bg-white/10 disabled:dark:bg-black/10",
         orientation === "horizontal"
-          ? "left-6 top-1/2 -translate-y-1/2"
-          : "top-6 left-1/2 -translate-x-1/2 rotate-90",
+          ? "-translate-y-1/2 top-1/2 left-6"
+          : "-translate-x-1/2 top-6 left-1/2 rotate-90",
         className,
       )}
       disabled={!canScrollPrev}
       onClick={scrollPrev}
+      ref={ref}
+      type="button"
       {...props}
     >
       <ArrowLeftIcon className="size-4 text-neutral-700 dark:text-neutral-200" />
@@ -279,18 +280,18 @@ const CarouselNext = React.forwardRef<
 
   return (
     <button
-      type="button"
-      ref={ref}
       className={cn(
-        "absolute size-8 rounded-full dark:bg-black/40 border border-white/20 dark:border-black/10 bg-white/50 backdrop-blur-md grid place-content-center active:scale-75 transition-all",
-        "disabled:dark:bg-black/10 disabled:bg-white/10 disabled:cursor-not-allowed hover:scale-105 transform-gpu",
+        "absolute grid size-8 place-content-center rounded-full border border-white/20 bg-white/50 backdrop-blur-md transition-all active:scale-75 dark:border-black/10 dark:bg-black/40",
+        "transform-gpu hover:scale-105 disabled:cursor-not-allowed disabled:bg-white/10 disabled:dark:bg-black/10",
         orientation === "horizontal"
-          ? "right-6 top-1/2 -translate-y-1/2"
-          : "bottom-6 left-1/2 -translate-x-1/2 rotate-90",
+          ? "-translate-y-1/2 top-1/2 right-6"
+          : "-translate-x-1/2 bottom-6 left-1/2 rotate-90",
         className,
       )}
       disabled={!canScrollNext}
       onClick={scrollNext}
+      ref={ref}
+      type="button"
       {...props}
     >
       <ArrowRightIcon className="size-4 text-neutral-700 dark:text-neutral-200" />

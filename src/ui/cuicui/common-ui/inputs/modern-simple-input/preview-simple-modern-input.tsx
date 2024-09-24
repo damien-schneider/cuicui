@@ -8,13 +8,13 @@ export function PreviewModernSimpleInput() {
     <div className="relative">
       <ModernSimpleInput
         className="w-72"
+        onChange={(e) => setValue(e.target.value)}
+        placeholder="Type something..."
         type="text"
         value={value}
-        placeholder="Type something..."
-        onChange={(e) => setValue(e.target.value)}
       />
 
-      <p className="text-neutral-400 text-xs absolute -bottom-6">
+      <p className="-bottom-6 absolute text-neutral-400 text-xs">
         Value : {value}
       </p>
     </div>

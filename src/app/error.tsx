@@ -18,7 +18,7 @@ export default function NextError({ error, reset }: Readonly<NextErrorProps>) {
         <h2 className="font-bold text-lg">An error occurred!</h2>
         <p className="text-sm">{error?.message}</p>
         <div>
-          <button type="button" onClick={() => reset()}>
+          <button onClick={() => reset()} type="button">
             Try Again
           </button>
         </div>

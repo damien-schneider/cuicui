@@ -29,30 +29,30 @@ export default function MarqueeVariant1() {
         `}
       </style>
       <div
-        className="overflow-hidden w-full mb-4"
+        className="mb-4 w-full overflow-hidden"
         style={{
           maskImage:
             "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
         }}
       >
         <div
-          className="flex gap-4 pr-4 w-[200%]"
+          className="flex w-[200%] gap-4 pr-4"
           style={{
             animation: "marquee 15s linear infinite",
           }}
         >
           {[0, 1].map((index) => (
-            <div key={index} className="flex flex-1 gap-4">
-              {marqueeItems.map((item, index) => (
-                <div key={item.content} className="flex-1">
-                  <div className=" max-w-60   bg-neutral-100 dark:bg-neutral-800 text-neutral-600 rounded-xl p-2 h-full">
+            <div className="flex flex-1 gap-4" key={index}>
+              {marqueeItems.map((item, _index) => (
+                <div className="flex-1" key={item.content}>
+                  <div className=" h-full max-w-60 rounded-xl bg-neutral-100 p-2 text-neutral-600 dark:bg-neutral-800">
                     <div className="flex items-center gap-2 ">
-                      <div className="size-6 bg-neutral-500/40 rounded-full" />
-                      <p className=" text-neutral-600 dark:text-neutral-400 text-xs font-semibold">
+                      <div className="size-6 rounded-full bg-neutral-500/40" />
+                      <p className=" font-semibold text-neutral-600 text-xs dark:text-neutral-400">
                         {item.author}
                       </p>
                     </div>
-                    <p className="text-sm mt-2 text-neutral-600 dark:text-neutral-300">
+                    <p className="mt-2 text-neutral-600 text-sm dark:text-neutral-300">
                       {item.content}
                     </p>
                   </div>

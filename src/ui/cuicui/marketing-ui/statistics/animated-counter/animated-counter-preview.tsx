@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Counter } from "#/src/ui/cuicui/marketing-ui/statistics/animated-counter/animated-counter";
 
 export default function AnimatedCounterPreview() {
@@ -16,10 +16,10 @@ export default function AnimatedCounterPreview() {
 
   return (
     <Counter
-      value={count % 1000}
+      className="space-x-3 rounded-lg border border-neutral-500/20 bg-neutral-400/15 px-2 text-2xl text-neutral-800 dark:text-neutral-200"
       numberOfDigits={3}
       paddingBetweenNumbers={30}
-      className="rounded-lg bg-neutral-400/15 border border-neutral-500/20 px-2 text-neutral-800 dark:text-neutral-200 text-2xl space-x-3"
+      value={count % 1000}
     />
   );
 }

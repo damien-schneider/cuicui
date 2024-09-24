@@ -6,21 +6,21 @@ import { BarCodeGenerator } from "#/src/ui/cuicui/other/qr-code/bar-code-generat
 export default function PreviewBarCodeGenerator() {
   const [value, setValue] = useState("https://www.modul.day/");
   return (
-    <div className="flex flex-col items-center gap-4 w-full">
+    <div className="flex w-full flex-col items-center gap-4">
       <ModernSimpleInput
-        value={value}
-        className="text-center max-w-80 w-full"
+        className="w-full max-w-80 text-center"
         onChange={(e) => setValue(e.target.value)}
+        value={value}
       />
       {value && (
         <BarCodeGenerator
+          className="w-full fill-neutral-700 dark:fill-white"
           options={{
             lineColor: "current",
             background: "transparent",
             width: 2,
             height: 100,
           }}
-          className="dark:fill-white w-full fill-neutral-700"
           value={value}
         />
       )}

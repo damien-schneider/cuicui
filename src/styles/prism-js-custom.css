@@ -3,49 +3,49 @@
  * Based on https://github.com/chriskempson/tomorrow-theme
  * @author Rose Pritchard
  */
-.tag{
-	@apply text-rose-400 dark:text-rose-400 !important;
+.tag {
+  @apply text-rose-400 dark:text-rose-400 !important;
 }
 .token.class-name {
-	@apply text-amber-500 dark:text-amber-400 !important;
+  @apply text-amber-500 dark:text-amber-400 !important;
 }
-.token.imports{
-	@apply text-amber-500 dark:text-amber-400 !important;
+.token.imports {
+  @apply text-amber-500 dark:text-amber-400 !important;
 }
 
-.token.tag.script.punctuation{
-	@apply text-gray-400 dark:text-gray-500 !important;
+.token.tag.script.punctuation {
+  @apply text-gray-400 dark:text-gray-500 !important;
 }
-.token.tag.script.function{
-	@apply text-blue-500 dark:text-blue-400 !important;
+.token.tag.script.function {
+  @apply text-blue-500 dark:text-blue-400 !important;
 }
 .token.plain {
-		@apply text-blue-500 dark:text-blue-400 !important;
+  @apply text-blue-500 dark:text-blue-400 !important;
 }
 
 .token.operator {
-	@apply text-gray-400 dark:text-gray-500 !important;
+  @apply text-gray-400 dark:text-gray-500 !important;
 }
-.function{
-	@apply text-cyan-500 dark:text-cyan-400 !important;
+.function {
+  @apply text-cyan-500 dark:text-cyan-400 !important;
 }
-.attr-name{
-	@apply text-amber-500 dark:text-amber-400 !important;
-}
-
-.attr-value{
-	@apply text-green-600 dark:text-green-400 !important;
-}
-.token.tag.script.string{
-	@apply text-green-600 dark:text-green-400 !important;
-}
-.keyword{
-	@apply text-violet-500 dark:text-purple-400 !important;
-}
-.punctuation, .plain-text{
-	@apply text-gray-500 dark:text-gray-400 !important;
+.attr-name {
+  @apply text-amber-500 dark:text-amber-400 !important;
 }
 
+.attr-value {
+  @apply text-green-600 dark:text-green-400 !important;
+}
+.token.tag.script.string {
+  @apply text-green-600 dark:text-green-400 !important;
+}
+.keyword {
+  @apply text-violet-500 dark:text-purple-400 !important;
+}
+.punctuation,
+.plain-text {
+  @apply text-gray-500 dark:text-gray-400 !important;
+}
 
 /*  
 code[class*="language-"],

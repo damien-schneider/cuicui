@@ -21,15 +21,15 @@ export default function CopyToClipboard({ code }: Readonly<{ code: string }>) {
 
   return (
     <button
-      type="button"
       aria-label="Copy code to clipboard"
-      className="text-base font-normal leading-6 dark:text-zinc-400 text-zinc-500 bg-transparent cursor-pointer relative flex size-4 transition-colors duration-150 ease-in-out"
+      className="relative flex size-4 cursor-pointer bg-transparent font-normal text-base text-zinc-500 leading-6 transition-colors duration-150 ease-in-out dark:text-zinc-400"
       onClick={copyToClipboard}
+      type="button"
     >
       {isCopied ? (
-        <CheckIcon className="block align-middle size-4" />
+        <CheckIcon className="block size-4 align-middle" />
       ) : (
-        <CopyIcon className="block align-middle size-4" />
+        <CopyIcon className="block size-4 align-middle" />
       )}
     </button>
   );

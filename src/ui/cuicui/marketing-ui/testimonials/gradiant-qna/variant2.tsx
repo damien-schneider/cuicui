@@ -1,28 +1,24 @@
 import { ChevronDownIcon } from "lucide-react";
-import React from "react";
 import { cn } from "#/src/utils/cn";
 
-export default function GradientQnAVariant2() {
+export default function GradientQnaVariant2() {
   return (
     <div className="">
-      <div
-        className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2
-      "
-      >
+      <div className="-translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2 ">
         <AdvancedGradiant className="opacity-50" />
       </div>
       <div className=" space-y-2">
         <Testimonial
-          title="What is the best thing about this product?"
           content="The best thing about this product is that it is very easy to use and it is very user-friendly. It is also very affordable and it is very easy to set up."
+          title="What is the best thing about this product?"
         />
         <Testimonial
-          title="What is the best thing about this product?"
           content="The best thing about this product is that it is very easy to use and it is very user-friendly. It is also very affordable and it is very easy to set up."
+          title="What is the best thing about this product?"
         />
         <Testimonial
-          title="What is the best thing about this product?"
           content="The best thing about this product is that it is very easy to use and it is very user-friendly. It is also very affordable and it is very easy to set up."
+          title="What is the best thing about this product?"
         />
       </div>
     </div>
@@ -37,18 +33,18 @@ const Testimonial = ({
   content: string;
 }) => {
   return (
-    <div className="bg-neutral-500/10 hover:bg-neutral-500/20 rounded-3xl overflow-hidden has-[:open]:bg-neutral-500/60 relative backdrop-blur-2xl">
-      <details className="peer group max-h-96 overflow-hidden transition-all duration-500 w-full">
-        <summary className="flex cursor-pointer items-center justify-between gap-4 p-4 group-open:pt-8 group-open:pl-8 transition-all duration-300">
-          <h6 className="text-lg tracking-tight text-neutral-600 dark:text-neutral-300 font-medium">
+    <div className="relative overflow-hidden rounded-3xl bg-neutral-500/10 backdrop-blur-2xl hover:bg-neutral-500/20 has-[:open]:bg-neutral-500/60">
+      <details className="peer group max-h-96 w-full overflow-hidden transition-all duration-500">
+        <summary className="flex cursor-pointer items-center justify-between gap-4 p-4 transition-all duration-300 group-open:pt-8 group-open:pl-8">
+          <h6 className="font-medium text-lg text-neutral-600 tracking-tight dark:text-neutral-300">
             {title}
           </h6>
-          <ChevronDownIcon className="size-5 group-open:-rotate-180 transition-all absolute top-5 right-5  text-neutral-600 dark:text-neutral-300" />
+          <ChevronDownIcon className="group-open:-rotate-180 absolute top-5 right-5 size-5 text-neutral-600 transition-all dark:text-neutral-300" />
         </summary>
       </details>
 
-      <div className="peer-open:max-h-40 max-h-0 overflow-hidden transition-all duration-500 text-neutral-700 dark:text-neutral-200 font-medium">
-        <p className="p-6 rounded-2xl ">{content}</p>
+      <div className="max-h-0 overflow-hidden font-medium text-neutral-700 transition-all duration-500 peer-open:max-h-40 dark:text-neutral-200">
+        <p className="rounded-2xl p-6 ">{content}</p>
       </div>
     </div>
   );
@@ -77,14 +73,14 @@ const AdvancedGradiant = ({
       </style>
       <div
         className={cn(
-          "size-[400px] relative transition-all transform-gpu",
+          "relative size-[400px] transform-gpu transition-all",
           className,
         )}
       >
-        <div className="absolute top-0 left-0 grid place-items-center w-full h-full transform-gpu">
+        <div className="absolute top-0 left-0 grid h-full w-full transform-gpu place-items-center">
           <div
             className={cn(
-              "w-full h-full blur-3xl opacity-80 rounded-full transform-gpu",
+              "h-full w-full transform-gpu rounded-full opacity-80 blur-3xl",
             )}
             style={{
               background:
@@ -94,14 +90,14 @@ const AdvancedGradiant = ({
           />
         </div>
         <div
-          className="absolute top-0 left-0 grid place-items-center w-full h-full transform-gpu"
+          className="absolute top-0 left-0 grid h-full w-full transform-gpu place-items-center"
           style={{
             animation: "size-bounce 20s linear infinite",
           }}
         >
           <div
             className={cn(
-              "size-[300px] absolute blur-2xl rounded-full transform-gpu",
+              "absolute size-[300px] transform-gpu rounded-full blur-2xl",
             )}
             style={{
               background: "conic-gradient(#FFF, #12B4E6, #DC4CFC)",
@@ -110,14 +106,14 @@ const AdvancedGradiant = ({
           />
         </div>
         <div
-          className="absolute top-0 left-0 grid place-items-center w-full h-full transform-gpu"
+          className="absolute top-0 left-0 grid h-full w-full transform-gpu place-items-center"
           style={{
             animation: "size-bounce 10s linear infinite",
           }}
         >
           <div
             className={cn(
-              "size-[300px] absolute blur-2xl rounded-full opacity-80 transform-gpu",
+              "absolute size-[300px] transform-gpu rounded-full opacity-80 blur-2xl",
             )}
             style={{
               background: "conic-gradient(#A6EFFF, #12ADE6, #4C63FC)",

@@ -1,4 +1,3 @@
-import React from "react";
 import Badge from "../ui/badge";
 
 export default function BadgeList({
@@ -10,10 +9,10 @@ export default function BadgeList({
 }>) {
   return (
     <>
-      <p className="text-sm text-neutral-400">{title}</p>
-      <div className="flex flex-wrap items-center gap-2 mt-1">
+      <p className="text-neutral-400 text-sm">{title}</p>
+      <div className="mt-1 flex flex-wrap items-center gap-2">
         {badgeList?.map((badge) => (
-          <Badge variant="neutral" size="sm" key={badge}>
+          <Badge key={badge} size="sm" variant="neutral">
             {badge}
           </Badge>
         ))}

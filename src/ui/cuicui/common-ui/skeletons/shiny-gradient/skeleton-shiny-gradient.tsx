@@ -1,8 +1,9 @@
+import type { HTMLAttributes } from "react";
 import { cn } from "#/src/utils/cn";
 
 type SkeletonShinyGradientProps = {
   orientation?: "horizontal" | "vertical";
-} & Readonly<React.HTMLAttributes<HTMLDivElement>>;
+} & Readonly<HTMLAttributes<HTMLDivElement>>;
 
 export const SkeletonShinyGradient = ({
   className,
@@ -42,7 +43,7 @@ export const SkeletonShinyGradient = ({
           "shimmer",
           `before:bg-gradient-to-${
             isHorizontal ? "r" : "b"
-          } before:from-transparent before:via-white/50 dark:before:via-rose-100/10 before:to-transparent before:absolute before:inset-0`,
+          } before:absolute before:inset-0 before:from-transparent before:via-white/50 before:to-transparent dark:before:via-rose-100/10`,
           "relative isolate overflow-hidden",
           isHorizontal ? "before:bg-gradient-to-r" : "before:bg-gradient-to-b",
           className,

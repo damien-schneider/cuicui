@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 export default function IncreaseToValueVariant1() {
   return (
     <div>
-      <AnimatedCounter from={0} to={100} duration={2} />
+      <AnimatedCounter duration={2} from={0} to={100} />
     </div>
   );
 }
@@ -24,7 +24,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
 }) => {
   const count = useMotionValue(from);
   const rounded = useTransform(count, (latest) => Math.round(latest));
-  const [isAnimationComplete, setIsAnimationComplete] = useState(false);
+  const [_isAnimationComplete, setIsAnimationComplete] = useState(false);
 
   useEffect(() => {
     const controls = animate(count, to, {
@@ -39,9 +39,9 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
 
   return (
     <motion.div
-      className="text-7xl font-bold dark:text-neutral-200 text-neutral-800"
-      initial={{ scale: 0.5, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
+      className="font-bold text-7xl text-neutral-800 dark:text-neutral-200"
+      initial={{ scale: 0.5, opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
       <motion.span>{rounded}</motion.span>

@@ -1,5 +1,3 @@
-import * as React from "react";
-
 import {
   Carousel,
   CarouselContent,
@@ -30,13 +28,13 @@ export function SimpleCarouselPreview() {
       <CarouselContent className="rounded-xl">
         {imageArray.map((image, index) => (
           // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
-          <CarouselItem key={`carousel-image-${index}`} className="">
+          <CarouselItem className="" key={`carousel-image-${index}`}>
             <Image
-              className=" w-full h-full rounded-xl"
-              src={image}
               alt=""
-              width={300}
+              className=" h-full w-full rounded-xl"
               height={200}
+              src={image}
+              width={300}
             />
           </CarouselItem>
         ))}

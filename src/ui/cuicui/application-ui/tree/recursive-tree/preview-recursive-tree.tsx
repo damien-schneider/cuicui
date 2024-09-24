@@ -2,14 +2,14 @@ import { Tree } from "./recursive-tree";
 
 export function PreviewRecursiveTree() {
   return (
-    <div className="p-4 w-72 bg-neutral-400/10 rounded-xl">
+    <div className="w-72 rounded-xl bg-neutral-400/10 p-4">
       <Tree contentTree="Root">
         <Tree contentTree="Child 1" />
         <Tree contentTree="Child 2" />
-        <Tree contentTree="Collapsed by default" defaultCollapsed>
+        <Tree contentTree="Collapsed by default" defaultCollapsed={true}>
           <Tree
             contentTree={
-              <ul className=" list-disc list-inside">
+              <ul className=" list-inside list-disc">
                 <li>Custom element</li>
                 <li>This is a list</li>
               </ul>

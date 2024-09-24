@@ -4,12 +4,12 @@ import { SkeletonShinyGradient } from "#/src/ui/cuicui/common-ui/skeletons/shiny
 
 export function ShinyGradientSkeletonHorizontal() {
   return (
-    <SkeletonShinyGradient className="rounded-2xl flex flex-col gap-5 w-48 bg-black/5 dark:bg-white/5 p-4">
-      <div className="h-24 rounded-lg dark:bg-rose-100/10 bg-neutral-200 w-full" />
+    <SkeletonShinyGradient className="flex w-48 flex-col gap-5 rounded-2xl bg-black/5 p-4 dark:bg-white/5">
+      <div className="h-24 w-full rounded-lg bg-neutral-200 dark:bg-rose-100/10" />
       <div className="space-y-3">
-        <div className="h-3 w-3/5 rounded-lg dark:bg-rose-100/10 bg-neutral-200" />
-        <div className="h-3 w-4/5 rounded-lg dark:bg-rose-100/20 bg-neutral-300" />
-        <div className="h-3 w-2/5 rounded-lg dark:bg-rose-100/20 bg-neutral-300" />
+        <div className="h-3 w-3/5 rounded-lg bg-neutral-200 dark:bg-rose-100/10" />
+        <div className="h-3 w-4/5 rounded-lg bg-neutral-300 dark:bg-rose-100/20" />
+        <div className="h-3 w-2/5 rounded-lg bg-neutral-300 dark:bg-rose-100/20" />
       </div>
     </SkeletonShinyGradient>
   );

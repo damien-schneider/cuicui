@@ -4,17 +4,17 @@ export default function HoverEffectCardPreview() {
   return (
     <div className="App">
       <HoverCard
+        className="rounded-xl border border-stone-500/10 bg-stone-400/10 group-hover:border-stone-500/50 group-hover:bg-stone-400/25"
         columns={10}
-        rows={12}
-        maxXRotation={15}
-        maxYRotation={15}
         containerClassName="h-72 w-56"
-        className="border border-stone-500/10 group-hover:border-stone-500/50 rounded-xl bg-stone-400/10 group-hover:bg-stone-400/25"
+        maxXrotation={15}
+        maxYrotation={15}
+        rows={12}
       >
-        <p className="absolute top-4 left-3 z-20 text-xl font-semibold tracking-tight text-neutral-500 leading-4 transition-opacity duration-300 ease-in-out">
+        <p className="absolute top-4 left-3 z-20 font-semibold text-neutral-500 text-xl leading-4 tracking-tight transition-opacity duration-300 ease-in-out">
           Hover this card
         </p>
-        <div className="absolute text-sm  font-medium tracking-tighter -bottom-8 leading-3 text-neutral-500 transition-opacity duration-300 ease-in-out delay-100">
+        <div className="-bottom-8 absolute font-medium text-neutral-500 text-sm leading-3 tracking-tighter transition-opacity delay-100 duration-300 ease-in-out">
           Stop using JS
           <br />
           when it is not needed

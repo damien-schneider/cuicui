@@ -1,13 +1,13 @@
 "use client";
 import { SearchIcon } from "lucide-react";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { toast } from "sonner";
 import { cn } from "#/src/utils/cn";
 
 export default function GrowingSearchVariant1() {
   return (
     <div className="flex flex-col items-center">
-      <p className="text-neutral-500/70 mb-8 tracking-tighter">
+      <p className="mb-8 text-neutral-500/70 tracking-tighter">
         Press enter to see all the effects
       </p>
       <SearchBar />
@@ -46,13 +46,13 @@ export const SearchBar = () => {
   return (
     <label
       className={cn(
-        "rounded-full relative text-neutral-500 dark:text-neutral-400 origin-center inline-flex",
-        "transition-all transform-gpu ease-in-out group",
+        "relative inline-flex origin-center rounded-full text-neutral-500 dark:text-neutral-400",
+        "group transform-gpu transition-all ease-in-out",
         " relative",
         // searchSubmitted
         //   ? "scale-95 shadow-red-500/30 duration-100"
         //   : "scale-100 shadow-red-500/0",
-        "before:content-[''] before:absolute before:w-full before:h-full before:top-0 before:left-0 before:rounded-full before:transition-all before:transform-gpu before:duration-700 before:ease-in-out",
+        "before:absolute before:top-0 before:left-0 before:h-full before:w-full before:transform-gpu before:rounded-full before:transition-all before:duration-700 before:ease-in-out before:content-['']",
         searchSubmittedShadow
           ? "before:shadow-[0px_0px_0px_5px_blue] before:blur-2xl"
           : "before:shadow-[0px_0px_1px_0px_#FFFFFF00] before:blur-0",
@@ -63,36 +63,36 @@ export const SearchBar = () => {
       htmlFor="search"
     >
       <input
-        id="search"
-        value={searchValue}
-        onChange={(e) => setSearchValue(e.target.value)}
         className={cn(
-          "p-2 focus:max-w-40 max-w-10 transition-all transform-gpu ease-in-out rounded-full pl-10 peer",
+          "peer max-w-10 transform-gpu rounded-full p-2 pl-10 transition-all ease-in-out focus:max-w-40",
           // BACKGROUND
-          "bg-white/70 dark:bg-neutral-800/70 dark:hover:bg-neutral-900/80 hover:bg-white/80",
+          "bg-white/70 hover:bg-white/80 dark:bg-neutral-800/70 dark:hover:bg-neutral-900/80",
           // OUTLINE
-          "outline outline-1 -outline-offset-1",
+          "-outline-offset-1 outline outline-1",
           searchSubmittedOutline
-            ? "duration-150 outline-blue-500"
-            : "duration-300 outline-neutral-200/0 hover:outline-neutral-200/100 dark:outline-neutral-800/0 hover:dark:outline-neutral-800/100 dark:focus:placeholder-neutral-300/100",
+            ? "outline-blue-500 duration-150"
+            : "outline-neutral-200/0 duration-300 hover:outline-neutral-200/100 dark:outline-neutral-800/0 dark:focus:placeholder-neutral-300/100 hover:dark:outline-neutral-800/100",
           // PLACEHOLDER
           " placeholder-neutral-300/0 focus:placeholder-neutral-300/100 dark:placeholder-neutral-700/0 focus:dark:placeholder-neutral-700/100",
         )}
-        placeholder="Search"
+        id="search"
+        onBlur={() => {
+          setSearchSubmittedOutline(false);
+          setSearchSubmittedShadow(false);
+          setSearchValue("");
+        }}
+        onChange={(e) => setSearchValue(e.target.value)}
         onKeyDown={(e) => {
           if (e.key === "Enter") {
             handleSearch();
           }
         }}
         onSubmit={handleSearch}
-        onBlur={() => {
-          setSearchSubmittedOutline(false);
-          setSearchSubmittedShadow(false);
-          setSearchValue("");
-        }}
+        placeholder="Search"
         type="search"
+        value={searchValue}
       />
-      <SearchIcon className="size-5 top-1/2 left-3.5 absolute -translate-y-1/2 pointer-events-none text-neutral-300 dark:text-neutral-700 transition-colors peer-focus:text-neutral-500" />
+      <SearchIcon className="-translate-y-1/2 pointer-events-none absolute top-1/2 left-3.5 size-5 text-neutral-300 transition-colors peer-focus:text-neutral-500 dark:text-neutral-700" />
     </label>
   );
 };

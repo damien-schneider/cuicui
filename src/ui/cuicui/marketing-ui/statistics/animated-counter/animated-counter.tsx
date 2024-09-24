@@ -24,16 +24,16 @@ export function Counter({
   }
 
   return (
-    <div className={cn("flex overflow-hidden leading-none w-fit", className)}>
+    <div className={cn("flex w-fit overflow-hidden leading-none", className)}>
       {Array.from(
         { length: convertToPositiveInteger(numberOfDigits) },
         (_, index) => (
           <Digit
+            height={convertToPositiveInteger(paddingBetweenNumbers)}
             // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
             key={`digit-${index}`}
             place={10 ** (convertToPositiveInteger(numberOfDigits) - index - 1)}
             value={value}
-            height={convertToPositiveInteger(paddingBetweenNumbers)}
           />
         ),
       )}
@@ -54,9 +54,9 @@ function Digit({
   }, [animatedValue, valueRoundedToPlace]);
 
   return (
-    <div style={{ height }} className="relative w-[1ch]">
-      {Array.from(Array(10).keys()).map((i) => (
-        <MemoizedNumber key={i} mv={animatedValue} number={i} height={height} />
+    <div className="relative w-[1ch]" style={{ height }}>
+      {Array.from(new Array(10).keys()).map((i) => (
+        <MemoizedNumber height={height} key={i} mv={animatedValue} number={i} />
       ))}
     </div>
   );
@@ -82,8 +82,8 @@ function MemoizedNumber({
 
   return (
     <motion.span
-      style={{ y }}
       className="absolute inset-0 flex items-center justify-center"
+      style={{ y }}
     >
       {number}
     </motion.span>

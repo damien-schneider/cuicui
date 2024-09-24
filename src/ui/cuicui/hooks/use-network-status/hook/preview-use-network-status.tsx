@@ -20,7 +20,7 @@ export default function PreviewUseNetworkStatus() {
   }
   return (
     <section>
-      <h3 className="font-medium text-xl text-neutral-500 mb-5">
+      <h3 className="mb-5 font-medium text-neutral-500 text-xl">
         useNetworkState
       </h3>
       {isMounted && <NetworkInformations />}
@@ -31,11 +31,11 @@ export default function PreviewUseNetworkStatus() {
 const NetworkInformations = () => {
   const network: NetworkState = useNetworkStatus();
   return (
-    <div className="grid grid-cols-2 gap-y-1 gap-x-4">
+    <div className="grid grid-cols-2 gap-x-4 gap-y-1">
       {Object.keys(network).map((key) => {
         return (
           <Fragment key={key}>
-            <p className="font-medium tracking-tight text-neutral-500">{key}</p>
+            <p className="font-medium text-neutral-500 tracking-tight">{key}</p>
             <p>{`${network[key as keyof NetworkState]}`}</p>
           </Fragment>
         );

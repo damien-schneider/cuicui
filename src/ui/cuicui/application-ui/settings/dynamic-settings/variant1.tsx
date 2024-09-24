@@ -1,8 +1,8 @@
 "use client";
-import { AnimatePresence, type HTMLMotionProps, motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 import { PlusIcon, SquareIcon } from "lucide-react";
-import { type HTMLAttributes, useState } from "react";
+import { useState } from "react";
 import { toast } from "sonner";
 import { cn } from "#/src/utils/cn";
 
@@ -39,26 +39,26 @@ export default function DynamicSettingsVariant1() {
               ?.menuWidth
           : 132,
       }}
+      className={cn(
+        "items-center justify-between overflow-hidden rounded-2xl bg-neutral-900 p-2 text-neutral-50 shadow-lg",
+        !isOpen && "hover:bg-neutral-800",
+      )}
       transition={{
         type: "spring",
         duration: 0.6,
         // damping: 8,
         // stiffness: 120,
       }}
-      className={cn(
-        "overflow-hidden justify-between bg-neutral-900 rounded-2xl items-center text-neutral-50 p-2 shadow-lg",
-        !isOpen && "hover:bg-neutral-800",
-      )}
     >
       <div className="h-full">
         <div
           className={cn(
-            "transition-all duration-300 flex flex-col justify-between gap-2 h-full transform-gpu",
+            "flex h-full transform-gpu flex-col justify-between gap-2 transition-all duration-300",
           )}
         >
           <div
             className={cn(
-              "transition-all duration-300 flex items-center justify-between gap-2 group transform-gpu",
+              "group flex transform-gpu items-center justify-between gap-2 transition-all duration-300",
             )}
           >
             {isOpen ? (
@@ -68,23 +68,23 @@ export default function DynamicSettingsVariant1() {
               />
             ) : (
               <button
-                type="button"
                 className={cn(
-                  "flex gap-2 p-2 transition-all text-nowrap font-medium text-neutral-500 group-hover:text-neutral-50 text-sm transform-gpu",
+                  "flex transform-gpu gap-2 text-nowrap p-2 font-medium text-neutral-500 text-sm transition-all group-hover:text-neutral-50",
                 )}
                 onClick={() => setIsOpen(true)}
+                type="button"
               >
                 Add Style
               </button>
             )}
             <button
+              className="size-8 transform-gpu text-neutral-400 transition-colors duration-500 hover:text-neutral-300"
               onClick={() => handleOpenSettings()}
               type="button"
-              className="size-8 text-neutral-400 hover:text-neutral-300 transition-colors duration-500 transform-gpu"
             >
               <PlusIcon
                 className={cn(
-                  " transition-transform duration-300 transform-gpu",
+                  " transform-gpu transition-transform duration-300",
                   isOpen ? "rotate-45" : "rotate-0",
                 )}
               />
@@ -92,26 +92,26 @@ export default function DynamicSettingsVariant1() {
           </div>
           {isOpen && subMenuSelected === "aspect-ratio" && (
             <motion.div
-              initial={{ opacity: 0, filter: "blur(4px)" }}
               animate={{ opacity: 1, filter: "blur(0px)" }}
+              className="flex flex-col justify-between gap-4"
+              initial={{ opacity: 0, filter: "blur(4px)" }}
               transition={{ duration: 1.2, type: "spring" }}
-              className="flex flex-col gap-4 justify-between"
             >
               <AspectRatioSection />
               <div className="flex justify-between">
-                <div className="flex items-center gap-2 ml-2">
-                  <div className="rounded-full size-2 bg-yellow-200" />
-                  <p className="text-sm text-neutral-500">Changes</p>
+                <div className="ml-2 flex items-center gap-2">
+                  <div className="size-2 rounded-full bg-yellow-200" />
+                  <p className="text-neutral-500 text-sm">Changes</p>
                 </div>
                 <button
-                  type="submit"
-                  className="text-neutral-800 bg-yellow-200 py-1 font-medium px-2 rounded-lg"
+                  className="rounded-lg bg-yellow-200 px-2 py-1 font-medium text-neutral-800"
                   onClick={() => {
                     handleOpenSettings();
                     toast.message("Changes done", {
                       description: "Changes validated and applied successfully",
                     });
                   }}
+                  type="submit"
                 >
                   Apply Changes
                 </button>
@@ -120,29 +120,29 @@ export default function DynamicSettingsVariant1() {
           )}
           {isOpen && subMenuSelected === "prompt" && (
             <motion.div
-              initial={{ opacity: 0, filter: "blur(4px)" }}
               animate={{ opacity: 1, filter: "blur(0px)" }}
+              className="flex h-full flex-col justify-between gap-4"
+              initial={{ opacity: 0, filter: "blur(4px)" }}
               transition={{ duration: 1.2, type: "spring" }}
-              className="flex flex-col gap-4 justify-between h-full"
             >
               <textarea
+                className="h-[120px] w-full resize-none rounded-[6px] bg-transparent px-2 py-[6px] text-sm text-white placeholder:text-white/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-yellow-200 focus-visible:outline-offset-2"
                 placeholder="Add a new prompt"
-                className="h-[120px] w-full resize-none rounded-[6px] bg-transparent px-2 py-[6px] text-sm text-white placeholder:text-white/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-200"
               />
               <div className="flex justify-between">
-                <div className="flex items-center gap-2 ml-2">
-                  <div className="rounded-full size-2 bg-yellow-200" />
-                  <p className="text-sm text-neutral-500">Changes</p>
+                <div className="ml-2 flex items-center gap-2">
+                  <div className="size-2 rounded-full bg-yellow-200" />
+                  <p className="text-neutral-500 text-sm">Changes</p>
                 </div>
                 <button
-                  type="submit"
-                  className="text-neutral-800 bg-yellow-200 py-1 font-medium px-2 rounded-lg"
+                  className="rounded-lg bg-yellow-200 px-2 py-1 font-medium text-neutral-800"
                   onClick={() => {
                     handleOpenSettings();
                     toast.message("Changes done", {
                       description: "Changes validated and applied successfully",
                     });
                   }}
+                  type="submit"
                 >
                   Apply Changes
                 </button>
@@ -151,25 +151,25 @@ export default function DynamicSettingsVariant1() {
           )}
           {isOpen && subMenuSelected === "dimensions" && (
             <motion.div
-              initial={{ opacity: 0, filter: "blur(4px)" }}
               animate={{ opacity: 1, filter: "blur(0px)" }}
+              className="flex flex-col justify-between gap-4"
+              initial={{ opacity: 0, filter: "blur(4px)" }}
               transition={{ duration: 1.2, type: "spring" }}
-              className="flex flex-col gap-4 justify-between"
             >
               <div className="flex justify-between">
-                <div className="flex items-center gap-2 ml-2">
-                  <div className="rounded-full size-2 bg-yellow-200" />
-                  <p className="text-sm text-neutral-500">Changes</p>
+                <div className="ml-2 flex items-center gap-2">
+                  <div className="size-2 rounded-full bg-yellow-200" />
+                  <p className="text-neutral-500 text-sm">Changes</p>
                 </div>
                 <button
-                  type="submit"
-                  className="text-neutral-800 bg-yellow-200 py-1 font-medium px-2 rounded-lg"
+                  className="rounded-lg bg-yellow-200 px-2 py-1 font-medium text-neutral-800"
                   onClick={() => {
                     handleOpenSettings();
                     toast.message("Changes done", {
                       description: "Changes validated and applied successfully",
                     });
                   }}
+                  type="submit"
                 >
                   Apply Changes
                 </button>
@@ -194,16 +194,16 @@ const aspectRatioList = [
 function AspectRatioSection() {
   const [selected, setSelected] = useState<number>(0);
   return (
-    <div className="flex gap-2 flex-wrap">
+    <div className="flex flex-wrap gap-2">
       {aspectRatioList.map((item, index) => (
         <button
-          key={item.label}
           className={cn(
-            "rounded-md inline-flex w-fit gap-2 items-center py-2 px-3  transition-colors duration-300 transform-gpu",
+            "inline-flex w-fit transform-gpu items-center gap-2 rounded-md px-3 py-2 transition-colors duration-300",
             index === selected
-              ? "bg-yellow-200/10  text-yellow-200"
-              : "text-neutral-500  hover:text-yellow-200",
+              ? "bg-yellow-200/10 text-yellow-200"
+              : "text-neutral-500 hover:text-yellow-200",
           )}
+          key={item.label}
           onClick={() => setSelected(index)}
           type="button"
         >
@@ -232,27 +232,27 @@ function NavigationMenu({
 }>) {
   return (
     <nav className="flex flex-row">
-      {menuCategories.map((button, index) => (
+      {menuCategories.map((button, _index) => (
         <button
-          type="button"
-          key={button.label}
-          onClick={() => setSubMenuSelected(button.slug)}
           className={cn(
-            "text-neutral-500 text-sm font-medium py-1 px-2 rounded-md relative whitespace-nowrap inline-flex w-fit hover:text-neutral-50 transition-colors duration-300 transform-gpu",
+            "relative inline-flex w-fit transform-gpu whitespace-nowrap rounded-md px-2 py-1 font-medium text-neutral-500 text-sm transition-colors duration-300 hover:text-neutral-50",
             subMenuSelected === button.slug && "text-neutral-200",
           )}
+          key={button.label}
+          onClick={() => setSubMenuSelected(button.slug)}
+          type="button"
         >
           <p className="z-20">{button.label}</p>
           <AnimatePresence>
             {subMenuSelected === button.slug && (
               <motion.div
-                className="absolute top-0 left-0 right-0 bottom-0 bg-neutral-700 dark:bg-neutral-800 rounded-md z-10"
-                initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
+                className="absolute top-0 right-0 bottom-0 left-0 z-10 rounded-md bg-neutral-700 dark:bg-neutral-800"
                 exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
-                layout
+                initial={{ opacity: 0, scale: 0.95 }}
+                layout={true}
                 layoutId="focused-element"
+                transition={{ duration: 0.3, ease: "easeInOut" }}
               />
             )}
           </AnimatePresence>

@@ -6,7 +6,6 @@ import { cn } from "../utils/cn";
 export default function CodeHighlighter({
   code,
   className,
-  ...props
 }: Readonly<
   { code: string; className?: string } & HTMLAttributes<HTMLDivElement>
 >) {
@@ -14,10 +13,10 @@ export default function CodeHighlighter({
     <>
       <CopyToClipboardButton code={code} />
       <ShikiCode
+        className={cn("text-xs", className)}
         code={code}
         lang="typescript"
         theme="github-light"
-        className={cn("text-xs", className)}
       />
     </>
   );

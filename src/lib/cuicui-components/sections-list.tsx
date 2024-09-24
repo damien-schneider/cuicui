@@ -1,6 +1,6 @@
-import { commonUICategoriesList } from "#/src/lib/cuicui-components/common-ui-components";
+import { commonUiCategoriesList } from "#/src/lib/cuicui-components/common-ui-components";
 
-import { marketingUIComponentList } from "#/src/lib/cuicui-components/marketing-ui-components";
+import { marketingUiComponentList } from "#/src/lib/cuicui-components/marketing-ui-components";
 
 import { applicationUiCategoryList } from "#/src/ui/cuicui/application-ui/application-ui.section";
 import { hooksSection } from "#/src/ui/cuicui/hooks/hooks.section";
@@ -11,12 +11,12 @@ export const SectionsList: SectionType[] = [
   {
     name: "Common UI",
     slug: "common-ui",
-    categoriesList: commonUICategoriesList,
+    categoriesList: commonUiCategoriesList,
   },
   {
     name: "Marketing UI",
     slug: "marketing-ui",
-    categoriesList: marketingUIComponentList,
+    categoriesList: marketingUiComponentList,
   },
   applicationUiCategoryList,
   otherSection,

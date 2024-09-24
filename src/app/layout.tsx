@@ -6,6 +6,7 @@ import { DesktopSideMenu } from "#/src/ui/navigation/desktop-menu";
 import { MobileMenu } from "../ui/navigation/mobile-menu";
 
 import { DM_Sans } from "next/font/google";
+import type { ReactNode } from "react";
 import Providers from "#/src/app/providers";
 const font = DM_Sans({
   subsets: ["latin"],
@@ -65,16 +66,16 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className={font.className}>
+    <html className={font.className} lang="en" suppressHydrationWarning={true}>
       <Providers>
         {/* <body className="dark:bg-[url('/grid-dark-mode.svg')] bg-[url('/grid-light-mode.svg')] dark:bg-gray-950 bg-gray-50"> */}
-        <body className="dark:bg-neutral-950 bg-neutral-50 ">
+        <body className="bg-neutral-50 dark:bg-neutral-950 ">
           <Toaster />
 
-          <div className="max-w-screen-2xl mx-auto">
+          <div className="mx-auto max-w-screen-2xl">
             <DesktopSideMenu />
             {/* <div className="absolute top-0 left-0 bottom-0 right-0 overflow-hidden">
                 <div className="relative">
@@ -91,7 +92,7 @@ export default function RootLayout({
                     classNameParent=""
                     classNameChild="px-8 py-10 min-h-[calc(100vh-6rem)]"
                   > */}
-              <main className=" p-4 md:p-6 pt-12 pb-20">
+              <main className=" p-4 pt-12 pb-20 md:p-6">
                 {/* Move overflow-auto to the previous comment if problems occurs */}
                 {children}
               </main>

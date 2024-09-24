@@ -19,13 +19,13 @@ import ManyOffersVariant1 from "#/src/ui/cuicui/marketing-ui/pricing-tables/many
 import AnimatedCounterPreview from "#/src/ui/cuicui/marketing-ui/statistics/animated-counter/animated-counter-preview";
 import { AnimatedNumberVariant1 } from "#/src/ui/cuicui/marketing-ui/statistics/animated-on-scroll/variant1";
 import IncreaseToValueVariant1 from "#/src/ui/cuicui/marketing-ui/statistics/increase-to-value/variant1";
-import GradientQnAVariant1 from "#/src/ui/cuicui/marketing-ui/testimonials/gradiant-qna/variant1";
-import GradientQnAVariant2 from "#/src/ui/cuicui/marketing-ui/testimonials/gradiant-qna/variant2";
+import GradientQnaVariant1 from "#/src/ui/cuicui/marketing-ui/testimonials/gradiant-qna/variant1";
+import GradientQnaVariant2 from "#/src/ui/cuicui/marketing-ui/testimonials/gradiant-qna/variant2";
 import MarqueeVariant1 from "#/src/ui/cuicui/marketing-ui/testimonials/marquee/variant1";
 import MarqueeVariant2 from "#/src/ui/cuicui/marketing-ui/testimonials/marquee/variant2";
 import { TestimonialsVariant1 } from "#/src/ui/cuicui/marketing-ui/testimonials/testimonials-component/variant1";
 
-export const marketingUIComponentList: CategoryType[] = [
+export const marketingUiComponentList: CategoryType[] = [
   {
     slug: "carousels",
     name: "Carousels",
@@ -264,12 +264,12 @@ export const marketingUIComponentList: CategoryType[] = [
         variantList: [
           {
             name: "Double Container Q&A",
-            component: <GradientQnAVariant1 />,
+            component: <GradientQnaVariant1 />,
             slugPreviewFile: "variant1",
           },
           {
             name: "Simple Container Q&A",
-            component: <GradientQnAVariant2 />,
+            component: <GradientQnaVariant2 />,
             slugPreviewFile: "variant2",
           },
         ],

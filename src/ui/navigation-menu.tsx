@@ -86,24 +86,24 @@ export const NavigationMenuButton: React.FC<NavigationButtonProps> = ({
   }, [isActive, handleActiveElement, index]);
   return (
     <button
-      type="button"
       className={cn(
-        "text-neutral-500 text-sm font-medium py-1 px-2 rounded relative whitespace-nowrap inline-flex w-fit group",
+        "group relative inline-flex w-fit whitespace-nowrap rounded px-2 py-1 font-medium text-neutral-500 text-sm",
         className,
       )}
+      type="button"
       {...props}
     >
       {children}
       <AnimatePresence>
         {isFocused && (
           <motion.div
-            className="absolute top-0 left-0 right-0 bottom-0 bg-neutral-200 dark:bg-neutral-900 rounded-md -z-10 group-active:bg-neutral-300 border group-active:border-neutral-400/30 border-neutral-400/5 transition-colors group-hover:bg-neutral-200/80 dark:group-hover:bg-neutral-900/80 dark:group-active:bg-neutral-800"
-            initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
+            className="-z-10 absolute top-0 right-0 bottom-0 left-0 rounded-md border border-neutral-400/5 bg-neutral-200 transition-colors group-hover:bg-neutral-200/80 group-active:border-neutral-400/30 group-active:bg-neutral-300 dark:bg-neutral-900 dark:group-active:bg-neutral-800 dark:group-hover:bg-neutral-900/80"
             exit={{ opacity: 0 }}
-            transition={{ duration: transitionTime }} // Use the transitionTime prop here
-            layout
+            initial={{ opacity: 0 }}
+            layout={true} // Use the transitionTime prop here
             layoutId={layoutId}
+            transition={{ duration: transitionTime }}
           />
         )}
       </AnimatePresence>

@@ -8,17 +8,17 @@ const ModernSimpleInput = React.forwardRef<HTMLInputElement, InputProps>(
   ({ className, type, ...props }, ref) => {
     return (
       <input
-        type={type}
         className={cn(
-          "flex h-10 w-full rounded-xl px-3 py-2 text-sm focus-visible:outline-none ring-0 disabled:cursor-not-allowed disabled:opacity-50 border transition transform-gpu",
+          "flex h-10 w-full transform-gpu rounded-xl border px-3 py-2 text-sm ring-0 transition focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50",
           // Colors
-          "dark:hover:bg-neutral-800/50 hover:bg-white/50 border-neutral-400/20 dark:bg-neutral-800 bg-white",
+          "border-neutral-400/20 bg-white hover:bg-white/50 dark:bg-neutral-800 dark:hover:bg-neutral-800/50",
           " placeholder:text-neutral-400 focus-visible:border-neutral-400/50",
           // File
-          "file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground",
+          "file:border-0 file:bg-transparent file:font-medium file:text-foreground file:text-sm",
           className,
         )}
         ref={ref}
+        type={type}
         {...props}
       />
     );

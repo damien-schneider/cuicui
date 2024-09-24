@@ -1,7 +1,6 @@
 "use client";
-import { AnimatePresence, type HTMLMotionProps, motion } from "framer-motion";
-import type React from "react";
-import { type HTMLAttributes, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
 
 const dataButtons = [
   { label: "Home", href: "#" },
@@ -20,22 +19,22 @@ export function VercelNavigationVariant2() {
     <nav className="flex flex-col sm:flex-row">
       {dataButtons.map((button, index) => (
         <button
-          type="button"
+          className="relative inline-flex w-fit whitespace-nowrap rounded px-2 py-1 font-medium text-neutral-500 text-sm transition-colors hover:text-neutral-600 dark:hover:text-neutral-400"
           key={button.label}
           onClick={() => handleOnClickButton(index)}
-          className="text-neutral-500 text-sm font-medium py-1 px-2 rounded relative whitespace-nowrap inline-flex w-fit dark:hover:text-neutral-400 hover:text-neutral-600 transition-colors"
+          type="button"
         >
           {button.label}
           <AnimatePresence>
             {elementFocused === index && (
               <motion.div
-                className="absolute top-0 left-0 right-0 bottom-0 bg-neutral-200 dark:bg-neutral-800 rounded-md -z-10"
-                initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
+                className="-z-10 absolute top-0 right-0 bottom-0 left-0 rounded-md bg-neutral-200 dark:bg-neutral-800"
                 exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
-                layout
+                initial={{ opacity: 0, scale: 0.95 }}
+                layout={true}
                 layoutId="focused-element"
+                transition={{ duration: 0.3, ease: "easeInOut" }}
               />
             )}
           </AnimatePresence>

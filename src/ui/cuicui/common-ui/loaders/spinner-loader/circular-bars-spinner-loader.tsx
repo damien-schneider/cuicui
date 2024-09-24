@@ -29,14 +29,14 @@ export const CircularBarsSpinnerLoader = ({
         `}
       </style>
       <div
-        className="relative flex justify-center items-center size-12"
         aria-hidden="true"
+        className="relative flex size-12 items-center justify-center"
       >
-        {[...Array(numberOfBars)].map((_, index) => (
+        {[...new Array(numberOfBars)].map((_, index) => (
           <div
+            className="absolute rounded-[1px] bg-neutral-700 dark:invert"
             // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
             key={`circular-bars-spinner-loader-bar-${index}`}
-            className="absolute dark:invert bg-neutral-700 rounded-[1px]"
             style={{
               width: `${width}px`,
               height: `${height}px`,

@@ -3,10 +3,10 @@ import { BatteryIndicator } from "#/src/ui/cuicui/application-ui/battery/battery
 export const PreviewBatteryIndicator = () => {
   return (
     <BatteryIndicator
-      level={75}
-      isCharging={true}
       chargingTime={3600}
       dischargingTime={null}
+      isCharging={true}
+      level={75}
     />
   );
 };

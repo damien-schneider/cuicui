@@ -5,10 +5,10 @@ import { cn } from "#/src/utils/cn";
 export function Dock() {
   return (
     <div className="relative w-full">
-      <div className="max-w-full pt-4 mx-auto absolute bottom-0 left-1/2 -translate-x-1/2 transform-gpu">
+      <div className="-translate-x-1/2 absolute bottom-0 left-1/2 mx-auto max-w-full transform-gpu pt-4">
         <div className="relative ">
-          <div className="absolute bottom-0 left-0 right-0 h-[72px] max-w-full rounded-3xl border dark:border-gray-600/60 dark:bg-gray-800/60 bg-gray-200/60 border-gray-200/60 z-10 pointer-events-none shadow-sm" />
-          <div className="rounded-3xl flex items-end pl-2 overflow-x-auto">
+          <div className="pointer-events-none absolute right-0 bottom-0 left-0 z-10 h-[72px] max-w-full rounded-3xl border border-gray-200/60 bg-gray-200/60 shadow-sm dark:border-gray-600/60 dark:bg-gray-800/60" />
+          <div className="flex items-end overflow-x-auto rounded-3xl pl-2">
             <AppIcon
               imgSrc={
                 "https://cdn.dribbble.com/users/6569/screenshots/17730687/linear_share_dribbble_4x.png"
@@ -18,7 +18,7 @@ export function Dock() {
               imgSrc={
                 "https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png"
               }
-              withoutBackground
+              withoutBackground={true}
             />
             <Link href="https://www.modul.day" target="_blank">
               <AppIcon
@@ -37,7 +37,7 @@ export function Dock() {
               imgSrc={
                 "https://logo-marque.com/wp-content/uploads/2020/12/Discord-Logo.png"
               }
-              withoutBackground
+              withoutBackground={true}
             />
           </div>
         </div>
@@ -54,22 +54,22 @@ function AppIcon({
   withoutBackground?: boolean;
 }>) {
   return (
-    <div className=" p-2 pl-0 grid place-items-center cursor-pointer group z-20 w-fit">
+    <div className=" group z-20 grid w-fit cursor-pointer place-items-center p-2 pl-0">
       <div
         className={cn(
-          "size-14 group-hover:size-[4rem] transition-all duration-200 rounded-2xl inline pointer-events-none z-20 overflow-hidden group-hover:shadow-sm  shadow-inner bg-white dark:bg-gray-800 transform-gpu",
+          "pointer-events-none z-20 inline size-14 transform-gpu overflow-hidden rounded-2xl bg-white shadow-inner transition-all duration-200 group-hover:size-[4rem] group-hover:shadow-sm dark:bg-gray-800",
           withoutBackground ? "p-2" : "",
         )}
       >
         <Image
-          src={imgSrc}
           alt="dock"
           className={cn(
             "size-full",
             withoutBackground ? "object-contain" : "object-cover",
           )}
-          width={256}
           height={256}
+          src={imgSrc}
+          width={256}
         />
       </div>
     </div>

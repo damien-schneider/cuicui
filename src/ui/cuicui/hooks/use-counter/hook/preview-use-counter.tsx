@@ -10,39 +10,39 @@ export default function PreviewUseCounter() {
 
   return (
     <section>
-      <h4 className="text-lg font-medium text-neutral-500">UseCounter</h4>
-      <p className="text-sm tracking-tighter font-medium text-neutral-500">
+      <h4 className="font-medium text-lg text-neutral-500">UseCounter</h4>
+      <p className="font-medium text-neutral-500 text-sm tracking-tighter">
         with optional min / max
       </p>
-      <div className="mt-4 mb-4 border border-neutral-500/20 rounded-lg p-px">
+      <div className="mt-4 mb-4 rounded-lg border border-neutral-500/20 p-px">
         <BeforeEffectButton
-          type="button"
-          disabled={count >= 10}
           className="link"
+          disabled={count >= 10}
           onClick={increment}
+          type="button"
         >
           Increment
         </BeforeEffectButton>
         <BeforeEffectButton
-          type="button"
-          disabled={count <= 5}
           className="link"
+          disabled={count <= 5}
           onClick={decrement}
+          type="button"
         >
           Decrement
         </BeforeEffectButton>
         <BeforeEffectButton
-          type="button"
           className="link"
           onClick={() => set(7)}
+          type="button"
         >
           Set to 7
         </BeforeEffectButton>
-        <BeforeEffectButton type="button" className="link" onClick={reset}>
+        <BeforeEffectButton className="link" onClick={reset} type="button">
           Reset
         </BeforeEffectButton>
       </div>
-      <p className="font-bold text-neutral-500 text-7xl mx-auto w-fit">
+      <p className="mx-auto w-fit font-bold text-7xl text-neutral-500">
         {count}
       </p>
     </section>

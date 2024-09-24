@@ -37,18 +37,18 @@ export function DotsPattern({
     >
       <defs>
         <pattern
-          id={id}
-          width={width}
           height={height}
-          patternUnits="userSpaceOnUse"
+          id={id}
           patternContentUnits="userSpaceOnUse"
+          patternUnits="userSpaceOnUse"
+          width={width}
           x={x}
           y={y}
         >
-          <circle id="pattern-circle" cx={cx} cy={cy} r={cr} />
+          <circle cx={cx} cy={cy} id="pattern-circle" r={cr} />
         </pattern>
       </defs>
-      <rect width="100%" height="100%" strokeWidth={0} fill={`url(#${id})`} />
+      <rect fill={`url(#${id})`} height="100%" strokeWidth={0} width="100%" />
     </svg>
   );
 }

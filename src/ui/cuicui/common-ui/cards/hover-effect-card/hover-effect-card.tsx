@@ -4,16 +4,16 @@ import { cn } from "#/src/utils/cn";
 const HoverCard = ({
   columns = 5,
   rows = 5,
-  maxXRotation = 10,
-  maxYRotation = 10,
+  maxXrotation = 10,
+  maxYrotation = 10,
   children,
   className,
   containerClassName,
 }: {
   columns?: number;
   rows?: number;
-  maxXRotation?: number;
-  maxYRotation?: number;
+  maxXrotation?: number;
+  maxYrotation?: number;
   children?: ReactNode;
   className?: string;
   containerClassName?: string;
@@ -23,10 +23,10 @@ const HoverCard = ({
       return (
         <div
           aria-hidden="true"
-          key={`tr-${i + 1}`}
           className={`tr-${
             i + 1
           } absolute inset-0 z-50 cursor-pointer select-none`}
+          key={`tr-${i + 1}`}
           style={{
             gridArea: `tr-${i + 1}`,
           }}
@@ -36,8 +36,8 @@ const HoverCard = ({
   };
 
   const getTransform = (row: number, col: number) => {
-    const xRotation = maxXRotation - (row / (rows - 1)) * 2 * maxXRotation;
-    const yRotation = -maxYRotation + (col / (columns - 1)) * 2 * maxYRotation;
+    const xRotation = maxXrotation - (row / (rows - 1)) * 2 * maxXrotation;
+    const yRotation = -maxYrotation + (col / (columns - 1)) * 2 * maxYrotation;
 
     return `rotateX(${xRotation.toFixed(2)}deg) rotateY(${yRotation.toFixed(
       2,
@@ -58,8 +58,8 @@ const HoverCard = ({
         }).join("")}
       `}</style>
       <div
-        className="absolute inset-0 z-50 grid gap-0 group"
         aria-hidden="true"
+        className="group absolute inset-0 z-50 grid gap-0"
         style={{
           perspective: "1000px",
           gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`,
@@ -76,11 +76,11 @@ const HoverCard = ({
       >
         {generateTrackers()}
         <div
-          id="cuicui-card"
           className={cn(
             "group absolute inset-0 z-0 transition-all duration-150 ease-in-out",
             className,
           )}
+          id="cuicui-card"
         >
           {children}
         </div>

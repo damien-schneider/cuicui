@@ -10,7 +10,7 @@ export const MainMenuCard = ({
 }) => {
   if (category?.comingSoonCategory) {
     return (
-      <p className="text-2xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-semibold text-neutral-800 dark:text-neutral-300 absolute">
+      <p className="-translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2 font-semibold text-2xl text-neutral-800 dark:text-neutral-300">
         Coming Soon
       </p>
     );
@@ -18,11 +18,11 @@ export const MainMenuCard = ({
   if (category?.previewCategory?.previewImage) {
     return (
       <Image
-        className="object-cover w-full h-48"
-        width={600}
-        height={400}
         alt={`${category.name} preview`}
+        className="h-48 w-full object-cover"
+        height={400}
         src={category.previewCategory.previewImage}
+        width={600}
       />
     );
   }
@@ -30,7 +30,7 @@ export const MainMenuCard = ({
     return (
       <div
         className={cn(
-          "pointer-events-none select-none flex justify-center items-center w-full h-full",
+          "pointer-events-none flex h-full w-full select-none items-center justify-center",
         )}
         style={{
           transform: `scale(${category.previewCategory?.previewScale ?? 0.75})`,

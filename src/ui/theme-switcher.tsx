@@ -18,28 +18,28 @@ export default () => {
   }
 
   return (
-    <div className="flex gap-0.5 bg-neutral-500/5  border border-neutral-500/15  p-px rounded-lg stroke-neutral-800 ">
+    <div className="flex gap-0.5 rounded-lg border border-neutral-500/15 bg-neutral-500/5 stroke-neutral-800 p-px ">
       {/* <ThemeSwitch onThemeSwitch={setTheme} themeMode={themeMode} /> */}
       <button
-        type="button"
-        className=" transition-colors hover:bg-neutral-500/10 rounded-md p-1"
+        className=" rounded-md p-1 transition-colors hover:bg-neutral-500/10"
         onClick={() => setTheme("dark")}
+        type="button"
       >
-        <MoonIcon className="dark:stroke-neutral-400 size-5" />
+        <MoonIcon className="size-5 dark:stroke-neutral-400" />
       </button>
       <button
-        type="button"
-        className=" transition-colors hover:bg-neutral-500/20 rounded-md p-1"
+        className=" rounded-md p-1 transition-colors hover:bg-neutral-500/20"
         onClick={() => setTheme("light")}
+        type="button"
       >
-        <SunIcon className="dark:stroke-neutral-400 size-5" />
+        <SunIcon className="size-5 dark:stroke-neutral-400" />
       </button>
       <button
-        type="button"
-        className=" transition-colors hover:bg-neutral-500/20 rounded-md p-1"
+        className=" rounded-md p-1 transition-colors hover:bg-neutral-500/20"
         onClick={() => setTheme("system")}
+        type="button"
       >
-        <SunMoonIcon className="dark:stroke-neutral-400 size-5" />
+        <SunMoonIcon className="size-5 dark:stroke-neutral-400" />
       </button>
     </div>
   );

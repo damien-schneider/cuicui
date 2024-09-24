@@ -11,7 +11,7 @@ import { ScrollArea } from "./shadcn/scrollarea";
 function Params() {
   const searchParams = useSearchParams();
 
-  return searchParams.toString().length !== 0 ? (
+  return searchParams.toString().length > 0 ? (
     <div className="px-2 text-neutral-500">
       <span>?</span>
       {Array.from(searchParams.entries()).map(([key, value], index) => {
@@ -19,11 +19,11 @@ function Params() {
           <React.Fragment key={key}>
             {index !== 0 ? <span>&</span> : null}
             <span className="px-1">
-              <span key={key} className="text-neutral-100">
+              <span className="text-neutral-100" key={key}>
                 {key}
               </span>
               <span>=</span>
-              <span key={value} className="text-neutral-100">
+              <span className="text-neutral-100" key={value}>
                 {value}
               </span>
             </span>
@@ -38,21 +38,21 @@ export function AddressBar() {
   const pathname = usePathname();
 
   return (
-    <div className="p-2 sticky top-0 z-20">
+    <div className="sticky top-0 z-20 p-2">
       <GradientContainer
-        rounded="sm"
-        classNameParent=""
-        classNameChild="px-4 py-1"
         background="glassy"
+        classNameChild="px-4 py-1"
+        classNameParent=""
+        rounded="sm"
       >
         <ScrollArea>
           <ScrollAreaScrollbar orientation="horizontal" />
           <div className="flex items-center px-2 py-1">
-            <Link2Icon className="size-4 text-neutral-500/80 inline-flex" />
+            <Link2Icon className="inline-flex size-4 text-neutral-500/80" />
 
-            <div className="text-sm font-medium tracking-tight">
+            <div className="font-medium text-sm tracking-tight">
               <Link
-                className="px-2 text-neutral-400 hover:opacity-70 transition-opacity"
+                className="px-2 text-neutral-400 transition-opacity hover:opacity-70"
                 href="/"
               >
                 cuicui.day
@@ -69,9 +69,9 @@ export function AddressBar() {
                       return (
                         <React.Fragment key={segment}>
                           <Link
-                            key={segment}
-                            className="px-1 dark:text-neutral-300 text-neutral-500 hover:opacity-80 transition-opacity text-nowrap"
+                            className="text-nowrap px-1 text-neutral-500 transition-opacity hover:opacity-80 dark:text-neutral-300"
                             href={`/${array.slice(0, index + 1).join("/")}`}
+                            key={segment}
                           >
                             {segment}
                           </Link>

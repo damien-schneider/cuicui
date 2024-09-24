@@ -1,4 +1,3 @@
-import React from "react";
 import { AdvancedCodeBlock } from "#/src/ui/cuicui/application-ui/code/advanced-code-block/advanced-code-block";
 
 const codeToDisplay = `export const = explanations = {
@@ -8,10 +7,10 @@ const codeToDisplay = `export const = explanations = {
 
 export default function PreviewAdvancedCodeBlock() {
   return (
-    <div className="p-2 max-w-2xl w-full">
+    <div className="w-full max-w-2xl p-2">
       <AdvancedCodeBlock
-        fileName="./explanations.ts"
         code={codeToDisplay}
+        fileName="./explanations.ts"
         lang="typescript"
         theme="github-light"
       />

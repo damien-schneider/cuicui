@@ -83,11 +83,11 @@ const aboutContent = {
 export default function AboutPage() {
   return (
     <>
-      <main className=" [&_h2]:header-2 [&_h2]:mb-2 space-y-14">
+      <main className=" [&_h2]:header-2 space-y-14 [&_h2]:mb-2">
         <section>
           <h2>{aboutContent.libraryIntroduction.title}</h2>
           <p className="body-1">{aboutContent.libraryIntroduction.text}</p>
-          <section className="dark:bg-neutral-900 bg-neutral-100 border border-neutral-500/10 rounded-lg py-2 px-3 mt-8">
+          <section className="mt-8 rounded-lg border border-neutral-500/10 bg-neutral-100 px-3 py-2 dark:bg-neutral-900">
             <h3 className="header-5">
               {aboutContent.libraryIntroduction.subSection.title}
             </h3>
@@ -101,16 +101,16 @@ export default function AboutPage() {
           </section>
         </section>
 
-        {aboutContent.sections.map((section, index) => (
+        {aboutContent.sections.map((section, _index) => (
           <section key={section.title}>
             <h2>{section.title}</h2>
-            <hr className="border-neutral-500/30 mt-2 mb-4" />
+            <hr className="mt-2 mb-4 border-neutral-500/30" />
             <p className="comment-1">{section.text}</p>
           </section>
         ))}
       </main>
       <footer className="comment-1 mt-20">
-        <hr className="border-neutral-500/30 mb-4" />
+        <hr className="mb-4 border-neutral-500/30" />
         <p>{aboutContent.footer.text}</p>
       </footer>
     </>

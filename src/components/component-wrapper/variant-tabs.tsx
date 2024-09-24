@@ -1,10 +1,7 @@
 import * as Tabs from "@radix-ui/react-tabs";
-import React from "react";
 import ComponentTabRenderer from "#/src/components/component-wrapper/component-tab-renderer";
 
 import { cn } from "#/src/utils/cn";
-
-import AnimatedTabMotionDiv from "#/src/components/component-wrapper/animated-tab-motion-div";
 import type {
   ComponentHeightType,
   VariantComponent,
@@ -29,32 +26,32 @@ export default function VariantTabs({
 }>) {
   return (
     <div>
-      <p className="tracking-tight text-sm text-neutral-500">
+      <p className="text-neutral-500 text-sm tracking-tight">
         List of variants :
       </p>
       <Tabs.Root
-        itemID="variants-tabs"
-        id="variants-tabs"
         defaultValue={componentList[0].name}
+        id="variants-tabs"
+        itemID="variants-tabs"
       >
         <Tabs.List
           className={cn(
-            "p-0.5 flex items-center *:data-[state=active]:bg-neutral-400/15 *:data-[state=active]:text-neutral-900 *:data-[state=active]:rounded-lg *:data-[state=active]:border-neutral-500/20",
+            "flex items-center p-0.5 *:data-[state=active]:rounded-lg *:data-[state=active]:border-neutral-500/20 *:data-[state=active]:bg-neutral-400/15 *:data-[state=active]:text-neutral-900",
           )}
         >
-          {componentList.map((variant, index) => {
+          {componentList.map((variant, _index) => {
             return (
               <Tabs.Trigger
-                value={variant.name}
-                key={variant.name}
                 className={cn(
-                  "group relative font-medium text-sm transition-colors flex items-center justify-center tracking-tighter py-1 px-2",
-                  "before:absolute before:inset-0 before:rounded-lg before:group-active:bg-neutral-500/5 before:border before:bg-neutral-400/15  before:border-neutral-500/10  before:scale-50 before:opacity-0 data-[state=active]:before:scale-100 data-[state=active]:before:opacity-100 before:transition before:duration-300 before:transform-gpu hover:before:scale-95 hover:before:opacity-50",
+                  "group relative flex items-center justify-center px-2 py-1 font-medium text-sm tracking-tighter transition-colors",
+                  "before:absolute before:inset-0 before:scale-50 before:transform-gpu before:rounded-lg before:border before:border-neutral-500/10 before:bg-neutral-400/15 before:opacity-0 before:transition before:duration-300 hover:before:scale-95 hover:before:opacity-50 before:group-active:bg-neutral-500/5 data-[state=active]:before:scale-100 data-[state=active]:before:opacity-100",
                 )}
+                key={variant.name}
+                value={variant.name}
               >
                 <span
                   className={cn(
-                    "dark:group-data-[state=active]:text-neutral-100 group-data-[state=active]:text-neutral-900 capitalize text-neutral-500 font-medium p-1 group-hover:scale-110 scale-100 transition-transform transform-gpu w-fit",
+                    "w-fit scale-100 transform-gpu p-1 font-medium text-neutral-500 capitalize transition-transform group-hover:scale-110 group-data-[state=active]:text-neutral-900 dark:group-data-[state=active]:text-neutral-100",
                   )}
                 >
                   {variant.name}
@@ -69,15 +66,15 @@ export default function VariantTabs({
             );
           })}
         </Tabs.List>
-        {componentList.map((variant, index) => (
-          <Tabs.Content value={variant.name} key={variant.name}>
+        {componentList.map((variant, _index) => (
+          <Tabs.Content key={variant.name} value={variant.name}>
             <ComponentTabRenderer
               {...variant}
-              size={size}
+              isChildUsingHeightFull={isChildUsingHeightFull}
+              isIframed={isIframed}
               isResizable={isResizable}
               rerenderButton={rerenderButton}
-              isIframed={isIframed}
-              isChildUsingHeightFull={isChildUsingHeightFull}
+              size={size}
             />
           </Tabs.Content>
         ))}

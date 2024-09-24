@@ -1,11 +1,12 @@
 import type { LucideIcon } from "lucide-react";
+import type { StaticImageData } from "next/image";
+import type { JSX, ReactNode } from "react";
 import type { ComponentBadgeList } from "../badges.const";
-
 export type Variant = `variant${number}`;
 
 export type VariantComponent = {
   name: string;
-  component: React.JSX.Element;
+  component: JSX.Element;
   previewCode: string;
   componentCode?: string;
 };

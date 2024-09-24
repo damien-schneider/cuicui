@@ -13,15 +13,17 @@ export const PreviewUseBattery = () => {
   } = useBattery();
   return (
     <div>
-      {!loading ? (
+      {loading ? (
+        <ThreeDotSimpleLoader />
+      ) : (
         <>
           <BatteryIndicator
-            level={level ? level * 100 : null}
-            isCharging={isCharging}
             chargingTime={chargingTime}
             dischargingTime={dischargingTime}
+            isCharging={isCharging}
+            level={level ? level * 100 : null}
           />
-          <p className="text-neutral-400 text-xs mt-6">
+          <p className="mt-6 text-neutral-400 text-xs">
             Informations of the battery :
             <br />
             Level : {level}
@@ -33,8 +35,6 @@ export const PreviewUseBattery = () => {
             Discharging time : {dischargingTime}
           </p>
         </>
-      ) : (
-        <ThreeDotSimpleLoader />
       )}
     </div>
   );

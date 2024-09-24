@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "#/src/styles/globals.css";
 import { cn } from "#/src/utils/cn";
 
@@ -56,33 +56,33 @@ export function Variant2FeatureFourImages() {
 
   return (
     <div className="container">
-      <div className="text-center mb-20">
-        <p className=" uppercase text-violet-500 mb-2 text-lg font-medium">
+      <div className="mb-20 text-center">
+        <p className=" mb-2 font-medium text-lg text-violet-500 uppercase">
           How does it work ?
         </p>
 
-        <h2 className="text-3xl font-medium dark:text-gray-300 text-gray-800 mb-4 shrink-0">
+        <h2 className="mb-4 shrink-0 font-medium text-3xl text-gray-800 dark:text-gray-300">
           How to use the Easiest component librairy : Cuicui
         </h2>
       </div>
-      <div className=" grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className=" grid grid-cols-1 gap-4 md:grid-cols-2">
         <div className="space-y-6 ">
           {data.map((item, index) => (
             <button
-              type="button"
               className="w-full"
               key={item.title}
               onClick={() => {
                 setFeatureOpen(index);
                 setTimer(0);
               }}
+              type="button"
             >
               <TextComponent
-                number={index + 1}
-                title={item.title}
                 content={item.content}
                 isOpen={featureOpen === index}
                 loadingWidthPercent={featureOpen === index ? timer / 100 : 0}
+                number={index + 1}
+                title={item.title}
               />
             </button>
           ))}
@@ -90,22 +90,22 @@ export function Variant2FeatureFourImages() {
         <div className="h-full">
           <div
             className={cn(
-              "relative h-[500px]  w-full rounded-lg overflow-hidden",
+              "relative h-[500px] w-full overflow-hidden rounded-lg",
             )}
           >
             {data.map((item, index) => (
               <Image
-                key={item.title}
-                src={item.srcImage}
                 alt={item.title}
-                width={400}
-                height={800}
                 className={cn(
-                  "rounded-lg absolute w-full object-cover transition-all duration-300 h-[500px] transform-gpu",
+                  "absolute h-[500px] w-full transform-gpu rounded-lg object-cover transition-all duration-300",
                   featureOpen === index ? "scale-100" : "scale-70",
                   featureOpen > index ? "translate-y-full" : "",
                 )}
+                height={800}
+                key={item.title}
+                src={item.srcImage}
                 style={{ zIndex: data.length - index }}
+                width={400}
               />
             ))}
           </div>
@@ -131,21 +131,21 @@ function TextComponent({
   return (
     <div
       className={cn(
-        "transition-colors rounded-lg transform-gpu",
-        isOpen ? "bg-violet-600/10" : "saturate-0 opacity-50",
+        "transform-gpu rounded-lg transition-colors",
+        isOpen ? "bg-violet-600/10" : "opacity-50 saturate-0",
       )}
     >
-      <div className="w-full p-4 flex gap-4 items-center">
+      <div className="flex w-full items-center gap-4 p-4">
         <p
           className={cn(
-            "inline-flex size-8 rounded-md items-center justify-center text-violet-600 bg-violet-500/20",
+            "inline-flex size-8 items-center justify-center rounded-md bg-violet-500/20 text-violet-600",
           )}
         >
           {number}
         </p>
         <h2
           className={cn(
-            "text-xl font-medium dark:text-gray-200 text-gray-800 text-left",
+            "text-left font-medium text-gray-800 text-xl dark:text-gray-200",
           )}
         >
           {title}
@@ -153,13 +153,13 @@ function TextComponent({
       </div>
       <div
         className={cn(
-          "overflow-hidden transition-all duration-500 text-left dark:text-gray-400 text-gray-600 w-full transform-gpu",
+          "w-full transform-gpu overflow-hidden text-left text-gray-600 transition-all duration-500 dark:text-gray-400",
           isOpen ? " max-h-64" : "max-h-0",
         )}
       >
         <p className="p-4 text-lg">{content}</p>
-        <div className="w-full pb-4 px-4">
-          <div className="h-1 relative rounded-full w-full overflow-hidden">
+        <div className="w-full px-4 pb-4">
+          <div className="relative h-1 w-full overflow-hidden rounded-full">
             <div
               className={cn("absolute top-0 left-0 h-1 bg-violet-500")}
               style={{ width: `${loadingWidthPercent}%` }}

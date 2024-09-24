@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "#/src/styles/globals.css";
 import { cn } from "#/src/utils/cn";
 
@@ -55,33 +55,33 @@ export function Variant1FeatureFourImages() {
 
   return (
     <div className="container">
-      <div className="text-center mb-20">
-        <p className=" uppercase text-neutral-500 mb-2 text-sm font-medium">
+      <div className="mb-20 text-center">
+        <p className=" mb-2 font-medium text-neutral-500 text-sm uppercase">
           How does it work ?
         </p>
 
-        <h2 className="text-3xl font-semibold tracking-tighter dark:text-neutral-300 text-neutral-800 mb-4">
+        <h2 className="mb-4 font-semibold text-3xl text-neutral-800 tracking-tighter dark:text-neutral-300">
           How to use the Easiest component librairy : Cuicui
         </h2>
       </div>
-      <div className=" grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className=" grid grid-cols-1 gap-4 md:grid-cols-2">
         <div className="space-y-6 ">
           {data.map((item, index) => (
             <button
-              type="button"
               className="w-full"
               key={item.title}
               onClick={() => {
                 setFeatureOpen(index);
                 setTimer(0);
               }}
+              type="button"
             >
               <TextComponent
-                number={index + 1}
-                title={item.title}
                 content={item.content}
                 isOpen={featureOpen === index}
                 loadingWidthPercent={featureOpen === index ? timer / 100 : 0}
+                number={index + 1}
+                title={item.title}
               />
             </button>
           ))}
@@ -89,19 +89,19 @@ export function Variant1FeatureFourImages() {
         <div className="h-full">
           <div
             className={cn(
-              "relative h-96 md:h-[500px] w-full rounded-lg overflow-hidden",
+              "relative h-96 w-full overflow-hidden rounded-lg md:h-[500px]",
             )}
           >
             {data.map((item, index) => (
               <img
-                key={item.title}
-                src={item.srcImage}
                 alt={item.title}
                 className={cn(
-                  "rounded-lg absolute w-full object-cover transition-all duration-300 h-[500px] transform-gpu",
+                  "absolute h-[500px] w-full transform-gpu rounded-lg object-cover transition-all duration-300",
                   featureOpen === index ? "scale-100" : "scale-70",
                   featureOpen > index ? "translate-y-full" : "",
                 )}
+                key={item.title}
+                src={item.srcImage}
                 style={{ zIndex: data.length - index }}
               />
             ))}
@@ -128,23 +128,23 @@ function TextComponent({
   return (
     <div
       className={cn(
-        "transition-all rounded-lg transform-gpu border",
+        "transform-gpu rounded-lg border transition-all",
         isOpen
-          ? "bg-gradient-to-b from-neutral-200/15 to-neutral-200/5 dark:from-neutral-600/15 dark:to-neutral-600/5  dark:border-neutral-500/15 border-neutral-500/10 dark:shadow-[2px_4px_25px_0px_rgba(248,248,248,0.06)_inset] "
-          : "saturate-0 opacity-50 border-transparent scale-90",
+          ? "border-neutral-500/10 bg-gradient-to-b from-neutral-200/15 to-neutral-200/5 dark:border-neutral-500/15 dark:from-neutral-600/15 dark:to-neutral-600/5 dark:shadow-[2px_4px_25px_0px_rgba(248,248,248,0.06)_inset] "
+          : "scale-90 border-transparent opacity-50 saturate-0",
       )}
     >
-      <div className="w-full p-4 flex gap-4 items-center">
+      <div className="flex w-full items-center gap-4 p-4">
         <p
           className={cn(
-            "inline-flex size-8 rounded-md items-center justify-center text-neutral-600 bg-neutral-500/20 shrink-0",
+            "inline-flex size-8 shrink-0 items-center justify-center rounded-md bg-neutral-500/20 text-neutral-600",
           )}
         >
           {number}
         </p>
         <h2
           className={cn(
-            "text-xl font-medium dark:text-neutral-200 text-neutral-800 text-left",
+            "text-left font-medium text-neutral-800 text-xl dark:text-neutral-200",
           )}
         >
           {title}
@@ -152,13 +152,13 @@ function TextComponent({
       </div>
       <div
         className={cn(
-          "overflow-hidden transition-all duration-500 text-left dark:text-neutral-400 text-neutral-600 w-full transform-gpu",
+          "w-full transform-gpu overflow-hidden text-left text-neutral-600 transition-all duration-500 dark:text-neutral-400",
           isOpen ? " max-h-64" : "max-h-0",
         )}
       >
         <p className="p-4 text-lg">{content}</p>
-        <div className="w-full pb-4 px-4">
-          <div className="h-1 relative rounded-full w-full overflow-hidden">
+        <div className="w-full px-4 pb-4">
+          <div className="relative h-1 w-full overflow-hidden rounded-full">
             <div
               className={cn("absolute top-0 left-0 h-1 bg-neutral-500")}
               style={{ width: `${loadingWidthPercent}%` }}

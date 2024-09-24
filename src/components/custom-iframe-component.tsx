@@ -19,7 +19,7 @@ export const CustomIframe = ({
     <>
       <CustomIframeComponentDark
         className={cn(
-          "dark:flex items-center justify-center hidden",
+          "hidden items-center justify-center dark:flex",
           className,
         )}
         size={size}

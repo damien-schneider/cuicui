@@ -1,20 +1,19 @@
 "use client";
-import React from "react";
 import { BeforeEffectButton } from "#/src/ui/cuicui/common-ui/buttons/before-effect-button/before-effect-button";
 
 export default function PreviewBeforeEffectButtonAdvancedButton() {
   return (
-    <BeforeEffectButton className="py-2 px-3 before:rounded-xl">
+    <BeforeEffectButton className="px-3 py-2 before:rounded-xl">
       <span className="flex items-center gap-2">
-        <span className="size-6 rounded-full bg-neutral-300 border dark:bg-neutral-600 border-neutral-500/30" />
+        <span className="size-6 rounded-full border border-neutral-500/30 bg-neutral-300 dark:bg-neutral-600" />
         <span className="font-medium">Damien Schneider</span>
       </span>
 
-      <span className="text-sm mt-2">
+      <span className="mt-2 text-sm">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </span>
 
-      <span className=" font-medium text-xs mt-1 text-start hover:opacity-70 transition-opacity block">
+      <span className=" mt-1 block text-start font-medium text-xs transition-opacity hover:opacity-70">
         See more
       </span>
     </BeforeEffectButton>
