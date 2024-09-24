@@ -51,6 +51,7 @@ export const commonUICategoriesList: CategoryType[] = [
     description: "Create simple avatars with different styles",
     comingSoonCategory: true,
     icon: CircleUserRoundIcon,
+    releaseDateCategory: new Date(),
     componentList: null,
   },
   {
