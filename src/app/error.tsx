@@ -8,9 +8,7 @@ type NextErrorProps = {
   reset: () => void;
 };
 export default function NextError({ error, reset }: Readonly<NextErrorProps>) {
-  React.useEffect(() => {
-    console.log("logging error:", error);
-  }, [error]);
+  React.useEffect(() => {}, [error]);
 
   return (
     <GradientContainer>

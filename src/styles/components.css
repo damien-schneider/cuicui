@@ -45,4 +45,40 @@
   .card {
     @apply bg-neutral-300/15 hover:bg-neutral-300/10 dark:bg-neutral-700/30 dark:hover:bg-neutral-700/10 transition-colors duration-300 rounded-lg pl-5 pr-3 py-3 border border-neutral-400/20 dark:border-neutral-400/10;
   }
+  .inline-link {
+    @apply relative inline-flex bg-gradient-to-br from-sky-400 via-violet-500 to-orange-400 bg-clip-text text-transparent tracking-tighter p-px  before:-inset-x-1 before:inset-y-px before:bg-gradient-to-br before:from-sky-400 before:via-violet-500 before:to-orange-400 before:absolute before:z-0 before:opacity-0 before:rounded-md before:duration-200 hover:before:scale-100 hover:before:opacity-10 before:scale-50 before:pointer-events-none before:transition;
+  }
+}
+
+.cuicui-default-style {
+  h1 {
+    @apply header-1;
+  }
+  h2 {
+    @apply header-2;
+  }
+  h3 {
+    @apply header-3;
+  }
+  h4 {
+    @apply header-4;
+  }
+  h5 {
+    @apply header-5;
+  }
+  h6 {
+    @apply header-6;
+  }
+  p {
+    @apply body-1;
+  }
+  a {
+    @apply inline-link;
+  }
+  ol {
+    @apply ul-md;
+  }
+  ul {
+    @apply ul-md;
+  }
 }

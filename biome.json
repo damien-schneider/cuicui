@@ -42,8 +42,9 @@
       },
       "style": {
         "all": true,
-        "noDefaultExport": "warn",
-        "noNamespaceImport": "info"
+        "noDefaultExport": "off",
+        "noNamespaceImport": "info",
+        "useNamingConvention": "info"
       },
       "suspicious": {
         "all": true,
@@ -51,7 +52,7 @@
         "noConsole": "info"
       },
       "nursery": {
-        "useSortedClasses": "warn"
+        "useSortedClasses": "off"
       }
     }
   }

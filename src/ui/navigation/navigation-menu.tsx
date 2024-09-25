@@ -1,7 +1,7 @@
 "use client";
 import { differenceInDays } from "date-fns";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowUpRightIcon, type LucideIcon } from "lucide-react";
+import { ArrowUpRightIcon, PaletteIcon, type LucideIcon } from "lucide-react";
 import Link from "next/link";
 import { useSelectedLayoutSegments } from "next/navigation";
 import { type ReactNode, useState } from "react";
@@ -74,7 +74,7 @@ export default function NavigationMenu({
               {elementFocused === category.slug && (
                 <motion.div
                   animate={{ opacity: 1 }}
-                  className="-z-10 absolute top-0 left-0 h-full w-full rounded-md border border-neutral-500/10 bg-neutral-200 dark:bg-neutral-800"
+                  className="absolute left-0 top-0 -z-10 h-full w-full rounded-md border border-neutral-500/10 bg-neutral-200 dark:bg-neutral-800"
                   exit={{ opacity: 0 }}
                   initial={{ opacity: 0 }}
                   layout={true}
@@ -120,7 +120,7 @@ export default function NavigationMenu({
                     {elementFocused === category.slug && (
                       <motion.div
                         animate={{ opacity: 1 }}
-                        className="-z-10 absolute top-0 left-0 h-full w-full rounded-md border border-neutral-500/10 bg-neutral-200 dark:bg-neutral-800"
+                        className="absolute left-0 top-0 -z-10 h-full w-full rounded-md border border-neutral-500/10 bg-neutral-200 dark:bg-neutral-800"
                         exit={{ opacity: 0 }}
                         initial={{ opacity: 0 }}
                         layout={true}
@@ -135,6 +135,14 @@ export default function NavigationMenu({
           </SectionWrapper>
         );
       })}
+      <SectionWrapper name="Tools">
+        <GlobalNavItem
+          Icon={PaletteIcon}
+          href="/tools/color-converter"
+          isMobile={isMobile}
+          name="Tools"
+        />
+      </SectionWrapper>
     </nav>
   );
 }
@@ -144,20 +152,20 @@ function GlobalNavItem({
   href,
   name,
   Icon,
-  isComingSoon,
+  isComingSoon = false,
   releaseDate,
   updatedDate,
-  target,
+  target = "sameWindow",
 }: Readonly<{
   isMobile?: boolean;
   href: string;
   name: string;
   // biome-ignore lint/style/useNamingConvention: <As it is JSX, we have to call it with caps>
   Icon: LucideIcon | null;
-  isComingSoon: boolean;
-  releaseDate: Date | null;
-  updatedDate: Date | null;
-  target: "newWindow" | "sameWindow";
+  isComingSoon?: boolean;
+  releaseDate?: Date | null;
+  updatedDate?: Date | null;
+  target?: "newWindow" | "sameWindow";
 }>) {
   const segments = useSelectedLayoutSegments();
   const splittedHref = href.split("/");
@@ -184,11 +192,11 @@ function GlobalNavItem({
       href={href}
       target={target === "newWindow" ? "_blank" : undefined}
     >
-      <div className="flex items-center gap-2 ">
+      <div className="flex items-center gap-2">
         {Icon && (
           <Icon className="size-4 transform-gpu text-neutral-400 transition-transform group-hover:scale-125 dark:text-neutral-500" />
         )}
-        <p className=" transform-gpu tracking-tighter transition-transform group-hover:translate-x-0.5">
+        <p className="transform-gpu tracking-tighter transition-transform group-hover:translate-x-0.5">
           {name}
         </p>
       </div>
@@ -219,7 +227,7 @@ function GlobalNavItem({
         </GradientContainer>
       ) : null}
       {target === "newWindow" && (
-        <ArrowUpRightIcon className="group-hover:-translate-y-0.5 size-4 text-black/40 transition-transform group-hover:translate-x-0.5 dark:text-white/40" />
+        <ArrowUpRightIcon className="size-4 text-black/40 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 dark:text-white/40" />
       )}
     </Link>
   );
@@ -234,7 +242,7 @@ const SectionWrapper = ({
 }) => {
   return (
     <div>
-      <div className="mb-2 px-3 font-semibold text-neutral-500 text-xs uppercase tracking-wider dark:text-neutral-400">
+      <div className="mb-2 px-3 text-xs font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
         <div>{name}</div>
       </div>
       {children}

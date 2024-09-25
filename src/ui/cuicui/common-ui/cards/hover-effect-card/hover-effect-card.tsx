@@ -23,9 +23,7 @@ const HoverCard = ({
       return (
         <div
           aria-hidden="true"
-          className={`tr-${
-            i + 1
-          } absolute inset-0 z-50 cursor-pointer select-none`}
+          className={`tr-${i + 1} absolute inset-0 z-50 select-none`}
           key={`tr-${i + 1}`}
           style={{
             gridArea: `tr-${i + 1}`,
@@ -45,7 +43,7 @@ const HoverCard = ({
   };
 
   return (
-    <div className={cn("relative select-none", containerClassName)}>
+    <div className={cn("relative ", containerClassName)}>
       <style>{`
         ${Array.from({ length: rows * columns }, (_, i) => {
           const row = Math.floor(i / columns);
@@ -59,7 +57,7 @@ const HoverCard = ({
       `}</style>
       <div
         aria-hidden="true"
-        className="group absolute inset-0 z-50 grid gap-0"
+        className="group absolute inset-0 z-10 grid gap-0 "
         style={{
           perspective: "1000px",
           gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`,
@@ -77,7 +75,7 @@ const HoverCard = ({
         {generateTrackers()}
         <div
           className={cn(
-            "group absolute inset-0 z-0 transition-all duration-150 ease-in-out",
+            "group absolute inset-0 z-20 transition-all duration-150 ease-in-out",
             className,
           )}
           id="cuicui-card"

@@ -1,5 +1,5 @@
 import type { ComponentType } from "#/src/lib/types/component";
-import { InlineCode } from "#/src/ui/cuicui/application-ui/code/inline-code/inline-code";
+import { PreviewInlineCode } from "#/src/ui/cuicui/application-ui/code/inline-code/preview-inline-code";
 
 export const inlineCodeComponent: ComponentType = {
   isIframed: false,
@@ -8,8 +8,9 @@ export const inlineCodeComponent: ComponentType = {
   variantList: [
     {
       name: "Default",
-      component: <InlineCode />,
-      slugPreviewFile: "inline-code",
+      component: <PreviewInlineCode />,
+      slugPreviewFile: "preview-inline-code",
+      slugComponentFile: "inline-code",
     },
   ],
   title: "Inline Code",
