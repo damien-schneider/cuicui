@@ -2,6 +2,7 @@ import { BringToFrontIcon } from "lucide-react";
 import type { CategoryType } from "#/src/lib/types/component";
 
 import BlurAppearVariant1 from "#/src/ui/cuicui/other/transition-wrappers/blur-appear/variant1";
+import { SlideInOnScrollComponent } from "#/src/ui/cuicui/other/transition-wrappers/slide-in-on-scroll/slide-in-on-scroll.component";
 
 export const transitionWrappersCategory: CategoryType = {
   slug: "transition-wrappers",
@@ -31,5 +32,6 @@ export const transitionWrappersCategory: CategoryType = {
       ],
       rerenderButton: true,
     },
+    SlideInOnScrollComponent,
   ],
 };
