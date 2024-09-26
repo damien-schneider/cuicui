@@ -19,7 +19,7 @@ export type FileSystemNode = {
 
 function getDirectoryTree(dirPath: string): FileSystemNode {
   const stats = statSync(dirPath);
-  const name = dirPath.split("/").pop() || dirPath;
+  const name = dirPath.split("/").pop() ?? dirPath;
   const node: FileSystemNode = {
     name,
     path: dirPath,

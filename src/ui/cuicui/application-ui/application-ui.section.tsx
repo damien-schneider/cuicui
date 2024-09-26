@@ -1,8 +1,10 @@
 import type { SectionType } from "#/src/lib/types/component";
+import { actionMenuCategory } from "#/src/ui/cuicui/application-ui/action-menu/action-menu.category";
 import { alertCategory } from "#/src/ui/cuicui/application-ui/alert/alert.category";
 import { authenticationCategory } from "#/src/ui/cuicui/application-ui/authentication/authentication.category";
 import { batteryCategory } from "#/src/ui/cuicui/application-ui/battery/battery.category";
 import { codeCategory } from "#/src/ui/cuicui/application-ui/code/code.category";
+import { cookieBannerCategory } from "#/src/ui/cuicui/application-ui/cookie-banner/category.cookie-banner";
 import { kbdCategory } from "#/src/ui/cuicui/application-ui/kbd/kbd.category";
 import { searchBarsCategory } from "#/src/ui/cuicui/application-ui/search-bars/search-bars.category";
 import { settingsCategory } from "#/src/ui/cuicui/application-ui/settings/settings.category";
@@ -16,10 +18,12 @@ export const applicationUiCategoryList: SectionType = {
   name: "Application UI",
   slug: "application-ui",
   categoriesList: [
+    actionMenuCategory,
     alertCategory,
     authenticationCategory,
     batteryCategory,
     codeCategory,
+    cookieBannerCategory,
     kbdCategory,
     searchBarsCategory,
     settingsCategory,

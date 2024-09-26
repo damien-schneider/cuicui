@@ -1,7 +1,13 @@
 "use client";
 import { differenceInDays } from "date-fns";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowUpRightIcon, PaletteIcon, type LucideIcon } from "lucide-react";
+import {
+  ArrowUpRightIcon,
+  LayoutListIcon,
+  PaletteIcon,
+  TangentIcon,
+  type LucideIcon,
+} from "lucide-react";
 import Link from "next/link";
 import { useSelectedLayoutSegments } from "next/navigation";
 import { type ReactNode, useState } from "react";
@@ -140,7 +146,19 @@ export default function NavigationMenu({
           Icon={PaletteIcon}
           href="/tools/color-converter"
           isMobile={isMobile}
-          name="Tools"
+          name="Color Converter"
+        />
+        <GlobalNavItem
+          Icon={LayoutListIcon}
+          href="/tools/form-builder"
+          isMobile={isMobile}
+          name="Form Builder"
+        />
+        <GlobalNavItem
+          Icon={TangentIcon}
+          href="/tools/bezier-curve-editor"
+          isMobile={isMobile}
+          name="Bezier Curve Editor"
         />
       </SectionWrapper>
     </nav>

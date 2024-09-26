@@ -10,7 +10,10 @@
    An open-source animated components built with React, Typescript, Tailwind CSS, and Framer Motion.
 100% open-source, and customizable that can be copy pasted directly into your code base.
   </p>
-  <p>
+
+
+![Alt](https://repobeats.axiom.co/api/embed/c72a9b3db3d7872f458beaa4db837cc58136ba99.svg "Repobeats analytics image")
+<p>
    <a href="https://www.cuicui.day/">Visit site</a>
     ·
     <a href="https://github.com/damien-schneider/cuicui/issues">Report Bug</a>
@@ -34,6 +37,22 @@
  open-source animated components built with React, Typescript, Tailwind CSS, and Framer Motion.
 100% open-source, and customizable.
 
+## Developper guide
+
+To Write ... (a contribution is welcome here)
+
+## Developper roadmap
+
+The component roadmap can be find on the [featurebase page](https://cuicui.featurebase.app/roadmap)
+
+### Here is the advanced roadmap for the website more globally
+
+- [ ] Refactor the navigation-menu.tsx
+- [ ] Change the sidemenu to have dropdown categories (maybe the treeview component)
+- [ ] Create the pages for the category sections (i.e https://cuicui.day/application-ui) -> Display the grid of the components as the home page but for each section
+- [ ] Improve SEO with better title and meta tags on components & site pages
+- [ ] Improve homepage performance by replacing component integrations by images
+
 ## License
 
 Licensed under the [MIT license.](https://github.com/damien-schneider/cuicui/blob/main/license.md)
@@ -48,4 +67,3 @@ We are using Gitmoji for our commit messages. You can find the rules at [gitmoji
 
 # Activity
 
-![Alt](https://repobeats.axiom.co/api/embed/c72a9b3db3d7872f458beaa4db837cc58136ba99.svg "Repobeats analytics image")

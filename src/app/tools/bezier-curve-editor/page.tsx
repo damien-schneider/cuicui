@@ -1,5 +1,5 @@
-import { CuicuiBezierCurveEditor } from "#/src/app/tools/bezier-curve-editor/bezier-curve-editor";
 import type { Metadata } from "next";
+import { CuicuiBezierCurveEditor } from "#/src/app/tools/bezier-curve-editor/bezier-curve-editor";
 
 export const metadata: Metadata = {
   title: "Bezier Curve Builder",
