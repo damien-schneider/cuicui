@@ -4,17 +4,18 @@ import { getFileContentAsString } from "#/src/utils/get-file-content-as-string";
 
 describe("SectionsList", () => {
   it("should have the correct number of sections", () => {
-    expect(SectionsList).toHaveLength(5);
+    expect(SectionsList).toHaveLength(6);
   });
 
-  it("should have the correct section slugs", () => {
+  it("should have the correct section slugs in the good order", () => {
     const sectionSlugs = SectionsList.map((section) => section.slug);
     expect(sectionSlugs).toEqual([
       "common-ui",
-      "marketing-ui",
       "application-ui",
+      "marketing-ui",
       "other",
       "hooks",
+      "utils",
     ]);
   });
 
@@ -40,11 +41,12 @@ describe("SectionsList", () => {
         variantName,
       });
       const errorMessage = `Failed for component slug: ${slug}, variant: ${variantName}`;
-
+      // Get first 2 words of the code
+      const firstTwoWords = code.split(" ").slice(0, 2).join(" ");
       if (shouldError) {
-        expect(code, errorMessage).toMatch(/^An error occurred/);
+        expect(firstTwoWords, errorMessage).toEqual("An error");
       } else {
-        expect(code, errorMessage).not.toMatch(/^An error occurred/);
+        expect(firstTwoWords, errorMessage).not.toEqual("An error");
       }
     };
 

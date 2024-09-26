@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import type { HTMLAttributes, ReactNode } from "react";
 import { cn } from "#/src/utils/cn";
 
 export default ({
@@ -8,15 +8,18 @@ export default ({
   rounded = "md",
   background = "glassy",
   border = true,
-}: Readonly<{
-  children: ReactNode;
-  classNameParent?: string;
-  classNameChild?: string;
-  classNameBlur?: string;
-  rounded?: "xs" | "sm" | "md" | "lg" | "full" | "none";
-  background?: "glassy" | "solid";
-  border?: boolean;
-}>) => {
+  ...props
+}: Readonly<
+  {
+    children?: ReactNode;
+    classNameParent?: string;
+    classNameChild?: string;
+    classNameBlur?: string;
+    rounded?: "xs" | "sm" | "md" | "lg" | "full" | "none";
+    background?: "glassy" | "solid";
+    border?: boolean;
+  } & HTMLAttributes<HTMLDivElement>
+>) => {
   function getRoundedValue(
     roundedValue: typeof rounded,
     target: "parent" | "child",
@@ -69,6 +72,7 @@ export default ({
       style={{
         background: "linear-gradient(135deg, #3BC4F2, #7A69F9,#F26378,#F5833F)",
       }}
+      {...props}
     >
       <div
         className={cn(

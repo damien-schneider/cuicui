@@ -38,6 +38,9 @@ importers:
       '@uiw/react-signature':
         specifier: 1.3.1
         version: 1.3.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      bezier-editor:
+        specifier: 1.0.1
+        version: 1.0.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       class-variance-authority:
         specifier: 0.7.0
         version: 0.7.0
@@ -1748,6 +1751,12 @@ packages:
 
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
+
+  bezier-editor@1.0.1:
+    resolution: {integrity: sha512-CTM6APcY/4Y2hAXPVbLZzS1L616sk8kxbb1CNm74RjShw46Og2pVi+1GknkjzD1rgBts9+qujQPkqyvBG1QZEg==}
+    peerDependencies:
+      react: ^17.0.2
+      react-dom: ^17.0.2
 
   binary-extensions@2.3.0:
     resolution: {integrity: sha512-Ceh+7ox5qe7LJuLHoY0feh3pHuUDHAcRUeyL2VYghZwfpkNIy/+8Ocg0a3UuSoYzavmylwuLWQOf3hl0jjMMIw==}
@@ -5326,6 +5335,12 @@ snapshots:
       dequal: 2.0.3
 
   balanced-match@1.0.2: {}
+
+  bezier-editor@1.0.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
+    dependencies:
+      '@babel/runtime': 7.24.7
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
 
   binary-extensions@2.3.0: {}
 
