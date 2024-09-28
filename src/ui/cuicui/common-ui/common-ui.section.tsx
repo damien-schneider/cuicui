@@ -14,6 +14,7 @@ import { toggleCategory } from "#/src/ui/cuicui/common-ui/toggle/toggle.category
 export const commonUiSection: SectionType = {
   name: "Common UI",
   slug: "common-ui",
+  type: "multiple-component",
   categoriesList: [
     avatarsCategory,
     badgesCategory,

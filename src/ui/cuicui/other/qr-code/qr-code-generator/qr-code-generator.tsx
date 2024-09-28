@@ -3,7 +3,7 @@ import { QRCodeSVG } from "qrcode.react";
 import { type RefObject, useRef, useState } from "react";
 
 import { ModernSimpleInput } from "#/src/ui/cuicui/common-ui/inputs/modern-simple-input/modern-simple-input";
-import { useCopyToClipboard } from "#/src/ui/cuicui/hooks/use-copy-to-clipboard/hook/use-copy-to-clipboard";
+import { useCopyToClipboard } from "#/src/ui/cuicui/hooks/use-copy-to-clipboard/use-copy-to-clipboard";
 
 function downloadStringAsFile(data: string, filename: string) {
   const a = document.createElement("a");

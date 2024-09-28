@@ -1,0 +1,28 @@
+import { CalculatorIcon } from "lucide-react";
+import type { SingleComponentCategoryType } from "#/src/lib/types/component";
+import PreviewUseCounter from "#/src/ui/cuicui/hooks/use-counter/preview-use-counter";
+
+export const useCounterCategory: SingleComponentCategoryType = {
+  slug: "use-counter",
+  name: "Use counter",
+  description: "A hook that allows you to count easily",
+  releaseDateCategory: new Date("2024-09-16"),
+  icon: CalculatorIcon,
+  previewCategory: {
+    component: <PreviewUseCounter />,
+    previewScale: 1,
+  },
+  component: {
+    lastUpdatedDateComponent: new Date("2024-09-16"),
+    sizePreview: "lg",
+    isIframed: false,
+    variantList: [
+      {
+        name: "variant 1",
+        component: <PreviewUseCounter />,
+        slugComponentFile: "use-counter",
+        slugPreviewFile: "preview-use-counter",
+      },
+    ],
+  },
+};
