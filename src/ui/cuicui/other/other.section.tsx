@@ -7,6 +7,8 @@ import { transitionWrappersCategory } from "#/src/ui/cuicui/other/transition-wra
 export const otherSection: SectionType = {
   name: "Other",
   slug: "other",
+  type: "multiple-component",
+
   categoriesList: [
     cursorCategory,
     mockUpsCategory,

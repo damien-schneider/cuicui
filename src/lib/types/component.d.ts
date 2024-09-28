@@ -4,7 +4,7 @@ import type { JSX, ReactNode } from "react";
 import type { ComponentBadgeList } from "../badges.const";
 export type Variant = `variant${number}`;
 
-export type VariantComponent = {
+export type ProcessVariantType = {
   name: string;
   component: JSX.Element;
   previewCode: string;
@@ -41,11 +41,36 @@ export type PreviewComponent = {
 ------------------------------------
 */
 
-export type SectionType = {
+// Base interface for common properties
+interface BaseSectionType {
   name: string;
   slug: string;
+}
+
+// Section with single-component type
+interface SingleComponentSectionType extends BaseSectionType {
+  type: "single-component";
+  categoriesList: SingleComponentCategoryType[];
+}
+
+// Section with multi-component type
+interface MultiComponentSectionType extends BaseSectionType {
+  type: "multiple-component";
   categoriesList: CategoryType[];
-};
+}
+
+// Section with page type
+interface PageSectionType extends BaseSectionType {
+  type: "page";
+  href: string;
+  icon: LucideIcon;
+}
+
+// Union type for SectionType
+export type SectionType =
+  | SingleComponentSectionType
+  | MultiComponentSectionType
+  | PageSectionType;
 
 /*
 ------------------------------------
@@ -62,6 +87,17 @@ type CategoryType = {
   releaseDateCategory: Date;
   previewCategory?: PreviewComponent;
   componentList: ComponentType[] | null;
+};
+
+type SingleComponentCategoryType = {
+  slug: string;
+  name: string;
+  description: string;
+  icon: LucideIcon;
+  comingSoonCategory?: boolean;
+  releaseDateCategory: Date;
+  previewCategory?: PreviewComponent;
+  component: SingleComponentType | null;
 };
 
 /*
@@ -84,16 +120,32 @@ export type ComponentType = {
   inspirationLink?: string;
   sizePreview: ComponentHeightType;
   slug: string;
-  variantList: ComponentVariantType[];
+  variantList: VariantType[];
+};
+
+export type SingleComponentType = {
+  // Excluded: title, description, slug
+
+  releaseDateComponent?: Date;
+  lastUpdatedDateComponent?: Date;
+  isResizable?: boolean;
+  componentBadges?: ComponentBadgeSlug[];
+  isIframed?: boolean;
+  rerenderButton?: boolean;
+  isChildUsingHeightFull?: boolean;
+  inspiration?: string;
+  inspirationLink?: string;
+  sizePreview: ComponentHeightType;
+  variantList: VariantType[];
 };
 
 /*
 ------------------------------------
-************ Variants ************
+************* Variants *************
 ------------------------------------
 */
 
-export type ComponentVariantType = {
+export type VariantType = {
   name: string;
   component: JSX.Element;
   slugComponentFile?: string;

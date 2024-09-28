@@ -1,6 +1,6 @@
 "use client";
 
-import { useMouse } from "#/src/ui/cuicui/hooks/use-mouse/hook/use-mouse";
+import { useMouse } from "#/src/ui/cuicui/hooks/use-mouse/use-mouse";
 
 export default function FollowCursorWithCursor() {
   const [mouse, parentRef] = useMouse();

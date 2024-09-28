@@ -1,8 +1,8 @@
 import { BatteryCharging } from "lucide-react";
-import type { CategoryType } from "#/src/lib/types/component";
-import { PreviewUseBattery } from "#/src/ui/cuicui/hooks/use-battery/hook/preview-use-battery";
+import type { SingleComponentCategoryType } from "#/src/lib/types/component";
+import { PreviewUseBattery } from "#/src/ui/cuicui/hooks/use-battery/preview-use-battery";
 
-export const useBatteryCategory: CategoryType = {
+export const useBatteryCategory: SingleComponentCategoryType = {
   slug: "use-battery",
   name: "Use Battery",
   description: "A hook to get battery informations",
@@ -12,23 +12,18 @@ export const useBatteryCategory: CategoryType = {
     component: <PreviewUseBattery />,
     previewScale: 1,
   },
-  componentList: [
-    {
-      rerenderButton: true,
-      lastUpdatedDateComponent: new Date("2024-09-16"),
-      sizePreview: "lg",
-      slug: "hook",
-      isIframed: false,
-      title: "Use Battery",
-      description: "A hook to get battery informations",
-      variantList: [
-        {
-          name: "variant 1",
-          component: <PreviewUseBattery />,
-          slugComponentFile: "use-battery",
-          slugPreviewFile: "preview-use-battery",
-        },
-      ],
-    },
-  ],
+  component: {
+    rerenderButton: true,
+    lastUpdatedDateComponent: new Date("2024-09-16"),
+    sizePreview: "lg",
+    isIframed: false,
+    variantList: [
+      {
+        name: "variant 1",
+        component: <PreviewUseBattery />,
+        slugComponentFile: "use-battery",
+        slugPreviewFile: "preview-use-battery",
+      },
+    ],
+  },
 };

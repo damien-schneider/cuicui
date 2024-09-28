@@ -9,7 +9,7 @@ import {
 import StepToInstall from "#/src/components/steps-to-install/step-to-install";
 import type {
   ComponentHeightType,
-  VariantComponent,
+  ProcessVariantType,
 } from "#/src/lib/types/component";
 import CodeHighlighter from "#/src/ui/code-highlighter";
 import {
@@ -49,7 +49,7 @@ export default function ComponentTabRenderer({
   isIframed?: boolean;
   size: ComponentHeightType;
   isChildUsingHeightFull?: boolean;
-} & VariantComponent) {
+} & ProcessVariantType) {
   return (
     <Tabs.Root defaultValue="preview" id="variants-tabs" itemID="variants-tabs">
       <Tabs.List

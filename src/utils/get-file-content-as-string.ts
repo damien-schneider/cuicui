@@ -58,11 +58,13 @@ import { SectionsList } from "#/src/lib/cuicui-components/sections-list";
 function getComponentPath({
   componentSlug,
   variantName,
-  extension = "tsx",
-}: { componentSlug: string; variantName: string; extension?: "ts" | "tsx" }) {
+}: { componentSlug: string; variantName: string }) {
   let basePath: null | string = null;
 
   for (const section of SectionsList) {
+    if (section.type === "page") {
+      continue;
+    }
     for (const category of section.categoriesList) {
       if (category.slug === componentSlug) {
         basePath = `${section.slug}/${category.slug}`;

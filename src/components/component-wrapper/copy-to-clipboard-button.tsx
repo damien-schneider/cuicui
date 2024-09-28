@@ -2,7 +2,7 @@
 import { CheckIcon, ClipboardIcon } from "lucide-react";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
-import { useCopyToClipboard } from "#/src/ui/cuicui/hooks/use-copy-to-clipboard/hook/use-copy-to-clipboard";
+import { useCopyToClipboard } from "#/src/ui/cuicui/hooks/use-copy-to-clipboard/use-copy-to-clipboard";
 import { Button } from "#/src/ui/shadcn/button";
 
 export default function CopyToClipboardButton({

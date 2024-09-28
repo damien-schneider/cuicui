@@ -1,10 +1,11 @@
 import type {
   ComponentType,
-  ComponentVariantType,
+  SingleComponentType,
+  VariantType,
 } from "#/src/lib/types/component";
 import { getFileContentAsString } from "#/src/utils/get-file-content-as-string";
 
-interface ProcessedVariant extends ComponentVariantType {
+interface ProcessedVariant extends VariantType {
   previewCode: string;
   componentCode?: string;
 }
@@ -13,27 +14,46 @@ interface ProcessedComponent extends ComponentType {
   componentList: ProcessedVariant[];
 }
 
-export async function fetchVariantData(
-  categorySlug: string,
-  componentSlug: string,
-  variant: ComponentVariantType,
-) {
+export async function fetchVariantData({
+  categorySlug,
+  componentSlug,
+  variant,
+}: {
+  categorySlug: string;
+  componentSlug?: string;
+  variant: VariantType;
+}) {
   const variantName = variant.name;
   const variantSlugPreviewFile = variant.slugPreviewFile ?? variantName;
   const variantSlugComponentFile = variant.slugComponentFile ?? variantName;
 
-  const previewCode = await getFileContentAsString({
-    componentSlug: categorySlug,
-    variantName: `${componentSlug}/${variantSlugPreviewFile}`,
-  });
+  let previewCode: string | null = null;
+  let componentCode: string | undefined;
+  if (componentSlug) {
+    previewCode = await getFileContentAsString({
+      componentSlug: categorySlug,
+      variantName: `${componentSlug}/${variantSlugPreviewFile}`,
+    });
 
-  const componentCode = variant.slugComponentFile
-    ? await getFileContentAsString({
-        componentSlug: categorySlug,
-        variantName: `${componentSlug}/${variantSlugComponentFile}`,
-      })
-    : undefined;
+    componentCode = variant.slugComponentFile
+      ? await getFileContentAsString({
+          componentSlug: categorySlug,
+          variantName: `${componentSlug}/${variantSlugComponentFile}`,
+        })
+      : undefined;
+  } else {
+    previewCode = await getFileContentAsString({
+      componentSlug: categorySlug,
+      variantName: variantSlugPreviewFile,
+    });
 
+    componentCode = variant.slugComponentFile
+      ? await getFileContentAsString({
+          componentSlug: categorySlug,
+          variantName: variantSlugComponentFile,
+        })
+      : undefined;
+  }
   return {
     ...variant,
     previewCode,
@@ -41,7 +61,7 @@ export async function fetchVariantData(
   };
 }
 
-export async function fetchComponentData({
+export async function fetchMultipleComponentData({
   componentList,
   categorySlug,
 }: {
@@ -54,11 +74,11 @@ export async function fetchComponentData({
     const processedVariants: ProcessedVariant[] = [];
 
     for (const variant of component.variantList) {
-      const processedVariant = await fetchVariantData(
+      const processedVariant = await fetchVariantData({
         categorySlug,
-        component.slug,
+        componentSlug: component.slug,
         variant,
-      );
+      });
       processedVariants.push(processedVariant);
     }
 
@@ -71,4 +91,24 @@ export async function fetchComponentData({
   }
 
   return processedComponents;
+}
+
+export async function fetchSingleComponentData({
+  categorySlug,
+  component,
+}: {
+  categorySlug: string;
+  component: SingleComponentType;
+}) {
+  const processedVariants: ProcessedVariant[] = [];
+
+  for (const variant of component.variantList) {
+    const processedVariant = await fetchVariantData({ categorySlug, variant });
+    processedVariants.push(processedVariant);
+  }
+
+  return {
+    ...component,
+    componentList: processedVariants,
+  };
 }

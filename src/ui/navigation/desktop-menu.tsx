@@ -13,7 +13,7 @@ import { ScrollArea } from "../shadcn/scrollarea";
 import StarGithubProjectButton from "../star-github-project-button";
 import ThemeSwitcher from "../theme-switcher";
 import NavigationMenu from "./navigation-menu";
-import { SearchMenu } from "./search-menu";
+import { SearchMenu } from "../../components/search-menu/search-menu";
 
 export function DesktopSideMenu({
   className,

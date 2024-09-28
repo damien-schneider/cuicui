@@ -44,7 +44,7 @@
         "all": true,
         "noDefaultExport": "off",
         "noNamespaceImport": "info",
-        "useNamingConvention": "info"
+        "useNamingConvention": "off"
       },
       "suspicious": {
         "all": true,

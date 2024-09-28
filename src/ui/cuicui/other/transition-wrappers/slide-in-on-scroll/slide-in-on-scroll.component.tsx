@@ -12,7 +12,8 @@ export const SlideInOnScrollComponent: ComponentType = {
     {
       name: "Slide in on scroll",
       component: <PreviewSlideInOnScroll />,
-      slugPreviewFile: "slide-in-on-scroll",
+      slugPreviewFile: "preview-slide-in-on-scroll",
+      slugComponentFile: "slide-in-on-scroll",
     },
   ],
   // supportedBrowers: ["chromium"],

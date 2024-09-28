@@ -15,6 +15,7 @@ import { themeCategory } from "#/src/ui/cuicui/application-ui/theme/theme.catego
 import { treeCategory } from "#/src/ui/cuicui/application-ui/tree/tree.category";
 
 export const applicationUiCategoryList: SectionType = {
+  type: "multiple-component",
   name: "Application UI",
   slug: "application-ui",
   categoriesList: [
