@@ -1,12 +1,15 @@
 import Image from "next/image";
 
 import { cn } from "#/src/utils/cn";
-import type { CategoryType } from "../lib/types/component";
+import type {
+  CategoryType,
+  SingleComponentCategoryType,
+} from "../lib/types/component";
 
 export const MainMenuCard = ({
   category,
 }: {
-  category?: CategoryType;
+  category?: CategoryType | SingleComponentCategoryType;
 }) => {
   if (category?.comingSoonCategory) {
     return (

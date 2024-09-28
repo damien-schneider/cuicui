@@ -11,6 +11,7 @@ export const SectionsList: SectionType[] = [
   commonUiSection,
   applicationUiCategoryList,
   {
+    type: "multiple-component",
     name: "Marketing UI",
     slug: "marketing-ui",
     categoriesList: marketingUiComponentList,

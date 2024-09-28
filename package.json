@@ -17,12 +17,6 @@
     "test": "vitest",
     "generate-package-list-check": "node scripts/generate-package-list-check.js"
   },
-  "git": {
-    "pre-commit": "lint-staged"
-  },
-  "lint-staged": {
-    "*": "biome format --write ./src"
-  },
   "dependencies": {
     "@ctrl/tinycolor": "4.1.0",
     "@radix-ui/react-dialog": "1.1.1",

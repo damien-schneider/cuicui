@@ -4,20 +4,20 @@ import ComponentTabRenderer from "#/src/components/component-wrapper/component-t
 import { cn } from "#/src/utils/cn";
 import type {
   ComponentHeightType,
-  VariantComponent,
+  ProcessVariantType,
 } from "../../lib/types/component";
 
 export type TabType = "preview" | "code-component" | "code-preview";
 
 export default function VariantTabs({
-  componentList,
+  variantList,
   size = "md",
   isIframed = true,
   isResizable = true,
   rerenderButton = false,
   isChildUsingHeightFull = false,
 }: Readonly<{
-  componentList: VariantComponent[];
+  variantList: ProcessVariantType[];
   size?: ComponentHeightType;
   isIframed?: boolean;
   isResizable?: boolean;
@@ -30,7 +30,7 @@ export default function VariantTabs({
         List of variants :
       </p>
       <Tabs.Root
-        defaultValue={componentList[0].name}
+        defaultValue={variantList[0].name}
         id="variants-tabs"
         itemID="variants-tabs"
       >
@@ -39,7 +39,7 @@ export default function VariantTabs({
             "flex items-center p-0.5 *:data-[state=active]:rounded-lg *:data-[state=active]:border-neutral-500/20 *:data-[state=active]:bg-neutral-400/15 *:data-[state=active]:text-neutral-900",
           )}
         >
-          {componentList.map((variant, _index) => {
+          {variantList.map((variant, _index) => {
             return (
               <Tabs.Trigger
                 className={cn(
@@ -66,7 +66,7 @@ export default function VariantTabs({
             );
           })}
         </Tabs.List>
-        {componentList.map((variant, _index) => (
+        {variantList.map((variant, _index) => (
           <Tabs.Content key={variant.name} value={variant.name}>
             <ComponentTabRenderer
               {...variant}

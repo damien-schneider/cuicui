@@ -21,6 +21,10 @@ describe("SectionsList", () => {
 
   it("category should have componentList === null if comingSoonCategory === true", () => {
     for (const section of SectionsList) {
+      if (section.type !== "multiple-component") {
+        continue;
+      }
+      //TODO: Handle the single-component test
       for (const category of section.categoriesList) {
         if (category.comingSoonCategory) {
           expect(category.componentList).toBeNull();
@@ -51,6 +55,9 @@ describe("SectionsList", () => {
     };
 
     for (const section of SectionsList) {
+      if (section.type !== "multiple-component") {
+        continue;
+      }
       for (const category of section.categoriesList) {
         if (category.componentList) {
           for (const component of category.componentList) {

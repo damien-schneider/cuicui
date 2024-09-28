@@ -44,22 +44,23 @@ export default function HomePage() {
             <h3 className="uppercase-title">{section.name}</h3>
 
             <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
-              {section.categoriesList.map((category) => {
-                return (
-                  <Link
-                    href={`/${section.slug}/${category.slug}`}
-                    key={category.name}
-                  >
-                    <GradientCard
-                      description={category.description}
-                      title={category.name}
+              {section.type !== "page" &&
+                section.categoriesList.map((category) => {
+                  return (
+                    <Link
+                      href={`/${section.slug}/${category.slug}`}
+                      key={category.name}
                     >
-                      <MainMenuCard category={category} />
-                    </GradientCard>
-                    {/* <MainMenuCard category={category} /> */}
-                  </Link>
-                );
-              })}
+                      <GradientCard
+                        description={category.description}
+                        title={category.name}
+                      >
+                        <MainMenuCard category={category} />
+                      </GradientCard>
+                      {/* <MainMenuCard category={category} /> */}
+                    </Link>
+                  );
+                })}
             </div>
           </div>
         ))}
