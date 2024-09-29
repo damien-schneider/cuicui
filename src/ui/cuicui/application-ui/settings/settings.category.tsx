@@ -14,6 +14,7 @@ export const settingsCategory: CategoryType = {
   },
   componentList: [
     {
+      lastUpdatedDateComponent: new Date("2024-06-30"),
       sizePreview: "sm",
       slug: "dynamic-settings",
       variantList: [

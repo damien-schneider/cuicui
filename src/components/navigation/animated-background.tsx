@@ -11,7 +11,7 @@ import {
   useId,
 } from "react";
 
-type AnimatedBackgroundProps = {
+export type AnimatedBackgroundProps = {
   children:
     | ReactElement<{ "data-id": string }>[]
     | ReactElement<{ "data-id": string }>;

@@ -1,32 +1,28 @@
 import GradientContainer from "#/src/ui/gradient-container";
 import GradientText from "#/src/ui/gradient-text";
 import { cn } from "#/src/utils/cn";
-import { differenceInDays } from "date-fns";
 import { ArrowUpRightIcon, type LucideIcon } from "lucide-react";
 import Link from "next/link";
 import { useSelectedLayoutSegments } from "next/navigation";
-import type { ReactNode } from "react";
+import type { AnchorHTMLAttributes, ReactNode } from "react";
 
 export function GlobalNavItem({
   isMobile,
   href,
   name,
   Icon,
-  isComingSoon = false,
-  releaseDate,
-  updatedDate,
+  tag,
   target = "sameWindow",
+  ...props
 }: Readonly<{
   isMobile?: boolean;
   href: string;
   name: string;
-  // biome-ignore lint/style/useNamingConvention: <As it is JSX, we have to call it with caps>
   Icon: LucideIcon | null;
-  isComingSoon?: boolean;
-  releaseDate?: Date | null;
-  updatedDate?: Date | null;
+  tag?: string | null;
   target?: "newWindow" | "sameWindow";
-}>) {
+}> &
+  AnchorHTMLAttributes<HTMLAnchorElement>) {
   const segments = useSelectedLayoutSegments();
   const splittedHref = href.split("/");
   const lastSegment = splittedHref[splittedHref.length - 1];
@@ -34,22 +30,6 @@ export function GlobalNavItem({
   let isActive = false;
   if (segments) {
     isActive = segments.some((segment) => segment === lastSegment);
-  }
-
-  const isNew = differenceInDays(new Date(), releaseDate ?? 0) < 21;
-  const isUpdated = differenceInDays(new Date(), updatedDate ?? 0) < 14;
-
-  function getTagValue() {
-    if (isComingSoon) {
-      return "Coming soon";
-    }
-    if (isNew) {
-      return "New";
-    }
-    if (isUpdated) {
-      return "Updated";
-    }
-    return null;
   }
 
   return (
@@ -64,6 +44,7 @@ export function GlobalNavItem({
       data-testid={`navigation-link-${name}`}
       href={href}
       target={target === "newWindow" ? "_blank" : undefined}
+      {...props}
     >
       <div className="flex items-center gap-2">
         {Icon && (
@@ -73,13 +54,13 @@ export function GlobalNavItem({
           {name}
         </p>
       </div>
-      {getTagValue() && (
+      {tag && (
         <GradientContainer
           classNameChild="text-xs px-1 py-0"
           classNameParent=""
           rounded="xs"
         >
-          <GradientText className="text-xs">{getTagValue()}</GradientText>
+          <GradientText className="text-xs">{tag}</GradientText>
         </GradientContainer>
       )}
 

@@ -2,18 +2,19 @@ import { notFound } from "next/navigation";
 import { SectionsList } from "#/src/lib/cuicui-components/sections-list";
 import SingleComponentCategory from "#/src/app/(components)/[section]/[category]/single-component-section";
 import MultipleComponentCategory from "#/src/app/(components)/[section]/[category]/multiple-component-section";
+import { findCategoryBySlug } from "#/src/utils/section-category-components-utils/find-category-by-slug";
 import type {
   CategoryType,
-  MultiComponentSectionType,
-  PageSectionType,
-  SectionType,
   SingleComponentCategoryType,
-  SingleComponentSectionType,
 } from "#/src/lib/types/component";
+type Props = {
+  params: {
+    section: string;
+    category: string;
+  };
+};
 
 export async function generateStaticParams() {
-  // Iterate over the SectionsList to create all possible combinations of section and category
-
   const params = SectionsList.flatMap((section) => {
     if (
       section.type === "multiple-component" ||
@@ -25,7 +26,10 @@ export async function generateStaticParams() {
       }));
     }
     if (section.type === "page") {
-      //TODO : Handle pages
+      return section.pageList.map((page) => ({
+        section: section.slug,
+        category: page.slug,
+      }));
     }
   });
 
@@ -33,14 +37,7 @@ export async function generateStaticParams() {
   return params;
 }
 
-export default async function Page({
-  params,
-}: Readonly<{
-  params: {
-    section: string;
-    category: string;
-  };
-}>) {
+export default async function Page({ params }: Props) {
   const section = SectionsList.find(
     (section) => section.slug === params.section,
   );
@@ -48,11 +45,18 @@ export default async function Page({
     return notFound();
   }
   if (section?.type === "page") {
-    return;
+    const page = section.pageList.find((page) => page.slug === params.category);
+    if (!page) {
+      return notFound();
+    }
+    return page.component;
   }
 
   if (section?.type === "single-component") {
-    const category = findCategoryBySlug(section, params.category);
+    const category = findCategoryBySlug(
+      section,
+      params.category,
+    ) as SingleComponentCategoryType | null;
     if (!category) {
       return notFound();
     }
@@ -60,41 +64,13 @@ export default async function Page({
   }
 
   if (section?.type === "multiple-component") {
-    const category = findCategoryBySlug(section, params.category);
+    const category = findCategoryBySlug(
+      section,
+      params.category,
+    ) as CategoryType | null;
     if (!category) {
       return notFound();
     }
     return <MultipleComponentCategory category={category} />;
   }
-}
-
-// Function Overloads
-function findCategoryBySlug(
-  section: SingleComponentSectionType,
-  categoryParamSlug: string,
-): SingleComponentCategoryType | null;
-
-function findCategoryBySlug(
-  section: MultiComponentSectionType,
-  categoryParamSlug: string,
-): CategoryType | null;
-
-function findCategoryBySlug(
-  section: PageSectionType,
-  categoryParamSlug: string,
-): null;
-
-// General Implementation
-function findCategoryBySlug(
-  section: SectionType,
-  categoryParamSlug: string,
-): SingleComponentCategoryType | CategoryType | null {
-  if (section.type === "page") {
-    return null;
-  }
-  return (
-    section?.categoriesList.find(
-      (category) => category.slug === categoryParamSlug,
-    ) ?? null
-  );
 }

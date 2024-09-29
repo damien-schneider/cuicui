@@ -15,6 +15,7 @@ export const authenticationCategory: CategoryType = {
   },
   componentList: [
     {
+      lastUpdatedDateComponent: new Date("2024-08-21"),
       isIframed: true,
       sizePreview: "lg",
       slug: "half-sided-glassmorphism",

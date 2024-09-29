@@ -6,5 +6,6 @@ export const utilsSection: SectionType = {
   type: "single-component",
   name: "Utils",
   slug: "utils",
+  description: "A collection of utility components for your projects.",
   categoriesList: [cnCategory, sleepCategory],
 };

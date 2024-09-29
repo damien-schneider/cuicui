@@ -1,6 +1,22 @@
 {
-  "private": true,
+  "private": false,
+  "publisher": "Damien Schneider",
   "packageManager": "pnpm@9.0.4",
+  "author": {
+    "name": "Damien Schneider",
+    "email": "damien.schneider01@gmail.com",
+    "url": "https://github.com/damien-schneider"
+  },
+  "description": "An open-source all-in-one library for building an advanced SaaS application, a personal website, or anything else with micro-interactions, advanced user experiences, and a focus on performance and code quality.",
+  "maintainers": [
+    {
+      "name": "Damien Schneider",
+      "email": "damien.schneider@gmail.com",
+      "url": "https://github.com/damien-schneider"
+    }
+  ],
+  "license": "MIT",
+  "version": "0.1.2",
   "scripts": {
     "build": "next build",
     "dev": "next dev",

@@ -17,8 +17,11 @@ export const cardsCategory: CategoryType = {
   },
   componentList: [
     {
-      sizePreview: "sm",
       slug: "modern-inner-shadow",
+      title: "Modern inner shadow card",
+      description:
+        "A card that showcases a set of tools that you use to create your product.",
+      sizePreview: "sm",
       variantList: [
         {
           name: "Variant 1",
@@ -26,15 +29,16 @@ export const cardsCategory: CategoryType = {
           slugPreviewFile: "variant1",
         },
       ],
-      title: "Modern inner shadow card",
-      description:
-        "A card that showcases a set of tools that you use to create your product.",
       isIframed: false,
       componentBadges: ["better-in-dark-mode"],
+      lastUpdatedDateComponent: new Date("2024-08-10"),
     },
     {
-      sizePreview: "sm",
       slug: "dynamic-square-background",
+      title: "Dynamic Square Background",
+      description:
+        "A card to announce any new feature or product with a modern dynamic square background.",
+      sizePreview: "sm",
       variantList: [
         {
           name: "Variant 1",
@@ -43,15 +47,15 @@ export const cardsCategory: CategoryType = {
           slugComponentFile: "dynamic-square-background",
         },
       ],
-      title: "Dynamic Square Background",
-      description:
-        "A card to announce any new feature or product with a modern dynamic square background.",
-      isIframed: false,
-      // componentBadges: ["better-in-dark-mode"],
+      lastUpdatedDateComponent: new Date("2024-08-10"),
     },
     {
-      sizePreview: "sm",
       slug: "notification-card",
+      title: "Notification Card",
+      description:
+        "A notification card with a date and time to show the user when the notification was sent.",
+      lastUpdatedDateComponent: new Date("2024-08-10"),
+      sizePreview: "sm",
       variantList: [
         {
           name: "Variant 1",
@@ -60,11 +64,6 @@ export const cardsCategory: CategoryType = {
           slugComponentFile: "notification-card",
         },
       ],
-      title: "Notification Card",
-      description:
-        "A notification card with a date and time to show the user when the notification was sent.",
-      isIframed: false,
-      // componentBadges: ["better-in-dark-mode"],
     },
     {
       sizePreview: "sm",
@@ -82,6 +81,7 @@ export const cardsCategory: CategoryType = {
       description:
         "A card with a hover effect that rotates on hover. Only CSS.",
       isIframed: true,
+
       componentBadges: ["no-js"],
     },
   ],

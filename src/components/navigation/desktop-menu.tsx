@@ -7,13 +7,13 @@ import Image from "next/image";
 import LogoLarge from "#/src/assets/logo/logo-large.png";
 import { cn } from "../../utils/cn";
 
-import Byline from "../byline";
+import Byline from "../../ui/byline";
 
-import { ScrollArea } from "../shadcn/scrollarea";
-import StarGithubProjectButton from "../star-github-project-button";
-import ThemeSwitcher from "../theme-switcher";
+import { ScrollArea } from "../../ui/shadcn/scrollarea";
+import StarGithubProjectButton from "../../ui/star-github-project-button";
+import ThemeSwitcher from "../../ui/theme-switcher";
 import NavigationMenu from "./navigation-menu";
-import { SearchMenu } from "../../components/search-menu/search-menu";
+import { SearchMenu } from "../search-menu/search-menu";
 
 export function DesktopSideMenu({
   className,
@@ -30,8 +30,12 @@ export function DesktopSideMenu({
           <Link
             className="group flex w-fit items-center gap-x-2.5 transition-transform hover:scale-105"
             href="/"
+            title="Cuicui - The all in one React component library"
           >
             <Image alt="Cuicui logo" src={LogoLarge} width={100} />
+            <span aria-hidden="true" className="sr-only">
+              Cuicui - Best all in one React component library
+            </span>
           </Link>
           <ThemeSwitcher />
         </div>

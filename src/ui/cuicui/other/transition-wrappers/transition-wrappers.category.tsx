@@ -31,7 +31,9 @@ export const transitionWrappersCategory: CategoryType = {
         },
       ],
       rerenderButton: true,
+      lastUpdatedDateComponent: new Date("2024-07-29"),
     },
+
     SlideInOnScrollComponent,
   ],
 };

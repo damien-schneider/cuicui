@@ -12,7 +12,7 @@ export type TabType = "preview" | "code-component" | "code-preview";
 export default function VariantTabs({
   variantList,
   size = "md",
-  isIframed = true,
+  isIframed = false,
   isResizable = true,
   rerenderButton = false,
   isChildUsingHeightFull = false,

@@ -5,7 +5,7 @@ import { ModernSimpleInput } from "#/src/ui/cuicui/common-ui/inputs/modern-simpl
 import {
   findClosestTailwindColor,
   getExactColorTailwindNameFromHexaValue,
-} from "#/src/app/tools/color-converter/components/to-tailwind";
+} from "#/src/ui/cuicui/tools/color-converter/components/to-tailwind";
 import { InlineCode } from "#/src/ui/cuicui/application-ui/code/inline-code/inline-code";
 import { useCopyToClipboard } from "#/src/ui/cuicui/hooks/use-copy-to-clipboard/use-copy-to-clipboard";
 import { CheckIcon, CopyIcon } from "lucide-react";

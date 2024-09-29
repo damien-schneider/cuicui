@@ -41,6 +41,7 @@ export const mockUpsCategory: CategoryType = {
       ],
       inspiration: "Devices CSS",
       inspirationLink: "https://devicescss.xyz/phones.html#google-pixel-6-pro",
+      lastUpdatedDateComponent: new Date("2024-08-14"),
     },
     {
       sizePreview: "lg",
@@ -59,6 +60,7 @@ export const mockUpsCategory: CategoryType = {
       ],
       inspiration: "Devices CSS",
       inspirationLink: "https://devicescss.xyz/laptops.html#macbook-pro",
+      lastUpdatedDateComponent: new Date("2024-08-14"),
     },
     {
       sizePreview: "lg",

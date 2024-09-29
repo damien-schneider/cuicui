@@ -30,6 +30,7 @@ export const hooksSection: SectionType = {
   type: "single-component",
   name: "Hooks",
   slug: "hooks",
+  description: "A collection of React hooks for building modern applications.",
   categoriesList: [
     useBatteryCategory,
     useComponentSizeCategory,

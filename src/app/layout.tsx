@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Toaster } from "sonner";
 import "#/src/styles/globals.css";
 import { AddressBar } from "#/src/ui/address-bar";
-import { DesktopSideMenu } from "#/src/ui/navigation/desktop-menu";
-import { MobileMenu } from "../ui/navigation/mobile-menu";
+import { DesktopSideMenu } from "#/src/components/navigation/desktop-menu";
+import { MobileMenu } from "../components/navigation/mobile-menu";
 
 import { DM_Sans } from "next/font/google";
 import type { ReactNode } from "react";
@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     name: "Damien Schneider",
     url: "https://github.com/damien-schneider",
   },
+  publisher: "Cuicui - Damien Schneider",
   openGraph: {
     title: "CuiCui | High-Quality React and Tailwind Components for Copy-Paste",
     description:

@@ -15,4 +15,5 @@ export const useMouseComponent: ComponentType = {
   ],
   title: "Use Mouse",
   description: "A simple hook to get the mouse position.",
+  lastUpdatedDateComponent: new Date("2024-09-27"),
 };

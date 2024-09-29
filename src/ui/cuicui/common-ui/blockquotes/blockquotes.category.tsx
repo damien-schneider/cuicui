@@ -14,8 +14,10 @@ export const blockquotesCategory: CategoryType = {
   },
   componentList: [
     {
-      sizePreview: "sm",
       slug: "modern-simple-quote",
+      title: "Simple modern quote",
+      description: "A simple modern quote with a border on the left side.",
+      sizePreview: "sm",
       variantList: [
         {
           name: "On hover effect",
@@ -23,8 +25,7 @@ export const blockquotesCategory: CategoryType = {
           slugPreviewFile: "variant1",
         },
       ],
-      title: "Simple modern quote",
-      description: "A simple modern quote with a border on the left side.",
+      lastUpdatedDateComponent: new Date("2024-08-01"),
     },
   ],
 };
