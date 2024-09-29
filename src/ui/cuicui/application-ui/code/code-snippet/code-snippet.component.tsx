@@ -5,6 +5,7 @@ export const codeSnippetComponent: ComponentType = {
   isIframed: false,
   sizePreview: "xs",
   slug: "code-snippet",
+  lastUpdatedDateComponent: new Date("2024-08-21"),
   variantList: [
     {
       name: "Default",

@@ -12,4 +12,5 @@ export const QrCodeGeneratorComponent: ComponentType = {
   ],
   title: "QR Code Generator",
   description: "A QR code generator component using qrcode.react",
+  lastUpdatedDateComponent: new Date("2024-09-14"),
 };

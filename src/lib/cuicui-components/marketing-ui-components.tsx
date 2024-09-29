@@ -57,6 +57,7 @@ export const marketingUiComponentList: CategoryType[] = [
       },
       {
         title: "Cylindric 3D Carousel",
+        lastUpdatedDateComponent: new Date("2024-08-10"),
         description:
           "A 3D carousel that rotates in a cylindrical way. It's perfect for showcasing multiple images or products.",
         sizePreview: "md",
@@ -84,6 +85,8 @@ export const marketingUiComponentList: CategoryType[] = [
     componentList: [
       {
         title: "Feature Four Images",
+
+        lastUpdatedDateComponent: new Date("2024-06-17"),
         description:
           "An auto-scrolling feature section with four images and text. It could be also used with videos or other content. Perfect to shocase in details multiple features of a product or service.",
         sizePreview: "md",
@@ -104,6 +107,8 @@ export const marketingUiComponentList: CategoryType[] = [
       },
       {
         title: "Simple feature cards",
+
+        lastUpdatedDateComponent: new Date("2024-06-17"),
         description:
           "Simple feature cards with icons, text, and buttons. Perfect for micro-interactions and lists of features.",
         sizePreview: "sm",
@@ -133,6 +138,7 @@ export const marketingUiComponentList: CategoryType[] = [
     },
     componentList: [
       {
+        lastUpdatedDateComponent: new Date("2024-08-01"),
         sizePreview: "lg",
         slug: "many-offers",
         title: "Pricing with many offers",
@@ -162,6 +168,7 @@ export const marketingUiComponentList: CategoryType[] = [
     },
     componentList: [
       {
+        lastUpdatedDateComponent: new Date("2024-08-11"),
         sizePreview: "sm",
         slug: "animated-on-scroll",
         isIframed: true,
@@ -178,6 +185,7 @@ export const marketingUiComponentList: CategoryType[] = [
         ],
       },
       {
+        lastUpdatedDateComponent: new Date("2024-08-11"),
         sizePreview: "sm",
         slug: "increase-to-value",
         rerenderButton: true,
@@ -193,12 +201,12 @@ export const marketingUiComponentList: CategoryType[] = [
         ],
       },
       {
+        lastUpdatedDateComponent: new Date("2024-09-10"),
         sizePreview: "sm",
         slug: "animated-counter",
         rerenderButton: true,
         title: "Animated Counter",
         description: "Show numbers that animate automatically when updated.",
-        lastUpdatedDateComponent: new Date("2024-09-10"),
         variantList: [
           {
             name: "Increase To Value",
@@ -224,6 +232,7 @@ export const marketingUiComponentList: CategoryType[] = [
     },
     componentList: [
       {
+        lastUpdatedDateComponent: new Date("2024-07-17"),
         sizePreview: "md",
         slug: "testimonials-component",
         title: "Testimonials",
@@ -237,6 +246,7 @@ export const marketingUiComponentList: CategoryType[] = [
         ],
       },
       {
+        lastUpdatedDateComponent: new Date("2024-07-17"),
         sizePreview: "sm",
         slug: "marquee",
         title: "Marquee",
@@ -256,6 +266,7 @@ export const marketingUiComponentList: CategoryType[] = [
         ],
       },
       {
+        lastUpdatedDateComponent: new Date("2024-07-17"),
         sizePreview: "lg",
         slug: "gradiant-qna",
         title: "Gradient Q&A",

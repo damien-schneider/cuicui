@@ -6,7 +6,6 @@ export const reactSignatureComponent: ComponentType = {
   slug: "react-signature",
   description: "A signature component for React.",
   sizePreview: "sm",
-  lastUpdatedDateComponent: new Date("2024-09-24"),
   variantList: [
     {
       name: "Default",
@@ -15,4 +14,5 @@ export const reactSignatureComponent: ComponentType = {
       slugComponentFile: "react-signature",
     },
   ],
+  lastUpdatedDateComponent: new Date("2024-09-24"),
 };

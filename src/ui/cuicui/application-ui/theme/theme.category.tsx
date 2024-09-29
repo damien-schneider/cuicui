@@ -14,9 +14,11 @@ export const themeCategory: CategoryType = {
   },
   componentList: [
     {
+      slug: "theme-switcher",
+      title: "Theme Switcher",
+      description: "A theme switcher button.",
       isIframed: false,
       sizePreview: "xs",
-      slug: "theme-switcher",
       variantList: [
         {
           name: "Default",
@@ -24,8 +26,7 @@ export const themeCategory: CategoryType = {
           slugPreviewFile: "theme-switcher-button",
         },
       ],
-      title: "Theme Switcher",
-      description: "A theme switcher button.",
+      lastUpdatedDateComponent: new Date("2024-08-10"),
     },
   ],
 };

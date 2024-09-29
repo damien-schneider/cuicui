@@ -45,6 +45,7 @@ export type PreviewComponent = {
 interface BaseSectionType {
   name: string;
   slug: string;
+  description: string;
 }
 
 // Section with single-component type
@@ -62,8 +63,7 @@ interface MultiComponentSectionType extends BaseSectionType {
 // Section with page type
 interface PageSectionType extends BaseSectionType {
   type: "page";
-  href: string;
-  icon: LucideIcon;
+  pageList: PageCategoryType[];
 }
 
 // Union type for SectionType
@@ -100,6 +100,14 @@ type SingleComponentCategoryType = {
   component: SingleComponentType | null;
 };
 
+type PageCategoryType = {
+  slug: string;
+  name: string;
+  icon: LucideIcon;
+  description: string;
+  component: JSX.Element;
+};
+
 /*
 ------------------------------------
 ************ Components ************
@@ -109,8 +117,7 @@ type SingleComponentCategoryType = {
 export type ComponentType = {
   title: string;
   description: string;
-  releaseDateComponent?: Date;
-  lastUpdatedDateComponent?: Date;
+  lastUpdatedDateComponent: Date;
   isResizable?: boolean;
   componentBadges?: ComponentBadgeSlug[];
   isIframed?: boolean;
@@ -124,9 +131,6 @@ export type ComponentType = {
 };
 
 export type SingleComponentType = {
-  // Excluded: title, description, slug
-
-  releaseDateComponent?: Date;
   lastUpdatedDateComponent?: Date;
   isResizable?: boolean;
   componentBadges?: ComponentBadgeSlug[];

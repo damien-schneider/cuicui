@@ -17,6 +17,7 @@ export const badgesCategory: CategoryType = {
   },
   componentList: [
     {
+      lastUpdatedDateComponent: new Date("2024-06-29"),
       sizePreview: "xs",
       slug: "modern-simple-badges",
       variantList: [
@@ -36,6 +37,7 @@ export const badgesCategory: CategoryType = {
         "Simple modern badge that can be used in any project with any artistic style.",
     },
     {
+      lastUpdatedDateComponent: new Date("2024-06-29"),
       sizePreview: "xs",
       slug: "clerk-badge",
       variantList: [
@@ -52,6 +54,7 @@ export const badgesCategory: CategoryType = {
       inspirationLink: "https://clerk.com/docs",
     },
     {
+      lastUpdatedDateComponent: new Date("2024-07-29"),
       sizePreview: "xs",
       slug: "advanced-badges",
       variantList: [

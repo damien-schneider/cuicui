@@ -6,7 +6,7 @@ import type {
   SingleComponentCategoryType,
 } from "../lib/types/component";
 
-export const MainMenuCard = ({
+export const MainMenuCardContent = ({
   category,
 }: {
   category?: CategoryType | SingleComponentCategoryType;

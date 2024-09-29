@@ -32,6 +32,7 @@ export const patternsCategory: CategoryType = {
       ],
       inspiration: "Magic UI",
       inspirationLink: "https://magicui.design/docs/components/dot-pattern",
+      lastUpdatedDateComponent: new Date("2024-08-10"),
     },
     {
       sizePreview: "sm",

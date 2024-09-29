@@ -15,6 +15,7 @@ export const commonUiSection: SectionType = {
   name: "Common UI",
   slug: "common-ui",
   type: "multiple-component",
+  description: "A collection of common UI components for your projects.",
   categoriesList: [
     avatarsCategory,
     badgesCategory,

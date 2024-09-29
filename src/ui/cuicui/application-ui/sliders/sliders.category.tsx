@@ -16,8 +16,10 @@ export const slidersCategory: CategoryType = {
   },
   componentList: [
     {
-      sizePreview: "xs",
       slug: "elastic-slider",
+      title: "Elastic Slider",
+      description: "Smooth slider with scale effect.",
+      sizePreview: "xs",
       variantList: [
         {
           name: "Default",
@@ -25,14 +27,15 @@ export const slidersCategory: CategoryType = {
           slugPreviewFile: "variant1",
         },
       ],
-      title: "Elastic Slider",
-      description: "Smooth slider with scale effect.",
       inspiration: "Build UI",
       inspirationLink: "https://buildui.com/recipes/elastic-slider",
+      lastUpdatedDateComponent: new Date("2024-08-10"),
     },
     {
-      sizePreview: "xs",
       slug: "simple-modern-slider",
+      title: "Simple Modern Slider",
+      description: "Simple modern slider with micro animations.",
+      sizePreview: "xs",
       variantList: [
         {
           name: "Smooth",
@@ -45,8 +48,7 @@ export const slidersCategory: CategoryType = {
           slugPreviewFile: "simple-modern-slider-with-max",
         },
       ],
-      title: "Simple Modern Slider",
-      description: "Simple modern slider with micro animations.",
+      lastUpdatedDateComponent: new Date("2024-08-10"),
     },
   ],
 };

@@ -1,20 +1,8 @@
-import ColorConverter from "#/src/app/tools/color-converter/components/color-converter";
+import ColorConverter from "#/src/ui/cuicui/tools/color-converter/components/color-converter";
 import { CUICUI_GITHUB_URL } from "#/src/lib/site.const";
-import type { Metadata } from "next";
 import Link from "next/link";
 
-export const metadata: Metadata = {
-  title: "Advanced Color Converter, Tailwind class, RGB, HSL and more",
-  description:
-    "Convert standard colors to tailwind classes equivalent. Convert seamlessly HEX to RGB, HSL and more or convert from tailwind classes to HEX, RGB, HSL.",
-  openGraph: {
-    title: "Advanced Color Converter, Tailwind class, RGB, HSL and more",
-    description:
-      "Convert standard colors to tailwind classes equivalent. Convert seamlessly HEX to RGB, HSL and more or convert from tailwind classes to HEX, RGB, HSL.",
-    // images: ["/todo.png"],
-  },
-};
-export default function Page() {
+export function PageColorConverter() {
   return (
     <>
       {/* Header Section */}

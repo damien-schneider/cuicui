@@ -1,7 +1,6 @@
 import { render, screen } from "@testing-library/react";
-import { describe, expect, it, test } from "vitest";
-import HomePage from "#/src/app/page";
-import NavigationMenu from "#/src/ui/navigation/navigation-menu";
+import { describe, expect, it } from "vitest";
+import NavigationMenu from "#/src/components/navigation/navigation-menu";
 
 describe("Sidemenu component", () => {
   render(<NavigationMenu />);

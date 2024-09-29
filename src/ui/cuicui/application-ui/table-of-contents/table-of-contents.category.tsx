@@ -17,8 +17,11 @@ export const tableOfContentCategory: CategoryType = {
   },
   componentList: [
     {
-      sizePreview: "md",
       slug: "modul-inspired",
+      title: "Modul inspired table of contents",
+      description:
+        "An advanced animated table of contents component highlighting every sections on the screen.",
+      sizePreview: "md",
       lastUpdatedDateComponent: new Date("2024-08-28"),
       variantList: [
         {
@@ -30,9 +33,6 @@ export const tableOfContentCategory: CategoryType = {
       ],
       isResizable: false,
       isIframed: false,
-      title: "Modul inspired table of contents",
-      description:
-        "An advanced animated table of contents component highlighting every sections on the screen.",
       inspiration: "Modul",
       inspirationLink: "https://www.modul.day",
     },

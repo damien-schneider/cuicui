@@ -18,6 +18,7 @@ export const applicationUiCategoryList: SectionType = {
   type: "multiple-component",
   name: "Application UI",
   slug: "application-ui",
+  description: "A collection of UI components for advanced applications.",
   categoriesList: [
     actionMenuCategory,
     alertCategory,

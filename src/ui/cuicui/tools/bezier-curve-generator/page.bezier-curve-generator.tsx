@@ -1,18 +1,17 @@
-import type { Metadata } from "next";
-import { CuicuiBezierCurveEditor } from "#/src/app/tools/bezier-curve-editor/bezier-curve-editor";
+import { CuicuiBezierCurveEditor } from "#/src/ui/cuicui/tools/bezier-curve-generator/bezier-curve-editor";
 
-export const metadata: Metadata = {
-  title: "Bezier Curve Builder",
-  description:
-    "Create and customize your own Bezier curves for animations and transitions.",
-  openGraph: {
-    title: "Bezier Curve Builder",
-    description:
-      "Create and customize your own Bezier curves for animations and transitions.",
-  },
-};
+// export const metadata: Metadata = {
+//   title: "Bezier Curve Builder",
+//   description:
+//     "Create and customize your own Bezier curves for animations and transitions.",
+//   openGraph: {
+//     title: "Bezier Curve Builder",
+//     description:
+//       "Create and customize your own Bezier curves for animations and transitions.",
+//   },
+// };
 
-export default function Page() {
+export function PageBezierCurveGenerator() {
   return (
     <div className="cuicui-default-style ">
       <h1>Bézier curve builder</h1>

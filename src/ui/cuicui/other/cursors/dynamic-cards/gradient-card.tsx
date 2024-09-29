@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 import { useMouse } from "#/src/ui/cuicui/hooks/use-mouse/use-mouse";
 import { cn } from "#/src/utils/cn";
 
-export const GradientCard = ({
+export const MainMenusGradientCard = ({
   title,
   description,
   withArrow = false,

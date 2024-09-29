@@ -19,8 +19,11 @@ export const buttonsCategory: CategoryType = {
   },
   componentList: [
     {
-      sizePreview: "xs",
       slug: "growing-button",
+      title: "Button",
+      description:
+        "Simple button with icon which grows on hover. Perfect for small, rarely used buttons replacing an old tooltip.",
+      sizePreview: "xs",
       variantList: [
         {
           name: "Amber",
@@ -28,14 +31,13 @@ export const buttonsCategory: CategoryType = {
           slugPreviewFile: "variant1",
         },
       ],
-      title: "Button",
-      description:
-        "Simple button with icon which grows on hover. Perfect for small, rarely used buttons replacing an old tooltip.",
-      isIframed: false,
+      lastUpdatedDateComponent: new Date("2024-08-10"),
     },
     {
-      sizePreview: "xs",
       slug: "before-effect-button",
+      title: "Dynamic button hover effect",
+      description: "Button with a hover effect that has a 'before' effect.",
+      sizePreview: "xs",
       variantList: [
         {
           name: "Hover only",
@@ -53,13 +55,14 @@ export const buttonsCategory: CategoryType = {
           slugPreviewFile: "preview-advanced-button",
         },
       ],
-      title: "Dynamic button hover effect",
-      description: "Button with a hover effect that has a 'before' effect.",
       isIframed: false,
+      lastUpdatedDateComponent: new Date("2024-08-10"),
     },
     {
-      sizePreview: "xs",
       slug: "shiny-rotating-border-button",
+      title: "Shiny rotating border button",
+      description: "Button with a shiny rotating border effect.",
+      sizePreview: "xs",
       variantList: [
         {
           name: "Default",
@@ -67,13 +70,14 @@ export const buttonsCategory: CategoryType = {
           slugPreviewFile: "variant1",
         },
       ],
-      title: "Shiny rotating border button",
-      description: "Button with a shiny rotating border effect.",
       isIframed: true,
+      lastUpdatedDateComponent: new Date("2024-08-10"),
     },
     {
-      sizePreview: "xs",
       slug: "modern-animated-button",
+      title: "Modern Animated Button",
+      description: "Button with a modern animated style.",
+      sizePreview: "xs",
       variantList: [
         {
           name: "Shiny rotating border button",
@@ -81,11 +85,10 @@ export const buttonsCategory: CategoryType = {
           slugPreviewFile: "variant1",
         },
       ],
-      title: "Modern Animated Button",
-      description: "Button with a modern animated style.",
-      isIframed: false,
+
       inspiration: "Raycast",
       inspirationLink: "https://www.raycast.com/",
+      lastUpdatedDateComponent: new Date("2024-08-10"),
     },
   ],
 };

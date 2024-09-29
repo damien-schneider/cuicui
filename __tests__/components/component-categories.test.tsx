@@ -4,7 +4,7 @@ import { getFileContentAsString } from "#/src/utils/get-file-content-as-string";
 
 describe("SectionsList", () => {
   it("should have the correct number of sections", () => {
-    expect(SectionsList).toHaveLength(6);
+    expect(SectionsList).toHaveLength(7);
   });
 
   it("should have the correct section slugs in the good order", () => {
@@ -16,6 +16,7 @@ describe("SectionsList", () => {
       "other",
       "hooks",
       "utils",
+      "tools",
     ]);
   });
 

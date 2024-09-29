@@ -5,6 +5,7 @@ export const inlineCodeComponent: ComponentType = {
   isIframed: false,
   sizePreview: "xs",
   slug: "inline-code",
+  lastUpdatedDateComponent: new Date("2024-08-21"),
   variantList: [
     {
       name: "Default",

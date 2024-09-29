@@ -1,8 +1,8 @@
 "use client";
 
 import { MenuIcon } from "lucide-react";
-import Byline from "../byline";
-import GradientContainer from "../gradient-container";
+import Byline from "../../ui/byline";
+import GradientContainer from "../../ui/gradient-container";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -12,8 +12,8 @@ import { Drawer } from "vaul";
 import LogoLarge from "#/src/assets/logo/logo-large.png";
 import { cn } from "#/src/utils/cn";
 
-import StarGithubProjectButton from "../star-github-project-button";
-import ThemeSwitcher from "../theme-switcher";
+import StarGithubProjectButton from "../../ui/star-github-project-button";
+import ThemeSwitcher from "../../ui/theme-switcher";
 import NavigationMenu from "./navigation-menu";
 export function MobileMenu({ className }: Readonly<{ className?: string }>) {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);

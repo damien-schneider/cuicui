@@ -28,6 +28,7 @@ export const checkboxesCategory: CategoryType = {
       description:
         "A simple checkbox that can be used in any project with simple artistic style.",
       isIframed: false,
+      lastUpdatedDateComponent: new Date("2024-08-10"),
     },
   ],
 };

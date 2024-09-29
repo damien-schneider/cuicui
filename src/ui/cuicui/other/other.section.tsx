@@ -8,7 +8,8 @@ export const otherSection: SectionType = {
   name: "Other",
   slug: "other",
   type: "multiple-component",
-
+  description:
+    "A collection of creative advanced UI components for your projects.",
   categoriesList: [
     cursorCategory,
     mockUpsCategory,

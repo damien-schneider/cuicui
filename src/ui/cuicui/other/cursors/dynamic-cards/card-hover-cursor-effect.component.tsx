@@ -25,4 +25,5 @@ export const cardHoverCursorEffectComponent: ComponentType = {
     },
   ],
   componentBadges: ["prefer-desktop"],
+  lastUpdatedDateComponent: new Date("2024-09-27"),
 };

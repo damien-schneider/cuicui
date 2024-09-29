@@ -16,4 +16,5 @@ export const simpleCookieBannerComponent: ComponentType = {
     },
   ],
   sizePreview: "sm",
+  lastUpdatedDateComponent: new Date("2024-09-19"),
 };

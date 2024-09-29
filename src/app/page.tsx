@@ -3,8 +3,9 @@ import Link from "next/link";
 
 import { SectionsList } from "#/src/lib/cuicui-components/sections-list";
 import { firstMenuSection } from "#/src/lib/first-menu-section";
-import { GradientCard } from "#/src/ui/cuicui/other/cursors/dynamic-cards/gradient-card";
-import { MainMenuCard } from "./card";
+import { MainMenusGradientCard } from "#/src/ui/cuicui/other/cursors/dynamic-cards/gradient-card";
+import { MainMenuCardContent } from "./card";
+import MenuSectionWrapper from "#/src/components/main-menus/menu-category-wrapper";
 
 export default function HomePage() {
   return (
@@ -16,53 +17,43 @@ export default function HomePage() {
       </p>
       <div className="space-y-10 text-white">
         <h2 className="header-2">Explore the component categories</h2>
-
-        <div className="space-y-5">
-          <h3 className="uppercase-title">{firstMenuSection.name}</h3>
-
-          <div className="grid transform-gpu grid-cols-1 gap-5 lg:grid-cols-2">
-            {firstMenuSection.categoryList.map((category) => {
-              return (
-                <Link
-                  data-testid={`home-navigation-link-${category.name}`}
-                  href={category.href ?? `/${category.slug}`}
-                  key={category.name}
-                >
-                  <GradientCard
-                    description={category.description}
-                    title={category.name}
-                    withArrow={Boolean(category.href)}
-                  />
-                </Link>
-              );
-            })}
-          </div>
-        </div>
+        <MenuSectionWrapper name={firstMenuSection.name}>
+          {firstMenuSection.categoryList.map((category) => {
+            return (
+              <Link
+                data-testid={`home-navigation-link-${category.name}`}
+                href={category.href ?? `/${category.slug}`}
+                key={category.name}
+              >
+                <MainMenusGradientCard
+                  description={category.description}
+                  title={category.name}
+                  withArrow={Boolean(category.href)}
+                />
+              </Link>
+            );
+          })}
+        </MenuSectionWrapper>
 
         {SectionsList.map((section) => (
-          <div className="space-y-5" key={section.name}>
-            <h3 className="uppercase-title">{section.name}</h3>
-
-            <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
-              {section.type !== "page" &&
-                section.categoriesList.map((category) => {
-                  return (
-                    <Link
-                      href={`/${section.slug}/${category.slug}`}
-                      key={category.name}
+          <MenuSectionWrapper name={section.name} key={section.name}>
+            {section.type !== "page" &&
+              section.categoriesList.map((category) => {
+                return (
+                  <Link
+                    href={`/${section.slug}/${category.slug}`}
+                    key={category.name}
+                  >
+                    <MainMenusGradientCard
+                      description={category.description}
+                      title={category.name}
                     >
-                      <GradientCard
-                        description={category.description}
-                        title={category.name}
-                      >
-                        <MainMenuCard category={category} />
-                      </GradientCard>
-                      {/* <MainMenuCard category={category} /> */}
-                    </Link>
-                  );
-                })}
-            </div>
-          </div>
+                      <MainMenuCardContent category={category} />
+                    </MainMenusGradientCard>
+                  </Link>
+                );
+              })}
+          </MenuSectionWrapper>
         ))}
       </div>
     </div>

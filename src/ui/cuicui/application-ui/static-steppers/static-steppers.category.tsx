@@ -14,8 +14,11 @@ export const staticSteppersCategory: CategoryType = {
   },
   componentList: [
     {
-      sizePreview: "sm",
       slug: "code",
+      title: "Simple static stepper",
+      description:
+        "A simple static stepper component to display a list of steps.",
+      sizePreview: "sm",
       variantList: [
         {
           name: "Default",
@@ -23,12 +26,10 @@ export const staticSteppersCategory: CategoryType = {
           slugPreviewFile: "variant1",
         },
       ],
-      title: "Simple static stepper",
-      description:
-        "A simple static stepper component to display a list of steps.",
       componentBadges: ["updated"],
       inspiration: "Hooks Scriptkavi manual installation",
       inspirationLink: "https://hooks.scriptkavi.com/docs/hooks/battery",
+      lastUpdatedDateComponent: new Date("2024-08-01"),
     },
   ],
 };
