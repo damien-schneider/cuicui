@@ -2,6 +2,8 @@ import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 import NavigationMenu from "#/src/components/navigation/navigation-menu";
 
+const gettingStartedRegex = /getting-started$/;
+
 describe("Sidemenu component", () => {
   render(<NavigationMenu />);
   it("should have href attribute of the 'Contribute' element set to https://cuicui.featurebase.app/", () => {
@@ -18,6 +20,6 @@ describe("Sidemenu component", () => {
 
     // Check if the href attribute of the 'Getting started' element finishes by getting-started
     const hrefValue = contributeElement.getAttribute("href");
-    expect(hrefValue).toMatch(/getting-started$/);
+    expect(hrefValue).toMatch(gettingStartedRegex);
   });
 });

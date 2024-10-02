@@ -1,11 +1,11 @@
+import { notFound } from "next/navigation";
+import { Fragment } from "react";
 import { fetchSingleComponentData } from "#/src/app/(components)/[section]/[category]/process-variant-data";
 import ComingSoonCard from "#/src/components/coming-soon";
 import HeaderComponent from "#/src/components/component-wrapper/header-component";
 import InspirationComponentFooter from "#/src/components/component-wrapper/inspiration-component-footer";
 import VariantTabs from "#/src/components/component-wrapper/variant-tabs";
 import type { SingleComponentCategoryType } from "#/src/lib/types/component";
-import { notFound } from "next/navigation";
-import { Fragment } from "react";
 
 export default async function SingleComponentCategory({
   category,
@@ -32,12 +32,12 @@ export default async function SingleComponentCategory({
           title={category.name}
         />
         <VariantTabs
-          variantList={component.componentList}
           isChildUsingHeightFull={component.isChildUsingHeightFull}
           isIframed={component.isIframed}
           isResizable={component.isResizable}
           rerenderButton={component.rerenderButton}
           size={component.sizePreview}
+          variantList={component.componentList}
         />
         <InspirationComponentFooter
           inspiration={component.inspiration}

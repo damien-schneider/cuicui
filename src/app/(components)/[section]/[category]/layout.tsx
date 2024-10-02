@@ -1,11 +1,11 @@
-import { NEXT_PUBLIC_SITE_URL } from "#/src/lib/site.const";
-import { findCategoryBySlug } from "#/src/utils/section-category-components-utils/find-category-by-slug";
-import { findSectionBySlug } from "#/src/utils/section-category-components-utils/find-section-by-slug";
 import type { Metadata } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
+import { NEXT_PUBLIC_SITE_URL } from "#/src/lib/site.const";
+import { findCategoryBySlug } from "#/src/utils/section-category-components-utils/find-category-by-slug";
+import { findSectionBySlug } from "#/src/utils/section-category-components-utils/find-section-by-slug";
 
 type Props = {
   children: ReactNode;
@@ -71,11 +71,11 @@ export default function CategoryLayout({ children, params }: Props) {
     <>
       <Head>
         <Link
-          rel="canonical"
           href={`${NEXT_PUBLIC_SITE_URL}/${section.slug}/${category.slug}`}
           key="canonical"
+          rel="canonical"
         />
-        <meta name="robots" content="all" />
+        <meta content="all" name="robots" />
       </Head>
       <h1 className="bg-gradient-to-br from-sky-400 via-violet-500 to-orange-400 bg-clip-text font-medium text-transparent text-5xl inline tracking-tighter">
         {category.name} components

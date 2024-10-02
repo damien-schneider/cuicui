@@ -1,8 +1,8 @@
+import { MenuIcon } from "lucide-react";
 import type { CategoryType } from "#/src/lib/types/component";
 import { Dock } from "#/src/ui/cuicui/common-ui/navigation/mac-dock/variant1";
 import { VercelNavigationVariant1 } from "#/src/ui/cuicui/common-ui/navigation/vercel-navigation/variant1";
 import { VercelNavigationVariant2 } from "#/src/ui/cuicui/common-ui/navigation/vercel-navigation/variant2";
-import { MenuIcon } from "lucide-react";
 
 export const navigationCategory: CategoryType = {
   slug: "navigation",

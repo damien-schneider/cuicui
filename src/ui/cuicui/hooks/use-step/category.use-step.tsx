@@ -1,6 +1,6 @@
+import { ListEndIcon } from "lucide-react";
 import type { SingleComponentCategoryType } from "#/src/lib/types/component";
 import { PreviewUseStep } from "#/src/ui/cuicui/hooks/use-step/preview-use-step";
-import { ListEndIcon } from "lucide-react";
 
 export const useStepCategory: SingleComponentCategoryType = {
   name: "Use Step",

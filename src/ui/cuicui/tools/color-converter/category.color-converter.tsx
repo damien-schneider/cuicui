@@ -1,6 +1,6 @@
+import { PaletteIcon } from "lucide-react";
 import type { PageCategoryType } from "#/src/lib/types/component";
 import { PageColorConverter } from "#/src/ui/cuicui/tools/color-converter/page.color-converter";
-import { PaletteIcon } from "lucide-react";
 
 export const ColorConverterCategory: PageCategoryType = {
   name: "Color Converter",

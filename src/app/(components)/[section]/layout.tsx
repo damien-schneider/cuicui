@@ -1,10 +1,10 @@
-import { NEXT_PUBLIC_SITE_URL } from "#/src/lib/site.const";
-import { findSectionBySlug } from "#/src/utils/section-category-components-utils/find-section-by-slug";
 import type { Metadata } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
+import { NEXT_PUBLIC_SITE_URL } from "#/src/lib/site.const";
+import { findSectionBySlug } from "#/src/utils/section-category-components-utils/find-section-by-slug";
 
 type Props = {
   children: ReactNode;
@@ -44,9 +44,9 @@ export default function SectionLayout({ children, params }: Props) {
     <>
       <Head>
         <Link
-          rel="canonical"
           href={`${NEXT_PUBLIC_SITE_URL}/${section.slug}`}
           key="canonical"
+          rel="canonical"
         />
       </Head>
       {children}

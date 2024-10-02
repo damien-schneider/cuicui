@@ -1,28 +1,28 @@
 "use client";
 
-import { cn } from "#/src/utils/cn";
 import {
   AnimatePresence,
-  motion,
   MotionConfig,
   type Transition,
   type Variant,
   type Variants,
+  motion,
 } from "framer-motion";
 import {
-  createContext,
-  useContext,
-  useState,
-  useId,
-  useEffect,
-  type ReactNode,
   Children,
-  cloneElement,
-  isValidElement,
   type ReactElement,
-  useMemo,
+  type ReactNode,
+  cloneElement,
+  createContext,
+  isValidElement,
   useCallback,
+  useContext,
+  useEffect,
+  useId,
+  useMemo,
+  useState,
 } from "react";
+import { cn } from "#/src/utils/cn";
 
 type DisclosureContextType = {
   open: boolean;
@@ -106,8 +106,8 @@ export function Disclosure({
     <MotionConfig transition={transition}>
       <div className={className}>
         <DisclosureProvider
-          open={openProp}
           onOpenChange={onOpenChange}
+          open={openProp}
           variants={variants}
         >
           {Children.toArray(children)[0]}
@@ -182,10 +182,10 @@ export function DisclosureContent({
       <AnimatePresence initial={false}>
         {open && (
           <motion.div
-            id={uniqueId}
-            initial="collapsed"
             animate="expanded"
             exit="collapsed"
+            id={uniqueId}
+            initial="collapsed"
             variants={combinedVariants}
           >
             {children}

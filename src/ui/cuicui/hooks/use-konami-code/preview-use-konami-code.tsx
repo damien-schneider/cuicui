@@ -1,6 +1,6 @@
 "use client";
-import useKonamiCode from "#/src/ui/cuicui/hooks/use-konami-code/use-konami-code";
 import { useState } from "react";
+import useKonamiCode from "#/src/ui/cuicui/hooks/use-konami-code/use-konami-code";
 
 export const PreviewUseKonamiCode = () => {
   const [isKonamiCodeActivated, setIsKonamiCodeActivated] = useState(false);

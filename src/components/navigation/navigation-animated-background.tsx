@@ -9,12 +9,12 @@ export function NavigationAnimatedBackground({
   return (
     <AnimatedBackground
       className="rounded-lg bg-zinc-400/10  flex z-0 pointer-events-none"
+      enableHover={true}
       transition={{
         type: "spring",
         bounce: 0.2,
         duration: 0.3,
       }}
-      enableHover={true}
       {...props}
     >
       {children}

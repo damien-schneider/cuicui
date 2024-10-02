@@ -31,7 +31,6 @@ try {
   // Ensure the output directory exists; if not, create it
   if (!fs.existsSync(outputDirectory)) {
     fs.mkdirSync(outputDirectory, { recursive: true });
-    console.log(`📂 Created directory: ${outputDirectory}`);
   }
 
   // Read and parse package.json
@@ -67,16 +66,6 @@ try {
 
   // Write the TypeScript file
   fs.writeFileSync(outputTsPath, tsFileContent, "utf-8");
-
-  console.log(
-    `✅ Successfully generated ${path.basename(outputTsPath)} with ${
-      packageCheckListToInstall.length
-    } packages.`,
-  );
-} catch (error) {
-  console.error(
-    "❌ An error occurred while generating the package checklist:",
-    error,
-  );
+} catch (_error) {
   process.exit(1);
 }

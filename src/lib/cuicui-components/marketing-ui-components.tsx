@@ -19,10 +19,10 @@ import ManyOffersVariant1 from "#/src/ui/cuicui/marketing-ui/pricing-tables/many
 import AnimatedCounterPreview from "#/src/ui/cuicui/marketing-ui/statistics/animated-counter/animated-counter-preview";
 import { AnimatedNumberVariant1 } from "#/src/ui/cuicui/marketing-ui/statistics/animated-on-scroll/variant1";
 import IncreaseToValueVariant1 from "#/src/ui/cuicui/marketing-ui/statistics/increase-to-value/variant1";
+import { gradientQnaComponent } from "#/src/ui/cuicui/marketing-ui/testimonials/gradient-qna/component.gradient-qna";
 import MarqueeVariant1 from "#/src/ui/cuicui/marketing-ui/testimonials/marquee/variant1";
 import MarqueeVariant2 from "#/src/ui/cuicui/marketing-ui/testimonials/marquee/variant2";
 import { TestimonialsVariant1 } from "#/src/ui/cuicui/marketing-ui/testimonials/testimonials-component/variant1";
-import { gradientQnaComponent } from "#/src/ui/cuicui/marketing-ui/testimonials/gradient-qna/component.gradient-qna";
 
 export const marketingUiComponentList: CategoryType[] = [
   {

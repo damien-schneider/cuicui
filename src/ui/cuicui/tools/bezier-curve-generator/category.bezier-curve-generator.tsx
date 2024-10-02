@@ -1,6 +1,6 @@
+import { TangentIcon } from "lucide-react";
 import type { PageCategoryType } from "#/src/lib/types/component";
 import { PageBezierCurveGenerator } from "#/src/ui/cuicui/tools/bezier-curve-generator/page.bezier-curve-generator";
-import { TangentIcon } from "lucide-react";
 
 export const bezierCurveGeneratorCategory: PageCategoryType = {
   slug: "bezier-curve-generator",

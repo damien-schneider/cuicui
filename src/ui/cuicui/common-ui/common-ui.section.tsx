@@ -1,3 +1,4 @@
+import { ComponentIcon } from "lucide-react";
 import type { SectionType } from "#/src/lib/types/component";
 import { avatarsCategory } from "#/src/ui/cuicui/common-ui/avatars/avatars.category";
 import { badgesCategory } from "#/src/ui/cuicui/common-ui/badges/badges.category";
@@ -10,7 +11,6 @@ import { loadersCategory } from "#/src/ui/cuicui/common-ui/loaders/loaders.categ
 import { navigationCategory } from "#/src/ui/cuicui/common-ui/navigation/navigation.category";
 import { skeletonsCategory } from "#/src/ui/cuicui/common-ui/skeletons/skeletons.category";
 import { toggleCategory } from "#/src/ui/cuicui/common-ui/toggle/toggle.category";
-import { ComponentIcon } from "lucide-react";
 
 export const commonUiSection: SectionType = {
   name: "Common UI",

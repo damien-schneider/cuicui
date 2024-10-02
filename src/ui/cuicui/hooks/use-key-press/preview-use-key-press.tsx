@@ -1,6 +1,6 @@
 "use client";
-import { useKeyPress } from "#/src/ui/cuicui/hooks/use-key-press/use-key-press";
 import { useState } from "react";
+import { useKeyPress } from "#/src/ui/cuicui/hooks/use-key-press/use-key-press";
 
 export const PreviewUseKeyPress = () => {
   // Call our hook for each key that we'd like to monitor

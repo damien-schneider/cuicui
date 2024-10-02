@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import { useEffect } from "react";
 import GradientContainer from "../ui/gradient-container";
 
 type NextErrorProps = {
@@ -8,7 +8,10 @@ type NextErrorProps = {
   reset: () => void;
 };
 export default function NextError({ error, reset }: Readonly<NextErrorProps>) {
-  React.useEffect(() => {}, [error]);
+  useEffect(() => {
+    // biome-ignore lint/suspicious/noConsole: <explanation>
+    console.error(error);
+  }, [error]);
 
   return (
     <GradientContainer>

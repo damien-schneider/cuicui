@@ -1,3 +1,4 @@
+import { SquareArrowRightIcon } from "lucide-react";
 import type { CategoryType } from "#/src/lib/types/component";
 import PreviewBeforeEffectButtonAdvancedButton from "#/src/ui/cuicui/common-ui/buttons/before-effect-button/preview-advanced-button";
 import PreviewBeforeEffectButtonDefault from "#/src/ui/cuicui/common-ui/buttons/before-effect-button/preview-default";
@@ -5,7 +6,6 @@ import PreviewBeforeEffectButtonHoverOnly from "#/src/ui/cuicui/common-ui/button
 import GrowingButtonVariant1 from "#/src/ui/cuicui/common-ui/buttons/growing-button/variant1";
 import ModernAnimatedButtonVariant1 from "#/src/ui/cuicui/common-ui/buttons/modern-animated-button/variant1";
 import ShinyRotatingBorderButtonVariant1 from "#/src/ui/cuicui/common-ui/buttons/shiny-rotating-border-button/variant1";
-import { SquareArrowRightIcon } from "lucide-react";
 
 export const buttonsCategory: CategoryType = {
   slug: "buttons",

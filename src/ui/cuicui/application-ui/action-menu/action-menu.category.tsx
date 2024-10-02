@@ -1,5 +1,5 @@
-import type { CategoryType } from "#/src/lib/types/component";
 import { StretchHorizontalIcon } from "lucide-react";
+import type { CategoryType } from "#/src/lib/types/component";
 
 export const actionMenuCategory: CategoryType = {
   name: "Action Menu",

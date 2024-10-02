@@ -1,6 +1,6 @@
+import { SquareFunctionIcon } from "lucide-react";
 import type { SingleComponentCategoryType } from "#/src/lib/types/component";
 import { PreviewUseEventCallback } from "#/src/ui/cuicui/hooks/use-event-callback/preview-use-event-callback";
-import { SquareFunctionIcon } from "lucide-react";
 
 export const useEventCallbackCategory: SingleComponentCategoryType = {
   slug: "use-event-callback",

@@ -1,4 +1,4 @@
-import * as React from "react";
+import { useCallback, useState } from "react";
 
 interface UseCounterOptions {
   min?: number;
@@ -31,9 +31,9 @@ export function useCounter(
     );
   }
 
-  const [count, setCount] = React.useState<number>(startingValue);
+  const [count, setCount] = useState<number>(startingValue);
 
-  const increment = React.useCallback(() => {
+  const increment = useCallback(() => {
     setCount((c) => {
       const nextCount = c + 1;
 
@@ -45,7 +45,7 @@ export function useCounter(
     });
   }, [max]);
 
-  const decrement = React.useCallback(() => {
+  const decrement = useCallback(() => {
     setCount((c) => {
       const nextCount = c - 1;
 
@@ -57,7 +57,7 @@ export function useCounter(
     });
   }, [min]);
 
-  const set = React.useCallback(
+  const set = useCallback(
     (nextCount: number) => {
       setCount((c) => {
         if (typeof max === "number" && nextCount > max) {
@@ -74,7 +74,7 @@ export function useCounter(
     [max, min],
   );
 
-  const reset = React.useCallback(() => {
+  const reset = useCallback(() => {
     setCount(startingValue);
   }, [startingValue]);
 

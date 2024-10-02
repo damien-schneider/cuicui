@@ -17,8 +17,7 @@ export default function CopyToClipboardButton({
         toast.success("Code copied to clipboard!");
         setIsCopied(true);
       })
-      .catch((error) => {
-        console.error("Failed to copy!", error);
+      .catch((_error) => {
         toast.error("Failed to copy code to clipboard!");
       });
   };

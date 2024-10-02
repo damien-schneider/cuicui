@@ -1,5 +1,5 @@
-import { cn } from "#/src/utils/cn";
 import type { HTMLAttributes, ReactNode } from "react";
+import { cn } from "#/src/utils/cn";
 
 export default function SimpleCookieBanner({
   children,
@@ -11,12 +11,12 @@ export default function SimpleCookieBanner({
 } & HTMLAttributes<HTMLDialogElement>) {
   return (
     <dialog
+      aria-describedby="cookie-banner-description"
+      aria-labelledby="cookie-banner-title"
       className={cn(
         "shadow-3xl dark:bg-polar-950 dark:border-polar-700 dark:text-polar-500 fixed bottom-8 left-8 right-8 z-50 flex flex-col gap-y-4 rounded-2xl border border-neutral-100 bg-white dark:bg-neutral-950 dark:text-neutral-500 dark:border-neutral-800 p-4 text-sm text-neutral-500 md:left-auto md:max-w-96",
         className,
       )}
-      aria-labelledby="cookie-banner-title"
-      aria-describedby="cookie-banner-description"
       {...props}
     >
       <p id="cookie-banner-description">{children}</p>

@@ -24,7 +24,6 @@ export function useCopyToClipboard({
 
   const copy: CopyFn = useCallback(async (text) => {
     if (!navigator?.clipboard) {
-      console.warn("Clipboard not supported");
       return false;
     }
 
@@ -34,8 +33,7 @@ export function useCopyToClipboard({
       setCopiedText(text);
       setIsCopied(true);
       return true;
-    } catch (error) {
-      console.warn("Copy failed", error);
+    } catch (_error) {
       setCopiedText(null);
       return false;
     }

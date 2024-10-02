@@ -1,8 +1,8 @@
+import { BoxSelectIcon } from "lucide-react";
 import type { CategoryType } from "#/src/lib/types/component";
 import { ClassicPulseVariant1 } from "#/src/ui/cuicui/common-ui/skeletons/classic-pulse/variant1";
 import { ShinyGradientSkeletonHorizontal } from "#/src/ui/cuicui/common-ui/skeletons/shiny-gradient/skeleton-shiny-gradient-horizontal";
 import { ShinyGradientSkeletonVertical } from "#/src/ui/cuicui/common-ui/skeletons/shiny-gradient/skeleton-shiny-gradient-vertical";
-import { BoxSelectIcon } from "lucide-react";
 
 export const skeletonsCategory: CategoryType = {
   slug: "skeletons",

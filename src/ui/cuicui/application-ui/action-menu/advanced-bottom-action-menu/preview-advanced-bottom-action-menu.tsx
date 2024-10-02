@@ -2,24 +2,24 @@
 
 "use client";
 
-import type React from "react";
 import {
-  Layout,
-  MessageCircle,
-  Menu,
-  PackageOpen,
   Archive,
-  Target,
+  Layout,
   type LucideIcon,
+  Menu,
+  MessageCircle,
+  PackageOpen,
+  Target,
 } from "lucide-react";
-import {} from "./advanced-bottom-action-menu";
+import type React from "react";
+import { useState } from "react";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
 } from "#/src/ui/cuicui/application-ui/action-menu/advanced-bottom-action-menu/custom-tabs-content";
-import { useState } from "react";
+import {} from "./advanced-bottom-action-menu";
 
 // Define types for items
 interface Item {
@@ -32,7 +32,7 @@ interface ItemsGroup {
   items: Item[];
 }
 
-const items: ItemsGroup[] = [
+const _items: ItemsGroup[] = [
   {
     name: "Developer tools",
     items: [
@@ -53,7 +53,7 @@ const items: ItemsGroup[] = [
   },
 ];
 
-const Icons: Item[] = [
+const _Icons: Item[] = [
   { name: "Icons 1", icon: MessageCircle },
   { name: "Icons 2", icon: PackageOpen },
   { name: "Icons 3", icon: Archive },
@@ -79,8 +79,8 @@ export const PreviewAdvancedBottomActionMenu: React.FC = () => {
   return (
     <Tabs
       className="w-[400px]"
-      value={valueTabOpen}
       onValueChange={handleOnValueChange}
+      value={valueTabOpen}
     >
       <TabsList>
         {!checkIfValueIsInTheTriggers(valueTabOpen) &&
@@ -92,9 +92,9 @@ export const PreviewAdvancedBottomActionMenu: React.FC = () => {
         <TabsContent value="password">
           Change your password here.
           <button
-            type="button"
-            onClick={() => setValueTabOpen("")}
             className="bg-neutral-500 text-white p-2 rounded-lg"
+            onClick={() => setValueTabOpen("")}
+            type="button"
           >
             close
           </button>
@@ -102,9 +102,9 @@ export const PreviewAdvancedBottomActionMenu: React.FC = () => {
       </TabsList>
       <TabsContent value="account">
         <button
-          type="button"
-          onClick={() => setValueTabOpen("")}
           className="bg-neutral-500 text-white p-2 rounded-lg"
+          onClick={() => setValueTabOpen("")}
+          type="button"
         >
           close
         </button>

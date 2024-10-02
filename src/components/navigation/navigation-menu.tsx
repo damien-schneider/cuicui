@@ -1,16 +1,16 @@
-import { SectionsList } from "#/src/lib/cuicui-components/sections-list";
-import { firstMenuSection } from "#/src/lib/first-menu-section";
-import { cn } from "#/src/utils/cn";
+import { differenceInDays } from "date-fns";
+import { NavigationAnimatedBackground } from "#/src/components/navigation/navigation-animated-background";
 import {
   GlobalNavItem,
   SectionWrapper,
 } from "#/src/components/navigation/navigation-item";
-import { NavigationAnimatedBackground } from "#/src/components/navigation/navigation-animated-background";
+import { SectionsList } from "#/src/lib/cuicui-components/sections-list";
+import { firstMenuSection } from "#/src/lib/first-menu-section";
 import type {
-  SingleComponentCategoryType,
   CategoryType,
+  SingleComponentCategoryType,
 } from "#/src/lib/types/component";
-import { differenceInDays } from "date-fns";
+import { cn } from "#/src/utils/cn";
 
 export default function NavigationMenu({
   isMobile,
@@ -77,10 +77,10 @@ export default function NavigationMenu({
 
   return (
     <nav className={cn("mt-5 mb-12 px-1 space-y-2", className)}>
-      <SectionWrapper name={firstMenuSection.name} disclosure={false}>
+      <SectionWrapper disclosure={false} name={firstMenuSection.name}>
         <NavigationAnimatedBackground>
           {firstMenuSection.categoryList.map((category, _index) => (
-            <li key={category.slug} data-id={category.slug} className="block">
+            <li className="block" data-id={category.slug} key={category.slug}>
               <GlobalNavItem
                 Icon={null}
                 href={category.href ?? `/${category.slug}`}
@@ -96,13 +96,13 @@ export default function NavigationMenu({
       {SectionsList.map((section) => {
         if (section.type === "page") {
           return (
-            <SectionWrapper key={section.slug} name="Tools" Icon={section.icon}>
+            <SectionWrapper Icon={section.icon} key={section.slug} name="Tools">
               <NavigationAnimatedBackground>
                 {section.pageList.map((page) => (
                   <li
-                    key={page.slug}
-                    data-id={page.slug}
                     className="block z-10"
+                    data-id={page.slug}
+                    key={page.slug}
                   >
                     <GlobalNavItem
                       Icon={page.icon}
@@ -119,17 +119,17 @@ export default function NavigationMenu({
         if (section.type === "single-component") {
           return (
             <SectionWrapper
+              Icon={section.icon}
               key={section.slug}
               name={section.name}
-              Icon={section.icon}
             >
               <NavigationAnimatedBackground>
                 {section.categoriesList.map((category, _index) => {
                   return (
                     <li
+                      className="block"
                       data-id={category.slug}
                       key={category.slug}
-                      className="block"
                     >
                       <GlobalNavItem
                         Icon={category.icon ?? null}
@@ -149,25 +149,25 @@ export default function NavigationMenu({
         if (section.type === "multiple-component") {
           return (
             <SectionWrapper
+              Icon={section.icon}
               key={section.slug}
               name={section.name}
-              Icon={section.icon}
             >
               <NavigationAnimatedBackground>
                 {section.categoriesList.map((category, _index) => {
                   return (
                     <li
+                      className="block"
                       data-id={category.slug}
                       key={category.slug}
-                      className="block"
                     >
                       <GlobalNavItem
                         Icon={category.icon ?? null}
                         href={`/${section.slug}/${category.slug}`}
                         isMobile={isMobile}
                         name={category.name}
-                        target="sameWindow"
                         tag={getCategoryTagMultipleComponentCategory(category)}
+                        target="sameWindow"
                       />
                     </li>
                   );

@@ -1,5 +1,5 @@
-import type { CategoryType } from "#/src/lib/types/component";
 import { ToggleLeftIcon } from "lucide-react";
+import type { CategoryType } from "#/src/lib/types/component";
 
 export const toggleCategory: CategoryType = {
   name: "Toggle",

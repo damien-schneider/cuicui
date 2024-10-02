@@ -1,5 +1,5 @@
-import type { SingleComponentCategoryType } from "#/src/lib/types/component";
 import { SpeechIcon } from "lucide-react";
+import type { SingleComponentCategoryType } from "#/src/lib/types/component";
 
 export const useTextToSpeechCategory: SingleComponentCategoryType = {
   slug: "use-text-to-speech",

@@ -1,12 +1,4 @@
 import {
-  Disclosure,
-  DisclosureContent,
-  DisclosureTrigger,
-} from "#/src/components/navigation/disclosure";
-import GradientContainer from "#/src/ui/gradient-container";
-import GradientText from "#/src/ui/gradient-text";
-import { cn } from "#/src/utils/cn";
-import {
   ArrowUpRightIcon,
   ChevronRightIcon,
   type LucideIcon,
@@ -14,6 +6,14 @@ import {
 import Link from "next/link";
 import { useSelectedLayoutSegments } from "next/navigation";
 import type { AnchorHTMLAttributes, ReactNode } from "react";
+import {
+  Disclosure,
+  DisclosureContent,
+  DisclosureTrigger,
+} from "#/src/components/navigation/disclosure";
+import GradientContainer from "#/src/ui/gradient-container";
+import GradientText from "#/src/ui/gradient-text";
+import { cn } from "#/src/utils/cn";
 
 export function GlobalNavItem({
   isMobile,

@@ -1,14 +1,14 @@
 "use client";
 
-import { useState } from "react";
 import { BezierEditor } from "bezier-editor";
+import { useState } from "react";
 import { sleep } from "#/src/utils/sleep";
 
 type BezierValueType = [number, number, number, number];
 
 export function CuicuiBezierCurveEditor() {
   const [value, setValue] = useState<BezierValueType>([0.25, 0.25, 0.75, 0.75]);
-  const [progress, setProgress] = useState(0);
+  const [progress, _setProgress] = useState(0);
   const [isAnimationPlaying, setIsAnimationPlaying] = useState(false);
   const [timePreviewMs, setTimePreviewMs] = useState(1000);
   const [rerenderCurveEditorCounter, setRerenderCurveEditorCounter] =
@@ -19,7 +19,7 @@ export function CuicuiBezierCurveEditor() {
     setIsAnimationPlaying(value);
   };
 
-  const handlePlayOnce = async () => {
+  const _handlePlayOnce = async () => {
     setIsAnimationPlaying(true);
     await sleep(timePreviewMs);
     setIsAnimationPlaying(false);
@@ -48,27 +48,27 @@ export function CuicuiBezierCurveEditor() {
       {/* Éditeur de courbes */}
       <div className="w-full md:w-1/2">
         <BezierEditor
-          key={rerenderCurveEditorCounter}
+          background="transparent"
           className="rounded-xl bg-white dark:invert dark:bg-neutral-300 dark:-hue-rotate-180 shadow-md m-4 mx-auto"
           defaultValue={value}
+          handleColor="#F26378"
+          handleStroke={4}
+          key={rerenderCurveEditorCounter}
           onChange={(newValue) => {
             setValue(newValue);
           }}
-          background="transparent"
-          handleColor="#F26378"
           progress={progress}
           progressColor="#3BC4F2"
           value={value}
-          handleStroke={4}
         />
         {/* Champ pour modifier la durée de la transition */}
         <div className="mt-4">
           <label htmlFor="timePreviewMs">Transition duration (ms) :</label>
           <input
-            type="number"
             id="timePreviewMs"
-            value={timePreviewMs}
             onChange={(e) => setTimePreviewMs(Number(e.target.value))}
+            type="number"
+            value={timePreviewMs}
           />
         </div>
         {/* Boutons pour les courbes par défaut */}
@@ -78,11 +78,11 @@ export function CuicuiBezierCurveEditor() {
             {defaultCurves.map((curve) => (
               <button
                 key={curve.name}
-                type="button"
                 onClick={() => {
                   setValue(curve.value);
                   rerenderCurveEditor();
                 }}
+                type="button"
               >
                 {curve.name}
               </button>
@@ -110,17 +110,17 @@ export function CuicuiBezierCurveEditor() {
         <div className="mt-4 flex w-full gap-3">
           {isAnimationPlaying ? (
             <button
-              type="button"
-              onClick={() => handlePlay(false)}
               className="w-full"
+              onClick={() => handlePlay(false)}
+              type="button"
             >
               Back
             </button>
           ) : (
             <button
-              type="button"
-              onClick={() => handlePlay(true)}
               className="w-full"
+              onClick={() => handlePlay(true)}
+              type="button"
             >
               Play once
             </button>

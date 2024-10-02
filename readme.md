@@ -52,16 +52,8 @@ The component roadmap can be find on the [featurebase page](https://cuicui.featu
 - [ ] Create the pages for the category sections (i.e https://cuicui.day/application-ui) -> Display the grid of the components as the home page but for each section
 - [ ] Improve SEO with better title and meta tags on components & site pages
 - [ ] Improve homepage performance by replacing component integrations by images
-- [ ] Re-add precommit (fix importer order & console rules)
+- [x] Re-add precommit (fix importer order & console rules)
 
-```json
-"git": {
-    "pre-commit": "lint-staged"
-},
-"lint-staged": {
-  "*": "biome format --write ./src"
-},
-```
 
 ## License
 

@@ -48,7 +48,7 @@ async function GetFileContentFromPathWithoutExtension(
   try {
     const data = await fs.readFile(pathWithExtension, "utf-8");
     return data;
-  } catch (err) {
+  } catch (_err) {
     return null;
   }
 }

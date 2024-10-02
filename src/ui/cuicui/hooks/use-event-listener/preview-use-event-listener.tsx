@@ -1,10 +1,10 @@
 "use client";
-import { useEventListener } from "#/src/ui/cuicui/hooks/use-event-listener/use-event-listener";
 import { useState } from "react";
+import { useEventListener } from "#/src/ui/cuicui/hooks/use-event-listener/use-event-listener";
 export const PreviewUseEventListener = () => {
   // Initialize state with current window dimensions
   if (typeof window === "undefined") {
-    return null;
+    return;
   }
   const [windowSize, setWindowSize] = useState({
     width: window.innerWidth,

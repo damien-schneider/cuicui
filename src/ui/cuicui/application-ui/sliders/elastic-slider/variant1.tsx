@@ -10,7 +10,9 @@ import {
 import { Volume2Icon, VolumeXIcon } from "lucide-react";
 import { type ElementRef, useRef, useState } from "react";
 
+// biome-ignore lint/style/noNamespaceImport: <explanation>
 import * as RadixSlider from "@radix-ui/react-slider";
+
 const MAX_OVERFLOW = 50;
 
 export function ElasticSliderVariant1() {

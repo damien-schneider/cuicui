@@ -1,11 +1,11 @@
+import { notFound } from "next/navigation";
+import { Fragment } from "react";
 import { fetchMultipleComponentData } from "#/src/app/(components)/[section]/[category]/process-variant-data";
 import ComingSoonCard from "#/src/components/coming-soon";
 import HeaderComponent from "#/src/components/component-wrapper/header-component";
 import InspirationComponentFooter from "#/src/components/component-wrapper/inspiration-component-footer";
 import VariantTabs from "#/src/components/component-wrapper/variant-tabs";
 import type { CategoryType } from "#/src/lib/types/component";
-import { notFound } from "next/navigation";
-import { Fragment } from "react";
 
 export default async function MultipleComponentCategory({
   category,
@@ -38,13 +38,13 @@ export default async function MultipleComponentCategory({
             title={component.name}
           />
           <VariantTabs
-            variantList={component.componentList}
             isChildUsingHeightFull={component.isChildUsingHeightFull}
             isIframed={component.isIframed}
             isResizable={component.isResizable}
             key={component.name}
             rerenderButton={component.rerenderButton}
             size={component.sizePreview}
+            variantList={component.componentList}
           />
           <InspirationComponentFooter
             inspiration={component.inspiration}

@@ -1,5 +1,5 @@
-import { tailwindColors } from "#/src/ui/cuicui/tools/color-converter/components/tailwind-colors";
 import getSimilarColor from "get-similar-color";
+import { tailwindColors } from "#/src/ui/cuicui/tools/color-converter/components/tailwind-colors";
 
 export function extractHexValuesFromTailwindObject(
   colors: typeof tailwindColors,

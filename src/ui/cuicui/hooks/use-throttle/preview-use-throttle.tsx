@@ -1,7 +1,7 @@
 "use client";
-import { useThrottle } from "#/src/ui/cuicui/hooks/use-throttle/use-throttle";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
+import { useThrottle } from "#/src/ui/cuicui/hooks/use-throttle/use-throttle";
 
 const performSearch = (searchTerm: string) => {
   toast(`Searching for: ${searchTerm}`);
@@ -20,10 +20,10 @@ export const PreviewUseThrottle = () => {
 
   return (
     <input
-      type="text"
-      value={searchTerm}
       onChange={(e) => setSearchTerm(e.target.value)}
       placeholder="Search..."
+      type="text"
+      value={searchTerm}
     />
   );
 };

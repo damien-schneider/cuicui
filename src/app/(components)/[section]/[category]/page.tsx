@@ -1,12 +1,12 @@
 import { notFound } from "next/navigation";
-import { SectionsList } from "#/src/lib/cuicui-components/sections-list";
-import SingleComponentCategory from "#/src/app/(components)/[section]/[category]/single-component-section";
 import MultipleComponentCategory from "#/src/app/(components)/[section]/[category]/multiple-component-section";
-import { findCategoryBySlug } from "#/src/utils/section-category-components-utils/find-category-by-slug";
+import SingleComponentCategory from "#/src/app/(components)/[section]/[category]/single-component-section";
+import { SectionsList } from "#/src/lib/cuicui-components/sections-list";
 import type {
   CategoryType,
   SingleComponentCategoryType,
 } from "#/src/lib/types/component";
+import { findCategoryBySlug } from "#/src/utils/section-category-components-utils/find-category-by-slug";
 type Props = {
   params: {
     section: string;

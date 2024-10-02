@@ -1,3 +1,4 @@
+import { AppWindowMacIcon } from "lucide-react";
 import type { SectionType } from "#/src/lib/types/component";
 import { actionMenuCategory } from "#/src/ui/cuicui/application-ui/action-menu/action-menu.category";
 import { alertCategory } from "#/src/ui/cuicui/application-ui/alert/alert.category";
@@ -13,7 +14,6 @@ import { slidersCategory } from "#/src/ui/cuicui/application-ui/sliders/sliders.
 import { staticSteppersCategory } from "#/src/ui/cuicui/application-ui/static-steppers/static-steppers.category";
 import { themeCategory } from "#/src/ui/cuicui/application-ui/theme/theme.category";
 import { treeCategory } from "#/src/ui/cuicui/application-ui/tree/tree.category";
-import { AppWindowMacIcon } from "lucide-react";
 
 export const applicationUiCategoryList: SectionType = {
   type: "multiple-component",

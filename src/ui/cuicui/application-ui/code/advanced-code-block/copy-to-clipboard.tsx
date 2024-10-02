@@ -9,8 +9,8 @@ export default function CopyToClipboard({ code }: Readonly<{ code: string }>) {
     try {
       await navigator.clipboard.writeText(code);
       setIsCopied(true);
-    } catch (error) {
-      console.error("Error copying to clipboard", error);
+    } catch (_error) {
+      setIsCopied(false);
     } finally {
       setTimeout(() => {
         // do something

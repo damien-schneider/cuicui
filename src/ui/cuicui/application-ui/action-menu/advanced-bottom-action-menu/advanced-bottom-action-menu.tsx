@@ -2,9 +2,9 @@
 
 "use client";
 
+import { AnimatePresence, type Variants, motion } from "framer-motion";
 import type React from "react";
 import { createContext, useContext, useState } from "react";
-import { motion, AnimatePresence, type Variants } from "framer-motion";
 
 // Define the types for the context
 interface MenuContextType {
@@ -32,11 +32,11 @@ export const MenuRoot: React.FC<{ children: React.ReactNode }> = ({
   return (
     <MenuContext.Provider value={{ openValue, setOpenValue }}>
       <motion.div
-        initial="collapsed"
         animate={isExpanded ? "expanded" : "collapsed"}
-        variants={containerVariants}
-        transition={{ duration: 0.5, ease: "circInOut" }}
         className="rounded-[30px] overflow-hidden border bg-black dark:bg-white relative"
+        initial="collapsed"
+        transition={{ duration: 0.5, ease: "circInOut" }}
+        variants={containerVariants}
       >
         {children}
       </motion.div>
@@ -62,7 +62,7 @@ export const MenuTrigger = ({
   }
   const { openValue, setOpenValue } = context;
 
-  const isExpanded = openValue !== null;
+  const _isExpanded = openValue !== null;
 
   const handleClick = () => {
     setOpenValue(openValue === value ? null : value);
@@ -109,10 +109,10 @@ export const MenuTrigger = ({
   // ) : (
   return (
     <motion.button
-      variants={triggerVariants}
-      type="button"
-      onClick={handleClick}
       className="h-[60px] flex items-center w-fit gap-2 justify-between px-10 cursor-pointer absolute bottom-0 left-0 right-0 mx-auto bg-red-500"
+      onClick={handleClick}
+      type="button"
+      variants={triggerVariants}
     >
       {children}
     </motion.button>
@@ -148,12 +148,12 @@ export const MenuContent: React.FC<MenuContentProps> = ({
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          key={value}
-          initial="collapsed"
           animate="expanded"
-          exit="collapsed"
-          variants={contentVariants}
           className="text-white mt-6 px-10 flex flex-col gap-8"
+          exit="collapsed"
+          initial="collapsed"
+          key={value}
+          variants={contentVariants}
         >
           {children}
         </motion.div>

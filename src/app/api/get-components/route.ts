@@ -33,8 +33,8 @@ function getDirectoryTree(dirPath: string): FileSystemNode {
       const configContent = readFileSync(configPath, "utf-8");
       try {
         node.config = JSON.parse(configContent);
-      } catch (error) {
-        console.error(`Error parsing JSON in ${configPath}:`, error);
+      } catch (_error) {
+        // Ignore invalid JSON
       }
     }
 
@@ -49,7 +49,7 @@ function getDirectoryTree(dirPath: string): FileSystemNode {
   return node;
 }
 
-export async function GET() {
+export function GET() {
   const basePath = join(process.cwd(), "src/ui/cuicui");
   const tree = getDirectoryTree(basePath);
 

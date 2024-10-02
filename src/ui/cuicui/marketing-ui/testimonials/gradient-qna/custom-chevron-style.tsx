@@ -7,16 +7,16 @@ export default function CustomChevronStyleGradientQnA() {
       </div>
       <div className=" space-y-2">
         <Testimonial
-          title="What is the best thing about this product?"
           content="The best thing about this product is that it is very easy to use and it is very user-friendly. It is also very affordable and it is very easy to set up."
+          title="What is the best thing about this product?"
         />
         <Testimonial
-          title="What is the best thing about this product?"
           content="The best thing about this product is that it is very easy to use and it is very user-friendly. It is also very affordable and it is very easy to set up."
+          title="What is the best thing about this product?"
         />
         <Testimonial
-          title="What is the best thing about this product?"
           content="The best thing about this product is that it is very easy to use and it is very user-friendly. It is also very affordable and it is very easy to set up."
+          title="What is the best thing about this product?"
         />
       </div>
     </div>
@@ -120,9 +120,9 @@ const AdvancedGradiant = ({ className }: { className?: string }) => {
 const ToogleIcon = () => {
   return (
     <button
-      type="button"
       aria-label="Toggle menu"
       className="relative size-5 text-neutral-600 dark:text-neutral-300"
+      type="button"
     >
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="w-3 h-0.5 bg-current transition duration-500 translate-x-0.5 ease-in-out transform-gpu group-open:rotate-0 rotate-45" />

@@ -8,26 +8,26 @@ export function PreviewUseLocalStorage() {
     <div>
       <p>Count: {value}</p>
       <button
-        type="button"
         onClick={() => {
           setValue((x: number) => x + 1);
         }}
+        type="button"
       >
         Increment
       </button>
       <button
-        type="button"
         onClick={() => {
           setValue((x: number) => x - 1);
         }}
+        type="button"
       >
         Decrement
       </button>
       <button
-        type="button"
         onClick={() => {
           removeValue();
         }}
+        type="button"
       >
         Reset
       </button>

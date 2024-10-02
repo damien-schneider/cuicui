@@ -18,20 +18,20 @@ export function PreviewUseStep() {
       <p>Current step is {currentStep}</p>
       <p>Can go to previous step {canGoToPrevStep ? "yes" : "no"}</p>
       <p>Can go to next step {canGoToNextStep ? "yes" : "no"}</p>
-      <button type="button" onClick={goToNextStep}>
+      <button onClick={goToNextStep} type="button">
         Go to next step
       </button>
-      <button type="button" onClick={goToPrevStep}>
+      <button onClick={goToPrevStep} type="button">
         Go to previous step
       </button>
-      <button type="button" onClick={reset}>
+      <button onClick={reset} type="button">
         Reset
       </button>
       <button
-        type="button"
         onClick={() => {
           setStep(3);
         }}
+        type="button"
       >
         Set to step 3
       </button>

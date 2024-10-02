@@ -1,24 +1,17 @@
 {
   "$schema": "https://biomejs.dev/schemas/1.9.2/schema.json",
-  "organizeImports": {
+  "assists": {
+    "actions": {
+      "source": {
+        "sortJsxProps": "on",
+        "useSortedKeys": "on"
+      }
+    },
     "enabled": true
   },
   "formatter": {
     "enabled": true,
     "indentStyle": "space"
-  },
-  "assists": {
-    "actions": {
-      "source": {
-        "useSortedKeys": "on",
-        "sortJsxProps": "on"
-      }
-    },
-    "enabled": true
-  },
-  "vcs": {
-    "enabled": true,
-    "clientKind": "git"
   },
   "linter": {
     "enabled": true,
@@ -31,8 +24,11 @@
       },
       "correctness": {
         "all": true,
-        "useImportExtensions": "off",
-        "noNodejsModules": "off"
+        "noNodejsModules": "off",
+        "useImportExtensions": "off"
+      },
+      "nursery": {
+        "useSortedClasses": "off"
       },
       "performance": {
         "all": true
@@ -48,12 +44,16 @@
       },
       "suspicious": {
         "all": true,
-        "noReactSpecificProps": "off",
-        "noConsole": "info"
-      },
-      "nursery": {
-        "useSortedClasses": "off"
+        "noConsole": "info",
+        "noReactSpecificProps": "off"
       }
     }
+  },
+  "organizeImports": {
+    "enabled": true
+  },
+  "vcs": {
+    "clientKind": "git",
+    "enabled": true
   }
 }

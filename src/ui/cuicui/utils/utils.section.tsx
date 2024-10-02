@@ -1,7 +1,7 @@
+import { CodeXmlIcon } from "lucide-react";
 import type { SectionType } from "#/src/lib/types/component";
 import { cnCategory } from "#/src/ui/cuicui/utils/cn/cn.category";
 import { sleepCategory } from "#/src/ui/cuicui/utils/sleep/sleep.category";
-import { CodeXmlIcon } from "lucide-react";
 
 export const utilsSection: SectionType = {
   type: "single-component",

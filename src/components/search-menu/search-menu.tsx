@@ -2,17 +2,17 @@
 
 import { SearchIcon } from "lucide-react";
 
+import { useState } from "react";
+import { FirstSectionCommandGroup } from "#/src/components/search-menu/first-section-command-group";
+import { SearchGroupComponentSection } from "#/src/components/search-menu/search-group-multi-component-section";
 import { SectionsList } from "#/src/lib/cuicui-components/sections-list";
+import { useKeyPress } from "#/src/ui/cuicui/hooks/use-key-press/use-key-press";
 import {
   CommandDialog,
   CommandEmpty,
   CommandInput,
   CommandList,
 } from "#/src/ui/shadcn/command";
-import { useState } from "react";
-import { useKeyPress } from "#/src/ui/cuicui/hooks/use-key-press/use-key-press";
-import { FirstSectionCommandGroup } from "#/src/components/search-menu/first-section-command-group";
-import { SearchGroupComponentSection } from "#/src/components/search-menu/search-group-multi-component-section";
 
 export function SearchMenu() {
   const [open, setOpen] = useState(false);
@@ -59,8 +59,8 @@ export function SearchMenu() {
           {SectionsList.map((section) => {
             return (
               <SearchGroupComponentSection
-                key={section.slug}
                 closeSearchMenu={() => setOpen(false)}
+                key={section.slug}
                 section={section}
               />
             );

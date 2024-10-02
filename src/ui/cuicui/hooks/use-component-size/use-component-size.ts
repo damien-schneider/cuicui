@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useLayoutEffect, type RefObject, useCallback } from "react";
+import { type RefObject, useCallback, useLayoutEffect, useState } from "react";
 
 // Define a type for the size object
 interface Size {

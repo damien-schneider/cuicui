@@ -1,6 +1,8 @@
 import { render, screen } from "@testing-library/react";
-import { describe, expect, it, test } from "vitest";
+import { describe, expect, it } from "vitest";
 import HomePage from "#/src/app/page";
+
+const gettingStartedRegex = /getting-started$/;
 
 describe("Page", () => {
   render(<HomePage />);
@@ -28,6 +30,6 @@ describe("Page", () => {
 
     // Check if the href attribute of the 'Getting started' element finishes by getting-started
     const hrefValue = contributeElement.getAttribute("href");
-    expect(hrefValue).toMatch(/getting-started$/);
+    expect(hrefValue).toMatch(gettingStartedRegex);
   });
 });

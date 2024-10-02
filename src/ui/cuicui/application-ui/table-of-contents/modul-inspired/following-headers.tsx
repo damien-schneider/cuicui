@@ -6,8 +6,8 @@ import { cn } from "#/src/utils/cn";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
-import type React from "react";
-import { useEffect, useRef, useState } from "react";
+
+import { type HTMLProps, useEffect, useRef, useState } from "react";
 
 type Heading = {
   id: string;
@@ -21,7 +21,7 @@ const TableOfContent = ({
   idOfParentContainer,
   ...props
 }: {
-  readonly props?: React.HTMLProps<HTMLDivElement>;
+  readonly props?: HTMLProps<HTMLDivElement>;
   readonly className?: string;
   readonly idOfParentContainer: string;
 }) => {

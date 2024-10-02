@@ -1,6 +1,6 @@
+import { useRouter } from "next/navigation";
 import type { SectionType } from "#/src/lib/types/component";
 import { CommandGroup, CommandItem } from "#/src/ui/shadcn/command";
-import { useRouter } from "next/navigation";
 
 //TODO: Add variant lists
 export function SearchGroupComponentSection({

@@ -1,16 +1,16 @@
 "use client";
-import { useEffect, useState } from "react";
 import { TinyColor } from "@ctrl/tinycolor";
+import { CheckIcon, CopyIcon } from "lucide-react";
+import { useEffect, useState } from "react";
+import { TailwindCssLogo } from "#/src/assets/logo/tailwind-css-logo";
+import { InlineCode } from "#/src/ui/cuicui/application-ui/code/inline-code/inline-code";
+import HoverCard from "#/src/ui/cuicui/common-ui/cards/hover-effect-card/hover-effect-card";
 import { ModernSimpleInput } from "#/src/ui/cuicui/common-ui/inputs/modern-simple-input/modern-simple-input";
+import { useCopyToClipboard } from "#/src/ui/cuicui/hooks/use-copy-to-clipboard/use-copy-to-clipboard";
 import {
   findClosestTailwindColor,
   getExactColorTailwindNameFromHexaValue,
 } from "#/src/ui/cuicui/tools/color-converter/components/to-tailwind";
-import { InlineCode } from "#/src/ui/cuicui/application-ui/code/inline-code/inline-code";
-import { useCopyToClipboard } from "#/src/ui/cuicui/hooks/use-copy-to-clipboard/use-copy-to-clipboard";
-import { CheckIcon, CopyIcon } from "lucide-react";
-import HoverCard from "#/src/ui/cuicui/common-ui/cards/hover-effect-card/hover-effect-card";
-import { TailwindCssLogo } from "#/src/assets/logo/tailwind-css-logo";
 // Générer une correspondance entre les codes hexadécimaux et les noms de couleurs Tailwind
 type ParsedColorType = {
   hex: string | null;
@@ -132,10 +132,10 @@ export const ColorConverter = () => {
               <label>
                 {input.slug.toUpperCase()} color:
                 <ModernSimpleInput
-                  onFocus={() => setInputFocusName(input.slug)}
                   onChange={(e) => {
                     handleColorChange(e.target.value);
                   }}
+                  onFocus={() => setInputFocusName(input.slug)}
                   placeholder={input.placeholder}
                   type="text"
                   value={inputValue ?? ""}
@@ -149,9 +149,9 @@ export const ColorConverter = () => {
                   />
                   {parsedColorValue && (
                     <button
-                      type="button"
                       className=""
                       onClick={() => copyToClipboard(parsedColorValue)}
+                      type="button"
                     >
                       <InlineCode className="inline-flex items-center gap-1">
                         {parsedColorValue}
@@ -174,11 +174,11 @@ export const ColorConverter = () => {
           {/* {parsedColor.rgb && <p>RGB : {parsedColor.rgb}</p>}
           {parsedColor.hsl && <p>HSL : {parsedColor.hsl}</p>} */}
           <TailwindCard
+            correspondingClassHexaColor={parsedColor.tailwind ?? "No hex found"}
+            originalHexaColor={parsedColor.hex}
             tailwindClosestColorClass={getExactColorTailwindNameFromHexaValue(
               parsedColor.tailwind ?? "",
             )}
-            originalHexaColor={parsedColor.hex}
-            correspondingClassHexaColor={parsedColor.tailwind ?? "No hex found"}
           />
         </div>
       )}

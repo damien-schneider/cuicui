@@ -1,5 +1,5 @@
-import type { CategoryType } from "#/src/lib/types/component";
 import { CircleUserRoundIcon } from "lucide-react";
+import type { CategoryType } from "#/src/lib/types/component";
 
 export const avatarsCategory: CategoryType = {
   slug: "avatars",

@@ -1,15 +1,15 @@
 "use client";
 
-import { cn } from "#/src/utils/cn";
 import { AnimatePresence, type Transition, motion } from "framer-motion";
 import {
   Children,
-  cloneElement,
   type ReactElement,
+  cloneElement,
   useEffect,
-  useState,
   useId,
+  useState,
 } from "react";
+import { cn } from "#/src/utils/cn";
 
 export type AnimatedBackgroundProps = {
   children:
@@ -47,6 +47,7 @@ export default function AnimatedBackground({
     }
   }, [defaultValue]);
 
+  // biome-ignore lint/suspicious/noExplicitAny: <Very hard to resolve>
   return Children.map(children, (child: any, index) => {
     const id = child.props["data-id"];
 
@@ -62,8 +63,7 @@ export default function AnimatedBackground({
     return cloneElement(
       child,
       {
-        //TODO: TRY TO FIX THIS KEY
-        key: index,
+        key: `animated-background-${index}-${id}`,
         className: cn("relative inline-flex", child.props.className),
         "aria-selected": activeId === id,
         "data-checked": activeId === id ? "true" : "false",
@@ -73,16 +73,16 @@ export default function AnimatedBackground({
         <AnimatePresence initial={false}>
           {activeId === id && (
             <motion.div
-              layoutId={`background-${uniqueId}`}
-              className={cn("absolute inset-0", className)}
-              transition={transition}
-              initial={{ opacity: defaultValue ? 1 : 0 }}
               animate={{
                 opacity: 1,
               }}
+              className={cn("absolute inset-0", className)}
               exit={{
                 opacity: 0,
               }}
+              initial={{ opacity: defaultValue ? 1 : 0 }}
+              layoutId={`background-${uniqueId}`}
+              transition={transition}
             />
           )}
         </AnimatePresence>

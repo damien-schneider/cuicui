@@ -1,12 +1,12 @@
 {
-	"theme_color": "#e34ba9",
-	"background_color": "#F3F3F3",
-	"display": "standalone",
-	"scope": "/",
-	"start_url": "/localhost:3000",
-	"name": "CuiCui",
-	"short_name": "Cuicui",
-	"description": "The best react copy paste component library, customisable, robust and easy to use.",
-	"lang": "en",
-	"orientation": "landscape-primary"
+  "background_color": "#F3F3F3",
+  "description": "The best react copy paste component library, customisable, robust and easy to use.",
+  "display": "standalone",
+  "lang": "en",
+  "name": "CuiCui",
+  "orientation": "landscape-primary",
+  "scope": "/",
+  "short_name": "Cuicui",
+  "start_url": "/localhost:3000",
+  "theme_color": "#e34ba9"
 }

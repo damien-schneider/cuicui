@@ -1,6 +1,6 @@
 "use client";
-import { useComponentSize } from "#/src/ui/cuicui/hooks/use-component-size/use-component-size";
 import { useRef } from "react";
+import { useComponentSize } from "#/src/ui/cuicui/hooks/use-component-size/use-component-size";
 
 export const PreviewUseComponentSize = () => {
   const divRef = useRef<HTMLDivElement>(null);

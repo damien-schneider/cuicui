@@ -1,6 +1,6 @@
+import { RulerIcon } from "lucide-react";
 import type { SingleComponentCategoryType } from "#/src/lib/types/component";
 import { PreviewUseComponentSize } from "#/src/ui/cuicui/hooks/use-component-size/preview-use-component-size";
-import { RulerIcon } from "lucide-react";
 
 export const useComponentSizeCategory: SingleComponentCategoryType = {
   slug: "use-component-size",

@@ -1,3 +1,4 @@
+// biome-ignore lint/style/noNamespaceImport: <Radix UI is not a problem>
 import * as Tabs from "@radix-ui/react-tabs";
 import { AdvancedCodeBlock } from "#/src/ui/cuicui/application-ui/code/advanced-code-block/advanced-code-block";
 

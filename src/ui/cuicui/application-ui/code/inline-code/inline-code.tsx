@@ -1,5 +1,5 @@
-import { cn } from "#/src/utils/cn";
 import type { ReactNode } from "react";
+import { cn } from "#/src/utils/cn";
 
 export const InlineCode = ({
   className,

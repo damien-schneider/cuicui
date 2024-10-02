@@ -12,8 +12,8 @@ import Byline from "../../ui/byline";
 import { ScrollArea } from "../../ui/shadcn/scrollarea";
 import StarGithubProjectButton from "../../ui/star-github-project-button";
 import ThemeSwitcher from "../../ui/theme-switcher";
-import NavigationMenu from "./navigation-menu";
 import { SearchMenu } from "../search-menu/search-menu";
+import NavigationMenu from "./navigation-menu";
 
 export function DesktopSideMenu({
   className,

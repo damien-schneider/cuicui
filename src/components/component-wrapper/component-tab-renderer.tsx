@@ -1,3 +1,4 @@
+// biome-ignore lint/style/noNamespaceImport: <explanation>
 import * as Tabs from "@radix-ui/react-tabs";
 
 import "./full-component.css";

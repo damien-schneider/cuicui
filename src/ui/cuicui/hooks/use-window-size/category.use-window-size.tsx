@@ -1,6 +1,6 @@
+import { AppWindowMacIcon } from "lucide-react";
 import type { SingleComponentCategoryType } from "#/src/lib/types/component";
 import { PreviewUseWindowSize } from "#/src/ui/cuicui/hooks/use-window-size/preview-use-window-size";
-import { AppWindowMacIcon } from "lucide-react";
 
 export const useWindowSizeCategory: SingleComponentCategoryType = {
   slug: "use-window-size",

@@ -1,3 +1,4 @@
+import { LoaderIcon } from "lucide-react";
 import type { CategoryType } from "#/src/lib/types/component";
 import { CircularBarsSpinnerLoader } from "#/src/ui/cuicui/common-ui/loaders/spinner-loader/circular-bars-spinner-loader";
 import { DualRingSpinnerLoader } from "#/src/ui/cuicui/common-ui/loaders/spinner-loader/dual-ring-spinner-loader";
@@ -5,7 +6,6 @@ import { SpinnerLoader } from "#/src/ui/cuicui/common-ui/loaders/spinner-loader/
 import NineDotGridRandom from "#/src/ui/cuicui/common-ui/loaders/three-dot-simple-loader/nine-dot-grid-random";
 import ThreeDotLoaderGrowing from "#/src/ui/cuicui/common-ui/loaders/three-dot-simple-loader/three-dot-loader-growing";
 import { ThreeDotSimpleLoader } from "#/src/ui/cuicui/common-ui/loaders/three-dot-simple-loader/three-dot-simple-loader";
-import { LoaderIcon } from "lucide-react";
 
 export const loadersCategory: CategoryType = {
   slug: "loaders",

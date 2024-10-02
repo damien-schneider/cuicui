@@ -1,6 +1,6 @@
 "use client";
-import { cn } from "#/src/ui/cuicui/utils/cn/cn";
 import { useState } from "react";
+import { cn } from "#/src/ui/cuicui/utils/cn/cn";
 
 export default function PreviewCn() {
   const [isViolet, setIsViolet] = useState(false);
@@ -27,20 +27,20 @@ export default function PreviewCn() {
         </pre>
       </div>
       <button
-        type="button"
         className=" w-full"
         onClick={() => {
           setIsViolet(!isViolet);
         }}
+        type="button"
       >
         Violet {isViolet ? "✅" : "❌"}
       </button>
       <button
-        type="button"
         className=" w-full"
         onClick={() => {
           setIsAmber(!isAmber);
         }}
+        type="button"
       >
         Amber {isAmber ? "✅" : "❌"}
       </button>

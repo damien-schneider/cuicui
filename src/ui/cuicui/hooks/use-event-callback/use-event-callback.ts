@@ -1,5 +1,5 @@
-import { useIsomorphicLayoutEffect } from "#/src/ui/cuicui/hooks/use-isomorphic-layout-effect/use-isomorphic-layout-effect";
 import { useCallback, useRef } from "react";
+import { useIsomorphicLayoutEffect } from "#/src/ui/cuicui/hooks/use-isomorphic-layout-effect/use-isomorphic-layout-effect";
 
 export function useEventCallback<Args extends unknown[], R>(
   fn: (...args: Args) => R,
