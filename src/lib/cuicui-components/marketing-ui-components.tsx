@@ -19,11 +19,10 @@ import ManyOffersVariant1 from "#/src/ui/cuicui/marketing-ui/pricing-tables/many
 import AnimatedCounterPreview from "#/src/ui/cuicui/marketing-ui/statistics/animated-counter/animated-counter-preview";
 import { AnimatedNumberVariant1 } from "#/src/ui/cuicui/marketing-ui/statistics/animated-on-scroll/variant1";
 import IncreaseToValueVariant1 from "#/src/ui/cuicui/marketing-ui/statistics/increase-to-value/variant1";
-import GradientQnaVariant1 from "#/src/ui/cuicui/marketing-ui/testimonials/gradiant-qna/variant1";
-import GradientQnaVariant2 from "#/src/ui/cuicui/marketing-ui/testimonials/gradiant-qna/variant2";
 import MarqueeVariant1 from "#/src/ui/cuicui/marketing-ui/testimonials/marquee/variant1";
 import MarqueeVariant2 from "#/src/ui/cuicui/marketing-ui/testimonials/marquee/variant2";
 import { TestimonialsVariant1 } from "#/src/ui/cuicui/marketing-ui/testimonials/testimonials-component/variant1";
+import { gradientQnaComponent } from "#/src/ui/cuicui/marketing-ui/testimonials/gradient-qna/component.gradient-qna";
 
 export const marketingUiComponentList: CategoryType[] = [
   {
@@ -264,27 +263,7 @@ export const marketingUiComponentList: CategoryType[] = [
           },
         ],
       },
-      {
-        lastUpdatedDateComponent: new Date("2024-07-17"),
-        sizePreview: "lg",
-        slug: "gradiant-qna",
-        name: "Gradient Q&A",
-        description:
-          "A simple marquee component with two variants, horizontal and vertical.",
-        variantList: [
-          {
-            name: "Double Container Q&A",
-            component: <GradientQnaVariant1 />,
-            slugPreviewFile: "variant1",
-          },
-          {
-            name: "Simple Container Q&A",
-            component: <GradientQnaVariant2 />,
-            slugPreviewFile: "variant2",
-          },
-        ],
-        componentBadges: ["no-js"],
-      },
+      gradientQnaComponent,
     ],
   },
 ];
