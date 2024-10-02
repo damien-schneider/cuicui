@@ -26,7 +26,7 @@ export const batteryCategory: CategoryType = {
           slugComponentFile: "battery-indicator",
         },
       ],
-      title: "Battery Indicator",
+      name: "Battery Indicator",
       description: "A battery indicator component.",
     },
   ],

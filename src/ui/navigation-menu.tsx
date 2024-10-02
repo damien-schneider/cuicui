@@ -1,6 +1,13 @@
 "use client";
 import { AnimatePresence, motion } from "framer-motion";
-import React, { useEffect, type ReactNode } from "react";
+import type React from "react";
+import {
+  Children,
+  type ReactElement,
+  useEffect,
+  type ReactNode,
+  type ButtonHTMLAttributes,
+} from "react";
 import { cloneElement, isValidElement, useId, useState } from "react";
 import { cn } from "../utils/cn";
 
@@ -9,11 +16,11 @@ interface NavigationMenuProps extends React.HTMLAttributes<HTMLDivElement> {
   transitionTime?: number; // Add the transitionTime prop
 }
 
-export const NavigationMenu: React.FC<NavigationMenuProps> = ({
+export const NavigationMenu = ({
   children,
   transitionTime = 0.2, // Default transition time
   ...props
-}) => {
+}: NavigationMenuProps) => {
   const [activeElement, setActiveElement] = useState<number | null>(null);
   const [elementFocused, setElementFocused] = useState<number | null>(
     activeElement ?? null,
@@ -37,19 +44,16 @@ export const NavigationMenu: React.FC<NavigationMenuProps> = ({
       }}
       {...props}
     >
-      {React.Children.map(children, (child, index) => {
+      {Children.map(children, (child, index) => {
         if (isValidElement(child)) {
-          return cloneElement(
-            child as React.ReactElement<NavigationButtonProps>,
-            {
-              isFocused: elementFocused === index,
-              onMouseEnter: () => handleHoverButton(index),
-              transitionTime, // Pass transitionTime to each button
-              layoutId,
-              handleActiveElement,
-              index,
-            },
-          );
+          return cloneElement(child as ReactElement<NavigationButtonProps>, {
+            isFocused: elementFocused === index,
+            onMouseEnter: () => handleHoverButton(index),
+            transitionTime, // Pass transitionTime to each button
+            layoutId,
+            handleActiveElement,
+            index,
+          });
         }
         return child;
       })}
@@ -58,7 +62,7 @@ export const NavigationMenu: React.FC<NavigationMenuProps> = ({
 };
 
 interface NavigationButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
   isFocused?: boolean;
   transitionTime?: number; // Add the transitionTime prop

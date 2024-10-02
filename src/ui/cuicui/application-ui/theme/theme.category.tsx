@@ -15,7 +15,7 @@ export const themeCategory: CategoryType = {
   componentList: [
     {
       slug: "theme-switcher",
-      title: "Theme Switcher",
+      name: "Theme Switcher",
       description: "A theme switcher button.",
       isIframed: false,
       sizePreview: "xs",

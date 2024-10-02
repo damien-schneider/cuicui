@@ -31,18 +31,18 @@ export default async function MultipleComponentCategory({
   return (
     <div className="space-y-6">
       {componentList.map((component) => (
-        <Fragment key={component.title}>
+        <Fragment key={component.name}>
           <HeaderComponent
             componentBadges={component.componentBadges}
             description={component.description}
-            title={component.title}
+            title={component.name}
           />
           <VariantTabs
             variantList={component.componentList}
             isChildUsingHeightFull={component.isChildUsingHeightFull}
             isIframed={component.isIframed}
             isResizable={component.isResizable}
-            key={component.title}
+            key={component.name}
             rerenderButton={component.rerenderButton}
             size={component.sizePreview}
           />

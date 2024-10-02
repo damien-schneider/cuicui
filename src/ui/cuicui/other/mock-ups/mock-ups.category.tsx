@@ -24,7 +24,7 @@ export const mockUpsCategory: CategoryType = {
       slug: "smartphone",
       isIframed: true,
       isChildUsingHeightFull: true,
-      title: "Smartphone mock-up",
+      name: "Smartphone mock-up",
       description:
         "Create a smartphone mock-up with CSS and HTML for better performance, SEO and accessibility & also more micro-interactions",
       variantList: [
@@ -48,7 +48,7 @@ export const mockUpsCategory: CategoryType = {
       slug: "laptops",
       isIframed: true,
       isChildUsingHeightFull: true,
-      title: "Laptop mock-up",
+      name: "Laptop mock-up",
       description:
         "Create a laptop mock-up with CSS and HTML for better performance",
       variantList: [
@@ -68,7 +68,7 @@ export const mockUpsCategory: CategoryType = {
       isIframed: true,
       lastUpdatedDateComponent: new Date("2024-09-10"),
       isChildUsingHeightFull: true,
-      title: "Airpods mock-up",
+      name: "Airpods mock-up",
       description:
         "Create a airpods mock-up with CSS and HTML for better performance",
       variantList: [

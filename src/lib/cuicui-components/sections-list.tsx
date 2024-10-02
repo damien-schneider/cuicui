@@ -6,6 +6,7 @@ import { hooksSection } from "#/src/ui/cuicui/hooks/hooks.section";
 import { otherSection } from "#/src/ui/cuicui/other/other.section";
 import { toolsSection } from "#/src/ui/cuicui/tools/section.tools";
 import { utilsSection } from "#/src/ui/cuicui/utils/utils.section";
+import { BadgePercentIcon } from "lucide-react";
 
 import type { SectionType } from "../types/component";
 
@@ -18,6 +19,7 @@ export const SectionsList: SectionType[] = [
     slug: "marketing-ui",
     description: "A collection of UI components for marketing websites.",
     categoriesList: marketingUiComponentList,
+    icon: BadgePercentIcon,
   },
   otherSection,
   hooksSection,

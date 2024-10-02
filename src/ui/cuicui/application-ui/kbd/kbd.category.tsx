@@ -26,7 +26,7 @@ export const kbdCategory: CategoryType = {
           slugPreviewFile: "variant1",
         },
       ],
-      title: "Simple keyboard Kbd",
+      name: "Simple keyboard Kbd",
       description:
         "A simple keyboard Kbd with an effect on hover and on press.",
     },
@@ -41,7 +41,7 @@ export const kbdCategory: CategoryType = {
           slugPreviewFile: "variant1",
         },
       ],
-      title: "3D keyboard Kbd",
+      name: "3D keyboard Kbd",
       description: "A 3D keyboard Kbd with an effect on hover and on press.",
     },
   ],

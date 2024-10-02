@@ -15,7 +15,7 @@ export const blockquotesCategory: CategoryType = {
   componentList: [
     {
       slug: "modern-simple-quote",
-      title: "Simple modern quote",
+      name: "Simple modern quote",
       description: "A simple modern quote with a border on the left side.",
       sizePreview: "sm",
       variantList: [

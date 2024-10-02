@@ -19,7 +19,7 @@ export const patternsCategory: CategoryType = {
       slug: "dots-pattern",
       isIframed: false,
       isChildUsingHeightFull: true,
-      title: "Simple dots pattern",
+      name: "Simple dots pattern",
       description:
         "Create a simple dots pattern without images, just with CSS and HTML for better performance, SEO and accessibility & also more micro-interactions",
       variantList: [
@@ -40,7 +40,7 @@ export const patternsCategory: CategoryType = {
       isIframed: false,
       isChildUsingHeightFull: true,
       lastUpdatedDateComponent: new Date("2024-09-10"),
-      title: "Moving bands pattern",
+      name: "Moving bands pattern",
       description:
         "Create a moving bands pattern without images, just with CSS and HTML for better performance.",
       variantList: [

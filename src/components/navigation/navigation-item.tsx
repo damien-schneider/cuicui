@@ -1,7 +1,16 @@
+import {
+  Disclosure,
+  DisclosureContent,
+  DisclosureTrigger,
+} from "#/src/components/navigation/disclosure";
 import GradientContainer from "#/src/ui/gradient-container";
 import GradientText from "#/src/ui/gradient-text";
 import { cn } from "#/src/utils/cn";
-import { ArrowUpRightIcon, type LucideIcon } from "lucide-react";
+import {
+  ArrowUpRightIcon,
+  ChevronRightIcon,
+  type LucideIcon,
+} from "lucide-react";
 import Link from "next/link";
 import { useSelectedLayoutSegments } from "next/navigation";
 import type { AnchorHTMLAttributes, ReactNode } from "react";
@@ -74,10 +83,48 @@ export function GlobalNavItem({
 export const SectionWrapper = ({
   children,
   name,
+  disclosure = true,
+  Icon,
 }: {
   children: ReactNode;
   name: string;
+  disclosure?: boolean;
+  Icon?: LucideIcon;
 }) => {
+  if (disclosure) {
+    return (
+      <Disclosure className="w-full rounded-md has-[:aria-expanded]:my-6">
+        <DisclosureTrigger>
+          <button
+            className={cn(
+              "relative group peer px-3 py-2  text-xs w-full flex font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400 justify-between items-center",
+              "before:absolute before:inset-0 before:scale-50 before:opacity-0 hover:before:scale-100 hover:before:opacity-100 before:transition before:transform-gpu before:bg-neutral-400/15 before:rounded-lg before:border before:border-neutral-400/15 active:before:bg-neutral-400/30  transition-all aria-expanded:mt-6",
+            )}
+            type="button"
+          >
+            <span className="inline-flex gap-2 items-center">
+              {Icon && (
+                <Icon className="size-4 transform-gpu text-neutral-400 transition-transform group-hover:scale-125 dark:text-neutral-500 " />
+              )}
+
+              {name}
+            </span>
+
+            <ChevronRightIcon className="size-4 text-black/40 transition-transform dark:text-white/40 group-aria-expanded:rotate-90" />
+          </button>
+        </DisclosureTrigger>
+        <DisclosureContent className="pt-1 peer-aria-expanded:mb-8">
+          {children}
+        </DisclosureContent>
+      </Disclosure>
+      // <div>
+      //   <div className="mb-2 px-3 text-xs font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
+      //     <p>{name}</p>
+      //   </div>
+      //   {children}
+      // </div>
+    );
+  }
   return (
     <div>
       <div className="mb-2 px-3 text-xs font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400">

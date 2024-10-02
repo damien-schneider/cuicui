@@ -24,7 +24,7 @@ export const searchBarsCategory: CategoryType = {
           slugPreviewFile: "variant1",
         },
       ],
-      title: "Growing Search",
+      name: "Growing Search",
       description: "Search bar that grows when focused.",
     },
   ],

@@ -1,7 +1,7 @@
 import { ChevronDownIcon } from "lucide-react";
 import { cn } from "#/src/utils/cn";
 
-export default function GradientQnaVariant1() {
+export default function SimpleContainerGradientQna() {
   return (
     <div className="">
       <div className="-translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2 ">
@@ -33,18 +33,18 @@ const Testimonial = ({
   content: string;
 }) => {
   return (
-    <div className="relative overflow-hidden rounded-3xl border border-neutral-400/20 bg-neutral-500/10 backdrop-blur-2xl transition-all hover:bg-neutral-500/20">
-      <details className="peer group max-h-96 w-full transform-gpu overflow-hidden transition-all">
-        <summary className="flex transform-gpu cursor-pointer list-none items-center justify-between gap-4 p-4 transition-all duration-300 group-open:pt-8 group-open:pl-8">
-          <h6 className="font-medium text-lg text-neutral-600 tracking-tight dark:text-neutral-300">
+    <div className="relative overflow-hidden rounded-3xl bg-neutral-500/10 backdrop-blur-2xl hover:bg-neutral-500/20 has-[:open]:bg-neutral-500/60">
+      <details className="peer group max-h-96 w-full overflow-hidden transition-all duration-500">
+        <summary className="flex cursor-pointer items-center justify-between gap-4 p-4 transition-all duration-300 group-open:pt-8 group-open:pl-8">
+          <h6 className="font-medium text-lg text-neutral-600 tracking-tighter dark:text-neutral-300">
             {title}
           </h6>
-          <ChevronDownIcon className="group-open:-rotate-180 absolute top-5 right-5 size-5 transform-gpu text-neutral-600 transition-all dark:text-neutral-300" />
+          <ChevronDownIcon className="group-open:-rotate-180 absolute top-5 right-5 size-5 text-neutral-600 transition-all dark:text-neutral-300" />
         </summary>
       </details>
 
-      <div className="max-h-0 transform-gpu overflow-hidden font-medium text-neutral-700 transition-all duration-500 peer-open:max-h-40 dark:text-neutral-200">
-        <p className="m-2 rounded-2xl bg-neutral-500/10 p-8 ">{content}</p>
+      <div className="max-h-0 overflow-hidden text-neutral-700 transition-all duration-500 peer-open:max-h-40 dark:text-neutral-200">
+        <p className="rounded-2xl p-6 ">{content}</p>
       </div>
     </div>
   );

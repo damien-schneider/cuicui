@@ -83,7 +83,7 @@ export const CustomIframeComponentLight = ({
           </head>
           <body class=${cn("bg-neutral-50")}>
             <div id="mountHere" class="${cn(
-              "p-4 *:flex *:items-center *:justify-center flex items-center justify-center *:w-full",
+              "p-4 *:flex *:items-center *:justify-center grid *:w-full",
               getContainerHeightClass({ size, isIframe: true }),
             )}">
             </div>
@@ -130,7 +130,7 @@ export const CustomIframeComponentDark = ({
           </head>
           <body class="dark bg-[#101010]">
             <div id="mountHere" class="${cn(
-              "p-4 *:flex *:items-center *:justify-center flex items-center justify-center *:w-full",
+              "p-4 *:flex *:items-center *:justify-center grid *:w-full",
               getContainerHeightClass({ size, isIframe: true }),
             )}">
             </div>

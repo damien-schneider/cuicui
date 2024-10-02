@@ -14,6 +14,6 @@ export const codeSnippetComponent: ComponentType = {
       slugComponentFile: "variant1",
     },
   ],
-  title: "Code Snippet",
+  name: "Code Snippet",
   description: "A code snippet component with a copy to clipboard button.",
 };

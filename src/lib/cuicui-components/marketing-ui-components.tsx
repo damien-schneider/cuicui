@@ -19,11 +19,10 @@ import ManyOffersVariant1 from "#/src/ui/cuicui/marketing-ui/pricing-tables/many
 import AnimatedCounterPreview from "#/src/ui/cuicui/marketing-ui/statistics/animated-counter/animated-counter-preview";
 import { AnimatedNumberVariant1 } from "#/src/ui/cuicui/marketing-ui/statistics/animated-on-scroll/variant1";
 import IncreaseToValueVariant1 from "#/src/ui/cuicui/marketing-ui/statistics/increase-to-value/variant1";
-import GradientQnaVariant1 from "#/src/ui/cuicui/marketing-ui/testimonials/gradiant-qna/variant1";
-import GradientQnaVariant2 from "#/src/ui/cuicui/marketing-ui/testimonials/gradiant-qna/variant2";
 import MarqueeVariant1 from "#/src/ui/cuicui/marketing-ui/testimonials/marquee/variant1";
 import MarqueeVariant2 from "#/src/ui/cuicui/marketing-ui/testimonials/marquee/variant2";
 import { TestimonialsVariant1 } from "#/src/ui/cuicui/marketing-ui/testimonials/testimonials-component/variant1";
+import { gradientQnaComponent } from "#/src/ui/cuicui/marketing-ui/testimonials/gradient-qna/component.gradient-qna";
 
 export const marketingUiComponentList: CategoryType[] = [
   {
@@ -39,7 +38,7 @@ export const marketingUiComponentList: CategoryType[] = [
     },
     componentList: [
       {
-        title: "Simple Carousel",
+        name: "Simple Carousel",
         description:
           "A simple carousel that allows you to navigate through multiple images or products.",
         sizePreview: "md",
@@ -56,7 +55,7 @@ export const marketingUiComponentList: CategoryType[] = [
         ],
       },
       {
-        title: "Cylindric 3D Carousel",
+        name: "Cylindric 3D Carousel",
         lastUpdatedDateComponent: new Date("2024-08-10"),
         description:
           "A 3D carousel that rotates in a cylindrical way. It's perfect for showcasing multiple images or products.",
@@ -84,7 +83,7 @@ export const marketingUiComponentList: CategoryType[] = [
     },
     componentList: [
       {
-        title: "Feature Four Images",
+        name: "Feature Four Images",
 
         lastUpdatedDateComponent: new Date("2024-06-17"),
         description:
@@ -106,8 +105,7 @@ export const marketingUiComponentList: CategoryType[] = [
         ],
       },
       {
-        title: "Simple feature cards",
-
+        name: "Simple feature cards",
         lastUpdatedDateComponent: new Date("2024-06-17"),
         description:
           "Simple feature cards with icons, text, and buttons. Perfect for micro-interactions and lists of features.",
@@ -141,7 +139,7 @@ export const marketingUiComponentList: CategoryType[] = [
         lastUpdatedDateComponent: new Date("2024-08-01"),
         sizePreview: "lg",
         slug: "many-offers",
-        title: "Pricing with many offers",
+        name: "Pricing with many offers",
         description: "A pricing table with a lot of offers",
         inspiration: "Artlist",
         inspirationLink: "https://artlist.io/pricing",
@@ -173,7 +171,7 @@ export const marketingUiComponentList: CategoryType[] = [
         slug: "animated-on-scroll",
         isIframed: true,
         rerenderButton: true,
-        title: "Animated numbers",
+        name: "Animated numbers",
         description:
           "Show numbers that animate when they appear on the screen.",
         variantList: [
@@ -189,7 +187,7 @@ export const marketingUiComponentList: CategoryType[] = [
         sizePreview: "sm",
         slug: "increase-to-value",
         rerenderButton: true,
-        title: "Increase to value",
+        name: "Increase to value",
         description:
           "Show numbers that animate when they appear on the screen.",
         variantList: [
@@ -205,7 +203,7 @@ export const marketingUiComponentList: CategoryType[] = [
         sizePreview: "sm",
         slug: "animated-counter",
         rerenderButton: true,
-        title: "Animated Counter",
+        name: "Animated Counter",
         description: "Show numbers that animate automatically when updated.",
         variantList: [
           {
@@ -235,7 +233,7 @@ export const marketingUiComponentList: CategoryType[] = [
         lastUpdatedDateComponent: new Date("2024-07-17"),
         sizePreview: "md",
         slug: "testimonials-component",
-        title: "Testimonials",
+        name: "Testimonials",
         description: "A simple testimonials component with a slider on click",
         variantList: [
           {
@@ -249,7 +247,7 @@ export const marketingUiComponentList: CategoryType[] = [
         lastUpdatedDateComponent: new Date("2024-07-17"),
         sizePreview: "sm",
         slug: "marquee",
-        title: "Marquee",
+        name: "Marquee",
         description:
           "A simple marquee component with two variants, horizontal and vertical.",
         variantList: [
@@ -265,27 +263,7 @@ export const marketingUiComponentList: CategoryType[] = [
           },
         ],
       },
-      {
-        lastUpdatedDateComponent: new Date("2024-07-17"),
-        sizePreview: "lg",
-        slug: "gradiant-qna",
-        title: "Gradient Q&A",
-        description:
-          "A simple marquee component with two variants, horizontal and vertical.",
-        variantList: [
-          {
-            name: "Double Container Q&A",
-            component: <GradientQnaVariant1 />,
-            slugPreviewFile: "variant1",
-          },
-          {
-            name: "Simple Container Q&A",
-            component: <GradientQnaVariant2 />,
-            slugPreviewFile: "variant2",
-          },
-        ],
-        componentBadges: ["no-js"],
-      },
+      gradientQnaComponent,
     ],
   },
 ];

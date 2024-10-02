@@ -46,6 +46,7 @@ interface BaseSectionType {
   name: string;
   slug: string;
   description: string;
+  icon: LucideIcon;
 }
 
 // Section with single-component type
@@ -115,7 +116,7 @@ type PageCategoryType = {
 */
 
 export type ComponentType = {
-  title: string;
+  name: string;
   description: string;
   lastUpdatedDateComponent: Date;
   isResizable?: boolean;

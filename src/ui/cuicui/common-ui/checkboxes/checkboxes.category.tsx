@@ -24,7 +24,7 @@ export const checkboxesCategory: CategoryType = {
           slugComponentFile: "simple-checkbox",
         },
       ],
-      title: "Simple checkbox",
+      name: "Simple checkbox",
       description:
         "A simple checkbox that can be used in any project with simple artistic style.",
       isIframed: false,

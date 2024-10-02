@@ -19,8 +19,7 @@
   "version": "0.1.2",
   "scripts": {
     "build": "next build",
-    "dev": "next dev",
-    "dev:turbo": "next dev --turbo",
+    "dev": "next dev --turbo",
     "lint": "next lint",
     "lint-staged": "lint-staged",
     "format:write": "biome format --write ./src",

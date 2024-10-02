@@ -2,7 +2,7 @@ import type { ComponentType } from "#/src/lib/types/component";
 import { PreviewAdvancedBottomActionMenu } from "#/src/ui/cuicui/application-ui/action-menu/advanced-bottom-action-menu/preview-advanced-bottom-action-menu";
 
 export const advancedBottomActionMenuComponent: ComponentType = {
-  title: "Advanced bottom action menu",
+  name: "Advanced bottom action menu",
   description: "An advanced bottom action menu",
   isIframed: false,
   sizePreview: "md",

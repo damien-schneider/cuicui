@@ -3,7 +3,7 @@ import { PreviewSlideInOnScroll } from "#/src/ui/cuicui/other/transition-wrapper
 
 export const SlideInOnScrollComponent: ComponentType = {
   slug: "slide-in-on-scroll",
-  title: "Slide in on scroll",
+  name: "Slide in on scroll",
   description:
     "A transition wrapper that makes a component appear with a slide effect with css only !",
   isIframed: true,

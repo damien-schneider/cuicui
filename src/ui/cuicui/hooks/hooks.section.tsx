@@ -25,12 +25,14 @@ import { useEventListenerCategory } from "#/src/ui/cuicui/hooks/use-event-listen
 import { useEventCallbackCategory } from "#/src/ui/cuicui/hooks/use-event-callback/category.use-event-callback";
 import { useSpeechToTextCategory } from "#/src/ui/cuicui/hooks/use-speech-to-text/category.use-speech-to-text";
 import { useTextToSpeechCategory } from "#/src/ui/cuicui/hooks/use-text-to-speech/category.use-text-to-speech";
+import { ToyBrickIcon } from "lucide-react";
 
 export const hooksSection: SectionType = {
   type: "single-component",
   name: "Hooks",
   slug: "hooks",
   description: "A collection of React hooks for building modern applications.",
+  icon: ToyBrickIcon,
   categoriesList: [
     useBatteryCategory,
     useComponentSizeCategory,

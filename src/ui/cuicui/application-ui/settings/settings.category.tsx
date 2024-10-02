@@ -24,7 +24,7 @@ export const settingsCategory: CategoryType = {
           slugPreviewFile: "variant1",
         },
       ],
-      title: "Dynamic Settings",
+      name: "Dynamic Settings",
       description: "Settings with lots of micro-interactions and animations.",
       componentBadges: ["updated"],
       inspiration: "UI Labs",

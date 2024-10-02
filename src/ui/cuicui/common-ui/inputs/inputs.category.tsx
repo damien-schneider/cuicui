@@ -25,7 +25,7 @@ export const inputsCategory: CategoryType = {
           slugPreviewFile: "variant1",
         },
       ],
-      title: "Droppable File",
+      name: "Droppable File",
       description:
         "A file dropzone that shows a preview of the file when hovered.",
       isIframed: false,
@@ -42,7 +42,7 @@ export const inputsCategory: CategoryType = {
           slugComponentFile: "modern-simple-input",
         },
       ],
-      title: "Modern Simple Input",
+      name: "Modern Simple Input",
       description:
         "A simple input that can be used in any project with any artistic style.",
       isIframed: false,

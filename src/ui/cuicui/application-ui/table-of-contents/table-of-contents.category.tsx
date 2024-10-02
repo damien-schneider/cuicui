@@ -18,7 +18,7 @@ export const tableOfContentCategory: CategoryType = {
   componentList: [
     {
       slug: "modul-inspired",
-      title: "Modul inspired table of contents",
+      name: "Modul inspired table of contents",
       description:
         "An advanced animated table of contents component highlighting every sections on the screen.",
       sizePreview: "md",

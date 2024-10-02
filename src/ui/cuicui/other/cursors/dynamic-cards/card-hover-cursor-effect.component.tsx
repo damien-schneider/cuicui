@@ -6,7 +6,7 @@ export const cardHoverCursorEffectComponent: ComponentType = {
   sizePreview: "md",
   slug: "dynamic-cards",
   isIframed: false,
-  title: "Grid with cursor following border",
+  name: "Grid with cursor following border",
   description: "A grid of cards with a cursor following border effect",
 
   isResizable: false,
