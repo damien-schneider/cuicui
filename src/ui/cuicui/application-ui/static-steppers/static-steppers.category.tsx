@@ -15,7 +15,7 @@ export const staticSteppersCategory: CategoryType = {
   componentList: [
     {
       slug: "code",
-      title: "Simple static stepper",
+      name: "Simple static stepper",
       description:
         "A simple static stepper component to display a list of steps.",
       sizePreview: "sm",

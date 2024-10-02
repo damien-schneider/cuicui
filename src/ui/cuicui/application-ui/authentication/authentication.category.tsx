@@ -26,7 +26,7 @@ export const authenticationCategory: CategoryType = {
           slugPreviewFile: "variant1",
         },
       ],
-      title: "Half Sided Glassmorphism Authentication",
+      name: "Half Sided Glassmorphism Authentication",
       description: "A half-sided glassmorphism authentication component.",
     },
   ],

@@ -22,7 +22,7 @@ export const advancedCodeBlockComponent: ComponentType = {
       slugComponentFile: "advanced-code-block",
     },
   ],
-  title: "Advanced Code Block",
+  name: "Advanced Code Block",
   description: "A code snippet component with a copy to clipboard button.",
   inspiration: "Clerk",
   inspirationLink: "https://clerk.com/docs/quickstarts/nextjs",

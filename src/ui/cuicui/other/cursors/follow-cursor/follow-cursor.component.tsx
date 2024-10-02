@@ -8,7 +8,7 @@ export const followCursorComponent: ComponentType = {
   isResizable: false,
   isIframed: false,
   isChildUsingHeightFull: true,
-  title: "Cursor following effect",
+  name: "Cursor following effect",
   description:
     "A cursor following effect that can be used in any project with any artisitic style",
   variantList: [

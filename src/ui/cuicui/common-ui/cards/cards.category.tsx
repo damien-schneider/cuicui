@@ -18,7 +18,7 @@ export const cardsCategory: CategoryType = {
   componentList: [
     {
       slug: "modern-inner-shadow",
-      title: "Modern inner shadow card",
+      name: "Modern inner shadow card",
       description:
         "A card that showcases a set of tools that you use to create your product.",
       sizePreview: "sm",
@@ -35,7 +35,7 @@ export const cardsCategory: CategoryType = {
     },
     {
       slug: "dynamic-square-background",
-      title: "Dynamic Square Background",
+      name: "Dynamic Square Background",
       description:
         "A card to announce any new feature or product with a modern dynamic square background.",
       sizePreview: "sm",
@@ -51,7 +51,7 @@ export const cardsCategory: CategoryType = {
     },
     {
       slug: "notification-card",
-      title: "Notification Card",
+      name: "Notification Card",
       description:
         "A notification card with a date and time to show the user when the notification was sent.",
       lastUpdatedDateComponent: new Date("2024-08-10"),
@@ -77,7 +77,7 @@ export const cardsCategory: CategoryType = {
           slugComponentFile: "hover-effect-card",
         },
       ],
-      title: "Hover Effect Card",
+      name: "Hover Effect Card",
       description:
         "A card with a hover effect that rotates on hover. Only CSS.",
       isIframed: true,

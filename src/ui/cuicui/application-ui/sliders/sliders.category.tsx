@@ -17,7 +17,7 @@ export const slidersCategory: CategoryType = {
   componentList: [
     {
       slug: "elastic-slider",
-      title: "Elastic Slider",
+      name: "Elastic Slider",
       description: "Smooth slider with scale effect.",
       sizePreview: "xs",
       variantList: [
@@ -33,7 +33,7 @@ export const slidersCategory: CategoryType = {
     },
     {
       slug: "simple-modern-slider",
-      title: "Simple Modern Slider",
+      name: "Simple Modern Slider",
       description: "Simple modern slider with micro animations.",
       sizePreview: "xs",
       variantList: [

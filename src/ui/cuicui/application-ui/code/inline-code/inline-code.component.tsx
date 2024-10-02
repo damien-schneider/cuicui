@@ -14,6 +14,6 @@ export const inlineCodeComponent: ComponentType = {
       slugComponentFile: "inline-code",
     },
   ],
-  title: "Inline Code",
+  name: "Inline Code",
   description: "A code snippet component with a copy to clipboard button.",
 };

@@ -26,7 +26,7 @@ export const skeletonsCategory: CategoryType = {
           slugPreviewFile: "variant1",
         },
       ],
-      title: "Classic Pulse Skeleton",
+      name: "Classic Pulse Skeleton",
       description:
         "A simple skeleton with a classic pulse effect for loading states.",
       inspiration: "Shadcn/ui",
@@ -50,7 +50,7 @@ export const skeletonsCategory: CategoryType = {
           slugComponentFile: "skeleton-shiny-gradient",
         },
       ],
-      title: "Shiny Gradient Skeleton",
+      name: "Shiny Gradient Skeleton",
       description:
         "An advanced skeleton with a shiny gradient effect for loading states.",
       inspiration: "Delba",

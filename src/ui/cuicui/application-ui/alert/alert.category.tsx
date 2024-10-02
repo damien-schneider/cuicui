@@ -27,7 +27,7 @@ export const alertCategory: CategoryType = {
           slugPreviewFile: "simple-alert",
         },
       ],
-      title: "Simple Alert",
+      name: "Simple Alert",
       description: "A simple alert component.",
     },
     {
@@ -43,7 +43,7 @@ export const alertCategory: CategoryType = {
           slugComponentFile: "modern-glassy-alert",
         },
       ],
-      title: "Modern Glassy Alert",
+      name: "Modern Glassy Alert",
       description: "A modern glassy alert component.",
     },
   ],

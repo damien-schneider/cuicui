@@ -3,7 +3,7 @@ import PreviewSimpleCookieBanner from "#/src/ui/cuicui/application-ui/cookie-ban
 
 export const simpleCookieBannerComponent: ComponentType = {
   slug: "simple-cookie-banner",
-  title: "Simple Cookie Banner",
+  name: "Simple Cookie Banner",
   description:
     "A simple cookie banner that can be used in any project with simple artistic style.",
   isIframed: true,

@@ -30,7 +30,7 @@ export const navigationCategory: CategoryType = {
           slugPreviewFile: "variant2",
         },
       ],
-      title: "Vercel Navigation",
+      name: "Vercel Navigation",
       description:
         "A smooth and simple navigation bar inspired by Vercel, with modern transitions and animations.",
       isIframed: true,
@@ -46,7 +46,7 @@ export const navigationCategory: CategoryType = {
           slugPreviewFile: "variant1",
         },
       ],
-      title: "MacOS Dock",
+      name: "MacOS Dock",
       description:
         "A navigation menu with smooth animation as done on macOS but in a web browser!",
       isIframed: false,

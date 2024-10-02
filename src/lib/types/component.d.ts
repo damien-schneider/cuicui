@@ -116,7 +116,7 @@ type PageCategoryType = {
 */
 
 export type ComponentType = {
-  title: string;
+  name: string;
   description: string;
   lastUpdatedDateComponent: Date;
   isResizable?: boolean;

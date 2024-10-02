@@ -20,7 +20,7 @@ export const buttonsCategory: CategoryType = {
   componentList: [
     {
       slug: "growing-button",
-      title: "Button",
+      name: "Button",
       description:
         "Simple button with icon which grows on hover. Perfect for small, rarely used buttons replacing an old tooltip.",
       sizePreview: "xs",
@@ -35,7 +35,7 @@ export const buttonsCategory: CategoryType = {
     },
     {
       slug: "before-effect-button",
-      title: "Dynamic button hover effect",
+      name: "Dynamic button hover effect",
       description: "Button with a hover effect that has a 'before' effect.",
       sizePreview: "xs",
       variantList: [
@@ -63,7 +63,7 @@ export const buttonsCategory: CategoryType = {
     },
     {
       slug: "shiny-rotating-border-button",
-      title: "Shiny rotating border button",
+      name: "Shiny rotating border button",
       description: "Button with a shiny rotating border effect.",
       sizePreview: "xs",
       variantList: [
@@ -78,7 +78,7 @@ export const buttonsCategory: CategoryType = {
     },
     {
       slug: "modern-animated-button",
-      title: "Modern Animated Button",
+      name: "Modern Animated Button",
       description: "Button with a modern animated style.",
       sizePreview: "xs",
       variantList: [

@@ -32,7 +32,7 @@ export const badgesCategory: CategoryType = {
           slugPreviewFile: "variant2",
         },
       ],
-      title: "Badge",
+      name: "Badge",
       description:
         "Simple modern badge that can be used in any project with any artistic style.",
     },
@@ -47,7 +47,7 @@ export const badgesCategory: CategoryType = {
           slugPreviewFile: "variant1",
         },
       ],
-      title: "Clerk Badge",
+      name: "Clerk Badge",
       description:
         "Simple modern badge that can be used in any project with any artistic style.",
       inspiration: "Clerk",
@@ -64,7 +64,7 @@ export const badgesCategory: CategoryType = {
           slugPreviewFile: "variant1",
         },
       ],
-      title: "Advanced Badges",
+      name: "Advanced Badges",
       description:
         "Advanced badges that can be used in any project with any artistic style.",
     },

@@ -14,6 +14,6 @@ export const codeCardComponent: ComponentType = {
       slugComponentFile: "code-card",
     },
   ],
-  title: "Code Card",
+  name: "Code Card",
   description: "A code card component with a copy to clipboard button.",
 };
