@@ -46,6 +46,7 @@ interface BaseSectionType {
   name: string;
   slug: string;
   description: string;
+  icon: LucideIcon;
 }
 
 // Section with single-component type

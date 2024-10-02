@@ -10,12 +10,14 @@ import { loadersCategory } from "#/src/ui/cuicui/common-ui/loaders/loaders.categ
 import { navigationCategory } from "#/src/ui/cuicui/common-ui/navigation/navigation.category";
 import { skeletonsCategory } from "#/src/ui/cuicui/common-ui/skeletons/skeletons.category";
 import { toggleCategory } from "#/src/ui/cuicui/common-ui/toggle/toggle.category";
+import { ComponentIcon } from "lucide-react";
 
 export const commonUiSection: SectionType = {
   name: "Common UI",
   slug: "common-ui",
   type: "multiple-component",
   description: "A collection of common UI components for your projects.",
+  icon: ComponentIcon,
   categoriesList: [
     avatarsCategory,
     badgesCategory,

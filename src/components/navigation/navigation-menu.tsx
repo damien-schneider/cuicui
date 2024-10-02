@@ -76,8 +76,8 @@ export default function NavigationMenu({
   }
 
   return (
-    <nav className={cn("mt-5 mb-12 space-y-6 px-2", className)}>
-      <SectionWrapper name={firstMenuSection.name}>
+    <nav className={cn("mt-5 mb-12 px-1 space-y-2", className)}>
+      <SectionWrapper name={firstMenuSection.name} disclosure={false}>
         <NavigationAnimatedBackground>
           {firstMenuSection.categoryList.map((category, _index) => (
             <li key={category.slug} data-id={category.slug} className="block">
@@ -96,7 +96,7 @@ export default function NavigationMenu({
       {SectionsList.map((section) => {
         if (section.type === "page") {
           return (
-            <SectionWrapper name="Tools">
+            <SectionWrapper key={section.slug} name="Tools" Icon={section.icon}>
               <NavigationAnimatedBackground>
                 {section.pageList.map((page) => (
                   <li
@@ -118,7 +118,11 @@ export default function NavigationMenu({
         }
         if (section.type === "single-component") {
           return (
-            <SectionWrapper key={section.slug} name={section.name}>
+            <SectionWrapper
+              key={section.slug}
+              name={section.name}
+              Icon={section.icon}
+            >
               <NavigationAnimatedBackground>
                 {section.categoriesList.map((category, _index) => {
                   return (
@@ -144,7 +148,11 @@ export default function NavigationMenu({
         }
         if (section.type === "multiple-component") {
           return (
-            <SectionWrapper key={section.slug} name={section.name}>
+            <SectionWrapper
+              key={section.slug}
+              name={section.name}
+              Icon={section.icon}
+            >
               <NavigationAnimatedBackground>
                 {section.categoriesList.map((category, _index) => {
                   return (

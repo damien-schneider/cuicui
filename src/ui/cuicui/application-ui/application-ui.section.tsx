@@ -13,12 +13,14 @@ import { slidersCategory } from "#/src/ui/cuicui/application-ui/sliders/sliders.
 import { staticSteppersCategory } from "#/src/ui/cuicui/application-ui/static-steppers/static-steppers.category";
 import { themeCategory } from "#/src/ui/cuicui/application-ui/theme/theme.category";
 import { treeCategory } from "#/src/ui/cuicui/application-ui/tree/tree.category";
+import { AppWindowMacIcon } from "lucide-react";
 
 export const applicationUiCategoryList: SectionType = {
   type: "multiple-component",
   name: "Application UI",
   slug: "application-ui",
   description: "A collection of UI components for advanced applications.",
+  icon: AppWindowMacIcon,
   categoriesList: [
     actionMenuCategory,
     alertCategory,
