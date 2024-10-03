@@ -1,8 +1,6 @@
 <div align="center">
   <a href="https://github.com/damien-schneider/cuicui">
-
-
- <img src="https://github.com/damien-schneider/cuicui/blob/main/src/assets/logo/logo-large.png?raw=true" alt="Logo" width="210" height="60">
+     <img src="/public/metadata/banner-image.png" alt="Banner" />
   </a>
   <!-- <h1 align="left">CuiCui - A high quality react copy paste components library</h1> -->
   <hr></hr>
@@ -11,8 +9,8 @@
 100% open-source, and customizable that can be copy pasted directly into your code base.
   </p>
 
-
 ![Alt](https://repobeats.axiom.co/api/embed/c72a9b3db3d7872f458beaa4db837cc58136ba99.svg "Repobeats analytics image")
+
 <p>
    <a href="https://www.cuicui.day/">Visit site</a>
     ·
@@ -34,7 +32,7 @@
 
 ## About The Project
 
- open-source animated components built with React, Typescript, Tailwind CSS, and Framer Motion.
+open-source animated components built with React, Typescript, Tailwind CSS, and Framer Motion.
 100% open-source, and customizable.
 
 ## Developper guide
@@ -54,7 +52,6 @@ The component roadmap can be find on the [featurebase page](https://cuicui.featu
 - [ ] Improve homepage performance by replacing component integrations by images
 - [x] Re-add precommit (fix importer order & console rules)
 
-
 ## License
 
 Licensed under the [MIT license.](https://github.com/damien-schneider/cuicui/blob/main/license.md)
@@ -68,4 +65,3 @@ visit this [Documentation](https://github.com/damien-schneider/cuicui/blob/main/
 We are using Gitmoji for our commit messages. You can find the rules at [gitmoji.dev](https://gitmoji.dev/)
 
 # Activity
-
