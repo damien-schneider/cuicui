@@ -11,8 +11,6 @@ import { useEffect, useState } from "react";
 import { Drawer } from "vaul";
 import LogoLarge from "#/src/assets/logo/logo-large.png";
 import { cn } from "#/src/utils/cn";
-
-import StarGithubProjectButton from "../../ui/star-github-project-button";
 import ThemeSwitcher from "../../ui/theme-switcher";
 import NavigationMenu from "./navigation-menu";
 export function MobileMenu({ className }: Readonly<{ className?: string }>) {
@@ -69,7 +67,6 @@ export function MobileMenu({ className }: Readonly<{ className?: string }>) {
         />
         <Drawer.Content className="fixed right-0 bottom-0 left-0 z-50 flex max-h-[80dvh] flex-col rounded-t-2xl bg-neutral-50 p-4 dark:bg-neutral-900">
           <Drawer.Handle className="mb-4 min-h-1 bg-neutral-400" />
-          <StarGithubProjectButton />
           <div className="overflow-y-scroll">
             <NavigationMenu isMobile={true} />
           </div>

@@ -1,3 +1,4 @@
+"use client";
 import { differenceInDays } from "date-fns";
 import { NavigationAnimatedBackground } from "#/src/components/navigation/navigation-animated-background";
 import {
@@ -76,8 +77,12 @@ export default function NavigationMenu({
   }
 
   return (
-    <nav className={cn("mt-5 mb-12 px-1 space-y-2", className)}>
-      <SectionWrapper disclosure={false} name={firstMenuSection.name}>
+    <nav className={cn("mt-5 mb-12 px-1 space-y-2 ", className)}>
+      <SectionWrapper
+        disclosure={false}
+        name={firstMenuSection.name}
+        className="mb-16"
+      >
         <NavigationAnimatedBackground>
           {firstMenuSection.categoryList.map((category, _index) => (
             <li className="block" data-id={category.slug} key={category.slug}>

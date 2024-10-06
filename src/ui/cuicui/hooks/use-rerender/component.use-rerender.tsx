@@ -1,16 +1,16 @@
 import { ViewIcon } from "lucide-react";
 import type { SingleComponentCategoryType } from "#/src/lib/types/component";
-import { PreviewUseThrottle } from "#/src/ui/cuicui/hooks/use-throttle/preview.use-throttle";
+import { PreviewUseRerender } from "#/src/ui/cuicui/hooks/use-rerender/preview.use-rerender";
 
-export const useThrottleCategory: SingleComponentCategoryType = {
-  slug: "use-throttle",
-  name: "Use Throttle",
+export const useRerenderCategory: SingleComponentCategoryType = {
+  slug: "use-rerender",
+  name: "Use Rerender",
   description:
     "A hook that throttles the execution of a function, limiting how often it can be invoked",
   releaseDateCategory: new Date("2024-09-28"),
   icon: ViewIcon,
   previewCategory: {
-    component: <PreviewUseThrottle />,
+    component: <PreviewUseRerender />,
     previewScale: 0.8,
   },
   component: {
@@ -20,9 +20,9 @@ export const useThrottleCategory: SingleComponentCategoryType = {
     variantList: [
       {
         name: "default variant",
-        component: <PreviewUseThrottle />,
-        slugComponentFile: "use-throttle",
-        slugPreviewFile: "preview.use-throttle",
+        component: <PreviewUseRerender />,
+        slugComponentFile: "use-rerender",
+        slugPreviewFile: "preview.use-rerender",
       },
     ],
   },

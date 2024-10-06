@@ -1,3 +1,4 @@
+"use client";
 import {
   ArrowUpRightIcon,
   ChevronRightIcon,
@@ -85,15 +86,17 @@ export const SectionWrapper = ({
   name,
   disclosure = true,
   Icon,
+  className,
 }: {
   children: ReactNode;
   name: string;
   disclosure?: boolean;
   Icon?: LucideIcon;
+  className?: string;
 }) => {
   if (disclosure) {
     return (
-      <Disclosure className="w-full rounded-md has-[:aria-expanded]:my-6">
+      <Disclosure className={cn("w-full rounded-md has-[:aria-expanded]:my-6")}>
         <DisclosureTrigger>
           <button
             className={cn(
@@ -126,7 +129,7 @@ export const SectionWrapper = ({
     );
   }
   return (
-    <div>
+    <div className={className}>
       <div className="mb-2 px-3 text-xs font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
         <p>{name}</p>
       </div>

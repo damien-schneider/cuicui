@@ -5,7 +5,7 @@ import AnimatedBackground, {
 export function NavigationAnimatedBackground({
   children,
   ...props
-}: AnimatedBackgroundProps) {
+}: Readonly<AnimatedBackgroundProps>) {
   return (
     <AnimatedBackground
       className="rounded-lg bg-zinc-400/10  flex z-0 pointer-events-none"

@@ -1,34 +1,44 @@
-import type { ReactNode } from "react";
+"use client";
+import { useLayoutEffect, useState, type ReactNode } from "react";
 import { CustomIframe } from "#/src/components/custom-iframe-component";
 import type { ComponentHeightType } from "#/src/lib/types/component";
 import { cn } from "#/src/utils/cn";
+import { getContainerHeightClass } from "#/src/components/component-wrapper/get-container-height-class";
+import { RefreshCwIcon } from "lucide-react";
 
 export const ComponentWrapper = ({
   isIframed = true,
   size,
-  renderButton,
+  renderButton = false,
   children,
   isChildUsingHeightFull,
 }: {
-  renderButton: boolean;
-  isIframed?: boolean;
+  renderButton?: boolean;
+  isIframed: boolean;
   size: ComponentHeightType;
   children: ReactNode;
   isChildUsingHeightFull?: boolean;
 }) => {
-  if (renderButton) {
-    //DO SOMETHING LATER
-  }
+  const [reRender, setReRender] = useState(false);
+
+  useLayoutEffect(() => {
+    if (reRender) {
+      setReRender(false);
+    }
+  }, [reRender]);
+
   if (!isIframed) {
     return (
       <div
         className={cn(
-          "flex h-full w-full items-center justify-center overflow-hidden",
+          "relative flex h-full w-full items-center justify-center overflow-hidden",
           isChildUsingHeightFull && "flex-col *:flex-1",
           getContainerHeightClass({ size }),
         )}
       >
-        {children}
+        {renderButton && <RerenderButton onClick={() => setReRender(true)} />}
+
+        {!reRender && children}
       </div>
     );
   }
@@ -38,42 +48,28 @@ export const ComponentWrapper = ({
       className={cn("w-full", getContainerHeightClass({ size }))}
       size={size}
     >
-      {children}
+      {renderButton && <RerenderButton onClick={() => setReRender(true)} />}
+
+      {!reRender && children}
     </CustomIframe>
   );
 };
 
-export function getContainerHeightClass({
-  size,
-  isIframe = false,
+const RerenderButton = ({
+  onClick,
 }: {
-  size: ComponentHeightType;
-  isIframe?: boolean;
-}) {
-  switch (size) {
-    case "xs": {
-      if (isIframe) {
-        return "min-h-[180px] max-h-[180px] h-1";
-      }
-      return "min-h-[200px] max-h-[200px] h-1";
-    }
-    case "sm": {
-      if (isIframe) {
-        return " min-h-[380px] max-h-[380px] h-1";
-      }
-      return "min-h-[400px] max-h-[400px] h-1";
-    }
-    case "md": {
-      if (isIframe) {
-        return " min-h-[680px] max-h-[680px] h-1";
-      }
-      return " min-h-[700px] max-h-[700px] h-1";
-    }
-    case "lg":
-      return "min-h-[894px] max-h-[894px] h-1";
-    case "xl":
-      return "min-h-[1094px] max-h-[1094px] h-1";
-    default:
-      return "min-h-[200px] max-h-[200px] h-1";
-  }
-}
+  onClick: () => void;
+}) => {
+  return (
+    <button
+      type="button"
+      className={cn(
+        "absolute top-2 right-2 p-1 text-xs font-medium text-neutral-500 dark:text-neutral-500 bg-neutral-500/20 border border-neutral-400/0 hover:border-neutral-400/20 active:border-neutral-400/50 active:bg-neutral-500/40 rounded-md flex items-center gap-1 transition-colors hover:bg-neutral-500/30",
+      )}
+      onClick={onClick}
+    >
+      <RefreshCwIcon className="size-3" />
+      Rerender
+    </button>
+  );
+};
