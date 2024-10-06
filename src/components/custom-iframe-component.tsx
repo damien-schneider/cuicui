@@ -2,9 +2,9 @@
 import type React from "react";
 import Frame from "react-frame-component";
 
-import { getContainerHeightClass } from "#/src/components/component-wrapper/component-wrapper";
 import type { ComponentHeightType } from "#/src/lib/types/component";
 import { cn } from "#/src/utils/cn";
+import { getContainerHeightClass } from "#/src/components/component-wrapper/get-container-height-class";
 
 export const CustomIframe = ({
   children,
