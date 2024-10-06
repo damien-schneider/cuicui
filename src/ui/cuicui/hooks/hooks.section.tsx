@@ -26,6 +26,9 @@ import { useTextToSpeechCategory } from "#/src/ui/cuicui/hooks/use-text-to-speec
 import { useThrottleCategory } from "#/src/ui/cuicui/hooks/use-throttle/category.use-throttle";
 import { useWindowScrollPositionCategory } from "#/src/ui/cuicui/hooks/use-window-scroll-position/category.use-window-scroll-postion";
 import { useWindowSizeCategory } from "#/src/ui/cuicui/hooks/use-window-size/category.use-window-size";
+import { useVideoCategory } from "#/src/ui/cuicui/hooks/use-video/category.use-video";
+import { useStopwatchCategory } from "#/src/ui/cuicui/hooks/use-stopwatch/category.use-stopwatch";
+import { useFirstVisitCategory } from "#/src/ui/cuicui/hooks/use-first-visit/category.use-first-visit";
 
 export const hooksSection: SectionType = {
   type: "single-component",
@@ -41,6 +44,7 @@ export const hooksSection: SectionType = {
     useDebounceCategory,
     useEventCallbackCategory,
     useEventListenerCategory,
+    useFirstVisitCategory,
     useGeoLocationCategory,
     useInViewCategory,
     useInputValueCategory,
@@ -55,8 +59,10 @@ export const hooksSection: SectionType = {
     useSpeechToTextCategory,
     useSessionStorageCategory,
     useStepCategory,
+    useStopwatchCategory,
     useTextToSpeechCategory,
     useThrottleCategory,
+    useVideoCategory,
     useWindowScrollPositionCategory,
     useWindowSizeCategory,
   ],

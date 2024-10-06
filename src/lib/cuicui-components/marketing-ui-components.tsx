@@ -1,13 +1,11 @@
 import {
   BarChart2Icon,
   BookOpenTextIcon,
-  DollarSignIcon,
   GalleryHorizontalIcon,
   SparkleIcon,
 } from "lucide-react";
 
 import CarouselsPreviewImage from "#/src/assets/components-preview/caroussel.png";
-import PricingPreviewImage from "#/src/assets/components-preview/pricing.png";
 
 import type { CategoryType } from "#/src/lib/types/component";
 import { CarouselCylindricalVariant1 } from "#/src/ui/cuicui/marketing-ui/carousels/cylindric-3d-carousel/variant1";
@@ -15,7 +13,6 @@ import { SimpleCarouselPreview } from "#/src/ui/cuicui/marketing-ui/carousels/si
 import { AnimatedCardVariant1 } from "#/src/ui/cuicui/marketing-ui/features/animated-cards/variant1";
 import { Variant1FeatureFourImages } from "#/src/ui/cuicui/marketing-ui/features/feature-four-images/variant1";
 import { Variant2FeatureFourImages } from "#/src/ui/cuicui/marketing-ui/features/feature-four-images/variant2";
-import ManyOffersVariant1 from "#/src/ui/cuicui/marketing-ui/pricing-tables/many-offers/variant1";
 import AnimatedCounterPreview from "#/src/ui/cuicui/marketing-ui/statistics/animated-counter/animated-counter-preview";
 import { AnimatedNumberVariant1 } from "#/src/ui/cuicui/marketing-ui/statistics/animated-on-scroll/variant1";
 import IncreaseToValueVariant1 from "#/src/ui/cuicui/marketing-ui/statistics/increase-to-value/variant1";
@@ -23,6 +20,7 @@ import { gradientQnaComponent } from "#/src/ui/cuicui/marketing-ui/testimonials/
 import MarqueeVariant1 from "#/src/ui/cuicui/marketing-ui/testimonials/marquee/variant1";
 import MarqueeVariant2 from "#/src/ui/cuicui/marketing-ui/testimonials/marquee/variant2";
 import { TestimonialsVariant1 } from "#/src/ui/cuicui/marketing-ui/testimonials/testimonials-component/variant1";
+import { pricingTablesCategory } from "#/src/ui/cuicui/marketing-ui/pricing-tables/category.pricing-tables";
 
 export const marketingUiComponentList: CategoryType[] = [
   {
@@ -123,37 +121,7 @@ export const marketingUiComponentList: CategoryType[] = [
       },
     ],
   },
-  {
-    slug: "pricing-tables",
-    name: "Pricing Tables",
-    description: "Showcase your product pricing with style",
-    releaseDateCategory: new Date("2024-08-01"),
-    icon: DollarSignIcon,
-    previewCategory: {
-      component: <ManyOffersVariant1 />,
-      previewImage: PricingPreviewImage,
-      previewScale: 0.2,
-    },
-    componentList: [
-      {
-        lastUpdatedDateComponent: new Date("2024-08-01"),
-        sizePreview: "lg",
-        slug: "many-offers",
-        name: "Pricing with many offers",
-        description: "A pricing table with a lot of offers",
-        inspiration: "Artlist",
-        inspirationLink: "https://artlist.io/pricing",
-        isIframed: true,
-        variantList: [
-          {
-            name: "Many Offers Table",
-            component: <ManyOffersVariant1 />,
-            slugPreviewFile: "variant1",
-          },
-        ],
-      },
-    ],
-  },
+  pricingTablesCategory,
   {
     slug: "statistics",
     name: "Statistics",

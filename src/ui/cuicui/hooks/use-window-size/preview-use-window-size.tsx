@@ -3,5 +3,9 @@ import { useWindowSize } from "#/src/ui/cuicui/hooks/use-window-size/use-window-
 
 export function PreviewUseWindowSize() {
   const windowSize = useWindowSize();
-  return <pre>{JSON.stringify(windowSize, null, 2)}</pre>;
+  return (
+    <div className="cuicui-default-style">
+      <pre>{JSON.stringify(windowSize, null, 2)}</pre>
+    </div>
+  );
 }

@@ -104,6 +104,9 @@ importers:
       tailwind-merge:
         specifier: 2.3.0
         version: 2.3.0
+      tts-react:
+        specifier: 3.0.7
+        version: 3.0.7(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       vaul:
         specifier: 0.9.1
         version: 0.9.1(@types/react-dom@18.2.25)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -3519,6 +3522,13 @@ packages:
 
   tslib@2.6.2:
     resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
+
+  tts-react@3.0.7:
+    resolution: {integrity: sha512-zRh9mxQ03t6/H4eUtMSSoNJGb/XeRq+GP4N/iDtZzgDxMibyCjkgzdpp7i2akjM62iIKguJ/SZFt+DsSYwtMCA==}
+    engines: {node: '>=18.16.0', npm: '>=9.5.1'}
+    peerDependencies:
+      react: ^17.0.0 || ^18.0.0
+      react-dom: ^17.0.0 || ^18.0.0
 
   type-check@0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
@@ -7328,6 +7338,11 @@ snapshots:
       strip-bom: 3.0.0
 
   tslib@2.6.2: {}
+
+  tts-react@3.0.7(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
 
   type-check@0.4.0:
     dependencies:

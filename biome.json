@@ -45,6 +45,7 @@
       "suspicious": {
         "all": true,
         "noConsole": "info",
+        "noConsoleLog": "info",
         "noReactSpecificProps": "off"
       }
     }

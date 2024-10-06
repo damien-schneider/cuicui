@@ -37,7 +37,7 @@ export async function generateStaticParams() {
   return params;
 }
 
-export default async function Page({ params }: Props) {
+export default async function Page({ params }: Readonly<Props>) {
   const section = SectionsList.find(
     (section) => section.slug === params.section,
   );

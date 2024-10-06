@@ -4,6 +4,10 @@ import type { PackageToInstallType } from "#/src/components/steps-to-install/pac
 
 export const packageCheckListToInstall: PackageToInstallType[] = [
   {
+    find: [`from "@ctrl/tinycolor"`],
+    packageName: "@ctrl/tinycolor",
+  },
+  {
     find: [`from "@radix-ui/react-dialog"`],
     packageName: "@radix-ui/react-dialog",
   },
@@ -40,6 +44,10 @@ export const packageCheckListToInstall: PackageToInstallType[] = [
     packageName: "@uiw/react-signature",
   },
   {
+    find: [`from "bezier-editor"`],
+    packageName: "bezier-editor",
+  },
+  {
     find: [`from "class-variance-authority"`],
     packageName: "class-variance-authority",
   },
@@ -66,6 +74,10 @@ export const packageCheckListToInstall: PackageToInstallType[] = [
   {
     find: [`from "fs-extra"`],
     packageName: "fs-extra",
+  },
+  {
+    find: [`from "get-similar-color"`],
+    packageName: "get-similar-color",
   },
   {
     find: [`from "jsbarcode"`],
@@ -118,6 +130,10 @@ export const packageCheckListToInstall: PackageToInstallType[] = [
   {
     find: [`from "tailwind-merge"`],
     packageName: "tailwind-merge",
+  },
+  {
+    find: [`from "tts-react"`],
+    packageName: "tts-react",
   },
   {
     find: [`from "vaul"`],
