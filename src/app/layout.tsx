@@ -8,6 +8,7 @@ import { MobileMenu } from "../components/navigation/mobile-menu";
 import { DM_Sans } from "next/font/google";
 import type { ReactNode } from "react";
 import Providers from "#/src/app/providers";
+import StarGithubProjectButton from "#/src/ui/star-github-project-button";
 const font = DM_Sans({
   subsets: ["latin"],
   display: "swap",
@@ -92,12 +93,15 @@ export default function RootLayout({
                     background="solid"
                     classNameParent=""
                     classNameChild="px-8 py-10 min-h-[calc(100vh-6rem)]"
-                  > */}
+                    > */}
               <main className=" p-4 pt-12 pb-20 md:p-6">
                 {/* Move overflow-auto to the previous comment if problems occurs */}
                 {children}
               </main>
               {/* </GradientContainer> */}
+              <div className="flex sm:hidden fixed bottom-20 left-2">
+                <StarGithubProjectButton />
+              </div>
 
               <MobileMenu />
             </div>
