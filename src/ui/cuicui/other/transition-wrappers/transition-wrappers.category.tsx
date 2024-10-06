@@ -3,6 +3,7 @@ import type { CategoryType } from "#/src/lib/types/component";
 
 import BlurAppearVariant1 from "#/src/ui/cuicui/other/transition-wrappers/blur-appear/variant1";
 import { SlideInOnScrollComponent } from "#/src/ui/cuicui/other/transition-wrappers/slide-in-on-scroll/slide-in-on-scroll.component";
+import { textEffectWrapperComponent } from "#/src/ui/cuicui/other/transition-wrappers/text-effect-wrapper/component.text-effect-wrapper";
 
 export const transitionWrappersCategory: CategoryType = {
   slug: "transition-wrappers",
@@ -33,7 +34,7 @@ export const transitionWrappersCategory: CategoryType = {
       rerenderButton: true,
       lastUpdatedDateComponent: new Date("2024-07-29"),
     },
-
+    textEffectWrapperComponent,
     SlideInOnScrollComponent,
   ],
 };
