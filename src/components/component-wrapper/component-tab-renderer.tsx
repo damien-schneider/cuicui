@@ -3,10 +3,7 @@ import * as Tabs from "@radix-ui/react-tabs";
 
 import "./full-component.css";
 
-import {
-  ComponentWrapper,
-  getContainerHeightClass,
-} from "#/src/components/component-wrapper/component-wrapper";
+import { ComponentWrapper } from "#/src/components/component-wrapper/component-wrapper";
 import StepToInstall from "#/src/components/steps-to-install/step-to-install";
 import type {
   ComponentHeightType,
@@ -20,6 +17,7 @@ import {
 } from "#/src/ui/shadcn/resizable";
 import { ScrollArea, ScrollBar } from "#/src/ui/shadcn/scrollarea";
 import { cn } from "#/src/utils/cn";
+import { getContainerHeightClass } from "#/src/components/component-wrapper/get-container-height-class";
 const tabs = [
   {
     name: "Preview",
@@ -41,7 +39,7 @@ export default function ComponentTabRenderer({
   componentCode,
   isResizable,
   rerenderButton,
-  isIframed,
+  isIframed = false,
   size,
   isChildUsingHeightFull,
 }: {
@@ -105,7 +103,7 @@ export default function ComponentTabRenderer({
               <ComponentWrapper
                 isChildUsingHeightFull={isChildUsingHeightFull}
                 isIframed={isIframed}
-                renderButton={rerenderButton ?? false}
+                renderButton={rerenderButton}
                 size={size}
                 // key={render}
               >
@@ -124,7 +122,7 @@ export default function ComponentTabRenderer({
           <ComponentWrapper
             isChildUsingHeightFull={isChildUsingHeightFull}
             isIframed={isIframed}
-            renderButton={rerenderButton ?? false}
+            renderButton={rerenderButton}
             size={size}
             // key={render}
           >
