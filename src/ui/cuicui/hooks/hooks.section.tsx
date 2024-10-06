@@ -29,6 +29,7 @@ import { useWindowSizeCategory } from "#/src/ui/cuicui/hooks/use-window-size/cat
 import { useVideoCategory } from "#/src/ui/cuicui/hooks/use-video/category.use-video";
 import { useStopwatchCategory } from "#/src/ui/cuicui/hooks/use-stopwatch/category.use-stopwatch";
 import { useFirstVisitCategory } from "#/src/ui/cuicui/hooks/use-first-visit/category.use-first-visit";
+import { useRerenderCategory } from "#/src/ui/cuicui/hooks/use-rerender/component.use-rerender";
 
 export const hooksSection: SectionType = {
   type: "single-component",
@@ -55,6 +56,7 @@ export const hooksSection: SectionType = {
     useLocationCategory,
     useMouseCategory,
     useNetworkCategory,
+    useRerenderCategory,
     useOnlineStatusCategory,
     useSpeechToTextCategory,
     useSessionStorageCategory,

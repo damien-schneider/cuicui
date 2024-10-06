@@ -1,6 +1,6 @@
 import { ViewIcon } from "lucide-react";
 import type { SingleComponentCategoryType } from "#/src/lib/types/component";
-import { PreviewUseThrottle } from "#/src/ui/cuicui/hooks/use-throttle/preview-use-throttle";
+import { PreviewUseThrottle } from "#/src/ui/cuicui/hooks/use-throttle/preview.use-throttle";
 
 export const useThrottleCategory: SingleComponentCategoryType = {
   slug: "use-throttle",
@@ -22,7 +22,7 @@ export const useThrottleCategory: SingleComponentCategoryType = {
         name: "default variant",
         component: <PreviewUseThrottle />,
         slugComponentFile: "use-throttle",
-        slugPreviewFile: "preview-use-throttle",
+        slugPreviewFile: "preview.use-throttle",
       },
     ],
   },
