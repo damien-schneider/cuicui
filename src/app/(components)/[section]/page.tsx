@@ -55,7 +55,10 @@ export default function Page({ params }: Readonly<Props>) {
                 description={category.description}
                 title={category.name}
               >
-                <MainMenuCardContent category={category} />
+                <MainMenuCardContent
+                  sectionSlug={section.slug}
+                  category={category}
+                />
               </MainMenusGradientCard>
             </Link>
           );
