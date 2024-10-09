@@ -48,7 +48,10 @@ export default function HomePage() {
                       description={category.description}
                       title={category.name}
                     >
-                      <MainMenuCardContent category={category} />
+                      <MainMenuCardContent
+                        sectionSlug={section.slug}
+                        category={category}
+                      />
                     </MainMenusGradientCard>
                   </Link>
                 );

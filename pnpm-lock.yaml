@@ -53,6 +53,9 @@ importers:
       date-fns:
         specifier: 3.6.0
         version: 3.6.0
+      dom-to-image-more:
+        specifier: 3.4.5
+        version: 3.4.5
       embla-carousel-react:
         specifier: 8.2.1
         version: 8.2.1(react@18.2.0)
@@ -129,6 +132,9 @@ importers:
       '@testing-library/react':
         specifier: 16.0.0
         version: 16.0.0(@testing-library/dom@10.4.0)(@types/react-dom@18.2.25)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@types/dom-to-image':
+        specifier: 2.6.7
+        version: 2.6.7
       '@types/node':
         specifier: 20.12.7
         version: 20.12.7
@@ -1523,6 +1529,9 @@ packages:
   '@types/babel__traverse@7.20.6':
     resolution: {integrity: sha512-r1bzfrm0tomOI8g1SzvCaQHo6Lcv6zu0EA+W2kHrt8dyrHQxGzBBL4kdkzIS+jBMV+EYcMAEAqXqYaLJq5rOZg==}
 
+  '@types/dom-to-image@2.6.7':
+    resolution: {integrity: sha512-me5VbCv+fcXozblWwG13krNBvuEOm6kA5xoa4RrjDJCNFOZSWR3/QLtOXimBHk1Fisq69Gx3JtOoXtg1N1tijg==}
+
   '@types/estree@1.0.5':
     resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==}
 
@@ -2039,6 +2048,9 @@ packages:
 
   dom-accessibility-api@0.5.16:
     resolution: {integrity: sha512-X7BJ2yElsnOJ30pZF4uIIDfBEVgF4XEBxL9Bxhy6dnrm5hkzqmsWHGTiHqRiITNhMyFLyAiWndIJP7Z1NTteDg==}
+
+  dom-to-image-more@3.4.5:
+    resolution: {integrity: sha512-xLkG5idpEPgfuf5bZ82kbNnXq4U4PAB4wd7Zun7cEHrYvjolMtTQdIlheQURS8jLy07TGZeWqoTqGW6onZr0Tw==}
 
   eastasianwidth@0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
@@ -5061,6 +5073,8 @@ snapshots:
     dependencies:
       '@babel/types': 7.25.4
 
+  '@types/dom-to-image@2.6.7': {}
+
   '@types/estree@1.0.5': {}
 
   '@types/hast@3.0.4':
@@ -5613,6 +5627,8 @@ snapshots:
       esutils: 2.0.3
 
   dom-accessibility-api@0.5.16: {}
+
+  dom-to-image-more@3.4.5: {}
 
   eastasianwidth@0.2.0: {}
 

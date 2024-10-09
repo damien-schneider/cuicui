@@ -1,6 +1,4 @@
 import Image from "next/image";
-
-import { cn } from "#/src/utils/cn";
 import type {
   CategoryType,
   SingleComponentCategoryType,
@@ -8,8 +6,10 @@ import type {
 
 export const MainMenuCardContent = ({
   category,
+  sectionSlug,
 }: {
-  category?: CategoryType | SingleComponentCategoryType;
+  category: CategoryType | SingleComponentCategoryType;
+  sectionSlug: string;
 }) => {
   if (category?.comingSoonCategory) {
     return (
@@ -18,29 +18,23 @@ export const MainMenuCardContent = ({
       </p>
     );
   }
-  if (category?.previewCategory?.previewImage) {
-    return (
+
+  return (
+    <>
       <Image
         alt={`${category.name} preview`}
-        className="h-48 w-full object-cover"
+        className="h-48 w-full object-cover hidden dark:block"
         height={400}
-        src={category.previewCategory.previewImage}
+        src={`/preview-images/dark-${sectionSlug}-${category.slug}.png`}
         width={600}
       />
-    );
-  }
-  if (category?.previewCategory?.component) {
-    return (
-      <div
-        className={cn(
-          "pointer-events-none flex h-full w-full select-none items-center justify-center",
-        )}
-        style={{
-          transform: `scale(${category.previewCategory?.previewScale ?? 0.75})`,
-        }}
-      >
-        {category.previewCategory?.component}
-      </div>
-    );
-  }
+      <Image
+        alt={`${category.name} preview`}
+        className="h-48 w-full object-cover dark:hidden"
+        height={400}
+        src={`/preview-images/light-${sectionSlug}-${category.slug}.png`}
+        width={600}
+      />
+    </>
+  );
 };

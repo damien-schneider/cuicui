@@ -13,7 +13,7 @@ export const badgesCategory: CategoryType = {
   icon: TagIcon,
   previewCategory: {
     component: <ClerkBadgeVariant1 />,
-    previewScale: 2,
+    previewScale: 3,
   },
   componentList: [
     {
