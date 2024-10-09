@@ -28,6 +28,7 @@ export default function GeneratePreviewImages() {
       for (const theme of THEMES_ARRAY) {
         setTheme(theme);
         for (const section of sections) {
+          // @ts-ignore
           for (const category of section.categoriesList) {
             setCurrentComponent(
               <ComponentToRender
