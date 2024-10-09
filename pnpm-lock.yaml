@@ -53,6 +53,9 @@ importers:
       date-fns:
         specifier: 3.6.0
         version: 3.6.0
+      dom-to-image-more:
+        specifier: 3.4.5
+        version: 3.4.5
       embla-carousel-react:
         specifier: 8.2.1
         version: 8.2.1(react@18.2.0)
@@ -2039,6 +2042,9 @@ packages:
 
   dom-accessibility-api@0.5.16:
     resolution: {integrity: sha512-X7BJ2yElsnOJ30pZF4uIIDfBEVgF4XEBxL9Bxhy6dnrm5hkzqmsWHGTiHqRiITNhMyFLyAiWndIJP7Z1NTteDg==}
+
+  dom-to-image-more@3.4.5:
+    resolution: {integrity: sha512-xLkG5idpEPgfuf5bZ82kbNnXq4U4PAB4wd7Zun7cEHrYvjolMtTQdIlheQURS8jLy07TGZeWqoTqGW6onZr0Tw==}
 
   eastasianwidth@0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
@@ -5613,6 +5619,8 @@ snapshots:
       esutils: 2.0.3
 
   dom-accessibility-api@0.5.16: {}
+
+  dom-to-image-more@3.4.5: {}
 
   eastasianwidth@0.2.0: {}
 
