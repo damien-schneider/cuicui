@@ -13,7 +13,7 @@ export function GithubAnimatedStarNumber({
 
   return (
     <AnimatedNumber
-      className=""
+      className="tabular-nums min-w-8"
       springOptions={{
         bounce: 0,
         duration: 4000,
