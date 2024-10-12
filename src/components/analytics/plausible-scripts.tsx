@@ -1,6 +1,9 @@
 import Script from "next/script";
 
-export default function plausibleScripts() {
+export default function PlausibleScripts() {
+  if (process.env.NODE_ENV !== "production") {
+    return null;
+  }
   return (
     <>
       <Script

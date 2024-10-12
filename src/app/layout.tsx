@@ -9,6 +9,7 @@ import { DM_Sans } from "next/font/google";
 import type { ReactNode } from "react";
 import Providers from "#/src/app/providers";
 import StarGithubProjectButton from "#/src/ui/star-github-project-button";
+import PlausibleScripts from "#/src/components/analytics/plausible-scripts";
 const font = DM_Sans({
   subsets: ["latin"],
   display: "swap",
@@ -72,6 +73,7 @@ export default function RootLayout({
 }>) {
   return (
     <html className={font.className} lang="en" suppressHydrationWarning={true}>
+      <PlausibleScripts />
       <Providers>
         {/* <body className="dark:bg-[url('/grid-dark-mode.svg')] bg-[url('/grid-light-mode.svg')] dark:bg-gray-950 bg-gray-50"> */}
         <body className="bg-neutral-50 dark:bg-neutral-950 ">
