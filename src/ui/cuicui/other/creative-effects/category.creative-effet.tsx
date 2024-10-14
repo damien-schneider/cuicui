@@ -2,6 +2,8 @@ import { CreativeCommonsIcon } from "lucide-react";
 import type { CategoryType } from "#/src/lib/types/component";
 import PreviewBottomBlurOut from "#/src/ui/cuicui/other/creative-effects/bottom-blur-out/preview.bottom-blur-out";
 import { bottomBlurOutComponent } from "#/src/ui/cuicui/other/creative-effects/bottom-blur-out/component.bottom-blur-out";
+import { animatedNoiseComponent } from "#/src/ui/cuicui/other/creative-effects/animated-noise/component.animated-noise";
+import { borderTrailComponent } from "#/src/ui/cuicui/other/creative-effects/border-trail/component.animated-noise";
 
 export const creativeEffectCategory: CategoryType = {
   slug: "creative-effects",
@@ -14,5 +16,9 @@ export const creativeEffectCategory: CategoryType = {
     component: <PreviewBottomBlurOut />,
     previewScale: 1,
   },
-  componentList: [bottomBlurOutComponent],
+  componentList: [
+    animatedNoiseComponent,
+    borderTrailComponent,
+    bottomBlurOutComponent,
+  ],
 };
