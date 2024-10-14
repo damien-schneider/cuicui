@@ -30,6 +30,7 @@ import { useVideoCategory } from "#/src/ui/cuicui/hooks/use-video/category.use-v
 import { useStopwatchCategory } from "#/src/ui/cuicui/hooks/use-stopwatch/category.use-stopwatch";
 import { useFirstVisitCategory } from "#/src/ui/cuicui/hooks/use-first-visit/category.use-first-visit";
 import { useRerenderCategory } from "#/src/ui/cuicui/hooks/use-rerender/component.use-rerender";
+import { useMeasureCategory } from "#/src/ui/cuicui/hooks/use-measure/category.use-measure";
 
 export const hooksSection: SectionType = {
   type: "single-component",
@@ -54,6 +55,7 @@ export const hooksSection: SectionType = {
     useKonamiCodeCategory,
     useLocalStorageCategory,
     useLocationCategory,
+    useMeasureCategory,
     useMouseCategory,
     useNetworkCategory,
     useRerenderCategory,
