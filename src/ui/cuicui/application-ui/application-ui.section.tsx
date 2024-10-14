@@ -14,6 +14,7 @@ import { slidersCategory } from "#/src/ui/cuicui/application-ui/sliders/sliders.
 import { staticSteppersCategory } from "#/src/ui/cuicui/application-ui/static-steppers/static-steppers.category";
 import { themeCategory } from "#/src/ui/cuicui/application-ui/theme/theme.category";
 import { treeCategory } from "#/src/ui/cuicui/application-ui/tree/tree.category";
+import { notificationCategory } from "#/src/ui/cuicui/application-ui/notification/category.notification";
 
 export const applicationUiCategoryList: SectionType = {
   type: "multiple-component",
@@ -29,6 +30,7 @@ export const applicationUiCategoryList: SectionType = {
     codeCategory,
     cookieBannerCategory,
     kbdCategory,
+    notificationCategory,
     searchBarsCategory,
     settingsCategory,
     signatureCategory,

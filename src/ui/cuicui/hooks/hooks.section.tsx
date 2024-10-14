@@ -2,7 +2,6 @@ import type { SectionType } from "#/src/lib/types/component";
 import { useBatteryCategory } from "#/src/ui/cuicui/hooks/use-battery/use-battery.category";
 
 import { ToyBrickIcon } from "lucide-react";
-import { useComponentSizeCategory } from "#/src/ui/cuicui/hooks/use-component-size/category.use-component-size";
 import { useCopyToClipboardCategory } from "#/src/ui/cuicui/hooks/use-copy-to-clipboard/category.use-copy-to-clipboard";
 import { useCounterCategory } from "#/src/ui/cuicui/hooks/use-counter/category.use-counter";
 import { useDebounceCategory } from "#/src/ui/cuicui/hooks/use-debounce/category.use-debounce";
@@ -30,6 +29,7 @@ import { useVideoCategory } from "#/src/ui/cuicui/hooks/use-video/category.use-v
 import { useStopwatchCategory } from "#/src/ui/cuicui/hooks/use-stopwatch/category.use-stopwatch";
 import { useFirstVisitCategory } from "#/src/ui/cuicui/hooks/use-first-visit/category.use-first-visit";
 import { useRerenderCategory } from "#/src/ui/cuicui/hooks/use-rerender/component.use-rerender";
+import { useMeasureCategory } from "#/src/ui/cuicui/hooks/use-measure/category.use-measure";
 
 export const hooksSection: SectionType = {
   type: "single-component",
@@ -39,7 +39,6 @@ export const hooksSection: SectionType = {
   icon: ToyBrickIcon,
   categoriesList: [
     useBatteryCategory,
-    useComponentSizeCategory,
     useCopyToClipboardCategory,
     useCounterCategory,
     useDebounceCategory,
@@ -54,6 +53,7 @@ export const hooksSection: SectionType = {
     useKonamiCodeCategory,
     useLocalStorageCategory,
     useLocationCategory,
+    useMeasureCategory,
     useMouseCategory,
     useNetworkCategory,
     useRerenderCategory,

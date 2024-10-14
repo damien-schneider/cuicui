@@ -5,6 +5,7 @@ import { mockUpsCategory } from "#/src/ui/cuicui/other/mock-ups/mock-ups.categor
 import { patternsCategory } from "#/src/ui/cuicui/other/patterns/patterns.category";
 import { qrCodeCategory } from "#/src/ui/cuicui/other/qr-code/qr-code.category";
 import { transitionWrappersCategory } from "#/src/ui/cuicui/other/transition-wrappers/transition-wrappers.category";
+import { creativeEffectCategory } from "#/src/ui/cuicui/other/creative-effects/category.creative-effet";
 export const otherSection: SectionType = {
   name: "Other",
   slug: "other",
@@ -18,5 +19,6 @@ export const otherSection: SectionType = {
     patternsCategory,
     transitionWrappersCategory,
     qrCodeCategory,
+    creativeEffectCategory,
   ],
 };
