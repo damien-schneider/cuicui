@@ -2,6 +2,7 @@ import { GripIcon } from "lucide-react";
 import type { CategoryType } from "#/src/lib/types/component";
 import { DotsPatternPreview } from "#/src/ui/cuicui/other/patterns/dots-pattern/dots-pattern-preview";
 import MovingBandsPreview from "#/src/ui/cuicui/other/patterns/moving-bands/moving-bands-preview";
+import { gridPatternComponent } from "#/src/ui/cuicui/other/patterns/grid-pattern/component.grid-pattern";
 export const patternsCategory: CategoryType = {
   slug: "patterns",
   name: "Patterns",
@@ -34,6 +35,7 @@ export const patternsCategory: CategoryType = {
       inspirationLink: "https://magicui.design/docs/components/dot-pattern",
       lastUpdatedDateComponent: new Date("2024-08-10"),
     },
+    gridPatternComponent,
     {
       sizePreview: "sm",
       slug: "moving-bands",
