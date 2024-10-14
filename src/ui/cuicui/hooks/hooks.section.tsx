@@ -2,7 +2,6 @@ import type { SectionType } from "#/src/lib/types/component";
 import { useBatteryCategory } from "#/src/ui/cuicui/hooks/use-battery/use-battery.category";
 
 import { ToyBrickIcon } from "lucide-react";
-import { useComponentSizeCategory } from "#/src/ui/cuicui/hooks/use-component-size/category.use-component-size";
 import { useCopyToClipboardCategory } from "#/src/ui/cuicui/hooks/use-copy-to-clipboard/category.use-copy-to-clipboard";
 import { useCounterCategory } from "#/src/ui/cuicui/hooks/use-counter/category.use-counter";
 import { useDebounceCategory } from "#/src/ui/cuicui/hooks/use-debounce/category.use-debounce";
@@ -40,7 +39,6 @@ export const hooksSection: SectionType = {
   icon: ToyBrickIcon,
   categoriesList: [
     useBatteryCategory,
-    useComponentSizeCategory,
     useCopyToClipboardCategory,
     useCounterCategory,
     useDebounceCategory,
