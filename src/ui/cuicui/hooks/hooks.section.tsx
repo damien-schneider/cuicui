@@ -30,6 +30,7 @@ import { useStopwatchCategory } from "#/src/ui/cuicui/hooks/use-stopwatch/catego
 import { useFirstVisitCategory } from "#/src/ui/cuicui/hooks/use-first-visit/category.use-first-visit";
 import { useRerenderCategory } from "#/src/ui/cuicui/hooks/use-rerender/component.use-rerender";
 import { useMeasureCategory } from "#/src/ui/cuicui/hooks/use-measure/category.use-measure";
+import { useClickOutsideCategory } from "#/src/ui/cuicui/hooks/use-click-outside/category.use-click-outside";
 
 export const hooksSection: SectionType = {
   type: "single-component",
@@ -39,6 +40,7 @@ export const hooksSection: SectionType = {
   icon: ToyBrickIcon,
   categoriesList: [
     useBatteryCategory,
+    useClickOutsideCategory,
     useCopyToClipboardCategory,
     useCounterCategory,
     useDebounceCategory,
