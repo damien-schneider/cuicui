@@ -79,6 +79,7 @@ export default function NavigationMenu({
   return (
     <nav className={cn("mt-5 mb-12 px-1 space-y-2 ", className)}>
       <SectionWrapper
+        sectionSlug=""
         disclosure={false}
         name={firstMenuSection.name}
         className="mb-16"
@@ -101,7 +102,12 @@ export default function NavigationMenu({
       {SectionsList.map((section) => {
         if (section.type === "page") {
           return (
-            <SectionWrapper Icon={section.icon} key={section.slug} name="Tools">
+            <SectionWrapper
+              sectionSlug={section.slug}
+              Icon={section.icon}
+              key={section.slug}
+              name="Tools"
+            >
               <NavigationAnimatedBackground>
                 {section.pageList.map((page) => (
                   <li
@@ -127,6 +133,7 @@ export default function NavigationMenu({
               Icon={section.icon}
               key={section.slug}
               name={section.name}
+              sectionSlug={section.slug}
             >
               <NavigationAnimatedBackground>
                 {section.categoriesList.map((category, _index) => {
@@ -157,6 +164,7 @@ export default function NavigationMenu({
               Icon={section.icon}
               key={section.slug}
               name={section.name}
+              sectionSlug={section.slug}
             >
               <NavigationAnimatedBackground>
                 {section.categoriesList.map((category, _index) => {

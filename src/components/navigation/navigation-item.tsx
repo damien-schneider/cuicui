@@ -5,8 +5,13 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import Link from "next/link";
-import { useSelectedLayoutSegments } from "next/navigation";
-import type { AnchorHTMLAttributes, ReactNode } from "react";
+import { usePathname, useSelectedLayoutSegments } from "next/navigation";
+import {
+  useEffect,
+  useState,
+  type AnchorHTMLAttributes,
+  type ReactNode,
+} from "react";
 import {
   Disclosure,
   DisclosureContent,
@@ -15,6 +20,7 @@ import {
 import GradientContainer from "#/src/ui/gradient-container";
 import GradientText from "#/src/ui/gradient-text";
 import { cn } from "#/src/utils/cn";
+import type { SectionType } from "#/src/lib/types/component";
 
 export function GlobalNavItem({
   isMobile,
@@ -87,16 +93,30 @@ export const SectionWrapper = ({
   disclosure = true,
   Icon,
   className,
+  sectionSlug,
 }: {
   children: ReactNode;
   name: string;
   disclosure?: boolean;
   Icon?: LucideIcon;
   className?: string;
+  sectionSlug: SectionType["slug"];
 }) => {
+  const [isOpen, setOpen] = useState(false);
+  const pathName = usePathname();
+  useEffect(() => {
+    const doesPathNameIncludeSectionSlug = pathName.includes(sectionSlug);
+    if (doesPathNameIncludeSectionSlug) {
+      setOpen(true);
+    }
+  }, [pathName, sectionSlug]);
   if (disclosure) {
     return (
-      <Disclosure className={cn("w-full rounded-md has-[:aria-expanded]:my-6")}>
+      <Disclosure
+        onOpenChange={setOpen}
+        open={isOpen}
+        className={cn("w-full rounded-md has-[:aria-expanded]:my-6")}
+      >
         <DisclosureTrigger>
           <button
             className={cn(
