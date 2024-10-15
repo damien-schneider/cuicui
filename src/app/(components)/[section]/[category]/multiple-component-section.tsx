@@ -1,15 +1,16 @@
 import { notFound } from "next/navigation";
-import { Fragment } from "react";
 import { fetchMultipleComponentData } from "#/src/app/(components)/[section]/[category]/process-variant-data";
 import ComingSoonCard from "#/src/components/coming-soon";
 import HeaderComponent from "#/src/components/component-wrapper/header-component";
 import InspirationComponentFooter from "#/src/components/component-wrapper/inspiration-component-footer";
 import VariantTabs from "#/src/components/component-wrapper/variant-tabs";
-import type { CategoryType } from "#/src/lib/types/component";
+import type { CategoryType, SectionType } from "#/src/lib/types/component";
+import GithubEditButton from "#/src/components/component-wrapper/github-edit-button";
 
 export default async function MultipleComponentCategory({
   category,
-}: Readonly<{ category: CategoryType }>) {
+  sectionSlug,
+}: Readonly<{ category: CategoryType; sectionSlug: SectionType["slug"] }>) {
   if (category.comingSoonCategory) {
     return <ComingSoonCard />;
   }
@@ -29,13 +30,24 @@ export default async function MultipleComponentCategory({
   });
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-32">
       {componentList.map((component) => (
-        <Fragment key={component.name}>
+        <div className="" key={component.name}>
+          <div className="flex">
+            <GithubEditButton
+              sectionSlug={sectionSlug}
+              categorySlug={category.slug}
+              componentSlug={component.slug}
+            />
+          </div>
           <HeaderComponent
             componentBadges={component.componentBadges}
             description={component.description}
             title={component.name}
+          />
+          <InspirationComponentFooter
+            inspiration={component.inspiration}
+            inspirationLink={component.inspirationLink}
           />
           <VariantTabs
             isChildUsingHeightFull={component.isChildUsingHeightFull}
@@ -46,11 +58,7 @@ export default async function MultipleComponentCategory({
             size={component.sizePreview}
             variantList={component.componentList}
           />
-          <InspirationComponentFooter
-            inspiration={component.inspiration}
-            inspirationLink={component.inspirationLink}
-          />
-        </Fragment>
+        </div>
       ))}
     </div>
   );

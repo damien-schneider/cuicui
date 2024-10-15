@@ -99,7 +99,6 @@ export default function ComponentTabRenderer({
               defaultSize={100}
             >
               {/* {rerenderButton && <RerenderButton setRender={setRender} />} */}
-
               <ComponentWrapper
                 isChildUsingHeightFull={isChildUsingHeightFull}
                 isIframed={isIframed}

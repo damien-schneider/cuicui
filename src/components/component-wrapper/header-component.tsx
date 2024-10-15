@@ -31,7 +31,7 @@ export default function HeaderComponent({
         </div>
       )}
       <div>
-        <h2 className="header-2">{title}</h2>
+        <h2 className="header-2 mb-0">{title}</h2>
         <p className="caption-sm">{description}</p>
       </div>
       {frameworksBadges && frameworksBadges.length > 0 && (

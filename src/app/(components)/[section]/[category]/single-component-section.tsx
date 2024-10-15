@@ -1,15 +1,22 @@
 import { notFound } from "next/navigation";
-import { Fragment } from "react";
 import { fetchSingleComponentData } from "#/src/app/(components)/[section]/[category]/process-variant-data";
 import ComingSoonCard from "#/src/components/coming-soon";
 import HeaderComponent from "#/src/components/component-wrapper/header-component";
 import InspirationComponentFooter from "#/src/components/component-wrapper/inspiration-component-footer";
 import VariantTabs from "#/src/components/component-wrapper/variant-tabs";
-import type { SingleComponentCategoryType } from "#/src/lib/types/component";
+import type {
+  SectionType,
+  SingleComponentCategoryType,
+} from "#/src/lib/types/component";
+import GithubEditButton from "#/src/components/component-wrapper/github-edit-button";
 
 export default async function SingleComponentCategory({
   category,
-}: Readonly<{ category: SingleComponentCategoryType }>) {
+  sectionSlug,
+}: Readonly<{
+  category: SingleComponentCategoryType;
+  sectionSlug: SectionType["slug"];
+}>) {
   if (category.comingSoonCategory) {
     return <ComingSoonCard />;
   }
@@ -24,8 +31,14 @@ export default async function SingleComponentCategory({
   });
 
   return (
-    <div className="space-y-6">
-      <Fragment key={category.name}>
+    <div className="space-y-32">
+      <div className="" key={category.name}>
+        <div className="flex">
+          <GithubEditButton
+            sectionSlug={sectionSlug}
+            categorySlug={category.slug}
+          />
+        </div>
         <HeaderComponent
           componentBadges={component.componentBadges}
           description={category.description}
@@ -43,7 +56,7 @@ export default async function SingleComponentCategory({
           inspiration={component.inspiration}
           inspirationLink={component.inspirationLink}
         />
-      </Fragment>
+      </div>
     </div>
   );
 }

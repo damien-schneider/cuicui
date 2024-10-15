@@ -60,7 +60,9 @@ export default async function Page({ params }: Readonly<Props>) {
     if (!category) {
       return notFound();
     }
-    return <SingleComponentCategory category={category} />;
+    return (
+      <SingleComponentCategory sectionSlug={section.slug} category={category} />
+    );
   }
 
   if (section?.type === "multiple-component") {
@@ -71,6 +73,11 @@ export default async function Page({ params }: Readonly<Props>) {
     if (!category) {
       return notFound();
     }
-    return <MultipleComponentCategory category={category} />;
+    return (
+      <MultipleComponentCategory
+        sectionSlug={section.slug}
+        category={category}
+      />
+    );
   }
 }

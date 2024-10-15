@@ -27,14 +27,26 @@ export default function VariantTabs({
 }>) {
   return (
     <div>
-      <p className="text-neutral-500 text-sm tracking-tight">
-        List of variants :
-      </p>
       <Tabs.Root
         defaultValue={variantList[0].name}
         id="variants-tabs"
         itemID="variants-tabs"
       >
+        {variantList.map((variant, _index) => (
+          <Tabs.Content key={variant.name} value={variant.name}>
+            <ComponentTabRenderer
+              {...variant}
+              isChildUsingHeightFull={isChildUsingHeightFull}
+              isIframed={isIframed}
+              isResizable={isResizable}
+              rerenderButton={rerenderButton}
+              size={size}
+            />
+          </Tabs.Content>
+        ))}
+        <p className="text-neutral-500 text-sm tracking-tight mt-2">
+          Variants list
+        </p>
         <Tabs.List
           className={cn(
             "flex items-center p-0.5 *:data-[state=active]:rounded-lg *:data-[state=active]:border-neutral-500/20 *:data-[state=active]:bg-neutral-400/15 *:data-[state=active]:text-neutral-900",
@@ -67,18 +79,6 @@ export default function VariantTabs({
             );
           })}
         </Tabs.List>
-        {variantList.map((variant, _index) => (
-          <Tabs.Content key={variant.name} value={variant.name}>
-            <ComponentTabRenderer
-              {...variant}
-              isChildUsingHeightFull={isChildUsingHeightFull}
-              isIframed={isIframed}
-              isResizable={isResizable}
-              rerenderButton={rerenderButton}
-              size={size}
-            />
-          </Tabs.Content>
-        ))}
       </Tabs.Root>
     </div>
   );
