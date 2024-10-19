@@ -24,6 +24,9 @@ jobs:
         cache: 'pnpm'
     - name: Install dependencies
       run: pnpm install
+      working-directory: apps/website
+
       # - run: pnpm build
     - name: Run tests
       run: pnpm test
+      working-directory: apps/website

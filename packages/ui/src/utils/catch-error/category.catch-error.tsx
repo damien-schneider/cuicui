@@ -1,0 +1,29 @@
+import { ChartNoAxesGanttIcon } from "lucide-react";
+import type { SingleComponentCategoryType } from "@/lib/types/component";
+import { PreviewCatchError } from "@/src/utils/catch-error/preview.catch-error";
+
+export const catchErrorCategory: SingleComponentCategoryType = {
+	name: "CatchError",
+	slug: "catch-error",
+	previewCategory: {
+		previewScale: 0.5,
+		component: <PreviewCatchError />,
+	},
+	component: {
+		sizePreview: "sm",
+		isIframed: false,
+		lastUpdatedDateComponent: new Date("2024-09-26"),
+		variantList: [
+			{
+				name: "Default",
+				slugPreviewFile: "preview.catch-error",
+				slugComponentFile: "catch-error",
+				component: <PreviewCatchError />,
+			},
+		],
+	},
+	description:
+		"A utility function to catch and handle errors effectively in a clean way",
+	icon: ChartNoAxesGanttIcon,
+	releaseDateCategory: new Date("2024-09-26"),
+};

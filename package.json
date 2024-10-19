@@ -1,102 +1,22 @@
 {
-  "author": {
-    "email": "damien.schneider01@gmail.com",
-    "name": "Damien Schneider",
-    "url": "https://github.com/damien-schneider"
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "type-check": "turbo type-check",
+    "clean": "turbo clean",
+    "test": "turbo run test",
+    "test:watch": "turbo run test:watch"
   },
-  "dependencies": {
-    "@ctrl/tinycolor": "4.1.0",
-    "@radix-ui/react-dialog": "1.1.1",
-    "@radix-ui/react-dropdown-menu": "2.1.1",
-    "@radix-ui/react-scroll-area": "1.1.0",
-    "@radix-ui/react-select": "2.0.0",
-    "@radix-ui/react-slider": "1.2.0",
-    "@radix-ui/react-slot": "1.1.0",
-    "@radix-ui/react-tabs": "1.1.0",
-    "@radix-ui/react-tooltip": "1.1.2",
-    "@uiw/react-signature": "1.3.1",
-    "bezier-editor": "1.0.1",
-    "class-variance-authority": "0.7.0",
-    "clsx": "2.1.0",
-    "cmdk": "1.0.0",
-    "date-fns": "3.6.0",
-    "dom-to-image-more": "3.4.5",
-    "embla-carousel-react": "8.2.1",
-    "framer-motion": "11.2.10",
-    "fs-extra": "11.2.0",
-    "get-similar-color": "1.1.4",
-    "jsbarcode": "3.11.6",
-    "lucide-react": "0.427.0",
-    "next": "14.2.3",
-    "next-themes": "0.3.0",
-    "path": "0.12.7",
-    "qrcode.react": "4.0.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-frame-component": "5.2.7",
-    "react-resizable-panels": "2.0.22",
-    "sharp": "0.33.4",
-    "sonner": "1.5.0",
-    "tailwind-merge": "2.3.0",
-    "tts-react": "3.0.7",
-    "vaul": "0.9.1",
-    "zustand": "4.5.4"
-  },
-  "description": "An open-source all-in-one library for building an advanced SaaS application, a personal website, or anything else with micro-interactions, advanced user experiences, and a focus on performance and code quality.",
   "devDependencies": {
-    "@biomejs/biome": "1.9.2",
-    "@tailwindcss/forms": "0.5.7",
-    "@tailwindcss/typography": "0.5.12",
-    "@testing-library/dom": "10.4.0",
-    "@testing-library/react": "16.0.0",
-    "@types/dom-to-image": "2.6.7",
-    "@types/node": "20.12.7",
-    "@types/react": "18.2.79",
-    "@types/react-dom": "18.2.25",
+    "turbo": "^2.0.3",
     "@vitejs/plugin-react": "4.3.1",
-    "autoprefixer": "10.4.19",
-    "eslint": "9.0.0",
-    "eslint-config-next": "14.2.2",
-    "jsdom": "25.0.0",
-    "lint-staged": "15.2.2",
-    "postcss": "8.4.38",
-    "shiki": "1.18.0",
-    "tailwindcss": "3.4.3",
-    "tailwindcss-animate": "1.0.7",
-    "typescript": "5.4.5",
     "vitest": "2.0.5"
   },
-  "git": {
-    "pre-commit": "lint-staged"
-  },
-  "license": "MIT",
-  "lint-staged": {
-    "*": "biome format --write ./src"
-  },
-  "maintainers": [
-    {
-      "email": "damien.schneider@gmail.com",
-      "name": "Damien Schneider",
-      "url": "https://github.com/damien-schneider"
-    }
-  ],
   "packageManager": "pnpm@9.0.4",
-  "private": false,
-  "publisher": "Damien Schneider",
-  "scripts": {
-    "build": "next build",
-    "dev": "next dev --turbo",
-    "format:check": "biome format --check ./src",
-    "format:write": "biome format --write ./src",
-    "generate-package-list-check": "node scripts/generate-package-list-check.js",
-    "lint": "next lint",
-    "lint-format:check": "pnpm format:check && pnpm lint",
-    "lint-staged": "lint-staged",
-    "lint:apply": "biome check --apply ./src",
-    "lint:check": "biome check ./src",
-    "lint:write-unsafe": "biome check --write --unsafe ./src",
-    "start": "next start",
-    "test": "vitest"
+  "engines": {
+    "node": ">=18"
   },
-  "version": "0.1.2"
+  "name": "with-tailwind"
 }

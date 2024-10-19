@@ -1,0 +1,12 @@
+{
+	"extends": "@cuicui/config-typescript/react-library.json",
+	"compilerOptions": {
+		"outDir": "dist",
+		"baseUrl": ".",
+		"paths": {
+			"@/*": ["./*"]
+		}
+	},
+	"include": ["./"],
+	"exclude": ["dist", "build", "node_modules"]
+}
