@@ -1,8 +1,13 @@
 import { render, screen } from "@testing-library/react";
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import NavigationMenu from "#/src/components/navigation/navigation-menu";
 
 const gettingStartedRegex = /getting-started$/;
+
+vi.mock("next/navigation", () => ({
+  usePathname: () => [],
+  useSelectedLayoutSegments: () => [],
+}));
 
 describe("Sidemenu component", () => {
   render(<NavigationMenu />);
