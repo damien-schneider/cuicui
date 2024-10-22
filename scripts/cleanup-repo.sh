@@ -1,4 +1,5 @@
 #!/bin/bash
+# command to allow the script to be executed: chmod +x ./scripts/cleanup-repo.sh
 # Set the base directory to the current directory
 DIRECTORY_BASE="$(pwd)"
 
