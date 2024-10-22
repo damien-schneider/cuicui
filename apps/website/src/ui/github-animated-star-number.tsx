@@ -1,5 +1,5 @@
 "use client";
-import { AnimatedNumber } from "@cuicui/ui/src/other/transition-wrappers/animated-number/animated-number";
+import { AnimatedNumber } from "@cuicui/ui/cuicui/other/transition-wrappers/animated-number/animated-number";
 import { useEffect, useState } from "react";
 
 export function GithubAnimatedStarNumber({

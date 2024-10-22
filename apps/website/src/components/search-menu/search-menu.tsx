@@ -3,16 +3,16 @@
 import { SearchIcon } from "lucide-react";
 
 import { useState } from "react";
-import { FirstSectionCommandGroup } from "@/src/components/search-menu/first-section-command-group";
-import { SearchGroupComponentSection } from "@/src/components/search-menu/search-group-multi-component-section";
-import { SectionsList } from "@/src/lib/cuicui-components/sections-list";
-import { useKeyPress } from "@cuicui/ui/src/hooks/use-key-press/use-key-press";
+import { FirstSectionCommandGroup } from "#/src/components/search-menu/first-section-command-group";
+import { SearchGroupComponentSection } from "#/src/components/search-menu/search-group-multi-component-section";
+import { SectionsList } from "@cuicui/ui";
+import { useKeyPress } from "@cuicui/ui/cuicui/hooks/use-key-press/use-key-press";
 import {
 	CommandDialog,
 	CommandEmpty,
 	CommandInput,
 	CommandList,
-} from "@/src/ui/shadcn/command";
+} from "#/src/ui/shadcn/command";
 
 export function SearchMenu() {
 	const [open, setOpen] = useState(false);

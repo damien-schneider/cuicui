@@ -1,14 +1,14 @@
 import { notFound } from "next/navigation";
-import { fetchSingleComponentData } from "@/src/app/(components)/[section]/[category]/process-variant-data";
-import ComingSoonCard from "@/src/components/coming-soon";
-import HeaderComponent from "@/src/components/component-wrapper/header-component";
-import InspirationComponentFooter from "@/src/components/component-wrapper/inspiration-component-footer";
-import VariantTabs from "@/src/components/component-wrapper/variant-tabs";
+import { fetchSingleComponentData } from "#/src/app/(components)/[section]/[category]/process-variant-data";
+import ComingSoonCard from "#/src/components/coming-soon";
+import HeaderComponent from "#/src/components/component-wrapper/header-component";
+import InspirationComponentFooter from "#/src/components/component-wrapper/inspiration-component-footer";
+import VariantTabs from "#/src/components/component-wrapper/variant-tabs";
 import type {
 	SectionType,
 	SingleComponentCategoryType,
-} from "@/src/lib/types/component";
-import GithubEditButton from "@/src/components/component-wrapper/github-edit-button";
+} from "#/src/lib/types/component";
+import GithubEditButton from "#/src/components/component-wrapper/github-edit-button";
 
 export default async function SingleComponentCategory({
 	category,

@@ -1,18 +1,9 @@
 {
+  "$schema": "https://json.schemastore.org/package",
   "name": "@cuicui/ui",
   "version": "0.0.0",
   "private": true,
-  "sideEffects": [
-    "**/*.css"
-  ],
-  "main": "./src",
-  "files": [
-    "dist"
-  ],
   "scripts": {
-    "build": "tailwindcss -i ./src/styles.css -o ./dist/index.css",
-    "lint": "eslint src/",
-    "dev": "tailwindcss -i ./src/styles.css -o ./dist/index.css --watch",
     "type-check": "tsc --noEmit"
   },
   "license": "MIT",
@@ -21,7 +12,6 @@
     "tailwind-merge": "^2.3.0"
   },
   "devDependencies": {
-    "@cuicui/config-eslint": "workspace:*",
     "@cuicui/config-tailwind": "workspace:*",
     "@cuicui/config-typescript": "workspace:*",
     "autoprefixer": "^10.4.20",

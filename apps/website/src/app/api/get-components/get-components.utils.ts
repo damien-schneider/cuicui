@@ -1,4 +1,4 @@
-import type { FileSystemNode } from "@/src/app/api/get-components/route";
+import type { FileSystemNode } from "#/src/app/api/get-components/route";
 
 // Helper function to extract categories from the tree
 export function extractCategories(node: FileSystemNode): CategoryType[] {

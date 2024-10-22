@@ -1,5 +1,5 @@
-import { CodeContainer } from "@/src/ui/code-command-container";
-import { StaticStep } from "@/src/ui/stepper";
+import { CodeContainer } from "#/src/ui/code-command-container";
+import { StaticStep } from "#/src/ui/stepper";
 
 export default function Page() {
 	return (

@@ -9,7 +9,7 @@ import {
 	useId,
 	useState,
 } from "react";
-import { cn } from "@/src/utils/cn";
+import { cn } from "#/src/utils/cn";
 
 export type AnimatedBackgroundProps = {
 	children:

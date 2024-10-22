@@ -1,10 +1,6 @@
 {
 	"compilerOptions": {
 		"allowJs": true,
-		"baseUrl": ".",
-		"paths": {
-			"@/*": ["./*"]
-		},
 		"esModuleInterop": true,
 		"forceConsistentCasingInFileNames": true,
 		"incremental": true,
@@ -19,6 +15,11 @@
 				"name": "next"
 			}
 		],
+		"baseUrl": ".",
+		"paths": {
+			"#/*": ["./*"],
+			"@/*": ["../../packages/ui/*"]
+		},
 		"resolveJsonModule": true,
 		"skipLibCheck": true,
 		"strict": true,

@@ -53,7 +53,7 @@ async function GetFileContentFromPathWithoutExtension(
 	}
 }
 
-import { SectionsList } from "@/src/lib/cuicui-components/sections-list";
+import { SectionsList } from "@cuicui/ui";
 
 function getComponentPath({
 	componentSlug,
@@ -81,5 +81,5 @@ function getComponentPath({
 		return null;
 	}
 
-	return `../../packages/ui/src/${basePath}/${variantName}`;
+	return `../../packages/ui/cuicui/${basePath}/${variantName}`;
 }

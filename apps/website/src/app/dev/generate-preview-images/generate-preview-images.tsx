@@ -2,7 +2,7 @@
 
 //TODO -> Save as zip file instead, with all images in section folder & category subfolder with "-light" and "-dark" suffixes
 import { useState, useEffect, useRef, type ReactNode } from "react";
-import { SectionsList } from "@/src/lib/cuicui-components/sections-list";
+import { SectionsList } from "@cuicui/ui";
 import domtoimage from "dom-to-image-more";
 import { useTheme } from "next-themes";
 

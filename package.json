@@ -4,6 +4,7 @@
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
+    "start": "turbo start",
     "type-check": "turbo type-check",
     "clean": "turbo clean",
     "test": "turbo run test",
@@ -18,5 +19,5 @@
   "engines": {
     "node": ">=18"
   },
-  "name": "with-tailwind"
+  "name": "cuicui"
 }

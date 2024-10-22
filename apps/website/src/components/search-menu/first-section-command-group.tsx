@@ -1,7 +1,7 @@
 import { LinkIcon } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { firstMenuSection } from "@/src/lib/first-menu-section";
-import { CommandGroup, CommandItem } from "@/src/ui/shadcn/command";
+import { firstMenuSection } from "#/src/lib/first-menu-section";
+import { CommandGroup, CommandItem } from "#/src/ui/shadcn/command";
 
 export function FirstSectionCommandGroup({
 	closeSearchMenu,

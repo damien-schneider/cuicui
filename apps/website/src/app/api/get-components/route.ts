@@ -6,7 +6,7 @@ import {
 	extractCategories,
 	extractComponents,
 	extractVariants,
-} from "@/src/app/api/get-components/get-components.utils";
+} from "#/src/app/api/get-components/get-components.utils";
 
 export type FileSystemNode = {
 	name: string;
@@ -50,7 +50,7 @@ function getDirectoryTree(dirPath: string): FileSystemNode {
 }
 
 export function GET() {
-	const basePath = join(process.cwd(), "src/ui/cuicui");
+	const basePath = join(process.cwd(), "../../packages/ui/cuicui/");
 	const tree = getDirectoryTree(basePath);
 
 	// Optionally, you can process the tree to extract categories, components, and variants

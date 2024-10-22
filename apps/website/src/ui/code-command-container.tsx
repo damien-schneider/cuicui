@@ -3,8 +3,8 @@ import CodeHighlighter from "./code-highlighter";
 
 // import { ScrollArea, ScrollBar } from "./shadcn/scrollarea";
 
-import SnippetCommandCard from "@/src/ui/copy-to-clipboard-code-snippet-dropdown";
-import { ScrollArea, ScrollBar } from "@/src/ui/shadcn/scrollarea";
+import SnippetCommandCard from "#/src/ui/copy-to-clipboard-code-snippet-dropdown";
+import { ScrollArea, ScrollBar } from "#/src/ui/shadcn/scrollarea";
 
 export const CodeContainer = ({
 	children,

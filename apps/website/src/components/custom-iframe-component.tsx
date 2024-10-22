@@ -2,42 +2,42 @@
 import type React from "react";
 import Frame from "react-frame-component";
 
-import type { ComponentHeightType } from "@/src/lib/types/component";
-import { cn } from "@/src/utils/cn";
-import { getContainerHeightClass } from "@/src/components/component-wrapper/get-container-height-class";
+import type { ComponentHeightType } from "#/src/lib/types/component";
+import { cn } from "#/src/utils/cn";
+import { getContainerHeightClass } from "#/src/components/component-wrapper/get-container-height-class";
 
 export const CustomIframe = ({
-  children,
-  className,
-  size,
+	children,
+	className,
+	size,
 }: {
-  children: React.ReactNode;
-  className?: string;
-  size: ComponentHeightType;
+	children: React.ReactNode;
+	className?: string;
+	size: ComponentHeightType;
 }) => {
-  return (
-    <>
-      <CustomIframeComponentDark
-        className={cn(
-          "hidden items-center justify-center dark:flex",
-          className,
-        )}
-        size={size}
-      >
-        {children}
-      </CustomIframeComponentDark>
+	return (
+		<>
+			<CustomIframeComponentDark
+				className={cn(
+					"hidden items-center justify-center dark:flex",
+					className,
+				)}
+				size={size}
+			>
+				{children}
+			</CustomIframeComponentDark>
 
-      <CustomIframeComponentLight
-        className={cn(
-          "flex items-center justify-center dark:hidden",
-          className,
-        )}
-        size={size}
-      >
-        {children}
-      </CustomIframeComponentLight>
-    </>
-  );
+			<CustomIframeComponentLight
+				className={cn(
+					"flex items-center justify-center dark:hidden",
+					className,
+				)}
+				size={size}
+			>
+				{children}
+			</CustomIframeComponentLight>
+		</>
+	);
 };
 
 const tailwindImport = `
@@ -51,18 +51,18 @@ const tailwindImport = `
 `;
 
 export const CustomIframeComponentLight = ({
-  children,
-  className,
-  size,
+	children,
+	className,
+	size,
 }: {
-  children: React.ReactNode;
-  className?: string;
-  size: ComponentHeightType;
+	children: React.ReactNode;
+	className?: string;
+	size: ComponentHeightType;
 }) => {
-  return (
-    <Frame
-      className={cn("", className)}
-      initialContent={`
+	return (
+		<Frame
+			className={cn("", className)}
+			initialContent={`
         <!DOCTYPE html>
         <html lang="en">
           <head>
@@ -83,33 +83,33 @@ export const CustomIframeComponentLight = ({
           </head>
           <body class=${cn("bg-neutral-50")}>
             <div id="mountHere" class="${cn(
-              "p-4 *:flex *:items-center *:justify-center grid *:w-full",
-              getContainerHeightClass({ size, isIframe: true }),
-            )}">
+							"p-4 *:flex *:items-center *:justify-center grid *:w-full",
+							getContainerHeightClass({ size, isIframe: true }),
+						)}">
             </div>
           </body>
         </html>
         `}
-      mountTarget="#mountHere"
-    >
-      {children}
-    </Frame>
-  );
+			mountTarget="#mountHere"
+		>
+			{children}
+		</Frame>
+	);
 };
 
 export const CustomIframeComponentDark = ({
-  children,
-  className,
-  size,
+	children,
+	className,
+	size,
 }: {
-  children: React.ReactNode;
-  className?: string;
-  size: ComponentHeightType;
+	children: React.ReactNode;
+	className?: string;
+	size: ComponentHeightType;
 }) => {
-  return (
-    <Frame
-      className={className}
-      initialContent={`
+	return (
+		<Frame
+			className={className}
+			initialContent={`
         <!DOCTYPE html>
         <html lang="en">
           <head>
@@ -130,16 +130,16 @@ export const CustomIframeComponentDark = ({
           </head>
           <body class="dark bg-[#101010]">
             <div id="mountHere" class="${cn(
-              "p-4 *:flex *:items-center *:justify-center grid *:w-full",
-              getContainerHeightClass({ size, isIframe: true }),
-            )}">
+							"p-4 *:flex *:items-center *:justify-center grid *:w-full",
+							getContainerHeightClass({ size, isIframe: true }),
+						)}">
             </div>
           </body>
         </html>
         `}
-      mountTarget="#mountHere"
-    >
-      {children}
-    </Frame>
-  );
+			mountTarget="#mountHere"
+		>
+			{children}
+		</Frame>
+	);
 };

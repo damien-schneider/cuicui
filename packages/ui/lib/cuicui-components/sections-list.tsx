@@ -1,12 +1,12 @@
 import { marketingUiComponentList } from "@/lib/cuicui-components/marketing-ui-components";
 
 import { BadgePercentIcon } from "lucide-react";
-import { applicationUiCategoryList } from "@/src/application-ui/application-ui.section";
-import { commonUiSection } from "@/src/common-ui/common-ui.section";
-import { hooksSection } from "@/src/hooks/hooks.section";
-import { otherSection } from "@/src/other/other.section";
-import { toolsSection } from "@/src/tools/section.tools";
-import { utilsSection } from "@/src/utils/utils.section";
+import { applicationUiCategoryList } from "@/cuicui/application-ui/application-ui.section";
+import { commonUiSection } from "@/cuicui/common-ui/common-ui.section";
+import { hooksSection } from "@/cuicui/hooks/hooks.section";
+import { otherSection } from "@/cuicui/other/other.section";
+import { toolsSection } from "@/cuicui/tools/section.tools";
+import { utilsSection } from "@/cuicui/utils/utils.section";
 
 import type { SectionType } from "../types/component";
 

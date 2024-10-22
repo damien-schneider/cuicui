@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { SectionsList } from "@/src/lib/cuicui-components/sections-list";
-import { getFileContentAsString } from "@/src/utils/get-file-content-as-string";
+import { SectionsList } from "@cuicui/ui";
+import { getFileContentAsString } from "#/src/utils/get-file-content-as-string";
 
 describe("SectionsList", () => {
 	it("should have the correct number of sections", () => {

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import Image from "next/image";
 
-import LogoLarge from "@/src/assets/logo/logo-large.png";
+import LogoLarge from "#/src/assets/logo/logo-large.png";
 import { cn } from "../../utils/cn";
 
 import Byline from "../../ui/byline";

@@ -1,4 +1,4 @@
-import { IS_PRODUCTION, PLAUSIBLE_DOMAIN } from "@/src/lib/site.const";
+import { IS_PRODUCTION, PLAUSIBLE_DOMAIN } from "#/src/lib/site.const";
 import Script from "next/script";
 
 export default function PlausibleScripts() {

@@ -1,6 +1,6 @@
 // This is an automated generated file with the ./scripts/generate-package-list-check.ts script
 
-import type { PackageToInstallType } from "@/src/components/steps-to-install/packages";
+import type { PackageToInstallType } from "#/src/components/steps-to-install/packages";
 
 export const packageCheckListToInstall: PackageToInstallType[] = [
 	{

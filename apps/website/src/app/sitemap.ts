@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { SectionsList } from "@/src/lib/cuicui-components/sections-list";
+import { SectionsList } from "@cuicui/ui";
 
 export const port = process.env.PORT ?? 3000;
 

@@ -1,6 +1,6 @@
 import AnimatedBackground, {
 	type AnimatedBackgroundProps,
-} from "@/src/components/navigation/animated-background";
+} from "#/src/components/navigation/animated-background";
 
 export function NavigationAnimatedBackground({
 	children,

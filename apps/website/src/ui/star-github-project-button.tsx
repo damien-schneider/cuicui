@@ -3,7 +3,7 @@ import { GithubIcon, StarIcon } from "lucide-react";
 import Link from "next/link";
 import { CUICUI_GITHUB_URL } from "../lib/site.const";
 import GradientContainer from "./gradient-container";
-import { GithubAnimatedStarNumber } from "@/src/ui/github-animated-star-number";
+import { GithubAnimatedStarNumber } from "#/src/ui/github-animated-star-number";
 
 export default async function StarGithubProjectButton({
 	className,

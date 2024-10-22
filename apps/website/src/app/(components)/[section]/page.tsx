@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { MainMenuCardContent } from "@/src/app/card";
-import MenuSectionWrapper from "@/src/components/main-menus/menu-category-wrapper";
-import { MainMenusGradientCard } from "@cuicui/ui/src/other/cursors/dynamic-cards/gradient-card";
-import { findSectionBySlug } from "@/src/utils/section-category-components-utils/find-section-by-slug";
+import { MainMenuCardContent } from "#/src/app/card";
+import MenuSectionWrapper from "#/src/components/main-menus/menu-category-wrapper";
+import { MainMenusGradientCard } from "@cuicui/ui/cuicui/other/cursors/dynamic-cards/gradient-card";
+import { findSectionBySlug } from "#/src/utils/section-category-components-utils/find-section-by-slug";
 
 type Props = {
 	params: { section: string };

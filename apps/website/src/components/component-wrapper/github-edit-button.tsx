@@ -3,8 +3,8 @@ import type {
 	CategoryType,
 	ComponentType,
 	SectionType,
-} from "@/src/lib/types/component";
-import { CUICUI_GITHUB_URL } from "@/src/lib/site.const";
+} from "#/src/lib/types/component";
+import { CUICUI_GITHUB_URL } from "#/src/lib/site.const";
 export default function GithubEditButton({
 	sectionSlug,
 	categorySlug,

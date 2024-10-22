@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { getFileContentAsString } from "@/src/utils/get-file-content-as-string";
+import { getFileContentAsString } from "#/src/utils/get-file-content-as-string";
 
 describe("getFileContentAsString", () => {
 	it("should return the content of the file", async () => {

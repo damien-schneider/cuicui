@@ -3,7 +3,7 @@ import type {
 	PageCategoryType,
 	SectionType,
 	SingleComponentCategoryType,
-} from "@/src/lib/types/component";
+} from "#/src/lib/types/component";
 
 // Function Overloads
 

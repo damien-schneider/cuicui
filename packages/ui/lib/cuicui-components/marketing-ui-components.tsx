@@ -6,19 +6,19 @@ import {
 } from "lucide-react";
 
 import type { CategoryType } from "@/lib/types/component";
-import { CarouselCylindricalVariant1 } from "@/src/marketing-ui/carousels/cylindric-3d-carousel/variant1";
-import { SimpleCarouselPreview } from "@/src/marketing-ui/carousels/simple-carousel/simple-carousel-preview";
-import { AnimatedCardVariant1 } from "@/src/marketing-ui/features/animated-cards/variant1";
-import { Variant1FeatureFourImages } from "@/src/marketing-ui/features/feature-four-images/variant1";
-import { Variant2FeatureFourImages } from "@/src/marketing-ui/features/feature-four-images/variant2";
-import AnimatedCounterPreview from "@/src/marketing-ui/statistics/animated-counter/animated-counter-preview";
-import { AnimatedNumberVariant1 } from "@/src/marketing-ui/statistics/animated-on-scroll/variant1";
-import IncreaseToValueVariant1 from "@/src/marketing-ui/statistics/increase-to-value/variant1";
-import { gradientQnaComponent } from "@/src/marketing-ui/testimonials/gradient-qna/component.gradient-qna";
-import MarqueeVariant1 from "@/src/marketing-ui/testimonials/marquee/variant1";
-import MarqueeVariant2 from "@/src/marketing-ui/testimonials/marquee/variant2";
-import { TestimonialsVariant1 } from "@/src/marketing-ui/testimonials/testimonials-component/variant1";
-import { pricingTablesCategory } from "@/src/marketing-ui/pricing-tables/category.pricing-tables";
+import { CarouselCylindricalVariant1 } from "@/cuicui/marketing-ui/carousels/cylindric-3d-carousel/variant1";
+import { SimpleCarouselPreview } from "@/cuicui/marketing-ui/carousels/simple-carousel/simple-carousel-preview";
+import { AnimatedCardVariant1 } from "@/cuicui/marketing-ui/features/animated-cards/variant1";
+import { Variant1FeatureFourImages } from "@/cuicui/marketing-ui/features/feature-four-images/variant1";
+import { Variant2FeatureFourImages } from "@/cuicui/marketing-ui/features/feature-four-images/variant2";
+import AnimatedCounterPreview from "@/cuicui/marketing-ui/statistics/animated-counter/animated-counter-preview";
+import { AnimatedNumberVariant1 } from "@/cuicui/marketing-ui/statistics/animated-on-scroll/variant1";
+import IncreaseToValueVariant1 from "@/cuicui/marketing-ui/statistics/increase-to-value/variant1";
+import { gradientQnaComponent } from "@/cuicui/marketing-ui/testimonials/gradient-qna/component.gradient-qna";
+import MarqueeVariant1 from "@/cuicui/marketing-ui/testimonials/marquee/variant1";
+import MarqueeVariant2 from "@/cuicui/marketing-ui/testimonials/marquee/variant2";
+import { TestimonialsVariant1 } from "@/cuicui/marketing-ui/testimonials/testimonials-component/variant1";
+import { pricingTablesCategory } from "@/cuicui/marketing-ui/pricing-tables/category.pricing-tables";
 
 export const marketingUiComponentList: CategoryType[] = [
 	{

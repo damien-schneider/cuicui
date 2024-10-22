@@ -1,10 +1,10 @@
 import Link from "next/link";
 // import GradientContainer from "../ui/gradient-container";
 
-import MenuSectionWrapper from "@/src/components/main-menus/menu-category-wrapper";
-import { SectionsList } from "@/src/lib/cuicui-components/sections-list";
-import { firstMenuSection } from "@/src/lib/first-menu-section";
-import { MainMenusGradientCard } from "@cuicui/ui/src/other/cursors/dynamic-cards/gradient-card";
+import MenuSectionWrapper from "#/src/components/main-menus/menu-category-wrapper";
+import { SectionsList } from "@cuicui/ui";
+import { firstMenuSection } from "#/src/lib/first-menu-section";
+import { MainMenusGradientCard } from "@cuicui/ui/cuicui/other/cursors/dynamic-cards/gradient-card";
 import { MainMenuCardContent } from "./card";
 
 export default function HomePage() {

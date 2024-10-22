@@ -14,7 +14,7 @@ const outputTsPath = path.join(
 	"generated-package-check-list-to-install.ts",
 );
 
-const importStatement = `import type { PackageToInstallType } from "@/src/components/steps-to-install/packages";\n`;
+const importStatement = `import type { PackageToInstallType } from "#/src/components/steps-to-install/packages";\n`;
 const commentStatement =
 	"// This is an automated generated file with the ./scripts/generate-package-list-check.ts script\n";
 

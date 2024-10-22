@@ -9,8 +9,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Drawer } from "vaul";
-import LogoLarge from "@/src/assets/logo/logo-large.png";
-import { cn } from "@/src/utils/cn";
+import LogoLarge from "#/src/assets/logo/logo-large.png";
+import { cn } from "#/src/utils/cn";
 import ThemeSwitcher from "../../ui/theme-switcher";
 import NavigationMenu from "./navigation-menu";
 export function MobileMenu({ className }: Readonly<{ className?: string }>) {
