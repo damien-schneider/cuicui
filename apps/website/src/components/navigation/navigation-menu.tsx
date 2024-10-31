@@ -77,28 +77,7 @@ export default function NavigationMenu({
 	}
 
 	return (
-		<nav className={cn("mt-5 mb-12 px-1 space-y-2 ", className)}>
-			<SectionWrapper
-				sectionSlug=""
-				disclosure={false}
-				name={firstMenuSection.name}
-				className="mb-16"
-			>
-				<NavigationAnimatedBackground>
-					{firstMenuSection.categoryList.map((category, _index) => (
-						<li className="block" data-id={category.slug} key={category.slug}>
-							<GlobalNavItem
-								Icon={null}
-								href={category.href ?? `/${category.slug}`}
-								isMobile={isMobile}
-								name={category.name}
-								target={category.href ? "newWindow" : "sameWindow"}
-							/>
-						</li>
-					))}
-				</NavigationAnimatedBackground>
-			</SectionWrapper>
-
+		<nav className={cn("mt-5 mb-12 px-1 space-y-2 min-h-full", className)}>
 			{SectionsList.map((section) => {
 				if (section.type === "page") {
 					return (

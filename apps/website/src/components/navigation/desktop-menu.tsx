@@ -7,11 +7,11 @@ import { cn } from "../../utils/cn";
 
 import Byline from "../../ui/byline";
 
-import { ScrollArea } from "../../ui/shadcn/scrollarea";
+import { ScrollArea, ScrollAreaViewport } from "../../ui/shadcn/scrollarea";
 import StarGithubProjectButton from "../../ui/star-github-project-button";
-import ThemeSwitcher from "../../ui/theme-switcher";
 import { SearchMenu } from "../search-menu/search-menu";
 import NavigationMenu from "./navigation-menu";
+import InfoMenuList from "#/src/components/navigation/info-menu-list";
 
 export function DesktopSideMenu({
 	className,
@@ -35,13 +35,15 @@ export function DesktopSideMenu({
 							Cuicui - Best all in one React component library
 						</span>
 					</Link>
-					<ThemeSwitcher />
 				</div>
 				<StarGithubProjectButton />
 				<SearchMenu />
 			</div>
-			<ScrollArea className="w-full ">
-				<NavigationMenu />
+			<InfoMenuList />
+			<ScrollArea className="w-full h-full mt-4">
+				<ScrollAreaViewport className="h-full">
+					<NavigationMenu />
+				</ScrollAreaViewport>
 			</ScrollArea>
 			<Byline className="w-full" />
 		</div>
