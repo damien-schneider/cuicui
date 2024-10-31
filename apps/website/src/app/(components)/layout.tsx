@@ -16,8 +16,8 @@ export default function ComponentsLayout({
 
 				<AddressBar />
 
-				<main className=" p-4 pt-12 pb-20 md:p-6">
-					<div className="space-y-10">{children}</div>
+				<main className=" p-4 pt-12 md:p-6">
+					<div className="space-y-10 pb-20">{children}</div>
 				</main>
 
 				<div className="flex sm:hidden fixed bottom-6 left-2">
