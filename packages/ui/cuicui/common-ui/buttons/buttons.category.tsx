@@ -5,7 +5,8 @@ import PreviewBeforeEffectButtonDefault from "@/cuicui/common-ui/buttons/before-
 import PreviewBeforeEffectButtonHoverOnly from "@/cuicui/common-ui/buttons/before-effect-button/preview-hover-only";
 import GrowingButtonVariant1 from "@/cuicui/common-ui/buttons/growing-button/variant1";
 import ModernAnimatedButtonVariant1 from "@/cuicui/common-ui/buttons/modern-animated-button/variant1";
-import ShinyRotatingBorderButtonVariant1 from "@/cuicui/common-ui/buttons/shiny-rotating-border-button/variant1";
+
+import { PreviewShinyRotatingBorderButton } from "@/cuicui/common-ui/buttons/shiny-rotating-border-button/preview.shiny-rotating-border-button";
 
 export const buttonsCategory: CategoryType = {
 	slug: "buttons",
@@ -14,7 +15,7 @@ export const buttonsCategory: CategoryType = {
 	releaseDateCategory: new Date("2024-08-09"),
 	icon: SquareArrowRightIcon,
 	previewCategory: {
-		component: <ShinyRotatingBorderButtonVariant1 />,
+		component: <PreviewShinyRotatingBorderButton />,
 		previewScale: 1.5,
 	},
 	componentList: [
@@ -69,8 +70,9 @@ export const buttonsCategory: CategoryType = {
 			variantList: [
 				{
 					name: "Default",
-					component: <ShinyRotatingBorderButtonVariant1 />,
-					slugPreviewFile: "variant1",
+					component: <PreviewShinyRotatingBorderButton />,
+					slugPreviewFile: "preview.shiny-rotating-border-button",
+					slugComponentFile: "component.shiny-rotating-border-button",
 				},
 			],
 			isIframed: true,

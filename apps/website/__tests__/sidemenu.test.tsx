@@ -1,16 +1,25 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
 import NavigationMenu from "#/src/components/navigation/navigation-menu";
+import InfoMenuList from "#/src/components/navigation/info-menu-list";
 
 const gettingStartedRegex = /getting-started$/;
 
 vi.mock("next/navigation", () => ({
-	usePathname: () => [],
+	usePathname: () => {
+		return "/common-ui";
+	},
 	useSelectedLayoutSegments: () => [],
 }));
 
 describe("Sidemenu component", () => {
-	render(<NavigationMenu />);
+	render(
+		<div>
+			<InfoMenuList />
+			<NavigationMenu />
+		</div>,
+	);
+
 	it("should have href attribute of the 'Contribute' element set to https://cuicui.featurebase.app/", () => {
 		const contributeElement = screen.getByTestId("navigation-link-Contribute");
 

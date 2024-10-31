@@ -3,13 +3,13 @@ import { Toaster } from "sonner";
 import "#/src/styles/globals.css";
 import { DesktopSideMenu } from "#/src/components/navigation/desktop-menu";
 import { AddressBar } from "#/src/ui/address-bar";
-import { MobileMenu } from "../components/navigation/mobile-menu";
 
 import { DM_Sans } from "next/font/google";
 import type { ReactNode } from "react";
 import Providers from "#/src/app/providers";
 import StarGithubProjectButton from "#/src/ui/star-github-project-button";
 import PlausibleScripts from "#/src/components/analytics/plausible-scripts";
+import { CuicuiFloatingDock } from "#/src/app/layout-floating-dock";
 const font = DM_Sans({
 	subsets: ["latin"],
 	display: "swap",
@@ -79,35 +79,8 @@ export default function RootLayout({
 				<body className="bg-neutral-50 dark:bg-neutral-950 ">
 					<Toaster />
 
-					<div className="mx-auto max-w-screen-2xl">
-						<DesktopSideMenu />
-						{/* <div className="absolute top-0 left-0 bottom-0 right-0 overflow-hidden">
-                <div className="relative">
-                  <div className="gradient-top-animation absolute rotate-3 blur-[100px] h-48 w-[60vw] -right-[20vw] z-0 -top-24 opacity-20 pointer-events-none" />
-                </div>
-              </div> */}
-						<div className="lg:ml-80">
-							{/* Add overflow-auto if layout width problems */}
-
-							<AddressBar />
-							{/* <GradientContainer
-                    rounded="sm"
-                    background="solid"
-                    classNameParent=""
-                    classNameChild="px-8 py-10 min-h-[calc(100vh-6rem)]"
-                    > */}
-							<main className=" p-4 pt-12 pb-20 md:p-6">
-								{/* Move overflow-auto to the previous comment if problems occurs */}
-								{children}
-							</main>
-							{/* </GradientContainer> */}
-							<div className="flex sm:hidden fixed bottom-20 left-2">
-								<StarGithubProjectButton />
-							</div>
-
-							<MobileMenu />
-						</div>
-					</div>
+					{children}
+					<CuicuiFloatingDock />
 				</body>
 			</Providers>
 		</html>

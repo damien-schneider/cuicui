@@ -89,7 +89,7 @@
   "publisher": "Damien Schneider",
   "scripts": {
     "build": "next build",
-    "dev": "next dev",
+    "dev": "next dev --turbo",
     "start": "next start",
     "format:check": "biome format --check ./src",
     "format:write": "biome format --write ./src",

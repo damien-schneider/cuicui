@@ -11,12 +11,12 @@ export default async function StarGithubProjectButton({
 	return (
 		<Link href={CUICUI_GITHUB_URL}>
 			<GradientContainer
-				classNameChild="group-hover:opacity-80 transition-opacity duration-150 ease-in-out px-4 py-2 flex gap-2 items-center text-sm text-neutral-500 font-medium relative"
+				classNameChild="group-hover:opacity-80 transition-opacity duration-150 ease-in-out pl-4 py-2 flex gap-2 items-center text-sm text-neutral-500 font-medium relative"
 				classNameParent="group"
 				rounded="sm"
 			>
 				<GithubIcon className="size-5 fill-neutral-300 stroke-neutral-400 dark:fill-neutral-600 dark:stroke-neutral-500" />
-				Star this project on GitHub
+				<span className="md:inline hidden">Star this project on GitHub</span>
 				{await getGithubStarCountComponent()}
 			</GradientContainer>
 		</Link>
@@ -30,7 +30,7 @@ const getGithubStarCountComponent = async () => {
 		const githubRepoData = await fetch(apiGithub).then((res) => res.json());
 		const numberOfStars = githubRepoData.stargazers_count;
 		return (
-			<div className="flex items-center gap-0.5 absolute top-1/2 -translate-y-1/2 right-0.5">
+			<div className="flex items-center gap-0.5 w-16">
 				<StarIcon className="size-4 fill-neutral-300 stroke-neutral-400 dark:fill-neutral-600 dark:stroke-neutral-500" />
 				<GithubAnimatedStarNumber value={numberOfStars} />
 			</div>
