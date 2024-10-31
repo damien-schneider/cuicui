@@ -1,5 +1,8 @@
+import { NEXT_PUBLIC_SITE_URL } from "#/src/lib/site.const";
 import { CodeContainer } from "#/src/ui/code-command-container";
 import { StaticStep } from "#/src/ui/stepper";
+
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
 	title: "Getting Started - CuiCui",
