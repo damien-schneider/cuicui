@@ -1,15 +1,10 @@
 import Link from "next/link";
 // import GradientContainer from "../ui/gradient-container";
 
-import MenuSectionWrapper from "#/src/components/main-menus/menu-category-wrapper";
-import { SectionsList } from "@cuicui/ui";
-import { firstMenuSection } from "#/src/lib/first-menu-section";
-import { MainMenusGradientCard } from "@cuicui/ui/cuicui/other/cursors/dynamic-cards/gradient-card";
-import { MainMenuCardContent } from "./card";
 import { MacbookMockUp } from "@/cuicui/other/mock-ups/laptops/component.mackbook";
 import { PreviewRecursiveTree } from "@/cuicui/application-ui/tree/recursive-tree/preview-recursive-tree";
 import { PreviewBatteryIndicator } from "@/cuicui/application-ui/battery/battery-indicator/preview-battery-indicator";
-import { ShinyRotatingBorderButton } from "@/cuicui/common-ui/buttons/shiny-rotating-border-button/component.shiny-rotating-border-button";
+
 import { TextEffectWrapper } from "@/cuicui/other/transition-wrappers/text-effect-wrapper/text-effect-wrapper";
 import { DotsPattern } from "@/cuicui/other/patterns/dots-pattern/dots-pattern";
 import { PreviewUseMeasure } from "@/cuicui/hooks/use-measure/preview.use-measure";

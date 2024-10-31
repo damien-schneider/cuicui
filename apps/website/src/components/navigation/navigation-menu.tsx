@@ -1,4 +1,3 @@
-"use client";
 import { differenceInDays } from "date-fns";
 import { NavigationAnimatedBackground } from "#/src/components/navigation/navigation-animated-background";
 import {
@@ -83,7 +82,6 @@ export default function NavigationMenu({
 					return (
 						<SectionWrapper
 							sectionSlug={section.slug}
-							Icon={section.icon}
 							key={section.slug}
 							name="Tools"
 						>
@@ -95,7 +93,7 @@ export default function NavigationMenu({
 										key={page.slug}
 									>
 										<GlobalNavItem
-											Icon={page.icon}
+											Icon={<page.icon className="size-4" />}
 											href={`/${section.slug}/${page.slug}`}
 											isMobile={isMobile}
 											name={page.name}
@@ -109,7 +107,6 @@ export default function NavigationMenu({
 				if (section.type === "single-component") {
 					return (
 						<SectionWrapper
-							Icon={section.icon}
 							key={section.slug}
 							name={section.name}
 							sectionSlug={section.slug}
@@ -123,7 +120,7 @@ export default function NavigationMenu({
 											key={category.slug}
 										>
 											<GlobalNavItem
-												Icon={category.icon ?? null}
+												Icon={<category.icon className="size-4" />}
 												href={`/${section.slug}/${category.slug}`}
 												isMobile={isMobile}
 												name={category.name}
@@ -140,7 +137,6 @@ export default function NavigationMenu({
 				if (section.type === "multiple-component") {
 					return (
 						<SectionWrapper
-							Icon={section.icon}
 							key={section.slug}
 							name={section.name}
 							sectionSlug={section.slug}
@@ -154,7 +150,7 @@ export default function NavigationMenu({
 											key={category.slug}
 										>
 											<GlobalNavItem
-												Icon={category.icon ?? null}
+												Icon={<category.icon className="size-4" />}
 												href={`/${section.slug}/${category.slug}`}
 												isMobile={isMobile}
 												name={category.name}

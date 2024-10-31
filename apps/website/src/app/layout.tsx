@@ -1,15 +1,12 @@
 import type { Metadata } from "next";
 import { Toaster } from "sonner";
 import "#/src/styles/globals.css";
-import { DesktopSideMenu } from "#/src/components/navigation/desktop-menu";
-import { AddressBar } from "#/src/ui/address-bar";
 
 import { DM_Sans } from "next/font/google";
 import type { ReactNode } from "react";
 import Providers from "#/src/app/providers";
-import StarGithubProjectButton from "#/src/ui/star-github-project-button";
 import PlausibleScripts from "#/src/components/analytics/plausible-scripts";
-import { CuicuiFloatingDock } from "#/src/app/layout-floating-dock";
+import { CuicuiFloatingDock } from "#/src/components/floating-dock-navigation/floating-dock";
 const font = DM_Sans({
 	subsets: ["latin"],
 	display: "swap",

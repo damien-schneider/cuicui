@@ -1,10 +1,5 @@
 "use client";
 import { useOnClickOutside } from "@/cuicui/hooks/use-click-outside/use-click-outside";
-/**
- * Note: Use position fixed according to your needs
- * Desktop navbar is better positioned at the bottom
- * Mobile navbar is better positioned at bottom right.
- **/
 
 import { cn } from "@/cuicui/utils/cn/cn";
 import {
@@ -18,7 +13,7 @@ import {
 import { ListCollapseIcon, type LucideIcon } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { type ReactNode, useEffect, useRef, useState } from "react";
 
 export const FloatingDock = ({
 	items,
@@ -27,7 +22,7 @@ export const FloatingDock = ({
 }: {
 	items: {
 		title: string;
-		Icon: LucideIcon;
+		Icon: ReactNode;
 		href: string;
 	}[];
 	desktopClassName?: string;
@@ -47,7 +42,7 @@ const FloatingDockMobile = ({
 }: {
 	items: {
 		title: string;
-		Icon: LucideIcon;
+		Icon: ReactNode;
 		href: string;
 	}[];
 	className?: string;
@@ -104,7 +99,7 @@ const FloatingDockMobile = ({
 									)}
 									onClick={() => setOpen(false)}
 								>
-									<item.Icon className="size-6" />
+									{item.Icon}
 									<p className=" text-nowrap tracking-tighter  font-medium">
 										{item.title}
 									</p>
@@ -129,7 +124,7 @@ const FloatingDockDesktop = ({
 	items,
 	className,
 }: {
-	items: { title: string; Icon: LucideIcon; href: string }[];
+	items: { title: string; Icon: ReactNode; href: string }[];
 	className?: string;
 }) => {
 	const mouseX = useMotionValue(Number.POSITIVE_INFINITY);
@@ -157,7 +152,7 @@ function IconContainer({
 }: Readonly<{
 	mouseX: MotionValue;
 	title: string;
-	Icon: LucideIcon;
+	Icon: ReactNode;
 	href: string;
 }>) {
 	const pathname = usePathname();
@@ -253,7 +248,7 @@ function IconContainer({
 							: "*:text-neutral-800 *:dark:text-neutral-100",
 					)}
 				>
-					<Icon className="size-6" />
+					{Icon}
 				</motion.div>
 			</motion.div>
 		</Link>

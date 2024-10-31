@@ -24,7 +24,7 @@ export function GlobalNavItem({
 	isMobile?: boolean;
 	href: string;
 	name: string;
-	Icon: LucideIcon | null;
+	Icon: ReactNode | null;
 	tag?: string | null;
 	target?: "newWindow" | "sameWindow";
 }> &
@@ -53,9 +53,9 @@ export function GlobalNavItem({
 			{...props}
 		>
 			<div className="flex items-center gap-2">
-				{Icon && (
-					<Icon className="size-4 transform-gpu text-neutral-400 transition-transform group-hover:scale-125 dark:text-neutral-500" />
-				)}
+				<span className="transform-gpu text-neutral-400 transition-transform group-hover:scale-125 dark:text-neutral-500">
+					{Icon}
+				</span>
 				<p className="transform-gpu tracking-tighter transition-transform group-hover:translate-x-0.5">
 					{name}
 				</p>
@@ -80,13 +80,11 @@ export function GlobalNavItem({
 export const SectionWrapper = ({
 	children,
 	name,
-	Icon,
 	className,
 	sectionSlug,
 }: {
 	children: ReactNode;
 	name: string;
-	Icon?: LucideIcon;
 	className?: string;
 	sectionSlug: SectionType["slug"];
 }) => {
