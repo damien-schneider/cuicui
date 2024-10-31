@@ -1,4 +1,3 @@
-// biome-ignore lint/style/noNamespaceImport: <explanation>
 import * as Tabs from "@radix-ui/react-tabs";
 import ComponentTabRenderer from "#/src/components/component-wrapper/component-tab-renderer";
 
@@ -16,14 +15,12 @@ export default function VariantTabs({
 	isIframed = false,
 	isResizable = true,
 	rerenderButton = false,
-	isChildUsingHeightFull = false,
 }: Readonly<{
 	variantList: ProcessVariantType[];
 	size?: ComponentHeightType;
 	isIframed?: boolean;
 	isResizable?: boolean;
 	rerenderButton?: boolean;
-	isChildUsingHeightFull?: boolean;
 }>) {
 	return (
 		<div>
@@ -36,7 +33,6 @@ export default function VariantTabs({
 					<Tabs.Content key={variant.name} value={variant.name}>
 						<ComponentTabRenderer
 							{...variant}
-							isChildUsingHeightFull={isChildUsingHeightFull}
 							isIframed={isIframed}
 							isResizable={isResizable}
 							rerenderButton={rerenderButton}

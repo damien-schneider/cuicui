@@ -45,13 +45,11 @@ export default function ComponentTabRenderer({
 	rerenderButton,
 	isIframed = false,
 	size,
-	isChildUsingHeightFull,
 }: {
 	isResizable?: boolean;
 	rerenderButton?: boolean;
 	isIframed?: boolean;
 	size: ComponentHeightType;
-	isChildUsingHeightFull?: boolean;
 } & ProcessVariantType) {
 	return (
 		<Tabs.Root defaultValue="preview" id="variants-tabs" itemID="variants-tabs">
@@ -93,18 +91,14 @@ export default function ComponentTabRenderer({
 				{isResizable ? (
 					<ResizablePanelGroup
 						className={cn(
-							"flex h-full w-full items-center justify-center",
+							// "flex h-full w-full items-center justify-center",
 							// getContainerChildClassBasedOnSize(size),
 						)}
 						direction="horizontal"
 					>
-						<ResizablePanel
-							className="relative rounded-md border border-neutral-500/20 bg-neutral-50 dark:bg-[#101010]"
-							defaultSize={100}
-						>
+						<ResizablePanel defaultSize={100}>
 							{/* {rerenderButton && <RerenderButton setRender={setRender} />} */}
 							<ComponentWrapper
-								isChildUsingHeightFull={isChildUsingHeightFull}
 								isIframed={isIframed}
 								renderButton={rerenderButton}
 								size={size}
@@ -123,7 +117,6 @@ export default function ComponentTabRenderer({
 					</ResizablePanelGroup>
 				) : (
 					<ComponentWrapper
-						isChildUsingHeightFull={isChildUsingHeightFull}
 						isIframed={isIframed}
 						renderButton={rerenderButton}
 						size={size}

@@ -50,7 +50,6 @@ export default async function MultipleComponentCategory({
 						inspirationLink={component.inspirationLink}
 					/>
 					<VariantTabs
-						isChildUsingHeightFull={component.isChildUsingHeightFull}
 						isIframed={component.isIframed}
 						isResizable={component.isResizable}
 						key={component.name}
