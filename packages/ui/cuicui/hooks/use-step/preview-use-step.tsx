@@ -14,7 +14,7 @@ export function PreviewUseStep() {
 	} = helpers;
 
 	return (
-		<>
+		<div className="cuicui-default-style">
 			<p>Current step is {currentStep}</p>
 			<p>Can go to previous step {canGoToPrevStep ? "yes" : "no"}</p>
 			<p>Can go to next step {canGoToNextStep ? "yes" : "no"}</p>
@@ -35,6 +35,6 @@ export function PreviewUseStep() {
 			>
 				Set to step 3
 			</button>
-		</>
+		</div>
 	);
 }

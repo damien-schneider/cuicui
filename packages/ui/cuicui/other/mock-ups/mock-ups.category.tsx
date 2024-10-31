@@ -3,9 +3,9 @@ import type { CategoryType } from "@/lib/types/component";
 
 import { Airpods } from "@/cuicui/other/mock-ups/airpods/airpods";
 import { AirpodsPro } from "@/cuicui/other/mock-ups/airpods/airpods-pro";
-import MacbookVariant1 from "@/cuicui/other/mock-ups/laptops/variant1";
 import { GooglePixelVariant1 } from "@/cuicui/other/mock-ups/smartphone/variant1";
 import { Iphone14ProVariant2 } from "@/cuicui/other/mock-ups/smartphone/variant2";
+import { PreviewMackbook } from "@/cuicui/other/mock-ups/laptops/preview.mackbook";
 
 export const mockUpsCategory: CategoryType = {
 	slug: "mock-ups",
@@ -54,8 +54,9 @@ export const mockUpsCategory: CategoryType = {
 			variantList: [
 				{
 					name: "Macbook Pro",
-					component: <MacbookVariant1 />,
-					slugPreviewFile: "variant1",
+					component: <PreviewMackbook />,
+					slugPreviewFile: "preview.mackbook",
+					slugComponentFile: "component.mackbook",
 				},
 			],
 			inspiration: "Devices CSS",
