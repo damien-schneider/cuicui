@@ -12,10 +12,11 @@ const font = DM_Sans({
 	display: "swap",
 	variable: "--font-dm-sans",
 });
+
+const { NEXT_PUBLIC_SITE_URL } = process.env;
+
 export const metadata: Metadata = {
-	metadataBase: new URL(
-		process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.cuicui.day",
-	),
+	metadataBase: new URL(NEXT_PUBLIC_SITE_URL ?? "https://www.cuicui.day"),
 	title: {
 		default:
 			"CuiCui | High-Quality React and Tailwind Components for Copy-Paste",
