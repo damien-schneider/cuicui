@@ -38,14 +38,6 @@ export const metadata: Metadata = {
 		type: "website",
 		locale: "en",
 		siteName: "CuiCui",
-		images: [
-			{
-				url: "/metadata/opengraph-image.png",
-				width: 1200,
-				height: 630,
-				alt: "A preview of CuiCui's website with a sentence saying 'SaaS ready Copy-Paste React Components'.",
-			},
-		],
 	},
 	twitter: {
 		card: "summary_large_image",
@@ -54,12 +46,6 @@ export const metadata: Metadata = {
 		title: "CuiCui | High-Quality React and Tailwind Components for Copy-Paste",
 		description:
 			"CuiCui is a modern UI copy paste library that helps you build beautiful websites and applications as easy as copy paste.",
-		images: [
-			{
-				url: "/metadata/opengraph-image.png",
-				alt: "A preview of CuiCui's website with a sentence saying 'SaaS ready Copy-Paste React Components'.",
-			},
-		],
 	},
 };
 
