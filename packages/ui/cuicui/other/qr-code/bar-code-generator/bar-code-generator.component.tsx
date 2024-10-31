@@ -15,6 +15,6 @@ export const BarCodeGeneratorComponent: ComponentType = {
 			name: "Bar Code Generator",
 		},
 	],
-	isIframed: false,
+
 	lastUpdatedDateComponent: new Date("2024-09-14"),
 };

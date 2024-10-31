@@ -18,8 +18,6 @@ export const patternsCategory: CategoryType = {
 		{
 			sizePreview: "sm",
 			slug: "dots-pattern",
-			isIframed: false,
-			isChildUsingHeightFull: true,
 			name: "Simple dots pattern",
 			description:
 				"Create a simple dots pattern without images, just with CSS and HTML for better performance, SEO and accessibility & also more micro-interactions",
@@ -39,8 +37,6 @@ export const patternsCategory: CategoryType = {
 		{
 			sizePreview: "sm",
 			slug: "moving-bands",
-			isIframed: false,
-			isChildUsingHeightFull: true,
 			lastUpdatedDateComponent: new Date("2024-09-10"),
 			name: "Moving bands pattern",
 			description:

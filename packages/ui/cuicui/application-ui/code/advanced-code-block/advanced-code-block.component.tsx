@@ -3,7 +3,6 @@ import PreviewAdvancedCodeBlock from "@/cuicui/application-ui/code/advanced-code
 import PreviewAdvancedCodeBlockTabVariant from "@/cuicui/application-ui/code/advanced-code-block/preview-advanced-code-block-tab-variant";
 
 export const advancedCodeBlockComponent: ComponentType = {
-	isIframed: false,
 	sizePreview: "sm",
 	slug: "advanced-code-block",
 

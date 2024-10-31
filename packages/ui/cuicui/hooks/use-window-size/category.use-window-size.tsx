@@ -16,8 +16,6 @@ export const useWindowSizeCategory: SingleComponentCategoryType = {
 		lastUpdatedDateComponent: new Date("2024-08-28"),
 		sizePreview: "sm",
 
-		isIframed: false,
-
 		variantList: [
 			{
 				name: "Default Variant",

@@ -20,10 +20,8 @@ export const mockUpsCategory: CategoryType = {
 	},
 	componentList: [
 		{
-			sizePreview: "lg",
+			sizePreview: "xl",
 			slug: "smartphone",
-			isIframed: true,
-			isChildUsingHeightFull: true,
 			name: "Smartphone mock-up",
 			description:
 				"Create a smartphone mock-up with CSS and HTML for better performance, SEO and accessibility & also more micro-interactions",
@@ -46,8 +44,6 @@ export const mockUpsCategory: CategoryType = {
 		{
 			sizePreview: "lg",
 			slug: "laptops",
-			isIframed: true,
-			isChildUsingHeightFull: true,
 			name: "Laptop mock-up",
 			description:
 				"Create a laptop mock-up with CSS and HTML for better performance",
@@ -64,18 +60,20 @@ export const mockUpsCategory: CategoryType = {
 			lastUpdatedDateComponent: new Date("2024-08-14"),
 		},
 		{
-			sizePreview: "lg",
+			sizePreview: "sm",
 			slug: "airpods",
-			isIframed: true,
 			lastUpdatedDateComponent: new Date("2024-09-10"),
-			isChildUsingHeightFull: true,
 			name: "Airpods mock-up",
 			description:
 				"Create a airpods mock-up with CSS and HTML for better performance",
 			variantList: [
 				{
 					name: "Airpods Pro",
-					component: <AirpodsPro />,
+					component: (
+						// <div className="grid place-content-center h-full">
+						<AirpodsPro />
+						//</div>
+					),
 					slugPreviewFile: "airpods-pro",
 				},
 				{

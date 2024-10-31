@@ -21,7 +21,7 @@ export const transitionWrappersCategory: CategoryType = {
 			name: "Blur appear",
 			description:
 				"A transition wrapper that makes a component appear with a blur effect",
-			isIframed: false,
+
 			sizePreview: "sm",
 			slug: "blur-appear",
 			variantList: [

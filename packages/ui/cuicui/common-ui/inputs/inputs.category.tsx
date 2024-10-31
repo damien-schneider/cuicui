@@ -28,7 +28,6 @@ export const inputsCategory: CategoryType = {
 			name: "Droppable File",
 			description:
 				"A file dropzone that shows a preview of the file when hovered.",
-			isIframed: false,
 		},
 		{
 			sizePreview: "sm",
@@ -45,7 +44,6 @@ export const inputsCategory: CategoryType = {
 			name: "Modern Simple Input",
 			description:
 				"A simple input that can be used in any project with any artistic style.",
-			isIframed: false,
 		},
 	],
 };

@@ -49,7 +49,7 @@ export const navigationCategory: CategoryType = {
 			name: "MacOS Dock",
 			description:
 				"A navigation menu with smooth animation as done on macOS but in a web browser!",
-			isIframed: false,
+
 			inspiration: "MacOS Dock",
 			lastUpdatedDateComponent: new Date("2024-06-17"),
 		},

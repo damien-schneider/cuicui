@@ -87,7 +87,7 @@ export default function ComponentTabRenderer({
 					}
 				})}
 			</Tabs.List>
-			<Tabs.Content value="preview">
+			<Tabs.Content value="preview" asChild>
 				{isResizable ? (
 					<ResizablePanelGroup
 						className={cn(

@@ -17,7 +17,7 @@ export const themeCategory: CategoryType = {
 			slug: "theme-switcher",
 			name: "Theme Switcher",
 			description: "A theme switcher button.",
-			isIframed: false,
+
 			sizePreview: "xs",
 			variantList: [
 				{

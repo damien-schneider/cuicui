@@ -4,7 +4,7 @@ import PreviewUseMouse from "@/cuicui/hooks/use-mouse/preview-use-mouse";
 export const useMouseComponent: ComponentType = {
 	sizePreview: "xs",
 	slug: "hook",
-	isIframed: false,
+
 	variantList: [
 		{
 			name: "Default",

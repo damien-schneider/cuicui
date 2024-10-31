@@ -59,7 +59,7 @@ export const buttonsCategory: CategoryType = {
 					slugComponentFile: "before-effect-button",
 				},
 			],
-			isIframed: false,
+
 			lastUpdatedDateComponent: new Date("2024-08-10"),
 		},
 		{

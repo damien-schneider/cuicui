@@ -4,7 +4,7 @@ import { PreviewAdvancedBottomActionMenu } from "@/cuicui/application-ui/action-
 export const advancedBottomActionMenuComponent: ComponentType = {
 	name: "Advanced bottom action menu",
 	description: "An advanced bottom action menu",
-	isIframed: false,
+
 	sizePreview: "md",
 	slug: "advanced-bottom-action-menu",
 	lastUpdatedDateComponent: new Date("2024-09-28"),

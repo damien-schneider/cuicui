@@ -39,7 +39,7 @@ export const marketingUiComponentList: CategoryType[] = [
 				sizePreview: "md",
 				slug: "simple-carousel",
 				lastUpdatedDateComponent: new Date("2024-09-10"),
-				isIframed: false,
+
 				variantList: [
 					{
 						name: "Simple Carousel",
@@ -195,6 +195,7 @@ export const marketingUiComponentList: CategoryType[] = [
 		},
 		componentList: [
 			{
+				isResizable: true,
 				lastUpdatedDateComponent: new Date("2024-07-17"),
 				sizePreview: "md",
 				slug: "testimonials-component",

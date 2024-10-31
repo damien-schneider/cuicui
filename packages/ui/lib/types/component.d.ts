@@ -5,21 +5,21 @@ import type { ComponentBadgeList } from "../badges.const";
 export type Variant = `variant${number}`;
 
 export type ProcessVariantType = {
-  name: string;
-  component: JSX.Element;
-  previewCode: string;
-  componentCode?: string;
+	name: string;
+	component: JSX.Element;
+	previewCode: string;
+	componentCode?: string;
 };
 
 export type ComponentBadgeSlug = (typeof ComponentBadgeList)[number]["slug"];
 
 export type FrameworkBadge =
-  | "react"
-  | "vue"
-  | "svelte"
-  | "angular"
-  | "web-components"
-  | "next";
+	| "react"
+	| "vue"
+	| "svelte"
+	| "angular"
+	| "web-components"
+	| "next";
 
 export type ComponentHeightType = "xs" | "sm" | "md" | "lg" | "xl";
 
@@ -30,9 +30,9 @@ export type ComponentHeightType = "xs" | "sm" | "md" | "lg" | "xl";
 */
 
 export type PreviewComponent = {
-  component: ReactNode;
-  previewScale: number;
-  previewImage?: StaticImageData;
+	component: ReactNode;
+	previewScale: number;
+	previewImage?: StaticImageData;
 };
 
 /*
@@ -43,35 +43,35 @@ export type PreviewComponent = {
 
 // Base interface for common properties
 interface BaseSectionType {
-  name: string;
-  slug: string;
-  description: string;
-  icon: LucideIcon;
+	name: string;
+	slug: string;
+	description: string;
+	icon: LucideIcon;
 }
 
 // Section with single-component type
 interface SingleComponentSectionType extends BaseSectionType {
-  type: "single-component";
-  categoriesList: SingleComponentCategoryType[];
+	type: "single-component";
+	categoriesList: SingleComponentCategoryType[];
 }
 
 // Section with multi-component type
 interface MultiComponentSectionType extends BaseSectionType {
-  type: "multiple-component";
-  categoriesList: CategoryType[];
+	type: "multiple-component";
+	categoriesList: CategoryType[];
 }
 
 // Section with page type
 interface PageSectionType extends BaseSectionType {
-  type: "page";
-  pageList: PageCategoryType[];
+	type: "page";
+	pageList: PageCategoryType[];
 }
 
 // Union type for SectionType
 export type SectionType =
-  | SingleComponentSectionType
-  | MultiComponentSectionType
-  | PageSectionType;
+	| SingleComponentSectionType
+	| MultiComponentSectionType
+	| PageSectionType;
 
 /*
 ------------------------------------
@@ -80,33 +80,33 @@ export type SectionType =
 */
 
 type CategoryType = {
-  slug: string;
-  name: string;
-  description: string;
-  icon: LucideIcon;
-  comingSoonCategory?: boolean;
-  releaseDateCategory: Date;
-  previewCategory?: PreviewComponent;
-  componentList: ComponentType[] | null;
+	slug: string;
+	name: string;
+	description: string;
+	icon: LucideIcon;
+	comingSoonCategory?: boolean;
+	releaseDateCategory: Date;
+	previewCategory?: PreviewComponent;
+	componentList: ComponentType[] | null;
 };
 
 type SingleComponentCategoryType = {
-  slug: string;
-  name: string;
-  description: string;
-  icon: LucideIcon;
-  comingSoonCategory?: boolean;
-  releaseDateCategory: Date;
-  previewCategory?: PreviewComponent;
-  component: SingleComponentType | null;
+	slug: string;
+	name: string;
+	description: string;
+	icon: LucideIcon;
+	comingSoonCategory?: boolean;
+	releaseDateCategory: Date;
+	previewCategory?: PreviewComponent;
+	component: SingleComponentType | null;
 };
 
 type PageCategoryType = {
-  slug: string;
-  name: string;
-  icon: LucideIcon;
-  description: string;
-  component: JSX.Element;
+	slug: string;
+	name: string;
+	icon: LucideIcon;
+	description: string;
+	component: JSX.Element;
 };
 
 /*
@@ -116,32 +116,30 @@ type PageCategoryType = {
 */
 
 export type ComponentType = {
-  name: string;
-  description: string;
-  lastUpdatedDateComponent: Date;
-  isResizable?: boolean;
-  componentBadges?: ComponentBadgeSlug[];
-  isIframed?: boolean;
-  rerenderButton?: boolean;
-  isChildUsingHeightFull?: boolean;
-  inspiration?: string;
-  inspirationLink?: string;
-  sizePreview: ComponentHeightType;
-  slug: string;
-  variantList: VariantType[];
+	name: string;
+	description: string;
+	lastUpdatedDateComponent: Date;
+	isResizable?: boolean;
+	componentBadges?: ComponentBadgeSlug[];
+	isIframed?: boolean;
+	rerenderButton?: boolean;
+	inspiration?: string;
+	inspirationLink?: string;
+	sizePreview: ComponentHeightType;
+	slug: string;
+	variantList: VariantType[];
 };
 
 export type SingleComponentType = {
-  lastUpdatedDateComponent?: Date;
-  isResizable?: boolean;
-  componentBadges?: ComponentBadgeSlug[];
-  isIframed?: boolean;
-  rerenderButton?: boolean;
-  isChildUsingHeightFull?: boolean;
-  inspiration?: string;
-  inspirationLink?: string;
-  sizePreview: ComponentHeightType;
-  variantList: VariantType[];
+	lastUpdatedDateComponent?: Date;
+	isResizable?: boolean;
+	componentBadges?: ComponentBadgeSlug[];
+	isIframed?: boolean;
+	rerenderButton?: boolean;
+	inspiration?: string;
+	inspirationLink?: string;
+	sizePreview: ComponentHeightType;
+	variantList: VariantType[];
 };
 
 /*
@@ -151,8 +149,8 @@ export type SingleComponentType = {
 */
 
 export type VariantType = {
-  name: string;
-  component: JSX.Element;
-  slugComponentFile?: string;
-  slugPreviewFile: string;
+	name: string;
+	component: JSX.Element;
+	slugComponentFile?: string;
+	slugPreviewFile: string;
 };

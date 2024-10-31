@@ -6,7 +6,6 @@ export const bottomBlurOutComponent: ComponentType = {
 	slug: "bottom-blur-out",
 	isResizable: false,
 	isIframed: true,
-	isChildUsingHeightFull: true,
 	name: "Bottom blur out disapearance effect",
 	description:
 		"A bottom blur out effect that can be used in any project with any artisitic style",

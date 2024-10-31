@@ -30,6 +30,7 @@ export const ComponentWrapper = ({
 		return (
 			<ScrollArea className={cn(getContainerHeightClass({ size }))}>
 				<ScrollAreaViewport
+					asChild
 					className={cn(
 						"*:h-full", // Mandatory for children to take full height
 						"relative",

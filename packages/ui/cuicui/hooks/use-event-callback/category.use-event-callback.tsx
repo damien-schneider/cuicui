@@ -15,7 +15,7 @@ export const useEventCallbackCategory: SingleComponentCategoryType = {
 	component: {
 		lastUpdatedDateComponent: new Date("2024-09-28"),
 		sizePreview: "sm",
-		isIframed: false,
+
 		variantList: [
 			{
 				name: "variant 1",

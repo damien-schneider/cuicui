@@ -30,7 +30,7 @@ export const tableOfContentCategory: CategoryType = {
 				},
 			],
 			isResizable: false,
-			isIframed: false,
+
 			inspiration: "Modul",
 			inspirationLink: "https://www.modul.day",
 		},
