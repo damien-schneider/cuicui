@@ -15,7 +15,11 @@ import {
 	ResizablePanel,
 	ResizablePanelGroup,
 } from "#/src/ui/shadcn/resizable";
-import { ScrollArea, ScrollBar } from "#/src/ui/shadcn/scrollarea";
+import {
+	ScrollArea,
+	ScrollAreaViewport,
+	ScrollBar,
+} from "#/src/ui/shadcn/scrollarea";
 import { cn } from "#/src/utils/cn";
 import { getContainerHeightClass } from "#/src/components/component-wrapper/get-container-height-class";
 const tabs = [
@@ -143,16 +147,17 @@ export default function ComponentTabRenderer({
 
 									getContainerHeightClass({ size }),
 								)}
-								classNameViewport="p-3"
 							>
-								<ScrollBar orientation="vertical" />
-								<ScrollBar orientation="horizontal" />
-								{tab === "code-preview" && (
-									<CodeHighlighter code={previewCode} />
-								)}
-								{tab === "code-component" && componentCode && (
-									<CodeHighlighter code={componentCode} />
-								)}
+								<ScrollAreaViewport className="p-3">
+									<ScrollBar orientation="vertical" />
+									<ScrollBar orientation="horizontal" />
+									{tab === "code-preview" && (
+										<CodeHighlighter code={previewCode} />
+									)}
+									{tab === "code-component" && componentCode && (
+										<CodeHighlighter code={componentCode} />
+									)}
+								</ScrollAreaViewport>
 							</ScrollArea>
 							{tab === "code-preview" && (
 								<StepToInstall code={previewCode ?? ""} />
