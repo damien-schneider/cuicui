@@ -5,7 +5,7 @@ import DynamicCardsVariant1 from "@/cuicui/other/cursors/dynamic-cards/only-bord
 export const cardHoverCursorEffectComponent: ComponentType = {
 	sizePreview: "md",
 	slug: "dynamic-cards",
-	isIframed: false,
+
 	name: "Grid with cursor following border",
 	description: "A grid of cards with a cursor following border effect",
 

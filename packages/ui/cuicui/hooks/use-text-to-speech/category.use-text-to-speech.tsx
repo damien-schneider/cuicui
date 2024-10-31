@@ -17,7 +17,7 @@ export const useTextToSpeechCategory: SingleComponentCategoryType = {
 	component: {
 		lastUpdatedDateComponent: new Date("2024-10-06"),
 		sizePreview: "lg",
-		isIframed: false,
+
 		variantList: [
 			{
 				name: "With highlight",

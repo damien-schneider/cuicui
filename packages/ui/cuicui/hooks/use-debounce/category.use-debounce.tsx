@@ -15,7 +15,7 @@ export const useDebounceCategory: SingleComponentCategoryType = {
 	component: {
 		lastUpdatedDateComponent: new Date("2024-09-16"),
 		sizePreview: "lg",
-		isIframed: false,
+
 		variantList: [
 			{
 				name: "variant 1",

@@ -16,7 +16,7 @@ export const useClickOutsideCategory: SingleComponentCategoryType = {
 	component: {
 		lastUpdatedDateComponent: new Date("2024-10-15"),
 		sizePreview: "xl",
-		isIframed: false,
+
 		variantList: [
 			{
 				name: "Default",

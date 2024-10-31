@@ -2,7 +2,6 @@ import type { ComponentType } from "@/lib/types/component";
 import { CodeCardPreview } from "@/cuicui/application-ui/code/code-card/code-card-preview";
 
 export const codeCardComponent: ComponentType = {
-	isIframed: false,
 	sizePreview: "md",
 	slug: "code-card",
 	lastUpdatedDateComponent: new Date("2024-08-29"),

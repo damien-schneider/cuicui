@@ -29,7 +29,7 @@ export const cardsCategory: CategoryType = {
 					slugPreviewFile: "variant1",
 				},
 			],
-			isIframed: false,
+
 			componentBadges: ["better-in-dark-mode"],
 			lastUpdatedDateComponent: new Date("2024-08-10"),
 		},

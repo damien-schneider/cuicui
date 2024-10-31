@@ -5,19 +5,18 @@ import type { ComponentHeightType } from "#/src/lib/types/component";
 import { cn } from "#/src/utils/cn";
 import { getContainerHeightClass } from "#/src/components/component-wrapper/get-container-height-class";
 import { RefreshCwIcon } from "lucide-react";
+import { ScrollArea, ScrollAreaViewport } from "#/src/ui/shadcn/scrollarea";
 
 export const ComponentWrapper = ({
 	isIframed = true,
 	size,
 	renderButton = false,
 	children,
-	isChildUsingHeightFull,
 }: {
 	renderButton?: boolean;
 	isIframed: boolean;
 	size: ComponentHeightType;
 	children: ReactNode;
-	isChildUsingHeightFull?: boolean;
 }) => {
 	const [reRender, setReRender] = useState(false);
 
@@ -29,23 +28,33 @@ export const ComponentWrapper = ({
 
 	if (!isIframed) {
 		return (
-			<div
-				className={cn(
-					"relative flex h-full w-full items-center justify-center overflow-hidden",
-					isChildUsingHeightFull && "flex-col *:flex-1",
-					getContainerHeightClass({ size }),
-				)}
-			>
-				{renderButton && <RerenderButton onClick={() => setReRender(true)} />}
+			<ScrollArea className={cn(getContainerHeightClass({ size }))}>
+				<ScrollAreaViewport
+					className={cn(
+						"*:h-full", // Mandatory for children to take full height
+						"relative",
+						"rounded-md border border-neutral-500/20 bg-neutral-50 dark:bg-[#101010]",
+					)}
+				>
+					{renderButton && <RerenderButton onClick={() => setReRender(true)} />}
 
-				{!reRender && children}
-			</div>
+					{/* For centering child */}
+					{/* Grid doesn't work here as the child isn't center even with place-content-center -> It create weird width behaviour */}
+					<div className="flex flex-col items-center justify-center h-full w-full">
+						{!reRender && children}
+					</div>
+				</ScrollAreaViewport>
+			</ScrollArea>
 		);
 	}
 
 	return (
 		<CustomIframe
-			className={cn("w-full", getContainerHeightClass({ size }))}
+			className={cn(
+				"w-full relative",
+				"rounded-md border border-neutral-500/20 bg-neutral-50 dark:bg-[#101010]",
+				getContainerHeightClass({ size }),
+			)}
 			size={size}
 		>
 			{renderButton && <RerenderButton onClick={() => setReRender(true)} />}

@@ -12,7 +12,7 @@ export const useStepCategory: SingleComponentCategoryType = {
 		rerenderButton: true,
 		lastUpdatedDateComponent: new Date("2024-09-26"),
 		sizePreview: "md",
-		isIframed: false,
+
 		variantList: [
 			{
 				name: "variant 1",

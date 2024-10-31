@@ -45,7 +45,6 @@ export default async function SingleComponentCategory({
 					title={category.name}
 				/>
 				<VariantTabs
-					isChildUsingHeightFull={component.isChildUsingHeightFull}
 					isIframed={component.isIframed}
 					isResizable={component.isResizable}
 					rerenderButton={component.rerenderButton}

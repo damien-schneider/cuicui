@@ -14,7 +14,7 @@ export const useCopyToClipboardCategory: SingleComponentCategoryType = {
 	},
 	component: {
 		sizePreview: "lg",
-		isIframed: false,
+
 		variantList: [
 			{
 				name: "variant 1",

@@ -3,7 +3,6 @@ import { PreviewRecursiveTree } from "@/cuicui/application-ui/tree/recursive-tre
 import { PreviewRecursiveTreeLessAnimations } from "@/cuicui/application-ui/tree/recursive-tree/preview-recursive-tree-less-animations";
 
 export const recursiveTreeComponent: ComponentType = {
-	isIframed: false,
 	sizePreview: "lg",
 	slug: "recursive-tree",
 	variantList: [

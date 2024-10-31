@@ -6,8 +6,7 @@ export const followCursorComponent: ComponentType = {
 	sizePreview: "sm",
 	slug: "follow-cursor",
 	isResizable: false,
-	isIframed: false,
-	isChildUsingHeightFull: true,
+
 	name: "Cursor following effect",
 	description:
 		"A cursor following effect that can be used in any project with any artisitic style",
