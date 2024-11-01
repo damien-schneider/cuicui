@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://github.com/damien-schneider/cuicui">
-     <img src="/public/metadata/banner-image.png" alt="Banner" />
+     <img src="/apps/website/public/metadata/banner-image.png" alt="Banner" />
   </a>
   <!-- <h1 align="left">CuiCui - A high quality react copy paste components library</h1> -->
   <hr></hr>
