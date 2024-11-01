@@ -64,4 +64,6 @@ visit this [Documentation](https://github.com/damien-schneider/cuicui/blob/main/
 
 We are using Gitmoji for our commit messages. You can find the rules at [gitmoji.dev](https://gitmoji.dev/)
 
-# Activity
+# Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=damien-schneider/cuicui&type=Date)](https://star-history.com/#damien-schneider/cuicui&Date)
