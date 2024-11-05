@@ -6,6 +6,7 @@ import { featuresCategory } from "@/cuicui/marketing-ui/features/category.featur
 import { statisticsCategory } from "@/cuicui/marketing-ui/statistics/category.statistics";
 import { testimonialsCategory } from "@/cuicui/marketing-ui/testimonials/category.testimonials";
 import { BadgePercentIcon } from "lucide-react";
+import { faqCategory } from "@/cuicui/marketing-ui/faq/category.faq";
 
 export const marketingUiSection: MultiComponentSectionType = {
 	type: "multiple-component",
@@ -15,6 +16,7 @@ export const marketingUiSection: MultiComponentSectionType = {
 	icon: BadgePercentIcon,
 	categoriesList: [
 		carouselsCategory,
+		faqCategory,
 		featuresCategory,
 		pricingTablesCategory,
 		statisticsCategory,
