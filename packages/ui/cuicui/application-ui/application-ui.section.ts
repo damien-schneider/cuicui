@@ -1,5 +1,8 @@
 import { AppWindowMacIcon } from "lucide-react";
-import type { SectionType } from "@/lib/types/component";
+import type {
+	MultiComponentSectionType,
+	SectionType,
+} from "@/lib/types/component";
 import { actionMenuCategory } from "@/cuicui/application-ui/action-menu/action-menu.category";
 import { alertCategory } from "@/cuicui/application-ui/alert/alert.category";
 import { authenticationCategory } from "@/cuicui/application-ui/authentication/authentication.category";
@@ -16,7 +19,7 @@ import { themeCategory } from "@/cuicui/application-ui/theme/theme.category";
 import { treeCategory } from "@/cuicui/application-ui/tree/tree.category";
 import { notificationCategory } from "@/cuicui/application-ui/notification/category.notification";
 
-export const applicationUiCategoryList: SectionType = {
+export const applicationUiSection: MultiComponentSectionType = {
 	type: "multiple-component",
 	name: "Application UI",
 	slug: "application-ui",

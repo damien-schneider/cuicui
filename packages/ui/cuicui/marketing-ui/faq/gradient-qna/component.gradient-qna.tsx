@@ -1,7 +1,7 @@
 import type { ComponentType } from "@/lib/types/component";
-import CustomChevronStyleGradientQnA from "@/cuicui/marketing-ui/testimonials/gradient-qna/custom-chevron-style";
-import DoubleContainerGradientQna from "@/cuicui/marketing-ui/testimonials/gradient-qna/double-container";
-import SimpleContainerGradientQna from "@/cuicui/marketing-ui/testimonials/gradient-qna/simple-container";
+import CustomChevronStyleGradientQnA from "@/cuicui/marketing-ui/faq/gradient-qna/custom-chevron-style";
+import DoubleContainerGradientQna from "@/cuicui/marketing-ui/faq/gradient-qna/double-container";
+import SimpleContainerGradientQna from "@/cuicui/marketing-ui/faq/gradient-qna/simple-container";
 
 export const gradientQnaComponent: ComponentType = {
 	lastUpdatedDateComponent: new Date("2024-07-17"),
