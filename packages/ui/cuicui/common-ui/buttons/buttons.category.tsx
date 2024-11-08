@@ -7,6 +7,8 @@ import GrowingButtonVariant1 from "@/cuicui/common-ui/buttons/growing-button/var
 import ModernAnimatedButtonVariant1 from "@/cuicui/common-ui/buttons/modern-animated-button/variant1";
 
 import { PreviewShinyRotatingBorderButton } from "@/cuicui/common-ui/buttons/shiny-rotating-border-button/preview.shiny-rotating-border-button";
+import PreviewMagneticButton from "@/cuicui/common-ui/buttons/magnetic-button/preview.magnetic-button";
+import { PreviewMagneticBackgroundButton } from "@/cuicui/common-ui/buttons/magnetic-button/preview.magnetic-background-button";
 
 export const buttonsCategory: CategoryType = {
 	slug: "buttons",
@@ -19,6 +21,27 @@ export const buttonsCategory: CategoryType = {
 		previewScale: 1.5,
 	},
 	componentList: [
+		{
+			slug: "magnetic-button",
+			name: "Magnetic Button",
+			description: "Button with a magnetic effect.",
+			sizePreview: "sm",
+			variantList: [
+				{
+					name: "Magnetic Background",
+					component: <PreviewMagneticBackgroundButton />,
+					slugPreviewFile: "preview.magnetic-background-button",
+					slugComponentFile: "component.magnetic-background-button",
+				},
+				{
+					name: "Magnetic Button",
+					component: <PreviewMagneticButton />,
+					slugPreviewFile: "preview",
+					slugComponentFile: "component",
+				},
+			],
+			lastUpdatedDateComponent: new Date("2024-08-11"),
+		},
 		{
 			slug: "growing-button",
 			name: "Button",
@@ -39,6 +62,7 @@ export const buttonsCategory: CategoryType = {
 			name: "Dynamic button hover effect",
 			description: "Button with a hover effect that has a 'before' effect.",
 			sizePreview: "xs",
+			isIframed: true,
 			variantList: [
 				{
 					name: "Hover only",
