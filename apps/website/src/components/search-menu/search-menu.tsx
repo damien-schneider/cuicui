@@ -65,40 +65,6 @@ export function SearchMenu() {
 							/>
 						);
 					})}
-					{/* {SectionsList.map((section) => {
-            if (section.type !== "multiple-component") {
-              return;
-            }
-            return (
-              <CommandGroup
-                heading={`${section.name} components`}
-                key={section.slug}
-              >
-                {section.categoriesList.map((category) => {
-                  return category.componentList?.map((component) => {
-                    const Icon = category.icon;
-                    return (
-                      <CommandItem
-                        key={component.slug}
-                        onSelect={() => {
-                          router.push(
-                            `/${section.slug}/${category.slug}#${component.slug}`,
-                          );
-                          setOpen(false);
-                        }}
-                      >
-                        {Icon && (
-                          <Icon className="mr-1 size-2 text-neutral-400" />
-                        )}
-
-                        <span>{component.title}</span>
-                      </CommandItem>
-                    );
-                  });
-                })}
-              </CommandGroup>
-            );
-          })} */}
 				</CommandList>
 			</CommandDialog>
 		</>
