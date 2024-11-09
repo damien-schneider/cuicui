@@ -20,12 +20,11 @@ describe("Sidemenu component", () => {
 		</div>,
 	);
 
-	it("should have href attribute of the 'Contribute' element set to https://cuicui.featurebase.app/", () => {
+	it("should have href attribute of the 'Contribute' element set to https://github.com/damien-schneider/cuicui", () => {
 		const contributeElement = screen.getByTestId("navigation-link-Contribute");
 
-		// Check if the href attribute of the 'Contribute' element is https://cuicui.featurebase.app/
 		const hrefValue = contributeElement.getAttribute("href");
-		expect(hrefValue).toBe("https://cuicui.featurebase.app/");
+		expect(hrefValue).toBe("https://github.com/damien-schneider/cuicui");
 	});
 	it("should have href attribute of the 'Getting started' element to finish by getting-started", () => {
 		const contributeElement = screen.getByTestId(
