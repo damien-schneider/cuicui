@@ -1,4 +1,4 @@
-import { CUICUI_GITHUB_URL } from "@/lib/site.const";
+import { CUICUI_GITHUB_URL } from "#/src/lib/site.const";
 
 export const firstMenuSection = {
 	name: "Info",

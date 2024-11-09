@@ -8,7 +8,7 @@ import { cn } from "../../utils/cn";
 import Byline from "../../ui/byline";
 
 import { ScrollArea, ScrollAreaViewport } from "../../ui/shadcn/scrollarea";
-import StarGithubProjectButton from "../../ui/star-github-project-button";
+import StarCuicuiGithubButton from "../../ui/star-github-project-button";
 import { SearchMenu } from "../search-menu/search-menu";
 import NavigationMenu from "./navigation-menu";
 import InfoMenuList from "#/src/components/navigation/info-menu-list";
@@ -36,7 +36,7 @@ export function DesktopSideMenu({
 						</span>
 					</Link>
 				</div>
-				<StarGithubProjectButton />
+				<StarCuicuiGithubButton />
 			</div>
 			<InfoMenuList />
 			<ScrollArea className="w-full h-full mt-4">

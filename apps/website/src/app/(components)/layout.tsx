@@ -1,7 +1,7 @@
 import { DesktopSideMenu } from "#/src/components/navigation/desktop-menu";
 
 import { AddressBar } from "#/src/ui/address-bar";
-import StarGithubProjectButton from "#/src/ui/star-github-project-button";
+import StarCuicuiGithubButton from "#/src/ui/star-github-project-button";
 import type React from "react";
 
 export default function ComponentsLayout({
@@ -21,7 +21,7 @@ export default function ComponentsLayout({
 				</main>
 
 				<div className="flex sm:hidden fixed bottom-6 left-2">
-					<StarGithubProjectButton />
+					<StarCuicuiGithubButton />
 				</div>
 			</div>
 		</div>

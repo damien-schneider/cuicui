@@ -1,5 +1,3 @@
-import Link from "next/link";
-import { CUICUI_GITHUB_URL } from "@/lib/site.const";
 import ColorConverter from "@/cuicui/tools/color-converter/components/color-converter";
 
 export function PageColorConverter() {
@@ -46,19 +44,6 @@ export function PageColorConverter() {
 							the Delta E score exceeds the threshold of 1.
 						</li>
 					</ol>
-				</section>
-
-				{/* Open Source Section */}
-				<section>
-					<h2>Open Source</h2>
-					<p>
-						<strong>CuiCui</strong> is open-sourced! Contribute to the project
-						or customize it to fit your needs by visiting our{" "}
-						<Link href={CUICUI_GITHUB_URL} title="CuiCui GitHub Repository">
-							GitHub repository
-						</Link>
-						.
-					</p>
 				</section>
 			</div>
 		</>

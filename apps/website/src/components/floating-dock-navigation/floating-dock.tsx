@@ -4,8 +4,9 @@ import { FloatingDock } from "#/src/components/floating-dock-navigation/floating
 import { ArrowUpRightIcon, GithubIcon } from "lucide-react";
 import { cn } from "#/src/utils/cn";
 import Link from "next/link";
-import { CUICUI_GITHUB_URL } from "@/lib/site.const";
+
 import { FloatingDockToggleTheme } from "#/src/components/floating-dock-navigation/floating-dock-toggle-theme";
+import { CUICUI_GITHUB_URL } from "#/src/lib/site.const";
 
 const sectionLinks = SectionsList.map((section) => {
 	return {
