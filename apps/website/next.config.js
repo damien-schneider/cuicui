@@ -3,7 +3,7 @@ const nextConfig = {
 	// experimental: {
 	//   serverComponentsExternalPackages: ["shiki", "vscode-oniguruma"],
 	// },
-	transpilePackages: ["shiki"],
+	transpilePackages: ["shiki", "next-mdx-remote"],
 	images: {
 		remotePatterns: [
 			{

@@ -19,6 +19,7 @@ export default function GithubEditButton({
 			// Example : https://github.com/damien-schneider/cuicui/tree/main/src/ui/cuicui/other/creative-effects/animated-noise
 			href={`${CUICUI_GITHUB_URL}/tree/main/packages/ui/cuicui/${sectionSlug}/${categorySlug}/${componentSlug ? componentSlug : ""}`}
 			className="text-sm text-neutral-500 hover:text-neutral-500/50 hover:underline font-medium tracking-tight"
+			title={`Edit ${componentSlug ?? categorySlug} on Github`}
 		>
 			Edit on Github
 		</Link>

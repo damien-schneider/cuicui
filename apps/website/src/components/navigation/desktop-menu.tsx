@@ -37,7 +37,6 @@ export function DesktopSideMenu({
 					</Link>
 				</div>
 				<StarGithubProjectButton />
-				<SearchMenu />
 			</div>
 			<InfoMenuList />
 			<ScrollArea className="w-full h-full mt-4">
@@ -45,7 +44,8 @@ export function DesktopSideMenu({
 					<NavigationMenu />
 				</ScrollAreaViewport>
 			</ScrollArea>
-			<Byline className="w-full" />
+			<SearchMenu className="mb-2" />
+			<Byline />
 		</div>
 	);
 }

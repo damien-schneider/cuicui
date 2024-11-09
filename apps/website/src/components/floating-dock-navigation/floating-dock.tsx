@@ -27,6 +27,7 @@ export function CuicuiFloatingDock() {
 		>
 			<Link
 				href={CUICUI_GITHUB_URL}
+				title="Damien Schneider GitHub"
 				className={cn(
 					"group relative h-14 w-10 ml-2 overflow-hidden rounded-full bg-neutral-50 dark:bg-neutral-900 p-2 border border-neutral-500/20",
 					"hover:scale-110 transform-gpu transition-transform duration-150",

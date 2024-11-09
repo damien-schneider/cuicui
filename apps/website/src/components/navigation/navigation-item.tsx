@@ -1,14 +1,9 @@
 "use client";
-import {
-	ArrowUpRightIcon,
-	ChevronRightIcon,
-	type LucideIcon,
-} from "lucide-react";
+import { ArrowUpRightIcon } from "lucide-react";
 import Link from "next/link";
 import { usePathname, useSelectedLayoutSegments } from "next/navigation";
 import type { AnchorHTMLAttributes, ReactNode } from "react";
-import GradientContainer from "#/src/ui/gradient-container";
-import GradientText from "#/src/ui/gradient-text";
+
 import { cn } from "#/src/utils/cn";
 import type { SectionType } from "#/src/lib/types/component";
 
@@ -49,6 +44,7 @@ export function GlobalNavItem({
 			)}
 			data-testid={`navigation-link-${name}`}
 			href={href}
+			title={name}
 			target={target === "newWindow" ? "_blank" : undefined}
 			{...props}
 		>
@@ -61,13 +57,9 @@ export function GlobalNavItem({
 				</p>
 			</div>
 			{tag && (
-				<GradientContainer
-					classNameChild="text-xs px-1 py-0"
-					classNameParent=""
-					rounded="xs"
-				>
-					<GradientText className="text-xs">{tag}</GradientText>
-				</GradientContainer>
+				<p className="text-xs font-light tracking-tighter px-2 text-neutral-400 dark:text-neutral-500 border border-neutral-200 dark:border-neutral-800 rounded-full">
+					{tag}
+				</p>
 			)}
 
 			{target === "newWindow" && (

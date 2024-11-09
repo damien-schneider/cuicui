@@ -54,7 +54,10 @@ export function PageColorConverter() {
 					<p>
 						<strong>CuiCui</strong> is open-sourced! Contribute to the project
 						or customize it to fit your needs by visiting our{" "}
-						<Link href={CUICUI_GITHUB_URL}>GitHub repository</Link>.
+						<Link href={CUICUI_GITHUB_URL} title="CuiCui GitHub Repository">
+							GitHub repository
+						</Link>
+						.
 					</p>
 				</section>
 			</div>

@@ -70,7 +70,8 @@ export default ({
 				classNameParent,
 			)}
 			style={{
-				background: "linear-gradient(135deg, #3BC4F2, #7A69F9,#F26378,#F5833F)",
+				background:
+					"linear-gradient(135deg, #3BC4F2, #7A69F9, #F26378, #F5833F)",
 			}}
 			{...props}
 		>
