@@ -2,7 +2,7 @@ import type {
 	ComponentType,
 	SingleComponentType,
 	VariantType,
-} from "#/src/lib/types/component";
+} from "@cuicui/ui/lib/types/component";
 import { getFileContentAsString } from "#/src/utils/get-file-content-as-string";
 
 interface ProcessedVariant extends VariantType {

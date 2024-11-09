@@ -7,7 +7,7 @@ import VariantTabs from "#/src/components/component-wrapper/variant-tabs";
 import type {
 	SectionType,
 	SingleComponentCategoryType,
-} from "#/src/lib/types/component";
+} from "@cuicui/ui/lib/types/component";
 import GithubEditButton from "#/src/components/component-wrapper/github-edit-button";
 
 export default async function SingleComponentCategory({

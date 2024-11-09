@@ -3,7 +3,7 @@ import type {
 	PageCategoryType,
 	SectionType,
 	SingleComponentCategoryType,
-} from "#/src/lib/types/component";
+} from "@cuicui/ui/lib/types/component";
 
 // Function Overloads
 

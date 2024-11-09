@@ -4,7 +4,7 @@ import ComingSoonCard from "#/src/components/coming-soon";
 import HeaderComponent from "#/src/components/component-wrapper/header-component";
 import InspirationComponentFooter from "#/src/components/component-wrapper/inspiration-component-footer";
 import VariantTabs from "#/src/components/component-wrapper/variant-tabs";
-import type { CategoryType, SectionType } from "#/src/lib/types/component";
+import type { CategoryType, SectionType } from "@cuicui/ui/lib/types/component";
 import GithubEditButton from "#/src/components/component-wrapper/github-edit-button";
 
 export default async function MultipleComponentCategory({

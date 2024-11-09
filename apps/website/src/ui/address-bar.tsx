@@ -42,10 +42,10 @@ export function AddressBar() {
 	const pathname = usePathname();
 
 	return (
-		<div className="sticky top-0 z-20 p-2">
+		<div className="sticky top-0 z-20 p-2 pb-10 px-4 inset-x-0 overflow-x-hidden pointer-events-none">
 			<ModernGradientContainerRoot animationDurationInSeconds={30}>
 				<ModernGradientContainerContent>
-					<ScrollArea className="px-4 ">
+					<ScrollArea className="px-4 pointer-events-auto">
 						<ScrollAreaScrollbar orientation="horizontal" />
 						<div className="flex items-center px-2 py-1">
 							<Link2Icon className="inline-flex size-4 text-neutral-500/80" />

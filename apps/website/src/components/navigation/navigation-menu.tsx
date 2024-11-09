@@ -9,7 +9,7 @@ import { firstMenuSection } from "#/src/lib/first-menu-section";
 import type {
 	CategoryType,
 	SingleComponentCategoryType,
-} from "#/src/lib/types/component";
+} from "@cuicui/ui/lib/types/component";
 import { cn } from "#/src/utils/cn";
 
 export default function NavigationMenu({

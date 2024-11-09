@@ -1,4 +1,4 @@
-import type { ComponentHeightType } from "#/src/lib/types/component";
+import type { ComponentHeightType } from "@cuicui/ui/lib/types/component";
 
 export function getContainerHeightClass({
 	size,

@@ -1,4 +1,3 @@
-// biome-ignore lint/style/noNamespaceImport: <explanation>
 import * as Tabs from "@radix-ui/react-tabs";
 
 import "./full-component.css";
@@ -8,7 +7,7 @@ import StepToInstall from "#/src/components/steps-to-install/step-to-install";
 import type {
 	ComponentHeightType,
 	ProcessVariantType,
-} from "#/src/lib/types/component";
+} from "@cuicui/ui/lib/types/component";
 import CodeHighlighter from "#/src/ui/code-highlighter";
 import {
 	ResizableHandle,

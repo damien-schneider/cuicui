@@ -5,7 +5,7 @@ import { SectionsList } from "@cuicui/ui";
 import type {
 	CategoryType,
 	SingleComponentCategoryType,
-} from "#/src/lib/types/component";
+} from "@cuicui/ui/lib/types/component";
 import { findCategoryBySlug } from "#/src/utils/section-category-components-utils/find-category-by-slug";
 type Props = {
 	params: {

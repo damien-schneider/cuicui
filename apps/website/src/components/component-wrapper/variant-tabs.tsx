@@ -5,7 +5,7 @@ import { cn } from "#/src/utils/cn";
 import type {
 	ComponentHeightType,
 	ProcessVariantType,
-} from "../../lib/types/component";
+} from "@cuicui/ui/lib/types/component";
 
 export type TabType = "preview" | "code-component" | "code-preview";
 

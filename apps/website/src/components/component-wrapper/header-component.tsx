@@ -3,7 +3,7 @@ import { ComponentBadgeList } from "#/src/lib/badges.const";
 import type {
 	ComponentBadgeSlug,
 	FrameworkBadge,
-} from "#/src/lib/types/component";
+} from "@cuicui/ui/lib/types/component";
 import Badge from "#/src/ui/badge";
 
 export default function HeaderComponent({
