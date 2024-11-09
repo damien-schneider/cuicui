@@ -15,7 +15,7 @@ export const useLocationCategory: SingleComponentCategoryType = {
 	},
 	component: {
 		isResizable: true,
-		lastUpdatedDateComponent: new Date("2024-09-28"),
+
 		sizePreview: "xl",
 		variantList: [
 			{

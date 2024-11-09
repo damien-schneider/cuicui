@@ -39,7 +39,6 @@ export const mockUpsCategory: CategoryType = {
 			],
 			inspiration: "Devices CSS",
 			inspirationLink: "https://devicescss.xyz/phones.html#google-pixel-6-pro",
-			lastUpdatedDateComponent: new Date("2024-08-14"),
 		},
 		{
 			sizePreview: "lg",
@@ -57,12 +56,11 @@ export const mockUpsCategory: CategoryType = {
 			],
 			inspiration: "Devices CSS",
 			inspirationLink: "https://devicescss.xyz/laptops.html#macbook-pro",
-			lastUpdatedDateComponent: new Date("2024-08-14"),
 		},
 		{
 			sizePreview: "sm",
 			slug: "airpods",
-			lastUpdatedDateComponent: new Date("2024-09-10"),
+
 			name: "Airpods mock-up",
 			description:
 				"Create a airpods mock-up with CSS and HTML for better performance",

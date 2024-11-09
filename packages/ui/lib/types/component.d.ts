@@ -118,7 +118,6 @@ type PageCategoryType = {
 export type ComponentType = {
 	name: string;
 	description: string;
-	lastUpdatedDateComponent: Date;
 	isResizable?: boolean;
 	componentBadges?: ComponentBadgeSlug[];
 	isIframed?: boolean;
@@ -131,7 +130,6 @@ export type ComponentType = {
 };
 
 export type SingleComponentType = {
-	lastUpdatedDateComponent?: Date;
 	isResizable?: boolean;
 	componentBadges?: ComponentBadgeSlug[];
 	isIframed?: boolean;

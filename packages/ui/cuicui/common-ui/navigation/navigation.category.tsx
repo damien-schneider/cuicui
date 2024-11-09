@@ -34,7 +34,6 @@ export const navigationCategory: CategoryType = {
 			description:
 				"A smooth and simple navigation bar inspired by Vercel, with modern transitions and animations.",
 			isIframed: true,
-			lastUpdatedDateComponent: new Date("2024-06-17"),
 		},
 		{
 			sizePreview: "sm",
@@ -51,7 +50,6 @@ export const navigationCategory: CategoryType = {
 				"A navigation menu with smooth animation as done on macOS but in a web browser!",
 
 			inspiration: "MacOS Dock",
-			lastUpdatedDateComponent: new Date("2024-06-17"),
 		},
 	],
 };

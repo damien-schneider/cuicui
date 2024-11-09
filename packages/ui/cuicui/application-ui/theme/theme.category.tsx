@@ -26,7 +26,6 @@ export const themeCategory: CategoryType = {
 					slugPreviewFile: "theme-switcher-button",
 				},
 			],
-			lastUpdatedDateComponent: new Date("2024-08-10"),
 		},
 	],
 };

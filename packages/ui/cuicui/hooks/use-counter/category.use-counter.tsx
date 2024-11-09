@@ -13,7 +13,6 @@ export const useCounterCategory: SingleComponentCategoryType = {
 		previewScale: 1,
 	},
 	component: {
-		lastUpdatedDateComponent: new Date("2024-09-16"),
 		sizePreview: "lg",
 
 		variantList: [

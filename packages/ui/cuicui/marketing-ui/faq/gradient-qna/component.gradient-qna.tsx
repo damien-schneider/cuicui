@@ -4,7 +4,6 @@ import DoubleContainerGradientQna from "@/cuicui/marketing-ui/faq/gradient-qna/d
 import SimpleContainerGradientQna from "@/cuicui/marketing-ui/faq/gradient-qna/simple-container";
 
 export const gradientQnaComponent: ComponentType = {
-	lastUpdatedDateComponent: new Date("2024-07-17"),
 	sizePreview: "lg",
 	slug: "gradient-qna",
 	name: "Gradient Q&A",

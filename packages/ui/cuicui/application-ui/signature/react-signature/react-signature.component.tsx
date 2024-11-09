@@ -14,5 +14,4 @@ export const reactSignatureComponent: ComponentType = {
 			slugComponentFile: "react-signature",
 		},
 	],
-	lastUpdatedDateComponent: new Date("2024-09-24"),
 };

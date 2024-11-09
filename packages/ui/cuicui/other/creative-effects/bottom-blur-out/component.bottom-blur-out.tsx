@@ -17,5 +17,4 @@ export const bottomBlurOutComponent: ComponentType = {
 			slugComponentFile: "bottom-blur-out",
 		},
 	],
-	lastUpdatedDateComponent: new Date("2024-10-14"),
 };

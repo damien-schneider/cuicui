@@ -14,7 +14,7 @@ export const useBatteryCategory: SingleComponentCategoryType = {
 	},
 	component: {
 		rerenderButton: true,
-		lastUpdatedDateComponent: new Date("2024-09-16"),
+
 		sizePreview: "lg",
 
 		variantList: [

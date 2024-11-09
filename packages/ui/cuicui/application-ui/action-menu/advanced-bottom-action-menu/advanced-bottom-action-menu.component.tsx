@@ -7,7 +7,6 @@ export const advancedBottomActionMenuComponent: ComponentType = {
 
 	sizePreview: "md",
 	slug: "advanced-bottom-action-menu",
-	lastUpdatedDateComponent: new Date("2024-09-28"),
 
 	variantList: [
 		{

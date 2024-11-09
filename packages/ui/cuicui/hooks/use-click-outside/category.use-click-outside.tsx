@@ -14,7 +14,6 @@ export const useClickOutsideCategory: SingleComponentCategoryType = {
 		previewScale: 0.8,
 	},
 	component: {
-		lastUpdatedDateComponent: new Date("2024-10-15"),
 		sizePreview: "xl",
 
 		variantList: [

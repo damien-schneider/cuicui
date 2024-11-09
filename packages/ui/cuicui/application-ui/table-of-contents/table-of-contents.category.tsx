@@ -20,7 +20,7 @@ export const tableOfContentCategory: CategoryType = {
 			description:
 				"An advanced animated table of contents component highlighting every sections on the screen.",
 			sizePreview: "md",
-			lastUpdatedDateComponent: new Date("2024-08-28"),
+
 			variantList: [
 				{
 					name: "Default",

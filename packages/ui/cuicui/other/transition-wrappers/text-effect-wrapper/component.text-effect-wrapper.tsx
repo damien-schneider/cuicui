@@ -34,5 +34,4 @@ export const textEffectWrapperComponent: ComponentType = {
 			slugComponentFile: "text-effect-wrapper",
 		},
 	],
-	lastUpdatedDateComponent: new Date("2024-10-06"),
 };

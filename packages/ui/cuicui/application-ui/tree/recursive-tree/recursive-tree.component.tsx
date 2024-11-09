@@ -22,5 +22,4 @@ export const recursiveTreeComponent: ComponentType = {
 	name: "Recursive Tree",
 	description:
 		"A tree component with recursive children. Without any limit with animated collapse and without needing to know the depth or to specify parent component.",
-	lastUpdatedDateComponent: new Date("2024-09-14"),
 };

@@ -6,7 +6,6 @@ export const advancedCodeBlockComponent: ComponentType = {
 	sizePreview: "sm",
 	slug: "advanced-code-block",
 
-	lastUpdatedDateComponent: new Date("2024-09-24"),
 	variantList: [
 		{
 			name: "Default",

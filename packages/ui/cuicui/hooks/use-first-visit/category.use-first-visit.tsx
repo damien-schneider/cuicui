@@ -14,7 +14,6 @@ export const useFirstVisitCategory: SingleComponentCategoryType = {
 		previewScale: 0.8,
 	},
 	component: {
-		lastUpdatedDateComponent: new Date("2024-10-06"),
 		sizePreview: "md",
 		variantList: [
 			{

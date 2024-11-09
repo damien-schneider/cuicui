@@ -15,5 +15,4 @@ export const gridPatternComponent: ComponentType = {
 			slugPreviewFile: "grid-pattern",
 		},
 	],
-	lastUpdatedDateComponent: new Date("2024-10-15"),
 };

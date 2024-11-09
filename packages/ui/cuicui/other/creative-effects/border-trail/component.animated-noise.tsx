@@ -15,5 +15,4 @@ export const borderTrailComponent: ComponentType = {
 			component: <PreviewBorderTrail />,
 		},
 	],
-	lastUpdatedDateComponent: new Date("2024-10-15"),
 };

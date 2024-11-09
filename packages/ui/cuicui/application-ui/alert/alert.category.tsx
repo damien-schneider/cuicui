@@ -16,7 +16,6 @@ export const alertCategory: CategoryType = {
 	},
 	componentList: [
 		{
-			lastUpdatedDateComponent: new Date("2024-08-29"),
 			isIframed: true,
 			sizePreview: "sm",
 			slug: "simple-alert",
@@ -34,7 +33,6 @@ export const alertCategory: CategoryType = {
 			isIframed: true,
 			sizePreview: "sm",
 			slug: "modern-glassy-alert",
-			lastUpdatedDateComponent: new Date("2024-09-16"),
 			variantList: [
 				{
 					name: "Default",

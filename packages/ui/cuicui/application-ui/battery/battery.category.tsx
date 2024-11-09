@@ -14,8 +14,6 @@ export const batteryCategory: CategoryType = {
 	},
 	componentList: [
 		{
-			lastUpdatedDateComponent: new Date("2024-08-21"),
-
 			sizePreview: "sm",
 			slug: "battery-indicator",
 			variantList: [

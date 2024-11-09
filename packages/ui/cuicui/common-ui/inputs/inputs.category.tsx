@@ -17,7 +17,7 @@ export const inputsCategory: CategoryType = {
 		{
 			sizePreview: "sm",
 			slug: "droppable-file",
-			lastUpdatedDateComponent: new Date("2024-08-20"),
+
 			variantList: [
 				{
 					name: "Droppable Zone",
@@ -32,7 +32,7 @@ export const inputsCategory: CategoryType = {
 		{
 			sizePreview: "sm",
 			slug: "modern-simple-input",
-			lastUpdatedDateComponent: new Date("2024-09-16"),
+
 			variantList: [
 				{
 					name: "Variant 1",

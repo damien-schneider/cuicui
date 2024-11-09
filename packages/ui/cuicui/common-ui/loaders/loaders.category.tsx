@@ -40,8 +40,6 @@ export const loadersCategory: CategoryType = {
 			],
 			name: "Three Dot Simple Loader",
 			description: "A simple loader with three dots that bounce up and down.",
-
-			lastUpdatedDateComponent: new Date("2024-08-31"),
 		},
 		{
 			sizePreview: "sm",
@@ -65,8 +63,6 @@ export const loadersCategory: CategoryType = {
 			],
 			name: "Spinner Loader",
 			description: "A simple circular loader",
-
-			lastUpdatedDateComponent: new Date("2024-08-31"),
 		},
 	],
 };

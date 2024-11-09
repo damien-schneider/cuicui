@@ -14,7 +14,6 @@ export const searchBarsCategory: CategoryType = {
 	},
 	componentList: [
 		{
-			lastUpdatedDateComponent: new Date("2024-08-19"),
 			sizePreview: "xs",
 			slug: "growing-search",
 			variantList: [

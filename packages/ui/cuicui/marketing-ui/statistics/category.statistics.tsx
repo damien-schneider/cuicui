@@ -16,7 +16,6 @@ export const statisticsCategory: CategoryType = {
 	},
 	componentList: [
 		{
-			lastUpdatedDateComponent: new Date("2024-08-11"),
 			sizePreview: "sm",
 			slug: "animated-on-scroll",
 			isIframed: true,
@@ -32,7 +31,6 @@ export const statisticsCategory: CategoryType = {
 			],
 		},
 		{
-			lastUpdatedDateComponent: new Date("2024-08-11"),
 			sizePreview: "sm",
 			slug: "increase-to-value",
 			rerenderButton: true,
@@ -47,7 +45,6 @@ export const statisticsCategory: CategoryType = {
 			],
 		},
 		{
-			lastUpdatedDateComponent: new Date("2024-09-10"),
 			sizePreview: "sm",
 			slug: "animated-counter",
 			rerenderButton: true,

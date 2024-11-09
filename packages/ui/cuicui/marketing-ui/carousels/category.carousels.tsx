@@ -20,7 +20,6 @@ export const carouselsCategory: CategoryType = {
 				"A simple carousel that allows you to navigate through multiple images or products.",
 			sizePreview: "md",
 			slug: "simple-carousel",
-			lastUpdatedDateComponent: new Date("2024-09-10"),
 
 			variantList: [
 				{
@@ -33,7 +32,7 @@ export const carouselsCategory: CategoryType = {
 		},
 		{
 			name: "Cylindric 3D Carousel",
-			lastUpdatedDateComponent: new Date("2024-08-10"),
+
 			description:
 				"A 3D carousel that rotates in a cylindrical way. It's perfect for showcasing multiple images or products.",
 			sizePreview: "md",

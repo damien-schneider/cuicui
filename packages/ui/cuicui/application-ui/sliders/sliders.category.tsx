@@ -29,7 +29,6 @@ export const slidersCategory: CategoryType = {
 			],
 			inspiration: "Build UI",
 			inspirationLink: "https://buildui.com/recipes/elastic-slider",
-			lastUpdatedDateComponent: new Date("2024-08-10"),
 		},
 		{
 			slug: "simple-modern-slider",
@@ -48,7 +47,6 @@ export const slidersCategory: CategoryType = {
 					slugPreviewFile: "simple-modern-slider-with-max",
 				},
 			],
-			lastUpdatedDateComponent: new Date("2024-08-10"),
 		},
 	],
 };

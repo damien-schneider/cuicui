@@ -4,7 +4,7 @@ import { CodeCardPreview } from "@/cuicui/application-ui/code/code-card/code-car
 export const codeCardComponent: ComponentType = {
 	sizePreview: "md",
 	slug: "code-card",
-	lastUpdatedDateComponent: new Date("2024-08-29"),
+
 	variantList: [
 		{
 			name: "Default",

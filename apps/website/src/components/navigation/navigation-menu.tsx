@@ -25,17 +25,6 @@ export default function NavigationMenu({
 		if (isNew) {
 			return "New";
 		}
-		if (category.componentList) {
-			const updatedDate = getClosestUpdatedComponentDate(
-				category.componentList.map(
-					(component) => component.lastUpdatedDateComponent,
-				),
-			);
-			const isUpdated = differenceInDays(new Date(), updatedDate ?? 0) < 14;
-			if (isUpdated) {
-				return "Updated";
-			}
-		}
 		return null;
 	}
 	function getCategoryTagSingleComponentCategory(
@@ -48,16 +37,6 @@ export default function NavigationMenu({
 		}
 		if (isNew) {
 			return "New";
-		}
-
-		const isUpdated =
-			differenceInDays(
-				new Date(),
-				category.component?.lastUpdatedDateComponent ?? 0,
-			) < 14;
-
-		if (isUpdated) {
-			return "Updated";
 		}
 
 		return null;
