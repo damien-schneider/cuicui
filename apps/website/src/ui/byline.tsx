@@ -1,28 +1,31 @@
 import Link from "next/link";
 import { cn } from "../utils/cn";
 import GradientContainer from "./gradient-container";
+import {
+	ModernGradientContainerContent,
+	ModernGradientContainerRoot,
+} from "@/cuicui/common-ui/buttons/github-stars/simple-container";
 
-export default function Byline({
-	className,
-}: Readonly<{ className?: string }>) {
+export default function Byline() {
 	return (
-		<GradientContainer
-			classNameChild="px-4 py-2"
-			classNameParent="w-full"
-			rounded="sm"
+		<ModernGradientContainerRoot
+			className="w-full"
+			animationDurationInSeconds={20}
 		>
-			<div className={cn("block ", className)}>
-				<p className="inline text-neutral-400 text-sm">By </p>
-				<Link
-					aria-label="Damien Schneider LinkedIn"
-					className="inline text-neutral-400 text-sm hover:text-neutral-500 dark:hover:text-neutral-100"
-					href="https://www.linkedin.com/in/schneider-damien/"
-					rel="noreferrer"
-					target="_blank"
-					title="Damien Schneider LinkedIn"
-				>
-					Damien Schneider
-				</Link>
+			<ModernGradientContainerContent className="px-4 py-2 flex-col items-start">
+				<p className="inline text-neutral-400 text-sm">
+					By{" "}
+					<Link
+						aria-label="Damien Schneider LinkedIn"
+						className="inline text-neutral-400 text-sm hover:text-neutral-500 dark:hover:text-neutral-100"
+						href="https://www.linkedin.com/in/schneider-damien/"
+						rel="noreferrer"
+						target="_blank"
+						title="Damien Schneider LinkedIn"
+					>
+						Damien Schneider
+					</Link>
+				</p>
 
 				<div className="text-neutral-400 text-sm">
 					<Link
@@ -36,7 +39,7 @@ export default function Byline({
 						View my GitHub
 					</Link>
 				</div>
-			</div>
-		</GradientContainer>
+			</ModernGradientContainerContent>
+		</ModernGradientContainerRoot>
 	);
 }

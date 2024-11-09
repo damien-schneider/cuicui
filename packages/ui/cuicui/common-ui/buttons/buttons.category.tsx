@@ -9,6 +9,8 @@ import ModernAnimatedButtonVariant1 from "@/cuicui/common-ui/buttons/modern-anim
 import { PreviewShinyRotatingBorderButton } from "@/cuicui/common-ui/buttons/shiny-rotating-border-button/preview.shiny-rotating-border-button";
 import { PreviewMagneticButton } from "@/cuicui/common-ui/buttons/magnetic-button/preview.magnetic-button";
 import { PreviewMagneticBackgroundButton } from "@/cuicui/common-ui/buttons/magnetic-button/preview.magnetic-background-button";
+import PreviewGithubStars from "@/cuicui/common-ui/buttons/github-stars/preview.github-stars";
+import PreviewGradientContainer from "@/cuicui/common-ui/buttons/github-stars/preview.gradient-container";
 
 export const buttonsCategory: CategoryType = {
 	slug: "buttons",
@@ -40,6 +42,30 @@ export const buttonsCategory: CategoryType = {
 					slugComponentFile: "component.magnetic-button",
 				},
 			],
+			lastUpdatedDateComponent: new Date("2024-08-11"),
+		},
+		{
+			slug: "github-stars",
+			name: "Github Stars Button",
+			description:
+				"Button with to show the number of stars of a GitHub repository.",
+			sizePreview: "sm",
+			variantList: [
+				{
+					name: "Cuicui colors",
+					component: <PreviewGithubStars />,
+					slugPreviewFile: "preview.github-stars",
+					slugComponentFile: "component.github-stars",
+				},
+				{
+					name: "Container only",
+					component: <PreviewGradientContainer />,
+					slugPreviewFile: "preview.github-stars",
+					slugComponentFile: "component.github-stars",
+				},
+			],
+			inspiration: "Refine",
+			inspirationLink: "https://refine.dev/",
 			lastUpdatedDateComponent: new Date("2024-08-11"),
 		},
 		{
