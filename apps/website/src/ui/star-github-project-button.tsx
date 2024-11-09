@@ -9,7 +9,7 @@ export default async function StarGithubProjectButton({
 	className,
 }: Readonly<{ className?: string }>) {
 	return (
-		<Link href={CUICUI_GITHUB_URL}>
+		<Link href={CUICUI_GITHUB_URL} title="Star Cuicui on GitHub">
 			<GradientContainer
 				classNameChild="group-hover:opacity-80 transition-opacity duration-150 ease-in-out pl-4 py-2 flex gap-2 items-center text-sm text-neutral-500 font-medium relative"
 				classNameParent="group"

@@ -91,6 +91,7 @@ const FloatingDockMobile = ({
 								<Link
 									href={item.href}
 									key={item.title}
+									title={item.title}
 									className={cn(
 										"rounded-full w-fit px-4 py-4 bg-neutral-50 border border-neutral-400/20  flex items-center justify-center  gap-2",
 										pathname.includes(item.href)
@@ -213,7 +214,7 @@ function IconContainer({
 	const [hovered, setHovered] = useState(false);
 
 	return (
-		<Link href={href}>
+		<Link href={href} title={title}>
 			<motion.div
 				ref={ref}
 				style={{ width, height }}

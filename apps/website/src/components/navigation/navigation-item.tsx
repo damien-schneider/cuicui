@@ -49,6 +49,7 @@ export function GlobalNavItem({
 			)}
 			data-testid={`navigation-link-${name}`}
 			href={href}
+			title={name}
 			target={target === "newWindow" ? "_blank" : undefined}
 			{...props}
 		>
