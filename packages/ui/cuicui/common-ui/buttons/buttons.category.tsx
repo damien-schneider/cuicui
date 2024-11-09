@@ -7,7 +7,7 @@ import GrowingButtonVariant1 from "@/cuicui/common-ui/buttons/growing-button/var
 import ModernAnimatedButtonVariant1 from "@/cuicui/common-ui/buttons/modern-animated-button/variant1";
 
 import { PreviewShinyRotatingBorderButton } from "@/cuicui/common-ui/buttons/shiny-rotating-border-button/preview.shiny-rotating-border-button";
-import PreviewMagneticButton from "@/cuicui/common-ui/buttons/magnetic-button/preview.magnetic-button";
+import { PreviewMagneticButton } from "@/cuicui/common-ui/buttons/magnetic-button/preview.magnetic-button";
 import { PreviewMagneticBackgroundButton } from "@/cuicui/common-ui/buttons/magnetic-button/preview.magnetic-background-button";
 
 export const buttonsCategory: CategoryType = {
@@ -36,8 +36,8 @@ export const buttonsCategory: CategoryType = {
 				{
 					name: "Magnetic Button",
 					component: <PreviewMagneticButton />,
-					slugPreviewFile: "preview",
-					slugComponentFile: "component",
+					slugPreviewFile: "preview.magnetic-button",
+					slugComponentFile: "component.magnetic-button",
 				},
 			],
 			lastUpdatedDateComponent: new Date("2024-08-11"),

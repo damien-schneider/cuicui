@@ -1,6 +1,6 @@
 import { MagneticButton } from "@/cuicui/common-ui/buttons/magnetic-button/component.magnetic-button";
 
-export default function PreviewMagneticButton() {
+export function PreviewMagneticButton() {
 	return (
 		<div>
 			<MagneticButton>Magnetic Button</MagneticButton>
