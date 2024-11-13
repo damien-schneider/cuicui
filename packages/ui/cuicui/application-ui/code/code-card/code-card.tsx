@@ -1,4 +1,4 @@
-const CodeEditor = ({ code }: { code: string }) => {
+const CodeEditor = ({ code, language }: { code: string, language: string }) => {
   return (
     <div className="group hover:-translate-x-1 max-w-md transform-gpu overflow-hidden rounded-2xl border border-neutral-500/15 bg-white shadow-sm transition-transform dark:bg-neutral-800">
       <div className="flex items-end">
@@ -9,7 +9,7 @@ const CodeEditor = ({ code }: { code: string }) => {
             textOrientation: "mixed",
           }}
         >
-          CSS
+          {language}
         </span>
         <div className="w-full transform-gpu rounded-2xl border-neutral-500/15 border-l bg-white px-4 py-2 shadow-lg shadow-neutral-600/20 transition-transform group-hover:translate-x-1 dark:bg-neutral-800 dark:shadow-neutral-900">
           <pre className="pr-4">
