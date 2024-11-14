@@ -25,7 +25,6 @@ export const blockquotesCategory: CategoryType = {
 					slugPreviewFile: "variant1",
 				},
 			],
-			lastUpdatedDateComponent: new Date("2024-08-01"),
 		},
 	],
 };

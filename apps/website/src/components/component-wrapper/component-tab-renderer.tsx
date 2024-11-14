@@ -1,4 +1,3 @@
-// biome-ignore lint/style/noNamespaceImport: <explanation>
 import * as Tabs from "@radix-ui/react-tabs";
 
 import "./full-component.css";
@@ -7,8 +6,8 @@ import { ComponentWrapper } from "#/src/components/component-wrapper/component-w
 import StepToInstall from "#/src/components/steps-to-install/step-to-install";
 import type {
 	ComponentHeightType,
-	ProcessVariantType,
-} from "#/src/lib/types/component";
+	ProcessedVariantType,
+} from "@cuicui/ui/lib/types/component";
 import CodeHighlighter from "#/src/ui/code-highlighter";
 import {
 	ResizableHandle,
@@ -45,12 +44,19 @@ export default function ComponentTabRenderer({
 	rerenderButton,
 	isIframed = false,
 	size,
+	componentParams,
 }: {
 	isResizable?: boolean;
 	rerenderButton?: boolean;
 	isIframed?: boolean;
 	size: ComponentHeightType;
-} & ProcessVariantType) {
+	componentParams: {
+		sectionSlug: string;
+		categorySlug: string;
+		componentSlug: string;
+		variantSlug: string;
+	};
+} & ProcessedVariantType) {
 	return (
 		<Tabs.Root defaultValue="preview" id="variants-tabs" itemID="variants-tabs">
 			<Tabs.List
@@ -98,6 +104,14 @@ export default function ComponentTabRenderer({
 					>
 						<ResizablePanel defaultSize={100}>
 							{/* {rerenderButton && <RerenderButton setRender={setRender} />} */}
+							{/* <p>
+								{`/preview/${componentParams.sectionSlug}/${componentParams.categorySlug}/${componentParams.componentSlug}/${componentParams.variantSlug}`}
+							</p>
+							<iframe
+								className="w-full h-full"
+								title="component-preview"
+								src={`/preview/${componentParams.sectionSlug}/${componentParams.categorySlug}/${componentParams.componentSlug}/${componentParams.variantSlug}`}
+							/> */}
 							<ComponentWrapper
 								isIframed={isIframed}
 								renderButton={rerenderButton}

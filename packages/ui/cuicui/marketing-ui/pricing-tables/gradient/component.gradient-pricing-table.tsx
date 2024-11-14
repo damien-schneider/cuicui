@@ -3,7 +3,7 @@ import PreviewGradient from "@/cuicui/marketing-ui/pricing-tables/gradient/previ
 
 export const gradientPricingTableComponent: ComponentType = {
 	name: "Gradient Pricing Table",
-	lastUpdatedDateComponent: new Date("2024-10-06"),
+
 	description: "Simple 3 offers pricing page with gradient background.",
 	sizePreview: "xl",
 	slug: "gradient",

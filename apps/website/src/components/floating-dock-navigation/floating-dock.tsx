@@ -4,8 +4,9 @@ import { FloatingDock } from "#/src/components/floating-dock-navigation/floating
 import { ArrowUpRightIcon, GithubIcon } from "lucide-react";
 import { cn } from "#/src/utils/cn";
 import Link from "next/link";
-import { CUICUI_GITHUB_URL } from "@/lib/site.const";
+
 import { FloatingDockToggleTheme } from "#/src/components/floating-dock-navigation/floating-dock-toggle-theme";
+import { CUICUI_GITHUB_URL } from "#/src/lib/site.const";
 
 const sectionLinks = SectionsList.map((section) => {
 	return {
@@ -19,9 +20,9 @@ export function CuicuiFloatingDock() {
 	return (
 		<div
 			className={cn(
-				"flex items-center fixed gap-2 justify-center z-50 p-2",
+				"inline-flex items-center fixed gap-2 justify-center z-50 p-2",
 				"right-4 bottom-4",
-				"md:bottom-4  md:right-auto md:left-1/2 md:-translate-x-1/2",
+				"md:bottom-4 md:right-auto md:left-1/2 md:-translate-x-1/2",
 				"scale-90 hover:scale-100 transform-gpu transition duration-150",
 			)}
 		>
@@ -41,7 +42,7 @@ export function CuicuiFloatingDock() {
 				/>
 				<ArrowUpRightIcon
 					className={cn(
-						"size-4 text-neutral-600 transition dark:text-neutral-300 z-50 duration-300 absolute  right-0 top-2 transform-gpu mr-2 group-hover:translate-y-0 group-hover:-translate-x-0 translate-x-8 -translate-y-5 ",
+						"size-4 text-neutral-600 transition dark:text-neutral-300 z-50 duration-300 absolute right-0 top-2 transform-gpu mr-2 group-hover:translate-y-0 group-hover:-translate-x-0 translate-x-8 -translate-y-5",
 					)}
 				/>
 			</Link>

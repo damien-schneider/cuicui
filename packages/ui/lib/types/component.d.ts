@@ -4,12 +4,10 @@ import type { JSX, ReactNode } from "react";
 import type { ComponentBadgeList } from "../badges.const";
 export type Variant = `variant${number}`;
 
-export type ProcessVariantType = {
-	name: string;
-	component: JSX.Element;
+export interface ProcessedVariantType extends VariantType {
 	previewCode: string;
 	componentCode?: string;
-};
+}
 
 export type ComponentBadgeSlug = (typeof ComponentBadgeList)[number]["slug"];
 
@@ -118,27 +116,25 @@ type PageCategoryType = {
 export type ComponentType = {
 	name: string;
 	description: string;
-	lastUpdatedDateComponent: Date;
 	isResizable?: boolean;
 	componentBadges?: ComponentBadgeSlug[];
 	isIframed?: boolean;
 	rerenderButton?: boolean;
 	inspiration?: string;
 	inspirationLink?: string;
-	sizePreview: ComponentHeightType;
+	sizePreview?: ComponentHeightType;
 	slug: string;
 	variantList: VariantType[];
 };
 
 export type SingleComponentType = {
-	lastUpdatedDateComponent?: Date;
 	isResizable?: boolean;
 	componentBadges?: ComponentBadgeSlug[];
 	isIframed?: boolean;
 	rerenderButton?: boolean;
 	inspiration?: string;
 	inspirationLink?: string;
-	sizePreview: ComponentHeightType;
+	sizePreview?: ComponentHeightType;
 	variantList: VariantType[];
 };
 

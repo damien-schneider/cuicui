@@ -15,8 +15,6 @@ export const kbdCategory: CategoryType = {
 	},
 	componentList: [
 		{
-			lastUpdatedDateComponent: new Date("2024-08-13"),
-
 			sizePreview: "xs",
 			slug: "modern-detailed-kbd",
 			variantList: [
@@ -31,7 +29,6 @@ export const kbdCategory: CategoryType = {
 				"A simple keyboard Kbd with an effect on hover and on press.",
 		},
 		{
-			lastUpdatedDateComponent: new Date("2024-08-13"),
 			sizePreview: "xs",
 			slug: "modern-3d-kbd",
 			variantList: [

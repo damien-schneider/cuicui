@@ -16,6 +16,6 @@ export const SlideInOnScrollComponent: ComponentType = {
 			slugComponentFile: "slide-in-on-scroll",
 		},
 	],
-	lastUpdatedDateComponent: new Date("2024-09-21"),
+
 	// supportedBrowers: ["chromium"],
 };

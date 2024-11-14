@@ -13,7 +13,6 @@ export const useGeoLocationCategory: SingleComponentCategoryType = {
 		previewScale: 0.8,
 	},
 	component: {
-		lastUpdatedDateComponent: new Date("2024-09-28"),
 		sizePreview: "sm",
 
 		variantList: [

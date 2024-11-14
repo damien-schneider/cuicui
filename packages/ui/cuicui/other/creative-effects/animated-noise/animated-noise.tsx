@@ -1,11 +1,12 @@
 import { cn } from "@/cuicui/utils/cn/cn";
-import type { HTMLAttributes } from "react";
+import type { ComponentProps } from "react";
 
-export default function AnimatedNoise({
+export function AnimatedNoise({
 	opacity,
 	className,
+	backgroundSize = "400px",
 	...props
-}: { opacity: number } & HTMLAttributes<HTMLDivElement>) {
+}: { opacity: number; backgroundSize?: string } & ComponentProps<"div">) {
 	return (
 		<>
 			<style>{style}</style>
@@ -18,7 +19,7 @@ export default function AnimatedNoise({
 					animation: "noise .8s steps(10) infinite",
 					backgroundRepeat: "repeat",
 					backgroundImage: svgUrlEncoded,
-					backgroundSize: "20%",
+					backgroundSize: backgroundSize,
 					opacity,
 				}}
 				{...props}
@@ -66,4 +67,4 @@ const style = `
     transform: translate(50px, -60px);
   }
 }
-  `;
+`;

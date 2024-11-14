@@ -1,7 +1,6 @@
 "use client";
 import { GithubStarsButton } from "@/cuicui/common-ui/buttons/github-stars/component.github-stars";
 import { sleep } from "@/cuicui/utils/sleep/sleep";
-import { CUICUI_GITHUB_URL } from "@/lib/site.const";
 
 import { useEffect, useState } from "react";
 
@@ -15,7 +14,10 @@ export default function PreviewGithubStars() {
 	}, []);
 
 	return (
-		<GithubStarsButton href={CUICUI_GITHUB_URL} starNumber={stars}>
+		<GithubStarsButton
+			href="https://github.com/damien-schneider/cuicui"
+			starNumber={stars}
+		>
 			Star Cuicui on GitHub
 		</GithubStarsButton>
 	);

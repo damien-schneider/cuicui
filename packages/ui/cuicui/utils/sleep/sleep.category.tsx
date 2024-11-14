@@ -11,7 +11,7 @@ export const sleepCategory: SingleComponentCategoryType = {
 	},
 	component: {
 		sizePreview: "sm",
-		lastUpdatedDateComponent: new Date("2024-09-26"),
+
 		variantList: [
 			{
 				name: "Default",

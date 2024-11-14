@@ -18,7 +18,6 @@ export const featuresCategory: CategoryType = {
 		{
 			name: "Feature Four Images",
 
-			lastUpdatedDateComponent: new Date("2024-06-17"),
 			description:
 				"An auto-scrolling feature section with four images and text. It could be also used with videos or other content. Perfect to shocase in details multiple features of a product or service.",
 			sizePreview: "md",
@@ -39,7 +38,7 @@ export const featuresCategory: CategoryType = {
 		},
 		{
 			name: "Simple feature cards",
-			lastUpdatedDateComponent: new Date("2024-06-17"),
+
 			description:
 				"Simple feature cards with icons, text, and buttons. Perfect for micro-interactions and lists of features.",
 			sizePreview: "sm",

@@ -31,13 +31,12 @@ export const patternsCategory: CategoryType = {
 			],
 			inspiration: "Magic UI",
 			inspirationLink: "https://magicui.design/docs/components/dot-pattern",
-			lastUpdatedDateComponent: new Date("2024-08-10"),
 		},
 		gridPatternComponent,
 		{
 			sizePreview: "sm",
 			slug: "moving-bands",
-			lastUpdatedDateComponent: new Date("2024-09-10"),
+
 			name: "Moving bands pattern",
 			description:
 				"Create a moving bands pattern without images, just with CSS and HTML for better performance.",

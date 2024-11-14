@@ -2,7 +2,6 @@ import type { ComponentType } from "@/lib/types/component";
 import { PreviewDynamicIslandNotification } from "@/cuicui/application-ui/notification/dynamic-island-notification/preview.dynamic-island-notification";
 
 export const dynamicIslandNotificationComponent: ComponentType = {
-	lastUpdatedDateComponent: new Date("2024-10-14"),
 	sizePreview: "md",
 	slug: "dynamic-island-notification",
 	variantList: [

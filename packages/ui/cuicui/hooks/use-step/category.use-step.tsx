@@ -10,7 +10,7 @@ export const useStepCategory: SingleComponentCategoryType = {
 	icon: ListEndIcon,
 	component: {
 		rerenderButton: true,
-		lastUpdatedDateComponent: new Date("2024-09-26"),
+
 		sizePreview: "md",
 
 		variantList: [

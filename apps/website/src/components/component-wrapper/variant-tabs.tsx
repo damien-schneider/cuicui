@@ -4,8 +4,8 @@ import ComponentTabRenderer from "#/src/components/component-wrapper/component-t
 import { cn } from "#/src/utils/cn";
 import type {
 	ComponentHeightType,
-	ProcessVariantType,
-} from "../../lib/types/component";
+	ProcessedVariantType,
+} from "@cuicui/ui/lib/types/component";
 
 export type TabType = "preview" | "code-component" | "code-preview";
 
@@ -15,12 +15,18 @@ export default function VariantTabs({
 	isIframed = false,
 	isResizable = true,
 	rerenderButton = false,
+	componentParams,
 }: Readonly<{
-	variantList: ProcessVariantType[];
+	variantList: ProcessedVariantType[];
 	size?: ComponentHeightType;
 	isIframed?: boolean;
 	isResizable?: boolean;
 	rerenderButton?: boolean;
+	componentParams: {
+		sectionSlug: string;
+		categorySlug: string;
+		componentSlug?: string;
+	};
 }>) {
 	return (
 		<div>
@@ -37,6 +43,14 @@ export default function VariantTabs({
 							isResizable={isResizable}
 							rerenderButton={rerenderButton}
 							size={size}
+							componentParams={{
+								...componentParams,
+								componentSlug:
+									componentParams.componentSlug ?? variant.slugPreviewFile,
+								variantSlug: componentParams.componentSlug
+									? variant.slugPreviewFile
+									: "",
+							}}
 						/>
 					</Tabs.Content>
 				))}

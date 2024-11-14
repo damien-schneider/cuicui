@@ -18,7 +18,7 @@ export const skeletonsCategory: CategoryType = {
 		{
 			sizePreview: "sm",
 			slug: "classic-pulse",
-			lastUpdatedDateComponent: new Date("2024-08-01"),
+
 			variantList: [
 				{
 					name: "Classic Pulse",
@@ -35,7 +35,7 @@ export const skeletonsCategory: CategoryType = {
 		{
 			sizePreview: "sm",
 			slug: "shiny-gradient",
-			lastUpdatedDateComponent: new Date("2024-09-21"),
+
 			variantList: [
 				{
 					name: "Horizontal",

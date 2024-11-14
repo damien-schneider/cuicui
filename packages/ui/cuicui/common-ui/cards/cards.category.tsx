@@ -31,7 +31,6 @@ export const cardsCategory: CategoryType = {
 			],
 
 			componentBadges: ["better-in-dark-mode"],
-			lastUpdatedDateComponent: new Date("2024-08-10"),
 		},
 		{
 			slug: "dynamic-square-background",
@@ -47,14 +46,13 @@ export const cardsCategory: CategoryType = {
 					slugComponentFile: "dynamic-square-background",
 				},
 			],
-			lastUpdatedDateComponent: new Date("2024-08-10"),
 		},
 		{
 			slug: "notification-card",
 			name: "Notification Card",
 			description:
 				"A notification card with a date and time to show the user when the notification was sent.",
-			lastUpdatedDateComponent: new Date("2024-08-10"),
+
 			sizePreview: "sm",
 			variantList: [
 				{
@@ -68,7 +66,7 @@ export const cardsCategory: CategoryType = {
 		{
 			sizePreview: "sm",
 			slug: "hover-effect-card",
-			lastUpdatedDateComponent: new Date("2024-09-10"),
+
 			variantList: [
 				{
 					name: "Variant 1",

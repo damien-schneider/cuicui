@@ -13,7 +13,6 @@ export const useWindowSizeCategory: SingleComponentCategoryType = {
 		previewScale: 0.8,
 	},
 	component: {
-		lastUpdatedDateComponent: new Date("2024-08-28"),
 		sizePreview: "sm",
 
 		variantList: [

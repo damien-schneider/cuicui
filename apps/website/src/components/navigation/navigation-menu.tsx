@@ -9,7 +9,7 @@ import { firstMenuSection } from "#/src/lib/first-menu-section";
 import type {
 	CategoryType,
 	SingleComponentCategoryType,
-} from "#/src/lib/types/component";
+} from "@cuicui/ui/lib/types/component";
 import { cn } from "#/src/utils/cn";
 
 export default function NavigationMenu({
@@ -25,17 +25,6 @@ export default function NavigationMenu({
 		if (isNew) {
 			return "New";
 		}
-		if (category.componentList) {
-			const updatedDate = getClosestUpdatedComponentDate(
-				category.componentList.map(
-					(component) => component.lastUpdatedDateComponent,
-				),
-			);
-			const isUpdated = differenceInDays(new Date(), updatedDate ?? 0) < 14;
-			if (isUpdated) {
-				return "Updated";
-			}
-		}
 		return null;
 	}
 	function getCategoryTagSingleComponentCategory(
@@ -48,16 +37,6 @@ export default function NavigationMenu({
 		}
 		if (isNew) {
 			return "New";
-		}
-
-		const isUpdated =
-			differenceInDays(
-				new Date(),
-				category.component?.lastUpdatedDateComponent ?? 0,
-			) < 14;
-
-		if (isUpdated) {
-			return "Updated";
 		}
 
 		return null;

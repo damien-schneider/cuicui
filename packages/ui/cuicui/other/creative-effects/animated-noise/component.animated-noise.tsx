@@ -22,5 +22,4 @@ export const animatedNoiseComponent: ComponentType = {
 			component: <PreviewStaticNoise />,
 		},
 	],
-	lastUpdatedDateComponent: new Date("2024-10-14"),
 };

@@ -52,9 +52,6 @@ export function extractComponents(node: FileSystemNode): ComponentType[] {
 			description: node.config.description,
 			sizePreview: node.config.sizePreview,
 			slug: node.config.slug,
-			lastUpdatedDateComponent: node.config.lastUpdatedDateComponent
-				? new Date(node.config.lastUpdatedDateComponent)
-				: undefined,
 			isIframed: node.config.isIframed,
 			variantList: [],
 			inspiration: node.config.inspiration,
@@ -114,7 +111,6 @@ export type ComponentType = {
 	description: string;
 	sizePreview: string;
 	slug: string;
-	lastUpdatedDateComponent?: Date;
 	isIframed?: boolean;
 	variantList: VariantType[];
 	inspiration?: string;

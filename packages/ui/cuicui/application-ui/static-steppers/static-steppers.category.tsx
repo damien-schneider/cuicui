@@ -29,7 +29,6 @@ export const staticSteppersCategory: CategoryType = {
 			componentBadges: ["updated"],
 			inspiration: "Hooks Scriptkavi manual installation",
 			inspirationLink: "https://hooks.scriptkavi.com/docs/hooks/battery",
-			lastUpdatedDateComponent: new Date("2024-08-01"),
 		},
 	],
 };

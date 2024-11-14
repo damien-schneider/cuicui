@@ -88,17 +88,26 @@ export default async function ProjectPage() {
 		}),
 	);
 
+	const sortedChangelogs = changelogs.sort(
+		(a, b) => b.date.getTime() - a.date.getTime(),
+	);
+
 	return (
 		<div className="cuicui-default-style">
 			<h1>Changelog</h1>
-			<section className="space-y-12">
-				{changelogs.map(({ content, date, title }) => {
+			<section className="space-y-20 m-4">
+				{sortedChangelogs.map(({ content, date, title }, index) => {
 					return (
 						<article
 							key={date.toISOString()}
 							className="[&_ul]:text-neutral-600 [&_ul]:dark:text-neutral-400"
 						>
-							<h5 className="m-0">{format(date, "do MMMM yyyy")}</h5>
+							<h5 className="m-0 inline">{format(date, "do MMMM yyyy")}</h5>
+							{index === 0 && (
+								<p className="border inline ml-4 rounded-full border-neutral-200 dark:border-neutral-800 text-xs px-2 py-0.5">
+									Latest Release
+								</p>
+							)}
 							<p className="text-neutral-500 tracking-tight text-sm">
 								{formatDistanceToNow(date, { addSuffix: true })}
 							</p>

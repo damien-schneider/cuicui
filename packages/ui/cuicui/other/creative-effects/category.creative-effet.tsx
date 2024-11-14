@@ -4,6 +4,7 @@ import PreviewBottomBlurOut from "@/cuicui/other/creative-effects/bottom-blur-ou
 import { bottomBlurOutComponent } from "@/cuicui/other/creative-effects/bottom-blur-out/component.bottom-blur-out";
 import { animatedNoiseComponent } from "@/cuicui/other/creative-effects/animated-noise/component.animated-noise";
 import { borderTrailComponent } from "@/cuicui/other/creative-effects/border-trail/component.animated-noise";
+import { WavyLineComponent } from "@/cuicui/other/creative-effects/wavy-line/definition.wavy-line";
 
 export const creativeEffectCategory: CategoryType = {
 	slug: "creative-effects",
@@ -20,5 +21,6 @@ export const creativeEffectCategory: CategoryType = {
 		animatedNoiseComponent,
 		borderTrailComponent,
 		bottomBlurOutComponent,
+		WavyLineComponent,
 	],
 };

@@ -18,7 +18,7 @@ export const testimonialsCategory: CategoryType = {
 	componentList: [
 		{
 			isResizable: true,
-			lastUpdatedDateComponent: new Date("2024-07-17"),
+
 			sizePreview: "md",
 			slug: "testimonials-component",
 			name: "Testimonials",
@@ -32,7 +32,6 @@ export const testimonialsCategory: CategoryType = {
 			],
 		},
 		{
-			lastUpdatedDateComponent: new Date("2024-07-17"),
 			sizePreview: "sm",
 			slug: "marquee",
 			name: "Marquee",

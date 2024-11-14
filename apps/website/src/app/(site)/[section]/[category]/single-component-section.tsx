@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { fetchSingleComponentData } from "#/src/app/(components)/[section]/[category]/process-variant-data";
+import { fetchSingleComponentData } from "#/src/app/(site)/[section]/[category]/process-variant-data";
 import ComingSoonCard from "#/src/components/coming-soon";
 import HeaderComponent from "#/src/components/component-wrapper/header-component";
 import InspirationComponentFooter from "#/src/components/component-wrapper/inspiration-component-footer";
@@ -7,7 +7,7 @@ import VariantTabs from "#/src/components/component-wrapper/variant-tabs";
 import type {
 	SectionType,
 	SingleComponentCategoryType,
-} from "#/src/lib/types/component";
+} from "@cuicui/ui/lib/types/component";
 import GithubEditButton from "#/src/components/component-wrapper/github-edit-button";
 
 export default async function SingleComponentCategory({
@@ -27,7 +27,7 @@ export default async function SingleComponentCategory({
 
 	const component = await fetchSingleComponentData({
 		categorySlug: category.slug,
-		component: category.component,
+		component: { ...category.component },
 	});
 
 	return (
@@ -50,6 +50,10 @@ export default async function SingleComponentCategory({
 					rerenderButton={component.rerenderButton}
 					size={component.sizePreview}
 					variantList={component.componentList}
+					componentParams={{
+						sectionSlug,
+						categorySlug: category.slug,
+					}}
 				/>
 				<InspirationComponentFooter
 					inspiration={component.inspiration}

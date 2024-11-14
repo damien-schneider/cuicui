@@ -1,4 +1,4 @@
-import StaticNoise from "@/cuicui/other/creative-effects/animated-noise/static-noise";
+import { StaticNoise } from "@/cuicui/other/creative-effects/animated-noise/static-noise";
 import GridPattern from "@/cuicui/other/patterns/grid-pattern/grid-pattern";
 
 export default function PreviewStaticNoise() {

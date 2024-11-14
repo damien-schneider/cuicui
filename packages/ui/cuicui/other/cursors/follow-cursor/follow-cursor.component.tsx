@@ -23,5 +23,4 @@ export const followCursorComponent: ComponentType = {
 		},
 	],
 	componentBadges: ["prefer-desktop"],
-	lastUpdatedDateComponent: new Date("2024-08-14"),
 };

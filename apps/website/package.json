@@ -91,7 +91,8 @@
     "lint:check": "biome check ./src",
     "lint:write-unsafe": "biome check --write --unsafe ./src",
     "test": "vitest",
-    "test:watch": "vitest --watch"
+    "test:watch": "vitest --watch",
+    "type-check": "tsc --noEmit"
   },
   "version": "0.1.2"
 }

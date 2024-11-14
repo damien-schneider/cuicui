@@ -1,5 +1,5 @@
 import { useRouter } from "next/navigation";
-import type { SectionType } from "#/src/lib/types/component";
+import type { SectionType } from "@cuicui/ui/lib/types/component";
 import { CommandGroup, CommandItem } from "#/src/ui/shadcn/command";
 import Link from "next/link";
 import type {

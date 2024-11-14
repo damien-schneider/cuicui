@@ -4,7 +4,7 @@ import { PreviewInlineCode } from "@/cuicui/application-ui/code/inline-code/prev
 export const inlineCodeComponent: ComponentType = {
 	sizePreview: "xs",
 	slug: "inline-code",
-	lastUpdatedDateComponent: new Date("2024-08-21"),
+
 	variantList: [
 		{
 			name: "Default",

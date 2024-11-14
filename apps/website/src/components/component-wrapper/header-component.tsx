@@ -1,10 +1,11 @@
 import BadgeList from "#/src/components/badge-list";
-import { ComponentBadgeList } from "#/src/lib/badges.const";
+
 import type {
 	ComponentBadgeSlug,
 	FrameworkBadge,
-} from "#/src/lib/types/component";
+} from "@cuicui/ui/lib/types/component";
 import Badge from "#/src/ui/badge";
+import { ComponentBadgeList } from "@cuicui/ui/lib/badges.const";
 
 export default function HeaderComponent({
 	frameworksBadges,

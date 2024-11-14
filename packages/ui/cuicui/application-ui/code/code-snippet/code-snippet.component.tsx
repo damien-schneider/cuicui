@@ -4,7 +4,7 @@ import PreviewCommandVariant1 from "@/cuicui/application-ui/code/code-snippet/pr
 export const codeSnippetComponent: ComponentType = {
 	sizePreview: "xs",
 	slug: "code-snippet",
-	lastUpdatedDateComponent: new Date("2024-08-21"),
+
 	variantList: [
 		{
 			name: "Default",

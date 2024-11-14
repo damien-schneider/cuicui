@@ -42,7 +42,6 @@ export const buttonsCategory: CategoryType = {
 					slugComponentFile: "component.magnetic-button",
 				},
 			],
-			lastUpdatedDateComponent: new Date("2024-08-11"),
 		},
 		{
 			slug: "github-stars",
@@ -66,7 +65,6 @@ export const buttonsCategory: CategoryType = {
 			],
 			inspiration: "Refine",
 			inspirationLink: "https://refine.dev/",
-			lastUpdatedDateComponent: new Date("2024-08-11"),
 		},
 		{
 			slug: "growing-button",
@@ -81,7 +79,6 @@ export const buttonsCategory: CategoryType = {
 					slugPreviewFile: "variant1",
 				},
 			],
-			lastUpdatedDateComponent: new Date("2024-08-10"),
 		},
 		{
 			slug: "before-effect-button",
@@ -109,8 +106,6 @@ export const buttonsCategory: CategoryType = {
 					slugComponentFile: "before-effect-button",
 				},
 			],
-
-			lastUpdatedDateComponent: new Date("2024-08-10"),
 		},
 		{
 			slug: "shiny-rotating-border-button",
@@ -126,7 +121,6 @@ export const buttonsCategory: CategoryType = {
 				},
 			],
 			isIframed: true,
-			lastUpdatedDateComponent: new Date("2024-08-10"),
 		},
 		{
 			slug: "modern-animated-button",
@@ -143,7 +137,6 @@ export const buttonsCategory: CategoryType = {
 
 			inspiration: "Raycast",
 			inspirationLink: "https://www.raycast.com/",
-			lastUpdatedDateComponent: new Date("2024-08-10"),
 		},
 	],
 };
