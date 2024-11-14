@@ -1,10 +1,8 @@
-import type { ComponentType } from "@/lib/types/component";
+import type { ComponentType, SingleComponentType } from "@/lib/types/component";
 import PreviewUseMouse from "@/cuicui/hooks/use-mouse/preview-use-mouse";
 
-export const useMouseComponent: ComponentType = {
+export const useMouseComponent: SingleComponentType = {
 	sizePreview: "xs",
-	slug: "hook",
-
 	variantList: [
 		{
 			name: "Default",
@@ -13,6 +11,4 @@ export const useMouseComponent: ComponentType = {
 			slugComponentFile: "use-mouse",
 		},
 	],
-	name: "Use Mouse",
-	description: "A simple hook to get the mouse position.",
 };

@@ -12,7 +12,7 @@ export const gradientPricingTableComponent: ComponentType = {
 		{
 			name: "Simple 3 offers pricing page",
 			component: <PreviewGradient />,
-			slugPreviewFile: "preview.pricing-table-gradient",
+			slugPreviewFile: "preview-pricing-table-gradient",
 		},
 	],
 };

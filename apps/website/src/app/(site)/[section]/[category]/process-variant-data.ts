@@ -1,17 +1,13 @@
 import type {
 	ComponentType,
+	ProcessedVariantType,
 	SingleComponentType,
 	VariantType,
 } from "@cuicui/ui/lib/types/component";
 import { getFileContentAsString } from "#/src/utils/get-file-content-as-string";
 
-interface ProcessedVariant extends VariantType {
-	previewCode: string;
-	componentCode?: string;
-}
-
 interface ProcessedComponent extends ComponentType {
-	componentList: ProcessedVariant[];
+	componentList: ProcessedVariantType[];
 }
 
 export async function fetchVariantData({
@@ -71,7 +67,7 @@ export async function fetchMultipleComponentData({
 	const processedComponents: ProcessedComponent[] = [];
 
 	for (const component of componentList) {
-		const processedVariants: ProcessedVariant[] = [];
+		const processedVariants: ProcessedVariantType[] = [];
 
 		for (const variant of component.variantList) {
 			const processedVariant = await fetchVariantData({
@@ -100,7 +96,7 @@ export async function fetchSingleComponentData({
 	categorySlug: string;
 	component: SingleComponentType;
 }) {
-	const processedVariants: ProcessedVariant[] = [];
+	const processedVariants: ProcessedVariantType[] = [];
 
 	for (const variant of component.variantList) {
 		const processedVariant = await fetchVariantData({ categorySlug, variant });

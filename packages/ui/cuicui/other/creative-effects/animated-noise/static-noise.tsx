@@ -1,21 +1,21 @@
 import { cn } from "@/cuicui/utils/cn/cn";
-import type { HTMLAttributes } from "react";
+import type { ComponentProps } from "react";
 
-export default function StaticNoise({
+export function StaticNoise({
 	opacity,
 	className,
+	backgroundSize = "400px",
 	...props
-}: { opacity: number } & HTMLAttributes<HTMLDivElement>) {
+}: { opacity: number; backgroundSize?: string } & ComponentProps<"div">) {
 	return (
 		<div
 			className={cn(
-				"absolute bg-noise inset-0 z-40 pointer-events-none select-none",
+				"absolute inset-0 z-40 pointer-events-none select-none repeat-infinite invert dark:invert-0",
 				className,
 			)}
 			style={{
-				backgroundRepeat: "repeat",
 				backgroundImage: svgUrlEncoded,
-				backgroundSize: "20%",
+				backgroundSize: backgroundSize,
 				opacity,
 			}}
 			{...props}

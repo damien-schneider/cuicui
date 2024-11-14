@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { fetchMultipleComponentData } from "#/src/app/(components)/[section]/[category]/process-variant-data";
+import { fetchMultipleComponentData } from "#/src/app/(site)/[section]/[category]/process-variant-data";
 import ComingSoonCard from "#/src/components/coming-soon";
 import HeaderComponent from "#/src/components/component-wrapper/header-component";
 import InspirationComponentFooter from "#/src/components/component-wrapper/inspiration-component-footer";
@@ -56,6 +56,11 @@ export default async function MultipleComponentCategory({
 						rerenderButton={component.rerenderButton}
 						size={component.sizePreview}
 						variantList={component.componentList}
+						componentParams={{
+							sectionSlug,
+							categorySlug: category.slug,
+							componentSlug: component.slug,
+						}}
 					/>
 				</div>
 			))}

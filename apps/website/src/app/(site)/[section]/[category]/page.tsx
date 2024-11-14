@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
-import MultipleComponentCategory from "#/src/app/(components)/[section]/[category]/multiple-component-section";
-import SingleComponentCategory from "#/src/app/(components)/[section]/[category]/single-component-section";
+import MultipleComponentCategory from "#/src/app/(site)/[section]/[category]/multiple-component-section";
+import SingleComponentCategory from "#/src/app/(site)/[section]/[category]/single-component-section";
 import { SectionsList } from "@cuicui/ui";
 import type {
 	CategoryType,

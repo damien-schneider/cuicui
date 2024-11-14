@@ -1,4 +1,4 @@
-import GeneratePreviewImages from "./generate-preview-images";
+import Playground from "#/src/app/dev/playground-component/playground";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -11,5 +11,5 @@ export default function PageGeneratePreviewImages() {
 		return null;
 	}
 
-	return <GeneratePreviewImages />;
+	return <Playground />;
 }

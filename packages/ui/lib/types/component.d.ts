@@ -4,12 +4,10 @@ import type { JSX, ReactNode } from "react";
 import type { ComponentBadgeList } from "../badges.const";
 export type Variant = `variant${number}`;
 
-export type ProcessVariantType = {
-	name: string;
-	component: JSX.Element;
+export interface ProcessedVariantType extends VariantType {
 	previewCode: string;
 	componentCode?: string;
-};
+}
 
 export type ComponentBadgeSlug = (typeof ComponentBadgeList)[number]["slug"];
 
@@ -124,7 +122,7 @@ export type ComponentType = {
 	rerenderButton?: boolean;
 	inspiration?: string;
 	inspirationLink?: string;
-	sizePreview: ComponentHeightType;
+	sizePreview?: ComponentHeightType;
 	slug: string;
 	variantList: VariantType[];
 };
@@ -136,7 +134,7 @@ export type SingleComponentType = {
 	rerenderButton?: boolean;
 	inspiration?: string;
 	inspirationLink?: string;
-	sizePreview: ComponentHeightType;
+	sizePreview?: ComponentHeightType;
 	variantList: VariantType[];
 };
 
