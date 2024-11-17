@@ -4,7 +4,7 @@
   </a>
   <!-- <h1 align="left">CuiCui - A high quality react copy paste components library</h1> -->
   <p>
-    <a href="https://www.cuicui.day/">Visit site</a>
+    <a href="https://cuicui.day/">Visit site</a>
     ·
     <a href="https://github.com/damien-schneider/cuicui/issues">Report Bug</a>
     ·
