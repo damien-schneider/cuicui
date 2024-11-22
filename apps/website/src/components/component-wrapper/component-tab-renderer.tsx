@@ -118,7 +118,9 @@ export default function ComponentTabRenderer({
 								size={size}
 								// key={render}
 							>
-								{component ?? <p>An error has occured</p>}
+								{typeof component === "function"
+									? component()
+									: (component ?? <p>An error has occured</p>)}
 							</ComponentWrapper>
 						</ResizablePanel>
 						<ResizableHandle
@@ -136,7 +138,9 @@ export default function ComponentTabRenderer({
 						size={size}
 						// key={render}
 					>
-						{component ?? <p>An error has occured</p>}
+						{typeof component === "function"
+							? component()
+							: (component ?? <p>An error has occured</p>)}
 					</ComponentWrapper>
 				)}
 			</Tabs.Content>
