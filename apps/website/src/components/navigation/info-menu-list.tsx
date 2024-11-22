@@ -1,4 +1,4 @@
-import { getLatestChangelogDate } from "#/src/app/(site)/changelog/get-latest-release-date";
+// import { getLatestChangelogDate } from "#/src/app/(site)/changelog/get-latest-release-date";
 import { NavigationAnimatedBackground } from "#/src/components/navigation/navigation-animated-background";
 import {
   GlobalNavItem,
@@ -7,12 +7,13 @@ import {
 import { firstMenuSection } from "#/src/lib/first-menu-section";
 
 export default async function InfoMenuList() {
-  const latestChangelogDate = await getLatestChangelogDate();
-  const today = new Date();
+  // const latestChangelogDate = await getLatestChangelogDate();
+  // const today = new Date();
   // is New if latest changelog date is within 7 days
-  const isNew = latestChangelogDate
-    ? latestChangelogDate > new Date(today.setDate(today.getDate() - 1))
-    : false;
+  // const isNew = latestChangelogDate
+  //   ? latestChangelogDate > new Date(today.setDate(today.getDate() - 1))
+  //   : false;
+  const isNew = false;
   return (
     <SectionWrapper
       sectionSlug=""
