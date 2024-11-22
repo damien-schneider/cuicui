@@ -1,19 +1,39 @@
-// import { getLatestChangelogDate } from "#/src/app/(site)/changelog/get-latest-release-date";
 import { NavigationAnimatedBackground } from "#/src/components/navigation/navigation-animated-background";
 import {
   GlobalNavItem,
   SectionWrapper,
 } from "#/src/components/navigation/navigation-item";
 import { firstMenuSection } from "#/src/lib/first-menu-section";
+import { parseISO } from "date-fns";
+import { promises as fs } from "node:fs";
+import path from "node:path";
 
 export default async function InfoMenuList() {
-  // const latestChangelogDate = await getLatestChangelogDate();
-  // const today = new Date();
+  async function getLatestChangelogDate() {
+    const filenames = await fs.readdir(
+      path.join(process.cwd(), "src/changelogs"),
+    );
+
+    let latestDate = new Date(0);
+
+    for (const file of filenames) {
+      const filenameWithoutExtension = file.replace(/\.mdx$/, "");
+      const isoDate = parseISO(filenameWithoutExtension);
+      if (isoDate > latestDate) {
+        latestDate = isoDate;
+      }
+    }
+
+    return latestDate;
+  }
+
+  const latestChangelogDate = await getLatestChangelogDate();
+  const today = new Date();
   // is New if latest changelog date is within 7 days
-  // const isNew = latestChangelogDate
-  //   ? latestChangelogDate > new Date(today.setDate(today.getDate() - 1))
-  //   : false;
-  const isNew = false;
+  const isNew = latestChangelogDate
+    ? latestChangelogDate > new Date(today.setDate(today.getDate() - 1))
+    : false;
+
   return (
     <SectionWrapper
       sectionSlug=""
