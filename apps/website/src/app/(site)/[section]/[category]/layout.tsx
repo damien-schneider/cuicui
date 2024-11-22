@@ -77,7 +77,7 @@ export default function CategoryLayout({ children, params }: Props) {
 				/>
 				<meta content="all" name="robots" />
 			</Head>
-			<h1 className="bg-gradient-to-br from-sky-400 via-violet-500 to-orange-400 bg-clip-text font-medium text-transparent text-5xl inline tracking-tighter">
+			<h1 className="bg-gradient-to-b from-black to-black/40 dark:from-white dark:to-white/10 bg-clip-text font-medium text-transparent text-3xl sm:text-5xl inline tracking-tighter">
 				{category.name} components
 			</h1>
 			{children}

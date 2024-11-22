@@ -32,7 +32,9 @@ export default function HeaderComponent({
 				</div>
 			)}
 			<div>
-				<h2 className="header-2 mb-0">{title}</h2>
+				<h2 className="bg-gradient-to-b from-black to-black/40 dark:from-white dark:to-white/10 bg-clip-text font-medium text-transparent text-xl sm:text-2xl inline tracking-tighter">
+					{title}
+				</h2>
 				<p className="caption-sm">{description}</p>
 			</div>
 			{frameworksBadges && frameworksBadges.length > 0 && (
