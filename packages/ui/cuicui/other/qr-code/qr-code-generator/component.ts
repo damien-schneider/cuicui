@@ -6,10 +6,12 @@ export const QrCodeGeneratorComponent: ComponentType = {
 	variantList: [
 		{
 			name: "Default",
-			component: <QrCodeGenerator />,
+			component: QrCodeGenerator,
 			slugPreviewFile: "qr-code-generator",
 		},
 	],
 	name: "QR Code Generator",
 	description: "A QR code generator component using qrcode.react",
 };
+
+export default QrCodeGeneratorComponent;
