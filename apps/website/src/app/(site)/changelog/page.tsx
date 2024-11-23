@@ -12,15 +12,15 @@ export default async function ProjectPage() {
   const filenames = await fs.readdir(
     path.join(process.cwd(), "src/changelogs"),
   );
+  //filter out non-mdx files
 
-  // const rangeOfAllDays = eachDayOfInterval({
-  // 	start: new Date(2024, 10, 1), // 1st November 2024 (no changelogs before that)
-  // 	end: new Date(), // Today
-  // });
+  const mdxFilenames = filenames.filter((filename) =>
+    filename.endsWith(".mdx"),
+  );
 
   const contentMap: { date: Date; content: string }[] = [];
 
-  for (const file of filenames) {
+  for (const file of mdxFilenames) {
     const isoDate = parseISO(file.replace(/\.mdx$/, ""));
     // const IsoDate = formatISO(date, { representation: "date" });
 
@@ -58,7 +58,7 @@ export default async function ProjectPage() {
   }
 
   const changelogs = await Promise.all(
-    filenames.map(async (filename) => {
+    mdxFilenames.map(async (filename) => {
       const content = await fs.readFile(
         path.join(process.cwd(), "src/changelogs", filename),
         "utf-8",
