@@ -13,6 +13,7 @@ export const triggerOnScrollComponent: ComponentType = {
       name: "Animated Number",
       component: PreviewTriggerOnScroll,
       slugPreviewFile: "preview",
+      slugComponentFile: "trigger-on-scroll",
     },
   ],
 };
