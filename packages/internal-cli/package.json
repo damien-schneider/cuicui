@@ -6,7 +6,7 @@
 	"type": "module",
 	"scripts": {
 		"build": "tsc",
-		"start": "node dist/cli.js"
+		"cli": "node dist/cli.js"
 	},
 	"files": [
 		"dist"
