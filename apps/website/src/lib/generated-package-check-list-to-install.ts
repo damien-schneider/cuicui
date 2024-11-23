@@ -116,10 +116,6 @@ export const packageCheckListToInstall: PackageToInstallType[] = [
     packageName: "zustand",
   },
   {
-    find: [`from "@biomejs/biome"`],
-    packageName: "@biomejs/biome",
-  },
-  {
     find: [`from "@tailwindcss/forms"`],
     packageName: "@tailwindcss/forms",
   },

@@ -1,6 +1,7 @@
 import AnimatedCounterPreview from "@/cuicui/marketing-ui/statistics/animated-counter/animated-counter-preview";
 import { AnimatedNumberVariant1 } from "@/cuicui/marketing-ui/statistics/animated-on-scroll/variant1";
 import IncreaseToValueVariant1 from "@/cuicui/marketing-ui/statistics/increase-to-value/variant1";
+import { triggerOnScrollComponent } from "@/cuicui/marketing-ui/statistics/trigger-on-scroll/component";
 import type { CategoryType } from "@/lib/types/component";
 import { BarChart2Icon } from "lucide-react";
 
@@ -30,6 +31,7 @@ export const statisticsCategory: CategoryType = {
         },
       ],
     },
+    triggerOnScrollComponent,
     {
       sizePreview: "sm",
       slug: "increase-to-value",
