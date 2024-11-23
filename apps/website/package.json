@@ -78,7 +78,8 @@
   "private": false,
   "publisher": "Damien Schneider",
   "scripts": {
-    "build": "next build",
+    "build": "pnpm pre-build && next build",
+    "pre-build": "pnpm scripts/generate-latest-changelog-date.mjs && pnpm scripts/generate-package-list-check.mjs",
     "dev": "next dev --turbo",
     "start": "next start",
     "format:check": "biome format --check ./src",

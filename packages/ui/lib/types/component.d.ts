@@ -28,7 +28,7 @@ export type ComponentHeightType = "xs" | "sm" | "md" | "lg" | "xl";
 */
 
 export type PreviewComponent = {
-	component: ReactNode;
+	component: ReactNode | (() => ReactNode);
 	previewScale: number;
 	previewImage?: StaticImageData;
 };
@@ -146,7 +146,7 @@ export type SingleComponentType = {
 
 export type VariantType = {
 	name: string;
-	component: JSX.Element;
+	component: JSX.Element | (() => JSX.Element);
 	slugComponentFile?: string;
 	slugPreviewFile: string;
 };
