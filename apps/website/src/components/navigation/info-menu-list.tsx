@@ -1,3 +1,4 @@
+"use server";
 import { NavigationAnimatedBackground } from "#/src/components/navigation/navigation-animated-background";
 import {
   GlobalNavItem,
