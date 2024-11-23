@@ -9,29 +9,24 @@ import { promises as fs } from "node:fs";
 import path from "node:path";
 
 export default async function InfoMenuList() {
-  async function getLatestChangelogDate() {
-    const filenames = await fs.readdir(
-      path.join(process.cwd(), "src/changelogs"),
-    );
+  const filenames = await fs.readdir(
+    path.join(process.cwd(), "src/changelogs"),
+  );
 
-    let latestDate = new Date(0);
+  let latestChangelogDate = new Date(0);
 
-    for (const file of filenames) {
-      const filenameWithoutExtension = file.replace(/\.mdx$/, "");
-      const isoDate = parseISO(filenameWithoutExtension);
-      if (isoDate > latestDate) {
-        latestDate = isoDate;
-      }
+  for (const file of filenames) {
+    const filenameWithoutExtension = file.replace(/\.mdx$/, "");
+    const isoDate = parseISO(filenameWithoutExtension);
+    if (isoDate > latestChangelogDate) {
+      latestChangelogDate = isoDate;
     }
-
-    return latestDate;
   }
 
-  const latestChangelogDate = await getLatestChangelogDate();
   const today = new Date();
   // is New if latest changelog date is within 7 days
   const isNew = latestChangelogDate
-    ? latestChangelogDate > new Date(today.setDate(today.getDate() - 1))
+    ? latestChangelogDate > new Date(today.setDate(today.getDate() - 7))
     : false;
 
   return (
