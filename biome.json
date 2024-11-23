@@ -25,7 +25,8 @@
       "correctness": {
         "all": true,
         "noNodejsModules": "off",
-        "useImportExtensions": "off"
+        "useImportExtensions": "off",
+        "noUndeclaredDependencies": "off"
       },
       "nursery": {
         "useSortedClasses": "off"
@@ -54,7 +55,12 @@
     "enabled": true
   },
   "files": {
-    "ignore": ["node_modules", "dist", "build", ".next"]
+    "ignore": [
+      "node_modules",
+      "dist",
+      "build",
+      ".next"
+    ]
   },
   "vcs": {
     "clientKind": "git",
