@@ -21,6 +21,7 @@ import {
 } from "#/src/ui/shadcn/scrollarea";
 import { cn } from "#/src/utils/cn";
 import { getContainerHeightClass } from "#/src/components/component-wrapper/get-container-height-class";
+import { createElement } from "react";
 const tabs = [
   {
     name: "Preview",
@@ -93,7 +94,7 @@ export default function ComponentTabRenderer({
           }
         })}
       </Tabs.List>
-      <Tabs.Content value="preview" asChild>
+      <Tabs.Content value="preview" asChild={true}>
         {isResizable ? (
           <ResizablePanelGroup
             className={cn(
@@ -119,7 +120,7 @@ export default function ComponentTabRenderer({
                 // key={render}
               >
                 {typeof component === "function"
-                  ? component()
+                  ? createElement(component)
                   : (component ?? <p>An error has occured</p>)}
               </ComponentWrapper>
             </ResizablePanel>
@@ -139,7 +140,7 @@ export default function ComponentTabRenderer({
             // key={render}
           >
             {typeof component === "function"
-              ? component()
+              ? createElement(component)
               : (component ?? <p>An error has occured</p>)}
           </ComponentWrapper>
         )}

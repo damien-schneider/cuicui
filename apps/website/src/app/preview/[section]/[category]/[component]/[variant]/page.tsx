@@ -1,6 +1,7 @@
 import { SectionsList } from "@cuicui/ui/lib/sections-list";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { createElement } from "react";
 
 export const metadata: Metadata = {
   referrer: "no-referrer",
@@ -52,7 +53,7 @@ export default function PagePreview({
   return (
     <div className="grid place-content-center w-full min-h-screen">
       {typeof variantFound.component === "function"
-        ? variantFound.component()
+        ? createElement(variantFound.component)
         : variantFound.component}
     </div>
   );
