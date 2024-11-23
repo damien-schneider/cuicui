@@ -8,12 +8,16 @@
     "type-check": "turbo type-check",
     "clean": "turbo clean",
     "test": "turbo run test",
-    "test:watch": "turbo run test:watch"
+    "test:watch": "turbo run test:watch",
+    "format:write": "biome format --write ./",
+    "lint:apply": "biome check --apply ./",
+    "lint:check": "biome check ./"
   },
   "devDependencies": {
     "turbo": "^2.0.3",
     "@vitejs/plugin-react": "4.3.1",
-    "vitest": "2.0.5"
+    "vitest": "2.0.5",
+    "@biomejs/biome": "1.9.2"
   },
   "packageManager": "pnpm@9.0.4",
   "engines": {
