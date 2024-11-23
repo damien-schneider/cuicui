@@ -4,30 +4,30 @@ import { PreviewUseTextToSpeech } from "@/cuicui/hooks/use-text-to-speech/previe
 import { PreviewUseTextToSpeechAdvancedDemo } from "@/cuicui/hooks/use-text-to-speech/preview.advanced-demo";
 
 export const useTextToSpeechCategory: SingleComponentCategoryType = {
-	slug: "use-text-to-speech",
-	name: "Use Text to Speech",
-	description: "A hook that allows you to convert text to speech",
-	releaseDateCategory: new Date("2024-09-28"),
-	icon: SpeechIcon,
-	previewCategory: {
-		component: <PreviewUseTextToSpeech />,
+  slug: "use-text-to-speech",
+  name: "Use Text to Speech",
+  description: "A hook that allows you to convert text to speech",
+  releaseDateCategory: new Date("2024-09-28"),
+  icon: SpeechIcon,
+  previewCategory: {
+    component: <PreviewUseTextToSpeech />,
 
-		previewScale: 0.8,
-	},
-	component: {
-		sizePreview: "lg",
+    previewScale: 0.8,
+  },
+  component: {
+    sizePreview: "lg",
 
-		variantList: [
-			{
-				name: "With highlight",
-				component: <PreviewUseTextToSpeech />,
-				slugPreviewFile: "preview.use-text-to-speech",
-			},
-			{
-				name: "Advanced Demo",
-				component: <PreviewUseTextToSpeechAdvancedDemo />,
-				slugPreviewFile: "preview.advanced-demo",
-			},
-		],
-	},
+    variantList: [
+      {
+        name: "With highlight",
+        component: <PreviewUseTextToSpeech />,
+        slugPreviewFile: "preview.use-text-to-speech",
+      },
+      {
+        name: "Advanced Demo",
+        component: <PreviewUseTextToSpeechAdvancedDemo />,
+        slugPreviewFile: "preview.advanced-demo",
+      },
+    ],
+  },
 };

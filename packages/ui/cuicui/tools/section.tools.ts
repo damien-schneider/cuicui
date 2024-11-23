@@ -7,17 +7,17 @@ import { noiseGeneratorCategory } from "@/cuicui/tools/noise-creator/category.no
 import { cssSelectorsCategory } from "@/cuicui/tools/css-selectors/category.css-selectors";
 
 export const toolsSection: PageSectionType = {
-	type: "page",
-	name: "Tools",
-	slug: "tools",
-	description:
-		"Tools to help you build your website, designs, UI & UX components, and animations. Everythin you need faster, all in one place. Just copy paste.",
-	icon: PencilRulerIcon,
-	pageList: [
-		bezierCurveGeneratorCategory,
-		ColorConverterCategory,
-		cssSelectorsCategory,
-		FormBuilderCategory,
-		noiseGeneratorCategory,
-	],
+  type: "page",
+  name: "Tools",
+  slug: "tools",
+  description:
+    "Tools to help you build your website, designs, UI & UX components, and animations. Everythin you need faster, all in one place. Just copy paste.",
+  icon: PencilRulerIcon,
+  pageList: [
+    bezierCurveGeneratorCategory,
+    ColorConverterCategory,
+    cssSelectorsCategory,
+    FormBuilderCategory,
+    noiseGeneratorCategory,
+  ],
 };

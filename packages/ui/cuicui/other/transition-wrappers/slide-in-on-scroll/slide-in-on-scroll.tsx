@@ -2,16 +2,16 @@ import type { ReactNode } from "react";
 import { cn } from "@/cuicui/utils/cn/cn";
 
 export function SlideInOnScrollWrapper({
-	children,
-	className,
+  children,
+  className,
 }: Readonly<{
-	className?: string;
-	children: ReactNode;
+  className?: string;
+  children: ReactNode;
 }>) {
-	return (
-		<>
-			<style>
-				{`
+  return (
+    <>
+      <style>
+        {`
           @keyframes slide-fade-in {
             from {
               opacity: 0;
@@ -30,9 +30,9 @@ export function SlideInOnScrollWrapper({
             }
           }
         `}
-			</style>
+      </style>
 
-			<div className={cn("card", className)}>{children}</div>
-		</>
-	);
+      <div className={cn("card", className)}>{children}</div>
+    </>
+  );
 }

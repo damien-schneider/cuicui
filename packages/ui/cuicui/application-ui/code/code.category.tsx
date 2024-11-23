@@ -7,19 +7,19 @@ import { codeSnippetComponent } from "@/cuicui/application-ui/code/code-snippet/
 import { inlineCodeComponent } from "@/cuicui/application-ui/code/inline-code/inline-code.component";
 
 export const codeCategory: CategoryType = {
-	slug: "code",
-	name: "Code",
-	description: "Code components with special interactions",
-	releaseDateCategory: new Date("2024-08-20"),
-	icon: Code2Icon,
-	previewCategory: {
-		component: <CodeCardPreview />,
-		previewScale: 0.8,
-	},
-	componentList: [
-		codeSnippetComponent,
-		codeCardComponent,
-		inlineCodeComponent,
-		advancedCodeBlockComponent,
-	],
+  slug: "code",
+  name: "Code",
+  description: "Code components with special interactions",
+  releaseDateCategory: new Date("2024-08-20"),
+  icon: Code2Icon,
+  previewCategory: {
+    component: <CodeCardPreview />,
+    previewScale: 0.8,
+  },
+  componentList: [
+    codeSnippetComponent,
+    codeCardComponent,
+    inlineCodeComponent,
+    advancedCodeBlockComponent,
+  ],
 };

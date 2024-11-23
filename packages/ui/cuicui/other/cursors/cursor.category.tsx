@@ -5,14 +5,14 @@ import { followCursorComponent } from "@/cuicui/other/cursors/follow-cursor/foll
 import FollowCursorWithCursor from "@/cuicui/other/cursors/follow-cursor/with-cursor";
 
 export const cursorCategory: CategoryType = {
-	slug: "cursors",
-	name: "Cursors",
-	description: "Create cursor effects",
-	releaseDateCategory: new Date("2024-07-21"),
-	icon: MousePointerClickIcon,
-	previewCategory: {
-		component: <FollowCursorWithCursor />,
-		previewScale: 1,
-	},
-	componentList: [followCursorComponent, cardHoverCursorEffectComponent],
+  slug: "cursors",
+  name: "Cursors",
+  description: "Create cursor effects",
+  releaseDateCategory: new Date("2024-07-21"),
+  icon: MousePointerClickIcon,
+  previewCategory: {
+    component: <FollowCursorWithCursor />,
+    previewScale: 1,
+  },
+  componentList: [followCursorComponent, cardHoverCursorEffectComponent],
 };

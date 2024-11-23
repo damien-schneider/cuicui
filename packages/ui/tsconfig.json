@@ -1,13 +1,13 @@
 {
-	"$schema": "http://json.schemastore.org/tsconfig",
-	"extends": "@cuicui/config-typescript/react-library.json",
-	"include": ["."],
-	"exclude": ["dist", "build", "node_modules"],
-	"compilerOptions": {
-		"baseUrl": ".",
-		"paths": {
-			"@/*": ["./*"]
-		},
-		"outDir": "dist"
-	}
+  "$schema": "http://json.schemastore.org/tsconfig",
+  "extends": "@cuicui/config-typescript/react-library.json",
+  "include": ["."],
+  "exclude": ["dist", "build", "node_modules"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"]
+    },
+    "outDir": "dist"
+  }
 }

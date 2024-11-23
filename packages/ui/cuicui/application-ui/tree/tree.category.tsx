@@ -4,14 +4,14 @@ import { PreviewRecursiveTree } from "@/cuicui/application-ui/tree/recursive-tre
 import { recursiveTreeComponent } from "@/cuicui/application-ui/tree/recursive-tree/recursive-tree.component";
 
 export const treeCategory: CategoryType = {
-	slug: "tree",
-	name: "Tree",
-	description: "Tree components",
-	releaseDateCategory: new Date("2024-09-18"),
-	icon: FolderTreeIcon,
-	previewCategory: {
-		component: <PreviewRecursiveTree />,
-		previewScale: 1,
-	},
-	componentList: [recursiveTreeComponent],
+  slug: "tree",
+  name: "Tree",
+  description: "Tree components",
+  releaseDateCategory: new Date("2024-09-18"),
+  icon: FolderTreeIcon,
+  previewCategory: {
+    component: <PreviewRecursiveTree />,
+    previewScale: 1,
+  },
+  componentList: [recursiveTreeComponent],
 };

@@ -9,11 +9,11 @@ import type { SectionType } from "./types/component";
 import { marketingUiSection } from "@/cuicui/marketing-ui/section.marketing-ui";
 
 export const SectionsList: SectionType[] = [
-	commonUiSection,
-	applicationUiSection,
-	marketingUiSection,
-	otherSection,
-	hooksSection,
-	utilsSection,
-	toolsSection,
+  commonUiSection,
+  applicationUiSection,
+  marketingUiSection,
+  otherSection,
+  hooksSection,
+  utilsSection,
+  toolsSection,
 ];

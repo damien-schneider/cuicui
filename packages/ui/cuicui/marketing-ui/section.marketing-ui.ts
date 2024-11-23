@@ -10,18 +10,18 @@ import { faqCategory } from "@/cuicui/marketing-ui/faq/category.faq";
 import { footerCategory } from "@/cuicui/marketing-ui/footer/category";
 
 export const marketingUiSection: MultiComponentSectionType = {
-	type: "multiple-component",
-	name: "Marketing UI",
-	slug: "marketing-ui",
-	description: "A collection of UI components for marketing websites.",
-	icon: BadgePercentIcon,
-	categoriesList: [
-		carouselsCategory,
-		faqCategory,
-		featuresCategory,
-		pricingTablesCategory,
-		statisticsCategory,
-		testimonialsCategory,
-		footerCategory,
-	],
+  type: "multiple-component",
+  name: "Marketing UI",
+  slug: "marketing-ui",
+  description: "A collection of UI components for marketing websites.",
+  icon: BadgePercentIcon,
+  categoriesList: [
+    carouselsCategory,
+    faqCategory,
+    featuresCategory,
+    pricingTablesCategory,
+    statisticsCategory,
+    testimonialsCategory,
+    footerCategory,
+  ],
 };

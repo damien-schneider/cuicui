@@ -1,5 +1,5 @@
 {
-	"extends": "@cuicui/config-typescript/base.json",
-	"include": ["."],
-	"exclude": ["dist", "build", "node_modules"]
+  "extends": "@cuicui/config-typescript/base.json",
+  "include": ["."],
+  "exclude": ["dist", "build", "node_modules"]
 }

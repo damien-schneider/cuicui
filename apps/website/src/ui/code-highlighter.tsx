@@ -4,20 +4,20 @@ import ShikiCode from "@cuicui/ui/cuicui/application-ui/code/advanced-code-block
 
 import { cn } from "../utils/cn";
 export default function CodeHighlighter({
-	code,
-	className,
+  code,
+  className,
 }: Readonly<
-	{ code: string; className?: string } & HTMLAttributes<HTMLDivElement>
+  { code: string; className?: string } & HTMLAttributes<HTMLDivElement>
 >) {
-	return (
-		<>
-			<CopyToClipboardButton code={code} />
-			<ShikiCode
-				className={cn("text-xs", className)}
-				code={code}
-				lang="typescript"
-				theme="github-light"
-			/>
-		</>
-	);
+  return (
+    <>
+      <CopyToClipboardButton code={code} />
+      <ShikiCode
+        className={cn("text-xs", className)}
+        code={code}
+        lang="typescript"
+        theme="github-light"
+      />
+    </>
+  );
 }

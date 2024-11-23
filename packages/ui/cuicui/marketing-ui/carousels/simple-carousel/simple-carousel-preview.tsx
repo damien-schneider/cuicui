@@ -1,10 +1,10 @@
 import {
-	Carousel,
-	CarouselContent,
-	CarouselDots,
-	CarouselItem,
-	CarouselNext,
-	CarouselPrevious,
+  Carousel,
+  CarouselContent,
+  CarouselDots,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
 } from "@/cuicui/marketing-ui/carousels/simple-carousel/simple-carousel";
 
 import Image from "next/image";
@@ -17,31 +17,31 @@ import Image5 from "@/assets/deepmind-images/deepmind-picture-5.jpg";
 const imageArray = [Image1, Image2, Image3, Image4, Image5];
 
 export function SimpleCarouselPreview() {
-	return (
-		<Carousel
-			className="w-full max-w-xs"
-			opts={{
-				align: "center",
-				loop: true,
-			}}
-		>
-			<CarouselContent className="rounded-xl">
-				{imageArray.map((image, index) => (
-					// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
-					<CarouselItem className="" key={`carousel-image-${index}`}>
-						<Image
-							alt=""
-							className=" h-full w-full rounded-xl"
-							height={200}
-							src={image}
-							width={300}
-						/>
-					</CarouselItem>
-				))}
-			</CarouselContent>
-			<CarouselDots />
-			<CarouselPrevious />
-			<CarouselNext />
-		</Carousel>
-	);
+  return (
+    <Carousel
+      className="w-full max-w-xs"
+      opts={{
+        align: "center",
+        loop: true,
+      }}
+    >
+      <CarouselContent className="rounded-xl">
+        {imageArray.map((image, index) => (
+          // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
+          <CarouselItem className="" key={`carousel-image-${index}`}>
+            <Image
+              alt=""
+              className=" h-full w-full rounded-xl"
+              height={200}
+              src={image}
+              width={300}
+            />
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+      <CarouselDots />
+      <CarouselPrevious />
+      <CarouselNext />
+    </Carousel>
+  );
 }

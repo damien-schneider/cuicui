@@ -6,140 +6,140 @@ const isClient = typeof window === "object";
 type HistoryMethod = "pushState" | "replaceState";
 
 declare global {
-	interface WindowEventMap {
-		pushstate: CustomEvent<{ state: unknown }>;
-		replacestate: CustomEvent<{ state: unknown }>;
-	}
+  interface WindowEventMap {
+    pushstate: CustomEvent<{ state: unknown }>;
+    replacestate: CustomEvent<{ state: unknown }>;
+  }
 }
 
 const on = (
-	obj: Window,
-	type: keyof WindowEventMap,
-	listener: (event: Event) => void,
+  obj: Window,
+  type: keyof WindowEventMap,
+  listener: (event: Event) => void,
 ) => obj.addEventListener(type, listener);
 
 const off = (
-	obj: Window,
-	type: keyof WindowEventMap,
-	listener: (event: Event) => void,
+  obj: Window,
+  type: keyof WindowEventMap,
+  listener: (event: Event) => void,
 ) => obj.removeEventListener(type, listener);
 
 const patchHistoryMethod = (method: HistoryMethod) => {
-	const original = history[method];
+  const original = history[method];
 
-	history[method] = function (
-		this: History,
-		data: unknown,
-		title: string,
-		url?: string | null,
-	) {
-		const result = original.apply(this, [data, title, url]);
-		const event = new CustomEvent<{ state: unknown }>(method.toLowerCase(), {
-			detail: { state: data },
-		});
-		window.dispatchEvent(event);
-		return result;
-	};
+  history[method] = function (
+    this: History,
+    data: unknown,
+    title: string,
+    url?: string | null,
+  ) {
+    const result = original.apply(this, [data, title, url]);
+    const event = new CustomEvent<{ state: unknown }>(method.toLowerCase(), {
+      detail: { state: data },
+    });
+    window.dispatchEvent(event);
+    return result;
+  };
 };
 
 if (isClient) {
-	patchHistoryMethod("pushState");
-	patchHistoryMethod("replaceState");
+  patchHistoryMethod("pushState");
+  patchHistoryMethod("replaceState");
 }
 
 type LocationStateType = {
-	trigger: string;
-	state: unknown;
-	length: number;
-	hash: string;
-	host: string;
-	hostname: string;
-	href: string;
-	origin: string;
-	pathname: string;
-	port: string;
-	protocol: string;
-	search: string;
+  trigger: string;
+  state: unknown;
+  length: number;
+  hash: string;
+  host: string;
+  hostname: string;
+  href: string;
+  origin: string;
+  pathname: string;
+  port: string;
+  protocol: string;
+  search: string;
 };
 
 const defaultLocationState: LocationStateType = {
-	trigger: "load",
-	state: null,
-	length: 1,
-	hash: "",
-	host: "",
-	hostname: "",
-	href: "",
-	origin: "",
-	pathname: "",
-	port: "",
-	protocol: "",
-	search: "",
+  trigger: "load",
+  state: null,
+  length: 1,
+  hash: "",
+  host: "",
+  hostname: "",
+  href: "",
+  origin: "",
+  pathname: "",
+  port: "",
+  protocol: "",
+  search: "",
 };
 
 export const useLocation = (): LocationStateType => {
-	const buildState = (trigger: string): LocationStateType => {
-		if (!isClient) {
-			return defaultLocationState;
-		}
+  const buildState = (trigger: string): LocationStateType => {
+    if (!isClient) {
+      return defaultLocationState;
+    }
 
-		const { state, length } = history;
-		const {
-			hash,
-			host,
-			hostname,
-			href,
-			origin,
-			pathname,
-			port,
-			protocol,
-			search,
-		} = window.location;
+    const { state, length } = history;
+    const {
+      hash,
+      host,
+      hostname,
+      href,
+      origin,
+      pathname,
+      port,
+      protocol,
+      search,
+    } = window.location;
 
-		return {
-			trigger,
-			state,
-			length,
-			hash,
-			host,
-			hostname,
-			href,
-			origin,
-			pathname,
-			port,
-			protocol,
-			search,
-		};
-	};
+    return {
+      trigger,
+      state,
+      length,
+      hash,
+      host,
+      hostname,
+      href,
+      origin,
+      pathname,
+      port,
+      protocol,
+      search,
+    };
+  };
 
-	const [locationState, setLocationState] = useState<LocationStateType>(
-		buildState("load"),
-	);
+  const [locationState, setLocationState] = useState<LocationStateType>(
+    buildState("load"),
+  );
 
-	// !! Should try to use the `useEffect` hook with an exhaustive dependency array
-	// biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
-	useEffect(() => {
-		if (!isClient) {
-			return;
-		}
-		const onChange = (trigger: string) => {
-			setLocationState(buildState(trigger));
-		};
+  // !! Should try to use the `useEffect` hook with an exhaustive dependency array
+  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
+  useEffect(() => {
+    if (!isClient) {
+      return;
+    }
+    const onChange = (trigger: string) => {
+      setLocationState(buildState(trigger));
+    };
 
-		const handlePopState = () => onChange("popstate");
-		const handlePushState = () => onChange("pushstate");
-		const handleReplaceState = () => onChange("replacestate");
+    const handlePopState = () => onChange("popstate");
+    const handlePushState = () => onChange("pushstate");
+    const handleReplaceState = () => onChange("replacestate");
 
-		on(window, "popstate", handlePopState);
-		on(window, "pushstate", handlePushState);
-		on(window, "replacestate", handleReplaceState);
+    on(window, "popstate", handlePopState);
+    on(window, "pushstate", handlePushState);
+    on(window, "replacestate", handleReplaceState);
 
-		return () => {
-			off(window, "popstate", handlePopState);
-			off(window, "pushstate", handlePushState);
-			off(window, "replacestate", handleReplaceState);
-		};
-	}, []);
+    return () => {
+      off(window, "popstate", handlePopState);
+      off(window, "pushstate", handlePushState);
+      off(window, "replacestate", handleReplaceState);
+    };
+  }, []);
 
-	return locationState;
+  return locationState;
 };

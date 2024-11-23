@@ -8,62 +8,62 @@ import type { CategoryType, SectionType } from "@cuicui/ui/lib/types/component";
 import GithubEditButton from "#/src/components/component-wrapper/github-edit-button";
 
 export default async function MultipleComponentCategory({
-	category,
-	sectionSlug,
+  category,
+  sectionSlug,
 }: Readonly<{ category: CategoryType; sectionSlug: SectionType["slug"] }>) {
-	if (category.comingSoonCategory) {
-		return <ComingSoonCard />;
-	}
+  if (category.comingSoonCategory) {
+    return <ComingSoonCard />;
+  }
 
-	if (!category.componentList) {
-		return notFound();
-	}
+  if (!category.componentList) {
+    return notFound();
+  }
 
-	// If the componentList is not an array, we convert it to an array
-	const componentArray = Array.isArray(category.componentList)
-		? category.componentList
-		: [category.componentList];
+  // If the componentList is not an array, we convert it to an array
+  const componentArray = Array.isArray(category.componentList)
+    ? category.componentList
+    : [category.componentList];
 
-	const componentList = await fetchMultipleComponentData({
-		categorySlug: category.slug,
-		componentList: componentArray,
-	});
+  const componentList = await fetchMultipleComponentData({
+    categorySlug: category.slug,
+    componentList: componentArray,
+  });
 
-	return (
-		<div className="space-y-32">
-			{componentList.map((component) => (
-				<div className="" key={component.name}>
-					<div className="flex">
-						<GithubEditButton
-							sectionSlug={sectionSlug}
-							categorySlug={category.slug}
-							componentSlug={component.slug}
-						/>
-					</div>
-					<HeaderComponent
-						componentBadges={component.componentBadges}
-						description={component.description}
-						title={component.name}
-					/>
-					<InspirationComponentFooter
-						inspiration={component.inspiration}
-						inspirationLink={component.inspirationLink}
-					/>
-					<VariantTabs
-						isIframed={component.isIframed}
-						isResizable={component.isResizable}
-						key={component.name}
-						rerenderButton={component.rerenderButton}
-						size={component.sizePreview}
-						variantList={component.componentList}
-						componentParams={{
-							sectionSlug,
-							categorySlug: category.slug,
-							componentSlug: component.slug,
-						}}
-					/>
-				</div>
-			))}
-		</div>
-	);
+  return (
+    <div className="space-y-32">
+      {componentList.map((component) => (
+        <div className="" key={component.name}>
+          <div className="flex">
+            <GithubEditButton
+              sectionSlug={sectionSlug}
+              categorySlug={category.slug}
+              componentSlug={component.slug}
+            />
+          </div>
+          <HeaderComponent
+            componentBadges={component.componentBadges}
+            description={component.description}
+            title={component.name}
+          />
+          <InspirationComponentFooter
+            inspiration={component.inspiration}
+            inspirationLink={component.inspirationLink}
+          />
+          <VariantTabs
+            isIframed={component.isIframed}
+            isResizable={component.isResizable}
+            key={component.name}
+            rerenderButton={component.rerenderButton}
+            size={component.sizePreview}
+            variantList={component.componentList}
+            componentParams={{
+              sectionSlug,
+              categorySlug: category.slug,
+              componentSlug: component.slug,
+            }}
+          />
+        </div>
+      ))}
+    </div>
+  );
 }

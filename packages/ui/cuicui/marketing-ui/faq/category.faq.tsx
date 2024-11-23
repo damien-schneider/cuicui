@@ -4,10 +4,10 @@ import type { CategoryType } from "@/lib/types/component";
 import { MessageCircleQuestionIcon } from "lucide-react";
 
 export const faqCategory: CategoryType = {
-	name: "FAQ",
-	slug: "faq",
-	description: "A collection of FAQ components for your projects.",
-	icon: MessageCircleQuestionIcon,
-	releaseDateCategory: new Date("2024-01-11"),
-	componentList: [FullSectionFaqComponent, gradientQnaComponent],
+  name: "FAQ",
+  slug: "faq",
+  description: "A collection of FAQ components for your projects.",
+  icon: MessageCircleQuestionIcon,
+  releaseDateCategory: new Date("2024-01-11"),
+  componentList: [FullSectionFaqComponent, gradientQnaComponent],
 };

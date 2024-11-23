@@ -13,130 +13,130 @@ import PreviewGithubStars from "@/cuicui/common-ui/buttons/github-stars/preview.
 import PreviewGradientContainer from "@/cuicui/common-ui/buttons/github-stars/preview.gradient-container";
 
 export const buttonsCategory: CategoryType = {
-	slug: "buttons",
-	name: "Buttons",
-	description: "Buttons with various animations and styles",
-	releaseDateCategory: new Date("2024-08-09"),
-	icon: SquareArrowRightIcon,
-	previewCategory: {
-		component: <PreviewShinyRotatingBorderButton />,
-		previewScale: 1.5,
-	},
-	componentList: [
-		{
-			slug: "magnetic-button",
-			name: "Magnetic Button",
-			description: "Button with a magnetic effect.",
-			sizePreview: "sm",
-			variantList: [
-				{
-					name: "Magnetic Background",
-					component: <PreviewMagneticBackgroundButton />,
-					slugPreviewFile: "preview.magnetic-background-button",
-					slugComponentFile: "component.magnetic-background-button",
-				},
-				{
-					name: "Magnetic Button",
-					component: <PreviewMagneticButton />,
-					slugPreviewFile: "preview.magnetic-button",
-					slugComponentFile: "component.magnetic-button",
-				},
-			],
-		},
-		{
-			slug: "github-stars",
-			name: "Github Stars Button",
-			description:
-				"Button with to show the number of stars of a GitHub repository.",
-			sizePreview: "sm",
-			variantList: [
-				{
-					name: "Cuicui colors",
-					component: <PreviewGithubStars />,
-					slugPreviewFile: "preview.github-stars",
-					slugComponentFile: "component.github-stars",
-				},
-				{
-					name: "Container only",
-					component: <PreviewGradientContainer />,
-					slugPreviewFile: "preview.github-stars",
-					slugComponentFile: "component.github-stars",
-				},
-			],
-			inspiration: "Refine",
-			inspirationLink: "https://refine.dev/",
-		},
-		{
-			slug: "growing-button",
-			name: "Button",
-			description:
-				"Simple button with icon which grows on hover. Perfect for small, rarely used buttons replacing an old tooltip.",
-			sizePreview: "xs",
-			variantList: [
-				{
-					name: "Amber",
-					component: <GrowingButtonVariant1 />,
-					slugPreviewFile: "variant1",
-				},
-			],
-		},
-		{
-			slug: "before-effect-button",
-			name: "Dynamic button hover effect",
-			description: "Button with a hover effect that has a 'before' effect.",
-			sizePreview: "xs",
-			isIframed: true,
-			variantList: [
-				{
-					name: "Hover only",
-					component: <PreviewBeforeEffectButtonHoverOnly />,
-					slugPreviewFile: "preview-hover-only",
-					slugComponentFile: "before-effect-button",
-				},
-				{
-					name: "Simple",
-					component: <PreviewBeforeEffectButtonDefault />,
-					slugPreviewFile: "preview-default",
-					slugComponentFile: "before-effect-button",
-				},
-				{
-					name: "Advanced button",
-					component: <PreviewBeforeEffectButtonAdvancedButton />,
-					slugPreviewFile: "preview-advanced-button",
-					slugComponentFile: "before-effect-button",
-				},
-			],
-		},
-		{
-			slug: "shiny-rotating-border-button",
-			name: "Shiny rotating border button",
-			description: "Button with a shiny rotating border effect.",
-			sizePreview: "xs",
-			variantList: [
-				{
-					name: "Default",
-					component: <PreviewShinyRotatingBorderButton />,
-					slugPreviewFile: "preview.shiny-rotating-border-button",
-					slugComponentFile: "component.shiny-rotating-border-button",
-				},
-			],
-			isIframed: true,
-		},
-		{
-			slug: "modern-animated-button",
-			name: "Modern Animated Button",
-			description: "Button with a modern animated style.",
-			sizePreview: "xs",
-			variantList: [
-				{
-					name: "Shiny rotating border button",
-					component: <ModernAnimatedButtonVariant1 />,
-					slugPreviewFile: "variant1",
-				},
-			],
+  slug: "buttons",
+  name: "Buttons",
+  description: "Buttons with various animations and styles",
+  releaseDateCategory: new Date("2024-08-09"),
+  icon: SquareArrowRightIcon,
+  previewCategory: {
+    component: <PreviewShinyRotatingBorderButton />,
+    previewScale: 1.5,
+  },
+  componentList: [
+    {
+      slug: "magnetic-button",
+      name: "Magnetic Button",
+      description: "Button with a magnetic effect.",
+      sizePreview: "sm",
+      variantList: [
+        {
+          name: "Magnetic Background",
+          component: <PreviewMagneticBackgroundButton />,
+          slugPreviewFile: "preview.magnetic-background-button",
+          slugComponentFile: "component.magnetic-background-button",
+        },
+        {
+          name: "Magnetic Button",
+          component: <PreviewMagneticButton />,
+          slugPreviewFile: "preview.magnetic-button",
+          slugComponentFile: "component.magnetic-button",
+        },
+      ],
+    },
+    {
+      slug: "github-stars",
+      name: "Github Stars Button",
+      description:
+        "Button with to show the number of stars of a GitHub repository.",
+      sizePreview: "sm",
+      variantList: [
+        {
+          name: "Cuicui colors",
+          component: <PreviewGithubStars />,
+          slugPreviewFile: "preview.github-stars",
+          slugComponentFile: "component.github-stars",
+        },
+        {
+          name: "Container only",
+          component: <PreviewGradientContainer />,
+          slugPreviewFile: "preview.github-stars",
+          slugComponentFile: "component.github-stars",
+        },
+      ],
+      inspiration: "Refine",
+      inspirationLink: "https://refine.dev/",
+    },
+    {
+      slug: "growing-button",
+      name: "Button",
+      description:
+        "Simple button with icon which grows on hover. Perfect for small, rarely used buttons replacing an old tooltip.",
+      sizePreview: "xs",
+      variantList: [
+        {
+          name: "Amber",
+          component: <GrowingButtonVariant1 />,
+          slugPreviewFile: "variant1",
+        },
+      ],
+    },
+    {
+      slug: "before-effect-button",
+      name: "Dynamic button hover effect",
+      description: "Button with a hover effect that has a 'before' effect.",
+      sizePreview: "xs",
+      isIframed: true,
+      variantList: [
+        {
+          name: "Hover only",
+          component: <PreviewBeforeEffectButtonHoverOnly />,
+          slugPreviewFile: "preview-hover-only",
+          slugComponentFile: "before-effect-button",
+        },
+        {
+          name: "Simple",
+          component: <PreviewBeforeEffectButtonDefault />,
+          slugPreviewFile: "preview-default",
+          slugComponentFile: "before-effect-button",
+        },
+        {
+          name: "Advanced button",
+          component: <PreviewBeforeEffectButtonAdvancedButton />,
+          slugPreviewFile: "preview-advanced-button",
+          slugComponentFile: "before-effect-button",
+        },
+      ],
+    },
+    {
+      slug: "shiny-rotating-border-button",
+      name: "Shiny rotating border button",
+      description: "Button with a shiny rotating border effect.",
+      sizePreview: "xs",
+      variantList: [
+        {
+          name: "Default",
+          component: <PreviewShinyRotatingBorderButton />,
+          slugPreviewFile: "preview.shiny-rotating-border-button",
+          slugComponentFile: "component.shiny-rotating-border-button",
+        },
+      ],
+      isIframed: true,
+    },
+    {
+      slug: "modern-animated-button",
+      name: "Modern Animated Button",
+      description: "Button with a modern animated style.",
+      sizePreview: "xs",
+      variantList: [
+        {
+          name: "Shiny rotating border button",
+          component: <ModernAnimatedButtonVariant1 />,
+          slugPreviewFile: "variant1",
+        },
+      ],
 
-			inspiration: "Raycast",
-			inspirationLink: "https://www.raycast.com/",
-		},
-	],
+      inspiration: "Raycast",
+      inspirationLink: "https://www.raycast.com/",
+    },
+  ],
 };

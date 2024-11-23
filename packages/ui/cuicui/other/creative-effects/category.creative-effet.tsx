@@ -7,20 +7,20 @@ import { borderTrailComponent } from "@/cuicui/other/creative-effects/border-tra
 import { WavyLineComponent } from "@/cuicui/other/creative-effects/wavy-line/definition.wavy-line";
 
 export const creativeEffectCategory: CategoryType = {
-	slug: "creative-effects",
-	name: "Creative Effects",
-	description:
-		"An all bunch of creative effects that can be used in any project with any artisitic style",
-	releaseDateCategory: new Date("2024-07-21"),
-	icon: CreativeCommonsIcon,
-	previewCategory: {
-		component: <PreviewBottomBlurOut />,
-		previewScale: 1,
-	},
-	componentList: [
-		animatedNoiseComponent,
-		borderTrailComponent,
-		bottomBlurOutComponent,
-		WavyLineComponent,
-	],
+  slug: "creative-effects",
+  name: "Creative Effects",
+  description:
+    "An all bunch of creative effects that can be used in any project with any artisitic style",
+  releaseDateCategory: new Date("2024-07-21"),
+  icon: CreativeCommonsIcon,
+  previewCategory: {
+    component: <PreviewBottomBlurOut />,
+    previewScale: 1,
+  },
+  componentList: [
+    animatedNoiseComponent,
+    borderTrailComponent,
+    bottomBlurOutComponent,
+    WavyLineComponent,
+  ],
 };

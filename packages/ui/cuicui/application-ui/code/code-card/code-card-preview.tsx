@@ -7,7 +7,7 @@ const code = `.container {
   background-color: #f5f5f5;
 }
 `;
-const language = 'CSS'
+const language = "CSS";
 
 import CodeEditor from "@/cuicui/application-ui/code/code-card/code-card";
 

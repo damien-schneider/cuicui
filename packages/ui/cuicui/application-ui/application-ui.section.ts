@@ -1,7 +1,7 @@
 import { AppWindowMacIcon } from "lucide-react";
 import type {
-	MultiComponentSectionType,
-	SectionType,
+  MultiComponentSectionType,
+  SectionType,
 } from "@/lib/types/component";
 import { actionMenuCategory } from "@/cuicui/application-ui/action-menu/action-menu.category";
 import { alertCategory } from "@/cuicui/application-ui/alert/alert.category";
@@ -20,26 +20,26 @@ import { treeCategory } from "@/cuicui/application-ui/tree/tree.category";
 import { notificationCategory } from "@/cuicui/application-ui/notification/category.notification";
 
 export const applicationUiSection: MultiComponentSectionType = {
-	type: "multiple-component",
-	name: "Application UI",
-	slug: "application-ui",
-	description: "A collection of UI components for advanced applications.",
-	icon: AppWindowMacIcon,
-	categoriesList: [
-		actionMenuCategory,
-		alertCategory,
-		authenticationCategory,
-		batteryCategory,
-		codeCategory,
-		cookieBannerCategory,
-		kbdCategory,
-		notificationCategory,
-		searchBarsCategory,
-		settingsCategory,
-		signatureCategory,
-		slidersCategory,
-		staticSteppersCategory,
-		themeCategory,
-		treeCategory,
-	],
+  type: "multiple-component",
+  name: "Application UI",
+  slug: "application-ui",
+  description: "A collection of UI components for advanced applications.",
+  icon: AppWindowMacIcon,
+  categoriesList: [
+    actionMenuCategory,
+    alertCategory,
+    authenticationCategory,
+    batteryCategory,
+    codeCategory,
+    cookieBannerCategory,
+    kbdCategory,
+    notificationCategory,
+    searchBarsCategory,
+    settingsCategory,
+    signatureCategory,
+    slidersCategory,
+    staticSteppersCategory,
+    themeCategory,
+    treeCategory,
+  ],
 };

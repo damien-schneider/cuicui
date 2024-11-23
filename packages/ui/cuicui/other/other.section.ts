@@ -7,18 +7,18 @@ import { qrCodeCategory } from "@/cuicui/other/qr-code/qr-code.category";
 import { transitionWrappersCategory } from "@/cuicui/other/transition-wrappers/transition-wrappers.category";
 import { creativeEffectCategory } from "@/cuicui/other/creative-effects/category.creative-effet";
 export const otherSection: SectionType = {
-	name: "Other",
-	slug: "other",
-	type: "multiple-component",
-	description:
-		"A collection of creative advanced UI components for your projects.",
-	icon: RectangleEllipsisIcon,
-	categoriesList: [
-		cursorCategory,
-		mockUpsCategory,
-		patternsCategory,
-		transitionWrappersCategory,
-		qrCodeCategory,
-		creativeEffectCategory,
-	],
+  name: "Other",
+  slug: "other",
+  type: "multiple-component",
+  description:
+    "A collection of creative advanced UI components for your projects.",
+  icon: RectangleEllipsisIcon,
+  categoriesList: [
+    cursorCategory,
+    mockUpsCategory,
+    patternsCategory,
+    transitionWrappersCategory,
+    qrCodeCategory,
+    creativeEffectCategory,
+  ],
 };

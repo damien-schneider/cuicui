@@ -1,4 +1,4 @@
-const CodeEditor = ({ code, language }: { code: string, language: string }) => {
+const CodeEditor = ({ code, language }: { code: string; language: string }) => {
   return (
     <div className="group hover:-translate-x-1 max-w-md transform-gpu overflow-hidden rounded-2xl border border-neutral-500/15 bg-white shadow-sm transition-transform dark:bg-neutral-800">
       <div className="flex items-end">

@@ -6,14 +6,14 @@ const codeToDisplay = `export const = explanations = {
 }`;
 
 export default function PreviewAdvancedCodeBlock() {
-	return (
-		<div className="w-full max-w-2xl p-2">
-			<AdvancedCodeBlock
-				code={codeToDisplay}
-				fileName="./explanations.ts"
-				lang="typescript"
-				theme="github-light"
-			/>
-		</div>
-	);
+  return (
+    <div className="w-full max-w-2xl p-2">
+      <AdvancedCodeBlock
+        code={codeToDisplay}
+        fileName="./explanations.ts"
+        lang="typescript"
+        theme="github-light"
+      />
+    </div>
+  );
 }
