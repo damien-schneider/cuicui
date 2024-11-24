@@ -4,8 +4,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "type-check": "tsc --noEmit",
-    "pre-build": "scripts/generate-preview-categories.mjs"
+    "build": "pnpm pre-build",
+    "pre-build": "scripts/generate-preview-categories.mjs",
+    "type-check": "tsc --noEmit"
   },
   "license": "MIT",
   "peerDependencies": {

@@ -15,6 +15,7 @@ import application_ui_static_steppers_preview from './cuicui/application-ui/stat
 import application_ui_table_of_contents_preview from './cuicui/application-ui/table-of-contents/preview';
 import application_ui_theme_preview from './cuicui/application-ui/theme/preview';
 import application_ui_tree_preview from './cuicui/application-ui/tree/preview';
+import common_ui_avatars_preview from './cuicui/common-ui/avatars/preview';
 import common_ui_badges_preview from './cuicui/common-ui/badges/preview';
 import common_ui_blockquotes_preview from './cuicui/common-ui/blockquotes/preview';
 import common_ui_buttons_preview from './cuicui/common-ui/buttons/preview';
@@ -91,6 +92,7 @@ export const categoriesPreviewsList = {
   'table-of-contents': application_ui_table_of_contents_preview,
   'theme': application_ui_theme_preview,
   'tree': application_ui_tree_preview,
+  'avatars': common_ui_avatars_preview,
   'badges': common_ui_badges_preview,
   'blockquotes': common_ui_blockquotes_preview,
   'buttons': common_ui_buttons_preview,
