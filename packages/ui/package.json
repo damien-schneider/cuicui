@@ -4,7 +4,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "pre-build": "scripts/generate-preview-categories.js"
   },
   "license": "MIT",
   "peerDependencies": {
