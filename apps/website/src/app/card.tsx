@@ -1,40 +1,48 @@
-import Image from "next/image";
 import type {
   CategoryType,
   SingleComponentCategoryType,
 } from "@cuicui/ui/lib/types/component";
+import { categoriesPreviewsList } from "@/categories-previews-list";
+import { createElement } from "react";
+import { HourglassIcon } from "lucide-react";
 
 export const MainMenuCardContent = ({
   category,
-  sectionSlug,
 }: {
   category: CategoryType | SingleComponentCategoryType;
-  sectionSlug: string;
 }) => {
   if (category?.comingSoonCategory) {
     return (
-      <p className="-translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2 font-semibold text-2xl text-neutral-800 dark:text-neutral-300">
-        Coming Soon
+      <p className="size-full grid place-content-center">
+        <div className="w-fit p-4 bg-neutral-400/15 rounded-xl gap-2 flex items-center justify-center text-neutral-400">
+          {/* Hourglass Icon */}
+          <HourglassIcon className="size-6 " />
+          <p className="text-2xl font-semibold">Coming Soon</p>
+        </div>
       </p>
     );
   }
 
+  const Component = getCategoryPreviewComponent(category.slug);
+
+  if (Component) {
+    return (
+      <div className="flex items-center justify-center size-full gap-2 py-4 px-12">
+        {createElement(Component, { category })}
+      </div>
+    );
+  }
+
   return (
-    <>
-      <Image
-        alt={`${category.name} preview`}
-        className="h-48 w-full object-cover hidden dark:block"
-        height={400}
-        src={`/preview-images/dark-${sectionSlug}-${category.slug}.png`}
-        width={600}
-      />
-      <Image
-        alt={`${category.name} preview`}
-        className="h-48 w-full object-cover dark:hidden"
-        height={400}
-        src={`/preview-images/light-${sectionSlug}-${category.slug}.png`}
-        width={600}
-      />
-    </>
+    <div className="flex items-center justify-center size-full gap-2 py-4 px-12">
+      <p>Preview is missing</p>
+    </div>
   );
+};
+
+const getCategoryPreviewComponent = (slug: string) => {
+  const Component = Object.keys(categoriesPreviewsList).find(
+    (key) => key === slug,
+  ) as keyof typeof categoriesPreviewsList;
+  return Component ? categoriesPreviewsList[Component] : null;
 };
