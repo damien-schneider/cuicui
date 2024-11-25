@@ -3,7 +3,7 @@ import { useState } from "react";
 import { ModernSimpleInput } from "@/cuicui/common-ui/inputs/modern-simple-input/modern-simple-input";
 import { BarCodeGenerator } from "@/cuicui/other/qr-code/bar-code-generator/bar-code-generator";
 
-export default function PreviewBarCodeGenerator() {
+export const PreviewBarCodeGenerator = () => {
   const [value, setValue] = useState("https://www.modul.day/");
   return (
     <div className="flex w-full flex-col items-center gap-4">
@@ -26,4 +26,4 @@ export default function PreviewBarCodeGenerator() {
       )}
     </div>
   );
-}
+};
