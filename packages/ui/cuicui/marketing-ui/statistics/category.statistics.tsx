@@ -11,10 +11,6 @@ export const statisticsCategory: CategoryType = {
   description: "Showcase your product statistics with style",
   releaseDateCategory: new Date("2024-08-11"),
   icon: BarChart2Icon,
-  previewCategory: {
-    component: <AnimatedNumberVariant1 />,
-    previewScale: 0.5,
-  },
   componentList: [
     {
       sizePreview: "sm",

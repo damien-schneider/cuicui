@@ -9,10 +9,6 @@ export const useKeyPressCategory: SingleComponentCategoryType = {
     "A hook that allows you to know if an element is in the viewport",
   releaseDateCategory: new Date("2024-09-28"),
   icon: KeyboardIcon,
-  previewCategory: {
-    component: <PreviewUseKeyPress />,
-    previewScale: 0.8,
-  },
   component: {
     sizePreview: "sm",
 

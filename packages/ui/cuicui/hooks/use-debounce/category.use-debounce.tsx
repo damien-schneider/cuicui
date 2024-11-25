@@ -8,10 +8,6 @@ export const useDebounceCategory: SingleComponentCategoryType = {
   description: "A hook that allows you to debounce the value of an input",
   releaseDateCategory: new Date("2024-09-16"),
   icon: TimerIcon,
-  previewCategory: {
-    component: <PreviewUseDebounce />,
-    previewScale: 1,
-  },
   component: {
     sizePreview: "lg",
 

@@ -9,10 +9,6 @@ export const useFirstVisitCategory: SingleComponentCategoryType = {
     "A hook that provides a first visit functionality to your application",
   releaseDateCategory: new Date("2024-10-06"),
   icon: TelescopeIcon,
-  previewCategory: {
-    component: <PreviewUseFirstVisit />,
-    previewScale: 0.8,
-  },
   component: {
     sizePreview: "md",
     variantList: [

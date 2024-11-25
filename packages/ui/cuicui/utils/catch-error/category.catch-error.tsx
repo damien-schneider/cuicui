@@ -5,13 +5,8 @@ import { PreviewCatchError } from "@/cuicui/utils/catch-error/preview.catch-erro
 export const catchErrorCategory: SingleComponentCategoryType = {
   name: "CatchError",
   slug: "catch-error",
-  previewCategory: {
-    previewScale: 0.5,
-    component: <PreviewCatchError />,
-  },
   component: {
     sizePreview: "sm",
-
     variantList: [
       {
         name: "Default",

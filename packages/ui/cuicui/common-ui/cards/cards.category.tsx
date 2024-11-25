@@ -11,10 +11,6 @@ export const cardsCategory: CategoryType = {
   description: "Cards with various layouts and effects",
   releaseDateCategory: new Date("2024-08-10"),
   icon: CreditCardIcon,
-  previewCategory: {
-    component: <DynamicSquareBackgroundPreview />,
-    previewScale: 0.5,
-  },
   componentList: [
     {
       slug: "modern-inner-shadow",

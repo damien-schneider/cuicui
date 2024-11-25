@@ -9,13 +9,8 @@ export const useLocalStorageCategory: SingleComponentCategoryType = {
     "A hook that allows you to manage and persist state using localStorage",
   releaseDateCategory: new Date("2024-09-28"),
   icon: DatabaseIcon,
-  previewCategory: {
-    component: <PreviewUseLocalStorage />,
-    previewScale: 0.8,
-  },
   component: {
     sizePreview: "sm",
-
     variantList: [
       {
         name: "Default Variant",

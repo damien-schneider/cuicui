@@ -10,10 +10,6 @@ export const skeletonsCategory: CategoryType = {
   description: "Skeletons with various effects for loading states",
   releaseDateCategory: new Date("2024-08-01"),
   icon: BoxSelectIcon,
-  previewCategory: {
-    component: <ShinyGradientSkeletonHorizontal />,
-    previewScale: 0.75,
-  },
   componentList: [
     {
       sizePreview: "sm",

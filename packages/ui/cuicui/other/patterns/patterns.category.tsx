@@ -10,10 +10,6 @@ export const patternsCategory: CategoryType = {
     "Create patterns without images, just with CSS and HTML for better performance, SEO and accessibility & also more micro-interactions",
   releaseDateCategory: new Date("2024-08-10"),
   icon: GripIcon,
-  previewCategory: {
-    component: <MovingBandsPreview />,
-    previewScale: 1,
-  },
   componentList: [
     {
       sizePreview: "sm",

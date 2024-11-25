@@ -7,10 +7,6 @@ export const authenticationCategory: CategoryType = {
   description: "Authentication components",
   releaseDateCategory: new Date("2024-08-21"),
   icon: FingerprintIcon,
-  previewCategory: {
-    component: <HalfSidedGlassMorphismAuthentication />,
-    previewScale: 1,
-  },
   componentList: [
     {
       isIframed: true,

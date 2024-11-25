@@ -1,34 +1,18 @@
-export default function () {
+export default function TableOfContentCategoryPreview() {
   return (
-    <div className="w-fit p-4 bg-neutral-400/15 rounded-xl min-h-32 flex flex-col space-y-4">
-      {/* Header Row */}
-      <div className="flex space-x-2">
-        <div className="w-1/4 h-4 bg-neutral-400/40 rounded" />
-        <div className="w-3/4 h-4 bg-neutral-400/40 rounded" />
-      </div>
-
-      {/* Row 1 */}
-      <div className="flex space-x-2">
-        <div className="w-1/4 h-3 bg-neutral-400/40 rounded" />
-        <div className="w-3/4 h-3 bg-neutral-400/40 rounded" />
-      </div>
-
-      {/* Row 2 */}
-      <div className="flex space-x-2">
-        <div className="w-1/4 h-3 bg-neutral-400/40 rounded" />
-        <div className="w-3/4 h-3 bg-neutral-400/40 rounded" />
-      </div>
-
-      {/* Row 3 */}
-      <div className="flex space-x-2">
-        <div className="w-1/4 h-3 bg-neutral-400/40 rounded" />
-        <div className="w-3/4 h-3 bg-neutral-400/40 rounded" />
-      </div>
-
-      {/* Row 4 */}
-      <div className="flex space-x-2">
-        <div className="w-1/4 h-3 bg-neutral-400/40 rounded" />
-        <div className="w-3/4 h-3 bg-neutral-400/40 rounded" />
+    <div className="w-40 p-4 bg-neutral-400/15 rounded-xl space-y-3">
+      {/* TOC List */}
+      <div className="space-y-2">
+        {/* Level 1 */}
+        <div className="h-3 bg-neutral-400/80 rounded w-3/4" />
+        {/* Level 2 */}
+        <div className="ml-4 h-3 bg-neutral-400/60 rounded w-2/3" />
+        {/* Level 2 */}
+        <div className="ml-4 h-3 bg-neutral-400/60 rounded w-2/5" />
+        {/* Level 1 */}
+        <div className="h-3 bg-neutral-400/80 rounded w-3/4" />
+        {/* Level 2 */}
+        <div className="ml-4 h-3 bg-neutral-400/60 rounded w-1/2" />
       </div>
     </div>
   );

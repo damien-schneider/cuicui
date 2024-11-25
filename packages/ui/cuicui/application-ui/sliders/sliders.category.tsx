@@ -10,10 +10,6 @@ export const slidersCategory: CategoryType = {
   description: "Slider components with animations",
   releaseDateCategory: new Date("2024-08-10"),
   icon: SlidersHorizontalIcon,
-  previewCategory: {
-    component: <ElasticSliderVariant1 />,
-    previewScale: 1,
-  },
   componentList: [
     {
       slug: "elastic-slider",

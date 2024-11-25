@@ -12,10 +12,6 @@ export const transitionWrappersCategory: CategoryType = {
     "Create transition wrappers to animate any component without changing your code",
   releaseDateCategory: new Date("2024-07-29"),
   icon: BringToFrontIcon,
-  previewCategory: {
-    component: <BlurAppearVariant1 />,
-    previewScale: 0.75,
-  },
   componentList: [
     {
       name: "Blur appear",

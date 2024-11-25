@@ -9,10 +9,6 @@ export const carouselsCategory: CategoryType = {
   description: "Showcase your product testimonials with style",
   releaseDateCategory: new Date("2024-08-10"),
   icon: GalleryHorizontalIcon,
-  previewCategory: {
-    component: <SimpleCarouselPreview />,
-    previewScale: 0.5,
-  },
   componentList: [
     {
       name: "Simple Carousel",

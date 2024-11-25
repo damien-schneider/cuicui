@@ -9,13 +9,8 @@ export const useStopwatchCategory: SingleComponentCategoryType = {
     "A hook that provides a stopwatch functionality to your application",
   releaseDateCategory: new Date("2024-09-28"),
   icon: WatchIcon,
-  previewCategory: {
-    component: <PreviewUseStopwatch />,
-    previewScale: 0.8,
-  },
   component: {
     sizePreview: "sm",
-
     variantList: [
       {
         name: "default variant",

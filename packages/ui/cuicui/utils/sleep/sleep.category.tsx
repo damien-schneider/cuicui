@@ -5,10 +5,6 @@ import PreviewSleep from "@/cuicui/utils/sleep/preview-sleep";
 export const sleepCategory: SingleComponentCategoryType = {
   name: "Sleep",
   slug: "sleep",
-  previewCategory: {
-    previewScale: 0.5,
-    component: <PreviewSleep />,
-  },
   component: {
     sizePreview: "sm",
 

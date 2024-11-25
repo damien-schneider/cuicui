@@ -8,10 +8,6 @@ export const checkboxesCategory: CategoryType = {
   description: "Checkboxes with various styles and interactions",
   releaseDateCategory: new Date("2024-08-31"),
   icon: CheckSquare2Icon,
-  previewCategory: {
-    component: <SimpleCheckboxPreview />,
-    previewScale: 2,
-  },
   componentList: [
     {
       sizePreview: "sm",

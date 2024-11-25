@@ -16,6 +16,7 @@ import { themeCategory } from "@/cuicui/application-ui/theme/theme.category";
 import { treeCategory } from "@/cuicui/application-ui/tree/tree.category";
 import { notificationCategory } from "@/cuicui/application-ui/notification/category.notification";
 import { dropdownMenuCategory } from "@/cuicui/application-ui/dropdown-menu/category";
+import { tableOfContentCategory } from "@/cuicui/application-ui/table-of-contents/table-of-contents.category";
 
 export const applicationUiSection: MultiComponentSectionType = {
   type: "multiple-component",
@@ -38,6 +39,7 @@ export const applicationUiSection: MultiComponentSectionType = {
     signatureCategory,
     slidersCategory,
     staticSteppersCategory,
+    tableOfContentCategory,
     themeCategory,
     treeCategory,
   ],

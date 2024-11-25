@@ -8,10 +8,6 @@ export const useCopyToClipboardCategory: SingleComponentCategoryType = {
   description: "A hook that allows you to copy text to the clipboard",
   releaseDateCategory: new Date("2024-08-20"),
   icon: ClipboardCopyIcon,
-  previewCategory: {
-    component: <PreviewCopyToClipboard />,
-    previewScale: 0.8,
-  },
   component: {
     sizePreview: "lg",
 

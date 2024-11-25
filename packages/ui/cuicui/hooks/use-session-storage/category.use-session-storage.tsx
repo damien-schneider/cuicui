@@ -9,10 +9,6 @@ export const useSessionStorageCategory: SingleComponentCategoryType = {
   description: "A hook that allows you to manage session storage values",
   releaseDateCategory: new Date("2024-08-28"),
   icon: ViewIcon,
-  // previewCategory: {
-  //   component: <PreviewUseSessionStorage />,
-  //   previewScale: 0.8,
-  // },
   comingSoonCategory: true,
   component: null,
   // component: {

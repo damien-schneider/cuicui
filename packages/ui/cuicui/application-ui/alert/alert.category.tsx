@@ -10,10 +10,6 @@ export const alertCategory: CategoryType = {
   description: "Alert components",
   releaseDateCategory: new Date("2024-08-29"),
   icon: AlertCircleIcon,
-  previewCategory: {
-    component: <SimpleAlert />,
-    previewScale: 1,
-  },
   componentList: [
     {
       isIframed: true,

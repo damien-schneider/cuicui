@@ -7,13 +7,8 @@ export const useInputValueCategory: SingleComponentCategoryType = {
   description: "A hook that allows you to manage the value of an input field",
   releaseDateCategory: new Date("2024-09-28"),
   icon: TextCursorInputIcon,
-  previewCategory: {
-    component: <PreviewUseInputValue />,
-    previewScale: 0.8,
-  },
   component: {
     sizePreview: "sm",
-
     variantList: [
       {
         name: "variant 1",

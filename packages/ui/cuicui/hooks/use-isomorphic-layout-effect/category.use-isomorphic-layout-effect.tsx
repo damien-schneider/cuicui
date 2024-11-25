@@ -9,10 +9,6 @@ export const useIsomorphicLayoutEffectCategory: SingleComponentCategoryType = {
     "A hook that allows you to use the isomorphic version of useLayoutEffect, ensuring compatibility with server-side rendering.",
   releaseDateCategory: new Date("2024-09-28"),
   icon: ServerCogIcon,
-  previewCategory: {
-    component: <PreviewUseIsomorphicLayoutEffect />,
-    previewScale: 0.8,
-  },
   component: {
     sizePreview: "sm",
 

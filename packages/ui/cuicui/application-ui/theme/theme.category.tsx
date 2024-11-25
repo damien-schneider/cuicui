@@ -8,10 +8,6 @@ export const themeCategory: CategoryType = {
   description: "Theme components",
   releaseDateCategory: new Date("2024-08-29"),
   icon: SunMoonIcon,
-  previewCategory: {
-    component: <ThemeSwitcherButton />,
-    previewScale: 1,
-  },
   componentList: [
     {
       slug: "theme-switcher",

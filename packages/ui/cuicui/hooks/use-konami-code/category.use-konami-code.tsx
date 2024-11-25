@@ -9,13 +9,8 @@ export const useKonamiCodeCategory: SingleComponentCategoryType = {
     "A hook that detects the Konami Code sequence and triggers actions accordingly",
   releaseDateCategory: new Date("2024-09-28"),
   icon: GamepadIcon,
-  previewCategory: {
-    component: <PreviewUseKonamiCode />,
-    previewScale: 0.8,
-  },
   component: {
     sizePreview: "sm",
-
     variantList: [
       {
         name: "default variant",

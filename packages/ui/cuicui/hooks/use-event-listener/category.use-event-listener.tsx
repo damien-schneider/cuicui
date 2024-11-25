@@ -9,13 +9,8 @@ export const useEventListenerCategory: SingleComponentCategoryType = {
     "A hook that allows you to manage event listeners on DOM elements",
   releaseDateCategory: new Date("2024-09-28"),
   icon: EarIcon,
-  previewCategory: {
-    component: <PreviewUseEventListener />,
-    previewScale: 0.8,
-  },
   component: {
     sizePreview: "sm",
-
     variantList: [
       {
         name: "Default Variant",

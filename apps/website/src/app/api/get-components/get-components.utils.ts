@@ -17,7 +17,6 @@ export function extractCategories(node: FileSystemNode): CategoryType[] {
         ? new Date(node.config.releaseDateCategory)
         : undefined,
       icon: node.config.icon,
-      previewCategory: node.config.previewCategory,
       componentList: [],
     };
 
@@ -123,10 +122,5 @@ export type CategoryType = {
   description: string;
   releaseDateCategory?: Date;
   icon?: string; // Adjusted to string for simplicity
-  previewCategory?: {
-    component?: string; // Adjusted to string for simplicity
-    previewImage?: string;
-    previewScale?: number;
-  };
   componentList: ComponentType[];
 };

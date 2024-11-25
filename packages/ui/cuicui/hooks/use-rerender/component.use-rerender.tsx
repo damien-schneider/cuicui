@@ -9,10 +9,6 @@ export const useRerenderCategory: SingleComponentCategoryType = {
     "A hook that throttles the execution of a function, limiting how often it can be invoked",
   releaseDateCategory: new Date("2024-09-28"),
   icon: ViewIcon,
-  previewCategory: {
-    component: <PreviewUseRerender />,
-    previewScale: 0.8,
-  },
   component: {
     sizePreview: "sm",
 

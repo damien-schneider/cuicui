@@ -9,10 +9,6 @@ export const useClickOutsideCategory: SingleComponentCategoryType = {
     "A React hook that allows you to detect clicks outside of a specified element.",
   releaseDateCategory: new Date("2024-10-15"),
   icon: MapIcon,
-  previewCategory: {
-    component: <PreviewUseClickOutside />,
-    previewScale: 0.8,
-  },
   component: {
     sizePreview: "xl",
 

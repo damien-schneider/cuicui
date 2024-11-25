@@ -8,13 +8,8 @@ export const useWindowSizeCategory: SingleComponentCategoryType = {
   description: "A hook that allows you to track the size of the browser window",
   releaseDateCategory: new Date("2024-08-28"),
   icon: AppWindowMacIcon,
-  previewCategory: {
-    component: <PreviewUseWindowSize />,
-    previewScale: 0.8,
-  },
   component: {
     sizePreview: "sm",
-
     variantList: [
       {
         name: "Default Variant",

@@ -8,13 +8,8 @@ export const useWindowScrollPositionCategory: SingleComponentCategoryType = {
   description: "A hook that allows you to track the window's scroll position",
   releaseDateCategory: new Date("2024-09-28"),
   icon: ScrollIcon,
-  previewCategory: {
-    component: <PreviewUseWindowScrollPosition />,
-    previewScale: 0.8,
-  },
   component: {
     sizePreview: "sm",
-
     variantList: [
       {
         name: "variant 1",

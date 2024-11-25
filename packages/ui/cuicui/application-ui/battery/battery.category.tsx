@@ -8,10 +8,6 @@ export const batteryCategory: CategoryType = {
   description: "Battery components",
   releaseDateCategory: new Date("2024-08-21"),
   icon: BatteryChargingIcon,
-  previewCategory: {
-    component: <PreviewBatteryIndicator />,
-    previewScale: 1,
-  },
   componentList: [
     {
       sizePreview: "sm",

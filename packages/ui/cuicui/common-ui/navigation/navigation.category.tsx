@@ -10,10 +10,6 @@ export const navigationCategory: CategoryType = {
   description: "Navigation components with different effects",
   releaseDateCategory: new Date("2024-06-17"),
   icon: MenuIcon,
-  previewCategory: {
-    component: <Dock />,
-    previewScale: 0.75,
-  },
   componentList: [
     {
       sizePreview: "sm",

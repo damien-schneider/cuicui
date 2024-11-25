@@ -11,10 +11,6 @@ export const badgesCategory: CategoryType = {
   description: "Badges with various styles and purposes",
   releaseDateCategory: new Date("2024-06-29"),
   icon: TagIcon,
-  previewCategory: {
-    component: <ClerkBadgeVariant1 />,
-    previewScale: 3,
-  },
   componentList: [
     {
       sizePreview: "xs",

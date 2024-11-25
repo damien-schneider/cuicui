@@ -8,10 +8,6 @@ export const actionMenuCategory: CategoryType = {
   releaseDateCategory: new Date("2024-07-29"),
   icon: StretchHorizontalIcon,
   comingSoonCategory: true,
-  previewCategory: {
-    component: null,
-    previewScale: 0.75,
-  },
   componentList: null,
   // componentList: [advancedBottomActionMenuComponent],
 };

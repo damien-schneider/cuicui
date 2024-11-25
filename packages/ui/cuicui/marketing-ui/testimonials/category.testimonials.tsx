@@ -1,4 +1,3 @@
-import { gradientQnaComponent } from "@/cuicui/marketing-ui/faq/gradient-qna/component.gradient-qna";
 import MarqueeVariant1 from "@/cuicui/marketing-ui/testimonials/marquee/variant1";
 import MarqueeVariant2 from "@/cuicui/marketing-ui/testimonials/marquee/variant2";
 import { TestimonialsVariant1 } from "@/cuicui/marketing-ui/testimonials/testimonials-component/variant1";
@@ -11,14 +10,9 @@ export const testimonialsCategory: CategoryType = {
   description: "Showcase your product testimonials with style",
   releaseDateCategory: new Date("2024-07-17"),
   icon: BookOpenTextIcon,
-  previewCategory: {
-    component: <MarqueeVariant1 />,
-    previewScale: 0.75,
-  },
+
   componentList: [
     {
-      isResizable: true,
-
       sizePreview: "md",
       slug: "testimonials-component",
       name: "Testimonials",

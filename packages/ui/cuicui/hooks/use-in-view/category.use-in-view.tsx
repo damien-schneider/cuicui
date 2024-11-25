@@ -8,10 +8,6 @@ export const useInViewCategory: SingleComponentCategoryType = {
     "A hook that allows you to know if an element is in the viewport",
   releaseDateCategory: new Date("2024-08-28"),
   icon: ViewIcon,
-  previewCategory: {
-    component: <PreviewUseInView />,
-    previewScale: 0.8,
-  },
   component: {
     sizePreview: "lg",
 

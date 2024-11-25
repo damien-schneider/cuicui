@@ -8,10 +8,6 @@ export const searchBarsCategory: CategoryType = {
   description: "Search bar components",
   releaseDateCategory: new Date("2024-08-19"),
   icon: SearchIcon,
-  previewCategory: {
-    component: <GrowingSearchVariant1 />,
-    previewScale: 1,
-  },
   componentList: [
     {
       sizePreview: "xs",

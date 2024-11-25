@@ -9,10 +9,6 @@ export const inputsCategory: CategoryType = {
   description: "Inputs with various styles and interactions",
   releaseDateCategory: new Date("2024-08-20"),
   icon: TextCursorInputIcon,
-  previewCategory: {
-    component: <FileDropzone />,
-    previewScale: 1,
-  },
   componentList: [
     {
       sizePreview: "sm",

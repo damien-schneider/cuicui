@@ -10,10 +10,6 @@ export const __CATEGORY_NAME__Category: CategoryType = {
   description: "__CATEGORY_NAME__ components",
   releaseDateCategory: new Date(),
   icon: __CATEGORY_NAME__Icon,
-  previewCategory: {
-    component: <div>Preview of __CATEGORY_NAME__</div>,
-    previewScale: 1,
-  },
   componentList: [
     // Add components here
   ],

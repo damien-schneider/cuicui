@@ -8,15 +8,9 @@ export const useNetworkCategory: SingleComponentCategoryType = {
   description: "A hook to get the network status",
   releaseDateCategory: new Date("2024-09-16"),
   icon: NetworkIcon,
-  previewCategory: {
-    component: <PreviewUseNetworkStatus />,
-    previewScale: 1,
-  },
   component: {
     rerenderButton: true,
-
     sizePreview: "lg",
-
     variantList: [
       {
         name: "variant 1",

@@ -8,13 +8,8 @@ export const useCounterCategory: SingleComponentCategoryType = {
   description: "A hook that allows you to count easily",
   releaseDateCategory: new Date("2024-09-16"),
   icon: CalculatorIcon,
-  previewCategory: {
-    component: <PreviewUseCounter />,
-    previewScale: 1,
-  },
   component: {
     sizePreview: "lg",
-
     variantList: [
       {
         name: "variant 1",

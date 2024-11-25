@@ -14,10 +14,6 @@ export const mockUpsCategory: CategoryType = {
     "Create mock-ups without images, just with CSS and HTML for better performance, SEO and accessibility & also more micro-interactions",
   releaseDateCategory: new Date("2024-08-14"),
   icon: MonitorSmartphoneIcon,
-  previewCategory: {
-    component: <Iphone14ProVariant2 />,
-    previewScale: 0.2,
-  },
   componentList: [
     {
       sizePreview: "xl",

@@ -5,13 +5,8 @@ import PreviewCn from "@/cuicui/utils/cn/preview.cn";
 export const cnCategory: SingleComponentCategoryType = {
   name: "ClassNames",
   slug: "cn",
-  previewCategory: {
-    previewScale: 0.5,
-    component: <PreviewCn />,
-  },
   component: {
     sizePreview: "sm",
-
     variantList: [
       {
         name: "Default",

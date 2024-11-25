@@ -10,14 +10,9 @@ export const featuresCategory: CategoryType = {
   description: "Showcase your product features with style",
   releaseDateCategory: new Date("2024-06-17"),
   icon: SparkleIcon,
-  previewCategory: {
-    component: <AnimatedCardVariant1 />,
-    previewScale: 0.8,
-  },
   componentList: [
     {
       name: "Feature Four Images",
-
       description:
         "An auto-scrolling feature section with four images and text. It could be also used with videos or other content. Perfect to shocase in details multiple features of a product or service.",
       sizePreview: "md",

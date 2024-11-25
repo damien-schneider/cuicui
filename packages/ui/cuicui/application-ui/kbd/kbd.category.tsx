@@ -9,10 +9,6 @@ export const kbdCategory: CategoryType = {
   description: "Keyboard components with various styles",
   releaseDateCategory: new Date("2024-08-13"),
   icon: CommandIcon,
-  previewCategory: {
-    component: <Modern3dKbdVariant1 />,
-    previewScale: 1,
-  },
   componentList: [
     {
       sizePreview: "xs",

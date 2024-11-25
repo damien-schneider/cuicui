@@ -9,13 +9,8 @@ export const useOnlineStatusCategory: SingleComponentCategoryType = {
     "A hook that allows you to monitor the online/offline status of the user's device",
   releaseDateCategory: new Date("2024-09-28"),
   icon: WifiIcon,
-  previewCategory: {
-    component: <PreviewUseOnlineStatus />,
-    previewScale: 0.8,
-  },
   component: {
     sizePreview: "sm",
-
     variantList: [
       {
         name: "default variant",

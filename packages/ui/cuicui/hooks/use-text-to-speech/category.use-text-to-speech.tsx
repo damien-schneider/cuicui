@@ -9,11 +9,6 @@ export const useTextToSpeechCategory: SingleComponentCategoryType = {
   description: "A hook that allows you to convert text to speech",
   releaseDateCategory: new Date("2024-09-28"),
   icon: SpeechIcon,
-  previewCategory: {
-    component: <PreviewUseTextToSpeech />,
-
-    previewScale: 0.8,
-  },
   component: {
     sizePreview: "lg",
 

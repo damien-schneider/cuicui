@@ -1,6 +1,5 @@
 import type { LucideIcon } from "lucide-react";
-import type { StaticImageData } from "next/image";
-import type { JSX, ReactNode } from "react";
+import type { JSX } from "react";
 import type { ComponentBadgeList } from "../badges.const";
 export type Variant = `variant${number}`;
 
@@ -20,18 +19,6 @@ export type FrameworkBadge =
   | "next";
 
 export type ComponentHeightType = "xs" | "sm" | "md" | "lg" | "xl";
-
-/*
------------------------------
-************ New ************
------------------------------
-*/
-
-export type PreviewComponent = {
-  component: ReactNode | (() => ReactNode);
-  previewScale: number;
-  previewImage?: StaticImageData;
-};
 
 /*
 ------------------------------------
@@ -84,7 +71,6 @@ type CategoryType = {
   icon: LucideIcon;
   comingSoonCategory?: boolean;
   releaseDateCategory: Date;
-  previewCategory?: PreviewComponent;
   componentList: ComponentType[] | null;
 };
 
@@ -95,7 +81,6 @@ type SingleComponentCategoryType = {
   icon: LucideIcon;
   comingSoonCategory?: boolean;
   releaseDateCategory: Date;
-  previewCategory?: PreviewComponent;
   component: SingleComponentType | null;
 };
 

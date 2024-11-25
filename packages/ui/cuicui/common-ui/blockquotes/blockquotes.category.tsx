@@ -8,10 +8,6 @@ export const blockquotesCategory: CategoryType = {
   description: "Blockquotes with different styles",
   releaseDateCategory: new Date("2024-08-01"),
   icon: QuoteIcon,
-  previewCategory: {
-    component: <ModernSimpleQuoteVariant1 />,
-    previewScale: 0.75,
-  },
   componentList: [
     {
       slug: "modern-simple-quote",

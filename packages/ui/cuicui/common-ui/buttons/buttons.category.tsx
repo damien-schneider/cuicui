@@ -18,10 +18,6 @@ export const buttonsCategory: CategoryType = {
   description: "Buttons with various animations and styles",
   releaseDateCategory: new Date("2024-08-09"),
   icon: SquareArrowRightIcon,
-  previewCategory: {
-    component: <PreviewShinyRotatingBorderButton />,
-    previewScale: 1.5,
-  },
   componentList: [
     {
       slug: "magnetic-button",

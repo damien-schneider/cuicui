@@ -9,10 +9,6 @@ export const useVideoCategory: SingleComponentCategoryType = {
     "A hook that provides a video player functionality to your application",
   releaseDateCategory: new Date("2024-10-06"),
   icon: VideoIcon,
-  previewCategory: {
-    component: <PreviewUseVideo />,
-    previewScale: 0.8,
-  },
   component: {
     sizePreview: "md",
     variantList: [

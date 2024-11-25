@@ -8,10 +8,6 @@ export const settingsCategory: CategoryType = {
   description: "Settings components with animations",
   releaseDateCategory: new Date("2024-06-30"),
   icon: SettingsIcon,
-  previewCategory: {
-    component: <DynamicSettingsVariant1 />,
-    previewScale: 1.25,
-  },
   componentList: [
     {
       sizePreview: "sm",

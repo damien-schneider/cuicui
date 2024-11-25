@@ -8,10 +8,6 @@ export const useGeoLocationCategory: SingleComponentCategoryType = {
     "A hook that allows you to access and manage the user's geolocation data",
   releaseDateCategory: new Date("2024-09-28"),
   icon: Globe2Icon,
-  previewCategory: {
-    component: <PreviewUseGeolocation />,
-    previewScale: 0.8,
-  },
   component: {
     sizePreview: "sm",
 

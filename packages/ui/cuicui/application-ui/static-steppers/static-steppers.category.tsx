@@ -8,10 +8,6 @@ export const staticSteppersCategory: CategoryType = {
   description: "Components to display a list of steps",
   releaseDateCategory: new Date("2024-08-01"),
   icon: ListOrderedIcon,
-  previewCategory: {
-    component: <StepWithStickyColorVariant1 />,
-    previewScale: 0.75,
-  },
   componentList: [
     {
       slug: "code",
