@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import MultipleComponentCategory from "#/src/app/(site)/[section]/[category]/multiple-component-section";
 import SingleComponentCategory from "#/src/app/(site)/[section]/[category]/single-component-section";
-import { SectionsList } from "@cuicui/ui";
+import { sectionList } from "@cuicui/ui/lib/section-list";
 import type {
   CategoryType,
   SingleComponentCategoryType,
@@ -15,7 +15,7 @@ type Props = {
 };
 
 export async function generateStaticParams() {
-  const params = SectionsList.flatMap((section) => {
+  const params = sectionList.flatMap((section) => {
     if (
       section.type === "multiple-component" ||
       section.type === "single-component"
@@ -38,7 +38,7 @@ export async function generateStaticParams() {
 }
 
 export default async function Page({ params }: Readonly<Props>) {
-  const section = SectionsList.find(
+  const section = sectionList.find(
     (section) => section.slug === params.section,
   );
   if (!section) {

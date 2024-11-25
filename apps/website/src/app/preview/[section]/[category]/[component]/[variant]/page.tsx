@@ -1,4 +1,4 @@
-import { SectionsList } from "@cuicui/ui/lib/sections-list";
+import { sectionList } from "@cuicui/ui/lib/section-list";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { createElement } from "react";
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 export async function generateStaticParams() {
-  return SectionsList.map((section) => {
+  return sectionList.map((section) => {
     if (section.type === "multiple-component") {
       return section.categoriesList.map((category) => {
         return category.componentList?.map((component) => {
@@ -70,7 +70,7 @@ export const findCorrespondingComponent = ({
   component: string;
   variant?: string;
 }) => {
-  const sectionFound = SectionsList.find((s) => s.slug === section);
+  const sectionFound = sectionList.find((s) => s.slug === section);
   if (!sectionFound) {
     return null;
   }

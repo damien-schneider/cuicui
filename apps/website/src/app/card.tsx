@@ -2,7 +2,7 @@ import type {
   CategoryType,
   SingleComponentCategoryType,
 } from "@cuicui/ui/lib/types/component";
-import { categoriesPreviewsList } from "@/categories-previews-list";
+import { categoriesPreviewsList } from "@cuicui/ui/categories-previews-list";
 import { createElement } from "react";
 import { HourglassIcon } from "lucide-react";
 
@@ -28,7 +28,7 @@ export const MainMenuCardContent = ({
   if (Component) {
     return (
       <div className="flex items-center justify-center size-full gap-2 py-4 px-12">
-        {createElement(Component, { category })}
+        {createElement(Component)}
       </div>
     );
   }

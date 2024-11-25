@@ -27,7 +27,7 @@ export default async function SingleComponentCategory({
 
   const component = await fetchSingleComponentData({
     categorySlug: category.slug,
-    component: { ...category.component },
+    component: category.component,
   });
 
   return (

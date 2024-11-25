@@ -1,4 +1,5 @@
 "use server";
+import { sectionList } from "@cuicui/ui/lib/section-list";
 import { promises as fs } from "node:fs";
 import path from "node:path";
 
@@ -53,15 +54,13 @@ async function GetFileContentFromPathWithoutExtension(
   }
 }
 
-import { SectionsList } from "@cuicui/ui";
-
 function getComponentPath({
   componentSlug,
   variantName,
 }: { componentSlug: string; variantName: string }) {
   let basePath: null | string = null;
 
-  for (const section of SectionsList) {
+  for (const section of sectionList) {
     if (section.type === "page") {
       continue;
     }

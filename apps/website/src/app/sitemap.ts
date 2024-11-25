@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { SectionsList } from "@cuicui/ui";
+import { sectionList } from "@cuicui/ui/lib/section-list";
 
 export const port = process.env.PORT ?? 3000;
 
@@ -34,7 +34,7 @@ const staticSitemap: MetadataRoute.Sitemap = [
 
 function getComponentsSitemap(): MetadataRoute.Sitemap {
   const componentSitemap: MetadataRoute.Sitemap = [];
-  SectionsList.flatMap((section) => {
+  sectionList.flatMap((section) => {
     if (
       section.type === "multiple-component" ||
       section.type === "single-component"

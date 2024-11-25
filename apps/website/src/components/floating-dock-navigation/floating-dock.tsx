@@ -1,5 +1,4 @@
-import { SectionsList } from "@cuicui/ui";
-
+import { sectionList } from "@cuicui/ui/lib/section-list";
 import { FloatingDock } from "#/src/components/floating-dock-navigation/floating-docks-component";
 import { ArrowUpRightIcon, GithubIcon } from "lucide-react";
 import { cn } from "#/src/utils/cn";
@@ -8,7 +7,7 @@ import Link from "next/link";
 import { FloatingDockToggleTheme } from "#/src/components/floating-dock-navigation/floating-dock-toggle-theme";
 import { CUICUI_GITHUB_URL } from "#/src/lib/site.const";
 
-const sectionLinks = SectionsList.map((section) => {
+const sectionLinks = sectionList.map((section) => {
   return {
     title: section.name,
     Icon: <section.icon className="size-6" />,

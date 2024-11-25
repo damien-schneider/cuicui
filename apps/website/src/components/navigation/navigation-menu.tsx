@@ -4,7 +4,7 @@ import {
   GlobalNavItem,
   SectionWrapper,
 } from "#/src/components/navigation/navigation-item";
-import { SectionsList } from "@cuicui/ui";
+import { sectionList } from "@cuicui/ui/lib/section-list";
 import type {
   CategoryType,
   SingleComponentCategoryType,
@@ -55,7 +55,7 @@ export default function NavigationMenu({
 
   return (
     <nav className={cn("mt-5 mb-12 px-1 space-y-2 min-h-full", className)}>
-      {SectionsList.map((section) => {
+      {sectionList.map((section) => {
         if (section.type === "page") {
           return (
             <SectionWrapper
