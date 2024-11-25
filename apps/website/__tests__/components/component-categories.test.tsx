@@ -1,14 +1,14 @@
 import { describe, expect, it } from "vitest";
-import { SectionsList } from "@cuicui/ui";
+import { sectionList } from "@cuicui/ui/lib/section-list";
 import { getFileContentAsString } from "#/src/utils/get-file-content-as-string";
 
-describe("SectionsList", () => {
+describe("sectionList", () => {
   it("should have the correct number of sections", () => {
-    expect(SectionsList).toHaveLength(7);
+    expect(sectionList).toHaveLength(7);
   });
 
   it("should have the correct section slugs in the good order", () => {
-    const sectionSlugs = SectionsList.map((section) => section.slug);
+    const sectionSlugs = sectionList.map((section) => section.slug);
     expect(sectionSlugs).toEqual([
       "common-ui",
       "application-ui",
@@ -21,7 +21,7 @@ describe("SectionsList", () => {
   });
 
   it("category should have componentList === null if comingSoonCategory === true", () => {
-    for (const section of SectionsList) {
+    for (const section of sectionList) {
       if (section.type !== "multiple-component") {
         continue;
       }
@@ -55,7 +55,7 @@ describe("SectionsList", () => {
       }
     };
 
-    for (const section of SectionsList) {
+    for (const section of sectionList) {
       if (section.type !== "multiple-component") {
         continue;
       }

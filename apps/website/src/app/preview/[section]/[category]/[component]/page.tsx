@@ -1,5 +1,5 @@
 import { findCorrespondingComponent } from "#/src/app/preview/[section]/[category]/[component]/[variant]/page";
-import { SectionsList } from "@cuicui/ui/lib/sections-list";
+import { sectionList } from "@cuicui/ui/lib/section-list";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { createElement } from "react";
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 export async function generateStaticParams() {
-  return SectionsList.map((section) => {
+  return sectionList.map((section) => {
     if (section.type === "single-component") {
       return section.categoriesList.map((category) => {
         if (!category.component) {

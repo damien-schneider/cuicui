@@ -2,8 +2,10 @@ import { PreviewMacOSDropdownMenu } from "@/cuicui/application-ui/dropdown-menu/
 import type { ComponentType } from "@/lib/types/component";
 
 export const macOsDropdownComponent: ComponentType = {
-  sizePreview: "sm",
   slug: "mac-os-dropdown",
+  name: "Mac OS Dropdown",
+  description: "Mac OS dropdown menu",
+  sizePreview: "sm",
   variantList: [
     {
       name: "Default",
@@ -12,6 +14,4 @@ export const macOsDropdownComponent: ComponentType = {
       slugComponentFile: "mac-os-dropdown",
     },
   ],
-  name: "Mac OS Dropdown",
-  description: "Mac OS dropdown menu",
 };

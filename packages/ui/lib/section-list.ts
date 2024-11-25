@@ -8,7 +8,7 @@ import { utilsSection } from "@/cuicui/utils/utils.section";
 import type { SectionType } from "./types/component";
 import { marketingUiSection } from "@/cuicui/marketing-ui/section.marketing-ui";
 
-export const SectionsList: SectionType[] = [
+export const sectionList: SectionType[] = [
   commonUiSection,
   applicationUiSection,
   marketingUiSection,

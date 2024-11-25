@@ -1,8 +1,11 @@
 import type { ComponentType } from "@/lib/types/component";
 import { QrCodeGenerator } from "@/cuicui/other/qr-code/qr-code-generator/qr-code-generator";
+
 export const QrCodeGeneratorComponent: ComponentType = {
-  sizePreview: "md",
   slug: "qr-code-generator",
+  name: "QR Code Generator",
+  description: "A QR code generator component using qrcode.react",
+  sizePreview: "md",
   variantList: [
     {
       name: "Default",
@@ -10,8 +13,4 @@ export const QrCodeGeneratorComponent: ComponentType = {
       slugPreviewFile: "qr-code-generator",
     },
   ],
-  name: "QR Code Generator",
-  description: "A QR code generator component using qrcode.react",
 };
-
-export default QrCodeGeneratorComponent;
