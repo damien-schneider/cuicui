@@ -11,6 +11,7 @@ import { PreviewMagneticButton } from "@/cuicui/common-ui/buttons/magnetic-butto
 import { PreviewMagneticBackgroundButton } from "@/cuicui/common-ui/buttons/magnetic-button/preview.magnetic-background-button";
 import PreviewGithubStars from "@/cuicui/common-ui/buttons/github-stars/preview.github-stars";
 import PreviewGradientContainer from "@/cuicui/common-ui/buttons/github-stars/preview.gradient-container";
+import { dualActionButtonComponent } from "@/cuicui/common-ui/buttons/dual-action-button/component";
 
 export const buttonsCategory: CategoryType = {
   slug: "buttons",
@@ -27,18 +28,19 @@ export const buttonsCategory: CategoryType = {
       variantList: [
         {
           name: "Magnetic Background",
-          component: <PreviewMagneticBackgroundButton />,
+          component: PreviewMagneticBackgroundButton,
           slugPreviewFile: "preview.magnetic-background-button",
           slugComponentFile: "component.magnetic-background-button",
         },
         {
           name: "Magnetic Button",
-          component: <PreviewMagneticButton />,
+          component: PreviewMagneticButton,
           slugPreviewFile: "preview.magnetic-button",
           slugComponentFile: "component.magnetic-button",
         },
       ],
     },
+    dualActionButtonComponent,
     {
       slug: "github-stars",
       name: "Github Stars Button",
@@ -48,13 +50,13 @@ export const buttonsCategory: CategoryType = {
       variantList: [
         {
           name: "Cuicui colors",
-          component: <PreviewGithubStars />,
+          component: PreviewGithubStars,
           slugPreviewFile: "preview.github-stars",
           slugComponentFile: "component.github-stars",
         },
         {
           name: "Container only",
-          component: <PreviewGradientContainer />,
+          component: PreviewGradientContainer,
           slugPreviewFile: "preview.github-stars",
           slugComponentFile: "component.github-stars",
         },
@@ -71,7 +73,7 @@ export const buttonsCategory: CategoryType = {
       variantList: [
         {
           name: "Amber",
-          component: <GrowingButtonVariant1 />,
+          component: GrowingButtonVariant1,
           slugPreviewFile: "variant1",
         },
       ],
@@ -85,19 +87,19 @@ export const buttonsCategory: CategoryType = {
       variantList: [
         {
           name: "Hover only",
-          component: <PreviewBeforeEffectButtonHoverOnly />,
+          component: PreviewBeforeEffectButtonHoverOnly,
           slugPreviewFile: "preview-hover-only",
           slugComponentFile: "before-effect-button",
         },
         {
           name: "Simple",
-          component: <PreviewBeforeEffectButtonDefault />,
+          component: PreviewBeforeEffectButtonDefault,
           slugPreviewFile: "preview-default",
           slugComponentFile: "before-effect-button",
         },
         {
           name: "Advanced button",
-          component: <PreviewBeforeEffectButtonAdvancedButton />,
+          component: PreviewBeforeEffectButtonAdvancedButton,
           slugPreviewFile: "preview-advanced-button",
           slugComponentFile: "before-effect-button",
         },
@@ -111,7 +113,7 @@ export const buttonsCategory: CategoryType = {
       variantList: [
         {
           name: "Default",
-          component: <PreviewShinyRotatingBorderButton />,
+          component: PreviewShinyRotatingBorderButton,
           slugPreviewFile: "preview.shiny-rotating-border-button",
           slugComponentFile: "component.shiny-rotating-border-button",
         },
@@ -126,7 +128,7 @@ export const buttonsCategory: CategoryType = {
       variantList: [
         {
           name: "Shiny rotating border button",
-          component: <ModernAnimatedButtonVariant1 />,
+          component: ModernAnimatedButtonVariant1,
           slugPreviewFile: "variant1",
         },
       ],

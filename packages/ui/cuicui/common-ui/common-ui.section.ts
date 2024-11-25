@@ -3,7 +3,7 @@ import type { SectionType } from "@/lib/types/component";
 import { avatarsCategory } from "@/cuicui/common-ui/avatars/avatars.category";
 import { badgesCategory } from "@/cuicui/common-ui/badges/badges.category";
 import { blockquotesCategory } from "@/cuicui/common-ui/blockquotes/blockquotes.category";
-import { buttonsCategory } from "@/cuicui/common-ui/buttons/buttons.category";
+import { buttonsCategory } from "@/cuicui/common-ui/buttons/category";
 import { cardsCategory } from "@/cuicui/common-ui/cards/cards.category";
 import { checkboxesCategory } from "@/cuicui/common-ui/checkboxes/checkboxes.category";
 import { inputsCategory } from "@/cuicui/common-ui/inputs/inputs.category";
