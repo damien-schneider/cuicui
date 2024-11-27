@@ -25,6 +25,7 @@
   "dependencies": {
     "@ctrl/tinycolor": "4.1.0",
     "@number-flow/react": "^0.3.0",
+    "@radix-ui/react-context-menu": "^2.2.2",
     "@radix-ui/react-dropdown-menu": "2.1.1",
     "@radix-ui/react-slider": "^1.2.1",
     "@radix-ui/react-tabs": "^1.1.1",

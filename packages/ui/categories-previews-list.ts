@@ -3,6 +3,7 @@ import application_ui_alert_preview from './cuicui/application-ui/alert/preview'
 import application_ui_authentication_preview from './cuicui/application-ui/authentication/preview';
 import application_ui_battery_preview from './cuicui/application-ui/battery/preview';
 import application_ui_code_preview from './cuicui/application-ui/code/preview';
+import application_ui_context_menu_preview from './cuicui/application-ui/context-menu/preview';
 import application_ui_cookie_banner_preview from './cuicui/application-ui/cookie-banner/preview';
 import application_ui_dropdown_menu_preview from './cuicui/application-ui/dropdown-menu/preview';
 import application_ui_kbd_preview from './cuicui/application-ui/kbd/preview';
@@ -80,6 +81,7 @@ export const categoriesPreviewsList = {
   'authentication': application_ui_authentication_preview,
   'battery': application_ui_battery_preview,
   'code': application_ui_code_preview,
+  'context-menu': application_ui_context_menu_preview,
   'cookie-banner': application_ui_cookie_banner_preview,
   'dropdown-menu': application_ui_dropdown_menu_preview,
   'kbd': application_ui_kbd_preview,
