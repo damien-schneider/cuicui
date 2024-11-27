@@ -208,6 +208,10 @@ export const packageCheckListToInstall: PackageToInstallType[] = [
     packageName: "@number-flow/react",
   },
   {
+    find: [`from "@radix-ui/react-context-menu"`],
+    packageName: "@radix-ui/react-context-menu",
+  },
+  {
     find: [`from "@radix-ui/react-slider"`],
     packageName: "@radix-ui/react-slider",
   },

@@ -5,7 +5,7 @@
 	"bin": "dist/cli.js",
 	"type": "module",
 	"scripts": {
-		"build": "tsc",
+		"build-cli": "tsc",
 		"cli": "node dist/cli.js"
 	},
 	"files": [
