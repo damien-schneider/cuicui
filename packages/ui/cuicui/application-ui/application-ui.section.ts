@@ -18,6 +18,7 @@ import { notificationCategory } from "@/cuicui/application-ui/notification/categ
 import { dropdownMenuCategory } from "@/cuicui/application-ui/dropdown-menu/category";
 import { tableOfContentCategory } from "@/cuicui/application-ui/table-of-contents/table-of-contents.category";
 import { contextMenuCategory } from "@/cuicui/application-ui/context-menu/category";
+import { colorPickerCategory } from "@/cuicui/application-ui/color-picker/category";
 
 export const applicationUiSection: MultiComponentSectionType = {
   type: "multiple-component",
@@ -31,6 +32,7 @@ export const applicationUiSection: MultiComponentSectionType = {
     authenticationCategory,
     batteryCategory,
     codeCategory,
+    colorPickerCategory,
     contextMenuCategory,
     cookieBannerCategory,
     dropdownMenuCategory,
