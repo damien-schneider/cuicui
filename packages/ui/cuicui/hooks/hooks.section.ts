@@ -31,6 +31,7 @@ import { useFirstVisitCategory } from "@/cuicui/hooks/use-first-visit/category.u
 import { useRerenderCategory } from "@/cuicui/hooks/use-rerender/component.use-rerender";
 import { useMeasureCategory } from "@/cuicui/hooks/use-measure/category.use-measure";
 import { useClickOutsideCategory } from "@/cuicui/hooks/use-click-outside/category.use-click-outside";
+import { useAutoScrollCategory } from "@/cuicui/hooks/use-auto-scroll/category";
 
 export const hooksSection: SectionType = {
   type: "single-component",
@@ -39,6 +40,7 @@ export const hooksSection: SectionType = {
   description: "A collection of React hooks for building modern applications.",
   icon: ToyBrickIcon,
   categoriesList: [
+    useAutoScrollCategory,
     useBatteryCategory,
     useClickOutsideCategory,
     useCopyToClipboardCategory,
