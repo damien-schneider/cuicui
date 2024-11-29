@@ -169,7 +169,7 @@ export const PreviewColor = ({
 }: { selectedColor: string; intensity: number }) => {
   return (
     <div className="flex justify-center">
-      <div className="relative size-16 rounded-full border-white dark:border-neutral-950 shadow-neutral-400/50 dark:shadow-none shadow-xl overflow-hidden border-4">
+      <div className="relative size-16 rounded-full border-white dark:border-white/80  shadow-neutral-400/50 dark:shadow-none shadow-xl overflow-hidden border-4">
         <div
           className="size-full opacity-50 z-10"
           style={{ background: selectedColor }}
@@ -197,10 +197,10 @@ const ColorSwatches = ({
             key={`${index}-${color}`}
             onClick={() => handleColorSelect(color)}
             className={cn(
-              "size-8 rounded-full border-2 transition-transform hover:scale-110",
+              "size-8 rounded-full transition-transform hover:scale-110",
               selectedColor === color.value
-                ? "border-white dark:border-black shadow-lg"
-                : "border-transparent",
+                ? "border-2 border-white shadow-lg"
+                : "outline-transparent",
             )}
             style={{ background: color.value }}
           />
