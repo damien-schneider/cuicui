@@ -1,5 +1,5 @@
 "use client";
-import { type MotionProps, motion } from "framer-motion";
+import { type MotionProps, motion } from "motion/react";
 import type React from "react";
 import { cn } from "#/src/utils/cn";
 export default function AnimatedTabMotionDiv({

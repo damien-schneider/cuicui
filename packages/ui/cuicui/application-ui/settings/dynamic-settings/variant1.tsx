@@ -1,5 +1,5 @@
 "use client";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 
 import { PlusIcon, SquareIcon } from "lucide-react";
 import { useState } from "react";

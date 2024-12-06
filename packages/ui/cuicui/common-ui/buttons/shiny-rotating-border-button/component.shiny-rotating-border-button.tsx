@@ -1,6 +1,6 @@
 "use client";
 import { cn } from "@/cuicui/utils/cn/cn";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import type { HTMLAttributes, ReactNode } from "react";
 
 export const ShinyRotatingBorderButton = ({
