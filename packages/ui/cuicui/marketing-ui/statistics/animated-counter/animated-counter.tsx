@@ -4,7 +4,7 @@ import {
   motion,
   useSpring,
   useTransform,
-} from "framer-motion";
+} from "motion/react";
 import { useEffect } from "react";
 import { cn } from "@/cuicui/utils/cn/cn";
 

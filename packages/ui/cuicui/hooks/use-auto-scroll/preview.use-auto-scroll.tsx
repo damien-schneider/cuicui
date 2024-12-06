@@ -2,12 +2,8 @@
 
 "use client";
 
-import { useState, useEffect, useRef, type KeyboardEvent } from "react";
-
-const AI_RESPONSES = [
-  "I'm here to help with any questions you have.",
-  "Sint nisi eu cillum nulla officia incididunt irure laboris enim cillum cupidatat occaecat. Duis adipisicing veniam exercitation quis anim. Exercitation consectetur tempor et consectetur dolor. Cupidatat culpa eiusmod ex enim occaecat dolor sunt. Et et commodo qui ipsum nostrud ut et incididunt est cupidatat excepteur laborum. Anim ullamco aliqua ad sit sint cupidatat esse esse.",
-];
+import { autoScrollListRef } from "@/cuicui/hooks/use-auto-scroll/use-auto-scroll";
+import { useState, type KeyboardEvent } from "react";
 
 interface Message {
   sender: "user" | "ai";
@@ -20,14 +16,6 @@ const PreviewUseAutoScroll = () => {
     { sender: "ai", text: "Feel free to add new messages." },
   ]);
   const [input, setInput] = useState("");
-  const listRef = useRef<HTMLUListElement>(null);
-
-  // Auto-scroll to the bottom when messages change
-  useEffect(() => {
-    if (listRef.current && messages.length > 0) {
-      listRef.current.scrollTop = listRef.current.scrollHeight;
-    }
-  }, [messages]);
 
   const sendMessage = () => {
     const trimmedInput = input.trim();
@@ -41,7 +29,7 @@ const PreviewUseAutoScroll = () => {
 
     // Simulate AI response
     const aiResponse =
-      AI_RESPONSES[Math.floor(Math.random() * AI_RESPONSES.length)];
+      "Sint nisi eu cillum nulla officia incididunt irure laboris enim cillum cupidatat occaecat. Duis adipisicing veniam exercitation quis anim. Exercitation consectetur tempor et consectetur dolor. Cupidatat culpa eiusmod ex enim occaecat dolor sunt. Et et commodo qui ipsum nostrud ut et incididunt est cupidatat excepteur laborum. Anim ullamco aliqua ad sit sint cupidatat esse esse.";
     setTimeout(() => {
       setMessages((prev) => [...prev, { sender: "ai", text: aiResponse }]);
     }, 500);
@@ -59,11 +47,11 @@ const PreviewUseAutoScroll = () => {
         Chat Interface
       </h2>
       <ul
-        ref={listRef}
+        ref={autoScrollListRef}
         className="h-80 overflow-y-auto p-4 bg-border border-neutral-400/20 rounded mb-4 space-y-2"
       >
         {messages.map((msg, index) => (
-          <li
+          <p
             key={msg.text}
             className={`p-2 rounded break-words ${
               msg.sender === "user"
@@ -72,7 +60,7 @@ const PreviewUseAutoScroll = () => {
             }`}
           >
             {msg.text}
-          </li>
+          </p>
         ))}
       </ul>
       <div className="flex space-x-2">

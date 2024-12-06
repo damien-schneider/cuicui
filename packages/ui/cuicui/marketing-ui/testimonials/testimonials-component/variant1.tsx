@@ -1,5 +1,5 @@
 "use client";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react";
 import { useState } from "react";
 
@@ -74,7 +74,7 @@ export function TestimonialsVariant1() {
                     className="flex h-60 w-[24rem] flex-col justify-between rounded-lg bg-white p-4 shadow-sm dark:bg-neutral-800"
                     exit={{ opacity: 0, x: 0, scale: 0.8, rotate: 3 }}
                     initial={{ opacity: 0, x: 0, scale: 0.8 }}
-                    layout
+                    layout={true}
                     transition={{ duration: 0.35, ease: "easeInOut" }}
                   >
                     <div className="size-7 rounded-full bg-neutral-500/10" />

@@ -52,16 +52,16 @@ export const packageCheckListToInstall: PackageToInstallType[] = [
     packageName: "dom-to-image-more",
   },
   {
-    find: [`from "framer-motion"`],
-    packageName: "framer-motion",
-  },
-  {
     find: [`from "fs-extra"`],
     packageName: "fs-extra",
   },
   {
     find: [`from "lucide-react"`],
     packageName: "lucide-react",
+  },
+  {
+    find: [`from "motion"`],
+    packageName: "motion",
   },
   {
     find: [`from "next"`],

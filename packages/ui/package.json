@@ -35,15 +35,15 @@
     "clsx": "2.1.0",
     "dom-to-image-more": "3.4.5",
     "embla-carousel-react": "8.2.1",
-    "framer-motion": "11.2.10",
+    "motion": "^11.x",
     "get-similar-color": "1.1.4",
     "jsbarcode": "3.11.6",
-    "lucide-react": "^0.453.0",
+    "lucide-react": "^0.x",
     "next": "14.2.3",
     "qrcode.react": "4.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "sonner": "1.5.0",
+    "sonner": "^1.x",
     "tailwind-merge": "2.3.0",
     "tts-react": "3.0.7"
   }

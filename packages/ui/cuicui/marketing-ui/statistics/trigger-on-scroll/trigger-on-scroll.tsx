@@ -3,7 +3,7 @@
 import { cn } from "@/cuicui/utils/cn/cn";
 import NumberFlow from "@number-flow/react";
 import { useState, useRef, useEffect } from "react";
-import { useInView } from "framer-motion";
+import { useInView } from "motion/react";
 
 type NumberProps = number | `${number}`;
 

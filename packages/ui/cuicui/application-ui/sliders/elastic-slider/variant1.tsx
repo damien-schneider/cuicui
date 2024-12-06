@@ -6,7 +6,7 @@ import {
   useMotionValue,
   useMotionValueEvent,
   useTransform,
-} from "framer-motion";
+} from "motion/react";
 import { Volume2Icon, VolumeXIcon } from "lucide-react";
 import { type ElementRef, useRef, useState } from "react";
 

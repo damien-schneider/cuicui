@@ -3,7 +3,7 @@
 import { ShinyGradientSkeletonHorizontal } from "@/cuicui/common-ui/skeletons/shiny-gradient/skeleton-shiny-gradient-horizontal";
 import { cn } from "@/cuicui/utils/cn/cn";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 

@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/cuicui/utils/cn/cn";
-import { motion, type Transition } from "framer-motion";
+import { motion, type Transition } from "motion/react";
 import type { CSSProperties } from "react";
 
 type BorderTrailProps = {

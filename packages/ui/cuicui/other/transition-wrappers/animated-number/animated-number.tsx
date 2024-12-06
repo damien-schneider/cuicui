@@ -6,7 +6,7 @@ import {
   type SpringOptions,
   useSpring,
   useTransform,
-} from "framer-motion";
+} from "motion/react";
 import { useEffect } from "react";
 
 type AnimatedNumber = {

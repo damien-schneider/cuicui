@@ -1,6 +1,6 @@
 "use client";
 
-import { AnimatePresence, type Transition, motion } from "framer-motion";
+import { AnimatePresence, type Transition, motion } from "motion/react";
 import {
   Children,
   type ReactElement,
