@@ -3,6 +3,7 @@ import type { CategoryType } from "@/lib/types/component";
 import { Dock } from "@/cuicui/common-ui/navigation/mac-dock/variant1";
 import { VercelNavigationVariant1 } from "@/cuicui/common-ui/navigation/vercel-navigation/variant1";
 import { VercelNavigationVariant2 } from "@/cuicui/common-ui/navigation/vercel-navigation/variant2";
+import SideMenuSmoothHoverComponent from "@/cuicui/common-ui/navigation/side-menu-smooth-hover/component";
 
 export const navigationCategory: CategoryType = {
   slug: "navigation",
@@ -17,12 +18,12 @@ export const navigationCategory: CategoryType = {
       variantList: [
         {
           name: "On hover effect",
-          component: <VercelNavigationVariant1 />,
+          component: VercelNavigationVariant1,
           slugPreviewFile: "variant1",
         },
         {
           name: "On click effect",
-          component: <VercelNavigationVariant2 />,
+          component: VercelNavigationVariant2,
           slugPreviewFile: "variant2",
         },
       ],
@@ -37,7 +38,7 @@ export const navigationCategory: CategoryType = {
       variantList: [
         {
           name: "Default",
-          component: <Dock />,
+          component: Dock,
           slugPreviewFile: "variant1",
         },
       ],
@@ -47,5 +48,6 @@ export const navigationCategory: CategoryType = {
 
       inspiration: "MacOS Dock",
     },
+    SideMenuSmoothHoverComponent,
   ],
 };

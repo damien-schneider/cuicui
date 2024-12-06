@@ -8,7 +8,7 @@ import { cardsCategory } from "@/cuicui/common-ui/cards/cards.category";
 import { checkboxesCategory } from "@/cuicui/common-ui/checkboxes/checkboxes.category";
 import { inputsCategory } from "@/cuicui/common-ui/inputs/inputs.category";
 import { loadersCategory } from "@/cuicui/common-ui/loaders/loaders.category";
-import { navigationCategory } from "@/cuicui/common-ui/navigation/navigation.category";
+import { navigationCategory } from "@/cuicui/common-ui/navigation/category";
 import { skeletonsCategory } from "@/cuicui/common-ui/skeletons/skeletons.category";
 import { toggleCategory } from "@/cuicui/common-ui/toggle/toggle.category";
 
