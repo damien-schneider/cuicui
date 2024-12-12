@@ -1,16 +1,16 @@
 #!/usr/bin/env node
-// chmod +x scripts/generate-preview-categories.mjs
+// chmod +x scripts/generate-preview-categories.ts
 
 import fs from "node:fs";
 import path from "node:path";
 
-const ROOT_DIR = "./cuicui"; // Adjust this if your script is not in the root directory
+const ROOT_DIR = "./cuicui"; // Adjust if script is not in the root directory
 const GENERATED_FILE_NAME = "categories-previews-list.ts";
 
 console.log(`Starting script in root directory: ${ROOT_DIR}`);
 
-// Read all items in the root directory
-let items;
+let items: string[];
+
 try {
   items = fs.readdirSync(ROOT_DIR);
   console.log(`Items found in root directory: ${items.join(", ")}`);
@@ -23,7 +23,8 @@ try {
 const sections = items.filter((f) => {
   const sectionPath = path.join(ROOT_DIR, f);
   try {
-    const isDir = fs.statSync(sectionPath).isDirectory();
+    const stat = fs.statSync(sectionPath);
+    const isDir = stat.isDirectory();
     const isHidden = f.startsWith(".");
     return isDir && !isHidden;
   } catch (err) {
@@ -41,12 +42,13 @@ for (const section of sections) {
   console.log(`Processing section: ${section}`);
   const sectionPath = path.join(ROOT_DIR, section);
 
-  let categories;
+  let categories: string[];
   try {
     categories = fs.readdirSync(sectionPath).filter((f) => {
       const categoryPath = path.join(sectionPath, f);
       try {
-        const isDir = fs.statSync(categoryPath).isDirectory();
+        const stat = fs.statSync(categoryPath);
+        const isDir = stat.isDirectory();
         const isHidden = f.startsWith(".");
         return isDir && !isHidden;
       } catch (err) {

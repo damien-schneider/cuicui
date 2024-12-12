@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "build": "pnpm pre-build",
-    "pre-build": "scripts/generate-preview-categories.mjs",
+    "pre-build": "deno run --allow-read --allow-write scripts/generate-preview-categories.ts",
     "type-check": "tsc --noEmit"
   },
   "license": "MIT",
@@ -35,10 +35,10 @@
     "clsx": "2.1.0",
     "dom-to-image-more": "3.4.5",
     "embla-carousel-react": "8.2.1",
-    "motion": "^11.x",
     "get-similar-color": "1.1.4",
     "jsbarcode": "3.11.6",
     "lucide-react": "^0.x",
+    "motion": "^11.x",
     "next": "14.2.3",
     "qrcode.react": "4.1.0",
     "react": "18.2.0",
