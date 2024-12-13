@@ -51,3 +51,5 @@ export const navigationCategory: CategoryType = {
     SideMenuSmoothHoverComponent,
   ],
 };
+
+export default navigationCategory;

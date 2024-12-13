@@ -9,6 +9,7 @@ export const SideMenuSmoothHoverComponent: ComponentType = {
       name: "Default",
       component: PreviewSmoothHoverMenuItem,
       slugPreviewFile: "preview",
+      slugComponentFile: "side-menu-smooth-hover",
     },
   ],
   name: "Side Menu Smooth Hover",

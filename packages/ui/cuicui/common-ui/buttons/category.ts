@@ -138,3 +138,5 @@ export const buttonsCategory: CategoryType = {
     },
   ],
 };
+
+export default buttonsCategory;

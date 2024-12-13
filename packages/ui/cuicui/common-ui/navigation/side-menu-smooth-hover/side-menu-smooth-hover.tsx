@@ -14,22 +14,24 @@ export const SmoothHoverMenuItem = ({
       onMouseLeave={() => setIsHovered(false)}
       className={cn(
         "rounded-lg border overflow-hidden cursor-pointer",
-        isHovered ? "border-neutral-400/30" : "border-neutral-400/0",
+        isHovered
+          ? "border-neutral-400/30 scale-105"
+          : "border-neutral-400/0 scale-100",
       )}
       style={{
-        transition: isHovered
-          ? ""
-          : `border-color ${transitionDelayInMs + 300}ms`,
-        animationDuration: isHovered ? `${transitionDelayInMs + 300}ms` : "0ms",
+        transition: "border-color, transform",
+        transitionDuration: isHovered
+          ? "0ms"
+          : `${transitionDelayInMs + 300}ms`,
       }}
     >
       <div
         className={cn("px-3 py-1.5", isHovered ? "bg-neutral-400/20" : "")}
         style={{
-          transition: isHovered
-            ? ""
-            : `background-color ${transitionDelayInMs}ms`,
-          animationDuration: isHovered ? `${transitionDelayInMs}ms` : "0ms",
+          transition: "background-color",
+          transitionDuration: isHovered
+            ? "0ms"
+            : `${transitionDelayInMs + 300}ms`,
         }}
       >
         <span className="text-sm font-medium">{children}</span>
