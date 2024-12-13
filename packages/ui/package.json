@@ -4,9 +4,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "pnpm pre-build",
-    "pre-build": "deno run --allow-read --allow-write scripts/generate-preview-categories.ts",
+    "_build": "pnpm pre-build",
+    "pre-build": "pnpm generate-preview-categories",
     "type-check": "tsc --noEmit",
+    "generate-preview-categories": "deno run --allow-read --allow-write scripts/generate-preview-categories.ts",
     "generate-section-list": "deno run --allow-read --allow-write scripts/generate-section-list.ts"
   },
   "license": "MIT",
