@@ -1,7 +1,7 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "globalDependencies": [
-    ".env"
+    "**/.env*"
   ],
   "tasks": {
     "build": {
@@ -10,7 +10,8 @@
       ],
       "inputs": [
         "$TURBO_DEFAULT$",
-        ".env"
+        ".env*",
+        "**/.env*"
       ],
       "outputs": [
         "dist/**",
