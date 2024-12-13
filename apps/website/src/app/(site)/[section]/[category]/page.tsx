@@ -8,13 +8,13 @@ import type {
 } from "@cuicui/ui/lib/types/component";
 import { findCategoryBySlug } from "#/src/utils/section-category-components-utils/find-category-by-slug";
 type Props = {
-  params: {
+  params: Promise<{
     section: string;
     category: string;
-  };
+  }>;
 };
 
-export async function generateStaticParams() {
+export function generateStaticParams() {
   const params = sectionList.flatMap((section) => {
     if (
       section.type === "multiple-component" ||
@@ -37,45 +37,51 @@ export async function generateStaticParams() {
   return params;
 }
 
-export default async function Page({ params }: Readonly<Props>) {
-  const section = sectionList.find(
-    (section) => section.slug === params.section,
+export default async function Page({ params }: Props) {
+  const { section: sectionParam, category: categoryParam } = await params;
+  const sectionInList = sectionList.find(
+    (section) => section.slug === sectionParam,
   );
-  if (!section) {
+  if (!sectionInList) {
     return notFound();
   }
-  if (section?.type === "page") {
-    const page = section.pageList.find((page) => page.slug === params.category);
+  if (sectionInList?.type === "page") {
+    const page = sectionInList.pageList.find(
+      (page) => page.slug === categoryParam,
+    );
     if (!page) {
       return notFound();
     }
     return page.component;
   }
 
-  if (section?.type === "single-component") {
+  if (sectionInList?.type === "single-component") {
     const category = findCategoryBySlug(
-      section,
-      params.category,
+      sectionInList,
+      categoryParam,
     ) as SingleComponentCategoryType | null;
     if (!category) {
       return notFound();
     }
     return (
-      <SingleComponentCategory sectionSlug={section.slug} category={category} />
+      <SingleComponentCategory
+        sectionSlug={sectionInList.slug}
+        category={category}
+      />
     );
   }
 
-  if (section?.type === "multiple-component") {
+  if (sectionInList?.type === "multiple-component") {
     const category = findCategoryBySlug(
-      section,
-      params.category,
+      sectionInList,
+      categoryParam,
     ) as CategoryType | null;
     if (!category) {
       return notFound();
     }
     return (
       <MultipleComponentCategory
-        sectionSlug={section.slug}
+        sectionSlug={sectionInList.slug}
         category={category}
       />
     );

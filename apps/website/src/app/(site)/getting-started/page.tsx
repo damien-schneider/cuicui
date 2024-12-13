@@ -42,7 +42,7 @@ export default function Page() {
       </header>
 
       <section id="cn-function">
-        <h2 className="header-2">The "cn" function</h2>
+        <h2 className="header-2">{`The "cn" function`}</h2>
         <p>
           The <code>cn</code> function is a utility for generating{" "}
           <code>className</code> strings compatible with TailwindCSS utility
@@ -75,7 +75,7 @@ export default function Page() {
 
           <StaticStep step={3} title="Create a 'cn.ts' file">
             <p className="caption-md mb-2">
-              Create a <code>cn.ts</code> file in your project's{" "}
+              Create a <code>cn.ts</code> file in your project&apos;s{" "}
               <code>utils</code> folder and add the following code:
             </p>
             <CodeContainer isCommand={false}>

@@ -6,27 +6,31 @@ import { MainMenusGradientCard } from "@cuicui/ui/cuicui/other/cursors/dynamic-c
 import { findSectionBySlug } from "#/src/utils/section-category-components-utils/find-section-by-slug";
 
 type Props = {
-  params: { section: string };
+  params: Promise<{ section: string }>;
 };
 
-export default function Page({ params }: Readonly<Props>) {
-  const section = findSectionBySlug(params.section);
-  if (!section) {
+export default async function Page({ params }: Props) {
+  const { section: sectionParam } = await params;
+  const sectionInList = findSectionBySlug(sectionParam);
+
+  if (!sectionInList) {
     return notFound();
   }
-  if (section.slug !== params.section) {
+
+  if (sectionInList.slug !== sectionParam) {
     return notFound();
   }
-  if (section.type === "page") {
+
+  if (sectionInList.type === "page") {
     return (
       <>
-        <h1 className="header-1">{section.name} category</h1>
-        <p className="caption-md">{section.description}</p>
-        <MenuSectionWrapper key={section.name} name={section.name}>
-          {section.pageList.map((category) => {
+        <h1 className="header-1">{sectionInList.name} category</h1>
+        <p className="caption-md">{sectionInList.description}</p>
+        <MenuSectionWrapper key={sectionInList.name} name={sectionInList.name}>
+          {sectionInList.pageList.map((category) => {
             return (
               <Link
-                href={`/${section.slug}/${category.slug}`}
+                href={`/${sectionInList.slug}/${category.slug}`}
                 key={category.name}
               >
                 <MainMenusGradientCard
@@ -42,13 +46,13 @@ export default function Page({ params }: Readonly<Props>) {
   }
   return (
     <>
-      <h1 className="header-1">{section.name} category</h1>
-      <p className="caption-md">{section.description}</p>
-      <MenuSectionWrapper key={section.name} name={section.name}>
-        {section.categoriesList.map((category) => {
+      <h1 className="header-1">{sectionInList.name} category</h1>
+      <p className="caption-md">{sectionInList.description}</p>
+      <MenuSectionWrapper key={sectionInList.name} name={sectionInList.name}>
+        {sectionInList.categoriesList.map((category) => {
           return (
             <Link
-              href={`/${section.slug}/${category.slug}`}
+              href={`/${sectionInList.slug}/${category.slug}`}
               key={category.name}
             >
               <MainMenusGradientCard

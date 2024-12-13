@@ -4,9 +4,9 @@ import { useRef } from "react";
 import useInView from "@/cuicui/hooks/use-in-view/use-in-view";
 
 export const PreviewUseInView = () => {
-  const ref1 = useRef(null);
-  const ref2 = useRef(null);
-  const ref3 = useRef(null);
+  const ref1 = useRef<HTMLDivElement>(null);
+  const ref2 = useRef<HTMLDivElement>(null);
+  const ref3 = useRef<HTMLDivElement>(null);
 
   const isInView1 = useInView(ref1);
   const isInView2 = useInView(ref2, { threshold: 0.5 });

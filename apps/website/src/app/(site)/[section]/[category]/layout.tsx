@@ -9,20 +9,21 @@ import { findSectionBySlug } from "#/src/utils/section-category-components-utils
 
 type Props = {
   children: ReactNode;
-  params: {
+  params: Promise<{
     section: string;
     category: string;
-  };
+  }>;
 };
 
-export function generateMetadata({ params }: Props): Metadata {
-  const section = findSectionBySlug(params.section);
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { section: sectionParam, category: categoryParam } = await params;
+  const section = findSectionBySlug(sectionParam);
   if (!section) {
     return {};
   }
 
   if (section.type === "page") {
-    const page = section.pageList.find((page) => page.slug === params.category);
+    const page = section.pageList.find((page) => page.slug === categoryParam);
     if (page) {
       return {
         title: page.name,
@@ -40,7 +41,7 @@ export function generateMetadata({ params }: Props): Metadata {
     return {};
   }
 
-  const category = findCategoryBySlug(section, params.category);
+  const category = findCategoryBySlug(section, categoryParam);
   if (category) {
     return {
       title: `${category.name} React Components`,
@@ -58,12 +59,14 @@ export function generateMetadata({ params }: Props): Metadata {
   return {};
 }
 
-export default function CategoryLayout({ children, params }: Props) {
-  const section = findSectionBySlug(params.section);
+export default async function CategoryLayout({ params, children }: Props) {
+  const { section: sectionParam, category: categoryParam } = await params;
+
+  const section = findSectionBySlug(sectionParam);
   if (!section) {
     return notFound();
   }
-  const category = findCategoryBySlug(section, params.category);
+  const category = findCategoryBySlug(section, categoryParam);
   if (!category) {
     return notFound();
   }

@@ -14,6 +14,7 @@ import {
   Info,
   Clock,
 } from "lucide-react";
+import type { JSX } from "react";
 
 const iconMap: Record<string, JSX.Element> = {
   pathname: <Home className="size-5 text-blue-500" />,

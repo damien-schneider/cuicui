@@ -45,7 +45,7 @@ interface ButtonProps
   type?: "button" | "submit" | "reset";
 }
 
-export default ({
+export const Button = ({
   children,
   className,
   variant,
@@ -79,3 +79,5 @@ export default ({
     </motion.button>
   );
 };
+
+export default Button;
