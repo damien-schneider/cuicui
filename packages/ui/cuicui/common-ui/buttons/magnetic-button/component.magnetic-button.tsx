@@ -1,6 +1,6 @@
 "use client";
 import { useState, useRef, type MouseEvent } from "react";
-import { motion, useMotionValue, useSpring } from "framer-motion";
+import { motion, useMotionValue, useSpring } from "motion/react";
 
 const SPRING_CONFIG = { damping: 30, stiffness: 400 };
 const MAX_DISTANCE = 0.3;

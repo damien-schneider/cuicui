@@ -10,3 +10,5 @@ export const dropdownMenuCategory: CategoryType = {
   icon: PanelTopOpenIcon,
   componentList: [macOsDropdownComponent],
 };
+
+export default dropdownMenuCategory;

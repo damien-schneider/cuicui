@@ -6,7 +6,7 @@ import {
   useAnimation,
   useMotionValue,
   useTransform,
-} from "framer-motion";
+} from "motion/react";
 import {
   AlarmClockIcon,
   ArchiveIcon,

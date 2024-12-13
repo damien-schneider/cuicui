@@ -10,3 +10,5 @@ export const colorPickerCategory: CategoryType = {
   releaseDateCategory: new Date("2021-11-28"),
   componentList: [arcColorPickerComponent],
 };
+
+export default colorPickerCategory;

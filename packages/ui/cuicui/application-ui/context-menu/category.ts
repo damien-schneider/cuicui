@@ -10,3 +10,4 @@ export const contextMenuCategory: CategoryType = {
   icon: SquareMenuIcon,
   componentList: [macOsContextMenuComponent],
 };
+export default contextMenuCategory;

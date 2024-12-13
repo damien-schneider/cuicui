@@ -5,6 +5,9 @@
       "dependsOn": [
         "^build"
       ],
+      "env": [
+        "*"
+      ],
       "outputs": [
         "dist/**",
         ".next/**",

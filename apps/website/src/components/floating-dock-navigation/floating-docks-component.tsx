@@ -9,8 +9,8 @@ import {
   useMotionValue,
   useSpring,
   useTransform,
-} from "framer-motion";
-import { ListCollapseIcon, type LucideIcon } from "lucide-react";
+} from "motion/react";
+import { ListCollapseIcon } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { type ReactNode, useEffect, useRef, useState } from "react";

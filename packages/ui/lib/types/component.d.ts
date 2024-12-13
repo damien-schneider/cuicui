@@ -135,3 +135,30 @@ export type VariantType = {
   slugComponentFile?: string;
   slugPreviewFile: string;
 };
+
+export type NewSectionType = {
+  meta: SectionType;
+  categories: {
+    meta: CategoryType;
+    components: { meta: ComponentType; variants: VariantType[] }[];
+  }[];
+}[];
+
+export type NewCategoryType = {
+  meta: CategoryType;
+  components: { meta: ComponentType; variants: VariantType[] }[];
+}[];
+
+export type NewComponentType = {
+  meta: ComponentType;
+  variants: NewVariantType[];
+}[];
+
+export type NewVariantType = {
+  name: string;
+  component: JSX.Element | (() => JSX.Element); // To delete
+  slugComponentFile?: string; // To delete
+  slugPreviewFile: string; // To delete
+  // variantComponent: () => JSX.Element
+  // previewPath: string;
+};

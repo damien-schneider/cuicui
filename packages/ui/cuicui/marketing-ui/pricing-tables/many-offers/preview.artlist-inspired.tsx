@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { CheckIcon, EuroIcon } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/cuicui/utils/cn/cn";

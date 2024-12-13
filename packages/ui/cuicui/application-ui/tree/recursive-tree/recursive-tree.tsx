@@ -1,5 +1,5 @@
 "use client";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 import { FolderIcon, FolderOpenIcon } from "lucide-react";
 import React, { useState, type ReactNode, type HTMLAttributes } from "react";
 import { cn } from "@/cuicui/utils/cn/cn";

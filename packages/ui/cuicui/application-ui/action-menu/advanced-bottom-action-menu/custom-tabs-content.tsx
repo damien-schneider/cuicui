@@ -2,7 +2,7 @@
 
 // biome-ignore lint/style/noNamespaceImport: <explanation>
 import * as TabsPrimitive from "@radix-ui/react-tabs";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 
 import {
   type ComponentPropsWithoutRef,

@@ -1,12 +1,12 @@
-import { applicationUiSection } from "@/cuicui/application-ui/application-ui.section";
-import { commonUiSection } from "@/cuicui/common-ui/common-ui.section";
+import { applicationUiSection } from "@/cuicui/application-ui/section";
+import { commonUiSection } from "@/cuicui/common-ui/section";
 import { hooksSection } from "@/cuicui/hooks/hooks.section";
-import { otherSection } from "@/cuicui/other/other.section";
-import { toolsSection } from "@/cuicui/tools/section.tools";
-import { utilsSection } from "@/cuicui/utils/utils.section";
+import { otherSection } from "@/cuicui/other/section";
+import { toolsSection } from "@/cuicui/tools/tools.section";
+import { utilsSection } from "@/cuicui/utils/section";
 
 import type { SectionType } from "./types/component";
-import { marketingUiSection } from "@/cuicui/marketing-ui/section.marketing-ui";
+import { marketingUiSection } from "@/cuicui/marketing-ui/section";
 
 export const sectionList: SectionType[] = [
   commonUiSection,

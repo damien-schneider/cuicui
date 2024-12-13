@@ -73,3 +73,5 @@ export const hooksSection: SectionType = {
     useWindowSizeCategory,
   ],
 };
+
+export default hooksSection;
