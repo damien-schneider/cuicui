@@ -90,11 +90,5 @@
     "test:watch": "vitest --watch",
     "type-check": "tsc --noEmit"
   },
-  "version": "0.1.2",
-  "pnpm": {
-    "overrides": {
-      "@types/react": "19.0.1",
-      "@types/react-dom": "19.0.2"
-    }
-  }
+  "version": "0.1.2"
 }
