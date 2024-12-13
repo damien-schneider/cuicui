@@ -51,9 +51,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: ReactNode;
-}>) {
+}) {
   return (
     <html className={font.className} lang="en" suppressHydrationWarning={true}>
       <PlausibleScripts />
