@@ -15,3 +15,5 @@ export const macOsContextMenuComponent: ComponentType = {
     },
   ],
 };
+
+export default macOsContextMenuComponent;

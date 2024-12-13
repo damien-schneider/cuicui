@@ -2,7 +2,7 @@
 
 import { SkeletonShinyGradient } from "@/cuicui/common-ui/skeletons/shiny-gradient/skeleton-shiny-gradient";
 
-export function ShinyGradientSkeletonHorizontal() {
+export const ShinyGradientSkeletonHorizontal = () => {
   return (
     <SkeletonShinyGradient className="flex w-48 flex-col gap-5 rounded-2xl bg-black/5 p-4 dark:bg-white/5">
       <div className="h-24 w-full rounded-lg bg-neutral-200 dark:bg-rose-100/10" />
@@ -13,4 +13,6 @@ export function ShinyGradientSkeletonHorizontal() {
       </div>
     </SkeletonShinyGradient>
   );
-}
+};
+
+export default ShinyGradientSkeletonHorizontal;

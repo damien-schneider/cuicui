@@ -14,3 +14,5 @@ export const QrCodeGeneratorComponent: ComponentType = {
     },
   ],
 };
+
+export default QrCodeGeneratorComponent;

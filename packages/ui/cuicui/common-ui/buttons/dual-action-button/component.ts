@@ -14,3 +14,5 @@ export const dualActionButtonComponent: ComponentType = {
     },
   ],
 };
+
+export default dualActionButtonComponent;

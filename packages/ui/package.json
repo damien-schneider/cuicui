@@ -8,7 +8,7 @@
     "pre-build": "pnpm generate-preview-categories",
     "type-check": "tsc --noEmit",
     "generate-preview-categories": "deno run --allow-read --allow-write scripts/generate-preview-categories.ts",
-    "generate-section-list": "deno run --allow-read --allow-write scripts/generate-section-list.ts"
+    "generate-section-list": "deno run --allow-read --allow-write scripts/generate-section-list/main.ts"
   },
   "license": "MIT",
   "peerDependencies": {

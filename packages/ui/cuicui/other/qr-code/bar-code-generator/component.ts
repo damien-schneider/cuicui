@@ -15,3 +15,5 @@ export const BarCodeGeneratorComponent: ComponentType = {
     },
   ],
 };
+
+export default BarCodeGeneratorComponent;

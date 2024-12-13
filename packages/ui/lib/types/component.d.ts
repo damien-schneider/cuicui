@@ -137,28 +137,56 @@ export type VariantType = {
 };
 
 export type NewSectionType = {
-  meta: SectionType;
-  categories: {
-    meta: CategoryType;
-    components: { meta: ComponentType; variants: VariantType[] }[];
-  }[];
-}[];
+  meta:
+    | SectionType
+    | {
+        // type: "single-component";
+        name: string;
+        slug: string;
+        description: string;
+        icon: LucideIcon;
+      };
+  categories: NewCategoryType[];
+};
+
+export type CategoryMetaType = {
+  name: string;
+  description: string;
+  releaseDateCategory: Date;
+  icon: LucideIcon;
+  comingSoonCategory?: boolean;
+};
 
 export type NewCategoryType = {
-  meta: CategoryType;
-  components: { meta: ComponentType; variants: VariantType[] }[];
-}[];
+  meta:
+    | CategoryType // To delete
+    | CategoryMetaType;
+  components: NewComponentType[];
+};
+
+export type ComponentMetaType = {
+  name: string;
+  description: string;
+  isResizable?: boolean;
+  componentBadges?: ComponentBadgeSlug[];
+  isIframed?: boolean;
+  rerenderButton?: boolean;
+  inspiration?: string;
+  inspirationLink?: string;
+  sizePreview?: ComponentHeightType;
+};
 
 export type NewComponentType = {
-  meta: ComponentType;
+  meta: ComponentType | ComponentMetaType;
   variants: NewVariantType[];
-}[];
-
-export type NewVariantType = {
-  name: string;
-  component: JSX.Element | (() => JSX.Element); // To delete
-  slugComponentFile?: string; // To delete
-  slugPreviewFile: string; // To delete
-  // variantComponent: () => JSX.Element
-  // previewPath: string;
 };
+
+export type NewVariantType =
+  | VariantType // Temporary
+  | {
+      name: string;
+      variantComponent: () => JSX.Element;
+      cuicuiDependenciesPath: string[];
+      slugPreviewFile?: string; // To delete ? (separate the type used and the computed in list)
+      // previewPath: string; // Not needed ?
+    };

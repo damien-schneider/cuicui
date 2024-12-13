@@ -17,3 +17,5 @@ export function ShinyGradientSkeletonVertical() {
     </SkeletonShinyGradient>
   );
 }
+
+export default ShinyGradientSkeletonVertical;

@@ -1,6 +1,6 @@
 "use client";
 
-import { ShinyGradientSkeletonHorizontal } from "@/cuicui/common-ui/skeletons/shiny-gradient/skeleton-shiny-gradient-horizontal";
+import { ShinyGradientSkeletonHorizontal } from "@/cuicui/common-ui/skeletons/shiny-gradient/horizontal.variant";
 import { cn } from "@/cuicui/utils/cn/cn";
 
 import { AnimatePresence, motion } from "motion/react";

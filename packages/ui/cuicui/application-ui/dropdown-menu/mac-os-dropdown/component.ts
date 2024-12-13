@@ -15,3 +15,5 @@ export const macOsDropdownComponent: ComponentType = {
     },
   ],
 };
+
+export default macOsDropdownComponent;

@@ -17,3 +17,5 @@ export const triggerOnScrollComponent: ComponentType = {
     },
   ],
 };
+
+export default triggerOnScrollComponent;
