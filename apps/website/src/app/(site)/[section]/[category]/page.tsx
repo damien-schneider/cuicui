@@ -15,26 +15,31 @@ type Props = {
 };
 
 export function generateStaticParams() {
-  const params = sectionList.flatMap((section) => {
+  const paramsArray = [];
+  for (const section of sectionList) {
     if (
       section.type === "multiple-component" ||
       section.type === "single-component"
     ) {
-      return section.categoriesList.map((category) => ({
-        section: section.slug,
-        category: category.slug,
-      }));
+      for (const category of section.categoriesList) {
+        paramsArray.push({
+          section: section.slug,
+          category: category.slug,
+        });
+      }
     }
     if (section.type === "page") {
-      return section.pageList.map((page) => ({
-        section: section.slug,
-        category: page.slug,
-      }));
+      for (const page of section.pageList) {
+        paramsArray.push({
+          section: section.slug,
+          category: page.slug,
+        });
+      }
     }
-  });
+  }
 
   // Return the generated params array
-  return params;
+  return paramsArray;
 }
 
 export default async function Page({ params }: Props) {
