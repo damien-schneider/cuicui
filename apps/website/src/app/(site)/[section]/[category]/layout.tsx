@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import type { ReactNode } from "react";
+import type { JSX } from "react";
 import { NEXT_PUBLIC_SITE_URL } from "#/src/lib/site.const";
 import { findCategoryBySlug } from "#/src/utils/section-category-components-utils/find-category-by-slug";
 import { findSectionBySlug } from "#/src/utils/section-category-components-utils/find-section-by-slug";
@@ -62,7 +62,7 @@ export default async function CategoryLayout({
   params,
   children,
 }: {
-  children: ReactNode;
+  children: JSX.Element;
   params: Promise<{
     section: string;
     category: string;
@@ -70,28 +70,28 @@ export default async function CategoryLayout({
 }) {
   const { section: sectionParam, category: categoryParam } = await params;
 
-  const section = findSectionBySlug(sectionParam);
-  if (!section) {
+  const sectionInList = findSectionBySlug(sectionParam);
+  if (!sectionInList) {
     return notFound();
   }
-  const category = findCategoryBySlug(section, categoryParam);
-  if (!category) {
+  const categoryInList = findCategoryBySlug(sectionInList, categoryParam);
+  if (!categoryInList) {
     return notFound();
   }
   return (
-    <>
+    <div>
       <Head>
         <Link
-          href={`${NEXT_PUBLIC_SITE_URL}/${section.slug}/${category.slug}`}
+          href={`${NEXT_PUBLIC_SITE_URL}/${sectionInList.slug}/${categoryInList.slug}`}
           key="canonical"
           rel="canonical"
         />
         <meta content="all" name="robots" />
       </Head>
       <h1 className="bg-gradient-to-b from-black to-black/40 dark:from-white dark:to-white/10 bg-clip-text font-medium text-transparent text-3xl sm:text-5xl inline tracking-tighter">
-        {category.name} components
+        {categoryInList.name} components
       </h1>
       {children}
-    </>
+    </div>
   );
 }
