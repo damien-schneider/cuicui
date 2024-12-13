@@ -10,7 +10,6 @@ type Props = {
   children: ReactNode;
   params: Promise<{
     section: string;
-    category: string;
   }>;
 };
 
