@@ -40,7 +40,7 @@
     "@tailwindcss/forms": "0.5.7",
     "@tailwindcss/typography": "0.5.12",
     "@testing-library/dom": "10.4.0",
-    "@testing-library/react": "16.0.0",
+    "@testing-library/react": "16.1.0",
     "@types/dom-to-image": "2.6.7",
     "@types/node": "20.12.7",
     "@types/react": "19.0.1",
