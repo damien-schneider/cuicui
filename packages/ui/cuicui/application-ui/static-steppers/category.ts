@@ -1,6 +1,6 @@
 import { ListOrderedIcon } from "lucide-react";
 import type { CategoryType } from "@/lib/types/component";
-import { StepWithStickyColorVariant1 } from "@/cuicui/application-ui/static-steppers/code/variant1";
+import { StepWithStickyColorVariant1 } from "@/cuicui/application-ui/static-steppers/code/default.variant";
 
 export const staticSteppersCategory: CategoryType = {
   slug: "static-steppers",

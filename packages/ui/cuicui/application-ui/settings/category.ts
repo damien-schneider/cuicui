@@ -1,6 +1,6 @@
 import { SettingsIcon } from "lucide-react";
 import type { CategoryType } from "@/lib/types/component";
-import DynamicSettingsVariant1 from "@/cuicui/application-ui/settings/dynamic-settings/variant1";
+import DynamicSettingsVariant1 from "@/cuicui/application-ui/settings/dynamic-settings/default.variant";
 
 export const settingsCategory: CategoryType = {
   slug: "settings",

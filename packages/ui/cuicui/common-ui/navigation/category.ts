@@ -1,8 +1,8 @@
 import { MenuIcon } from "lucide-react";
 import type { CategoryType } from "@/lib/types/component";
-import { Dock } from "@/cuicui/common-ui/navigation/mac-dock/variant1";
-import { VercelNavigationVariant1 } from "@/cuicui/common-ui/navigation/vercel-navigation/variant1";
-import { VercelNavigationVariant2 } from "@/cuicui/common-ui/navigation/vercel-navigation/variant2";
+import { Dock } from "@/cuicui/common-ui/navigation/mac-dock/default.variant";
+import { VercelNavigationVariant1 } from "@/cuicui/common-ui/navigation/vercel-navigation/variant1.variant";
+import { VercelNavigationVariant2 } from "@/cuicui/common-ui/navigation/vercel-navigation/variant2.variant";
 import SideMenuSmoothHoverComponent from "@/cuicui/common-ui/navigation/side-menu-smooth-hover/component";
 
 export const navigationCategory: CategoryType = {

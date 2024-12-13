@@ -1,4 +1,4 @@
-import PreviewArcColorPicker from "@/cuicui/application-ui/color-picker/arc-color-picker/preview.arc-color-picker";
+import PreviewArcColorPicker from "@/cuicui/application-ui/color-picker/arc-color-picker/arc-color-picker.variant";
 import type { ComponentType } from "@/lib/types/component";
 
 export const arcColorPickerComponent: ComponentType = {

@@ -1,6 +1,6 @@
 import { TableOfContentsIcon } from "lucide-react";
 import type { CategoryType } from "@/lib/types/component";
-import TableOfContentPreview from "@/cuicui/application-ui/table-of-contents/modul-inspired/following-header-preview";
+import TableOfContentPreview from "@/cuicui/application-ui/table-of-contents/modul-inspired/following-header.variant";
 
 export const tableOfContentCategory: CategoryType = {
   slug: "table-of-contents",

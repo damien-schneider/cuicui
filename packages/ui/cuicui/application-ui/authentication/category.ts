@@ -1,6 +1,6 @@
 import { FingerprintIcon } from "lucide-react";
 import type { CategoryType } from "@/lib/types/component";
-import HalfSidedGlassMorphismAuthentication from "@/cuicui/application-ui/authentication/half-sided-glassmorphism/variant1";
+import HalfSidedGlassMorphismAuthentication from "@/cuicui/application-ui/authentication/half-sided-glassmorphism/default.variant";
 export const authenticationCategory: CategoryType = {
   slug: "authentication",
   name: "Authentication",

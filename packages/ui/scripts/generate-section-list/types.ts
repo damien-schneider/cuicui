@@ -1,6 +1,8 @@
 export interface FoundItem {
   varName: string;
   importPath: string;
+  filename: string;
+  pathname: string;
 }
 
 export interface FoundSection extends FoundItem {

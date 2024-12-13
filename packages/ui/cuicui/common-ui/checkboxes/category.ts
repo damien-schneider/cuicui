@@ -1,6 +1,6 @@
 import { CheckSquare2Icon } from "lucide-react";
 import type { CategoryType } from "@/lib/types/component";
-import SimpleCheckboxPreview from "@/cuicui/common-ui/checkboxes/simple-checkbox/simple-checkbox-preview";
+import SimpleCheckboxPreview from "@/cuicui/common-ui/checkboxes/simple-checkbox/simple-checkbox.variant";
 
 export const checkboxesCategory: CategoryType = {
   slug: "checkboxes",

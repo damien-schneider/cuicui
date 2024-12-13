@@ -1,7 +1,7 @@
 import { TextCursorInputIcon } from "lucide-react";
 import type { CategoryType } from "@/lib/types/component";
-import FileDropzone from "@/cuicui/common-ui/inputs/droppable-file/variant1";
-import { PreviewModernSimpleInput } from "@/cuicui/common-ui/inputs/modern-simple-input/preview-simple-modern-input";
+import FileDropzone from "@/cuicui/common-ui/inputs/droppable-file/file-dropzone";
+import PreviewModernSimpleInput from "@/cuicui/common-ui/inputs/modern-simple-input/simple-modern-input.variant";
 
 export const inputsCategory: CategoryType = {
   slug: "inputs",

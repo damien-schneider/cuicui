@@ -1,5 +1,5 @@
 import type { ComponentType } from "@/lib/types/component";
-import { PreviewInlineCode } from "@/cuicui/application-ui/code/inline-code/preview-inline-code";
+import { PreviewInlineCode } from "@/cuicui/application-ui/code/inline-code/inline-code.variant";
 
 export const inlineCodeComponent: ComponentType = {
   sizePreview: "xs",

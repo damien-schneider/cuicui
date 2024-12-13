@@ -1,5 +1,5 @@
 import type { ComponentType } from "@/lib/types/component";
-import PreviewSimpleCookieBanner from "@/cuicui/application-ui/cookie-banner/simple-cookie-banner/preview-simple-cookie-banner";
+import PreviewSimpleCookieBanner from "@/cuicui/application-ui/cookie-banner/simple-cookie-banner/simple-cookie-banner.variant";
 
 export const simpleCookieBannerComponent: ComponentType = {
   slug: "simple-cookie-banner",

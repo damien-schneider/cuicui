@@ -48,6 +48,8 @@ export function discoverSections(rootDir: string): FoundSection[] {
         varName: sectionVarName,
         importPath,
         sectionName: section,
+        filename: sectionFile,
+        pathname: path.join(sectionPath, sectionFile),
       });
     }
   }
@@ -95,6 +97,8 @@ export function discoverCategories(
           importPath,
           sectionName: sec.sectionName,
           categoryName: categoryDir,
+          filename: categoryFile,
+          pathname: path.join(categoryPath, categoryFile),
         });
       }
     }
@@ -150,6 +154,8 @@ export function discoverComponentsAndVariants(
         sectionName: cat.sectionName,
         categoryName: cat.categoryName,
         componentName: componentDir,
+        filename: componentFile,
+        pathname: path.join(componentPath, componentFile),
       });
 
       // Find variants
@@ -170,6 +176,8 @@ export function discoverComponentsAndVariants(
           categoryName: cat.categoryName,
           componentName: componentDir,
           variantName: variantName,
+          filename: variantFile,
+          pathname: path.join(componentPath, variantFile),
         });
       }
     }
@@ -188,6 +196,14 @@ export function buildContent(
   variants: FoundVariant[],
 ): string {
   // Sort all
+  console.log("\n---------- SECTIONS ----------\n");
+  console.log(sections);
+  console.log("\n---------- CATEGORIES ----------\n");
+  console.log(categories);
+  console.log("\n---------- COMPONENTS ----------\n");
+  console.log(components);
+  console.log("\n---------- VARIANTS ----------\n");
+  console.log(variants);
   sections.sort((a, b) => a.varName.localeCompare(b.varName));
   categories.sort((a, b) => a.varName.localeCompare(b.varName));
   components.sort((a, b) => a.varName.localeCompare(b.varName));
@@ -209,8 +225,7 @@ export function buildContent(
   }
 
   imports += `
-import type { NewSectionType } from "@/lib/types/component";
-`;
+import type { NewSectionType } from "@/lib/types/component";`;
 
   // Grouping
   const categoriesBySection = groupBy(categories, (c) => c.sectionName);
@@ -242,9 +257,17 @@ import type { NewSectionType } from "@/lib/types/component";
               variantsByComponent[
                 `${comp.sectionName}/${comp.categoryName}/${comp.componentName}`
               ] || [];
-            const variantsArray = compVariants
-              .map((v) => v.varName)
-              .join(",\n      ");
+            const variantsArray: string[] = [];
+            for (const v of compVariants) {
+              variantsArray.push(`{
+        name: "${v.variantName}",
+        component: ${v.varName},
+        slugPreviewFile: "${v.importPath}",
+      }`);
+            }
+            // const variantsArray = compVariants
+            //   .map((v) => v.varName)
+            //   .join(",\n      ");
             return `{
     meta: ${comp.varName},
     variants: [

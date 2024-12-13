@@ -1,4 +1,4 @@
-import { FullSectionFaq } from "@/cuicui/marketing-ui/faq/full-section/full-section";
+import { FullSectionFaq } from "@/cuicui/marketing-ui/faq/full-section/full-section.variant";
 import type { ComponentType } from "@/lib/types/component";
 
 export const FullSectionFaqComponent: ComponentType = {

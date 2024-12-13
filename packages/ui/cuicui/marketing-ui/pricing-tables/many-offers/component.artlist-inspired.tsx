@@ -1,5 +1,5 @@
 import type { ComponentType } from "@/lib/types/component";
-import ManyOffersVariant1 from "@/cuicui/marketing-ui/pricing-tables/many-offers/preview.artlist-inspired";
+import ManyOffersVariant1 from "@/cuicui/marketing-ui/pricing-tables/many-offers/artlist-inspired.variant";
 
 export const artlistInspiredPricingTableComponent: ComponentType = {
   sizePreview: "lg",

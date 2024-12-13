@@ -1,6 +1,6 @@
-import AnimatedCounterPreview from "@/cuicui/marketing-ui/statistics/animated-counter/animated-counter-preview";
-import { AnimatedNumberVariant1 } from "@/cuicui/marketing-ui/statistics/animated-on-scroll/variant1";
-import IncreaseToValueVariant1 from "@/cuicui/marketing-ui/statistics/increase-to-value/variant1";
+import AnimatedCounterPreview from "@/cuicui/marketing-ui/statistics/animated-counter/animated-counter.variant";
+import { AnimatedNumberVariant1 } from "@/cuicui/marketing-ui/statistics/animated-on-scroll/default.variant";
+import IncreaseToValueVariant1 from "@/cuicui/marketing-ui/statistics/increase-to-value/default.variant";
 import { triggerOnScrollComponent } from "@/cuicui/marketing-ui/statistics/trigger-on-scroll/component";
 import type { CategoryType } from "@/lib/types/component";
 import { BarChart2Icon } from "lucide-react";

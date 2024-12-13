@@ -1,6 +1,6 @@
 import { SearchIcon } from "lucide-react";
 import type { CategoryType } from "@/lib/types/component";
-import GrowingSearchVariant1 from "@/cuicui/application-ui/search-bars/growing-search/variant1";
+import GrowingSearchVariant1 from "@/cuicui/application-ui/search-bars/growing-search/default.variant";
 
 export const searchBarsCategory: CategoryType = {
   slug: "search-bars",

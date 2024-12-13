@@ -1,6 +1,6 @@
 import { BatteryChargingIcon } from "lucide-react";
 import type { CategoryType } from "@/lib/types/component";
-import { PreviewBatteryIndicator } from "@/cuicui/application-ui/battery/battery-indicator/preview-battery-indicator";
+import { PreviewBatteryIndicator } from "@/cuicui/application-ui/battery/battery-indicator/battery-indicator.variant";
 
 export const batteryCategory: CategoryType = {
   slug: "battery",

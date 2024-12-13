@@ -1,6 +1,6 @@
 import { QuoteIcon } from "lucide-react";
 import type { CategoryType } from "@/lib/types/component";
-import ModernSimpleQuoteVariant1 from "@/cuicui/common-ui/blockquotes/modern-simple-quote/variant1";
+import ModernSimpleQuoteVariant1 from "@/cuicui/common-ui/blockquotes/modern-simple-quote/default.variant";
 
 export const blockquotesCategory: CategoryType = {
   slug: "blockquotes",

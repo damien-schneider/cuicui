@@ -1,7 +1,7 @@
 import { CommandIcon } from "lucide-react";
 import type { CategoryType } from "@/lib/types/component";
-import Modern3dKbdVariant1 from "@/cuicui/application-ui/kbd/modern-3d-kbd/variant1";
-import ModernDetailedKbdVariant1 from "@/cuicui/application-ui/kbd/modern-detailed-kbd/variant1";
+import Modern3dKbdVariant1 from "@/cuicui/application-ui/kbd/modern-3d-kbd/default.variant";
+import ModernDetailedKbdVariant1 from "@/cuicui/application-ui/kbd/modern-detailed-kbd/default.variant";
 
 export const kbdCategory: CategoryType = {
   slug: "kbd",

@@ -1,6 +1,6 @@
-import { AnimatedCardVariant1 } from "@/cuicui/marketing-ui/features/animated-cards/variant1";
-import { Variant1FeatureFourImages } from "@/cuicui/marketing-ui/features/feature-four-images/variant1";
-import { Variant2FeatureFourImages } from "@/cuicui/marketing-ui/features/feature-four-images/variant2";
+import { AnimatedCardVariant1 } from "@/cuicui/marketing-ui/features/animated-cards/default.variant";
+import { Variant1FeatureFourImages } from "@/cuicui/marketing-ui/features/feature-four-images/variant1.variant";
+import { Variant2FeatureFourImages } from "@/cuicui/marketing-ui/features/feature-four-images/variant2.variant";
 import type { CategoryType } from "@/lib/types/component";
 import { SparkleIcon } from "lucide-react";
 

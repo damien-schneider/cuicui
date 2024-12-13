@@ -16,3 +16,5 @@ export const ShinyGradientSkeletonHorizontal = () => {
 };
 
 export default ShinyGradientSkeletonHorizontal;
+
+ShinyGradientSkeletonHorizontal.displayName = "Shiny Gradient Skeleton";

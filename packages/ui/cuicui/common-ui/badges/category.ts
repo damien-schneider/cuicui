@@ -1,9 +1,9 @@
 import { TagIcon } from "lucide-react";
 import type { CategoryType } from "@/lib/types/component";
-import AdvancedBadgesVariant1 from "@/cuicui/common-ui/badges/advanced-badges/variant1";
-import ClerkBadgeVariant1 from "@/cuicui/common-ui/badges/clerk-badge/variant1";
-import { BadgeSimpleVariantAmber } from "@/cuicui/common-ui/badges/modern-simple-badges/variant1";
-import { BadgeSimpleVariantRed } from "@/cuicui/common-ui/badges/modern-simple-badges/variant2";
+import AdvancedBadgesVariant1 from "@/cuicui/common-ui/badges/advanced-badges/default.variant";
+import ClerkBadgeVariant1 from "@/cuicui/common-ui/badges/clerk-badge/default.variant";
+import { BadgeSimpleVariantAmber } from "@/cuicui/common-ui/badges/modern-simple-badges/amber.variant";
+import { BadgeSimpleVariantRed } from "@/cuicui/common-ui/badges/modern-simple-badges/red.variant";
 
 export const badgesCategory: CategoryType = {
   slug: "badges",

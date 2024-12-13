@@ -1,6 +1,6 @@
 import type { ComponentType } from "@/lib/types/component";
-import { PreviewRecursiveTree } from "@/cuicui/application-ui/tree/recursive-tree/preview-recursive-tree";
-import { PreviewRecursiveTreeLessAnimations } from "@/cuicui/application-ui/tree/recursive-tree/preview-recursive-tree-less-animations";
+import { PreviewRecursiveTree } from "@/cuicui/application-ui/tree/recursive-tree/recursive-tree.variant";
+import { PreviewRecursiveTreeLessAnimations } from "@/cuicui/application-ui/tree/recursive-tree/recursive-tree-less-animations.variant";
 
 export const recursiveTreeComponent: ComponentType = {
   sizePreview: "lg",

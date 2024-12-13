@@ -1,16 +1,16 @@
 import { SquareArrowRightIcon } from "lucide-react";
 import type { CategoryType } from "@/lib/types/component";
-import PreviewBeforeEffectButtonAdvancedButton from "@/cuicui/common-ui/buttons/before-effect-button/preview-advanced-button";
-import PreviewBeforeEffectButtonDefault from "@/cuicui/common-ui/buttons/before-effect-button/preview-default";
-import PreviewBeforeEffectButtonHoverOnly from "@/cuicui/common-ui/buttons/before-effect-button/preview-hover-only";
-import GrowingButtonVariant1 from "@/cuicui/common-ui/buttons/growing-button/variant1";
-import ModernAnimatedButtonVariant1 from "@/cuicui/common-ui/buttons/modern-animated-button/variant1";
+import PreviewBeforeEffectButtonAdvancedButton from "@/cuicui/common-ui/buttons/before-effect-button/advanced-button.variant";
+import PreviewBeforeEffectButtonDefault from "@/cuicui/common-ui/buttons/before-effect-button/default.variant";
+import PreviewBeforeEffectButtonHoverOnly from "@/cuicui/common-ui/buttons/before-effect-button/hover-only.variant";
+import GrowingButtonVariant1 from "@/cuicui/common-ui/buttons/growing-button/default.variant";
+import ModernAnimatedButtonVariant1 from "@/cuicui/common-ui/buttons/modern-animated-button/default.variant";
 
-import { PreviewShinyRotatingBorderButton } from "@/cuicui/common-ui/buttons/shiny-rotating-border-button/preview.shiny-rotating-border-button";
-import { PreviewMagneticButton } from "@/cuicui/common-ui/buttons/magnetic-button/preview.magnetic-button";
-import { PreviewMagneticBackgroundButton } from "@/cuicui/common-ui/buttons/magnetic-button/preview.magnetic-background-button";
-import PreviewGithubStars from "@/cuicui/common-ui/buttons/github-stars/preview.github-stars";
-import PreviewGradientContainer from "@/cuicui/common-ui/buttons/github-stars/preview.gradient-container";
+import { PreviewShinyRotatingBorderButton } from "@/cuicui/common-ui/buttons/shiny-rotating-border-button/shiny-rotating-border-button.variant";
+import { PreviewMagneticButton } from "@/cuicui/common-ui/buttons/magnetic-button/magnetic-button.variant";
+import { PreviewMagneticBackgroundButton } from "@/cuicui/common-ui/buttons/magnetic-button/magnetic-background-button.variant";
+import PreviewGithubStars from "@/cuicui/common-ui/buttons/github-stars/github-stars.variant";
+import PreviewGradientContainer from "@/cuicui/common-ui/buttons/github-stars/gradient-container.variant";
 import { dualActionButtonComponent } from "@/cuicui/common-ui/buttons/dual-action-button/component";
 
 export const buttonsCategory: CategoryType = {

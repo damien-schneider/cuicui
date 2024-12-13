@@ -1,4 +1,4 @@
-import PreviewSmoothHoverMenuItem from "@/cuicui/common-ui/navigation/side-menu-smooth-hover/preview";
+import PreviewSmoothHoverMenuItem from "@/cuicui/common-ui/navigation/side-menu-smooth-hover/sidemenu.variant";
 import type { ComponentType } from "@/lib/types/component";
 
 export const SideMenuSmoothHoverComponent: ComponentType = {

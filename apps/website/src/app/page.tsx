@@ -2,10 +2,8 @@ import Link from "next/link";
 // import GradientContainer from "../ui/gradient-container";
 
 import { MacbookMockUp } from "@/cuicui/other/mock-ups/laptops/component.mackbook";
-import { PreviewRecursiveTree } from "@/cuicui/application-ui/tree/recursive-tree/preview-recursive-tree";
-import { PreviewBatteryIndicator } from "@/cuicui/application-ui/battery/battery-indicator/preview-battery-indicator";
-
-import { TextEffectWrapper } from "@/cuicui/other/transition-wrappers/text-effect-wrapper/text-effect-wrapper";
+import { PreviewRecursiveTree } from "@/cuicui/application-ui/tree/recursive-tree/recursive-tree.variant";
+import { PreviewBatteryIndicator } from "@/cuicui/application-ui/battery/battery-indicator/battery-indicator.variant";
 import { DotsPattern } from "@/cuicui/other/patterns/dots-pattern/dots-pattern";
 import { PreviewUseMeasure } from "@/cuicui/hooks/use-measure/preview.use-measure";
 

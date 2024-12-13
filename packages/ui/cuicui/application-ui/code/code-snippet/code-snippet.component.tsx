@@ -1,5 +1,5 @@
 import type { ComponentType } from "@/lib/types/component";
-import PreviewCommandVariant1 from "@/cuicui/application-ui/code/code-snippet/preview-variant1";
+import PreviewCommandVariant1 from "@/cuicui/application-ui/code/code-snippet/code-snippet.variant";
 
 export const codeSnippetComponent: ComponentType = {
   sizePreview: "xs",

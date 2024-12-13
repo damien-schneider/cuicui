@@ -1,12 +1,12 @@
 import { LoaderIcon } from "lucide-react";
 import type { CategoryType } from "@/lib/types/component";
 
-import { DualRingSpinnerLoader } from "@/cuicui/common-ui/loaders/spinner-loader/dual-ring-spinner-loader";
-import { SpinnerLoader } from "@/cuicui/common-ui/loaders/spinner-loader/spinner-loader";
-import NineDotGridRandom from "@/cuicui/common-ui/loaders/three-dot-simple-loader/nine-dot-grid-random";
-import ThreeDotLoaderGrowing from "@/cuicui/common-ui/loaders/three-dot-simple-loader/three-dot-loader-growing";
-import { ThreeDotSimpleLoader } from "@/cuicui/common-ui/loaders/three-dot-simple-loader/three-dot-simple-loader";
-import { CircularBarsSpinnerLoaderPreview } from "@/cuicui/common-ui/loaders/spinner-loader/circular-bars-spinner-loader.preview";
+import { DualRingSpinnerLoader } from "@/cuicui/common-ui/loaders/spinner-loader/dual-ring-spinner-loader.variant";
+import { SpinnerLoader } from "@/cuicui/common-ui/loaders/spinner-loader/spinner-loader.variant";
+import NineDotGridRandom from "@/cuicui/common-ui/loaders/three-dot-simple-loader/nine-dot-grid-random.variant";
+import ThreeDotLoaderGrowing from "@/cuicui/common-ui/loaders/three-dot-simple-loader/three-dot-loader-growing.variant";
+import { ThreeDotSimpleLoader } from "@/cuicui/common-ui/loaders/three-dot-simple-loader/three-dot-simple-loader.variant";
+import { CircularBarsSpinnerLoaderPreview } from "@/cuicui/common-ui/loaders/spinner-loader/circular-bars-spinner-loader.variant";
 
 export const loadersCategory: CategoryType = {
   slug: "loaders",

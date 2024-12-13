@@ -1,8 +1,8 @@
 import { SlidersHorizontalIcon } from "lucide-react";
 import type { CategoryType } from "@/lib/types/component";
 import { ElasticSliderVariant1 } from "@/cuicui/application-ui/sliders/elastic-slider/variant1";
-import SimpleModernSlider from "@/cuicui/application-ui/sliders/simple-modern-slider/simple-modern-slider";
-import SimpleModernSliderWithMax from "@/cuicui/application-ui/sliders/simple-modern-slider/simple-modern-slider-with-max";
+import SimpleModernSlider from "@/cuicui/application-ui/sliders/simple-modern-slider/simple-modern-slider.variant";
+import SimpleModernSliderWithMax from "@/cuicui/application-ui/sliders/simple-modern-slider/simple-modern-slider-with-max.variant";
 
 export const slidersCategory: CategoryType = {
   slug: "sliders",

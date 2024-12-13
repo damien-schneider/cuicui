@@ -1,6 +1,6 @@
 import { SunMoonIcon } from "lucide-react";
 import type { CategoryType } from "@/lib/types/component";
-import { ThemeSwitcherButton } from "@/cuicui/application-ui/theme/theme-switcher/theme-switcher-button";
+import { ThemeSwitcherButton } from "@/cuicui/application-ui/theme/theme-switcher/theme-switcher-button.variant";
 
 export const themeCategory: CategoryType = {
   slug: "theme",

@@ -1,9 +1,9 @@
 import { CreditCardIcon } from "lucide-react";
 import type { CategoryType } from "@/lib/types/component";
-import DynamicSquareBackgroundPreview from "@/cuicui/common-ui/cards/dynamic-square-background/dynamic-square-background-preview";
-import HoverEffectCardPreview from "@/cuicui/common-ui/cards/hover-effect-card/hover-effect-card-preview";
-import { ModernInnerShadowCardVariant1 } from "@/cuicui/common-ui/cards/modern-inner-shadow/variant1";
-import NotificationCardPreview from "@/cuicui/common-ui/cards/notification-card/notification-card-preview";
+import DynamicSquareBackgroundPreview from "@/cuicui/common-ui/cards/dynamic-square-background/dynamic-square-background.variant";
+import HoverEffectCardPreview from "@/cuicui/common-ui/cards/hover-effect-card/hover-effect-card.variant";
+import { ModernInnerShadowCardVariant1 } from "@/cuicui/common-ui/cards/modern-inner-shadow/default.variant";
+import NotificationCardPreview from "@/cuicui/common-ui/cards/notification-card/notification-card.variant";
 
 export const cardsCategory: CategoryType = {
   slug: "cards",

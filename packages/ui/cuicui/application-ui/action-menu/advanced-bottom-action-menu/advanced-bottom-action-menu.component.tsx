@@ -1,5 +1,5 @@
 import type { ComponentType } from "@/lib/types/component";
-import { PreviewAdvancedBottomActionMenu } from "@/cuicui/application-ui/action-menu/advanced-bottom-action-menu/preview-advanced-bottom-action-menu";
+import { PreviewAdvancedBottomActionMenu } from "@/cuicui/application-ui/action-menu/advanced-bottom-action-menu/default.variant";
 
 export const advancedBottomActionMenuComponent: ComponentType = {
   name: "Advanced bottom action menu",

@@ -1,6 +1,6 @@
-import MarqueeVariant1 from "@/cuicui/marketing-ui/testimonials/marquee/variant1";
-import MarqueeVariant2 from "@/cuicui/marketing-ui/testimonials/marquee/variant2";
-import { TestimonialsVariant1 } from "@/cuicui/marketing-ui/testimonials/testimonials-component/variant1";
+import MarqueeVariant1 from "@/cuicui/marketing-ui/testimonials/marquee/horizontal.variant";
+import MarqueeVariant2 from "@/cuicui/marketing-ui/testimonials/marquee/vertical.variant";
+import { TestimonialsVariant1 } from "@/cuicui/marketing-ui/testimonials/testimonials-component/default.variant";
 import type { CategoryType } from "@/lib/types/component";
 import { BookOpenTextIcon } from "lucide-react";
 

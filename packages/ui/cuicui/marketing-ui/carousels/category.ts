@@ -1,5 +1,5 @@
-import { CarouselCylindricalVariant1 } from "@/cuicui/marketing-ui/carousels/cylindric-3d-carousel/variant1";
-import { SimpleCarouselPreview } from "@/cuicui/marketing-ui/carousels/simple-carousel/simple-carousel-preview";
+import { CarouselCylindricalVariant1 } from "@/cuicui/marketing-ui/carousels/cylindric-3d-carousel/default.variant";
+import { SimpleCarouselPreview } from "@/cuicui/marketing-ui/carousels/simple-carousel/simple-carousel.variant";
 import type { CategoryType } from "@/lib/types/component";
 import { GalleryHorizontalIcon } from "lucide-react";
 

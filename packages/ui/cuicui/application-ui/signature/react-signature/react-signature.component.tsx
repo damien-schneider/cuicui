@@ -1,5 +1,5 @@
 import type { ComponentType } from "@/lib/types/component";
-import PreviewReactSignature from "@/cuicui/application-ui/signature/react-signature/preview-react-signature";
+import PreviewReactSignature from "@/cuicui/application-ui/signature/react-signature/react-signature.variant";
 
 export const reactSignatureComponent: ComponentType = {
   name: "React Signature",

@@ -1,4 +1,4 @@
-import PreviewTriggerOnScroll from "@/cuicui/marketing-ui/statistics/trigger-on-scroll/preview";
+import PreviewTriggerOnScroll from "@/cuicui/marketing-ui/statistics/trigger-on-scroll/default.variant";
 import type { ComponentType } from "@/lib/types/component";
 
 export const triggerOnScrollComponent: ComponentType = {
