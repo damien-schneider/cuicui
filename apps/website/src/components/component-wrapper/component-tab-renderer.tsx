@@ -9,11 +9,7 @@ import type {
   ProcessedVariantType,
 } from "@cuicui/ui/lib/types/component";
 import CodeHighlighter from "#/src/ui/code-highlighter";
-import {
-  ResizableHandle,
-  ResizablePanel,
-  ResizablePanelGroup,
-} from "#/src/ui/shadcn/resizable";
+import {} from "#/src/ui/shadcn/resizable";
 import {
   ScrollArea,
   ScrollAreaViewport,
@@ -96,16 +92,16 @@ export default function ComponentTabRenderer({
       </Tabs.List>
       <Tabs.Content value="preview" asChild={true}>
         {isResizable ? (
-          <ResizablePanelGroup
+          <div
             className={cn(
               // "flex h-full w-full items-center justify-center",
               // getContainerChildClassBasedOnSize(size),
             )}
-            direction="horizontal"
+            // direction="horizontal"
           >
-            <ResizablePanel defaultSize={100}>
-              {/* {rerenderButton && <RerenderButton setRender={setRender} />} */}
-              {/* <p>
+            {/* <ResizablePanel defaultSize={100}> */}
+            {/* {rerenderButton && <RerenderButton setRender={setRender} />} */}
+            {/* <p>
 								{`/preview/${componentParams.sectionSlug}/${componentParams.categorySlug}/${componentParams.componentSlug}/${componentParams.variantSlug}`}
 							</p>
 							<iframe
@@ -113,26 +109,26 @@ export default function ComponentTabRenderer({
 								title="component-preview"
 								src={`/preview/${componentParams.sectionSlug}/${componentParams.categorySlug}/${componentParams.componentSlug}/${componentParams.variantSlug}`}
 							/> */}
-              <ComponentWrapper
-                isIframed={isIframed}
-                renderButton={rerenderButton}
-                size={size}
-                // key={render}
-              >
-                {isValidElement(component)
-                  ? component
-                  : //@ts-ignore
-                    createElement(component)}
-              </ComponentWrapper>
-            </ResizablePanel>
-            <ResizableHandle
+            <ComponentWrapper
+              isIframed={isIframed}
+              renderButton={rerenderButton}
+              size={size}
+              // key={render}
+            >
+              {isValidElement(component)
+                ? component
+                : //@ts-ignore
+                  createElement(component)}
+            </ComponentWrapper>
+            {/* </ResizablePanel> */}
+            {/* <ResizableHandle
               className="-translate-x-2 z-50"
               withHandle={true}
-            />
-            <ResizablePanel defaultSize={0}>
+            /> */}
+            {/* <ResizablePanel defaultSize={0}>
               <div className="flex h-full items-center justify-center" />
-            </ResizablePanel>
-          </ResizablePanelGroup>
+            </ResizablePanel> */}
+          </div>
         ) : (
           <ComponentWrapper
             isIframed={isIframed}

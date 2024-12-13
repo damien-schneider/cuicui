@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState, type RefObject } from "react";
 
-export const useVideo = (ref: RefObject<HTMLVideoElement>) => {
+export const useVideo = (ref: RefObject<HTMLVideoElement | null>) => {
   const video = ref.current;
 
   const [videoState, setVideoState] = useState({

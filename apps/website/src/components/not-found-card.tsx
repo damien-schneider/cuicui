@@ -13,7 +13,7 @@ export default function NotFoundCard() {
       )}
     >
       <GradientText className="inline-flex font-medium text-5xl leading-[70px]">
-        This page doesn't exist
+        This page doesn&apos;t exist
       </GradientText>
       <p className="text-lg text-neutral-500">
         The page you are looking for does not exist. Please check the URL or go

@@ -1,5 +1,5 @@
 import { findCorrespondingComponent } from "#/src/app/preview/[section]/[category]/[component]/[variant]/page";
-import { sectionList } from "@cuicui/ui/lib/section-list";
+import { sectionList } from "@/lib/section-list";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { createElement } from "react";
@@ -9,40 +9,41 @@ export const metadata: Metadata = {
   robots: "noindex, nofollow",
 };
 
-export async function generateStaticParams() {
-  return sectionList.map((section) => {
-    if (section.type === "single-component") {
-      return section.categoriesList.map((category) => {
-        if (!category.component) {
-          return null;
-        }
-        return category.component.variantList.map((variant) => {
-          if (!category.component) {
-            return null;
-          }
+export function generateStaticParams() {
+  const paramsList = [];
 
-          return {
-            params: {
-              section: section.slug,
-              category: category.slug,
-              component: variant.slugPreviewFile,
-            },
-          };
-        });
-      });
+  for (const section of sectionList) {
+    if (section.type === "single-component") {
+      for (const category of section.categoriesList) {
+        if (category.component) {
+          for (const variant of category.component.variantList) {
+            if (category.component) {
+              paramsList.push({
+                section: section.slug,
+                category: category.slug,
+                component: variant.slugPreviewFile,
+              });
+            }
+          }
+        }
+      }
     }
-  });
+  }
+
+  return paramsList;
 }
 
-export default function PagePreview({
-  params: { section, category, component },
+export default async function PagePreview({
+  params,
 }: {
-  params: {
+  params: Promise<{
     section: string;
     category: string;
     component: string;
-  };
+  }>;
 }) {
+  const { section, category, component } = await params;
+
   const variantFound = findCorrespondingComponent({
     section,
     category,

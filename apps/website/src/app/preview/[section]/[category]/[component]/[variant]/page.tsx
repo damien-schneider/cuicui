@@ -8,37 +8,39 @@ export const metadata: Metadata = {
   robots: "noindex, nofollow",
 };
 
-export async function generateStaticParams() {
-  return sectionList.map((section) => {
-    if (section.type === "multiple-component") {
-      return section.categoriesList.map((category) => {
-        return category.componentList?.map((component) => {
-          return component.variantList.map((variant) => {
-            return {
-              params: {
-                section: section.slug,
-                category: category.slug,
-                component: component.slug,
-                variant: variant.slugPreviewFile,
-              },
-            };
-          });
-        });
-      });
-    }
-  });
-}
+// export async function generateStaticParams() {
+//   return sectionList.map((section) => {
+//     if (section.type === "multiple-component") {
+//       return section.categoriesList.map((category) => {
+//         return category.componentList?.map((component) => {
+//           return component.variantList.map((variant) => {
+//             return {
+//               params: {
+//                 section: section.slug,
+//                 category: category.slug,
+//                 component: component.slug,
+//                 variant: variant.slugPreviewFile,
+//               },
+//             };
+//           });
+//         });
+//       });
+//     }
+//   });
+// }
 
-export default function PagePreview({
-  params: { section, category, component, variant },
+export default async function PagePreview({
+  params,
 }: {
-  params: {
+  params: Promise<{
     section: string;
     category: string;
     component: string;
     variant: string;
-  };
+  }>;
 }) {
+  const { section, category, component, variant } = await params;
+
   const variantFound = findCorrespondingComponent({
     section,
     category,

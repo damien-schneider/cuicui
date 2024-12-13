@@ -8,35 +8,38 @@ import { findSectionBySlug } from "#/src/utils/section-category-components-utils
 
 type Props = {
   children: ReactNode;
-  params: {
+  params: Promise<{
     section: string;
-    category: string;
-  };
+  }>;
 };
 
-export function generateMetadata({ params }: Props): Metadata {
-  const section = findSectionBySlug(params.section);
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { section: sectionParam } = await params;
+  const sectionInList = findSectionBySlug(sectionParam);
 
   // optionally access and extend (rather than replace) parent metadata
 
-  if (!section) {
+  if (!sectionInList) {
     return {};
   }
   return {
-    title: section.name,
-    description: section.description,
+    title: sectionInList.name,
+    description: sectionInList.description,
     openGraph: {
-      title: section.name,
-      description: section.description,
+      title: sectionInList.name,
+      description: sectionInList.description,
     },
     alternates: {
-      canonical: `${NEXT_PUBLIC_SITE_URL}/${section.slug}`,
+      canonical: `${NEXT_PUBLIC_SITE_URL}/${sectionInList.slug}`,
     },
   };
 }
 
-export default function SectionLayout({ children, params }: Props) {
-  const section = findSectionBySlug(params.section);
+export default async function SectionLayout({ params, children }: Props) {
+  const { section: sectionParam } = await params;
+
+  const section = findSectionBySlug(sectionParam);
+
   if (!section) {
     return notFound();
   }

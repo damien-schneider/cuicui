@@ -1,7 +1,7 @@
 import type { HTMLAttributes, ReactNode } from "react";
 import { cn } from "#/src/utils/cn";
 
-export default ({
+export const GradientContainer = ({
   children,
   classNameParent,
   classNameChild,
@@ -90,3 +90,5 @@ export default ({
     </div>
   );
 };
+
+export default GradientContainer;

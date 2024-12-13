@@ -79,7 +79,7 @@ export const GithubStarsButton = ({
         <NumberFlow
           value={starNumber}
           isolate={true}
-          trend={false}
+          trend={0}
           spinTiming={{ duration: 1500, easing: "ease-in-out" }}
           className="z-20 dark:text-neutral-500 text-neutral-400 text-xs font-semibold tracking-tighter"
         />

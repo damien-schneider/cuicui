@@ -88,7 +88,9 @@ export const QrCodeGenerator = () => {
   );
 };
 
-const CopySvgButton = ({ svgRef }: { svgRef: RefObject<SVGSVGElement> }) => {
+const CopySvgButton = ({
+  svgRef,
+}: { svgRef: RefObject<SVGSVGElement | null> }) => {
   const [_copiedText, copyTextToClipboard, isCopied] = useCopyToClipboard();
 
   const handleCopySvg = (svgNode: SVGSVGElement) => {

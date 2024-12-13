@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { cn } from "../utils/cn";
 
-export default ({
+export const GradientText = ({
   children,
   className,
 }: Readonly<{ children: ReactNode; className?: string }>) => {
@@ -16,3 +16,5 @@ export default ({
     </p>
   );
 };
+
+export default GradientText;

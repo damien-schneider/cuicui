@@ -8,11 +8,12 @@ export default function PlausibleScripts() {
   return (
     <>
       <Script
+        id="plausible-main"
         defer={true}
         data-domain="cuicui.day"
         src={`https://${PLAUSIBLE_DOMAIN}/js/script.hash.outbound-links.js`}
       />
-      <Script>
+      <Script id="plausible-inline">
         {
           "window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }"
         }
