@@ -7,15 +7,14 @@ import { NEXT_PUBLIC_SITE_URL } from "#/src/lib/site.const";
 import { findCategoryBySlug } from "#/src/utils/section-category-components-utils/find-category-by-slug";
 import { findSectionBySlug } from "#/src/utils/section-category-components-utils/find-section-by-slug";
 
-type Props = {
-  children: ReactNode;
+export async function generateMetadata({
+  params,
+}: {
   params: Promise<{
     section: string;
     category: string;
   }>;
-};
-
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+}): Promise<Metadata> {
   const { section: sectionParam, category: categoryParam } = await params;
   const section = findSectionBySlug(sectionParam);
   if (!section) {
@@ -59,7 +58,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {};
 }
 
-export default async function CategoryLayout({ params, children }: Props) {
+export default async function CategoryLayout({
+  params,
+  children,
+}: {
+  children: ReactNode;
+  params: Promise<{
+    section: string;
+    category: string;
+  }>;
+}) {
   const { section: sectionParam, category: categoryParam } = await params;
 
   const section = findSectionBySlug(sectionParam);
