@@ -1,5 +1,6 @@
 import { findCorrespondingComponent } from "#/src/app/preview/[section]/[category]/[component]/[variant]/page";
-import { sectionList } from "@/lib/section-list";
+import { sectionList as newSectionList } from "@/new-section-list";
+
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { createElement } from "react";
@@ -10,21 +11,18 @@ export const metadata: Metadata = {
 };
 
 export function generateStaticParams() {
-  const paramsList = [];
+  const paramsList: { section: string; category: string; component: string }[] =
+    [];
 
-  for (const section of sectionList) {
-    if (section.type === "single-component") {
-      for (const category of section.categoriesList) {
-        if (category.component) {
-          for (const variant of category.component.variantList) {
-            if (category.component) {
-              paramsList.push({
-                section: section.slug,
-                category: category.slug,
-                component: variant.slugPreviewFile,
-              });
-            }
-          }
+  for (const section of newSectionList) {
+    for (const category of section.categories) {
+      if (category.components) {
+        for (const variant of category.components) {
+          paramsList.push({
+            section: section.slug,
+            category: category.slug,
+            component: variant.slug,
+          });
         }
       }
     }
@@ -56,9 +54,7 @@ export default async function PagePreview({
 
   return (
     <div className="grid place-content-center w-full h-screen overflow-auto">
-      {typeof variantFound.component === "function"
-        ? createElement(variantFound.component)
-        : variantFound.component}
+      {createElement(variantFound.variantComponent)}
     </div>
   );
 }

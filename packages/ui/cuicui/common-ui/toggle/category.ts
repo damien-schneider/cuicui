@@ -1,14 +1,12 @@
 import { ToggleLeftIcon } from "lucide-react";
-import type { CategoryType } from "@/lib/types/component";
+import type { CategoryMetaType } from "@/lib/types/component";
 
-export const toggleCategory: CategoryType = {
+export const toggleCategory: CategoryMetaType = {
   name: "Toggle",
-  slug: "toggle",
   comingSoonCategory: true,
-  description: "",
+  description: "Toggle components",
   icon: ToggleLeftIcon,
   releaseDateCategory: new Date("2024-09-26"),
-  componentList: null,
 };
 
 export default toggleCategory;

@@ -3,8 +3,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
 import { NEXT_PUBLIC_SITE_URL } from "#/src/lib/site.const";
-import { findCategoryBySlug } from "#/src/utils/section-category-components-utils/find-category-by-slug";
-import { findSectionBySlug } from "#/src/utils/section-category-components-utils/find-section-by-slug";
+import {
+  newFindCategoryBySlug,
+  newFindSectionBySlug,
+} from "#/src/utils/section-category-components-utils/section-list-utils";
 
 export async function generateMetadata({
   params,
@@ -15,38 +17,23 @@ export async function generateMetadata({
   }>;
 }) {
   const { section: sectionParam, category: categoryParam } = await params;
-  const section = findSectionBySlug(sectionParam);
+  const section = newFindSectionBySlug(sectionParam);
   if (!section) {
     return {};
   }
 
-  if (section.type === "page") {
-    const page = section.pageList.find((page) => page.slug === categoryParam);
-    if (page) {
-      return {
-        title: page.name,
-        description: page.description,
-        openGraph: {
-          title: page.name,
-          description: page.description,
-        },
-        alternates: {
-          canonical: `${NEXT_PUBLIC_SITE_URL}/${section.slug}/${page.slug}`,
-        },
-        robots: "all",
-      };
-    }
-    return {};
-  }
+  const category = newFindCategoryBySlug({
+    sectionSlug: sectionParam,
+    categorySlug: categoryParam,
+  });
 
-  const category = findCategoryBySlug(section, categoryParam);
   if (category) {
     return {
-      title: `${category.name} React Components`,
-      description: `${category.description}. Advanced ${category.name} React components using tailwind CSS. Just copy paste amazing UI and UX.`,
+      title: `${category.meta.name} React Components`,
+      description: `${category.meta.description}. Advanced ${category.meta.name} React components using tailwind CSS. Just copy paste amazing UI and UX.`,
       openGraph: {
-        title: `${category.name} React Components`,
-        description: `${category.description}. Advanced ${category.name} React components using tailwind CSS. Just copy paste amazing UI and UX.`,
+        title: `${category.meta.name} React Components`,
+        description: `${category.meta.description}. Advanced ${category.meta.name} React components using tailwind CSS. Just copy paste amazing UI and UX.`,
       },
       alternates: {
         canonical: `${NEXT_PUBLIC_SITE_URL}/${section.slug}/${category.slug}`,
@@ -69,11 +56,14 @@ export default async function CategoryLayout({
 }) {
   const { section: sectionParam, category: categoryParam } = await params;
 
-  const sectionInList = findSectionBySlug(sectionParam);
+  const sectionInList = newFindSectionBySlug(sectionParam);
   if (!sectionInList) {
     return notFound();
   }
-  const categoryInList = findCategoryBySlug(sectionInList, categoryParam);
+  const categoryInList = newFindCategoryBySlug({
+    sectionSlug: sectionParam,
+    categorySlug: categoryParam,
+  });
   if (!categoryInList) {
     return notFound();
   }
@@ -88,7 +78,7 @@ export default async function CategoryLayout({
         <meta content="all" name="robots" />
       </Head>
       <h1 className="bg-gradient-to-b from-black to-black/40 dark:from-white dark:to-white/10 bg-clip-text font-medium text-transparent text-3xl sm:text-5xl inline tracking-tighter">
-        {categoryInList.name} components
+        {categoryInList.meta.name} components
       </h1>
       {children}
     </div>

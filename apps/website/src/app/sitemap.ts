@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { sectionList } from "@cuicui/ui/lib/section-list";
+import { sectionList as newSectionList } from "@/new-section-list";
 
 export const port = process.env.PORT ?? 3000;
 
@@ -34,23 +34,18 @@ const staticSitemap: MetadataRoute.Sitemap = [
 
 function getComponentsSitemap(): MetadataRoute.Sitemap {
   const componentSitemap: MetadataRoute.Sitemap = [];
-  sectionList.flatMap((section) => {
-    if (
-      section.type === "multiple-component" ||
-      section.type === "single-component"
-    ) {
-      for (const category of section.categoriesList) {
-        if (category.comingSoonCategory) {
-          return;
-        }
-        if (section.slug && category.slug) {
-          componentSitemap.push({
-            url: `${HOST}/${section.slug}/${category.slug}`,
-            lastModified: category.releaseDateCategory,
-            changeFrequency: "monthly",
-            priority: 0.9,
-          });
-        }
+  newSectionList.flatMap((section) => {
+    for (const category of section.categories) {
+      if (category.meta.comingSoonCategory) {
+        return;
+      }
+      if (section.slug && category.slug) {
+        componentSitemap.push({
+          url: `${HOST}/${section.slug}/${category.slug}`,
+          lastModified: category.meta.releaseDateCategory,
+          changeFrequency: "monthly",
+          priority: 0.9,
+        });
       }
     }
   });

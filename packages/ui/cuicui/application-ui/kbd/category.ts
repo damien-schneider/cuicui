@@ -1,43 +1,11 @@
 import { CommandIcon } from "lucide-react";
-import type { CategoryType } from "@/lib/types/component";
-import Modern3dKbdVariant1 from "@/cuicui/application-ui/kbd/modern-3d-kbd/default.variant";
-import ModernDetailedKbdVariant1 from "@/cuicui/application-ui/kbd/modern-detailed-kbd/default.variant";
+import type { CategoryMetaType } from "@/lib/types/component";
 
-export const kbdCategory: CategoryType = {
-  slug: "kbd",
+export const kbdCategory: CategoryMetaType = {
   name: "Keyboard",
   description: "Keyboard components with various styles",
   releaseDateCategory: new Date("2024-08-13"),
   icon: CommandIcon,
-  componentList: [
-    {
-      sizePreview: "xs",
-      slug: "modern-detailed-kbd",
-      variantList: [
-        {
-          name: "Default",
-          component: ModernDetailedKbdVariant1,
-          slugPreviewFile: "variant1",
-        },
-      ],
-      name: "Simple keyboard Kbd",
-      description:
-        "A simple keyboard Kbd with an effect on hover and on press.",
-    },
-    {
-      sizePreview: "xs",
-      slug: "modern-3d-kbd",
-      variantList: [
-        {
-          name: "Default",
-          component: Modern3dKbdVariant1,
-          slugPreviewFile: "variant1",
-        },
-      ],
-      name: "3D keyboard Kbd",
-      description: "A 3D keyboard Kbd with an effect on hover and on press.",
-    },
-  ],
 };
 
 export default kbdCategory;

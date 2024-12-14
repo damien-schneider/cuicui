@@ -52,19 +52,7 @@ export default async function MultipleComponentCategory({
             inspiration={component.meta.inspiration}
             inspirationLink={component.meta.inspirationLink}
           />
-          <VariantTabs
-            isIframed={component.meta.isIframed}
-            isResizable={component.meta.isResizable}
-            key={component.meta.name}
-            rerenderButton={component.meta.rerenderButton}
-            size={component.meta.sizePreview}
-            variantList={component.variants}
-            componentParams={{
-              sectionSlug,
-              categorySlug: category.slug,
-              componentSlug: component.slug,
-            }}
-          />
+          <VariantTabs component={component} />
         </div>
       ))}
     </div>

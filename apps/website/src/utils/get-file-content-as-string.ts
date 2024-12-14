@@ -1,5 +1,5 @@
 "use server";
-import { sectionList } from "@cuicui/ui/lib/section-list";
+import { sectionList as newSectionList } from "@/new-section-list";
 import { promises as fs } from "node:fs";
 import path from "node:path";
 
@@ -60,11 +60,8 @@ function getComponentPath({
 }: { componentSlug: string; variantName: string }) {
   let basePath: null | string = null;
 
-  for (const section of sectionList) {
-    if (section.type === "page") {
-      continue;
-    }
-    for (const category of section.categoriesList) {
+  for (const section of newSectionList) {
+    for (const category of section.categories) {
       if (category.slug === componentSlug) {
         basePath = `${section.slug}/${category.slug}`;
 

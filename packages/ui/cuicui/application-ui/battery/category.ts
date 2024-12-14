@@ -1,29 +1,11 @@
 import { BatteryChargingIcon } from "lucide-react";
-import type { CategoryType } from "@/lib/types/component";
-import { PreviewBatteryIndicator } from "@/cuicui/application-ui/battery/battery-indicator/battery-indicator.variant";
+import type { CategoryMetaType } from "@/lib/types/component";
 
-export const batteryCategory: CategoryType = {
-  slug: "battery",
+export const batteryCategory: CategoryMetaType = {
   name: "Battery",
   description: "Battery components",
   releaseDateCategory: new Date("2024-08-21"),
   icon: BatteryChargingIcon,
-  componentList: [
-    {
-      sizePreview: "sm",
-      slug: "battery-indicator",
-      variantList: [
-        {
-          name: "Battery Indicator",
-          component: PreviewBatteryIndicator,
-          slugPreviewFile: "preview-battery-indicator",
-          slugComponentFile: "battery-indicator",
-        },
-      ],
-      name: "Battery Indicator",
-      description: "A battery indicator component.",
-    },
-  ],
 };
 
 export default batteryCategory;

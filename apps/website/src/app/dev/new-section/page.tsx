@@ -6,7 +6,7 @@ export default function Page() {
     <div>
       {newSectionList.map((section) => {
         return (
-          <div key={section.meta.slug}>
+          <div key={section.slug}>
             <p>{section.meta.description}</p>
             <ul>
               {section.categories.map((category) => {
@@ -22,7 +22,7 @@ export default function Page() {
                               {component.variants.map((variant) => {
                                 return (
                                   <li key={variant.name}>
-                                    <p>{variant.slugPreviewFile}</p>
+                                    <p>{variant.slug}</p>
                                     {/* @ts-ignore */}
                                     {createElement(variant?.component)}
                                   </li>

@@ -136,19 +136,29 @@ export type VariantType = {
   slugPreviewFile: string;
 };
 
+/*
+------------------------------------
+************* Sections *************
+------------------------------------
+*/
+
+export type SectionMetaType = {
+  name: string;
+  description: string;
+  icon: LucideIcon;
+};
+
 export type NewSectionType = {
-  meta:
-    | SectionType
-    | {
-        // type: "single-component";
-        name: string;
-        slug: string;
-        description: string;
-        icon: LucideIcon;
-      };
+  meta: SectionMetaType;
   slug: string;
   categories: NewCategoryType[];
 };
+
+/*
+------------------------------------
+************* Category *************
+------------------------------------
+*/
 
 export type CategoryMetaType = {
   name: string;
@@ -159,10 +169,16 @@ export type CategoryMetaType = {
 };
 
 export type NewCategoryType = {
-  meta: CategoryType | CategoryMetaType;
+  meta: CategoryMetaType;
   slug: string;
   components: NewComponentType[];
 };
+
+/*
+------------------------------------
+************* Component *************
+------------------------------------
+*/
 
 export type ComponentMetaType = {
   name: string;
@@ -177,10 +193,16 @@ export type ComponentMetaType = {
 };
 
 export type NewComponentType = {
-  meta: ComponentType | ComponentMetaType;
+  meta: ComponentMetaType;
   slug: string;
   variants: NewVariantType[];
 };
+
+/*
+------------------------------------
+************* Variant *************
+------------------------------------
+*/
 
 export type NewVariantType = {
   name: string;
@@ -190,20 +212,3 @@ export type NewVariantType = {
   variantComponent: () => JSX.Element;
   // previewPath: string; // Not needed ?
 };
-
-// export type NewVariantType =
-//   | (VariantType & {
-//       pathname: string;
-//       component: () => JSX.Element;
-//       slug: string;
-//       // pathname:`cuicui/${string}/${string}/${string}/${string}`;
-//     }) // Temporary
-//   | {
-//       name: string;
-//       slug: string;
-//       variantComponent: () => JSX.Element;
-//       cuicuiDependenciesPath: string[];
-//       pathname: string;
-//       component: () => JSX.Element;
-//       // previewPath: string; // Not needed ?
-//     };

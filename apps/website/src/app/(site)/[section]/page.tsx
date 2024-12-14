@@ -3,8 +3,9 @@ import { notFound } from "next/navigation";
 import { MainMenuCardContent } from "#/src/app/card";
 import MenuSectionWrapper from "#/src/components/main-menus/menu-category-wrapper";
 import { MainMenusGradientCard } from "@cuicui/ui/cuicui/other/cursors/dynamic-cards/gradient-card";
-import { newFindSectionBySlug } from "#/src/utils/section-category-components-utils/find-section-by-slug";
+
 import { sectionList as newSectionList } from "@cuicui/ui/new-section-list";
+import { newFindSectionBySlug } from "#/src/utils/section-category-components-utils/section-list-utils";
 
 type Props = {
   params: Promise<{ section: string }>;
@@ -14,7 +15,7 @@ export function generateStaticParams() {
   const paramsArray = [];
   for (const section of newSectionList) {
     paramsArray.push({
-      section: section.meta.slug,
+      section: section.slug,
     });
   }
 
@@ -62,7 +63,7 @@ export default async function Page({ params }: Props) {
         {sectionInList.categories.map((category) => {
           return (
             <Link
-              href={`/${sectionInList.meta.slug}/${category.slug}`}
+              href={`/${sectionInList.slug}/${category.slug}`}
               key={category.slug}
             >
               <MainMenusGradientCard

@@ -1,14 +1,11 @@
 import { FolderTreeIcon } from "lucide-react";
-import type { CategoryType } from "@/lib/types/component";
-import { recursiveTreeComponent } from "@/cuicui/application-ui/tree/recursive-tree/recursive-tree.component";
+import type { CategoryMetaType } from "@/lib/types/component";
 
-export const treeCategory: CategoryType = {
-  slug: "tree",
+export const treeCategory: CategoryMetaType = {
   name: "Tree",
   description: "Tree components",
   releaseDateCategory: new Date("2024-09-18"),
   icon: FolderTreeIcon,
-  componentList: [recursiveTreeComponent],
 };
 
 export default treeCategory;

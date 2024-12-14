@@ -134,6 +134,8 @@ import utils_catch_error_catch_error_component from "@/cuicui/utils/catch-error/
 import utils_cn_cn_component from "@/cuicui/utils/cn/cn/component";
 import utils_sleep_sleep_component from "@/cuicui/utils/sleep/sleep/component";
 import application_ui_action_menu_advanced_bottom_action_menu_default_variant from "@/cuicui/application-ui/action-menu/advanced-bottom-action-menu/default.variant";
+import application_ui_alert_modern_glassy_alert_modern_glassy_alert_variant from "@/cuicui/application-ui/alert/modern-glassy-alert/modern-glassy-alert.variant";
+import application_ui_alert_simple_alert_simple_alert_variant from "@/cuicui/application-ui/alert/simple-alert/simple-alert.variant";
 import application_ui_authentication_half_sided_glassmorphism_default_variant from "@/cuicui/application-ui/authentication/half-sided-glassmorphism/default.variant";
 import application_ui_battery_battery_indicator_battery_indicator_variant from "@/cuicui/application-ui/battery/battery-indicator/battery-indicator.variant";
 import application_ui_code_advanced_code_block_advanced_code_block_tab_variant from "@/cuicui/application-ui/code/advanced-code-block/advanced-code-block-tab.variant";
@@ -268,12 +270,30 @@ export const sectionList: NewSectionType[] = [
           {
             meta: application_ui_alert_modern_glassy_alert_component,
             slug: "modern-glassy-alert",
-            variants: [],
+            variants: [
+              {
+                name: "modern-glassy-alert",
+                variantComponent:
+                  application_ui_alert_modern_glassy_alert_modern_glassy_alert_variant,
+                slug: "modern-glassy-alert",
+                pathname:
+                  "cuicui/application-ui/alert/modern-glassy-alert/modern-glassy-alert.variant.tsx",
+              },
+            ],
           },
           {
             meta: application_ui_alert_simple_alert_component,
             slug: "simple-alert",
-            variants: [],
+            variants: [
+              {
+                name: "simple-alert",
+                variantComponent:
+                  application_ui_alert_simple_alert_simple_alert_variant,
+                slug: "simple-alert",
+                pathname:
+                  "cuicui/application-ui/alert/simple-alert/simple-alert.variant.tsx",
+              },
+            ],
           },
         ],
       },

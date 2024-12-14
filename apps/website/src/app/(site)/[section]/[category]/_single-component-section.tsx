@@ -1,3 +1,4 @@
+//@ts-nocheck
 import { notFound } from "next/navigation";
 import { fetchSingleComponentData } from "#/src/app/(site)/[section]/[category]/process-variant-data";
 import ComingSoonCard from "#/src/components/coming-soon";
