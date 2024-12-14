@@ -12,7 +12,9 @@ type Props = {
 };
 
 export function generateStaticParams() {
-  const paramsArray = [];
+  const paramsArray: {
+    section: string;
+  }[] = [];
   for (const section of newSectionList) {
     paramsArray.push({
       section: section.slug,
@@ -26,35 +28,11 @@ export function generateStaticParams() {
 export default async function Page({ params }: Props) {
   const { section: sectionParam } = await params;
   const sectionInList = newFindSectionBySlug(sectionParam);
-  console.log(sectionInList);
 
   if (!sectionInList) {
     return notFound();
   }
 
-  // if (sectionInList.type === "page") {
-  //   return (
-  //     <>
-  //       <h1 className="header-1">{sectionInList.name} category</h1>
-  //       <p className="caption-md">{sectionInList.description}</p>
-  //       <MenuSectionWrapper key={sectionInList.name} name={sectionInList.name}>
-  //         {sectionInList.pageList.map((category) => {
-  //           return (
-  //             <Link
-  //               href={`/${sectionInList.slug}/${category.slug}`}
-  //               key={category.name}
-  //             >
-  //               <MainMenusGradientCard
-  //                 description={category.description}
-  //                 title={category.name}
-  //               />
-  //             </Link>
-  //           );
-  //         })}
-  //       </MenuSectionWrapper>
-  //     </>
-  //   );
-  // }
   return (
     <>
       <h1 className="header-1">{sectionInList.meta.name} category</h1>
@@ -81,6 +59,4 @@ export default async function Page({ params }: Props) {
       </MenuSectionWrapper>
     </>
   );
-
-  // return notFound();
 }

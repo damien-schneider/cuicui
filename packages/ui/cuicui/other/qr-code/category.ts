@@ -7,4 +7,5 @@ export const qrCodeCategory: CategoryMetaType = {
   releaseDateCategory: new Date("2024-09-24"),
   icon: QrCodeIcon,
 };
+
 export default qrCodeCategory;

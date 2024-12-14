@@ -15,27 +15,8 @@ type Props = {
 };
 
 export function generateStaticParams() {
-  const paramsArray = [];
+  const paramsArray: { section: string; category: string }[] = [];
   for (const section of newSectionList) {
-    // if (
-    //   section.type === "multiple-component" ||
-    //   section.type === "single-component"
-    // ) {
-    //   for (const category of section.categoriesList) {
-    //     paramsArray.push({
-    //       section: section.slug,
-    //       category: category.slug,
-    //     });
-    //   }
-    // }
-    // if (section.type === "page") {
-    //   for (const page of section.pageList) {
-    //     paramsArray.push({
-    //       section: section.slug,
-    //       category: page.slug,
-    //     });
-    //   }
-    // }
     for (const category of section.categories) {
       paramsArray.push({
         section: section.slug,

@@ -102,7 +102,7 @@ export default async function ComponentTabRenderer({
       {tabs.map((tab) => {
         if (tab.value === "preview") {
           return (
-            <Tabs.Content value="preview" asChild={true}>
+            <Tabs.Content value="preview" asChild={true} key={tab.value}>
               <PreviewTab
                 key={tab.value}
                 component={component}

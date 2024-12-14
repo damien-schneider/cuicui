@@ -25,7 +25,7 @@ export async function readFileContent(
   const absolutePath = path.resolve(process.cwd(), UI_ROOT, relativeFilePath);
 
   // Debug: log the path we're trying to read
-  console.log("Attempting to read file:", absolutePath);
+  // console.log("Attempting to read file:", absolutePath);
 
   try {
     const content = await fs.readFile(absolutePath, "utf-8");
@@ -59,7 +59,7 @@ async function findExistingFile(filePathNoPrefix: string): Promise<{
 
   for (const ext of tryExtensions) {
     const candidatePath = `${filePathNoPrefix}${ext}`;
-    console.log("Checking for file:", candidatePath);
+    // console.log("Checking for file:", candidatePath);
     if (await fileExists(candidatePath)) {
       const fileName = `${fileNameWithoutExtension}${ext}`;
       return {
