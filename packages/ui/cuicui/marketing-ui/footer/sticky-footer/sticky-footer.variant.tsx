@@ -1,4 +1,4 @@
-import { StickyFooter } from "./sticky-footer";
+import { StickyFooter } from "@/cuicui/marketing-ui/footer/sticky-footer/sticky-footer";
 
 export function PreviewStickyFooter() {
   return (

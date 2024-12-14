@@ -14,3 +14,5 @@ import CodeEditor from "@/cuicui/application-ui/code/code-card/code-card";
 export const CodeCardPreview = () => {
   return <CodeEditor code={code} language={language} />;
 };
+
+export default CodeCardPreview;

@@ -16,7 +16,7 @@ import {
 } from "#/src/ui/shadcn/scrollarea";
 import { cn } from "#/src/utils/cn";
 import { getContainerHeightClass } from "#/src/components/component-wrapper/get-container-height-class";
-import { createElement, isValidElement } from "react";
+import { createElement } from "react";
 import {
   getCuicuiDependenciesInfo,
   readFileContent,
@@ -193,10 +193,7 @@ const PreviewTab = ({
           size={component.meta.sizePreview ?? "md"}
           // key={render}
         >
-          {isValidElement(component)
-            ? component
-            : //@ts-ignore
-              createElement(component)}
+          {createElement(variant.variantComponent)}
         </ComponentWrapper>
         {/* </ResizablePanel> */}
         {/* <ResizableHandle

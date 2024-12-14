@@ -12,3 +12,5 @@ export function DotsPatternPreview() {
     </div>
   );
 }
+
+export default DotsPatternPreview;

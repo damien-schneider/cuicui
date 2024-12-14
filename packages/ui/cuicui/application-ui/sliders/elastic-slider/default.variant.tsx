@@ -15,7 +15,7 @@ import * as RadixSlider from "@radix-ui/react-slider";
 
 const MAX_OVERFLOW = 50;
 
-export function ElasticSliderVariant1() {
+export default function ElasticSliderVariant1() {
   return (
     <div className="flex w-48 flex-col items-center justify-center gap-4">
       <Slider />

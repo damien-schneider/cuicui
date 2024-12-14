@@ -140,6 +140,7 @@ import application_ui_authentication_half_sided_glassmorphism_default_variant fr
 import application_ui_battery_battery_indicator_battery_indicator_variant from "@/cuicui/application-ui/battery/battery-indicator/battery-indicator.variant";
 import application_ui_code_advanced_code_block_advanced_code_block_tab_variant from "@/cuicui/application-ui/code/advanced-code-block/advanced-code-block-tab.variant";
 import application_ui_code_advanced_code_block_advanced_code_block_variant from "@/cuicui/application-ui/code/advanced-code-block/advanced-code-block.variant";
+import application_ui_code_code_card_code_card_variant from "@/cuicui/application-ui/code/code-card/code-card.variant";
 import application_ui_code_code_snippet_code_snippet_variant from "@/cuicui/application-ui/code/code-snippet/code-snippet.variant";
 import application_ui_code_inline_code_inline_code_variant from "@/cuicui/application-ui/code/inline-code/inline-code.variant";
 import application_ui_color_picker_arc_color_picker_arc_color_picker_variant from "@/cuicui/application-ui/color-picker/arc-color-picker/arc-color-picker.variant";
@@ -152,6 +153,7 @@ import application_ui_notification_dynamic_island_notification_dynamic_island_no
 import application_ui_search_bars_growing_search_default_variant from "@/cuicui/application-ui/search-bars/growing-search/default.variant";
 import application_ui_settings_dynamic_settings_default_variant from "@/cuicui/application-ui/settings/dynamic-settings/default.variant";
 import application_ui_signature_react_signature_react_signature_variant from "@/cuicui/application-ui/signature/react-signature/react-signature.variant";
+import application_ui_sliders_elastic_slider_default_variant from "@/cuicui/application-ui/sliders/elastic-slider/default.variant";
 import application_ui_sliders_simple_modern_slider_simple_modern_slider_variant from "@/cuicui/application-ui/sliders/simple-modern-slider/simple-modern-slider.variant";
 import application_ui_sliders_simple_modern_slider_simple_modern_slider_with_max_variant from "@/cuicui/application-ui/sliders/simple-modern-slider/simple-modern-slider-with-max.variant";
 import application_ui_static_steppers_code_default_variant from "@/cuicui/application-ui/static-steppers/code/default.variant";
@@ -223,9 +225,14 @@ import other_cursors_dynamic_cards_gradient_card_effect_variant from "@/cuicui/o
 import other_cursors_dynamic_cards_only_border_card_effect_variant from "@/cuicui/other/cursors/dynamic-cards/only-border-card-effect.variant";
 import other_cursors_follow_cursor_replace_cursor_variant from "@/cuicui/other/cursors/follow-cursor/replace-cursor.variant";
 import other_cursors_follow_cursor_with_cursor_variant from "@/cuicui/other/cursors/follow-cursor/with-cursor.variant";
+import other_mock_ups_airpods_airpods_pro_variant from "@/cuicui/other/mock-ups/airpods/airpods-pro.variant";
+import other_mock_ups_airpods_airpods_variant from "@/cuicui/other/mock-ups/airpods/airpods.variant";
 import other_mock_ups_laptops_mackbook_variant from "@/cuicui/other/mock-ups/laptops/mackbook.variant";
 import other_mock_ups_smartphone_google_pixel_variant from "@/cuicui/other/mock-ups/smartphone/google-pixel.variant";
 import other_mock_ups_smartphone_iphone14_variant from "@/cuicui/other/mock-ups/smartphone/iphone14.variant";
+import other_patterns_dots_pattern_dots_pattern_variant from "@/cuicui/other/patterns/dots-pattern/dots-pattern.variant";
+import other_patterns_grid_pattern_grid_pattern_variant from "@/cuicui/other/patterns/grid-pattern/grid-pattern.variant";
+import other_patterns_moving_bands_moving_bands_variant from "@/cuicui/other/patterns/moving-bands/moving-bands.variant";
 import other_qr_code_bar_code_generator_bar_code_generator_variant from "@/cuicui/other/qr-code/bar-code-generator/bar-code-generator.variant";
 import other_qr_code_qr_code_generator_qr_code_generator_variant from "@/cuicui/other/qr-code/qr-code-generator/qr-code-generator.variant";
 import other_transition_wrappers_blur_appear_default_variant from "@/cuicui/other/transition-wrappers/blur-appear/default.variant";
@@ -366,7 +373,16 @@ export const sectionList: NewSectionType[] = [
           {
             meta: application_ui_code_code_card_component,
             slug: "code-card",
-            variants: [],
+            variants: [
+              {
+                name: "code-card",
+                variantComponent:
+                  application_ui_code_code_card_code_card_variant,
+                slug: "code-card",
+                pathname:
+                  "cuicui/application-ui/code/code-card/code-card.variant.tsx",
+              },
+            ],
           },
           {
             meta: application_ui_code_code_snippet_component,
@@ -599,7 +615,16 @@ export const sectionList: NewSectionType[] = [
           {
             meta: application_ui_sliders_elastic_slider_component,
             slug: "elastic-slider",
-            variants: [],
+            variants: [
+              {
+                name: "default",
+                variantComponent:
+                  application_ui_sliders_elastic_slider_default_variant,
+                slug: "default",
+                pathname:
+                  "cuicui/application-ui/sliders/elastic-slider/default.variant.tsx",
+              },
+            ],
           },
           {
             meta: application_ui_sliders_simple_modern_slider_component,
@@ -1642,7 +1667,21 @@ export const sectionList: NewSectionType[] = [
           {
             meta: other_mock_ups_airpods_component,
             slug: "airpods",
-            variants: [],
+            variants: [
+              {
+                name: "airpods-pro",
+                variantComponent: other_mock_ups_airpods_airpods_pro_variant,
+                slug: "airpods-pro",
+                pathname:
+                  "cuicui/other/mock-ups/airpods/airpods-pro.variant.tsx",
+              },
+              {
+                name: "airpods",
+                variantComponent: other_mock_ups_airpods_airpods_variant,
+                slug: "airpods",
+                pathname: "cuicui/other/mock-ups/airpods/airpods.variant.tsx",
+              },
+            ],
           },
           {
             meta: other_mock_ups_laptops_component,
@@ -1686,17 +1725,44 @@ export const sectionList: NewSectionType[] = [
           {
             meta: other_patterns_dots_pattern_component,
             slug: "dots-pattern",
-            variants: [],
+            variants: [
+              {
+                name: "dots-pattern",
+                variantComponent:
+                  other_patterns_dots_pattern_dots_pattern_variant,
+                slug: "dots-pattern",
+                pathname:
+                  "cuicui/other/patterns/dots-pattern/dots-pattern.variant.tsx",
+              },
+            ],
           },
           {
             meta: other_patterns_grid_pattern_component,
             slug: "grid-pattern",
-            variants: [],
+            variants: [
+              {
+                name: "grid-pattern",
+                variantComponent:
+                  other_patterns_grid_pattern_grid_pattern_variant,
+                slug: "grid-pattern",
+                pathname:
+                  "cuicui/other/patterns/grid-pattern/grid-pattern.variant.tsx",
+              },
+            ],
           },
           {
             meta: other_patterns_moving_bands_component,
             slug: "moving-bands",
-            variants: [],
+            variants: [
+              {
+                name: "moving-bands",
+                variantComponent:
+                  other_patterns_moving_bands_moving_bands_variant,
+                slug: "moving-bands",
+                pathname:
+                  "cuicui/other/patterns/moving-bands/moving-bands.variant.tsx",
+              },
+            ],
           },
         ],
       },

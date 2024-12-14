@@ -1,5 +1,5 @@
 import type { ComponentType } from "@/lib/types/component";
-import GridPattern from "@/cuicui/other/patterns/grid-pattern/grid-pattern";
+import GridPattern from "@/cuicui/other/patterns/grid-pattern/grid-pattern.variant";
 
 export const gridPatternComponent: ComponentType = {
   sizePreview: "sm",
