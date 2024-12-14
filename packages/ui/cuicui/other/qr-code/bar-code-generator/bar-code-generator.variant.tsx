@@ -27,3 +27,5 @@ export const PreviewBarCodeGenerator = () => {
     </div>
   );
 };
+
+export default PreviewBarCodeGenerator;

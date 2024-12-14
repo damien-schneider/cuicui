@@ -1,5 +1,5 @@
 import type { ComponentType } from "@/lib/types/component";
-import PreviewBottomBlurOut from "@/cuicui/other/creative-effects/bottom-blur-out/preview.bottom-blur-out";
+import PreviewBottomBlurOut from "@/cuicui/other/creative-effects/bottom-blur-out/bottom-blur-out.variant";
 
 export const bottomBlurOutComponent: ComponentType = {
   sizePreview: "sm",
@@ -12,9 +12,11 @@ export const bottomBlurOutComponent: ComponentType = {
   variantList: [
     {
       name: "Bottom blur out",
-      component: <PreviewBottomBlurOut />,
+      component: PreviewBottomBlurOut,
       slugPreviewFile: "preview.bottom-blur-out",
       slugComponentFile: "bottom-blur-out",
     },
   ],
 };
+
+export default bottomBlurOutComponent;

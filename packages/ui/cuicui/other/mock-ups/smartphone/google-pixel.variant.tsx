@@ -41,3 +41,5 @@ export function GooglePixelVariant1() {
     </div>
   );
 }
+
+export default GooglePixelVariant1;

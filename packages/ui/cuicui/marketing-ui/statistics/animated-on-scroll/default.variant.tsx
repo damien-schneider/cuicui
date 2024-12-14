@@ -62,6 +62,8 @@ export function AnimatedNumberVariant1() {
   );
 }
 
+export default AnimatedNumberVariant1;
+
 function AnimatedNumber({
   value,
   className,

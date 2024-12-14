@@ -1,6 +1,6 @@
 import type { ComponentType } from "@/lib/types/component";
-import PreviewAnimatedNoise from "@/cuicui/other/creative-effects/animated-noise/preview.animated-noise";
-import PreviewStaticNoise from "@/cuicui/other/creative-effects/animated-noise/preview.static-noise";
+import PreviewAnimatedNoise from "@/cuicui/other/creative-effects/animated-noise/animated-noise.variant";
+import PreviewStaticNoise from "@/cuicui/other/creative-effects/animated-noise/static-noise.variant";
 
 export const animatedNoiseComponent: ComponentType = {
   slug: "animated-noise",
@@ -13,13 +13,15 @@ export const animatedNoiseComponent: ComponentType = {
       name: "Animated Noise",
       slugPreviewFile: "preview.animated-noise",
       slugComponentFile: "animated-noise",
-      component: <PreviewAnimatedNoise />,
+      component: PreviewAnimatedNoise,
     },
     {
       name: "Static Noise",
       slugPreviewFile: "preview.static-noise",
       slugComponentFile: "static-noise",
-      component: <PreviewStaticNoise />,
+      component: PreviewStaticNoise,
     },
   ],
 };
+
+export default animatedNoiseComponent;

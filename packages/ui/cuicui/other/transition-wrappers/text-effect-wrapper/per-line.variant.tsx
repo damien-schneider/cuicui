@@ -47,3 +47,5 @@ Animate your ideas with text wrapper (inspired by motion primitives)`}
     </div>
   );
 };
+
+export default PreviewTextEffectPerLine;

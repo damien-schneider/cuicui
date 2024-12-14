@@ -2,7 +2,7 @@ import { GripIcon } from "lucide-react";
 import type { CategoryType } from "@/lib/types/component";
 import { DotsPatternPreview } from "@/cuicui/other/patterns/dots-pattern/dots-pattern-preview";
 import MovingBandsPreview from "@/cuicui/other/patterns/moving-bands/moving-bands-preview";
-import { gridPatternComponent } from "@/cuicui/other/patterns/grid-pattern/component.grid-pattern";
+import { gridPatternComponent } from "@/cuicui/other/patterns/grid-pattern/component";
 export const patternsCategory: CategoryType = {
   slug: "patterns",
   name: "Patterns",

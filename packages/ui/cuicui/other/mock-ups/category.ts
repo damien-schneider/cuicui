@@ -3,9 +3,9 @@ import type { CategoryType } from "@/lib/types/component";
 
 import { Airpods } from "@/cuicui/other/mock-ups/airpods/airpods";
 import { AirpodsPro } from "@/cuicui/other/mock-ups/airpods/airpods-pro";
-import { GooglePixelVariant1 } from "@/cuicui/other/mock-ups/smartphone/variant1";
-import { Iphone14ProVariant2 } from "@/cuicui/other/mock-ups/smartphone/variant2";
-import { PreviewMackbook } from "@/cuicui/other/mock-ups/laptops/preview.mackbook";
+import { GooglePixelVariant1 } from "@/cuicui/other/mock-ups/smartphone/google-pixel.variant";
+import { Iphone14ProVariant2 } from "@/cuicui/other/mock-ups/smartphone/iphone14.variant";
+import { PreviewMackbook } from "@/cuicui/other/mock-ups/laptops/mackbook.variant";
 
 export const mockUpsCategory: CategoryType = {
   slug: "mock-ups",

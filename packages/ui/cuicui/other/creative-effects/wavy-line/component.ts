@@ -1,4 +1,4 @@
-import { PreviewWavyLine } from "@/cuicui/other/creative-effects/wavy-line/preview.wavy-line";
+import { PreviewWavyLine } from "@/cuicui/other/creative-effects/wavy-line/wavy-line.variant";
 import type { ComponentType } from "@/lib/types/component";
 
 export const WavyLineComponent: ComponentType = {
@@ -9,9 +9,11 @@ export const WavyLineComponent: ComponentType = {
   variantList: [
     {
       name: "Wavy Line",
-      component: <PreviewWavyLine />,
+      component: PreviewWavyLine,
       slugComponentFile: "wavy-line",
       slugPreviewFile: "preview.wavy-line",
     },
   ],
 };
+
+export default WavyLineComponent;

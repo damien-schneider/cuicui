@@ -33,3 +33,5 @@ export function Iphone14ProVariant2() {
     </div>
   );
 }
+
+export default Iphone14ProVariant2;

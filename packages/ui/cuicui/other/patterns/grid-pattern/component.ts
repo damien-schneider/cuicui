@@ -10,9 +10,10 @@ export const gridPatternComponent: ComponentType = {
   variantList: [
     {
       name: "Default",
-      component: <GridPattern />,
-
+      component: GridPattern,
       slugPreviewFile: "grid-pattern",
     },
   ],
 };
+
+export default gridPatternComponent;

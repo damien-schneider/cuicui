@@ -1,24 +1,24 @@
 import { TextEffectWrapper } from "@/cuicui/other/transition-wrappers/text-effect-wrapper/text-effect-wrapper";
 
-export const PreviewTextEffectPerChar = () => {
+export const PreviewTextEffectPerWord = () => {
   return (
     <div className="flex flex-col gap-8">
       <TextEffectWrapper
-        per="char"
+        per="word"
         preset="fade"
         className="text-neutral-500 dark:text-neutral-400"
       >
         Animate your ideas with text wrapper (inspired by motion primitives)
       </TextEffectWrapper>
       <TextEffectWrapper
-        per="char"
+        per="word"
         preset="blur"
         className="text-neutral-500 dark:text-neutral-400"
       >
         Animate your ideas with text wrapper (inspired by motion primitives)
       </TextEffectWrapper>
       <TextEffectWrapper
-        per="char"
+        per="word"
         preset="slide"
         className="text-neutral-500 dark:text-neutral-400"
       >
@@ -27,3 +27,5 @@ export const PreviewTextEffectPerChar = () => {
     </div>
   );
 };
+
+export default PreviewTextEffectPerWord;

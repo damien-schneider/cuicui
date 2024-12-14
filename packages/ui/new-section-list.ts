@@ -42,6 +42,7 @@ import marketing_ui_statistics_category from "@/cuicui/marketing-ui/statistics/c
 import marketing_ui_testimonials_category from "@/cuicui/marketing-ui/testimonials/category";
 import other_creative_effects_category from "@/cuicui/other/creative-effects/category";
 import other_cursors_category from "@/cuicui/other/cursors/category";
+import other_mock_ups_category from "@/cuicui/other/mock-ups/category";
 import other_patterns_category from "@/cuicui/other/patterns/category";
 import other_qr_code_category from "@/cuicui/other/qr-code/category";
 import other_transition_wrappers_category from "@/cuicui/other/transition-wrappers/category";
@@ -107,9 +108,28 @@ import marketing_ui_features_feature_four_images_component from "@/cuicui/market
 import marketing_ui_footer_sticky_footer_component from "@/cuicui/marketing-ui/footer/sticky-footer/component";
 import marketing_ui_pricing_tables_gradient_component from "@/cuicui/marketing-ui/pricing-tables/gradient/component";
 import marketing_ui_pricing_tables_many_offers_component from "@/cuicui/marketing-ui/pricing-tables/many-offers/component";
+import marketing_ui_statistics_animated_counter_component from "@/cuicui/marketing-ui/statistics/animated-counter/component";
+import marketing_ui_statistics_animated_on_scroll_component from "@/cuicui/marketing-ui/statistics/animated-on-scroll/component";
+import marketing_ui_statistics_increase_to_value_component from "@/cuicui/marketing-ui/statistics/increase-to-value/component";
 import marketing_ui_statistics_trigger_on_scroll_component from "@/cuicui/marketing-ui/statistics/trigger-on-scroll/component";
+import marketing_ui_testimonials_marquee_component from "@/cuicui/marketing-ui/testimonials/marquee/component";
+import marketing_ui_testimonials_testimonials_component_component from "@/cuicui/marketing-ui/testimonials/testimonials-component/component";
+import other_creative_effects_animated_noise_component from "@/cuicui/other/creative-effects/animated-noise/component";
+import other_creative_effects_border_trail_component from "@/cuicui/other/creative-effects/border-trail/component";
+import other_creative_effects_bottom_blur_out_component from "@/cuicui/other/creative-effects/bottom-blur-out/component";
+import other_creative_effects_wavy_line_component from "@/cuicui/other/creative-effects/wavy-line/component";
+import other_cursors_dynamic_cards_component from "@/cuicui/other/cursors/dynamic-cards/component";
+import other_cursors_follow_cursor_component from "@/cuicui/other/cursors/follow-cursor/component";
+import other_mock_ups_airpods_component from "@/cuicui/other/mock-ups/airpods/component";
+import other_mock_ups_laptops_component from "@/cuicui/other/mock-ups/laptops/component";
+import other_mock_ups_smartphone_component from "@/cuicui/other/mock-ups/smartphone/component";
+import other_patterns_dots_pattern_component from "@/cuicui/other/patterns/dots-pattern/component";
+import other_patterns_grid_pattern_component from "@/cuicui/other/patterns/grid-pattern/component";
+import other_patterns_moving_bands_component from "@/cuicui/other/patterns/moving-bands/component";
 import other_qr_code_bar_code_generator_component from "@/cuicui/other/qr-code/bar-code-generator/component";
 import other_qr_code_qr_code_generator_component from "@/cuicui/other/qr-code/qr-code-generator/component";
+import other_transition_wrappers_blur_appear_component from "@/cuicui/other/transition-wrappers/blur-appear/component";
+import other_transition_wrappers_text_effect_wrapper_component from "@/cuicui/other/transition-wrappers/text-effect-wrapper/component";
 import application_ui_action_menu_advanced_bottom_action_menu_default_variant from "@/cuicui/application-ui/action-menu/advanced-bottom-action-menu/default.variant";
 import application_ui_authentication_half_sided_glassmorphism_default_variant from "@/cuicui/application-ui/authentication/half-sided-glassmorphism/default.variant";
 import application_ui_battery_battery_indicator_battery_indicator_variant from "@/cuicui/application-ui/battery/battery-indicator/battery-indicator.variant";
@@ -181,6 +201,31 @@ import marketing_ui_features_feature_four_images_variant2_variant from "@/cuicui
 import marketing_ui_footer_sticky_footer_sticky_footer_variant from "@/cuicui/marketing-ui/footer/sticky-footer/sticky-footer.variant";
 import marketing_ui_pricing_tables_gradient_pricing_table_gradient_variant from "@/cuicui/marketing-ui/pricing-tables/gradient/pricing-table-gradient.variant";
 import marketing_ui_pricing_tables_many_offers_artlist_inspired_variant from "@/cuicui/marketing-ui/pricing-tables/many-offers/artlist-inspired.variant";
+import marketing_ui_statistics_animated_counter_animated_counter_variant from "@/cuicui/marketing-ui/statistics/animated-counter/animated-counter.variant";
+import marketing_ui_statistics_animated_on_scroll_default_variant from "@/cuicui/marketing-ui/statistics/animated-on-scroll/default.variant";
+import marketing_ui_statistics_increase_to_value_default_variant from "@/cuicui/marketing-ui/statistics/increase-to-value/default.variant";
+import marketing_ui_statistics_trigger_on_scroll_default_variant from "@/cuicui/marketing-ui/statistics/trigger-on-scroll/default.variant";
+import marketing_ui_testimonials_marquee_horizontal_variant from "@/cuicui/marketing-ui/testimonials/marquee/horizontal.variant";
+import marketing_ui_testimonials_marquee_vertical_variant from "@/cuicui/marketing-ui/testimonials/marquee/vertical.variant";
+import marketing_ui_testimonials_testimonials_component_default_variant from "@/cuicui/marketing-ui/testimonials/testimonials-component/default.variant";
+import other_creative_effects_animated_noise_animated_noise_variant from "@/cuicui/other/creative-effects/animated-noise/animated-noise.variant";
+import other_creative_effects_animated_noise_static_noise_variant from "@/cuicui/other/creative-effects/animated-noise/static-noise.variant";
+import other_creative_effects_border_trail_border_trail_variant from "@/cuicui/other/creative-effects/border-trail/border-trail.variant";
+import other_creative_effects_bottom_blur_out_bottom_blur_out_variant from "@/cuicui/other/creative-effects/bottom-blur-out/bottom-blur-out.variant";
+import other_creative_effects_wavy_line_wavy_line_variant from "@/cuicui/other/creative-effects/wavy-line/wavy-line.variant";
+import other_cursors_dynamic_cards_gradient_card_effect_variant from "@/cuicui/other/cursors/dynamic-cards/gradient-card-effect.variant";
+import other_cursors_dynamic_cards_only_border_card_effect_variant from "@/cuicui/other/cursors/dynamic-cards/only-border-card-effect.variant";
+import other_cursors_follow_cursor_replace_cursor_variant from "@/cuicui/other/cursors/follow-cursor/replace-cursor.variant";
+import other_cursors_follow_cursor_with_cursor_variant from "@/cuicui/other/cursors/follow-cursor/with-cursor.variant";
+import other_mock_ups_laptops_mackbook_variant from "@/cuicui/other/mock-ups/laptops/mackbook.variant";
+import other_mock_ups_smartphone_google_pixel_variant from "@/cuicui/other/mock-ups/smartphone/google-pixel.variant";
+import other_mock_ups_smartphone_iphone14_variant from "@/cuicui/other/mock-ups/smartphone/iphone14.variant";
+import other_qr_code_bar_code_generator_bar_code_generator_variant from "@/cuicui/other/qr-code/bar-code-generator/bar-code-generator.variant";
+import other_qr_code_qr_code_generator_qr_code_generator_variant from "@/cuicui/other/qr-code/qr-code-generator/qr-code-generator.variant";
+import other_transition_wrappers_blur_appear_default_variant from "@/cuicui/other/transition-wrappers/blur-appear/default.variant";
+import other_transition_wrappers_text_effect_wrapper_per_char_variant from "@/cuicui/other/transition-wrappers/text-effect-wrapper/per-char.variant";
+import other_transition_wrappers_text_effect_wrapper_per_line_variant from "@/cuicui/other/transition-wrappers/text-effect-wrapper/per-line.variant";
+import other_transition_wrappers_text_effect_wrapper_per_word_variant from "@/cuicui/other/transition-wrappers/text-effect-wrapper/per-word.variant";
 
 import type { NewSectionType } from "@/lib/types/component";
 
@@ -1146,14 +1191,88 @@ export const sectionList: NewSectionType[] = [
         meta: marketing_ui_statistics_category,
         components: [
           {
+            meta: marketing_ui_statistics_animated_counter_component,
+            variants: [
+              {
+                name: "animated-counter",
+                component:
+                  marketing_ui_statistics_animated_counter_animated_counter_variant,
+                slugPreviewFile:
+                  "@/cuicui/marketing-ui/statistics/animated-counter/animated-counter.variant",
+              },
+            ],
+          },
+          {
+            meta: marketing_ui_statistics_animated_on_scroll_component,
+            variants: [
+              {
+                name: "default",
+                component:
+                  marketing_ui_statistics_animated_on_scroll_default_variant,
+                slugPreviewFile:
+                  "@/cuicui/marketing-ui/statistics/animated-on-scroll/default.variant",
+              },
+            ],
+          },
+          {
+            meta: marketing_ui_statistics_increase_to_value_component,
+            variants: [
+              {
+                name: "default",
+                component:
+                  marketing_ui_statistics_increase_to_value_default_variant,
+                slugPreviewFile:
+                  "@/cuicui/marketing-ui/statistics/increase-to-value/default.variant",
+              },
+            ],
+          },
+          {
             meta: marketing_ui_statistics_trigger_on_scroll_component,
-            variants: [],
+            variants: [
+              {
+                name: "default",
+                component:
+                  marketing_ui_statistics_trigger_on_scroll_default_variant,
+                slugPreviewFile:
+                  "@/cuicui/marketing-ui/statistics/trigger-on-scroll/default.variant",
+              },
+            ],
           },
         ],
       },
       {
         meta: marketing_ui_testimonials_category,
-        components: [],
+        components: [
+          {
+            meta: marketing_ui_testimonials_marquee_component,
+            variants: [
+              {
+                name: "horizontal",
+                component: marketing_ui_testimonials_marquee_horizontal_variant,
+                slugPreviewFile:
+                  "@/cuicui/marketing-ui/testimonials/marquee/horizontal.variant",
+              },
+              {
+                name: "vertical",
+                component: marketing_ui_testimonials_marquee_vertical_variant,
+                slugPreviewFile:
+                  "@/cuicui/marketing-ui/testimonials/marquee/vertical.variant",
+              },
+            ],
+          },
+          {
+            meta: marketing_ui_testimonials_testimonials_component_component,
+            variants: [
+              {
+                name: "default",
+                component:
+                  marketing_ui_testimonials_testimonials_component_default_variant,
+                slugPreviewFile:
+                  "@/cuicui/marketing-ui/testimonials/testimonials-component/default.variant",
+              },
+            ],
+          },
+        ],
       },
     ],
   },
@@ -1162,32 +1281,229 @@ export const sectionList: NewSectionType[] = [
     categories: [
       {
         meta: other_creative_effects_category,
-        components: [],
+        components: [
+          {
+            meta: other_creative_effects_animated_noise_component,
+            variants: [
+              {
+                name: "animated-noise",
+                component:
+                  other_creative_effects_animated_noise_animated_noise_variant,
+                slugPreviewFile:
+                  "@/cuicui/other/creative-effects/animated-noise/animated-noise.variant",
+              },
+              {
+                name: "static-noise",
+                component:
+                  other_creative_effects_animated_noise_static_noise_variant,
+                slugPreviewFile:
+                  "@/cuicui/other/creative-effects/animated-noise/static-noise.variant",
+              },
+            ],
+          },
+          {
+            meta: other_creative_effects_border_trail_component,
+            variants: [
+              {
+                name: "border-trail",
+                component:
+                  other_creative_effects_border_trail_border_trail_variant,
+                slugPreviewFile:
+                  "@/cuicui/other/creative-effects/border-trail/border-trail.variant",
+              },
+            ],
+          },
+          {
+            meta: other_creative_effects_bottom_blur_out_component,
+            variants: [
+              {
+                name: "bottom-blur-out",
+                component:
+                  other_creative_effects_bottom_blur_out_bottom_blur_out_variant,
+                slugPreviewFile:
+                  "@/cuicui/other/creative-effects/bottom-blur-out/bottom-blur-out.variant",
+              },
+            ],
+          },
+          {
+            meta: other_creative_effects_wavy_line_component,
+            variants: [
+              {
+                name: "wavy-line",
+                component: other_creative_effects_wavy_line_wavy_line_variant,
+                slugPreviewFile:
+                  "@/cuicui/other/creative-effects/wavy-line/wavy-line.variant",
+              },
+            ],
+          },
+        ],
       },
       {
         meta: other_cursors_category,
-        components: [],
+        components: [
+          {
+            meta: other_cursors_dynamic_cards_component,
+            variants: [
+              {
+                name: "gradient-card-effect",
+                component:
+                  other_cursors_dynamic_cards_gradient_card_effect_variant,
+                slugPreviewFile:
+                  "@/cuicui/other/cursors/dynamic-cards/gradient-card-effect.variant",
+              },
+              {
+                name: "only-border-card-effect",
+                component:
+                  other_cursors_dynamic_cards_only_border_card_effect_variant,
+                slugPreviewFile:
+                  "@/cuicui/other/cursors/dynamic-cards/only-border-card-effect.variant",
+              },
+            ],
+          },
+          {
+            meta: other_cursors_follow_cursor_component,
+            variants: [
+              {
+                name: "replace-cursor",
+                component: other_cursors_follow_cursor_replace_cursor_variant,
+                slugPreviewFile:
+                  "@/cuicui/other/cursors/follow-cursor/replace-cursor.variant",
+              },
+              {
+                name: "with-cursor",
+                component: other_cursors_follow_cursor_with_cursor_variant,
+                slugPreviewFile:
+                  "@/cuicui/other/cursors/follow-cursor/with-cursor.variant",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        meta: other_mock_ups_category,
+        components: [
+          {
+            meta: other_mock_ups_airpods_component,
+            variants: [],
+          },
+          {
+            meta: other_mock_ups_laptops_component,
+            variants: [
+              {
+                name: "mackbook",
+                component: other_mock_ups_laptops_mackbook_variant,
+                slugPreviewFile:
+                  "@/cuicui/other/mock-ups/laptops/mackbook.variant",
+              },
+            ],
+          },
+          {
+            meta: other_mock_ups_smartphone_component,
+            variants: [
+              {
+                name: "google-pixel",
+                component: other_mock_ups_smartphone_google_pixel_variant,
+                slugPreviewFile:
+                  "@/cuicui/other/mock-ups/smartphone/google-pixel.variant",
+              },
+              {
+                name: "iphone14",
+                component: other_mock_ups_smartphone_iphone14_variant,
+                slugPreviewFile:
+                  "@/cuicui/other/mock-ups/smartphone/iphone14.variant",
+              },
+            ],
+          },
+        ],
       },
       {
         meta: other_patterns_category,
-        components: [],
+        components: [
+          {
+            meta: other_patterns_dots_pattern_component,
+            variants: [],
+          },
+          {
+            meta: other_patterns_grid_pattern_component,
+            variants: [],
+          },
+          {
+            meta: other_patterns_moving_bands_component,
+            variants: [],
+          },
+        ],
       },
       {
         meta: other_qr_code_category,
         components: [
           {
             meta: other_qr_code_bar_code_generator_component,
-            variants: [],
+            variants: [
+              {
+                name: "bar-code-generator",
+                component:
+                  other_qr_code_bar_code_generator_bar_code_generator_variant,
+                slugPreviewFile:
+                  "@/cuicui/other/qr-code/bar-code-generator/bar-code-generator.variant",
+              },
+            ],
           },
           {
             meta: other_qr_code_qr_code_generator_component,
-            variants: [],
+            variants: [
+              {
+                name: "qr-code-generator",
+                component:
+                  other_qr_code_qr_code_generator_qr_code_generator_variant,
+                slugPreviewFile:
+                  "@/cuicui/other/qr-code/qr-code-generator/qr-code-generator.variant",
+              },
+            ],
           },
         ],
       },
       {
         meta: other_transition_wrappers_category,
-        components: [],
+        components: [
+          {
+            meta: other_transition_wrappers_blur_appear_component,
+            variants: [
+              {
+                name: "default",
+                component:
+                  other_transition_wrappers_blur_appear_default_variant,
+                slugPreviewFile:
+                  "@/cuicui/other/transition-wrappers/blur-appear/default.variant",
+              },
+            ],
+          },
+          {
+            meta: other_transition_wrappers_text_effect_wrapper_component,
+            variants: [
+              {
+                name: "per-char",
+                component:
+                  other_transition_wrappers_text_effect_wrapper_per_char_variant,
+                slugPreviewFile:
+                  "@/cuicui/other/transition-wrappers/text-effect-wrapper/per-char.variant",
+              },
+              {
+                name: "per-line",
+                component:
+                  other_transition_wrappers_text_effect_wrapper_per_line_variant,
+                slugPreviewFile:
+                  "@/cuicui/other/transition-wrappers/text-effect-wrapper/per-line.variant",
+              },
+              {
+                name: "per-word",
+                component:
+                  other_transition_wrappers_text_effect_wrapper_per_word_variant,
+                slugPreviewFile:
+                  "@/cuicui/other/transition-wrappers/text-effect-wrapper/per-word.variant",
+              },
+            ],
+          },
+        ],
       },
     ],
   },

@@ -1,6 +1,6 @@
 import type { ComponentType } from "@/lib/types/component";
-import DynamicCardsVariant2 from "@/cuicui/other/cursors/dynamic-cards/gradient-card-effect";
-import DynamicCardsVariant1 from "@/cuicui/other/cursors/dynamic-cards/only-border-card-effect";
+import DynamicCardsVariant2 from "@/cuicui/other/cursors/dynamic-cards/gradient-card-effect.variant";
+import DynamicCardsVariant1 from "@/cuicui/other/cursors/dynamic-cards/only-border-card-effect.variant";
 
 export const cardHoverCursorEffectComponent: ComponentType = {
   sizePreview: "md",
@@ -13,16 +13,18 @@ export const cardHoverCursorEffectComponent: ComponentType = {
   variantList: [
     {
       name: "Gradient background",
-      component: <DynamicCardsVariant2 />,
+      component: DynamicCardsVariant2,
       slugPreviewFile: "gradient-card-effect",
       slugComponentFile: "gradient-card",
     },
     {
       name: "Border only",
-      component: <DynamicCardsVariant1 />,
+      component: DynamicCardsVariant1,
       slugPreviewFile: "only-border-card-effect",
       slugComponentFile: "card-mouse-highlighting-border",
     },
   ],
   componentBadges: ["prefer-desktop"],
 };
+
+export default cardHoverCursorEffectComponent;

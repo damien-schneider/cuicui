@@ -1,5 +1,5 @@
 import type { ComponentType } from "@/lib/types/component";
-import PreviewBorderTrail from "@/cuicui/other/creative-effects/border-trail/preview.border-trail";
+import PreviewBorderTrail from "@/cuicui/other/creative-effects/border-trail/border-trail.variant";
 
 export const borderTrailComponent: ComponentType = {
   slug: "border-trail",
@@ -12,7 +12,9 @@ export const borderTrailComponent: ComponentType = {
       name: "Border Trail",
       slugPreviewFile: "preview.border-trail",
       slugComponentFile: "border-trail",
-      component: <PreviewBorderTrail />,
+      component: PreviewBorderTrail,
     },
   ],
 };
+
+export default borderTrailComponent;

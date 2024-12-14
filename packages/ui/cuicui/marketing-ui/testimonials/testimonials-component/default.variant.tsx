@@ -94,3 +94,5 @@ export function TestimonialsVariant1() {
     </div>
   );
 }
+
+export default TestimonialsVariant1;

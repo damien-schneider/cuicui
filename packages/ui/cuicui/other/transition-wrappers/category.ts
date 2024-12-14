@@ -1,9 +1,9 @@
 import { BringToFrontIcon } from "lucide-react";
 import type { CategoryType } from "@/lib/types/component";
 
-import BlurAppearVariant1 from "@/cuicui/other/transition-wrappers/blur-appear/variant1";
+import BlurAppearVariant1 from "@/cuicui/other/transition-wrappers/blur-appear/default.variant";
 import { SlideInOnScrollComponent } from "@/cuicui/other/transition-wrappers/slide-in-on-scroll/slide-in-on-scroll.component";
-import { textEffectWrapperComponent } from "@/cuicui/other/transition-wrappers/text-effect-wrapper/component.text-effect-wrapper";
+import { textEffectWrapperComponent } from "@/cuicui/other/transition-wrappers/text-effect-wrapper/component";
 
 export const transitionWrappersCategory: CategoryType = {
   slug: "transition-wrappers",

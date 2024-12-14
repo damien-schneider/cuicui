@@ -1,8 +1,8 @@
 import type { ComponentType } from "@/lib/types/component";
 
-import { PreviewTextEffectPerChar } from "@/cuicui/other/transition-wrappers/text-effect-wrapper/preview.text-effect-wrapper-per-char";
-import { PreviewTextEffectPerLine } from "@/cuicui/other/transition-wrappers/text-effect-wrapper/preview.text-effect-wrapper-per-line";
-import { PreviewTextEffectPerWord } from "@/cuicui/other/transition-wrappers/text-effect-wrapper/preview.text-effect-wrapper-per-word";
+import { PreviewTextEffectPerChar } from "@/cuicui/other/transition-wrappers/text-effect-wrapper/per-char.variant";
+import { PreviewTextEffectPerWord } from "@/cuicui/other/transition-wrappers/text-effect-wrapper/per-word.variant";
+import { PreviewTextEffectPerLine } from "@/cuicui/other/transition-wrappers/text-effect-wrapper/per-line.variant";
 
 export const textEffectWrapperComponent: ComponentType = {
   slug: "text-effect-wrapper",
@@ -17,21 +17,23 @@ export const textEffectWrapperComponent: ComponentType = {
   variantList: [
     {
       name: "Per character",
-      component: <PreviewTextEffectPerChar />,
+      component: PreviewTextEffectPerChar,
       slugPreviewFile: "preview.text-effect-wrapper-per-char",
       slugComponentFile: "text-effect-wrapper",
     },
     {
       name: "Per word",
-      component: <PreviewTextEffectPerWord />,
+      component: PreviewTextEffectPerWord,
       slugPreviewFile: "preview.text-effect-wrapper-per-word",
       slugComponentFile: "text-effect-wrapper",
     },
     {
       name: "Per line",
-      component: <PreviewTextEffectPerLine />,
+      component: PreviewTextEffectPerLine,
       slugPreviewFile: "preview.text-effect-wrapper-per-line",
       slugComponentFile: "text-effect-wrapper",
     },
   ],
 };
+
+export default textEffectWrapperComponent;

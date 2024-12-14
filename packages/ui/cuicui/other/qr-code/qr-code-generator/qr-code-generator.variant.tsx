@@ -88,6 +88,8 @@ export const QrCodeGenerator = () => {
   );
 };
 
+export default QrCodeGenerator;
+
 const CopySvgButton = ({
   svgRef,
 }: { svgRef: RefObject<SVGSVGElement | null> }) => {

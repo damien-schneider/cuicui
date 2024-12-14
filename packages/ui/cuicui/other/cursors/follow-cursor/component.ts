@@ -1,6 +1,6 @@
 import type { ComponentType } from "@/lib/types/component";
-import FollowCursorHideCursor from "@/cuicui/other/cursors/follow-cursor/replace-cursor";
-import FollowCursorWithCursor from "@/cuicui/other/cursors/follow-cursor/with-cursor";
+import FollowCursorHideCursor from "@/cuicui/other/cursors/follow-cursor/replace-cursor.variant";
+import FollowCursorWithCursor from "@/cuicui/other/cursors/follow-cursor/with-cursor.variant";
 
 export const followCursorComponent: ComponentType = {
   sizePreview: "sm",
@@ -13,14 +13,16 @@ export const followCursorComponent: ComponentType = {
   variantList: [
     {
       name: "Replace cursor",
-      component: <FollowCursorHideCursor />,
+      component: FollowCursorHideCursor,
       slugPreviewFile: "replace-cursor",
     },
     {
       name: "Keeping cursor",
-      component: <FollowCursorWithCursor />,
+      component: FollowCursorWithCursor,
       slugPreviewFile: "with-cursor",
     },
   ],
   componentBadges: ["prefer-desktop"],
 };
+
+export default followCursorComponent;
