@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@/cuicui/utils/cn/cn";
+import { cn } from "@/cuicui/utils/cn";
 import { useState, useRef, type ReactNode, type MouseEvent } from "react";
 
 type PositionType = {

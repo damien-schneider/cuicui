@@ -1,5 +1,5 @@
 "use client";
-import { cn } from "@/cuicui/utils/cn/cn";
+import { cn } from "@/cuicui/utils/cn";
 import { type ReactNode, useState } from "react";
 
 export const SmoothHoverMenuItem = ({

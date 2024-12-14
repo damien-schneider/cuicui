@@ -130,6 +130,9 @@ import other_qr_code_bar_code_generator_component from "@/cuicui/other/qr-code/b
 import other_qr_code_qr_code_generator_component from "@/cuicui/other/qr-code/qr-code-generator/component";
 import other_transition_wrappers_blur_appear_component from "@/cuicui/other/transition-wrappers/blur-appear/component";
 import other_transition_wrappers_text_effect_wrapper_component from "@/cuicui/other/transition-wrappers/text-effect-wrapper/component";
+import utils_catch_error_catch_error_component from "@/cuicui/utils/catch-error/catch-error/component";
+import utils_cn_cn_component from "@/cuicui/utils/cn/cn/component";
+import utils_sleep_sleep_component from "@/cuicui/utils/sleep/sleep/component";
 import application_ui_action_menu_advanced_bottom_action_menu_default_variant from "@/cuicui/application-ui/action-menu/advanced-bottom-action-menu/default.variant";
 import application_ui_authentication_half_sided_glassmorphism_default_variant from "@/cuicui/application-ui/authentication/half-sided-glassmorphism/default.variant";
 import application_ui_battery_battery_indicator_battery_indicator_variant from "@/cuicui/application-ui/battery/battery-indicator/battery-indicator.variant";
@@ -162,6 +165,7 @@ import common_ui_blockquotes_modern_simple_quote_default_variant from "@/cuicui/
 import common_ui_buttons_before_effect_button_advanced_button_variant from "@/cuicui/common-ui/buttons/before-effect-button/advanced-button.variant";
 import common_ui_buttons_before_effect_button_default_variant from "@/cuicui/common-ui/buttons/before-effect-button/default.variant";
 import common_ui_buttons_before_effect_button_hover_only_variant from "@/cuicui/common-ui/buttons/before-effect-button/hover-only.variant";
+import common_ui_buttons_dual_action_button_dual_action_button_variant from "@/cuicui/common-ui/buttons/dual-action-button/dual-action-button.variant";
 import common_ui_buttons_github_stars_github_stars_variant from "@/cuicui/common-ui/buttons/github-stars/github-stars.variant";
 import common_ui_buttons_github_stars_gradient_container_variant from "@/cuicui/common-ui/buttons/github-stars/gradient-container.variant";
 import common_ui_buttons_growing_button_default_variant from "@/cuicui/common-ui/buttons/growing-button/default.variant";
@@ -226,12 +230,16 @@ import other_transition_wrappers_blur_appear_default_variant from "@/cuicui/othe
 import other_transition_wrappers_text_effect_wrapper_per_char_variant from "@/cuicui/other/transition-wrappers/text-effect-wrapper/per-char.variant";
 import other_transition_wrappers_text_effect_wrapper_per_line_variant from "@/cuicui/other/transition-wrappers/text-effect-wrapper/per-line.variant";
 import other_transition_wrappers_text_effect_wrapper_per_word_variant from "@/cuicui/other/transition-wrappers/text-effect-wrapper/per-word.variant";
+import utils_catch_error_catch_error_catch_error_variant from "@/cuicui/utils/catch-error/catch-error/catch-error.variant";
+import utils_cn_cn_default_variant from "@/cuicui/utils/cn/cn/default.variant";
+import utils_sleep_sleep_sleep_variant from "@/cuicui/utils/sleep/sleep/sleep.variant";
 
 import type { NewSectionType } from "@/lib/types/component";
 
 export const sectionList: NewSectionType[] = [
   {
     meta: application_ui_section,
+    slug: "application-ui",
     categories: [
       {
         meta: application_ui_action_menu_category,
@@ -239,13 +247,15 @@ export const sectionList: NewSectionType[] = [
         components: [
           {
             meta: application_ui_action_menu_advanced_bottom_action_menu_component,
+            slug: "advanced-bottom-action-menu",
             variants: [
               {
                 name: "default",
-                component:
+                variantComponent:
                   application_ui_action_menu_advanced_bottom_action_menu_default_variant,
-                slugPreviewFile:
-                  "@/cuicui/application-ui/action-menu/advanced-bottom-action-menu/default.variant",
+                slug: "default",
+                pathname:
+                  "cuicui/application-ui/action-menu/advanced-bottom-action-menu/default.variant.tsx",
               },
             ],
           },
@@ -257,10 +267,12 @@ export const sectionList: NewSectionType[] = [
         components: [
           {
             meta: application_ui_alert_modern_glassy_alert_component,
+            slug: "modern-glassy-alert",
             variants: [],
           },
           {
             meta: application_ui_alert_simple_alert_component,
+            slug: "simple-alert",
             variants: [],
           },
         ],
@@ -271,13 +283,15 @@ export const sectionList: NewSectionType[] = [
         components: [
           {
             meta: application_ui_authentication_half_sided_glassmorphism_component,
+            slug: "half-sided-glassmorphism",
             variants: [
               {
                 name: "default",
-                component:
+                variantComponent:
                   application_ui_authentication_half_sided_glassmorphism_default_variant,
-                slugPreviewFile:
-                  "@/cuicui/application-ui/authentication/half-sided-glassmorphism/default.variant",
+                slug: "default",
+                pathname:
+                  "cuicui/application-ui/authentication/half-sided-glassmorphism/default.variant.tsx",
               },
             ],
           },
@@ -289,13 +303,15 @@ export const sectionList: NewSectionType[] = [
         components: [
           {
             meta: application_ui_battery_battery_indicator_component,
+            slug: "battery-indicator",
             variants: [
               {
                 name: "battery-indicator",
-                component:
+                variantComponent:
                   application_ui_battery_battery_indicator_battery_indicator_variant,
-                slugPreviewFile:
-                  "@/cuicui/application-ui/battery/battery-indicator/battery-indicator.variant",
+                slug: "battery-indicator",
+                pathname:
+                  "cuicui/application-ui/battery/battery-indicator/battery-indicator.variant.tsx",
               },
             ],
           },
@@ -307,47 +323,56 @@ export const sectionList: NewSectionType[] = [
         components: [
           {
             meta: application_ui_code_advanced_code_block_component,
+            slug: "advanced-code-block",
             variants: [
               {
                 name: "advanced-code-block-tab",
-                component:
+                variantComponent:
                   application_ui_code_advanced_code_block_advanced_code_block_tab_variant,
-                slugPreviewFile:
-                  "@/cuicui/application-ui/code/advanced-code-block/advanced-code-block-tab.variant",
+                slug: "advanced-code-block-tab",
+                pathname:
+                  "cuicui/application-ui/code/advanced-code-block/advanced-code-block-tab.variant.tsx",
               },
               {
                 name: "advanced-code-block",
-                component:
+                variantComponent:
                   application_ui_code_advanced_code_block_advanced_code_block_variant,
-                slugPreviewFile:
-                  "@/cuicui/application-ui/code/advanced-code-block/advanced-code-block.variant",
+                slug: "advanced-code-block",
+                pathname:
+                  "cuicui/application-ui/code/advanced-code-block/advanced-code-block.variant.tsx",
               },
             ],
           },
           {
             meta: application_ui_code_code_card_component,
+            slug: "code-card",
             variants: [],
           },
           {
             meta: application_ui_code_code_snippet_component,
+            slug: "code-snippet",
             variants: [
               {
                 name: "code-snippet",
-                component:
+                variantComponent:
                   application_ui_code_code_snippet_code_snippet_variant,
-                slugPreviewFile:
-                  "@/cuicui/application-ui/code/code-snippet/code-snippet.variant",
+                slug: "code-snippet",
+                pathname:
+                  "cuicui/application-ui/code/code-snippet/code-snippet.variant.tsx",
               },
             ],
           },
           {
             meta: application_ui_code_inline_code_component,
+            slug: "inline-code",
             variants: [
               {
                 name: "inline-code",
-                component: application_ui_code_inline_code_inline_code_variant,
-                slugPreviewFile:
-                  "@/cuicui/application-ui/code/inline-code/inline-code.variant",
+                variantComponent:
+                  application_ui_code_inline_code_inline_code_variant,
+                slug: "inline-code",
+                pathname:
+                  "cuicui/application-ui/code/inline-code/inline-code.variant.tsx",
               },
             ],
           },
@@ -359,13 +384,15 @@ export const sectionList: NewSectionType[] = [
         components: [
           {
             meta: application_ui_color_picker_arc_color_picker_component,
+            slug: "arc-color-picker",
             variants: [
               {
                 name: "arc-color-picker",
-                component:
+                variantComponent:
                   application_ui_color_picker_arc_color_picker_arc_color_picker_variant,
-                slugPreviewFile:
-                  "@/cuicui/application-ui/color-picker/arc-color-picker/arc-color-picker.variant",
+                slug: "arc-color-picker",
+                pathname:
+                  "cuicui/application-ui/color-picker/arc-color-picker/arc-color-picker.variant.tsx",
               },
             ],
           },
@@ -377,13 +404,15 @@ export const sectionList: NewSectionType[] = [
         components: [
           {
             meta: application_ui_context_menu_mac_os_context_menu_component,
+            slug: "mac-os-context-menu",
             variants: [
               {
                 name: "mac-os-context-menu",
-                component:
+                variantComponent:
                   application_ui_context_menu_mac_os_context_menu_mac_os_context_menu_variant,
-                slugPreviewFile:
-                  "@/cuicui/application-ui/context-menu/mac-os-context-menu/mac-os-context-menu.variant",
+                slug: "mac-os-context-menu",
+                pathname:
+                  "cuicui/application-ui/context-menu/mac-os-context-menu/mac-os-context-menu.variant.tsx",
               },
             ],
           },
@@ -395,13 +424,15 @@ export const sectionList: NewSectionType[] = [
         components: [
           {
             meta: application_ui_cookie_banner_simple_cookie_banner_component,
+            slug: "simple-cookie-banner",
             variants: [
               {
                 name: "simple-cookie-banner",
-                component:
+                variantComponent:
                   application_ui_cookie_banner_simple_cookie_banner_simple_cookie_banner_variant,
-                slugPreviewFile:
-                  "@/cuicui/application-ui/cookie-banner/simple-cookie-banner/simple-cookie-banner.variant",
+                slug: "simple-cookie-banner",
+                pathname:
+                  "cuicui/application-ui/cookie-banner/simple-cookie-banner/simple-cookie-banner.variant.tsx",
               },
             ],
           },
@@ -413,13 +444,15 @@ export const sectionList: NewSectionType[] = [
         components: [
           {
             meta: application_ui_dropdown_menu_mac_os_dropdown_component,
+            slug: "mac-os-dropdown",
             variants: [
               {
                 name: "mac-os-dropdown",
-                component:
+                variantComponent:
                   application_ui_dropdown_menu_mac_os_dropdown_mac_os_dropdown_variant,
-                slugPreviewFile:
-                  "@/cuicui/application-ui/dropdown-menu/mac-os-dropdown/mac-os-dropdown.variant",
+                slug: "mac-os-dropdown",
+                pathname:
+                  "cuicui/application-ui/dropdown-menu/mac-os-dropdown/mac-os-dropdown.variant.tsx",
               },
             ],
           },
@@ -431,24 +464,29 @@ export const sectionList: NewSectionType[] = [
         components: [
           {
             meta: application_ui_kbd_modern_3d_kbd_component,
+            slug: "modern-3d-kbd",
             variants: [
               {
                 name: "default",
-                component: application_ui_kbd_modern_3d_kbd_default_variant,
-                slugPreviewFile:
-                  "@/cuicui/application-ui/kbd/modern-3d-kbd/default.variant",
+                variantComponent:
+                  application_ui_kbd_modern_3d_kbd_default_variant,
+                slug: "default",
+                pathname:
+                  "cuicui/application-ui/kbd/modern-3d-kbd/default.variant.tsx",
               },
             ],
           },
           {
             meta: application_ui_kbd_modern_detailed_kbd_component,
+            slug: "modern-detailed-kbd",
             variants: [
               {
                 name: "default",
-                component:
+                variantComponent:
                   application_ui_kbd_modern_detailed_kbd_default_variant,
-                slugPreviewFile:
-                  "@/cuicui/application-ui/kbd/modern-detailed-kbd/default.variant",
+                slug: "default",
+                pathname:
+                  "cuicui/application-ui/kbd/modern-detailed-kbd/default.variant.tsx",
               },
             ],
           },
@@ -460,13 +498,15 @@ export const sectionList: NewSectionType[] = [
         components: [
           {
             meta: application_ui_notification_dynamic_island_notification_component,
+            slug: "dynamic-island-notification",
             variants: [
               {
                 name: "dynamic-island-notification",
-                component:
+                variantComponent:
                   application_ui_notification_dynamic_island_notification_dynamic_island_notification_variant,
-                slugPreviewFile:
-                  "@/cuicui/application-ui/notification/dynamic-island-notification/dynamic-island-notification.variant",
+                slug: "dynamic-island-notification",
+                pathname:
+                  "cuicui/application-ui/notification/dynamic-island-notification/dynamic-island-notification.variant.tsx",
               },
             ],
           },
@@ -478,13 +518,15 @@ export const sectionList: NewSectionType[] = [
         components: [
           {
             meta: application_ui_search_bars_growing_search_component,
+            slug: "growing-search",
             variants: [
               {
                 name: "default",
-                component:
+                variantComponent:
                   application_ui_search_bars_growing_search_default_variant,
-                slugPreviewFile:
-                  "@/cuicui/application-ui/search-bars/growing-search/default.variant",
+                slug: "default",
+                pathname:
+                  "cuicui/application-ui/search-bars/growing-search/default.variant.tsx",
               },
             ],
           },
@@ -496,13 +538,15 @@ export const sectionList: NewSectionType[] = [
         components: [
           {
             meta: application_ui_settings_dynamic_settings_component,
+            slug: "dynamic-settings",
             variants: [
               {
                 name: "default",
-                component:
+                variantComponent:
                   application_ui_settings_dynamic_settings_default_variant,
-                slugPreviewFile:
-                  "@/cuicui/application-ui/settings/dynamic-settings/default.variant",
+                slug: "default",
+                pathname:
+                  "cuicui/application-ui/settings/dynamic-settings/default.variant.tsx",
               },
             ],
           },
@@ -514,13 +558,15 @@ export const sectionList: NewSectionType[] = [
         components: [
           {
             meta: application_ui_signature_react_signature_component,
+            slug: "react-signature",
             variants: [
               {
                 name: "react-signature",
-                component:
+                variantComponent:
                   application_ui_signature_react_signature_react_signature_variant,
-                slugPreviewFile:
-                  "@/cuicui/application-ui/signature/react-signature/react-signature.variant",
+                slug: "react-signature",
+                pathname:
+                  "cuicui/application-ui/signature/react-signature/react-signature.variant.tsx",
               },
             ],
           },
@@ -532,24 +578,28 @@ export const sectionList: NewSectionType[] = [
         components: [
           {
             meta: application_ui_sliders_elastic_slider_component,
+            slug: "elastic-slider",
             variants: [],
           },
           {
             meta: application_ui_sliders_simple_modern_slider_component,
+            slug: "simple-modern-slider",
             variants: [
               {
                 name: "simple-modern-slider",
-                component:
+                variantComponent:
                   application_ui_sliders_simple_modern_slider_simple_modern_slider_variant,
-                slugPreviewFile:
-                  "@/cuicui/application-ui/sliders/simple-modern-slider/simple-modern-slider.variant",
+                slug: "simple-modern-slider",
+                pathname:
+                  "cuicui/application-ui/sliders/simple-modern-slider/simple-modern-slider.variant.tsx",
               },
               {
                 name: "simple-modern-slider-with-max",
-                component:
+                variantComponent:
                   application_ui_sliders_simple_modern_slider_simple_modern_slider_with_max_variant,
-                slugPreviewFile:
-                  "@/cuicui/application-ui/sliders/simple-modern-slider/simple-modern-slider-with-max.variant",
+                slug: "simple-modern-slider-with-max",
+                pathname:
+                  "cuicui/application-ui/sliders/simple-modern-slider/simple-modern-slider-with-max.variant.tsx",
               },
             ],
           },
@@ -561,12 +611,15 @@ export const sectionList: NewSectionType[] = [
         components: [
           {
             meta: application_ui_static_steppers_code_component,
+            slug: "code",
             variants: [
               {
                 name: "default",
-                component: application_ui_static_steppers_code_default_variant,
-                slugPreviewFile:
-                  "@/cuicui/application-ui/static-steppers/code/default.variant",
+                variantComponent:
+                  application_ui_static_steppers_code_default_variant,
+                slug: "default",
+                pathname:
+                  "cuicui/application-ui/static-steppers/code/default.variant.tsx",
               },
             ],
           },
@@ -578,13 +631,15 @@ export const sectionList: NewSectionType[] = [
         components: [
           {
             meta: application_ui_table_of_contents_modul_inspired_component,
+            slug: "modul-inspired",
             variants: [
               {
                 name: "following-header",
-                component:
+                variantComponent:
                   application_ui_table_of_contents_modul_inspired_following_header_variant,
-                slugPreviewFile:
-                  "@/cuicui/application-ui/table-of-contents/modul-inspired/following-header.variant",
+                slug: "following-header",
+                pathname:
+                  "cuicui/application-ui/table-of-contents/modul-inspired/following-header.variant.tsx",
               },
             ],
           },
@@ -596,13 +651,15 @@ export const sectionList: NewSectionType[] = [
         components: [
           {
             meta: application_ui_theme_theme_switcher_component,
+            slug: "theme-switcher",
             variants: [
               {
                 name: "theme-switcher-button",
-                component:
+                variantComponent:
                   application_ui_theme_theme_switcher_theme_switcher_button_variant,
-                slugPreviewFile:
-                  "@/cuicui/application-ui/theme/theme-switcher/theme-switcher-button.variant",
+                slug: "theme-switcher-button",
+                pathname:
+                  "cuicui/application-ui/theme/theme-switcher/theme-switcher-button.variant.tsx",
               },
             ],
           },
@@ -614,20 +671,23 @@ export const sectionList: NewSectionType[] = [
         components: [
           {
             meta: application_ui_tree_recursive_tree_component,
+            slug: "recursive-tree",
             variants: [
               {
                 name: "recursive-tree-less-animations",
-                component:
+                variantComponent:
                   application_ui_tree_recursive_tree_recursive_tree_less_animations_variant,
-                slugPreviewFile:
-                  "@/cuicui/application-ui/tree/recursive-tree/recursive-tree-less-animations.variant",
+                slug: "recursive-tree-less-animations",
+                pathname:
+                  "cuicui/application-ui/tree/recursive-tree/recursive-tree-less-animations.variant.tsx",
               },
               {
                 name: "recursive-tree",
-                component:
+                variantComponent:
                   application_ui_tree_recursive_tree_recursive_tree_variant,
-                slugPreviewFile:
-                  "@/cuicui/application-ui/tree/recursive-tree/recursive-tree.variant",
+                slug: "recursive-tree",
+                pathname:
+                  "cuicui/application-ui/tree/recursive-tree/recursive-tree.variant.tsx",
               },
             ],
           },
@@ -637,6 +697,7 @@ export const sectionList: NewSectionType[] = [
   },
   {
     meta: common_ui_section,
+    slug: "common-ui",
     categories: [
       {
         meta: common_ui_avatars_category,
@@ -649,40 +710,50 @@ export const sectionList: NewSectionType[] = [
         components: [
           {
             meta: common_ui_badges_advanced_badges_component,
+            slug: "advanced-badges",
             variants: [
               {
                 name: "default",
-                component: common_ui_badges_advanced_badges_default_variant,
-                slugPreviewFile:
-                  "@/cuicui/common-ui/badges/advanced-badges/default.variant",
+                variantComponent:
+                  common_ui_badges_advanced_badges_default_variant,
+                slug: "default",
+                pathname:
+                  "cuicui/common-ui/badges/advanced-badges/default.variant.tsx",
               },
             ],
           },
           {
             meta: common_ui_badges_clerk_badge_component,
+            slug: "clerk-badge",
             variants: [
               {
                 name: "default",
-                component: common_ui_badges_clerk_badge_default_variant,
-                slugPreviewFile:
-                  "@/cuicui/common-ui/badges/clerk-badge/default.variant",
+                variantComponent: common_ui_badges_clerk_badge_default_variant,
+                slug: "default",
+                pathname:
+                  "cuicui/common-ui/badges/clerk-badge/default.variant.tsx",
               },
             ],
           },
           {
             meta: common_ui_badges_modern_simple_badges_component,
+            slug: "modern-simple-badges",
             variants: [
               {
                 name: "amber",
-                component: common_ui_badges_modern_simple_badges_amber_variant,
-                slugPreviewFile:
-                  "@/cuicui/common-ui/badges/modern-simple-badges/amber.variant",
+                variantComponent:
+                  common_ui_badges_modern_simple_badges_amber_variant,
+                slug: "amber",
+                pathname:
+                  "cuicui/common-ui/badges/modern-simple-badges/amber.variant.tsx",
               },
               {
                 name: "red",
-                component: common_ui_badges_modern_simple_badges_red_variant,
-                slugPreviewFile:
-                  "@/cuicui/common-ui/badges/modern-simple-badges/red.variant",
+                variantComponent:
+                  common_ui_badges_modern_simple_badges_red_variant,
+                slug: "red",
+                pathname:
+                  "cuicui/common-ui/badges/modern-simple-badges/red.variant.tsx",
               },
             ],
           },
@@ -694,13 +765,15 @@ export const sectionList: NewSectionType[] = [
         components: [
           {
             meta: common_ui_blockquotes_modern_simple_quote_component,
+            slug: "modern-simple-quote",
             variants: [
               {
                 name: "default",
-                component:
+                variantComponent:
                   common_ui_blockquotes_modern_simple_quote_default_variant,
-                slugPreviewFile:
-                  "@/cuicui/common-ui/blockquotes/modern-simple-quote/default.variant",
+                slug: "default",
+                pathname:
+                  "cuicui/common-ui/blockquotes/modern-simple-quote/default.variant.tsx",
               },
             ],
           },
@@ -712,103 +785,131 @@ export const sectionList: NewSectionType[] = [
         components: [
           {
             meta: common_ui_buttons_before_effect_button_component,
+            slug: "before-effect-button",
             variants: [
               {
                 name: "advanced-button",
-                component:
+                variantComponent:
                   common_ui_buttons_before_effect_button_advanced_button_variant,
-                slugPreviewFile:
-                  "@/cuicui/common-ui/buttons/before-effect-button/advanced-button.variant",
+                slug: "advanced-button",
+                pathname:
+                  "cuicui/common-ui/buttons/before-effect-button/advanced-button.variant.tsx",
               },
               {
                 name: "default",
-                component:
+                variantComponent:
                   common_ui_buttons_before_effect_button_default_variant,
-                slugPreviewFile:
-                  "@/cuicui/common-ui/buttons/before-effect-button/default.variant",
+                slug: "default",
+                pathname:
+                  "cuicui/common-ui/buttons/before-effect-button/default.variant.tsx",
               },
               {
                 name: "hover-only",
-                component:
+                variantComponent:
                   common_ui_buttons_before_effect_button_hover_only_variant,
-                slugPreviewFile:
-                  "@/cuicui/common-ui/buttons/before-effect-button/hover-only.variant",
+                slug: "hover-only",
+                pathname:
+                  "cuicui/common-ui/buttons/before-effect-button/hover-only.variant.tsx",
               },
             ],
           },
           {
             meta: common_ui_buttons_dual_action_button_component,
-            variants: [],
+            slug: "dual-action-button",
+            variants: [
+              {
+                name: "dual-action-button",
+                variantComponent:
+                  common_ui_buttons_dual_action_button_dual_action_button_variant,
+                slug: "dual-action-button",
+                pathname:
+                  "cuicui/common-ui/buttons/dual-action-button/dual-action-button.variant.tsx",
+              },
+            ],
           },
           {
             meta: common_ui_buttons_github_stars_component,
+            slug: "github-stars",
             variants: [
               {
                 name: "github-stars",
-                component: common_ui_buttons_github_stars_github_stars_variant,
-                slugPreviewFile:
-                  "@/cuicui/common-ui/buttons/github-stars/github-stars.variant",
+                variantComponent:
+                  common_ui_buttons_github_stars_github_stars_variant,
+                slug: "github-stars",
+                pathname:
+                  "cuicui/common-ui/buttons/github-stars/github-stars.variant.tsx",
               },
               {
                 name: "gradient-container",
-                component:
+                variantComponent:
                   common_ui_buttons_github_stars_gradient_container_variant,
-                slugPreviewFile:
-                  "@/cuicui/common-ui/buttons/github-stars/gradient-container.variant",
+                slug: "gradient-container",
+                pathname:
+                  "cuicui/common-ui/buttons/github-stars/gradient-container.variant.tsx",
               },
             ],
           },
           {
             meta: common_ui_buttons_growing_button_component,
+            slug: "growing-button",
             variants: [
               {
                 name: "default",
-                component: common_ui_buttons_growing_button_default_variant,
-                slugPreviewFile:
-                  "@/cuicui/common-ui/buttons/growing-button/default.variant",
+                variantComponent:
+                  common_ui_buttons_growing_button_default_variant,
+                slug: "default",
+                pathname:
+                  "cuicui/common-ui/buttons/growing-button/default.variant.tsx",
               },
             ],
           },
           {
             meta: common_ui_buttons_magnetic_button_component,
+            slug: "magnetic-button",
             variants: [
               {
                 name: "magnetic-background-button",
-                component:
+                variantComponent:
                   common_ui_buttons_magnetic_button_magnetic_background_button_variant,
-                slugPreviewFile:
-                  "@/cuicui/common-ui/buttons/magnetic-button/magnetic-background-button.variant",
+                slug: "magnetic-background-button",
+                pathname:
+                  "cuicui/common-ui/buttons/magnetic-button/magnetic-background-button.variant.tsx",
               },
               {
                 name: "magnetic-button",
-                component:
+                variantComponent:
                   common_ui_buttons_magnetic_button_magnetic_button_variant,
-                slugPreviewFile:
-                  "@/cuicui/common-ui/buttons/magnetic-button/magnetic-button.variant",
+                slug: "magnetic-button",
+                pathname:
+                  "cuicui/common-ui/buttons/magnetic-button/magnetic-button.variant.tsx",
               },
             ],
           },
           {
             meta: common_ui_buttons_modern_animated_button_component,
+            slug: "modern-animated-button",
             variants: [
               {
                 name: "default",
-                component:
+                variantComponent:
                   common_ui_buttons_modern_animated_button_default_variant,
-                slugPreviewFile:
-                  "@/cuicui/common-ui/buttons/modern-animated-button/default.variant",
+                slug: "default",
+                pathname:
+                  "cuicui/common-ui/buttons/modern-animated-button/default.variant.tsx",
               },
             ],
           },
           {
             meta: common_ui_buttons_shiny_rotating_border_button_component,
+            slug: "shiny-rotating-border-button",
             variants: [
               {
                 name: "shiny-rotating-border-button",
-                component:
+                variantComponent:
                   common_ui_buttons_shiny_rotating_border_button_shiny_rotating_border_button_variant,
-                slugPreviewFile:
-                  "@/cuicui/common-ui/buttons/shiny-rotating-border-button/shiny-rotating-border-button.variant",
+                slug: "shiny-rotating-border-button",
+                pathname:
+                  "cuicui/common-ui/buttons/shiny-rotating-border-button/shiny-rotating-border-button.variant.tsx",
               },
             ],
           },
@@ -820,48 +921,57 @@ export const sectionList: NewSectionType[] = [
         components: [
           {
             meta: common_ui_cards_dynamic_square_background_component,
+            slug: "dynamic-square-background",
             variants: [
               {
                 name: "dynamic-square-background",
-                component:
+                variantComponent:
                   common_ui_cards_dynamic_square_background_dynamic_square_background_variant,
-                slugPreviewFile:
-                  "@/cuicui/common-ui/cards/dynamic-square-background/dynamic-square-background.variant",
+                slug: "dynamic-square-background",
+                pathname:
+                  "cuicui/common-ui/cards/dynamic-square-background/dynamic-square-background.variant.tsx",
               },
             ],
           },
           {
             meta: common_ui_cards_hover_effect_card_component,
+            slug: "hover-effect-card",
             variants: [
               {
                 name: "hover-effect-card",
-                component:
+                variantComponent:
                   common_ui_cards_hover_effect_card_hover_effect_card_variant,
-                slugPreviewFile:
-                  "@/cuicui/common-ui/cards/hover-effect-card/hover-effect-card.variant",
+                slug: "hover-effect-card",
+                pathname:
+                  "cuicui/common-ui/cards/hover-effect-card/hover-effect-card.variant.tsx",
               },
             ],
           },
           {
             meta: common_ui_cards_modern_inner_shadow_component,
+            slug: "modern-inner-shadow",
             variants: [
               {
                 name: "default",
-                component: common_ui_cards_modern_inner_shadow_default_variant,
-                slugPreviewFile:
-                  "@/cuicui/common-ui/cards/modern-inner-shadow/default.variant",
+                variantComponent:
+                  common_ui_cards_modern_inner_shadow_default_variant,
+                slug: "default",
+                pathname:
+                  "cuicui/common-ui/cards/modern-inner-shadow/default.variant.tsx",
               },
             ],
           },
           {
             meta: common_ui_cards_notification_card_component,
+            slug: "notification-card",
             variants: [
               {
                 name: "notification-card",
-                component:
+                variantComponent:
                   common_ui_cards_notification_card_notification_card_variant,
-                slugPreviewFile:
-                  "@/cuicui/common-ui/cards/notification-card/notification-card.variant",
+                slug: "notification-card",
+                pathname:
+                  "cuicui/common-ui/cards/notification-card/notification-card.variant.tsx",
               },
             ],
           },
@@ -873,13 +983,15 @@ export const sectionList: NewSectionType[] = [
         components: [
           {
             meta: common_ui_checkboxes_simple_checkbox_component,
+            slug: "simple-checkbox",
             variants: [
               {
                 name: "simple-checkbox",
-                component:
+                variantComponent:
                   common_ui_checkboxes_simple_checkbox_simple_checkbox_variant,
-                slugPreviewFile:
-                  "@/cuicui/common-ui/checkboxes/simple-checkbox/simple-checkbox.variant",
+                slug: "simple-checkbox",
+                pathname:
+                  "cuicui/common-ui/checkboxes/simple-checkbox/simple-checkbox.variant.tsx",
               },
             ],
           },
@@ -891,24 +1003,29 @@ export const sectionList: NewSectionType[] = [
         components: [
           {
             meta: common_ui_inputs_droppable_file_component,
+            slug: "droppable-file",
             variants: [
               {
                 name: "default",
-                component: common_ui_inputs_droppable_file_default_variant,
-                slugPreviewFile:
-                  "@/cuicui/common-ui/inputs/droppable-file/default.variant",
+                variantComponent:
+                  common_ui_inputs_droppable_file_default_variant,
+                slug: "default",
+                pathname:
+                  "cuicui/common-ui/inputs/droppable-file/default.variant.tsx",
               },
             ],
           },
           {
             meta: common_ui_inputs_modern_simple_input_component,
+            slug: "modern-simple-input",
             variants: [
               {
                 name: "simple-modern-input",
-                component:
+                variantComponent:
                   common_ui_inputs_modern_simple_input_simple_modern_input_variant,
-                slugPreviewFile:
-                  "@/cuicui/common-ui/inputs/modern-simple-input/simple-modern-input.variant",
+                slug: "simple-modern-input",
+                pathname:
+                  "cuicui/common-ui/inputs/modern-simple-input/simple-modern-input.variant.tsx",
               },
             ],
           },
@@ -920,53 +1037,61 @@ export const sectionList: NewSectionType[] = [
         components: [
           {
             meta: common_ui_loaders_spinner_loader_component,
+            slug: "spinner-loader",
             variants: [
               {
                 name: "circular-bars-spinner-loader",
-                component:
+                variantComponent:
                   common_ui_loaders_spinner_loader_circular_bars_spinner_loader_variant,
-                slugPreviewFile:
-                  "@/cuicui/common-ui/loaders/spinner-loader/circular-bars-spinner-loader.variant",
+                slug: "circular-bars-spinner-loader",
+                pathname:
+                  "cuicui/common-ui/loaders/spinner-loader/circular-bars-spinner-loader.variant.tsx",
               },
               {
                 name: "dual-ring-spinner-loader",
-                component:
+                variantComponent:
                   common_ui_loaders_spinner_loader_dual_ring_spinner_loader_variant,
-                slugPreviewFile:
-                  "@/cuicui/common-ui/loaders/spinner-loader/dual-ring-spinner-loader.variant",
+                slug: "dual-ring-spinner-loader",
+                pathname:
+                  "cuicui/common-ui/loaders/spinner-loader/dual-ring-spinner-loader.variant.tsx",
               },
               {
                 name: "spinner-loader",
-                component:
+                variantComponent:
                   common_ui_loaders_spinner_loader_spinner_loader_variant,
-                slugPreviewFile:
-                  "@/cuicui/common-ui/loaders/spinner-loader/spinner-loader.variant",
+                slug: "spinner-loader",
+                pathname:
+                  "cuicui/common-ui/loaders/spinner-loader/spinner-loader.variant.tsx",
               },
             ],
           },
           {
             meta: common_ui_loaders_three_dot_simple_loader_component,
+            slug: "three-dot-simple-loader",
             variants: [
               {
                 name: "nine-dot-grid-random",
-                component:
+                variantComponent:
                   common_ui_loaders_three_dot_simple_loader_nine_dot_grid_random_variant,
-                slugPreviewFile:
-                  "@/cuicui/common-ui/loaders/three-dot-simple-loader/nine-dot-grid-random.variant",
+                slug: "nine-dot-grid-random",
+                pathname:
+                  "cuicui/common-ui/loaders/three-dot-simple-loader/nine-dot-grid-random.variant.tsx",
               },
               {
                 name: "three-dot-loader-growing",
-                component:
+                variantComponent:
                   common_ui_loaders_three_dot_simple_loader_three_dot_loader_growing_variant,
-                slugPreviewFile:
-                  "@/cuicui/common-ui/loaders/three-dot-simple-loader/three-dot-loader-growing.variant",
+                slug: "three-dot-loader-growing",
+                pathname:
+                  "cuicui/common-ui/loaders/three-dot-simple-loader/three-dot-loader-growing.variant.tsx",
               },
               {
                 name: "three-dot-simple-loader",
-                component:
+                variantComponent:
                   common_ui_loaders_three_dot_simple_loader_three_dot_simple_loader_variant,
-                slugPreviewFile:
-                  "@/cuicui/common-ui/loaders/three-dot-simple-loader/three-dot-simple-loader.variant",
+                slug: "three-dot-simple-loader",
+                pathname:
+                  "cuicui/common-ui/loaders/three-dot-simple-loader/three-dot-simple-loader.variant.tsx",
               },
             ],
           },
@@ -978,43 +1103,50 @@ export const sectionList: NewSectionType[] = [
         components: [
           {
             meta: common_ui_navigation_mac_dock_component,
+            slug: "mac-dock",
             variants: [
               {
                 name: "default",
-                component: common_ui_navigation_mac_dock_default_variant,
-                slugPreviewFile:
-                  "@/cuicui/common-ui/navigation/mac-dock/default.variant",
+                variantComponent: common_ui_navigation_mac_dock_default_variant,
+                slug: "default",
+                pathname:
+                  "cuicui/common-ui/navigation/mac-dock/default.variant.tsx",
               },
             ],
           },
           {
             meta: common_ui_navigation_side_menu_smooth_hover_component,
+            slug: "side-menu-smooth-hover",
             variants: [
               {
                 name: "sidemenu",
-                component:
+                variantComponent:
                   common_ui_navigation_side_menu_smooth_hover_sidemenu_variant,
-                slugPreviewFile:
-                  "@/cuicui/common-ui/navigation/side-menu-smooth-hover/sidemenu.variant",
+                slug: "sidemenu",
+                pathname:
+                  "cuicui/common-ui/navigation/side-menu-smooth-hover/sidemenu.variant.tsx",
               },
             ],
           },
           {
             meta: common_ui_navigation_vercel_navigation_component,
+            slug: "vercel-navigation",
             variants: [
               {
                 name: "variant1",
-                component:
+                variantComponent:
                   common_ui_navigation_vercel_navigation_variant1_variant,
-                slugPreviewFile:
-                  "@/cuicui/common-ui/navigation/vercel-navigation/variant1.variant",
+                slug: "variant1",
+                pathname:
+                  "cuicui/common-ui/navigation/vercel-navigation/variant1.variant.tsx",
               },
               {
                 name: "variant2",
-                component:
+                variantComponent:
                   common_ui_navigation_vercel_navigation_variant2_variant,
-                slugPreviewFile:
-                  "@/cuicui/common-ui/navigation/vercel-navigation/variant2.variant",
+                slug: "variant2",
+                pathname:
+                  "cuicui/common-ui/navigation/vercel-navigation/variant2.variant.tsx",
               },
             ],
           },
@@ -1026,30 +1158,37 @@ export const sectionList: NewSectionType[] = [
         components: [
           {
             meta: common_ui_skeletons_classic_pulse_component,
+            slug: "classic-pulse",
             variants: [
               {
                 name: "default",
-                component: common_ui_skeletons_classic_pulse_default_variant,
-                slugPreviewFile:
-                  "@/cuicui/common-ui/skeletons/classic-pulse/default.variant",
+                variantComponent:
+                  common_ui_skeletons_classic_pulse_default_variant,
+                slug: "default",
+                pathname:
+                  "cuicui/common-ui/skeletons/classic-pulse/default.variant.tsx",
               },
             ],
           },
           {
             meta: common_ui_skeletons_shiny_gradient_component,
+            slug: "shiny-gradient",
             variants: [
               {
                 name: "horizontal",
-                component:
+                variantComponent:
                   common_ui_skeletons_shiny_gradient_horizontal_variant,
-                slugPreviewFile:
-                  "@/cuicui/common-ui/skeletons/shiny-gradient/horizontal.variant",
+                slug: "horizontal",
+                pathname:
+                  "cuicui/common-ui/skeletons/shiny-gradient/horizontal.variant.tsx",
               },
               {
                 name: "vertical",
-                component: common_ui_skeletons_shiny_gradient_vertical_variant,
-                slugPreviewFile:
-                  "@/cuicui/common-ui/skeletons/shiny-gradient/vertical.variant",
+                variantComponent:
+                  common_ui_skeletons_shiny_gradient_vertical_variant,
+                slug: "vertical",
+                pathname:
+                  "cuicui/common-ui/skeletons/shiny-gradient/vertical.variant.tsx",
               },
             ],
           },
@@ -1064,6 +1203,7 @@ export const sectionList: NewSectionType[] = [
   },
   {
     meta: marketing_ui_section,
+    slug: "marketing-ui",
     categories: [
       {
         meta: marketing_ui_carousels_category,
@@ -1071,25 +1211,29 @@ export const sectionList: NewSectionType[] = [
         components: [
           {
             meta: marketing_ui_carousels_cylindric_3d_carousel_component,
+            slug: "cylindric-3d-carousel",
             variants: [
               {
                 name: "default",
-                component:
+                variantComponent:
                   marketing_ui_carousels_cylindric_3d_carousel_default_variant,
-                slugPreviewFile:
-                  "@/cuicui/marketing-ui/carousels/cylindric-3d-carousel/default.variant",
+                slug: "default",
+                pathname:
+                  "cuicui/marketing-ui/carousels/cylindric-3d-carousel/default.variant.tsx",
               },
             ],
           },
           {
             meta: marketing_ui_carousels_simple_carousel_component,
+            slug: "simple-carousel",
             variants: [
               {
                 name: "simple-carousel",
-                component:
+                variantComponent:
                   marketing_ui_carousels_simple_carousel_simple_carousel_variant,
-                slugPreviewFile:
-                  "@/cuicui/marketing-ui/carousels/simple-carousel/simple-carousel.variant",
+                slug: "simple-carousel",
+                pathname:
+                  "cuicui/marketing-ui/carousels/simple-carousel/simple-carousel.variant.tsx",
               },
             ],
           },
@@ -1101,38 +1245,45 @@ export const sectionList: NewSectionType[] = [
         components: [
           {
             meta: marketing_ui_faq_full_section_component,
+            slug: "full-section",
             variants: [
               {
                 name: "full-section",
-                component: marketing_ui_faq_full_section_full_section_variant,
-                slugPreviewFile:
-                  "@/cuicui/marketing-ui/faq/full-section/full-section.variant",
+                variantComponent:
+                  marketing_ui_faq_full_section_full_section_variant,
+                slug: "full-section",
+                pathname:
+                  "cuicui/marketing-ui/faq/full-section/full-section.variant.tsx",
               },
             ],
           },
           {
             meta: marketing_ui_faq_gradient_qna_component,
+            slug: "gradient-qna",
             variants: [
               {
                 name: "custom-chevron-style",
-                component:
+                variantComponent:
                   marketing_ui_faq_gradient_qna_custom_chevron_style_variant,
-                slugPreviewFile:
-                  "@/cuicui/marketing-ui/faq/gradient-qna/custom-chevron-style.variant",
+                slug: "custom-chevron-style",
+                pathname:
+                  "cuicui/marketing-ui/faq/gradient-qna/custom-chevron-style.variant.tsx",
               },
               {
                 name: "double-container",
-                component:
+                variantComponent:
                   marketing_ui_faq_gradient_qna_double_container_variant,
-                slugPreviewFile:
-                  "@/cuicui/marketing-ui/faq/gradient-qna/double-container.variant",
+                slug: "double-container",
+                pathname:
+                  "cuicui/marketing-ui/faq/gradient-qna/double-container.variant.tsx",
               },
               {
                 name: "simple-container",
-                component:
+                variantComponent:
                   marketing_ui_faq_gradient_qna_simple_container_variant,
-                slugPreviewFile:
-                  "@/cuicui/marketing-ui/faq/gradient-qna/simple-container.variant",
+                slug: "simple-container",
+                pathname:
+                  "cuicui/marketing-ui/faq/gradient-qna/simple-container.variant.tsx",
               },
             ],
           },
@@ -1144,31 +1295,37 @@ export const sectionList: NewSectionType[] = [
         components: [
           {
             meta: marketing_ui_features_animated_cards_component,
+            slug: "animated-cards",
             variants: [
               {
                 name: "default",
-                component: marketing_ui_features_animated_cards_default_variant,
-                slugPreviewFile:
-                  "@/cuicui/marketing-ui/features/animated-cards/default.variant",
+                variantComponent:
+                  marketing_ui_features_animated_cards_default_variant,
+                slug: "default",
+                pathname:
+                  "cuicui/marketing-ui/features/animated-cards/default.variant.tsx",
               },
             ],
           },
           {
             meta: marketing_ui_features_feature_four_images_component,
+            slug: "feature-four-images",
             variants: [
               {
                 name: "variant1",
-                component:
+                variantComponent:
                   marketing_ui_features_feature_four_images_variant1_variant,
-                slugPreviewFile:
-                  "@/cuicui/marketing-ui/features/feature-four-images/variant1.variant",
+                slug: "variant1",
+                pathname:
+                  "cuicui/marketing-ui/features/feature-four-images/variant1.variant.tsx",
               },
               {
                 name: "variant2",
-                component:
+                variantComponent:
                   marketing_ui_features_feature_four_images_variant2_variant,
-                slugPreviewFile:
-                  "@/cuicui/marketing-ui/features/feature-four-images/variant2.variant",
+                slug: "variant2",
+                pathname:
+                  "cuicui/marketing-ui/features/feature-four-images/variant2.variant.tsx",
               },
             ],
           },
@@ -1180,13 +1337,15 @@ export const sectionList: NewSectionType[] = [
         components: [
           {
             meta: marketing_ui_footer_sticky_footer_component,
+            slug: "sticky-footer",
             variants: [
               {
                 name: "sticky-footer",
-                component:
+                variantComponent:
                   marketing_ui_footer_sticky_footer_sticky_footer_variant,
-                slugPreviewFile:
-                  "@/cuicui/marketing-ui/footer/sticky-footer/sticky-footer.variant",
+                slug: "sticky-footer",
+                pathname:
+                  "cuicui/marketing-ui/footer/sticky-footer/sticky-footer.variant.tsx",
               },
             ],
           },
@@ -1198,25 +1357,29 @@ export const sectionList: NewSectionType[] = [
         components: [
           {
             meta: marketing_ui_pricing_tables_gradient_component,
+            slug: "gradient",
             variants: [
               {
                 name: "pricing-table-gradient",
-                component:
+                variantComponent:
                   marketing_ui_pricing_tables_gradient_pricing_table_gradient_variant,
-                slugPreviewFile:
-                  "@/cuicui/marketing-ui/pricing-tables/gradient/pricing-table-gradient.variant",
+                slug: "pricing-table-gradient",
+                pathname:
+                  "cuicui/marketing-ui/pricing-tables/gradient/pricing-table-gradient.variant.tsx",
               },
             ],
           },
           {
             meta: marketing_ui_pricing_tables_many_offers_component,
+            slug: "many-offers",
             variants: [
               {
                 name: "artlist-inspired",
-                component:
+                variantComponent:
                   marketing_ui_pricing_tables_many_offers_artlist_inspired_variant,
-                slugPreviewFile:
-                  "@/cuicui/marketing-ui/pricing-tables/many-offers/artlist-inspired.variant",
+                slug: "artlist-inspired",
+                pathname:
+                  "cuicui/marketing-ui/pricing-tables/many-offers/artlist-inspired.variant.tsx",
               },
             ],
           },
@@ -1228,49 +1391,57 @@ export const sectionList: NewSectionType[] = [
         components: [
           {
             meta: marketing_ui_statistics_animated_counter_component,
+            slug: "animated-counter",
             variants: [
               {
                 name: "animated-counter",
-                component:
+                variantComponent:
                   marketing_ui_statistics_animated_counter_animated_counter_variant,
-                slugPreviewFile:
-                  "@/cuicui/marketing-ui/statistics/animated-counter/animated-counter.variant",
+                slug: "animated-counter",
+                pathname:
+                  "cuicui/marketing-ui/statistics/animated-counter/animated-counter.variant.tsx",
               },
             ],
           },
           {
             meta: marketing_ui_statistics_animated_on_scroll_component,
+            slug: "animated-on-scroll",
             variants: [
               {
                 name: "default",
-                component:
+                variantComponent:
                   marketing_ui_statistics_animated_on_scroll_default_variant,
-                slugPreviewFile:
-                  "@/cuicui/marketing-ui/statistics/animated-on-scroll/default.variant",
+                slug: "default",
+                pathname:
+                  "cuicui/marketing-ui/statistics/animated-on-scroll/default.variant.tsx",
               },
             ],
           },
           {
             meta: marketing_ui_statistics_increase_to_value_component,
+            slug: "increase-to-value",
             variants: [
               {
                 name: "default",
-                component:
+                variantComponent:
                   marketing_ui_statistics_increase_to_value_default_variant,
-                slugPreviewFile:
-                  "@/cuicui/marketing-ui/statistics/increase-to-value/default.variant",
+                slug: "default",
+                pathname:
+                  "cuicui/marketing-ui/statistics/increase-to-value/default.variant.tsx",
               },
             ],
           },
           {
             meta: marketing_ui_statistics_trigger_on_scroll_component,
+            slug: "trigger-on-scroll",
             variants: [
               {
                 name: "default",
-                component:
+                variantComponent:
                   marketing_ui_statistics_trigger_on_scroll_default_variant,
-                slugPreviewFile:
-                  "@/cuicui/marketing-ui/statistics/trigger-on-scroll/default.variant",
+                slug: "default",
+                pathname:
+                  "cuicui/marketing-ui/statistics/trigger-on-scroll/default.variant.tsx",
               },
             ],
           },
@@ -1282,30 +1453,37 @@ export const sectionList: NewSectionType[] = [
         components: [
           {
             meta: marketing_ui_testimonials_marquee_component,
+            slug: "marquee",
             variants: [
               {
                 name: "horizontal",
-                component: marketing_ui_testimonials_marquee_horizontal_variant,
-                slugPreviewFile:
-                  "@/cuicui/marketing-ui/testimonials/marquee/horizontal.variant",
+                variantComponent:
+                  marketing_ui_testimonials_marquee_horizontal_variant,
+                slug: "horizontal",
+                pathname:
+                  "cuicui/marketing-ui/testimonials/marquee/horizontal.variant.tsx",
               },
               {
                 name: "vertical",
-                component: marketing_ui_testimonials_marquee_vertical_variant,
-                slugPreviewFile:
-                  "@/cuicui/marketing-ui/testimonials/marquee/vertical.variant",
+                variantComponent:
+                  marketing_ui_testimonials_marquee_vertical_variant,
+                slug: "vertical",
+                pathname:
+                  "cuicui/marketing-ui/testimonials/marquee/vertical.variant.tsx",
               },
             ],
           },
           {
             meta: marketing_ui_testimonials_testimonials_component_component,
+            slug: "testimonials-component",
             variants: [
               {
                 name: "default",
-                component:
+                variantComponent:
                   marketing_ui_testimonials_testimonials_component_default_variant,
-                slugPreviewFile:
-                  "@/cuicui/marketing-ui/testimonials/testimonials-component/default.variant",
+                slug: "default",
+                pathname:
+                  "cuicui/marketing-ui/testimonials/testimonials-component/default.variant.tsx",
               },
             ],
           },
@@ -1315,6 +1493,7 @@ export const sectionList: NewSectionType[] = [
   },
   {
     meta: other_section,
+    slug: "other",
     categories: [
       {
         meta: other_creative_effects_category,
@@ -1322,55 +1501,65 @@ export const sectionList: NewSectionType[] = [
         components: [
           {
             meta: other_creative_effects_animated_noise_component,
+            slug: "animated-noise",
             variants: [
               {
                 name: "animated-noise",
-                component:
+                variantComponent:
                   other_creative_effects_animated_noise_animated_noise_variant,
-                slugPreviewFile:
-                  "@/cuicui/other/creative-effects/animated-noise/animated-noise.variant",
+                slug: "animated-noise",
+                pathname:
+                  "cuicui/other/creative-effects/animated-noise/animated-noise.variant.tsx",
               },
               {
                 name: "static-noise",
-                component:
+                variantComponent:
                   other_creative_effects_animated_noise_static_noise_variant,
-                slugPreviewFile:
-                  "@/cuicui/other/creative-effects/animated-noise/static-noise.variant",
+                slug: "static-noise",
+                pathname:
+                  "cuicui/other/creative-effects/animated-noise/static-noise.variant.tsx",
               },
             ],
           },
           {
             meta: other_creative_effects_border_trail_component,
+            slug: "border-trail",
             variants: [
               {
                 name: "border-trail",
-                component:
+                variantComponent:
                   other_creative_effects_border_trail_border_trail_variant,
-                slugPreviewFile:
-                  "@/cuicui/other/creative-effects/border-trail/border-trail.variant",
+                slug: "border-trail",
+                pathname:
+                  "cuicui/other/creative-effects/border-trail/border-trail.variant.tsx",
               },
             ],
           },
           {
             meta: other_creative_effects_bottom_blur_out_component,
+            slug: "bottom-blur-out",
             variants: [
               {
                 name: "bottom-blur-out",
-                component:
+                variantComponent:
                   other_creative_effects_bottom_blur_out_bottom_blur_out_variant,
-                slugPreviewFile:
-                  "@/cuicui/other/creative-effects/bottom-blur-out/bottom-blur-out.variant",
+                slug: "bottom-blur-out",
+                pathname:
+                  "cuicui/other/creative-effects/bottom-blur-out/bottom-blur-out.variant.tsx",
               },
             ],
           },
           {
             meta: other_creative_effects_wavy_line_component,
+            slug: "wavy-line",
             variants: [
               {
                 name: "wavy-line",
-                component: other_creative_effects_wavy_line_wavy_line_variant,
-                slugPreviewFile:
-                  "@/cuicui/other/creative-effects/wavy-line/wavy-line.variant",
+                variantComponent:
+                  other_creative_effects_wavy_line_wavy_line_variant,
+                slug: "wavy-line",
+                pathname:
+                  "cuicui/other/creative-effects/wavy-line/wavy-line.variant.tsx",
               },
             ],
           },
@@ -1382,37 +1571,45 @@ export const sectionList: NewSectionType[] = [
         components: [
           {
             meta: other_cursors_dynamic_cards_component,
+            slug: "dynamic-cards",
             variants: [
               {
                 name: "gradient-card-effect",
-                component:
+                variantComponent:
                   other_cursors_dynamic_cards_gradient_card_effect_variant,
-                slugPreviewFile:
-                  "@/cuicui/other/cursors/dynamic-cards/gradient-card-effect.variant",
+                slug: "gradient-card-effect",
+                pathname:
+                  "cuicui/other/cursors/dynamic-cards/gradient-card-effect.variant.tsx",
               },
               {
                 name: "only-border-card-effect",
-                component:
+                variantComponent:
                   other_cursors_dynamic_cards_only_border_card_effect_variant,
-                slugPreviewFile:
-                  "@/cuicui/other/cursors/dynamic-cards/only-border-card-effect.variant",
+                slug: "only-border-card-effect",
+                pathname:
+                  "cuicui/other/cursors/dynamic-cards/only-border-card-effect.variant.tsx",
               },
             ],
           },
           {
             meta: other_cursors_follow_cursor_component,
+            slug: "follow-cursor",
             variants: [
               {
                 name: "replace-cursor",
-                component: other_cursors_follow_cursor_replace_cursor_variant,
-                slugPreviewFile:
-                  "@/cuicui/other/cursors/follow-cursor/replace-cursor.variant",
+                variantComponent:
+                  other_cursors_follow_cursor_replace_cursor_variant,
+                slug: "replace-cursor",
+                pathname:
+                  "cuicui/other/cursors/follow-cursor/replace-cursor.variant.tsx",
               },
               {
                 name: "with-cursor",
-                component: other_cursors_follow_cursor_with_cursor_variant,
-                slugPreviewFile:
-                  "@/cuicui/other/cursors/follow-cursor/with-cursor.variant",
+                variantComponent:
+                  other_cursors_follow_cursor_with_cursor_variant,
+                slug: "with-cursor",
+                pathname:
+                  "cuicui/other/cursors/follow-cursor/with-cursor.variant.tsx",
               },
             ],
           },
@@ -1424,33 +1621,39 @@ export const sectionList: NewSectionType[] = [
         components: [
           {
             meta: other_mock_ups_airpods_component,
+            slug: "airpods",
             variants: [],
           },
           {
             meta: other_mock_ups_laptops_component,
+            slug: "laptops",
             variants: [
               {
                 name: "mackbook",
-                component: other_mock_ups_laptops_mackbook_variant,
-                slugPreviewFile:
-                  "@/cuicui/other/mock-ups/laptops/mackbook.variant",
+                variantComponent: other_mock_ups_laptops_mackbook_variant,
+                slug: "mackbook",
+                pathname: "cuicui/other/mock-ups/laptops/mackbook.variant.tsx",
               },
             ],
           },
           {
             meta: other_mock_ups_smartphone_component,
+            slug: "smartphone",
             variants: [
               {
                 name: "google-pixel",
-                component: other_mock_ups_smartphone_google_pixel_variant,
-                slugPreviewFile:
-                  "@/cuicui/other/mock-ups/smartphone/google-pixel.variant",
+                variantComponent:
+                  other_mock_ups_smartphone_google_pixel_variant,
+                slug: "google-pixel",
+                pathname:
+                  "cuicui/other/mock-ups/smartphone/google-pixel.variant.tsx",
               },
               {
                 name: "iphone14",
-                component: other_mock_ups_smartphone_iphone14_variant,
-                slugPreviewFile:
-                  "@/cuicui/other/mock-ups/smartphone/iphone14.variant",
+                variantComponent: other_mock_ups_smartphone_iphone14_variant,
+                slug: "iphone14",
+                pathname:
+                  "cuicui/other/mock-ups/smartphone/iphone14.variant.tsx",
               },
             ],
           },
@@ -1462,14 +1665,17 @@ export const sectionList: NewSectionType[] = [
         components: [
           {
             meta: other_patterns_dots_pattern_component,
+            slug: "dots-pattern",
             variants: [],
           },
           {
             meta: other_patterns_grid_pattern_component,
+            slug: "grid-pattern",
             variants: [],
           },
           {
             meta: other_patterns_moving_bands_component,
+            slug: "moving-bands",
             variants: [],
           },
         ],
@@ -1480,25 +1686,29 @@ export const sectionList: NewSectionType[] = [
         components: [
           {
             meta: other_qr_code_bar_code_generator_component,
+            slug: "bar-code-generator",
             variants: [
               {
                 name: "bar-code-generator",
-                component:
+                variantComponent:
                   other_qr_code_bar_code_generator_bar_code_generator_variant,
-                slugPreviewFile:
-                  "@/cuicui/other/qr-code/bar-code-generator/bar-code-generator.variant",
+                slug: "bar-code-generator",
+                pathname:
+                  "cuicui/other/qr-code/bar-code-generator/bar-code-generator.variant.tsx",
               },
             ],
           },
           {
             meta: other_qr_code_qr_code_generator_component,
+            slug: "qr-code-generator",
             variants: [
               {
                 name: "qr-code-generator",
-                component:
+                variantComponent:
                   other_qr_code_qr_code_generator_qr_code_generator_variant,
-                slugPreviewFile:
-                  "@/cuicui/other/qr-code/qr-code-generator/qr-code-generator.variant",
+                slug: "qr-code-generator",
+                pathname:
+                  "cuicui/other/qr-code/qr-code-generator/qr-code-generator.variant.tsx",
               },
             ],
           },
@@ -1510,39 +1720,45 @@ export const sectionList: NewSectionType[] = [
         components: [
           {
             meta: other_transition_wrappers_blur_appear_component,
+            slug: "blur-appear",
             variants: [
               {
                 name: "default",
-                component:
+                variantComponent:
                   other_transition_wrappers_blur_appear_default_variant,
-                slugPreviewFile:
-                  "@/cuicui/other/transition-wrappers/blur-appear/default.variant",
+                slug: "default",
+                pathname:
+                  "cuicui/other/transition-wrappers/blur-appear/default.variant.tsx",
               },
             ],
           },
           {
             meta: other_transition_wrappers_text_effect_wrapper_component,
+            slug: "text-effect-wrapper",
             variants: [
               {
                 name: "per-char",
-                component:
+                variantComponent:
                   other_transition_wrappers_text_effect_wrapper_per_char_variant,
-                slugPreviewFile:
-                  "@/cuicui/other/transition-wrappers/text-effect-wrapper/per-char.variant",
+                slug: "per-char",
+                pathname:
+                  "cuicui/other/transition-wrappers/text-effect-wrapper/per-char.variant.tsx",
               },
               {
                 name: "per-line",
-                component:
+                variantComponent:
                   other_transition_wrappers_text_effect_wrapper_per_line_variant,
-                slugPreviewFile:
-                  "@/cuicui/other/transition-wrappers/text-effect-wrapper/per-line.variant",
+                slug: "per-line",
+                pathname:
+                  "cuicui/other/transition-wrappers/text-effect-wrapper/per-line.variant.tsx",
               },
               {
                 name: "per-word",
-                component:
+                variantComponent:
                   other_transition_wrappers_text_effect_wrapper_per_word_variant,
-                slugPreviewFile:
-                  "@/cuicui/other/transition-wrappers/text-effect-wrapper/per-word.variant",
+                slug: "per-word",
+                pathname:
+                  "cuicui/other/transition-wrappers/text-effect-wrapper/per-word.variant.tsx",
               },
             ],
           },
@@ -1552,21 +1768,63 @@ export const sectionList: NewSectionType[] = [
   },
   {
     meta: utils_section,
+    slug: "utils",
     categories: [
       {
         meta: utils_catch_error_category,
         slug: "catch-error",
-        components: [],
+        components: [
+          {
+            meta: utils_catch_error_catch_error_component,
+            slug: "catch-error",
+            variants: [
+              {
+                name: "catch-error",
+                variantComponent:
+                  utils_catch_error_catch_error_catch_error_variant,
+                slug: "catch-error",
+                pathname:
+                  "cuicui/utils/catch-error/catch-error/catch-error.variant.tsx",
+              },
+            ],
+          },
+        ],
       },
       {
         meta: utils_cn_category,
         slug: "cn",
-        components: [],
+        components: [
+          {
+            meta: utils_cn_cn_component,
+            slug: "cn",
+            variants: [
+              {
+                name: "default",
+                variantComponent: utils_cn_cn_default_variant,
+                slug: "default",
+                pathname: "cuicui/utils/cn/cn/default.variant.tsx",
+              },
+            ],
+          },
+        ],
       },
       {
         meta: utils_sleep_category,
         slug: "sleep",
-        components: [],
+        components: [
+          {
+            meta: utils_sleep_sleep_component,
+            slug: "sleep",
+            variants: [
+              {
+                name: "sleep",
+                variantComponent: utils_sleep_sleep_sleep_variant,
+                slug: "sleep",
+                pathname: "cuicui/utils/sleep/sleep/sleep.variant.tsx",
+              },
+            ],
+          },
+        ],
       },
     ],
   },

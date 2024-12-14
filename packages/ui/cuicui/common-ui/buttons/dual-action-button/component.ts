@@ -1,4 +1,4 @@
-import { PreviewDualActionButton } from "@/cuicui/common-ui/buttons/dual-action-button/preview.dual-action-button";
+import { PreviewDualActionButton } from "@/cuicui/common-ui/buttons/dual-action-button/dual-action-button.variant";
 import type { ComponentType } from "@/lib/types/component";
 
 export const dualActionButtonComponent: ComponentType = {

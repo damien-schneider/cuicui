@@ -1,6 +1,6 @@
 import { ChartNoAxesGanttIcon } from "lucide-react";
 import type { SingleComponentCategoryType } from "@/lib/types/component";
-import PreviewCn from "@/cuicui/utils/cn/preview.cn";
+import PreviewCn from "@/cuicui/utils/cn/cn/default.variant";
 
 export const cnCategory: SingleComponentCategoryType = {
   name: "ClassNames",

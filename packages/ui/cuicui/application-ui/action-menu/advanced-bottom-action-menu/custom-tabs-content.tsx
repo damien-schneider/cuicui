@@ -9,7 +9,7 @@ import {
   type ElementRef,
   forwardRef,
 } from "react";
-import { cn } from "@/cuicui/utils/cn/cn";
+import { cn } from "@/cuicui/utils/cn";
 
 const Tabs = TabsPrimitive.Root;
 

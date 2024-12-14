@@ -13,7 +13,7 @@ import {
   CommandInput,
   CommandList,
 } from "#/src/ui/shadcn/command";
-import { cn } from "@/cuicui/utils/cn/cn";
+import { cn } from "@/cuicui/utils/cn";
 
 export function SearchMenu({ ...props }: ComponentProps<"button">) {
   const [open, setOpen] = useState(false);

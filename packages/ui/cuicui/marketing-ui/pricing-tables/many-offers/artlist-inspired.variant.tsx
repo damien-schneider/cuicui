@@ -2,7 +2,7 @@
 import { motion } from "motion/react";
 import { CheckIcon, EuroIcon } from "lucide-react";
 import { useState } from "react";
-import { cn } from "@/cuicui/utils/cn/cn";
+import { cn } from "@/cuicui/utils/cn";
 type BilledType = "monthly" | "annually";
 
 const pricingData: OfferCardProps[] = [

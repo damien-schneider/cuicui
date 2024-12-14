@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { cn } from "@/cuicui/utils/cn/cn";
+import { cn } from "@/cuicui/utils/cn";
 
 export default function PreviewCn() {
   const [isViolet, setIsViolet] = useState(false);

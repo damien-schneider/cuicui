@@ -1,5 +1,5 @@
 "use client";
-import { cn } from "@/cuicui/utils/cn/cn";
+import { cn } from "@/cuicui/utils/cn";
 import { motion } from "motion/react";
 import type { HTMLAttributes, ReactNode } from "react";
 

@@ -4,8 +4,9 @@ import ComponentTabRenderer from "#/src/components/component-wrapper/component-t
 import { cn } from "#/src/utils/cn";
 import type {
   ComponentHeightType,
-  ProcessedVariantType,
+  NewVariantType,
 } from "@cuicui/ui/lib/types/component";
+import { readFileContent } from "#/src/utils/get-code-from-path";
 
 export type TabType = "preview" | "code-component" | "code-preview";
 
@@ -17,7 +18,7 @@ export default function VariantTabs({
   rerenderButton = false,
   componentParams,
 }: Readonly<{
-  variantList: ProcessedVariantType[];
+  variantList: NewVariantType[];
   size?: ComponentHeightType;
   isIframed?: boolean;
   isResizable?: boolean;
@@ -28,6 +29,14 @@ export default function VariantTabs({
     componentSlug?: string;
   };
 }>) {
+  if (!variantList || variantList.length === 0) {
+    return (
+      <p className="p-12 mt-6 bg-red-400/20 border border-red-400 text-red-400 rounded-lg">
+        No variants found, this is probably an error, please report it as an
+        issue on github
+      </p>
+    );
+  }
   return (
     <div>
       <Tabs.Root
@@ -35,25 +44,32 @@ export default function VariantTabs({
         id="variants-tabs"
         itemID="variants-tabs"
       >
-        {variantList.map((variant, _index) => (
-          <Tabs.Content key={variant.name} value={variant.name}>
-            <ComponentTabRenderer
-              {...variant}
-              isIframed={isIframed}
-              isResizable={isResizable}
-              rerenderButton={rerenderButton}
-              size={size}
-              componentParams={{
-                ...componentParams,
-                componentSlug:
-                  componentParams.componentSlug ?? variant.slugPreviewFile,
-                variantSlug: componentParams.componentSlug
-                  ? variant.slugPreviewFile
-                  : "",
-              }}
-            />
-          </Tabs.Content>
-        ))}
+        {variantList.map(async (variant, _index) => {
+          const variantCode = await readFileContent(variant.pathname);
+          return (
+            <Tabs.Content key={variant.name} value={variant.name}>
+              <ComponentTabRenderer
+                // {...variant}
+                isIframed={isIframed}
+                isResizable={isResizable}
+                rerenderButton={rerenderButton}
+                size={size}
+                previewCode={variantCode}
+                name={variant.name}
+                component={variant.variantComponent}
+                slugPreviewFile={variant.slug}
+                // componentParams={{
+                //   ...componentParams,
+                //   componentSlug:
+                //     componentParams.componentSlug ?? variant.slugPreviewFile,
+                //   variantSlug: componentParams.componentSlug
+                //     ? variant.slugPreviewFile
+                //     : "",
+                // }}
+              />
+            </Tabs.Content>
+          );
+        })}
         <p className="text-neutral-500 text-sm tracking-tight mt-2">
           Variants list
         </p>

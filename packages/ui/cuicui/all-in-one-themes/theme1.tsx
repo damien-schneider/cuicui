@@ -1,4 +1,4 @@
-import { cn } from "@/cuicui/utils/cn/cn";
+import { cn } from "@/cuicui/utils/cn";
 import type { ComponentProps, ReactNode } from "react";
 
 // No forwardRef for now as it will disappear in React 19

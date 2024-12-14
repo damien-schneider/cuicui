@@ -1,5 +1,5 @@
 import type { HTMLProps } from "react";
-import { cn } from "@/cuicui/utils/cn/cn";
+import { cn } from "@/cuicui/utils/cn";
 
 const SimpleCheckbox = ({
   label,

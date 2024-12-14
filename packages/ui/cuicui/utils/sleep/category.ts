@@ -1,6 +1,6 @@
 import { HourglassIcon } from "lucide-react";
 import type { SingleComponentCategoryType } from "@/lib/types/component";
-import PreviewSleep from "@/cuicui/utils/sleep/preview-sleep";
+import PreviewSleep from "@/cuicui/utils/sleep/sleep/sleep.variant";
 
 export const sleepCategory: SingleComponentCategoryType = {
   name: "Sleep",

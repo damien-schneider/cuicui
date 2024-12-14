@@ -8,7 +8,7 @@ import {
   InfinityIcon,
 } from "lucide-react";
 import type React from "react";
-import { cn } from "@/cuicui/utils/cn/cn";
+import { cn } from "@/cuicui/utils/cn";
 
 type BatteryInfoProps = {
   level: number | null;

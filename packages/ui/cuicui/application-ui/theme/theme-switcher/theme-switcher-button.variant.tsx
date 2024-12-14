@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { cn } from "@/cuicui/utils/cn/cn";
+import { cn } from "@/cuicui/utils/cn";
 
 export const ThemeSwitcherButton = () => {
   const [theme, setTheme] = React.useState<"light" | "dark">("light");

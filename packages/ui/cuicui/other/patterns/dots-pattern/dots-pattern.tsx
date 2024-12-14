@@ -1,6 +1,6 @@
 "use client";
 import { useId } from "react";
-import { cn } from "@/cuicui/utils/cn/cn";
+import { cn } from "@/cuicui/utils/cn";
 
 type DotPatternProps = {
   width?: number;

@@ -19,7 +19,7 @@ import {
   UserIcon,
 } from "lucide-react";
 import { useId } from "react";
-import { cn } from "@/cuicui/utils/cn/cn";
+import { cn } from "@/cuicui/utils/cn";
 
 export function CarouselCylindricalVariant1() {
   const cylinderWidth = 1500;

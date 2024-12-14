@@ -261,8 +261,9 @@ import type { NewSectionType } from "@/lib/types/component";`;
             for (const v of compVariants) {
               variantsArray.push(`{
         name: "${v.variantSlug}",
-        component: ${v.varName},
-        slugPreviewFile: "${v.importPath}",
+        variantComponent: ${v.varName},
+        slug: "${v.variantSlug}",
+        pathname: "${v.pathname}",
       }`);
             }
             // const variantsArray = compVariants
@@ -270,6 +271,7 @@ import type { NewSectionType } from "@/lib/types/component";`;
             //   .join(",\n      ");
             return `{
     meta: ${comp.varName},
+    slug: "${comp.componentSlug}",
     variants: [
       ${variantsArray}
     ]
@@ -289,6 +291,7 @@ import type { NewSectionType } from "@/lib/types/component";`;
 
     sectionList.push(`{
     meta: ${sec.varName},
+    slug: "${sec.sectionSlug}",
     categories: [
       ${categoryObjects}
     ]

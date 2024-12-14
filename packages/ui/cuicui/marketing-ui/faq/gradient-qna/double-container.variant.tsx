@@ -1,5 +1,5 @@
 import { ChevronDownIcon } from "lucide-react";
-import { cn } from "@/cuicui/utils/cn/cn";
+import { cn } from "@/cuicui/utils/cn";
 
 export default function DoubleContainerGradientQna() {
   return (

@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Bookmark, CheckCircle, Loader2, ExternalLink } from "lucide-react";
-import { cn } from "@/cuicui/utils/cn/cn";
+import { cn } from "@/cuicui/utils/cn";
 
 type StateType = "idle" | "saving" | "saved";
 
@@ -70,3 +70,5 @@ export function PreviewDualActionButton() {
     </div>
   );
 }
+
+export default PreviewDualActionButton;

@@ -1,5 +1,5 @@
 "use client";
-import { catchError } from "@/cuicui/utils/catch-error/catch-error";
+import { catchError } from "@/cuicui/utils/catch-error";
 import { useState } from "react";
 
 // A mock API function that returns a promise
@@ -63,3 +63,5 @@ export const PreviewCatchError = () => {
     </div>
   );
 };
+
+export default PreviewCatchError;

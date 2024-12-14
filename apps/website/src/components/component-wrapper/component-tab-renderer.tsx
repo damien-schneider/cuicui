@@ -47,7 +47,7 @@ export default function ComponentTabRenderer({
   rerenderButton?: boolean;
   isIframed?: boolean;
   size: ComponentHeightType;
-  componentParams: {
+  componentParams?: {
     sectionSlug: string;
     categorySlug: string;
     componentSlug: string;

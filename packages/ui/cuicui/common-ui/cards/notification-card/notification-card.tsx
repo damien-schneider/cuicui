@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { cn } from "@/cuicui/utils/cn/cn";
+import { cn } from "@/cuicui/utils/cn";
 
 export default function NotificationCard({
   date = new Date(),

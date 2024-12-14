@@ -146,6 +146,7 @@ export type NewSectionType = {
         description: string;
         icon: LucideIcon;
       };
+  slug: string;
   categories: NewCategoryType[];
 };
 
@@ -177,15 +178,32 @@ export type ComponentMetaType = {
 
 export type NewComponentType = {
   meta: ComponentType | ComponentMetaType;
+  slug: string;
   variants: NewVariantType[];
 };
 
-export type NewVariantType =
-  | VariantType // Temporary
-  | {
-      name: string;
-      variantComponent: () => JSX.Element;
-      cuicuiDependenciesPath: string[];
-      slugPreviewFile?: string; // To delete ? (separate the type used and the computed in list)
-      // previewPath: string; // Not needed ?
-    };
+export type NewVariantType = {
+  name: string;
+  slug: string;
+  cuicuiDependenciesPath?: string[];
+  pathname: string;
+  variantComponent: () => JSX.Element;
+  // previewPath: string; // Not needed ?
+};
+
+// export type NewVariantType =
+//   | (VariantType & {
+//       pathname: string;
+//       component: () => JSX.Element;
+//       slug: string;
+//       // pathname:`cuicui/${string}/${string}/${string}/${string}`;
+//     }) // Temporary
+//   | {
+//       name: string;
+//       slug: string;
+//       variantComponent: () => JSX.Element;
+//       cuicuiDependenciesPath: string[];
+//       pathname: string;
+//       component: () => JSX.Element;
+//       // previewPath: string; // Not needed ?
+//     };

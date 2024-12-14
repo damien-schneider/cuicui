@@ -1,7 +1,7 @@
 import NumberFlow from "@number-flow/react";
 import "./github-stars.css";
 import Link from "next/link";
-import { cn } from "@/cuicui/utils/cn/cn";
+import { cn } from "@/cuicui/utils/cn";
 import type { ComponentProps } from "react";
 export const GithubStarsButton = ({
   starNumber,

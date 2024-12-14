@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
 import NotificationCard from "@/cuicui/common-ui/cards/notification-card/notification-card";
-import { cn } from "@/cuicui/utils/cn/cn";
-import { sleep } from "@/cuicui/utils/sleep/sleep";
+import { cn } from "@/cuicui/utils/cn";
+import { sleep } from "@/cuicui/utils/sleep";
 
 export default function PreviewSleep() {
   const [notificationMessage, setNotificationMessage] =

@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { PlusIcon, SquareIcon } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
-import { cn } from "@/cuicui/utils/cn/cn";
+import { cn } from "@/cuicui/utils/cn";
 
 //TODO : Improve by refactoring the different sections into their own components
 //TODO : Improve by adding a dark version

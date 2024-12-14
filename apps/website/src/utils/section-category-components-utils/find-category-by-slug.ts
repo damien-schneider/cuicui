@@ -1,3 +1,4 @@
+import { newFindSectionBySlug } from "#/src/utils/section-category-components-utils/find-section-by-slug";
 import type {
   CategoryType,
   PageCategoryType,
@@ -25,3 +26,19 @@ export function findCategoryBySlug(
     (category) => category.slug === categoryParamSlug,
   ) ?? null) as CategoryType | null;
 }
+
+export const newFindCategoryBySlug = ({
+  sectionSlug,
+  categorySlug,
+}: { sectionSlug: string; categorySlug: string }) => {
+  const section = newFindSectionBySlug(sectionSlug);
+  if (!section) {
+    return null;
+  }
+  for (const category of section.categories) {
+    if (category.slug === categorySlug) {
+      return category;
+    }
+  }
+  return null;
+};

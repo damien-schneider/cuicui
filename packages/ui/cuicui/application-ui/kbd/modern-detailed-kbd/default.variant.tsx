@@ -1,4 +1,4 @@
-import { cn } from "@/cuicui/utils/cn/cn";
+import { cn } from "@/cuicui/utils/cn";
 
 export default function ModernDetailedKbdVariant1() {
   return (

@@ -4,7 +4,11 @@ import path from "node:path";
 export async function readFileContent(
   relativeFilePath: string,
 ): Promise<string> {
-  const absolutePath = path.resolve(process.cwd(), relativeFilePath);
+  const absolutePath = path.resolve(
+    process.cwd(),
+    "../../packages/ui",
+    relativeFilePath,
+  );
 
   try {
     const content = await fs.readFile(absolutePath, "utf-8");

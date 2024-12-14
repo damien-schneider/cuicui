@@ -3,7 +3,7 @@
 // biome-ignore lint/style/noNamespaceImport: <explanation>
 import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu";
 import { Check, ChevronRight, Circle } from "lucide-react";
-import { cn } from "@/cuicui/utils/cn/cn";
+import { cn } from "@/cuicui/utils/cn";
 import {
   type ComponentPropsWithoutRef,
   type ElementRef,

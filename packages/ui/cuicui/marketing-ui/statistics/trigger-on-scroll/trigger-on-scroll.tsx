@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@/cuicui/utils/cn/cn";
+import { cn } from "@/cuicui/utils/cn";
 import NumberFlow from "@number-flow/react";
 import { useState, useRef, useEffect } from "react";
 import { useInView } from "motion/react";

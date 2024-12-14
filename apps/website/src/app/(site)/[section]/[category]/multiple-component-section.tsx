@@ -1,38 +1,41 @@
 import { notFound } from "next/navigation";
-import { fetchMultipleComponentData } from "#/src/app/(site)/[section]/[category]/process-variant-data";
 import ComingSoonCard from "#/src/components/coming-soon";
 import HeaderComponent from "#/src/components/component-wrapper/header-component";
 import InspirationComponentFooter from "#/src/components/component-wrapper/inspiration-component-footer";
 import VariantTabs from "#/src/components/component-wrapper/variant-tabs";
-import type { CategoryType, SectionType } from "@cuicui/ui/lib/types/component";
+import type {
+  NewCategoryType,
+  SectionType,
+} from "@cuicui/ui/lib/types/component";
 import GithubEditButton from "#/src/components/component-wrapper/github-edit-button";
 
 export default async function MultipleComponentCategory({
   category,
   sectionSlug,
-}: Readonly<{ category: CategoryType; sectionSlug: SectionType["slug"] }>) {
-  if (category.comingSoonCategory) {
+}: Readonly<{ category: NewCategoryType; sectionSlug: SectionType["slug"] }>) {
+  if (category.meta?.comingSoonCategory) {
     return <ComingSoonCard />;
   }
 
-  if (!category.componentList) {
+  if (!category.components || category.components.length === 0) {
+    console.error("No components found in category", category);
     return notFound();
   }
 
   // If the componentList is not an array, we convert it to an array
-  const componentArray = Array.isArray(category.componentList)
-    ? category.componentList
-    : [category.componentList];
+  // const componentArray = Array.isArray(category.componentList)
+  //   ? category.componentList
+  //   : [category.componentList];
 
-  const componentList = await fetchMultipleComponentData({
-    categorySlug: category.slug,
-    componentList: componentArray,
-  });
+  // const componentList = await fetchMultipleComponentData({
+  //   categorySlug: category.slug,
+  //   componentList: componentArray,
+  // });
 
   return (
     <div className="space-y-32">
-      {componentList.map((component) => (
-        <div className="" key={component.name}>
+      {category.components.map((component) => (
+        <div className="" key={component.meta.name}>
           <div className="flex">
             <GithubEditButton
               sectionSlug={sectionSlug}
@@ -41,21 +44,21 @@ export default async function MultipleComponentCategory({
             />
           </div>
           <HeaderComponent
-            componentBadges={component.componentBadges}
-            description={component.description}
-            title={component.name}
+            componentBadges={component.meta.componentBadges}
+            description={component.meta.description}
+            title={component.meta.name}
           />
           <InspirationComponentFooter
-            inspiration={component.inspiration}
-            inspirationLink={component.inspirationLink}
+            inspiration={component.meta.inspiration}
+            inspirationLink={component.meta.inspirationLink}
           />
           <VariantTabs
-            isIframed={component.isIframed}
-            isResizable={component.isResizable}
-            key={component.name}
-            rerenderButton={component.rerenderButton}
-            size={component.sizePreview}
-            variantList={component.componentList}
+            isIframed={component.meta.isIframed}
+            isResizable={component.meta.isResizable}
+            key={component.meta.name}
+            rerenderButton={component.meta.rerenderButton}
+            size={component.meta.sizePreview}
+            variantList={component.variants}
             componentParams={{
               sectionSlug,
               categorySlug: category.slug,

@@ -1,5 +1,5 @@
 import { DotsPattern } from "@/cuicui/other/patterns/dots-pattern/dots-pattern";
-import { cn } from "@/cuicui/utils/cn/cn";
+import { cn } from "@/cuicui/utils/cn";
 
 export function DotsPatternPreview() {
   return (

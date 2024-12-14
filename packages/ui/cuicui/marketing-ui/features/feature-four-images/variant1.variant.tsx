@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { cn } from "@/cuicui/utils/cn/cn";
+import { cn } from "@/cuicui/utils/cn";
 
 //TODO : Improve mobile version to display the image down the corresponding text instead of at the full bottom
 

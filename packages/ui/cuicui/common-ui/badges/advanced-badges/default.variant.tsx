@@ -2,7 +2,7 @@ import { type VariantProps, cva } from "class-variance-authority";
 import { CheckIcon } from "lucide-react";
 import type { ReactNode } from "react";
 
-import { cn } from "@/cuicui/utils/cn/cn";
+import { cn } from "@/cuicui/utils/cn";
 
 export default function AdvancedBadgesVariant1() {
   const colors = Object.keys(badgeColorVariants) as ColorType[];

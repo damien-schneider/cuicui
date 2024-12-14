@@ -1,7 +1,7 @@
 "use client";
 import { useOnClickOutside } from "@/cuicui/hooks/use-click-outside/use-click-outside";
 
-import { cn } from "@/cuicui/utils/cn/cn";
+import { cn } from "@/cuicui/utils/cn";
 import {
   AnimatePresence,
   type MotionValue,
