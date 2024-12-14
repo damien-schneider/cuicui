@@ -1,10 +1,10 @@
-import { sectionList } from "@cuicui/ui/new-section-list";
+import { sectionList as newSectionList } from "@cuicui/ui/new-section-list";
 import { createElement } from "react";
 
 export default function Page() {
   return (
     <div>
-      {sectionList.map((section) => {
+      {newSectionList.map((section) => {
         return (
           <div key={section.meta.slug}>
             <p>{section.meta.description}</p>

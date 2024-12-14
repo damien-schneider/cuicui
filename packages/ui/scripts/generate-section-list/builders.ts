@@ -47,7 +47,7 @@ export function discoverSections(rootDir: string): FoundSection[] {
       sections.push({
         varName: sectionVarName,
         importPath,
-        sectionName: section,
+        sectionSlug: section,
         filename: sectionFile,
         pathname: path.join(sectionPath, sectionFile),
       });
@@ -68,7 +68,7 @@ export function discoverCategories(
   const categories: FoundCategory[] = [];
 
   for (const sec of sections) {
-    const sectionPath = path.join(rootDir, sec.sectionName);
+    const sectionPath = path.join(rootDir, sec.sectionSlug);
     const categoryDirs = fs.readdirSync(sectionPath).filter((f) => {
       const p = path.join(sectionPath, f);
       return fs.statSync(p).isDirectory() && !f.startsWith(".");
@@ -86,17 +86,17 @@ export function discoverCategories(
       const categoryFile = categoryFiles.find((f) => isCategory(f));
       if (categoryFile) {
         const categoryVarName = toVarName(
-          `${sec.sectionName}_${categoryDir}`,
+          `${sec.sectionSlug}_${categoryDir}`,
           "category",
         );
         const withoutExt = removeExtension(categoryFile);
-        const importPath = `@/cuicui/${sec.sectionName}/${categoryDir}/${withoutExt}`;
+        const importPath = `@/cuicui/${sec.sectionSlug}/${categoryDir}/${withoutExt}`;
 
         categories.push({
           varName: categoryVarName,
           importPath,
-          sectionName: sec.sectionName,
-          categoryName: categoryDir,
+          sectionSlug: sec.sectionSlug,
+          categorySlug: categoryDir,
           filename: categoryFile,
           pathname: path.join(categoryPath, categoryFile),
         });
@@ -120,7 +120,7 @@ export function discoverComponentsAndVariants(
   const variants: FoundVariant[] = [];
 
   for (const cat of categories) {
-    const categoryPath = path.join(rootDir, cat.sectionName, cat.categoryName);
+    const categoryPath = path.join(rootDir, cat.sectionSlug, cat.categorySlug);
     const componentDirs = fs.readdirSync(categoryPath).filter((f) => {
       const p = path.join(categoryPath, f);
       return fs.statSync(p).isDirectory() && !f.startsWith(".");
@@ -142,18 +142,18 @@ export function discoverComponentsAndVariants(
       }
 
       const componentVarName = toVarName(
-        `${cat.sectionName}_${cat.categoryName}_${componentDir}`,
+        `${cat.sectionSlug}_${cat.categorySlug}_${componentDir}`,
         "component",
       );
       const componentWithoutExt = removeExtension(componentFile);
-      const componentImportPath = `@/cuicui/${cat.sectionName}/${cat.categoryName}/${componentDir}/${componentWithoutExt}`;
+      const componentImportPath = `@/cuicui/${cat.sectionSlug}/${cat.categorySlug}/${componentDir}/${componentWithoutExt}`;
 
       components.push({
         varName: componentVarName,
         importPath: componentImportPath,
-        sectionName: cat.sectionName,
-        categoryName: cat.categoryName,
-        componentName: componentDir,
+        sectionSlug: cat.sectionSlug,
+        categorySlug: cat.categorySlug,
+        componentSlug: componentDir,
         filename: componentFile,
         pathname: path.join(componentPath, componentFile),
       });
@@ -161,21 +161,21 @@ export function discoverComponentsAndVariants(
       // Find variants
       const variantFiles = componentFiles.filter((f) => isVariant(f));
       for (const variantFile of variantFiles) {
-        const variantName = variantFile.replace(/\.variant\.tsx?$/, "");
+        const variantSlug = variantFile.replace(/\.variant\.tsx?$/, "");
         const variantVarName = toVarName(
-          `${cat.sectionName}_${cat.categoryName}_${componentDir}_${variantName}`,
+          `${cat.sectionSlug}_${cat.categorySlug}_${componentDir}_${variantSlug}`,
           "variant",
         );
         const variantWithoutExt = removeExtension(variantFile);
-        const variantImportPath = `@/cuicui/${cat.sectionName}/${cat.categoryName}/${componentDir}/${variantWithoutExt}`;
+        const variantImportPath = `@/cuicui/${cat.sectionSlug}/${cat.categorySlug}/${componentDir}/${variantWithoutExt}`;
 
         variants.push({
           varName: variantVarName,
           importPath: variantImportPath,
-          sectionName: cat.sectionName,
-          categoryName: cat.categoryName,
-          componentName: componentDir,
-          variantName: variantName,
+          sectionSlug: cat.sectionSlug,
+          categorySlug: cat.categorySlug,
+          componentSlug: componentDir,
+          variantSlug: variantSlug,
           filename: variantFile,
           pathname: path.join(componentPath, variantFile),
         });
@@ -228,14 +228,14 @@ export function buildContent(
 import type { NewSectionType } from "@/lib/types/component";`;
 
   // Grouping
-  const categoriesBySection = groupBy(categories, (c) => c.sectionName);
+  const categoriesBySection = groupBy(categories, (c) => c.sectionSlug);
   const componentsByCategory = groupBy(
     components,
-    (c) => `${c.sectionName}/${c.categoryName}`,
+    (c) => `${c.sectionSlug}/${c.categorySlug}`,
   );
   const variantsByComponent = groupBy(
     variants,
-    (v) => `${v.sectionName}/${v.categoryName}/${v.componentName}`,
+    (v) => `${v.sectionSlug}/${v.categorySlug}/${v.componentSlug}`,
   );
 
   let content = imports;
@@ -243,24 +243,24 @@ import type { NewSectionType } from "@/lib/types/component";`;
   const sectionList: string[] = [];
 
   for (const sec of sections) {
-    const secPrefix = toVarPrefix(sec.sectionName);
-    const sectionCategories = categoriesBySection[sec.sectionName] || [];
+    const secPrefix = toVarPrefix(sec.sectionSlug);
+    const sectionCategories = categoriesBySection[sec.sectionSlug] || [];
 
     const categoryObjects = sectionCategories
       .map((cat) => {
         const catComponents =
-          componentsByCategory[`${cat.sectionName}/${cat.categoryName}`] || [];
+          componentsByCategory[`${cat.sectionSlug}/${cat.categorySlug}`] || [];
 
         const componentObjects = catComponents
           .map((comp) => {
             const compVariants =
               variantsByComponent[
-                `${comp.sectionName}/${comp.categoryName}/${comp.componentName}`
+                `${comp.sectionSlug}/${comp.categorySlug}/${comp.componentSlug}`
               ] || [];
             const variantsArray: string[] = [];
             for (const v of compVariants) {
               variantsArray.push(`{
-        name: "${v.variantName}",
+        name: "${v.variantSlug}",
         component: ${v.varName},
         slugPreviewFile: "${v.importPath}",
       }`);
@@ -279,6 +279,7 @@ import type { NewSectionType } from "@/lib/types/component";`;
 
         return `{
     meta: ${cat.varName},
+    slug: "${cat.categorySlug}",
     components: [
       ${componentObjects}
     ]

@@ -158,9 +158,8 @@ export type CategoryMetaType = {
 };
 
 export type NewCategoryType = {
-  meta:
-    | CategoryType // To delete
-    | CategoryMetaType;
+  meta: CategoryType | CategoryMetaType;
+  slug: string;
   components: NewComponentType[];
 };
 

@@ -6,23 +6,23 @@ export interface FoundItem {
 }
 
 export interface FoundSection extends FoundItem {
-  sectionName: string;
+  sectionSlug: string;
 }
 
 export interface FoundCategory extends FoundItem {
-  sectionName: string;
-  categoryName: string;
+  sectionSlug: string;
+  categorySlug: string;
 }
 
 export interface FoundComponent extends FoundItem {
-  sectionName: string;
-  categoryName: string;
-  componentName: string;
+  sectionSlug: string;
+  categorySlug: string;
+  componentSlug: string;
 }
 
 export interface FoundVariant extends FoundItem {
-  sectionName: string;
-  categoryName: string;
-  componentName: string;
-  variantName: string;
+  sectionSlug: string;
+  categorySlug: string;
+  componentSlug: string;
+  variantSlug: string;
 }

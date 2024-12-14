@@ -1,17 +1,15 @@
-import type {
-  CategoryType,
-  SingleComponentCategoryType,
-} from "@cuicui/ui/lib/types/component";
 import { categoriesPreviewsList } from "@cuicui/ui/categories-previews-list";
 import { createElement } from "react";
 import { HourglassIcon } from "lucide-react";
 
 export const MainMenuCardContent = ({
-  category,
+  slugCategory,
+  isComingSoon,
 }: {
-  category: CategoryType | SingleComponentCategoryType;
+  slugCategory: string;
+  isComingSoon?: boolean;
 }) => {
-  if (category?.comingSoonCategory) {
+  if (isComingSoon) {
     return (
       <p className="size-full grid place-content-center">
         <div className="w-fit p-4 bg-neutral-400/15 rounded-xl gap-2 flex items-center justify-center text-neutral-400">
@@ -23,7 +21,7 @@ export const MainMenuCardContent = ({
     );
   }
 
-  const Component = getCategoryPreviewComponent(category.slug);
+  const Component = getCategoryPreviewComponent(slugCategory);
 
   if (Component) {
     return (

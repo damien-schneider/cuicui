@@ -235,6 +235,7 @@ export const sectionList: NewSectionType[] = [
     categories: [
       {
         meta: application_ui_action_menu_category,
+        slug: "action-menu",
         components: [
           {
             meta: application_ui_action_menu_advanced_bottom_action_menu_component,
@@ -252,6 +253,7 @@ export const sectionList: NewSectionType[] = [
       },
       {
         meta: application_ui_alert_category,
+        slug: "alert",
         components: [
           {
             meta: application_ui_alert_modern_glassy_alert_component,
@@ -265,6 +267,7 @@ export const sectionList: NewSectionType[] = [
       },
       {
         meta: application_ui_authentication_category,
+        slug: "authentication",
         components: [
           {
             meta: application_ui_authentication_half_sided_glassmorphism_component,
@@ -282,6 +285,7 @@ export const sectionList: NewSectionType[] = [
       },
       {
         meta: application_ui_battery_category,
+        slug: "battery",
         components: [
           {
             meta: application_ui_battery_battery_indicator_component,
@@ -299,6 +303,7 @@ export const sectionList: NewSectionType[] = [
       },
       {
         meta: application_ui_code_category,
+        slug: "code",
         components: [
           {
             meta: application_ui_code_advanced_code_block_component,
@@ -350,6 +355,7 @@ export const sectionList: NewSectionType[] = [
       },
       {
         meta: application_ui_color_picker_category,
+        slug: "color-picker",
         components: [
           {
             meta: application_ui_color_picker_arc_color_picker_component,
@@ -367,6 +373,7 @@ export const sectionList: NewSectionType[] = [
       },
       {
         meta: application_ui_context_menu_category,
+        slug: "context-menu",
         components: [
           {
             meta: application_ui_context_menu_mac_os_context_menu_component,
@@ -384,6 +391,7 @@ export const sectionList: NewSectionType[] = [
       },
       {
         meta: application_ui_cookie_banner_category,
+        slug: "cookie-banner",
         components: [
           {
             meta: application_ui_cookie_banner_simple_cookie_banner_component,
@@ -401,6 +409,7 @@ export const sectionList: NewSectionType[] = [
       },
       {
         meta: application_ui_dropdown_menu_category,
+        slug: "dropdown-menu",
         components: [
           {
             meta: application_ui_dropdown_menu_mac_os_dropdown_component,
@@ -418,6 +427,7 @@ export const sectionList: NewSectionType[] = [
       },
       {
         meta: application_ui_kbd_category,
+        slug: "kbd",
         components: [
           {
             meta: application_ui_kbd_modern_3d_kbd_component,
@@ -446,6 +456,7 @@ export const sectionList: NewSectionType[] = [
       },
       {
         meta: application_ui_notification_category,
+        slug: "notification",
         components: [
           {
             meta: application_ui_notification_dynamic_island_notification_component,
@@ -463,6 +474,7 @@ export const sectionList: NewSectionType[] = [
       },
       {
         meta: application_ui_search_bars_category,
+        slug: "search-bars",
         components: [
           {
             meta: application_ui_search_bars_growing_search_component,
@@ -480,6 +492,7 @@ export const sectionList: NewSectionType[] = [
       },
       {
         meta: application_ui_settings_category,
+        slug: "settings",
         components: [
           {
             meta: application_ui_settings_dynamic_settings_component,
@@ -497,6 +510,7 @@ export const sectionList: NewSectionType[] = [
       },
       {
         meta: application_ui_signature_category,
+        slug: "signature",
         components: [
           {
             meta: application_ui_signature_react_signature_component,
@@ -514,6 +528,7 @@ export const sectionList: NewSectionType[] = [
       },
       {
         meta: application_ui_sliders_category,
+        slug: "sliders",
         components: [
           {
             meta: application_ui_sliders_elastic_slider_component,
@@ -542,6 +557,7 @@ export const sectionList: NewSectionType[] = [
       },
       {
         meta: application_ui_static_steppers_category,
+        slug: "static-steppers",
         components: [
           {
             meta: application_ui_static_steppers_code_component,
@@ -558,6 +574,7 @@ export const sectionList: NewSectionType[] = [
       },
       {
         meta: application_ui_table_of_contents_category,
+        slug: "table-of-contents",
         components: [
           {
             meta: application_ui_table_of_contents_modul_inspired_component,
@@ -575,6 +592,7 @@ export const sectionList: NewSectionType[] = [
       },
       {
         meta: application_ui_theme_category,
+        slug: "theme",
         components: [
           {
             meta: application_ui_theme_theme_switcher_component,
@@ -592,6 +610,7 @@ export const sectionList: NewSectionType[] = [
       },
       {
         meta: application_ui_tree_category,
+        slug: "tree",
         components: [
           {
             meta: application_ui_tree_recursive_tree_component,
@@ -621,10 +640,12 @@ export const sectionList: NewSectionType[] = [
     categories: [
       {
         meta: common_ui_avatars_category,
+        slug: "avatars",
         components: [],
       },
       {
         meta: common_ui_badges_category,
+        slug: "badges",
         components: [
           {
             meta: common_ui_badges_advanced_badges_component,
@@ -669,6 +690,7 @@ export const sectionList: NewSectionType[] = [
       },
       {
         meta: common_ui_blockquotes_category,
+        slug: "blockquotes",
         components: [
           {
             meta: common_ui_blockquotes_modern_simple_quote_component,
@@ -686,6 +708,7 @@ export const sectionList: NewSectionType[] = [
       },
       {
         meta: common_ui_buttons_category,
+        slug: "buttons",
         components: [
           {
             meta: common_ui_buttons_before_effect_button_component,
@@ -793,6 +816,7 @@ export const sectionList: NewSectionType[] = [
       },
       {
         meta: common_ui_cards_category,
+        slug: "cards",
         components: [
           {
             meta: common_ui_cards_dynamic_square_background_component,
@@ -845,6 +869,7 @@ export const sectionList: NewSectionType[] = [
       },
       {
         meta: common_ui_checkboxes_category,
+        slug: "checkboxes",
         components: [
           {
             meta: common_ui_checkboxes_simple_checkbox_component,
@@ -862,6 +887,7 @@ export const sectionList: NewSectionType[] = [
       },
       {
         meta: common_ui_inputs_category,
+        slug: "inputs",
         components: [
           {
             meta: common_ui_inputs_droppable_file_component,
@@ -890,6 +916,7 @@ export const sectionList: NewSectionType[] = [
       },
       {
         meta: common_ui_loaders_category,
+        slug: "loaders",
         components: [
           {
             meta: common_ui_loaders_spinner_loader_component,
@@ -947,6 +974,7 @@ export const sectionList: NewSectionType[] = [
       },
       {
         meta: common_ui_navigation_category,
+        slug: "navigation",
         components: [
           {
             meta: common_ui_navigation_mac_dock_component,
@@ -994,6 +1022,7 @@ export const sectionList: NewSectionType[] = [
       },
       {
         meta: common_ui_skeletons_category,
+        slug: "skeletons",
         components: [
           {
             meta: common_ui_skeletons_classic_pulse_component,
@@ -1028,6 +1057,7 @@ export const sectionList: NewSectionType[] = [
       },
       {
         meta: common_ui_toggle_category,
+        slug: "toggle",
         components: [],
       },
     ],
@@ -1037,6 +1067,7 @@ export const sectionList: NewSectionType[] = [
     categories: [
       {
         meta: marketing_ui_carousels_category,
+        slug: "carousels",
         components: [
           {
             meta: marketing_ui_carousels_cylindric_3d_carousel_component,
@@ -1066,6 +1097,7 @@ export const sectionList: NewSectionType[] = [
       },
       {
         meta: marketing_ui_faq_category,
+        slug: "faq",
         components: [
           {
             meta: marketing_ui_faq_full_section_component,
@@ -1108,6 +1140,7 @@ export const sectionList: NewSectionType[] = [
       },
       {
         meta: marketing_ui_features_category,
+        slug: "features",
         components: [
           {
             meta: marketing_ui_features_animated_cards_component,
@@ -1143,6 +1176,7 @@ export const sectionList: NewSectionType[] = [
       },
       {
         meta: marketing_ui_footer_category,
+        slug: "footer",
         components: [
           {
             meta: marketing_ui_footer_sticky_footer_component,
@@ -1160,6 +1194,7 @@ export const sectionList: NewSectionType[] = [
       },
       {
         meta: marketing_ui_pricing_tables_category,
+        slug: "pricing-tables",
         components: [
           {
             meta: marketing_ui_pricing_tables_gradient_component,
@@ -1189,6 +1224,7 @@ export const sectionList: NewSectionType[] = [
       },
       {
         meta: marketing_ui_statistics_category,
+        slug: "statistics",
         components: [
           {
             meta: marketing_ui_statistics_animated_counter_component,
@@ -1242,6 +1278,7 @@ export const sectionList: NewSectionType[] = [
       },
       {
         meta: marketing_ui_testimonials_category,
+        slug: "testimonials",
         components: [
           {
             meta: marketing_ui_testimonials_marquee_component,
@@ -1281,6 +1318,7 @@ export const sectionList: NewSectionType[] = [
     categories: [
       {
         meta: other_creative_effects_category,
+        slug: "creative-effects",
         components: [
           {
             meta: other_creative_effects_animated_noise_component,
@@ -1340,6 +1378,7 @@ export const sectionList: NewSectionType[] = [
       },
       {
         meta: other_cursors_category,
+        slug: "cursors",
         components: [
           {
             meta: other_cursors_dynamic_cards_component,
@@ -1381,6 +1420,7 @@ export const sectionList: NewSectionType[] = [
       },
       {
         meta: other_mock_ups_category,
+        slug: "mock-ups",
         components: [
           {
             meta: other_mock_ups_airpods_component,
@@ -1418,6 +1458,7 @@ export const sectionList: NewSectionType[] = [
       },
       {
         meta: other_patterns_category,
+        slug: "patterns",
         components: [
           {
             meta: other_patterns_dots_pattern_component,
@@ -1435,6 +1476,7 @@ export const sectionList: NewSectionType[] = [
       },
       {
         meta: other_qr_code_category,
+        slug: "qr-code",
         components: [
           {
             meta: other_qr_code_bar_code_generator_component,
@@ -1464,6 +1506,7 @@ export const sectionList: NewSectionType[] = [
       },
       {
         meta: other_transition_wrappers_category,
+        slug: "transition-wrappers",
         components: [
           {
             meta: other_transition_wrappers_blur_appear_component,
@@ -1512,14 +1555,17 @@ export const sectionList: NewSectionType[] = [
     categories: [
       {
         meta: utils_catch_error_category,
+        slug: "catch-error",
         components: [],
       },
       {
         meta: utils_cn_category,
+        slug: "cn",
         components: [],
       },
       {
         meta: utils_sleep_category,
+        slug: "sleep",
         components: [],
       },
     ],
