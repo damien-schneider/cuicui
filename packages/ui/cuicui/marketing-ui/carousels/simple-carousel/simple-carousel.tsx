@@ -14,7 +14,7 @@ import {
   useEffect,
   useState,
 } from "react";
-import { cn } from "@/cuicui/utils/cn/cn";
+import { cn } from "@/cuicui/utils/cn";
 
 type CarouselApi = UseEmblaCarouselType[1];
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>;

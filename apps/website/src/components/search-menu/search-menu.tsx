@@ -5,15 +5,16 @@ import { SearchIcon } from "lucide-react";
 import { type ComponentProps, useState } from "react";
 import { FirstSectionCommandGroup } from "#/src/components/search-menu/first-section-command-group";
 import { SearchGroupComponentSection } from "#/src/components/search-menu/search-group-multi-component-section";
-import { sectionList } from "@cuicui/ui/lib/section-list";
-import { useKeyPress } from "@cuicui/ui/cuicui/hooks/use-key-press/use-key-press";
+import { sectionList } from "@/section-list";
+
 import {
   CommandDialog,
   CommandEmpty,
   CommandInput,
   CommandList,
 } from "#/src/ui/shadcn/command";
-import { cn } from "@/cuicui/utils/cn/cn";
+import { cn } from "@/cuicui/utils/cn";
+import { useKeyPress } from "@/cuicui/hooks/use-key-press";
 
 export function SearchMenu({ ...props }: ComponentProps<"button">) {
   const [open, setOpen] = useState(false);

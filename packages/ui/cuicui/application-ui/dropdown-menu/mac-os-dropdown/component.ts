@@ -1,4 +1,4 @@
-import { PreviewMacOSDropdownMenu } from "@/cuicui/application-ui/dropdown-menu/mac-os-dropdown/preview.mac-os-dropdown";
+import { PreviewMacOSDropdownMenu } from "@/cuicui/application-ui/dropdown-menu/mac-os-dropdown/mac-os-dropdown.variant";
 import type { ComponentType } from "@/lib/types/component";
 
 export const macOsDropdownComponent: ComponentType = {
@@ -15,3 +15,5 @@ export const macOsDropdownComponent: ComponentType = {
     },
   ],
 };
+
+export default macOsDropdownComponent;

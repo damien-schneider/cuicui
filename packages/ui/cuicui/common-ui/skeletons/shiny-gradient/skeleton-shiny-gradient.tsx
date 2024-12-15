@@ -1,5 +1,5 @@
 import type { HTMLAttributes } from "react";
-import { cn } from "@/cuicui/utils/cn/cn";
+import { cn } from "@/cuicui/utils/cn";
 
 type SkeletonShinyGradientProps = {
   orientation?: "horizontal" | "vertical";

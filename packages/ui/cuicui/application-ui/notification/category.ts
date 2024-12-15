@@ -1,14 +1,11 @@
 import { BellDotIcon } from "lucide-react";
-import type { CategoryType } from "@/lib/types/component";
-import { dynamicIslandNotificationComponent } from "@/cuicui/application-ui/notification/dynamic-island-notification/component.dynamic-island-notification";
+import type { CategoryMetaType } from "@/lib/types/component";
 
-export const notificationCategory: CategoryType = {
-  slug: "notification",
+export const notificationCategory: CategoryMetaType = {
   name: "Notification",
   description: "Notification components",
   releaseDateCategory: new Date("2024-10-14"),
   icon: BellDotIcon,
-  componentList: [dynamicIslandNotificationComponent],
 };
 
 export default notificationCategory;

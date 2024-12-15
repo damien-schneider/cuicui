@@ -4,9 +4,9 @@ import {
   GlobalNavItem,
   SectionWrapper,
 } from "#/src/components/navigation/navigation-item";
-import { sectionList } from "@cuicui/ui/lib/section-list";
+import { sectionList } from "@/section-list";
 import type {
-  CategoryType,
+  NewCategoryType,
   SingleComponentCategoryType,
 } from "@cuicui/ui/lib/types/component";
 import { cn } from "#/src/utils/cn";
@@ -15,10 +15,10 @@ export default function NavigationMenu({
   isMobile,
   className,
 }: Readonly<{ isMobile?: boolean; className?: string }>) {
-  function getCategoryTagMultipleComponentCategory(category: CategoryType) {
+  function getCategoryTagMultipleComponentCategory(category: NewCategoryType) {
     const isNew =
-      differenceInDays(new Date(), category.releaseDateCategory ?? 0) < 21;
-    if (category.comingSoonCategory) {
+      differenceInDays(new Date(), category.meta.releaseDateCategory ?? 0) < 21;
+    if (category.meta.comingSoonCategory) {
       return "Coming Soon";
     }
     if (isNew) {
@@ -26,6 +26,7 @@ export default function NavigationMenu({
     }
     return null;
   }
+
   function getCategoryTagSingleComponentCategory(
     category: SingleComponentCategoryType,
   ) {
@@ -56,92 +57,34 @@ export default function NavigationMenu({
   return (
     <nav className={cn("mt-5 mb-12 px-1 space-y-2 min-h-full", className)}>
       {sectionList.map((section) => {
-        if (section.type === "page") {
-          return (
-            <SectionWrapper
-              sectionSlug={section.slug}
-              key={section.slug}
-              name="Tools"
-            >
-              <NavigationAnimatedBackground>
-                {section.pageList.map((page) => (
+        return (
+          <SectionWrapper
+            key={section.slug}
+            name={section.meta.name}
+            sectionSlug={section.slug}
+          >
+            <NavigationAnimatedBackground>
+              {section.categories.map((category, _index) => {
+                return (
                   <li
-                    className="block z-10"
-                    data-id={page.slug}
-                    key={page.slug}
+                    className="block"
+                    data-id={category.slug}
+                    key={category.slug}
                   >
                     <GlobalNavItem
-                      Icon={<page.icon className="size-4" />}
-                      href={`/${section.slug}/${page.slug}`}
+                      Icon={<category.meta.icon className="size-4" />}
+                      href={`/${section.slug}/${category.slug}`}
                       isMobile={isMobile}
-                      name={page.name}
+                      name={category.meta.name}
+                      tag={getCategoryTagMultipleComponentCategory(category)}
+                      target="sameWindow"
                     />
                   </li>
-                ))}
-              </NavigationAnimatedBackground>
-            </SectionWrapper>
-          );
-        }
-        if (section.type === "single-component") {
-          return (
-            <SectionWrapper
-              key={section.slug}
-              name={section.name}
-              sectionSlug={section.slug}
-            >
-              <NavigationAnimatedBackground>
-                {section.categoriesList.map((category, _index) => {
-                  return (
-                    <li
-                      className="block"
-                      data-id={category.slug}
-                      key={category.slug}
-                    >
-                      <GlobalNavItem
-                        Icon={<category.icon className="size-4" />}
-                        href={`/${section.slug}/${category.slug}`}
-                        isMobile={isMobile}
-                        name={category.name}
-                        tag={getCategoryTagSingleComponentCategory(category)}
-                        target="sameWindow"
-                      />
-                    </li>
-                  );
-                })}
-              </NavigationAnimatedBackground>
-            </SectionWrapper>
-          );
-        }
-        if (section.type === "multiple-component") {
-          return (
-            <SectionWrapper
-              key={section.slug}
-              name={section.name}
-              sectionSlug={section.slug}
-            >
-              <NavigationAnimatedBackground>
-                {section.categoriesList.map((category, _index) => {
-                  return (
-                    <li
-                      className="block"
-                      data-id={category.slug}
-                      key={category.slug}
-                    >
-                      <GlobalNavItem
-                        Icon={<category.icon className="size-4" />}
-                        href={`/${section.slug}/${category.slug}`}
-                        isMobile={isMobile}
-                        name={category.name}
-                        tag={getCategoryTagMultipleComponentCategory(category)}
-                        target="sameWindow"
-                      />
-                    </li>
-                  );
-                })}
-              </NavigationAnimatedBackground>
-            </SectionWrapper>
-          );
-        }
+                );
+              })}
+            </NavigationAnimatedBackground>
+          </SectionWrapper>
+        );
       })}
     </nav>
   );

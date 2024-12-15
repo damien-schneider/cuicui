@@ -1,24 +1,11 @@
-import { ChartNoAxesGanttIcon } from "lucide-react";
-import type { SingleComponentCategoryType } from "@/lib/types/component";
-import { PreviewCatchError } from "@/cuicui/utils/catch-error/preview.catch-error";
+import { ServerCrashIcon } from "lucide-react";
+import type { CategoryMetaType } from "@/lib/types/component";
 
-export const catchErrorCategory: SingleComponentCategoryType = {
+export const catchErrorCategory: CategoryMetaType = {
   name: "CatchError",
-  slug: "catch-error",
-  component: {
-    sizePreview: "sm",
-    variantList: [
-      {
-        name: "Default",
-        slugPreviewFile: "preview.catch-error",
-        slugComponentFile: "catch-error",
-        component: PreviewCatchError,
-      },
-    ],
-  },
   description:
     "A utility function to catch and handle errors effectively in a clean way",
-  icon: ChartNoAxesGanttIcon,
+  icon: ServerCrashIcon,
   releaseDateCategory: new Date("2024-09-26"),
 };
 

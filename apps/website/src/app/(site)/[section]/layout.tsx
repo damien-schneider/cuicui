@@ -4,7 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
 import { NEXT_PUBLIC_SITE_URL } from "#/src/lib/site.const";
-import { findSectionBySlug } from "#/src/utils/section-category-components-utils/find-section-by-slug";
+import { newFindSectionBySlug } from "#/src/utils/section-category-components-utils/section-list-utils";
 
 type Props = {
   children: ReactNode;
@@ -15,7 +15,7 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { section: sectionParam } = await params;
-  const sectionInList = findSectionBySlug(sectionParam);
+  const sectionInList = newFindSectionBySlug(sectionParam);
 
   // optionally access and extend (rather than replace) parent metadata
 
@@ -23,11 +23,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {};
   }
   return {
-    title: sectionInList.name,
-    description: sectionInList.description,
+    title: sectionInList.meta.name,
+    description: sectionInList.meta.description,
     openGraph: {
-      title: sectionInList.name,
-      description: sectionInList.description,
+      title: sectionInList.meta.name,
+      description: sectionInList.meta.description,
     },
     alternates: {
       canonical: `${NEXT_PUBLIC_SITE_URL}/${sectionInList.slug}`,
@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function SectionLayout({ params, children }: Props) {
   const { section: sectionParam } = await params;
 
-  const section = findSectionBySlug(sectionParam);
+  const section = newFindSectionBySlug(sectionParam);
 
   if (!section) {
     return notFound();

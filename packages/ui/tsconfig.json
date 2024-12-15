@@ -8,6 +8,8 @@
     "paths": {
       "@/*": ["./*"]
     },
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
     "outDir": "dist"
   }
 }

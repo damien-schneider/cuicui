@@ -1,5 +1,5 @@
 import { XIcon } from "lucide-react";
-import { cn } from "@/cuicui/utils/cn/cn";
+import { cn } from "@/cuicui/utils/cn";
 
 import type { HTMLAttributes, ReactNode } from "react";
 

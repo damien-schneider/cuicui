@@ -1,8 +1,8 @@
 import type { ComponentType } from "@/lib/types/component";
 
-import { PreviewTextEffectPerChar } from "@/cuicui/other/transition-wrappers/text-effect-wrapper/preview.text-effect-wrapper-per-char";
+import { PreviewTextEffectPerChar } from "@/cuicui/other/transition-wrappers/text-effect-wrapper/per-char.variant";
 import { PreviewTextEffectPerLine } from "@/cuicui/other/transition-wrappers/text-effect-wrapper/preview.text-effect-wrapper-per-line";
-import { PreviewTextEffectPerWord } from "@/cuicui/other/transition-wrappers/text-effect-wrapper/preview.text-effect-wrapper-per-word";
+import { PreviewTextEffectPerWord } from "@/cuicui/other/transition-wrappers/text-effect-wrapper/per-word.variant";
 
 export const textEffectWrapperComponent: ComponentType = {
   slug: "text-effect-wrapper",

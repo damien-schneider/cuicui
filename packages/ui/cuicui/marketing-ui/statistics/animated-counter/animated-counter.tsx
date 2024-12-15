@@ -6,7 +6,7 @@ import {
   useTransform,
 } from "motion/react";
 import { useEffect } from "react";
-import { cn } from "@/cuicui/utils/cn/cn";
+import { cn } from "@/cuicui/utils/cn";
 
 export function Counter({
   value,

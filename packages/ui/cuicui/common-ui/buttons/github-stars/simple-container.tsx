@@ -1,5 +1,5 @@
-import { cn } from "@/cuicui/utils/cn/cn";
-import type { ComponentProps, HTMLProps, ReactNode } from "react";
+import { cn } from "@/cuicui/utils/cn";
+import type { ComponentProps, ReactNode } from "react";
 
 export function ModernGradientContainerRoot({
   children,

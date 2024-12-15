@@ -1,5 +1,5 @@
 import type { ComponentType } from "@/lib/types/component";
-import { PreviewBarCodeGenerator } from "@/cuicui/other/qr-code/bar-code-generator/preview-bar-code-generator";
+import { PreviewBarCodeGenerator } from "@/cuicui/other/qr-code/bar-code-generator/bar-code-generator.variant";
 
 export const BarCodeGeneratorComponent: ComponentType = {
   slug: "bar-code-generator",
@@ -15,3 +15,5 @@ export const BarCodeGeneratorComponent: ComponentType = {
     },
   ],
 };
+
+export default BarCodeGeneratorComponent;

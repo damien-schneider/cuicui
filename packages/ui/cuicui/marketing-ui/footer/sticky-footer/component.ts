@@ -1,5 +1,5 @@
 import type { ComponentType } from "@/lib/types/component";
-import { PreviewStickyFooter } from "@/cuicui/marketing-ui/footer/sticky-footer/preview.sticky-footer";
+import { PreviewStickyFooter } from "@/cuicui/marketing-ui/footer/sticky-footer/sticky-footer.variant";
 
 export const footerComponent: ComponentType = {
   sizePreview: "md",

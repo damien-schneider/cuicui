@@ -1,4 +1,4 @@
-import { useMouse } from "@/cuicui/hooks/use-mouse/use-mouse";
+import { useMouse } from "@/cuicui/hooks/use-mouse";
 
 export const CardMouseHighlightingBorder = ({
   title,

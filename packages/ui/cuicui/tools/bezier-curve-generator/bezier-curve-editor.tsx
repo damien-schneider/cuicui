@@ -2,7 +2,7 @@
 
 import { BezierEditor } from "bezier-editor";
 import { useState } from "react";
-import { sleep } from "@/cuicui/utils/sleep/sleep";
+import { sleep } from "@/cuicui/utils/sleep";
 
 type BezierValueType = [number, number, number, number];
 

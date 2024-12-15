@@ -1,5 +1,5 @@
 import { type BundledLanguage, type BundledTheme, codeToHtml } from "shiki";
-import { cn } from "@/cuicui/utils/cn/cn";
+import { cn } from "@/cuicui/utils/cn";
 
 import type { HTMLAttributes } from "react";
 import "./style.css";

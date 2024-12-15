@@ -1,14 +1,11 @@
 import { SignatureIcon } from "lucide-react";
-import type { CategoryType } from "@/lib/types/component";
-import { reactSignatureComponent } from "@/cuicui/application-ui/signature/react-signature/react-signature.component";
+import type { CategoryMetaType } from "@/lib/types/component";
 
-export const signatureCategory: CategoryType = {
-  slug: "signature",
+export const signatureCategory: CategoryMetaType = {
   name: "Signature",
   description: "Signature components",
   releaseDateCategory: new Date("2024-09-24"),
   icon: SignatureIcon,
-  componentList: [reactSignatureComponent],
 };
 
 export default signatureCategory;

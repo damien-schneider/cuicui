@@ -2,7 +2,7 @@
 
 import { ChevronRightIcon } from "lucide-react";
 import React, { useState, type HTMLAttributes, type ReactNode } from "react";
-import { cn } from "@/cuicui/utils/cn/cn";
+import { cn } from "@/cuicui/utils/cn";
 
 type TreeProps = {
   contentTree: ReactNode;

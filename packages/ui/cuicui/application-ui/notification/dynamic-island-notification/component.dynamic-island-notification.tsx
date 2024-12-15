@@ -1,5 +1,5 @@
 import type { ComponentType } from "@/lib/types/component";
-import { PreviewDynamicIslandNotification } from "@/cuicui/application-ui/notification/dynamic-island-notification/preview.dynamic-island-notification";
+import { PreviewDynamicIslandNotification } from "@/cuicui/application-ui/notification/dynamic-island-notification/dynamic-island-notification.variant";
 
 export const dynamicIslandNotificationComponent: ComponentType = {
   sizePreview: "md",

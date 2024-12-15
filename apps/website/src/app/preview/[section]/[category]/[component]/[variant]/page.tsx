@@ -1,4 +1,5 @@
-import { sectionList } from "@cuicui/ui/lib/section-list";
+import { newFindSectionBySlug } from "#/src/utils/section-category-components-utils/section-list-utils";
+import { sectionList } from "@/section-list";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { createElement } from "react";
@@ -8,26 +9,31 @@ export const metadata: Metadata = {
   robots: "noindex, nofollow",
 };
 
-// export async function generateStaticParams() {
-//   return sectionList.map((section) => {
-//     if (section.type === "multiple-component") {
-//       return section.categoriesList.map((category) => {
-//         return category.componentList?.map((component) => {
-//           return component.variantList.map((variant) => {
-//             return {
-//               params: {
-//                 section: section.slug,
-//                 category: category.slug,
-//                 component: component.slug,
-//                 variant: variant.slugPreviewFile,
-//               },
-//             };
-//           });
-//         });
-//       });
-//     }
-//   });
-// }
+export function generateStaticParams() {
+  const paramsList: {
+    section: string;
+    category: string;
+    component: string;
+    variant: string;
+  }[] = [];
+
+  for (const section of sectionList) {
+    for (const category of section.categories) {
+      if (category.components) {
+        for (const variant of category.components) {
+          paramsList.push({
+            section: section.slug,
+            category: category.slug,
+            component: variant.slug,
+            variant: variant.slug,
+          });
+        }
+      }
+    }
+  }
+
+  return paramsList;
+}
 
 export default async function PagePreview({
   params,
@@ -54,9 +60,7 @@ export default async function PagePreview({
 
   return (
     <div className="grid place-content-center w-full min-h-screen">
-      {typeof variantFound.component === "function"
-        ? createElement(variantFound.component)
-        : variantFound.component}
+      {createElement(variantFound.variantComponent)}
     </div>
   );
 }
@@ -72,13 +76,13 @@ export const findCorrespondingComponent = ({
   component: string;
   variant?: string;
 }) => {
-  const sectionFound = sectionList.find((s) => s.slug === section);
+  const sectionFound = newFindSectionBySlug(section);
   if (!sectionFound) {
     return null;
   }
   console.log(sectionFound.slug);
-  if (sectionFound.type === "multiple-component") {
-    const categoryFound = sectionFound.categoriesList.find(
+  if (sectionFound) {
+    const categoryFound = sectionFound.categories.find(
       (c) => c.slug === category,
     );
     if (!categoryFound) {
@@ -86,7 +90,7 @@ export const findCorrespondingComponent = ({
     }
     console.log(categoryFound.slug);
 
-    const componentFound = categoryFound.componentList?.find(
+    const componentFound = categoryFound.components?.find(
       (c) => c.slug === component,
     );
     if (!componentFound) {
@@ -95,27 +99,11 @@ export const findCorrespondingComponent = ({
 
     console.log(componentFound.slug);
 
-    const variantFound = componentFound.variantList.find(
-      (v) => v.slugPreviewFile === variant,
+    const variantFound = componentFound.variants.find(
+      (v) => v.slug === variant,
     );
 
-    console.log(variantFound?.slugPreviewFile);
-
-    return variantFound;
-  }
-
-  if (sectionFound.type === "single-component") {
-    const categoryFound = sectionFound.categoriesList.find(
-      (c) => c.slug === category,
-    );
-    if (!categoryFound) {
-      return null;
-    }
-
-    const variantFound = categoryFound.component?.variantList.find(
-      // We use component instead of variant as it is a single-component
-      (v) => v.slugPreviewFile === component,
-    );
+    console.log(variantFound?.slug);
 
     return variantFound;
   }

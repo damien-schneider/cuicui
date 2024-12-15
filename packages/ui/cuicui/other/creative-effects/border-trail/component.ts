@@ -1,0 +1,20 @@
+import type { ComponentType } from "@/lib/types/component";
+import PreviewBorderTrail from "@/cuicui/other/creative-effects/border-trail/border-trail.variant";
+
+export const borderTrailComponent: ComponentType = {
+  slug: "border-trail",
+  name: "Border Trail",
+  description:
+    "A border trail effect that can be used in any component with any modern style",
+  sizePreview: "lg",
+  variantList: [
+    {
+      name: "Border Trail",
+      slugPreviewFile: "preview.border-trail",
+      slugComponentFile: "border-trail",
+      component: PreviewBorderTrail,
+    },
+  ],
+};
+
+export default borderTrailComponent;

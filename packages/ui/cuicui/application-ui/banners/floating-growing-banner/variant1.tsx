@@ -2,7 +2,7 @@
 import { SendHorizontalIcon } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
-import { cn } from "@/cuicui/utils/cn/cn";
+import { cn } from "@/cuicui/utils/cn";
 
 export default function FloatingGrowingBannerVariant1() {
   const [inputValue, setInputValue] = useState("");

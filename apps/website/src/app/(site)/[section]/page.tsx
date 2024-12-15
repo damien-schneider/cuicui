@@ -3,63 +3,55 @@ import { notFound } from "next/navigation";
 import { MainMenuCardContent } from "#/src/app/card";
 import MenuSectionWrapper from "#/src/components/main-menus/menu-category-wrapper";
 import { MainMenusGradientCard } from "@cuicui/ui/cuicui/other/cursors/dynamic-cards/gradient-card";
-import { findSectionBySlug } from "#/src/utils/section-category-components-utils/find-section-by-slug";
+
+import { sectionList } from "@/section-list";
+import { newFindSectionBySlug } from "#/src/utils/section-category-components-utils/section-list-utils";
 
 type Props = {
   params: Promise<{ section: string }>;
 };
 
+export function generateStaticParams() {
+  const paramsArray: {
+    section: string;
+  }[] = [];
+  for (const section of sectionList) {
+    paramsArray.push({
+      section: section.slug,
+    });
+  }
+
+  // Return the generated params array
+  return paramsArray;
+}
+
 export default async function Page({ params }: Props) {
   const { section: sectionParam } = await params;
-  const sectionInList = findSectionBySlug(sectionParam);
+  const sectionInList = newFindSectionBySlug(sectionParam);
 
   if (!sectionInList) {
     return notFound();
   }
 
-  if (sectionInList.slug !== sectionParam) {
-    return notFound();
-  }
-
-  if (sectionInList.type === "page") {
-    return (
-      <>
-        <h1 className="header-1">{sectionInList.name} category</h1>
-        <p className="caption-md">{sectionInList.description}</p>
-        <MenuSectionWrapper key={sectionInList.name} name={sectionInList.name}>
-          {sectionInList.pageList.map((category) => {
-            return (
-              <Link
-                href={`/${sectionInList.slug}/${category.slug}`}
-                key={category.name}
-              >
-                <MainMenusGradientCard
-                  description={category.description}
-                  title={category.name}
-                />
-              </Link>
-            );
-          })}
-        </MenuSectionWrapper>
-      </>
-    );
-  }
   return (
     <>
-      <h1 className="header-1">{sectionInList.name} category</h1>
-      <p className="caption-md">{sectionInList.description}</p>
-      <MenuSectionWrapper key={sectionInList.name} name={sectionInList.name}>
-        {sectionInList.categoriesList.map((category) => {
+      <h1 className="header-1">{sectionInList.meta.name} category</h1>
+      <p className="caption-md">{sectionInList.meta.description}</p>
+      <MenuSectionWrapper name={sectionInList.meta.name}>
+        {sectionInList.categories.map((category) => {
           return (
             <Link
               href={`/${sectionInList.slug}/${category.slug}`}
-              key={category.name}
+              key={category.slug}
             >
               <MainMenusGradientCard
-                description={category.description}
-                title={category.name}
+                description={category.meta.description}
+                title={category.meta.name}
               >
-                <MainMenuCardContent category={category} />
+                <MainMenuCardContent
+                  slugCategory={category.slug}
+                  isComingSoon={category.meta.comingSoonCategory}
+                />
               </MainMenusGradientCard>
             </Link>
           );
@@ -67,6 +59,4 @@ export default async function Page({ params }: Props) {
       </MenuSectionWrapper>
     </>
   );
-
-  // return notFound();
 }

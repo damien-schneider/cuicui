@@ -1,5 +1,5 @@
 "use client";
-import { cn } from "@/cuicui/utils/cn/cn";
+import { cn } from "@/cuicui/utils/cn";
 import { useRef, useEffect, type ComponentProps } from "react";
 
 interface MouseEvent {

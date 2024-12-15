@@ -2,58 +2,37 @@ import * as Tabs from "@radix-ui/react-tabs";
 import ComponentTabRenderer from "#/src/components/component-wrapper/component-tab-renderer";
 
 import { cn } from "#/src/utils/cn";
-import type {
-  ComponentHeightType,
-  ProcessedVariantType,
-} from "@cuicui/ui/lib/types/component";
+import type { NewComponentType } from "@cuicui/ui/lib/types/component";
 
 export type TabType = "preview" | "code-component" | "code-preview";
 
 export default function VariantTabs({
-  variantList,
-  size = "md",
-  isIframed = false,
-  isResizable = true,
-  rerenderButton = false,
-  componentParams,
-}: Readonly<{
-  variantList: ProcessedVariantType[];
-  size?: ComponentHeightType;
-  isIframed?: boolean;
-  isResizable?: boolean;
-  rerenderButton?: boolean;
-  componentParams: {
-    sectionSlug: string;
-    categorySlug: string;
-    componentSlug?: string;
-  };
-}>) {
+  component,
+}: {
+  component: NewComponentType;
+}) {
+  if (!component.variants || component.variants.length === 0) {
+    return (
+      <p className="p-12 mt-6 bg-red-400/20 border border-red-400 text-red-400 rounded-lg">
+        No variants found, this is probably an error, please report it as an
+        issue on github
+      </p>
+    );
+  }
   return (
     <div>
       <Tabs.Root
-        defaultValue={variantList[0].name}
+        defaultValue={component.variants[0].name}
         id="variants-tabs"
         itemID="variants-tabs"
       >
-        {variantList.map((variant, _index) => (
-          <Tabs.Content key={variant.name} value={variant.name}>
-            <ComponentTabRenderer
-              {...variant}
-              isIframed={isIframed}
-              isResizable={isResizable}
-              rerenderButton={rerenderButton}
-              size={size}
-              componentParams={{
-                ...componentParams,
-                componentSlug:
-                  componentParams.componentSlug ?? variant.slugPreviewFile,
-                variantSlug: componentParams.componentSlug
-                  ? variant.slugPreviewFile
-                  : "",
-              }}
-            />
-          </Tabs.Content>
-        ))}
+        {component.variants.map((variant, _index) => {
+          return (
+            <Tabs.Content key={variant.name} value={variant.name}>
+              <ComponentTabRenderer component={component} variant={variant} />
+            </Tabs.Content>
+          );
+        })}
         <p className="text-neutral-500 text-sm tracking-tight mt-2">
           Variants list
         </p>
@@ -62,7 +41,7 @@ export default function VariantTabs({
             "flex items-center p-0.5 *:data-[state=active]:rounded-lg *:data-[state=active]:border-neutral-500/20 *:data-[state=active]:bg-neutral-400/15 *:data-[state=active]:text-neutral-900",
           )}
         >
-          {variantList.map((variant, _index) => {
+          {component.variants.map((variant, _index) => {
             return (
               <Tabs.Trigger
                 className={cn(

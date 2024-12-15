@@ -1,55 +1,11 @@
 import { MenuIcon } from "lucide-react";
-import type { CategoryType } from "@/lib/types/component";
-import { Dock } from "@/cuicui/common-ui/navigation/mac-dock/variant1";
-import { VercelNavigationVariant1 } from "@/cuicui/common-ui/navigation/vercel-navigation/variant1";
-import { VercelNavigationVariant2 } from "@/cuicui/common-ui/navigation/vercel-navigation/variant2";
-import SideMenuSmoothHoverComponent from "@/cuicui/common-ui/navigation/side-menu-smooth-hover/component";
+import type { CategoryMetaType } from "@/lib/types/component";
 
-export const navigationCategory: CategoryType = {
-  slug: "navigation",
+export const navigationCategory: CategoryMetaType = {
   name: "Navigation",
   description: "Navigation components with different effects",
   releaseDateCategory: new Date("2024-06-17"),
   icon: MenuIcon,
-  componentList: [
-    {
-      sizePreview: "sm",
-      slug: "vercel-navigation",
-      variantList: [
-        {
-          name: "On hover effect",
-          component: VercelNavigationVariant1,
-          slugPreviewFile: "variant1",
-        },
-        {
-          name: "On click effect",
-          component: VercelNavigationVariant2,
-          slugPreviewFile: "variant2",
-        },
-      ],
-      name: "Vercel Navigation",
-      description:
-        "A smooth and simple navigation bar inspired by Vercel, with modern transitions and animations.",
-      isIframed: true,
-    },
-    {
-      sizePreview: "sm",
-      slug: "mac-dock",
-      variantList: [
-        {
-          name: "Default",
-          component: Dock,
-          slugPreviewFile: "variant1",
-        },
-      ],
-      name: "MacOS Dock",
-      description:
-        "A navigation menu with smooth animation as done on macOS but in a web browser!",
-
-      inspiration: "MacOS Dock",
-    },
-    SideMenuSmoothHoverComponent,
-  ],
 };
 
 export default navigationCategory;

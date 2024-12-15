@@ -8,8 +8,8 @@ import {
   RefreshCcwIcon,
 } from "lucide-react";
 import { type ComponentProps, useRef, useState } from "react";
-import { useCopyToClipboard } from "@/cuicui/hooks/use-copy-to-clipboard/use-copy-to-clipboard";
-import { cn } from "@/cuicui/utils/cn/cn";
+import { useCopyToClipboard } from "@/cuicui/hooks/use-copy-to-clipboard";
+import { cn } from "@/cuicui/utils/cn";
 
 export function ReactSignature({
   className,

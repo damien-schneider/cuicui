@@ -4,11 +4,11 @@ import { DesktopSideMenu } from "#/src/components/navigation/desktop-menu";
 import { AddressBar } from "#/src/ui/address-bar";
 import StarCuicuiGithubButton from "#/src/ui/star-github-project-button";
 import { StaticNoise } from "@/cuicui/other/creative-effects/animated-noise/static-noise";
-import type React from "react";
+import type { ReactNode } from "react";
 
 export default function ComponentsLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+}: { children: ReactNode }) {
   return (
     <>
       <div className="mx-auto max-w-screen-2xl">

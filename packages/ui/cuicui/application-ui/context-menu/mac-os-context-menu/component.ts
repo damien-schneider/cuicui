@@ -1,4 +1,4 @@
-import { PreviewMacOsContextMenu } from "@/cuicui/application-ui/context-menu/mac-os-context-menu/preview.mac-os-context-menu";
+import { PreviewMacOsContextMenu } from "@/cuicui/application-ui/context-menu/mac-os-context-menu/mac-os-context-menu.variant";
 import type { ComponentType } from "@/lib/types/component";
 
 export const macOsContextMenuComponent: ComponentType = {
@@ -15,3 +15,5 @@ export const macOsContextMenuComponent: ComponentType = {
     },
   ],
 };
+
+export default macOsContextMenuComponent;
