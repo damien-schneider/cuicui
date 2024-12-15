@@ -5,40 +5,22 @@ import {
   SectionWrapper,
 } from "#/src/components/navigation/navigation-item";
 import { sectionList } from "@/section-list";
-import type {
-  NewCategoryType,
-  SingleComponentCategoryType,
-} from "@cuicui/ui/lib/types/component";
+import type { CategoryType } from "@cuicui/ui/lib/types/component";
 import { cn } from "#/src/utils/cn";
 
 export default function NavigationMenu({
   isMobile,
   className,
 }: Readonly<{ isMobile?: boolean; className?: string }>) {
-  function getCategoryTagMultipleComponentCategory(category: NewCategoryType) {
+  function getCategoryTag(category: CategoryType) {
     const isNew =
       differenceInDays(new Date(), category.meta.releaseDateCategory ?? 0) < 21;
-    if (category.meta.comingSoonCategory) {
+    if (category.meta.isComingSoon) {
       return "Coming Soon";
     }
     if (isNew) {
       return "New";
     }
-    return null;
-  }
-
-  function getCategoryTagSingleComponentCategory(
-    category: SingleComponentCategoryType,
-  ) {
-    const isNew =
-      differenceInDays(new Date(), category.releaseDateCategory ?? 0) < 21;
-    if (category.comingSoonCategory) {
-      return "Coming Soon";
-    }
-    if (isNew) {
-      return "New";
-    }
-
     return null;
   }
 
@@ -76,7 +58,7 @@ export default function NavigationMenu({
                       href={`/${section.slug}/${category.slug}`}
                       isMobile={isMobile}
                       name={category.meta.name}
-                      tag={getCategoryTagMultipleComponentCategory(category)}
+                      tag={getCategoryTag(category)}
                       target="sameWindow"
                     />
                   </li>

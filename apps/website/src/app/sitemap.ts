@@ -36,7 +36,7 @@ function getComponentsSitemap(): MetadataRoute.Sitemap {
   const componentSitemap: MetadataRoute.Sitemap = [];
   sectionList.flatMap((section) => {
     for (const category of section.categories) {
-      if (category.meta.comingSoonCategory) {
+      if (category.meta.isComingSoon) {
         return;
       }
       if (section.slug && category.slug) {

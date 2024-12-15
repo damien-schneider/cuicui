@@ -2,14 +2,14 @@ import * as Tabs from "@radix-ui/react-tabs";
 import ComponentTabRenderer from "#/src/components/component-wrapper/component-tab-renderer";
 
 import { cn } from "#/src/utils/cn";
-import type { NewComponentType } from "@cuicui/ui/lib/types/component";
+import type { ComponentType } from "@cuicui/ui/lib/types/component";
 
 export type TabType = "preview" | "code-component" | "code-preview";
 
 export default function VariantTabs({
   component,
 }: {
-  component: NewComponentType;
+  component: ComponentType;
 }) {
   if (!component.variants || component.variants.length === 0) {
     return (

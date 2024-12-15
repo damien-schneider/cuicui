@@ -6,7 +6,7 @@ export const useSpeechToTextCategory: CategoryMetaType = {
   description: "A hook that allows you to convert speech to text",
   releaseDateCategory: new Date("2024-09-28"),
   icon: AudioLinesIcon,
-  comingSoonCategory: true,
+  isComingSoon: true,
 };
 
 export default useSpeechToTextCategory;

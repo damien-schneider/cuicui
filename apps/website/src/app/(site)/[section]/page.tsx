@@ -50,7 +50,7 @@ export default async function Page({ params }: Props) {
               >
                 <MainMenuCardContent
                   slugCategory={category.slug}
-                  isComingSoon={category.meta.comingSoonCategory}
+                  isComingSoon={category.meta.isComingSoon}
                 />
               </MainMenusGradientCard>
             </Link>

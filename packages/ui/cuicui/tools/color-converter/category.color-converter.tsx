@@ -1,12 +1,11 @@
 import { PaletteIcon } from "lucide-react";
-import type { PageCategoryType } from "@/lib/types/component";
-import { PageColorConverter } from "@/cuicui/tools/color-converter/page.color-converter";
+import type { CategoryMetaType } from "@/lib/types/component";
 
-export const ColorConverterCategory: PageCategoryType = {
+export const ColorConverterCategory: CategoryMetaType = {
   name: "Color Converter",
-  slug: "color-converter",
   icon: PaletteIcon,
   description:
     "Convert standard colors to tailwind classes equivalent. Convert seamlessly HEX to RGB, HSL and more or convert from tailwind classes to HEX, RGB, HSL.",
-  component: <PageColorConverter />,
+  // component: <PageColorConverter />,
+  releaseDateCategory: new Date("2024-09-28"),
 };

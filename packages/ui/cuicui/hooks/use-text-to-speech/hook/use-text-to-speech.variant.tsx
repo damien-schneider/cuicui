@@ -38,3 +38,5 @@ export const PreviewUseTextToSpeech = () => {
     </CustomTTSComponent>
   );
 };
+
+export default PreviewUseTextToSpeech;

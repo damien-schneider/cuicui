@@ -1,12 +1,11 @@
 import { TextSelectionIcon } from "lucide-react";
-import type { PageCategoryType } from "@/lib/types/component";
-import { CssSelectorsTool } from "@/cuicui/tools/css-selectors/page.css-selectors";
+import type { CategoryMetaType } from "@/lib/types/component";
 
-export const cssSelectorsCategory: PageCategoryType = {
+export const cssSelectorsCategory: CategoryMetaType = {
   name: "CSS Selectors",
-  slug: "css-selectors",
+  releaseDateCategory: new Date("2024-09-28"),
   icon: TextSelectionIcon,
   description:
     "A visual guide to CSS selectors. Learn how to target HTML elements with CSS.",
-  component: <CssSelectorsTool />,
+  // component: <CssSelectorsTool />,
 };

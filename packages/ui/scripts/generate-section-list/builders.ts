@@ -226,7 +226,7 @@ export function buildContent(
   }
 
   imports += `
-import type { NewSectionType } from "@/lib/types/component";`;
+import type { SectionType } from "@/lib/types/component";`;
 
   // Grouping
   const categoriesBySection = groupBy(categories, (c) => c.sectionSlug);
@@ -301,7 +301,7 @@ import type { NewSectionType } from "@/lib/types/component";`;
 
   content += `
 
-export const sectionList: NewSectionType[] = [
+export const sectionList: SectionType[] = [
   ${sectionList.join(",\n  ")}
 ];
 `;

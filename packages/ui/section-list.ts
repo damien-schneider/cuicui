@@ -334,9 +334,9 @@ import utils_catch_error_catch_error_catch_error_variant from "@/cuicui/utils/ca
 import utils_cn_cn_default_variant from "@/cuicui/utils/cn/cn/default.variant";
 import utils_sleep_sleep_sleep_variant from "@/cuicui/utils/sleep/sleep/sleep.variant";
 
-import type { NewSectionType } from "@/lib/types/component";
+import type { SectionType } from "@/lib/types/component";
 
-export const sectionList: NewSectionType[] = [
+export const sectionList: SectionType[] = [
   {
     meta: application_ui_section,
     slug: "application-ui",

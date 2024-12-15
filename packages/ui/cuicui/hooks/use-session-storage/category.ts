@@ -8,7 +8,7 @@ export const useSessionStorageCategory: CategoryMetaType = {
   description: "A hook that allows you to manage session storage values",
   releaseDateCategory: new Date("2024-08-28"),
   icon: ViewIcon,
-  comingSoonCategory: true,
+  isComingSoon: true,
 };
 
 export default useSessionStorageCategory;

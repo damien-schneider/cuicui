@@ -1,12 +1,11 @@
 import { TangentIcon } from "lucide-react";
-import type { PageCategoryType } from "@/lib/types/component";
-import { PageBezierCurveGenerator } from "@/cuicui/tools/bezier-curve-generator/page.bezier-curve-generator";
+import type { CategoryMetaType } from "@/lib/types/component";
 
-export const bezierCurveGeneratorCategory: PageCategoryType = {
-  slug: "bezier-curve-generator",
+export const bezierCurveGeneratorCategory: CategoryMetaType = {
   name: "Bezier Curve Generator",
   icon: TangentIcon,
   description:
     "Build forms with ease using the Form Builder tool. Based on shadCn components.",
-  component: <PageBezierCurveGenerator />,
+  // component: <PageBezierCurveGenerator />,
+  releaseDateCategory: new Date("2024-09-28"),
 };
