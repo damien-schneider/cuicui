@@ -6,7 +6,7 @@ export const actionMenuCategory: CategoryMetaType = {
   description: "Create action menus to display actions in a dropdown",
   releaseDateCategory: new Date("2024-07-29"),
   icon: StretchHorizontalIcon,
-  comingSoonCategory: true,
+  isComingSoon: true,
 };
 
 export default actionMenuCategory;

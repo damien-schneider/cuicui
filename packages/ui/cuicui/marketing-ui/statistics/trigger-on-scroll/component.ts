@@ -1,21 +1,11 @@
-import PreviewTriggerOnScroll from "@/cuicui/marketing-ui/statistics/trigger-on-scroll/default.variant";
-import type { ComponentType } from "@/lib/types/component";
+import type { ComponentMetaType } from "@/lib/types/component";
 
-export const triggerOnScrollComponent: ComponentType = {
+export const triggerOnScrollComponent: ComponentMetaType = {
   sizePreview: "sm",
-  slug: "trigger-on-scroll",
   // isIframed: true,
   rerenderButton: true,
   name: "Number trigger on scroll",
   description: "Show numbers that animate when they appear on the screen.",
-  variantList: [
-    {
-      name: "Animated Number",
-      component: PreviewTriggerOnScroll,
-      slugPreviewFile: "preview",
-      slugComponentFile: "trigger-on-scroll",
-    },
-  ],
 };
 
 export default triggerOnScrollComponent;

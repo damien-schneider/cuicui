@@ -1,19 +1,10 @@
-import type { ComponentType } from "@/lib/types/component";
-import GridPattern from "@/cuicui/other/patterns/grid-pattern/grid-pattern.variant";
+import type { ComponentMetaType } from "@/lib/types/component";
 
-export const gridPatternComponent: ComponentType = {
+export const gridPatternComponent: ComponentMetaType = {
   sizePreview: "sm",
-  slug: "grid-pattern",
   name: "Simple grid pattern",
   description:
     "Create a simple grid pattern without images, just with CSS and HTML for better performance, SEO and accessibility & also more micro-interactions",
-  variantList: [
-    {
-      name: "Default",
-      component: GridPattern,
-      slugPreviewFile: "grid-pattern",
-    },
-  ],
 };
 
 export default gridPatternComponent;

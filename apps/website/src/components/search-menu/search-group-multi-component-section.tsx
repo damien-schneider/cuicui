@@ -1,15 +1,12 @@
 import { useRouter } from "next/navigation";
-import type {
-  NewSectionType,
-  NewCategoryType,
-} from "@cuicui/ui/lib/types/component";
+import type { SectionType, CategoryType } from "@cuicui/ui/lib/types/component";
 import { CommandGroup, CommandItem } from "#/src/ui/shadcn/command";
 import Link from "next/link";
 
 export function SearchGroupComponentSection({
   closeSearchMenu,
   section,
-}: Readonly<{ closeSearchMenu: () => void; section: NewSectionType }>) {
+}: Readonly<{ closeSearchMenu: () => void; section: SectionType }>) {
   const router = useRouter();
 
   return (
@@ -31,7 +28,7 @@ const MultipleComponentSearchItems = ({
   sectionSlug,
   closeSearchMenu,
 }: {
-  category: NewCategoryType;
+  category: CategoryType;
   sectionSlug: string;
   closeSearchMenu: () => void;
 }) => {

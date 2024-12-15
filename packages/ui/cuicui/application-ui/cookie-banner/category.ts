@@ -6,7 +6,7 @@ export const cookieBannerCategory: CategoryMetaType = {
   description: "Display a cookie banner to inform users about cookies",
   releaseDateCategory: new Date("2024-09-26"),
   icon: CookieIcon,
-  comingSoonCategory: false,
+  isComingSoon: false,
 };
 
 export default cookieBannerCategory;

@@ -4,8 +4,8 @@ import "./full-component.css";
 
 import { ComponentWrapper } from "#/src/components/component-wrapper/component-wrapper";
 import type {
-  NewComponentType,
-  NewVariantType,
+  ComponentType,
+  VariantType,
 } from "@cuicui/ui/lib/types/component";
 import CodeHighlighter from "#/src/ui/code-highlighter";
 import {} from "#/src/ui/shadcn/resizable";
@@ -27,8 +27,8 @@ export default async function ComponentTabRenderer({
   component,
   variant,
 }: {
-  component: NewComponentType;
-  variant: NewVariantType;
+  component: ComponentType;
+  variant: VariantType;
 }) {
   const variantCode = await readFileContent(variant.pathname);
   if (!variantCode) {
@@ -127,7 +127,7 @@ export default async function ComponentTabRenderer({
 const CodeTab = ({
   code,
   component,
-}: { code: string; component: NewComponentType }) => {
+}: { code: string; component: ComponentType }) => {
   return (
     <>
       <ScrollArea
@@ -155,8 +155,8 @@ const PreviewTab = ({
   component,
   variant,
 }: {
-  component: NewComponentType;
-  variant: NewVariantType;
+  component: ComponentType;
+  variant: VariantType;
 }) => {
   if (component.meta.isResizable) {
     return (

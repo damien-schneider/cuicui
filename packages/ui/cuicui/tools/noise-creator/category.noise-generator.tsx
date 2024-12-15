@@ -1,12 +1,11 @@
 import { AudioLinesIcon } from "lucide-react";
-import type { PageCategoryType } from "@/lib/types/component";
-import { NoiseGenerator } from "@/cuicui/tools/noise-creator/page.noise-generator";
+import type { CategoryMetaType } from "@/lib/types/component";
 
-export const noiseGeneratorCategory: PageCategoryType = {
+export const noiseGeneratorCategory: CategoryMetaType = {
+  releaseDateCategory: new Date("2024-09-28"),
   name: "Noise Generator",
-  slug: "noise-generator",
   icon: AudioLinesIcon,
   description:
     "Generate noise for your projects. You can use it as a background, texture, or any other creative effect.",
-  component: <NoiseGenerator />,
+  // component: <NoiseGenerator />,
 };

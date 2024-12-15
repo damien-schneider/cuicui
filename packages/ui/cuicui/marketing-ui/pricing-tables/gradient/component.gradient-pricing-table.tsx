@@ -1,17 +1,8 @@
-import type { ComponentType } from "@/lib/types/component";
-import PreviewGradient from "@/cuicui/marketing-ui/pricing-tables/gradient/pricing-table-gradient.variant";
+import type { ComponentMetaType } from "@/lib/types/component";
 
-export const gradientPricingTableComponent: ComponentType = {
+export const gradientPricingTableComponent: ComponentMetaType = {
   name: "Gradient Pricing Table",
   description: "Simple 3 offers pricing page with gradient background.",
   sizePreview: "xl",
-  slug: "gradient",
   isIframed: true,
-  variantList: [
-    {
-      name: "Simple 3 offers pricing page",
-      component: <PreviewGradient />,
-      slugPreviewFile: "preview.pricing-table-gradient",
-    },
-  ],
 };

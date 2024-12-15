@@ -3,7 +3,7 @@ import type { CategoryMetaType } from "@/lib/types/component";
 
 export const toggleCategory: CategoryMetaType = {
   name: "Toggle",
-  comingSoonCategory: true,
+  isComingSoon: true,
   description: "Toggle components",
   icon: ToggleLeftIcon,
   releaseDateCategory: new Date("2024-09-26"),

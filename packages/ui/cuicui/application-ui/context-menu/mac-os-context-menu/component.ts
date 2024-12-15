@@ -1,19 +1,9 @@
-import { PreviewMacOsContextMenu } from "@/cuicui/application-ui/context-menu/mac-os-context-menu/mac-os-context-menu.variant";
-import type { ComponentType } from "@/lib/types/component";
+import type { ComponentMetaType } from "@/lib/types/component";
 
-export const macOsContextMenuComponent: ComponentType = {
-  slug: "mac-os-context-menu",
+export const macOsContextMenuComponent: ComponentMetaType = {
   name: "Mac OS Context Menu",
   description: "Mac OS Context Menu",
   sizePreview: "sm",
-  variantList: [
-    {
-      name: "Default",
-      component: PreviewMacOsContextMenu,
-      slugPreviewFile: "preview.mac-os-context-menu",
-      slugComponentFile: "mac-os-context-menu",
-    },
-  ],
 };
 
 export default macOsContextMenuComponent;

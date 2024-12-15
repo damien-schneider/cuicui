@@ -206,3 +206,5 @@ export const PreviewUseTextToSpeechAdvancedDemo = () => {
     </div>
   );
 };
+
+export default PreviewUseTextToSpeechAdvancedDemo;
