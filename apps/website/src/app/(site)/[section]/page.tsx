@@ -4,7 +4,7 @@ import { MainMenuCardContent } from "#/src/app/card";
 import MenuSectionWrapper from "#/src/components/main-menus/menu-category-wrapper";
 import { MainMenusGradientCard } from "@cuicui/ui/cuicui/other/cursors/dynamic-cards/gradient-card";
 
-import { sectionList as newSectionList } from "@cuicui/ui/new-section-list";
+import { sectionList } from "@/section-list";
 import { newFindSectionBySlug } from "#/src/utils/section-category-components-utils/section-list-utils";
 
 type Props = {
@@ -15,7 +15,7 @@ export function generateStaticParams() {
   const paramsArray: {
     section: string;
   }[] = [];
-  for (const section of newSectionList) {
+  for (const section of sectionList) {
     paramsArray.push({
       section: section.slug,
     });

@@ -1,5 +1,5 @@
 import { newFindSectionBySlug } from "#/src/utils/section-category-components-utils/section-list-utils";
-import { sectionList as newSectionList } from "@/new-section-list";
+import { sectionList } from "@/section-list";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { createElement } from "react";
@@ -17,7 +17,7 @@ export function generateStaticParams() {
     variant: string;
   }[] = [];
 
-  for (const section of newSectionList) {
+  for (const section of sectionList) {
     for (const category of section.categories) {
       if (category.components) {
         for (const variant of category.components) {

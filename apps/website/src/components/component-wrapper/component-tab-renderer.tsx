@@ -21,6 +21,7 @@ import {
   getCuicuiDependenciesInfo,
   readFileContent,
 } from "#/src/utils/get-code-from-path";
+import StepToInstall from "#/src/components/steps-to-install/step-to-install";
 
 export default async function ComponentTabRenderer({
   component,
@@ -143,17 +144,9 @@ const CodeTab = ({
           <ScrollBar orientation="vertical" />
           <ScrollBar orientation="horizontal" />
           <CodeHighlighter code={code} />
-          {/* {tab === "code-component" && componentCode && (
-                    <CodeHighlighter code={componentCode} />
-                    )} */}
         </ScrollAreaViewport>
       </ScrollArea>
-      {/* {tab === "code-preview" && (
-                <StepToInstall code={variantCode ?? ""} />
-                )}
-                {tab === "code-component" && (
-                  <StepToInstall code={componentCode ?? ""} />
-                  )} */}
+      <StepToInstall code={code} />
     </>
   );
 };

@@ -22,16 +22,6 @@ export default async function MultipleComponentCategory({
     return notFound();
   }
 
-  // If the componentList is not an array, we convert it to an array
-  // const componentArray = Array.isArray(category.componentList)
-  //   ? category.componentList
-  //   : [category.componentList];
-
-  // const componentList = await fetchMultipleComponentData({
-  //   categorySlug: category.slug,
-  //   componentList: componentArray,
-  // });
-
   return (
     <div className="space-y-32">
       {category.components.map((component) => (

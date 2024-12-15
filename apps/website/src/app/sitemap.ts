@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { sectionList as newSectionList } from "@/new-section-list";
+import { sectionList } from "@/section-list";
 
 export const port = process.env.PORT ?? 3000;
 
@@ -34,7 +34,7 @@ const staticSitemap: MetadataRoute.Sitemap = [
 
 function getComponentsSitemap(): MetadataRoute.Sitemap {
   const componentSitemap: MetadataRoute.Sitemap = [];
-  newSectionList.flatMap((section) => {
+  sectionList.flatMap((section) => {
     for (const category of section.categories) {
       if (category.meta.comingSoonCategory) {
         return;

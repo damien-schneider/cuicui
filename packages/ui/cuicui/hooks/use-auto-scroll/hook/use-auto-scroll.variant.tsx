@@ -1,5 +1,3 @@
-// src/ChatListSimplified.tsx
-
 "use client";
 
 import { autoScrollListRef } from "@/cuicui/hooks/use-auto-scroll";

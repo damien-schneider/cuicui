@@ -1,6 +1,6 @@
 "use client";
 import { BatteryIndicator } from "@/cuicui/application-ui/battery/battery-indicator/battery-indicator";
-import { ThreeDotSimpleLoader } from "@/cuicui/common-ui/loaders/three-dot-simple-loader/three-dot-simple-loader.variant"; // Allows to wait for the battery information to load
+
 import { useBattery } from "@/cuicui/hooks/use-battery";
 
 export const PreviewUseBattery = () => {
@@ -14,7 +14,7 @@ export const PreviewUseBattery = () => {
   return (
     <div>
       {loading ? (
-        <ThreeDotSimpleLoader />
+        <p>Loading...</p>
       ) : (
         <>
           <BatteryIndicator

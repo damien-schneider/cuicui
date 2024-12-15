@@ -11,7 +11,7 @@ import {
 } from "./builders.ts";
 
 const ROOT_DIR = "./cuicui";
-const OUTPUT_FILE_NAME = "new-section-list.ts";
+const OUTPUT_FILE_NAME = "section-list.ts";
 
 console.log(`Starting script in root directory: ${ROOT_DIR}`);
 

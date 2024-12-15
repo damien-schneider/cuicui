@@ -5,10 +5,10 @@
   "private": true,
   "scripts": {
     "_build": "pnpm pre-build",
-    "pre-build": "pnpm generate-preview-categories",
+    "pre-build": "pnpm generate-preview-categories && pnpm generate-section-list",
     "type-check": "tsc --noEmit",
     "generate-preview-categories": "deno run --allow-read --allow-write scripts/generate-preview-categories.ts ",
-    "generate-section-list": "deno run --allow-read --allow-write scripts/generate-section-list/main.ts && pnpm biome format --write ./new-section-list.ts"
+    "generate-section-list": "deno run --allow-read --allow-write scripts/generate-section-list/main.ts && pnpm biome format --write ./section-list.ts"
   },
   "license": "MIT",
   "peerDependencies": {

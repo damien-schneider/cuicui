@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import { sectionList } from "./new-section-list"; // Adjust the import path as needed
+import { sectionList } from "./section-list"; // Adjust the import path as needed
 
 describe("sectionList structure", () => {
   test("All components have non-empty variants arrays", () => {

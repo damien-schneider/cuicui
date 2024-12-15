@@ -4,7 +4,7 @@ import {
   GlobalNavItem,
   SectionWrapper,
 } from "#/src/components/navigation/navigation-item";
-import { sectionList as newSectionList } from "@/new-section-list";
+import { sectionList } from "@/section-list";
 import type {
   NewCategoryType,
   SingleComponentCategoryType,
@@ -56,7 +56,7 @@ export default function NavigationMenu({
 
   return (
     <nav className={cn("mt-5 mb-12 px-1 space-y-2 min-h-full", className)}>
-      {newSectionList.map((section) => {
+      {sectionList.map((section) => {
         return (
           <SectionWrapper
             key={section.slug}

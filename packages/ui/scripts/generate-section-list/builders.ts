@@ -6,8 +6,9 @@ import type {
   FoundComponent,
   FoundVariant,
 } from "./types";
-import { toVarName, toVarPrefix, groupBy } from "./file-utils.ts";
+import { toVarName, groupBy } from "./file-utils.ts";
 
+const variantExtensionRegex = /\.variant\.[jt]sx?$/;
 const isSection = (fileName: string) => fileName === "section.ts";
 const isCategory = (fileName: string) => fileName === "category.ts";
 // const isComponent = (fileName: string) => fileName.endsWith(".component.ts");
@@ -161,7 +162,7 @@ export function discoverComponentsAndVariants(
       // Find variants
       const variantFiles = componentFiles.filter((f) => isVariant(f));
       for (const variantFile of variantFiles) {
-        const variantSlug = variantFile.replace(/\.variant\.tsx?$/, "");
+        const variantSlug = variantFile.replace(variantExtensionRegex, "");
         const variantVarName = toVarName(
           `${cat.sectionSlug}_${cat.categorySlug}_${componentDir}_${variantSlug}`,
           "variant",
@@ -243,7 +244,7 @@ import type { NewSectionType } from "@/lib/types/component";`;
   const sectionList: string[] = [];
 
   for (const sec of sections) {
-    const secPrefix = toVarPrefix(sec.sectionSlug);
+    // const secPrefix = toVarPrefix(sec.sectionSlug);
     const sectionCategories = categoriesBySection[sec.sectionSlug] || [];
 
     const categoryObjects = sectionCategories

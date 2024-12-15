@@ -5,7 +5,7 @@ import { SearchIcon } from "lucide-react";
 import { type ComponentProps, useState } from "react";
 import { FirstSectionCommandGroup } from "#/src/components/search-menu/first-section-command-group";
 import { SearchGroupComponentSection } from "#/src/components/search-menu/search-group-multi-component-section";
-import { sectionList as newSectionList } from "@/new-section-list";
+import { sectionList } from "@/section-list";
 
 import {
   CommandDialog,
@@ -61,7 +61,7 @@ export function SearchMenu({ ...props }: ComponentProps<"button">) {
 
           <FirstSectionCommandGroup closeSearchMenu={() => setOpen(false)} />
 
-          {newSectionList.map((section) => {
+          {sectionList.map((section) => {
             return (
               <SearchGroupComponentSection
                 closeSearchMenu={() => setOpen(false)}

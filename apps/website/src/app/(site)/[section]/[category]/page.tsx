@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import MultipleComponentCategory from "#/src/app/(site)/[section]/[category]/multiple-component-section";
-import { sectionList as newSectionList } from "@cuicui/ui/new-section-list";
+import { sectionList } from "@/section-list";
 import type {} from "@cuicui/ui/lib/types/component";
 import {
   newFindCategoryBySlug,
@@ -16,7 +16,7 @@ type Props = {
 
 export function generateStaticParams() {
   const paramsArray: { section: string; category: string }[] = [];
-  for (const section of newSectionList) {
+  for (const section of sectionList) {
     for (const category of section.categories) {
       paramsArray.push({
         section: section.slug,

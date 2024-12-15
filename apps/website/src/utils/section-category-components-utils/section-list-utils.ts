@@ -1,4 +1,4 @@
-import { sectionList as newSectionList } from "@cuicui/ui/new-section-list";
+import { sectionList } from "@/section-list";
 // Function Overloads
 
 export const newFindCategoryBySlug = ({
@@ -18,5 +18,5 @@ export const newFindCategoryBySlug = ({
 };
 
 export function newFindSectionBySlug(slug: string) {
-  return newSectionList.find((section) => section.slug === slug) ?? null;
+  return sectionList.find((section) => section.slug === slug) ?? null;
 }
