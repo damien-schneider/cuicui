@@ -1,5 +1,4 @@
 "use client";
-import { useOnClickOutside } from "@/cuicui/hooks/use-click-outside/use-click-outside";
 
 import { cn } from "@/cuicui/utils/cn";
 import {
@@ -14,6 +13,7 @@ import { ListCollapseIcon } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { type ReactNode, useEffect, useRef, useState } from "react";
+import { useOnClickOutside } from "@/cuicui/hooks/use-click-outside";
 
 export const FloatingDock = ({
   items,

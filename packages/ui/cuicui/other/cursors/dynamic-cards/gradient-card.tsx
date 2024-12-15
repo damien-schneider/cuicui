@@ -1,7 +1,7 @@
 "use client";
 import { ArrowUpRightIcon } from "lucide-react";
 import type { ReactNode } from "react";
-import { useMouse } from "@/cuicui/hooks/use-mouse/use-mouse";
+import { useMouse } from "@/cuicui/hooks/use-mouse";
 import { cn } from "@/cuicui/utils/cn";
 
 export const MainMenusGradientCard = ({

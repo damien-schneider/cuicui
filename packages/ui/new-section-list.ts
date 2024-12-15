@@ -1,5 +1,6 @@
 import application_ui_section from "@/cuicui/application-ui/section";
 import common_ui_section from "@/cuicui/common-ui/section";
+import hooks_section from "@/cuicui/hooks/section";
 import marketing_ui_section from "@/cuicui/marketing-ui/section";
 import other_section from "@/cuicui/other/section";
 import utils_section from "@/cuicui/utils/section";
@@ -33,6 +34,36 @@ import common_ui_loaders_category from "@/cuicui/common-ui/loaders/category";
 import common_ui_navigation_category from "@/cuicui/common-ui/navigation/category";
 import common_ui_skeletons_category from "@/cuicui/common-ui/skeletons/category";
 import common_ui_toggle_category from "@/cuicui/common-ui/toggle/category";
+import hooks_use_auto_scroll_category from "@/cuicui/hooks/use-auto-scroll/category";
+import hooks_use_battery_category from "@/cuicui/hooks/use-battery/category";
+import hooks_use_click_outside_category from "@/cuicui/hooks/use-click-outside/category";
+import hooks_use_copy_to_clipboard_category from "@/cuicui/hooks/use-copy-to-clipboard/category";
+import hooks_use_counter_category from "@/cuicui/hooks/use-counter/category";
+import hooks_use_debounce_category from "@/cuicui/hooks/use-debounce/category";
+import hooks_use_event_callback_category from "@/cuicui/hooks/use-event-callback/category";
+import hooks_use_event_listener_category from "@/cuicui/hooks/use-event-listener/category";
+import hooks_use_first_visit_category from "@/cuicui/hooks/use-first-visit/category";
+import hooks_use_geolocation_category from "@/cuicui/hooks/use-geolocation/category";
+import hooks_use_in_view_category from "@/cuicui/hooks/use-in-view/category";
+import hooks_use_input_value_category from "@/cuicui/hooks/use-input-value/category";
+import hooks_use_isomorphic_layout_effect_category from "@/cuicui/hooks/use-isomorphic-layout-effect/category";
+import hooks_use_key_press_category from "@/cuicui/hooks/use-key-press/category";
+import hooks_use_konami_code_category from "@/cuicui/hooks/use-konami-code/category";
+import hooks_use_local_storage_category from "@/cuicui/hooks/use-local-storage/category";
+import hooks_use_location_category from "@/cuicui/hooks/use-location/category";
+import hooks_use_measure_category from "@/cuicui/hooks/use-measure/category";
+import hooks_use_mouse_category from "@/cuicui/hooks/use-mouse/category";
+import hooks_use_network_status_category from "@/cuicui/hooks/use-network-status/category";
+import hooks_use_online_status_category from "@/cuicui/hooks/use-online-status/category";
+import hooks_use_rerender_category from "@/cuicui/hooks/use-rerender/category";
+import hooks_use_session_storage_category from "@/cuicui/hooks/use-session-storage/category";
+import hooks_use_speech_to_text_category from "@/cuicui/hooks/use-speech-to-text/category";
+import hooks_use_step_category from "@/cuicui/hooks/use-step/category";
+import hooks_use_stopwatch_category from "@/cuicui/hooks/use-stopwatch/category";
+import hooks_use_throttle_category from "@/cuicui/hooks/use-throttle/category";
+import hooks_use_video_category from "@/cuicui/hooks/use-video/category";
+import hooks_use_window_scroll_position_category from "@/cuicui/hooks/use-window-scroll-position/category";
+import hooks_use_window_size_category from "@/cuicui/hooks/use-window-size/category";
 import marketing_ui_carousels_category from "@/cuicui/marketing-ui/carousels/category";
 import marketing_ui_faq_category from "@/cuicui/marketing-ui/faq/category";
 import marketing_ui_features_category from "@/cuicui/marketing-ui/features/category";
@@ -99,6 +130,36 @@ import common_ui_navigation_side_menu_smooth_hover_component from "@/cuicui/comm
 import common_ui_navigation_vercel_navigation_component from "@/cuicui/common-ui/navigation/vercel-navigation/component";
 import common_ui_skeletons_classic_pulse_component from "@/cuicui/common-ui/skeletons/classic-pulse/component";
 import common_ui_skeletons_shiny_gradient_component from "@/cuicui/common-ui/skeletons/shiny-gradient/component";
+import hooks_use_auto_scroll_hook_component from "@/cuicui/hooks/use-auto-scroll/hook/component";
+import hooks_use_battery_hook_component from "@/cuicui/hooks/use-battery/hook/component";
+import hooks_use_click_outside_hook_component from "@/cuicui/hooks/use-click-outside/hook/component";
+import hooks_use_copy_to_clipboard_hook_component from "@/cuicui/hooks/use-copy-to-clipboard/hook/component";
+import hooks_use_counter_hook_component from "@/cuicui/hooks/use-counter/hook/component";
+import hooks_use_debounce_hook_component from "@/cuicui/hooks/use-debounce/hook/component";
+import hooks_use_event_callback_hook_component from "@/cuicui/hooks/use-event-callback/hook/component";
+import hooks_use_event_listener_hook_component from "@/cuicui/hooks/use-event-listener/hook/component";
+import hooks_use_first_visit_hook_component from "@/cuicui/hooks/use-first-visit/hook/component";
+import hooks_use_geolocation_hook_component from "@/cuicui/hooks/use-geolocation/hook/component";
+import hooks_use_in_view_hook_component from "@/cuicui/hooks/use-in-view/hook/component";
+import hooks_use_input_value_hook_component from "@/cuicui/hooks/use-input-value/hook/component";
+import hooks_use_isomorphic_layout_effect_hook_component from "@/cuicui/hooks/use-isomorphic-layout-effect/hook/component";
+import hooks_use_key_press_hook_component from "@/cuicui/hooks/use-key-press/hook/component";
+import hooks_use_konami_code_hook_component from "@/cuicui/hooks/use-konami-code/hook/component";
+import hooks_use_local_storage_hook_component from "@/cuicui/hooks/use-local-storage/hook/component";
+import hooks_use_location_hook_component from "@/cuicui/hooks/use-location/hook/component";
+import hooks_use_measure_hook_component from "@/cuicui/hooks/use-measure/hook/component";
+import hooks_use_mouse_hook_component from "@/cuicui/hooks/use-mouse/hook/component";
+import hooks_use_network_status_hook_component from "@/cuicui/hooks/use-network-status/hook/component";
+import hooks_use_online_status_hook_component from "@/cuicui/hooks/use-online-status/hook/component";
+import hooks_use_rerender_hook_component from "@/cuicui/hooks/use-rerender/hook/component";
+import hooks_use_session_storage_hook_component from "@/cuicui/hooks/use-session-storage/hook/component";
+import hooks_use_speech_to_text_hook_component from "@/cuicui/hooks/use-speech-to-text/hook/component";
+import hooks_use_step_hook_component from "@/cuicui/hooks/use-step/hook/component";
+import hooks_use_stopwatch_hook_component from "@/cuicui/hooks/use-stopwatch/hook/component";
+import hooks_use_throttle_hook_component from "@/cuicui/hooks/use-throttle/hook/component";
+import hooks_use_video_hook_component from "@/cuicui/hooks/use-video/hook/component";
+import hooks_use_window_scroll_position_hook_component from "@/cuicui/hooks/use-window-scroll-position/hook/component";
+import hooks_use_window_size_hook_component from "@/cuicui/hooks/use-window-size/hook/component";
 import marketing_ui_carousels_cylindric_3d_carousel_component from "@/cuicui/marketing-ui/carousels/cylindric-3d-carousel/component";
 import marketing_ui_carousels_simple_carousel_component from "@/cuicui/marketing-ui/carousels/simple-carousel/component";
 import marketing_ui_faq_full_section_component from "@/cuicui/marketing-ui/faq/full-section/component";
@@ -197,6 +258,34 @@ import common_ui_navigation_vercel_navigation_variant2_variant from "@/cuicui/co
 import common_ui_skeletons_classic_pulse_default_variant from "@/cuicui/common-ui/skeletons/classic-pulse/default.variant";
 import common_ui_skeletons_shiny_gradient_horizontal_variant from "@/cuicui/common-ui/skeletons/shiny-gradient/horizontal.variant";
 import common_ui_skeletons_shiny_gradient_vertical_variant from "@/cuicui/common-ui/skeletons/shiny-gradient/vertical.variant";
+import hooks_use_auto_scroll_hook_use_auto_scroll_variant from "@/cuicui/hooks/use-auto-scroll/hook/use-auto-scroll.variant";
+import hooks_use_battery_hook_use_battery_variant from "@/cuicui/hooks/use-battery/hook/use-battery.variant";
+import hooks_use_click_outside_hook_use_click_outside_variant from "@/cuicui/hooks/use-click-outside/hook/use-click-outside.variant";
+import hooks_use_copy_to_clipboard_hook_copy_to_clipboard_variant from "@/cuicui/hooks/use-copy-to-clipboard/hook/copy-to-clipboard.variant";
+import hooks_use_counter_hook_use_counter_variant from "@/cuicui/hooks/use-counter/hook/use-counter.variant";
+import hooks_use_debounce_hook_use_debounce_variant from "@/cuicui/hooks/use-debounce/hook/use-debounce.variant";
+import hooks_use_event_callback_hook_use_event_callback_variant from "@/cuicui/hooks/use-event-callback/hook/use-event-callback.variant";
+import hooks_use_event_listener_hook_use_event_listener_variant from "@/cuicui/hooks/use-event-listener/hook/use-event-listener.variant";
+import hooks_use_first_visit_hook_use_first_visit_variant from "@/cuicui/hooks/use-first-visit/hook/use-first-visit.variant";
+import hooks_use_geolocation_hook_use_geolocation_variant from "@/cuicui/hooks/use-geolocation/hook/use-geolocation.variant";
+import hooks_use_in_view_hook_in_view_variant from "@/cuicui/hooks/use-in-view/hook/in-view.variant";
+import hooks_use_input_value_hook_use_input_value_variant from "@/cuicui/hooks/use-input-value/hook/use-input-value.variant";
+import hooks_use_isomorphic_layout_effect_hook_use_isomorphic_layout_effect_variant from "@/cuicui/hooks/use-isomorphic-layout-effect/hook/use-isomorphic-layout-effect.variant";
+import hooks_use_key_press_hook_use_key_press_variant from "@/cuicui/hooks/use-key-press/hook/use-key-press.variant";
+import hooks_use_konami_code_hook_use_konami_code_variant from "@/cuicui/hooks/use-konami-code/hook/use-konami-code.variant";
+import hooks_use_local_storage_hook_use_local_storage_variant from "@/cuicui/hooks/use-local-storage/hook/use-local-storage.variant";
+import hooks_use_location_hook_use_location_variant from "@/cuicui/hooks/use-location/hook/use-location.variant";
+import hooks_use_measure_hook_use_measure_variant from "@/cuicui/hooks/use-measure/hook/use-measure.variant";
+import hooks_use_mouse_hook_use_mouse_variant from "@/cuicui/hooks/use-mouse/hook/use-mouse.variant";
+import hooks_use_network_status_hook_use_network_status_variant from "@/cuicui/hooks/use-network-status/hook/use-network-status.variant";
+import hooks_use_online_status_hook_use_online_status_variant from "@/cuicui/hooks/use-online-status/hook/use-online-status.variant";
+import hooks_use_rerender_hook_use_rerender_variant from "@/cuicui/hooks/use-rerender/hook/use-rerender.variant";
+import hooks_use_step_hook_use_step_variant from "@/cuicui/hooks/use-step/hook/use-step.variant";
+import hooks_use_stopwatch_hook_use_stopwatch_variant from "@/cuicui/hooks/use-stopwatch/hook/use-stopwatch.variant";
+import hooks_use_throttle_hook_use_throttle_variant from "@/cuicui/hooks/use-throttle/hook/use-throttle.variant";
+import hooks_use_video_hook_use_video_variant from "@/cuicui/hooks/use-video/hook/use-video.variant";
+import hooks_use_window_scroll_position_hook_use_window_scroll_position_variant from "@/cuicui/hooks/use-window-scroll-position/hook/use-window-scroll-position.variant";
+import hooks_use_window_size_hook_use_window_size_variant from "@/cuicui/hooks/use-window-size/hook/use-window-size.variant";
 import marketing_ui_carousels_cylindric_3d_carousel_default_variant from "@/cuicui/marketing-ui/carousels/cylindric-3d-carousel/default.variant";
 import marketing_ui_carousels_simple_carousel_simple_carousel_variant from "@/cuicui/marketing-ui/carousels/simple-carousel/simple-carousel.variant";
 import marketing_ui_faq_full_section_full_section_variant from "@/cuicui/marketing-ui/faq/full-section/full-section.variant";
@@ -1243,6 +1332,579 @@ export const sectionList: NewSectionType[] = [
         meta: common_ui_toggle_category,
         slug: "toggle",
         components: [],
+      },
+    ],
+  },
+  {
+    meta: hooks_section,
+    slug: "hooks",
+    categories: [
+      {
+        meta: hooks_use_auto_scroll_category,
+        slug: "use-auto-scroll",
+        components: [
+          {
+            meta: hooks_use_auto_scroll_hook_component,
+            slug: "hook",
+            variants: [
+              {
+                name: "use-auto-scroll",
+                variantComponent:
+                  hooks_use_auto_scroll_hook_use_auto_scroll_variant,
+                slug: "use-auto-scroll",
+                pathname:
+                  "cuicui/hooks/use-auto-scroll/hook/use-auto-scroll.variant.tsx",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        meta: hooks_use_battery_category,
+        slug: "use-battery",
+        components: [
+          {
+            meta: hooks_use_battery_hook_component,
+            slug: "hook",
+            variants: [
+              {
+                name: "use-battery",
+                variantComponent: hooks_use_battery_hook_use_battery_variant,
+                slug: "use-battery",
+                pathname:
+                  "cuicui/hooks/use-battery/hook/use-battery.variant.tsx",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        meta: hooks_use_click_outside_category,
+        slug: "use-click-outside",
+        components: [
+          {
+            meta: hooks_use_click_outside_hook_component,
+            slug: "hook",
+            variants: [
+              {
+                name: "use-click-outside",
+                variantComponent:
+                  hooks_use_click_outside_hook_use_click_outside_variant,
+                slug: "use-click-outside",
+                pathname:
+                  "cuicui/hooks/use-click-outside/hook/use-click-outside.variant.tsx",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        meta: hooks_use_copy_to_clipboard_category,
+        slug: "use-copy-to-clipboard",
+        components: [
+          {
+            meta: hooks_use_copy_to_clipboard_hook_component,
+            slug: "hook",
+            variants: [
+              {
+                name: "copy-to-clipboard",
+                variantComponent:
+                  hooks_use_copy_to_clipboard_hook_copy_to_clipboard_variant,
+                slug: "copy-to-clipboard",
+                pathname:
+                  "cuicui/hooks/use-copy-to-clipboard/hook/copy-to-clipboard.variant.tsx",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        meta: hooks_use_counter_category,
+        slug: "use-counter",
+        components: [
+          {
+            meta: hooks_use_counter_hook_component,
+            slug: "hook",
+            variants: [
+              {
+                name: "use-counter",
+                variantComponent: hooks_use_counter_hook_use_counter_variant,
+                slug: "use-counter",
+                pathname:
+                  "cuicui/hooks/use-counter/hook/use-counter.variant.tsx",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        meta: hooks_use_debounce_category,
+        slug: "use-debounce",
+        components: [
+          {
+            meta: hooks_use_debounce_hook_component,
+            slug: "hook",
+            variants: [
+              {
+                name: "use-debounce",
+                variantComponent: hooks_use_debounce_hook_use_debounce_variant,
+                slug: "use-debounce",
+                pathname:
+                  "cuicui/hooks/use-debounce/hook/use-debounce.variant.tsx",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        meta: hooks_use_event_callback_category,
+        slug: "use-event-callback",
+        components: [
+          {
+            meta: hooks_use_event_callback_hook_component,
+            slug: "hook",
+            variants: [
+              {
+                name: "use-event-callback",
+                variantComponent:
+                  hooks_use_event_callback_hook_use_event_callback_variant,
+                slug: "use-event-callback",
+                pathname:
+                  "cuicui/hooks/use-event-callback/hook/use-event-callback.variant.tsx",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        meta: hooks_use_event_listener_category,
+        slug: "use-event-listener",
+        components: [
+          {
+            meta: hooks_use_event_listener_hook_component,
+            slug: "hook",
+            variants: [
+              {
+                name: "use-event-listener",
+                variantComponent:
+                  hooks_use_event_listener_hook_use_event_listener_variant,
+                slug: "use-event-listener",
+                pathname:
+                  "cuicui/hooks/use-event-listener/hook/use-event-listener.variant.tsx",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        meta: hooks_use_first_visit_category,
+        slug: "use-first-visit",
+        components: [
+          {
+            meta: hooks_use_first_visit_hook_component,
+            slug: "hook",
+            variants: [
+              {
+                name: "use-first-visit",
+                variantComponent:
+                  hooks_use_first_visit_hook_use_first_visit_variant,
+                slug: "use-first-visit",
+                pathname:
+                  "cuicui/hooks/use-first-visit/hook/use-first-visit.variant.tsx",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        meta: hooks_use_geolocation_category,
+        slug: "use-geolocation",
+        components: [
+          {
+            meta: hooks_use_geolocation_hook_component,
+            slug: "hook",
+            variants: [
+              {
+                name: "use-geolocation",
+                variantComponent:
+                  hooks_use_geolocation_hook_use_geolocation_variant,
+                slug: "use-geolocation",
+                pathname:
+                  "cuicui/hooks/use-geolocation/hook/use-geolocation.variant.tsx",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        meta: hooks_use_in_view_category,
+        slug: "use-in-view",
+        components: [
+          {
+            meta: hooks_use_in_view_hook_component,
+            slug: "hook",
+            variants: [
+              {
+                name: "in-view",
+                variantComponent: hooks_use_in_view_hook_in_view_variant,
+                slug: "in-view",
+                pathname: "cuicui/hooks/use-in-view/hook/in-view.variant.tsx",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        meta: hooks_use_input_value_category,
+        slug: "use-input-value",
+        components: [
+          {
+            meta: hooks_use_input_value_hook_component,
+            slug: "hook",
+            variants: [
+              {
+                name: "use-input-value",
+                variantComponent:
+                  hooks_use_input_value_hook_use_input_value_variant,
+                slug: "use-input-value",
+                pathname:
+                  "cuicui/hooks/use-input-value/hook/use-input-value.variant.tsx",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        meta: hooks_use_isomorphic_layout_effect_category,
+        slug: "use-isomorphic-layout-effect",
+        components: [
+          {
+            meta: hooks_use_isomorphic_layout_effect_hook_component,
+            slug: "hook",
+            variants: [
+              {
+                name: "use-isomorphic-layout-effect",
+                variantComponent:
+                  hooks_use_isomorphic_layout_effect_hook_use_isomorphic_layout_effect_variant,
+                slug: "use-isomorphic-layout-effect",
+                pathname:
+                  "cuicui/hooks/use-isomorphic-layout-effect/hook/use-isomorphic-layout-effect.variant.tsx",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        meta: hooks_use_key_press_category,
+        slug: "use-key-press",
+        components: [
+          {
+            meta: hooks_use_key_press_hook_component,
+            slug: "hook",
+            variants: [
+              {
+                name: "use-key-press",
+                variantComponent:
+                  hooks_use_key_press_hook_use_key_press_variant,
+                slug: "use-key-press",
+                pathname:
+                  "cuicui/hooks/use-key-press/hook/use-key-press.variant.tsx",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        meta: hooks_use_konami_code_category,
+        slug: "use-konami-code",
+        components: [
+          {
+            meta: hooks_use_konami_code_hook_component,
+            slug: "hook",
+            variants: [
+              {
+                name: "use-konami-code",
+                variantComponent:
+                  hooks_use_konami_code_hook_use_konami_code_variant,
+                slug: "use-konami-code",
+                pathname:
+                  "cuicui/hooks/use-konami-code/hook/use-konami-code.variant.tsx",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        meta: hooks_use_local_storage_category,
+        slug: "use-local-storage",
+        components: [
+          {
+            meta: hooks_use_local_storage_hook_component,
+            slug: "hook",
+            variants: [
+              {
+                name: "use-local-storage",
+                variantComponent:
+                  hooks_use_local_storage_hook_use_local_storage_variant,
+                slug: "use-local-storage",
+                pathname:
+                  "cuicui/hooks/use-local-storage/hook/use-local-storage.variant.tsx",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        meta: hooks_use_location_category,
+        slug: "use-location",
+        components: [
+          {
+            meta: hooks_use_location_hook_component,
+            slug: "hook",
+            variants: [
+              {
+                name: "use-location",
+                variantComponent: hooks_use_location_hook_use_location_variant,
+                slug: "use-location",
+                pathname:
+                  "cuicui/hooks/use-location/hook/use-location.variant.tsx",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        meta: hooks_use_measure_category,
+        slug: "use-measure",
+        components: [
+          {
+            meta: hooks_use_measure_hook_component,
+            slug: "hook",
+            variants: [
+              {
+                name: "use-measure",
+                variantComponent: hooks_use_measure_hook_use_measure_variant,
+                slug: "use-measure",
+                pathname:
+                  "cuicui/hooks/use-measure/hook/use-measure.variant.tsx",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        meta: hooks_use_mouse_category,
+        slug: "use-mouse",
+        components: [
+          {
+            meta: hooks_use_mouse_hook_component,
+            slug: "hook",
+            variants: [
+              {
+                name: "use-mouse",
+                variantComponent: hooks_use_mouse_hook_use_mouse_variant,
+                slug: "use-mouse",
+                pathname: "cuicui/hooks/use-mouse/hook/use-mouse.variant.tsx",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        meta: hooks_use_network_status_category,
+        slug: "use-network-status",
+        components: [
+          {
+            meta: hooks_use_network_status_hook_component,
+            slug: "hook",
+            variants: [
+              {
+                name: "use-network-status",
+                variantComponent:
+                  hooks_use_network_status_hook_use_network_status_variant,
+                slug: "use-network-status",
+                pathname:
+                  "cuicui/hooks/use-network-status/hook/use-network-status.variant.tsx",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        meta: hooks_use_online_status_category,
+        slug: "use-online-status",
+        components: [
+          {
+            meta: hooks_use_online_status_hook_component,
+            slug: "hook",
+            variants: [
+              {
+                name: "use-online-status",
+                variantComponent:
+                  hooks_use_online_status_hook_use_online_status_variant,
+                slug: "use-online-status",
+                pathname:
+                  "cuicui/hooks/use-online-status/hook/use-online-status.variant.tsx",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        meta: hooks_use_rerender_category,
+        slug: "use-rerender",
+        components: [
+          {
+            meta: hooks_use_rerender_hook_component,
+            slug: "hook",
+            variants: [
+              {
+                name: "use-rerender",
+                variantComponent: hooks_use_rerender_hook_use_rerender_variant,
+                slug: "use-rerender",
+                pathname:
+                  "cuicui/hooks/use-rerender/hook/use-rerender.variant.tsx",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        meta: hooks_use_session_storage_category,
+        slug: "use-session-storage",
+        components: [
+          {
+            meta: hooks_use_session_storage_hook_component,
+            slug: "hook",
+            variants: [],
+          },
+        ],
+      },
+      {
+        meta: hooks_use_speech_to_text_category,
+        slug: "use-speech-to-text",
+        components: [
+          {
+            meta: hooks_use_speech_to_text_hook_component,
+            slug: "hook",
+            variants: [],
+          },
+        ],
+      },
+      {
+        meta: hooks_use_step_category,
+        slug: "use-step",
+        components: [
+          {
+            meta: hooks_use_step_hook_component,
+            slug: "hook",
+            variants: [
+              {
+                name: "use-step",
+                variantComponent: hooks_use_step_hook_use_step_variant,
+                slug: "use-step",
+                pathname: "cuicui/hooks/use-step/hook/use-step.variant.tsx",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        meta: hooks_use_stopwatch_category,
+        slug: "use-stopwatch",
+        components: [
+          {
+            meta: hooks_use_stopwatch_hook_component,
+            slug: "hook",
+            variants: [
+              {
+                name: "use-stopwatch",
+                variantComponent:
+                  hooks_use_stopwatch_hook_use_stopwatch_variant,
+                slug: "use-stopwatch",
+                pathname:
+                  "cuicui/hooks/use-stopwatch/hook/use-stopwatch.variant.tsx",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        meta: hooks_use_throttle_category,
+        slug: "use-throttle",
+        components: [
+          {
+            meta: hooks_use_throttle_hook_component,
+            slug: "hook",
+            variants: [
+              {
+                name: "use-throttle",
+                variantComponent: hooks_use_throttle_hook_use_throttle_variant,
+                slug: "use-throttle",
+                pathname:
+                  "cuicui/hooks/use-throttle/hook/use-throttle.variant.tsx",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        meta: hooks_use_video_category,
+        slug: "use-video",
+        components: [
+          {
+            meta: hooks_use_video_hook_component,
+            slug: "hook",
+            variants: [
+              {
+                name: "use-video",
+                variantComponent: hooks_use_video_hook_use_video_variant,
+                slug: "use-video",
+                pathname: "cuicui/hooks/use-video/hook/use-video.variant.tsx",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        meta: hooks_use_window_scroll_position_category,
+        slug: "use-window-scroll-position",
+        components: [
+          {
+            meta: hooks_use_window_scroll_position_hook_component,
+            slug: "hook",
+            variants: [
+              {
+                name: "use-window-scroll-position",
+                variantComponent:
+                  hooks_use_window_scroll_position_hook_use_window_scroll_position_variant,
+                slug: "use-window-scroll-position",
+                pathname:
+                  "cuicui/hooks/use-window-scroll-position/hook/use-window-scroll-position.variant.tsx",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        meta: hooks_use_window_size_category,
+        slug: "use-window-size",
+        components: [
+          {
+            meta: hooks_use_window_size_hook_component,
+            slug: "hook",
+            variants: [
+              {
+                name: "use-window-size",
+                variantComponent:
+                  hooks_use_window_size_hook_use_window_size_variant,
+                slug: "use-window-size",
+                pathname:
+                  "cuicui/hooks/use-window-size/hook/use-window-size.variant.tsx",
+              },
+            ],
+          },
+        ],
       },
     ],
   },

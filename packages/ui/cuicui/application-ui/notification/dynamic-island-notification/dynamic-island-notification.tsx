@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { BellIcon } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/cuicui/utils/cn";
-import { useMeasure } from "@/cuicui/hooks/use-measure/use-measure";
+import { useMeasure } from "@/cuicui/hooks/use-measure";
 
 const WIDTH = 500;
 

@@ -7,3 +7,5 @@ export const useAutoScrollCategory: CategoryMetaType = {
   releaseDateCategory: new Date("2024-09-16"),
   icon: Scroll,
 };
+
+export default useAutoScrollCategory;

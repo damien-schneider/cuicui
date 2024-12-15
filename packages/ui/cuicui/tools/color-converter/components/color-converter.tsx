@@ -6,7 +6,7 @@ import { TailwindCssLogo } from "@/assets/logo/tailwind-css-logo";
 import { InlineCode } from "@/cuicui/application-ui/code/inline-code/inline-code";
 import HoverCard from "@/cuicui/common-ui/cards/hover-effect-card/hover-effect-card";
 import { ModernSimpleInput } from "@/cuicui/common-ui/inputs/modern-simple-input/modern-simple-input";
-import { useCopyToClipboard } from "@/cuicui/hooks/use-copy-to-clipboard/use-copy-to-clipboard";
+import { useCopyToClipboard } from "@/cuicui/hooks/use-copy-to-clipboard";
 import {
   findClosestTailwindColor,
   getExactColorTailwindNameFromHexaValue,

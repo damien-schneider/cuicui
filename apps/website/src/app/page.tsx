@@ -5,7 +5,7 @@ import { MacbookMockUp } from "@/cuicui/other/mock-ups/laptops/component.mackboo
 import { PreviewRecursiveTree } from "@/cuicui/application-ui/tree/recursive-tree/recursive-tree.variant";
 import { PreviewBatteryIndicator } from "@/cuicui/application-ui/battery/battery-indicator/battery-indicator.variant";
 import { DotsPattern } from "@/cuicui/other/patterns/dots-pattern/dots-pattern";
-import { PreviewUseMeasure } from "@/cuicui/hooks/use-measure/preview.use-measure";
+import PreviewUseMeasure from "@/cuicui/hooks/use-measure/hook/use-measure.variant";
 
 export default function HomePage() {
   return (
