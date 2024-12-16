@@ -1,6 +1,6 @@
 import { ArrowRightIcon } from "lucide-react";
 
-export default function Buttont() {
+export default function CallToAction() {
   return (
     <button
       type="button"
