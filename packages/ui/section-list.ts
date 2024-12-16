@@ -60,6 +60,7 @@ import hooks_use_session_storage_category from "@/cuicui/hooks/use-session-stora
 import hooks_use_speech_to_text_category from "@/cuicui/hooks/use-speech-to-text/category";
 import hooks_use_step_category from "@/cuicui/hooks/use-step/category";
 import hooks_use_stopwatch_category from "@/cuicui/hooks/use-stopwatch/category";
+import hooks_use_text_to_speech_category from "@/cuicui/hooks/use-text-to-speech/category";
 import hooks_use_throttle_category from "@/cuicui/hooks/use-throttle/category";
 import hooks_use_video_category from "@/cuicui/hooks/use-video/category";
 import hooks_use_window_scroll_position_category from "@/cuicui/hooks/use-window-scroll-position/category";
@@ -110,6 +111,7 @@ import common_ui_badges_clerk_badge_component from "@/cuicui/common-ui/badges/cl
 import common_ui_badges_modern_simple_badges_component from "@/cuicui/common-ui/badges/modern-simple-badges/component";
 import common_ui_blockquotes_modern_simple_quote_component from "@/cuicui/common-ui/blockquotes/modern-simple-quote/component";
 import common_ui_buttons_before_effect_button_component from "@/cuicui/common-ui/buttons/before-effect-button/component";
+import common_ui_buttons_call_to_action_button_component from "@/cuicui/common-ui/buttons/call-to-action-button/component";
 import common_ui_buttons_dual_action_button_component from "@/cuicui/common-ui/buttons/dual-action-button/component";
 import common_ui_buttons_github_stars_component from "@/cuicui/common-ui/buttons/github-stars/component";
 import common_ui_buttons_growing_button_component from "@/cuicui/common-ui/buttons/growing-button/component";
@@ -156,6 +158,7 @@ import hooks_use_session_storage_hook_component from "@/cuicui/hooks/use-session
 import hooks_use_speech_to_text_hook_component from "@/cuicui/hooks/use-speech-to-text/hook/component";
 import hooks_use_step_hook_component from "@/cuicui/hooks/use-step/hook/component";
 import hooks_use_stopwatch_hook_component from "@/cuicui/hooks/use-stopwatch/hook/component";
+import hooks_use_text_to_speech_hook_component from "@/cuicui/hooks/use-text-to-speech/hook/component";
 import hooks_use_throttle_hook_component from "@/cuicui/hooks/use-throttle/hook/component";
 import hooks_use_video_hook_component from "@/cuicui/hooks/use-video/hook/component";
 import hooks_use_window_scroll_position_hook_component from "@/cuicui/hooks/use-window-scroll-position/hook/component";
@@ -230,6 +233,7 @@ import common_ui_blockquotes_modern_simple_quote_default_variant from "@/cuicui/
 import common_ui_buttons_before_effect_button_advanced_button_variant from "@/cuicui/common-ui/buttons/before-effect-button/advanced-button.variant";
 import common_ui_buttons_before_effect_button_default_variant from "@/cuicui/common-ui/buttons/before-effect-button/default.variant";
 import common_ui_buttons_before_effect_button_hover_only_variant from "@/cuicui/common-ui/buttons/before-effect-button/hover-only.variant";
+import common_ui_buttons_call_to_action_button_call_to_action_button_variant from "@/cuicui/common-ui/buttons/call-to-action-button/call-to-action-button.variant";
 import common_ui_buttons_dual_action_button_dual_action_button_variant from "@/cuicui/common-ui/buttons/dual-action-button/dual-action-button.variant";
 import common_ui_buttons_github_stars_github_stars_variant from "@/cuicui/common-ui/buttons/github-stars/github-stars.variant";
 import common_ui_buttons_github_stars_gradient_container_variant from "@/cuicui/common-ui/buttons/github-stars/gradient-container.variant";
@@ -284,6 +288,8 @@ import hooks_use_session_storage_hook_session_storage_variant from "@/cuicui/hoo
 import hooks_use_speech_to_text_hook_use_speech_to_text_variant from "@/cuicui/hooks/use-speech-to-text/hook/use-speech-to-text.variant";
 import hooks_use_step_hook_use_step_variant from "@/cuicui/hooks/use-step/hook/use-step.variant";
 import hooks_use_stopwatch_hook_use_stopwatch_variant from "@/cuicui/hooks/use-stopwatch/hook/use-stopwatch.variant";
+import hooks_use_text_to_speech_hook_advanced_demo_variant from "@/cuicui/hooks/use-text-to-speech/hook/advanced-demo.variant";
+import hooks_use_text_to_speech_hook_use_text_to_speech_variant from "@/cuicui/hooks/use-text-to-speech/hook/use-text-to-speech.variant";
 import hooks_use_throttle_hook_use_throttle_variant from "@/cuicui/hooks/use-throttle/hook/use-throttle.variant";
 import hooks_use_video_hook_use_video_variant from "@/cuicui/hooks/use-video/hook/use-video.variant";
 import hooks_use_window_scroll_position_hook_use_window_scroll_position_variant from "@/cuicui/hooks/use-window-scroll-position/hook/use-window-scroll-position.variant";
@@ -946,6 +952,20 @@ export const sectionList: SectionType[] = [
                 slug: "hover-only",
                 pathname:
                   "cuicui/common-ui/buttons/before-effect-button/hover-only.variant.tsx",
+              },
+            ],
+          },
+          {
+            meta: common_ui_buttons_call_to_action_button_component,
+            slug: "call-to-action-button",
+            variants: [
+              {
+                name: "call-to-action-button",
+                variantComponent:
+                  common_ui_buttons_call_to_action_button_call_to_action_button_variant,
+                slug: "call-to-action-button",
+                pathname:
+                  "cuicui/common-ui/buttons/call-to-action-button/call-to-action-button.variant.tsx",
               },
             ],
           },
@@ -1844,6 +1864,34 @@ export const sectionList: SectionType[] = [
                 slug: "use-stopwatch",
                 pathname:
                   "cuicui/hooks/use-stopwatch/hook/use-stopwatch.variant.tsx",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        meta: hooks_use_text_to_speech_category,
+        slug: "use-text-to-speech",
+        components: [
+          {
+            meta: hooks_use_text_to_speech_hook_component,
+            slug: "hook",
+            variants: [
+              {
+                name: "advanced-demo",
+                variantComponent:
+                  hooks_use_text_to_speech_hook_advanced_demo_variant,
+                slug: "advanced-demo",
+                pathname:
+                  "cuicui/hooks/use-text-to-speech/hook/advanced-demo.variant.tsx",
+              },
+              {
+                name: "use-text-to-speech",
+                variantComponent:
+                  hooks_use_text_to_speech_hook_use_text_to_speech_variant,
+                slug: "use-text-to-speech",
+                pathname:
+                  "cuicui/hooks/use-text-to-speech/hook/use-text-to-speech.variant.tsx",
               },
             ],
           },

@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef, type MouseEvent } from "react";
+import { useState, useRef, type MouseEvent, type ReactNode } from "react";
 import { motion, useMotionValue, useSpring } from "motion/react";
 
 const SPRING_CONFIG = { damping: 30, stiffness: 400 };
@@ -9,7 +9,7 @@ export const MagneticButton = ({
   children,
   ...props
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
 } & { height?: string }) => {
   const [isHovered, setIsHovered] = useState(false);
   const x = useMotionValue(0);

@@ -2,7 +2,7 @@ export const dynamic = "force-static";
 
 import { CUICUI_GITHUB_URL } from "../lib/site.const";
 
-import { GithubStarsButton } from "@/cuicui/common-ui/buttons/github-stars/component.github-stars";
+import { GithubStarsButton } from "@/cuicui/common-ui/buttons/github-stars/github-stars";
 
 export default async function StarCuicuiGithubButton() {
   const apiGithub = "https://api.github.com/repos/damien-schneider/cuicui";

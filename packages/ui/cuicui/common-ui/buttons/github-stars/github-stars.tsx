@@ -1,5 +1,5 @@
 import NumberFlow from "@number-flow/react";
-import "./github-stars.css";
+import "@/cuicui/common-ui/buttons/github-stars/github-stars.css";
 import Link from "next/link";
 import { cn } from "@/cuicui/utils/cn";
 import type { ComponentProps } from "react";
@@ -93,7 +93,7 @@ export const GithubStarsButton = ({
   );
 };
 
-const CuicuiStarIcon = ({ ...props }: React.SVGProps<SVGSVGElement>) => {
+const CuicuiStarIcon = ({ ...props }: ComponentProps<"svg">) => {
   return (
     <svg
       width="18"
