@@ -1,5 +1,5 @@
 "use client";
-import { GithubStarsButton } from "@/cuicui/common-ui/buttons/github-stars/component.github-stars";
+import { GithubStarsButton } from "@/cuicui/common-ui/buttons/github-stars/github-stars";
 import { sleep } from "@/cuicui/utils/sleep";
 
 import { useEffect, useState } from "react";
