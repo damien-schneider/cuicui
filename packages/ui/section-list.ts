@@ -31,6 +31,7 @@ import common_ui_cards_category from "@/cuicui/common-ui/cards/category";
 import common_ui_checkboxes_category from "@/cuicui/common-ui/checkboxes/category";
 import common_ui_inputs_category from "@/cuicui/common-ui/inputs/category";
 import common_ui_loaders_category from "@/cuicui/common-ui/loaders/category";
+import common_ui_navbar_category from "@/cuicui/common-ui/navbar/category";
 import common_ui_navigation_category from "@/cuicui/common-ui/navigation/category";
 import common_ui_skeletons_category from "@/cuicui/common-ui/skeletons/category";
 import common_ui_toggle_category from "@/cuicui/common-ui/toggle/category";
@@ -60,6 +61,7 @@ import hooks_use_session_storage_category from "@/cuicui/hooks/use-session-stora
 import hooks_use_speech_to_text_category from "@/cuicui/hooks/use-speech-to-text/category";
 import hooks_use_step_category from "@/cuicui/hooks/use-step/category";
 import hooks_use_stopwatch_category from "@/cuicui/hooks/use-stopwatch/category";
+import hooks_use_text_to_speech_category from "@/cuicui/hooks/use-text-to-speech/category";
 import hooks_use_throttle_category from "@/cuicui/hooks/use-throttle/category";
 import hooks_use_video_category from "@/cuicui/hooks/use-video/category";
 import hooks_use_window_scroll_position_category from "@/cuicui/hooks/use-window-scroll-position/category";
@@ -103,6 +105,7 @@ import application_ui_sliders_elastic_slider_component from "@/cuicui/applicatio
 import application_ui_sliders_simple_modern_slider_component from "@/cuicui/application-ui/sliders/simple-modern-slider/component";
 import application_ui_static_steppers_code_component from "@/cuicui/application-ui/static-steppers/code/component";
 import application_ui_table_of_contents_modul_inspired_component from "@/cuicui/application-ui/table-of-contents/modul-inspired/component";
+import application_ui_theme_pill_switch_theme_component from "@/cuicui/application-ui/theme/pill-switch-theme/component";
 import application_ui_theme_theme_switcher_component from "@/cuicui/application-ui/theme/theme-switcher/component";
 import application_ui_tree_recursive_tree_component from "@/cuicui/application-ui/tree/recursive-tree/component";
 import common_ui_badges_advanced_badges_component from "@/cuicui/common-ui/badges/advanced-badges/component";
@@ -120,11 +123,13 @@ import common_ui_cards_dynamic_square_background_component from "@/cuicui/common
 import common_ui_cards_hover_effect_card_component from "@/cuicui/common-ui/cards/hover-effect-card/component";
 import common_ui_cards_modern_inner_shadow_component from "@/cuicui/common-ui/cards/modern-inner-shadow/component";
 import common_ui_cards_notification_card_component from "@/cuicui/common-ui/cards/notification-card/component";
+import common_ui_cards_testimony_card_component from "@/cuicui/common-ui/cards/testimony-card/component";
 import common_ui_checkboxes_simple_checkbox_component from "@/cuicui/common-ui/checkboxes/simple-checkbox/component";
 import common_ui_inputs_droppable_file_component from "@/cuicui/common-ui/inputs/droppable-file/component";
 import common_ui_inputs_modern_simple_input_component from "@/cuicui/common-ui/inputs/modern-simple-input/component";
 import common_ui_loaders_spinner_loader_component from "@/cuicui/common-ui/loaders/spinner-loader/component";
 import common_ui_loaders_three_dot_simple_loader_component from "@/cuicui/common-ui/loaders/three-dot-simple-loader/component";
+import common_ui_navbar_simple_with_cta_component from "@/cuicui/common-ui/navbar/simple-with-cta/component";
 import common_ui_navigation_mac_dock_component from "@/cuicui/common-ui/navigation/mac-dock/component";
 import common_ui_navigation_side_menu_smooth_hover_component from "@/cuicui/common-ui/navigation/side-menu-smooth-hover/component";
 import common_ui_navigation_vercel_navigation_component from "@/cuicui/common-ui/navigation/vercel-navigation/component";
@@ -156,6 +161,7 @@ import hooks_use_session_storage_hook_component from "@/cuicui/hooks/use-session
 import hooks_use_speech_to_text_hook_component from "@/cuicui/hooks/use-speech-to-text/hook/component";
 import hooks_use_step_hook_component from "@/cuicui/hooks/use-step/hook/component";
 import hooks_use_stopwatch_hook_component from "@/cuicui/hooks/use-stopwatch/hook/component";
+import hooks_use_text_to_speech_hook_component from "@/cuicui/hooks/use-text-to-speech/hook/component";
 import hooks_use_throttle_hook_component from "@/cuicui/hooks/use-throttle/hook/component";
 import hooks_use_video_hook_component from "@/cuicui/hooks/use-video/hook/component";
 import hooks_use_window_scroll_position_hook_component from "@/cuicui/hooks/use-window-scroll-position/hook/component";
@@ -184,8 +190,10 @@ import other_cursors_follow_cursor_component from "@/cuicui/other/cursors/follow
 import other_mock_ups_airpods_component from "@/cuicui/other/mock-ups/airpods/component";
 import other_mock_ups_laptops_component from "@/cuicui/other/mock-ups/laptops/component";
 import other_mock_ups_smartphone_component from "@/cuicui/other/mock-ups/smartphone/component";
+import other_patterns_dashed_pattern_component from "@/cuicui/other/patterns/dashed-pattern/component";
 import other_patterns_dots_pattern_component from "@/cuicui/other/patterns/dots-pattern/component";
 import other_patterns_grid_pattern_component from "@/cuicui/other/patterns/grid-pattern/component";
+import other_patterns_lines_pattern_component from "@/cuicui/other/patterns/lines-pattern/component";
 import other_patterns_moving_bands_component from "@/cuicui/other/patterns/moving-bands/component";
 import other_qr_code_bar_code_generator_component from "@/cuicui/other/qr-code/bar-code-generator/component";
 import other_qr_code_qr_code_generator_component from "@/cuicui/other/qr-code/qr-code-generator/component";
@@ -219,6 +227,7 @@ import application_ui_sliders_simple_modern_slider_simple_modern_slider_variant 
 import application_ui_sliders_simple_modern_slider_simple_modern_slider_with_max_variant from "@/cuicui/application-ui/sliders/simple-modern-slider/simple-modern-slider-with-max.variant";
 import application_ui_static_steppers_code_default_variant from "@/cuicui/application-ui/static-steppers/code/default.variant";
 import application_ui_table_of_contents_modul_inspired_following_header_variant from "@/cuicui/application-ui/table-of-contents/modul-inspired/following-header.variant";
+import application_ui_theme_pill_switch_theme_default_variant from "@/cuicui/application-ui/theme/pill-switch-theme/default.variant";
 import application_ui_theme_theme_switcher_theme_switcher_button_variant from "@/cuicui/application-ui/theme/theme-switcher/theme-switcher-button.variant";
 import application_ui_tree_recursive_tree_recursive_tree_less_animations_variant from "@/cuicui/application-ui/tree/recursive-tree/recursive-tree-less-animations.variant";
 import application_ui_tree_recursive_tree_recursive_tree_variant from "@/cuicui/application-ui/tree/recursive-tree/recursive-tree.variant";
@@ -242,6 +251,7 @@ import common_ui_cards_dynamic_square_background_dynamic_square_background_varia
 import common_ui_cards_hover_effect_card_hover_effect_card_variant from "@/cuicui/common-ui/cards/hover-effect-card/hover-effect-card.variant";
 import common_ui_cards_modern_inner_shadow_default_variant from "@/cuicui/common-ui/cards/modern-inner-shadow/default.variant";
 import common_ui_cards_notification_card_notification_card_variant from "@/cuicui/common-ui/cards/notification-card/notification-card.variant";
+import common_ui_cards_testimony_card_default_variant from "@/cuicui/common-ui/cards/testimony-card/default.variant";
 import common_ui_checkboxes_simple_checkbox_simple_checkbox_variant from "@/cuicui/common-ui/checkboxes/simple-checkbox/simple-checkbox.variant";
 import common_ui_inputs_droppable_file_default_variant from "@/cuicui/common-ui/inputs/droppable-file/default.variant";
 import common_ui_inputs_modern_simple_input_simple_modern_input_variant from "@/cuicui/common-ui/inputs/modern-simple-input/simple-modern-input.variant";
@@ -251,6 +261,7 @@ import common_ui_loaders_spinner_loader_spinner_loader_variant from "@/cuicui/co
 import common_ui_loaders_three_dot_simple_loader_nine_dot_grid_random_variant from "@/cuicui/common-ui/loaders/three-dot-simple-loader/nine-dot-grid-random.variant";
 import common_ui_loaders_three_dot_simple_loader_three_dot_loader_growing_variant from "@/cuicui/common-ui/loaders/three-dot-simple-loader/three-dot-loader-growing.variant";
 import common_ui_loaders_three_dot_simple_loader_three_dot_simple_loader_variant from "@/cuicui/common-ui/loaders/three-dot-simple-loader/three-dot-simple-loader.variant";
+import common_ui_navbar_simple_with_cta_default_variant from "@/cuicui/common-ui/navbar/simple-with-cta/default.variant";
 import common_ui_navigation_mac_dock_default_variant from "@/cuicui/common-ui/navigation/mac-dock/default.variant";
 import common_ui_navigation_side_menu_smooth_hover_sidemenu_variant from "@/cuicui/common-ui/navigation/side-menu-smooth-hover/sidemenu.variant";
 import common_ui_navigation_vercel_navigation_variant1_variant from "@/cuicui/common-ui/navigation/vercel-navigation/variant1.variant";
@@ -284,6 +295,8 @@ import hooks_use_session_storage_hook_session_storage_variant from "@/cuicui/hoo
 import hooks_use_speech_to_text_hook_use_speech_to_text_variant from "@/cuicui/hooks/use-speech-to-text/hook/use-speech-to-text.variant";
 import hooks_use_step_hook_use_step_variant from "@/cuicui/hooks/use-step/hook/use-step.variant";
 import hooks_use_stopwatch_hook_use_stopwatch_variant from "@/cuicui/hooks/use-stopwatch/hook/use-stopwatch.variant";
+import hooks_use_text_to_speech_hook_advanced_demo_variant from "@/cuicui/hooks/use-text-to-speech/hook/advanced-demo.variant";
+import hooks_use_text_to_speech_hook_use_text_to_speech_variant from "@/cuicui/hooks/use-text-to-speech/hook/use-text-to-speech.variant";
 import hooks_use_throttle_hook_use_throttle_variant from "@/cuicui/hooks/use-throttle/hook/use-throttle.variant";
 import hooks_use_video_hook_use_video_variant from "@/cuicui/hooks/use-video/hook/use-video.variant";
 import hooks_use_window_scroll_position_hook_use_window_scroll_position_variant from "@/cuicui/hooks/use-window-scroll-position/hook/use-window-scroll-position.variant";
@@ -306,6 +319,7 @@ import marketing_ui_statistics_increase_to_value_default_variant from "@/cuicui/
 import marketing_ui_statistics_trigger_on_scroll_default_variant from "@/cuicui/marketing-ui/statistics/trigger-on-scroll/default.variant";
 import marketing_ui_testimonials_marquee_horizontal_variant from "@/cuicui/marketing-ui/testimonials/marquee/horizontal.variant";
 import marketing_ui_testimonials_marquee_vertical_variant from "@/cuicui/marketing-ui/testimonials/marquee/vertical.variant";
+import marketing_ui_testimonials_marquee_with_framer_motion_variant from "@/cuicui/marketing-ui/testimonials/marquee/with-framer-motion.variant";
 import marketing_ui_testimonials_testimonials_component_default_variant from "@/cuicui/marketing-ui/testimonials/testimonials-component/default.variant";
 import other_creative_effects_animated_noise_animated_noise_variant from "@/cuicui/other/creative-effects/animated-noise/animated-noise.variant";
 import other_creative_effects_animated_noise_static_noise_variant from "@/cuicui/other/creative-effects/animated-noise/static-noise.variant";
@@ -321,8 +335,10 @@ import other_mock_ups_airpods_airpods_variant from "@/cuicui/other/mock-ups/airp
 import other_mock_ups_laptops_mackbook_variant from "@/cuicui/other/mock-ups/laptops/mackbook.variant";
 import other_mock_ups_smartphone_google_pixel_variant from "@/cuicui/other/mock-ups/smartphone/google-pixel.variant";
 import other_mock_ups_smartphone_iphone14_variant from "@/cuicui/other/mock-ups/smartphone/iphone14.variant";
+import other_patterns_dashed_pattern_default_variant from "@/cuicui/other/patterns/dashed-pattern/default.variant";
 import other_patterns_dots_pattern_dots_pattern_variant from "@/cuicui/other/patterns/dots-pattern/dots-pattern.variant";
 import other_patterns_grid_pattern_grid_pattern_variant from "@/cuicui/other/patterns/grid-pattern/grid-pattern.variant";
+import other_patterns_lines_pattern_default_variant from "@/cuicui/other/patterns/lines-pattern/default.variant";
 import other_patterns_moving_bands_moving_bands_variant from "@/cuicui/other/patterns/moving-bands/moving-bands.variant";
 import other_qr_code_bar_code_generator_bar_code_generator_variant from "@/cuicui/other/qr-code/bar-code-generator/bar-code-generator.variant";
 import other_qr_code_qr_code_generator_qr_code_generator_variant from "@/cuicui/other/qr-code/qr-code-generator/qr-code-generator.variant";
@@ -786,6 +802,20 @@ export const sectionList: SectionType[] = [
         slug: "theme",
         components: [
           {
+            meta: application_ui_theme_pill_switch_theme_component,
+            slug: "pill-switch-theme",
+            variants: [
+              {
+                name: "default",
+                variantComponent:
+                  application_ui_theme_pill_switch_theme_default_variant,
+                slug: "default",
+                pathname:
+                  "cuicui/application-ui/theme/pill-switch-theme/default.variant.tsx",
+              },
+            ],
+          },
+          {
             meta: application_ui_theme_theme_switcher_component,
             slug: "theme-switcher",
             variants: [
@@ -1111,6 +1141,20 @@ export const sectionList: SectionType[] = [
               },
             ],
           },
+          {
+            meta: common_ui_cards_testimony_card_component,
+            slug: "testimony-card",
+            variants: [
+              {
+                name: "default",
+                variantComponent:
+                  common_ui_cards_testimony_card_default_variant,
+                slug: "default",
+                pathname:
+                  "cuicui/common-ui/cards/testimony-card/default.variant.tsx",
+              },
+            ],
+          },
         ],
       },
       {
@@ -1228,6 +1272,26 @@ export const sectionList: SectionType[] = [
                 slug: "three-dot-simple-loader",
                 pathname:
                   "cuicui/common-ui/loaders/three-dot-simple-loader/three-dot-simple-loader.variant.tsx",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        meta: common_ui_navbar_category,
+        slug: "navbar",
+        components: [
+          {
+            meta: common_ui_navbar_simple_with_cta_component,
+            slug: "simple-with-cta",
+            variants: [
+              {
+                name: "default",
+                variantComponent:
+                  common_ui_navbar_simple_with_cta_default_variant,
+                slug: "default",
+                pathname:
+                  "cuicui/common-ui/navbar/simple-with-cta/default.variant.tsx",
               },
             ],
           },
@@ -1850,6 +1914,34 @@ export const sectionList: SectionType[] = [
         ],
       },
       {
+        meta: hooks_use_text_to_speech_category,
+        slug: "use-text-to-speech",
+        components: [
+          {
+            meta: hooks_use_text_to_speech_hook_component,
+            slug: "hook",
+            variants: [
+              {
+                name: "advanced-demo",
+                variantComponent:
+                  hooks_use_text_to_speech_hook_advanced_demo_variant,
+                slug: "advanced-demo",
+                pathname:
+                  "cuicui/hooks/use-text-to-speech/hook/advanced-demo.variant.tsx",
+              },
+              {
+                name: "use-text-to-speech",
+                variantComponent:
+                  hooks_use_text_to_speech_hook_use_text_to_speech_variant,
+                slug: "use-text-to-speech",
+                pathname:
+                  "cuicui/hooks/use-text-to-speech/hook/use-text-to-speech.variant.tsx",
+              },
+            ],
+          },
+        ],
+      },
+      {
         meta: hooks_use_throttle_category,
         slug: "use-throttle",
         components: [
@@ -2198,6 +2290,14 @@ export const sectionList: SectionType[] = [
                 pathname:
                   "cuicui/marketing-ui/testimonials/marquee/vertical.variant.tsx",
               },
+              {
+                name: "with-framer-motion",
+                variantComponent:
+                  marketing_ui_testimonials_marquee_with_framer_motion_variant,
+                slug: "with-framer-motion",
+                pathname:
+                  "cuicui/marketing-ui/testimonials/marquee/with-framer-motion.variant.tsx",
+              },
             ],
           },
           {
@@ -2405,6 +2505,19 @@ export const sectionList: SectionType[] = [
         slug: "patterns",
         components: [
           {
+            meta: other_patterns_dashed_pattern_component,
+            slug: "dashed-pattern",
+            variants: [
+              {
+                name: "default",
+                variantComponent: other_patterns_dashed_pattern_default_variant,
+                slug: "default",
+                pathname:
+                  "cuicui/other/patterns/dashed-pattern/default.variant.tsx",
+              },
+            ],
+          },
+          {
             meta: other_patterns_dots_pattern_component,
             slug: "dots-pattern",
             variants: [
@@ -2429,6 +2542,19 @@ export const sectionList: SectionType[] = [
                 slug: "grid-pattern",
                 pathname:
                   "cuicui/other/patterns/grid-pattern/grid-pattern.variant.tsx",
+              },
+            ],
+          },
+          {
+            meta: other_patterns_lines_pattern_component,
+            slug: "lines-pattern",
+            variants: [
+              {
+                name: "default",
+                variantComponent: other_patterns_lines_pattern_default_variant,
+                slug: "default",
+                pathname:
+                  "cuicui/other/patterns/lines-pattern/default.variant.tsx",
               },
             ],
           },
