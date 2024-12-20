@@ -5,7 +5,7 @@ export const transitionWrappersCategory: CategoryMetaType = {
   name: "Transition wrappers",
   description:
     "Create transition wrappers to animate any component without changing your code",
-  releaseDateCategory: new Date("2024-07-29"),
+  latestUpdateDate: new Date("2024-07-29"),
   icon: BringToFrontIcon,
 };
 

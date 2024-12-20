@@ -7,7 +7,7 @@
     "_build": "pnpm pre-build",
     "pre-build": "pnpm generate-preview-categories && pnpm generate-section-list",
     "type-check": "tsc --noEmit",
-    "generate-preview-categories": "deno run --allow-read --allow-write scripts/generate-preview-categories.ts ",
+    "generate-preview-categories": "deno run --allow-read --allow-write scripts/generate-preview-categories.ts && pnpm biome format --write ./categories-previews-list.ts",
     "generate-section-list": "deno run --allow-read --allow-write scripts/generate-section-list/main.ts && pnpm biome format --write ./section-list.ts"
   },
   "license": "MIT",
@@ -20,10 +20,10 @@
     "@cuicui/config-typescript": "workspace:*",
     "@types/react": "^19.0.1",
     "@types/react-dom": "^19.0.2",
+    "@vitejs/plugin-react": "4.3.1",
     "shiki": "1.18.0",
     "tailwindcss": "^3.4.16",
     "typescript": "^5.7.2",
-    "@vitejs/plugin-react": "4.3.1",
     "vitest": "2.0.5"
   },
   "dependencies": {
@@ -44,6 +44,7 @@
     "lucide-react": "^0.468.0",
     "motion": "^11.14.4",
     "next": "14.2.3",
+    "next-themes": "0.4.4",
     "qrcode.react": "4.2.0",
     "react": "19.0.0",
     "react-dom": "19.0.0",

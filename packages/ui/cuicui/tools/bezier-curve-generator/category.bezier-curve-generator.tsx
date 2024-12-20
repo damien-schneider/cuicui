@@ -7,5 +7,5 @@ export const bezierCurveGeneratorCategory: CategoryMetaType = {
   description:
     "Build forms with ease using the Form Builder tool. Based on shadCn components.",
   // component: <PageBezierCurveGenerator />,
-  releaseDateCategory: new Date("2024-09-28"),
+  latestUpdateDate: new Date("2024-09-28"),
 };

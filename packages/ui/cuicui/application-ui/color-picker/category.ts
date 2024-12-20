@@ -5,7 +5,7 @@ export const colorPickerCategory: CategoryMetaType = {
   name: "Color Picker",
   description: "A collection of color pickers.",
   icon: PipetteIcon,
-  releaseDateCategory: new Date("2021-11-28"),
+  latestUpdateDate: new Date("2021-11-28"),
 };
 
 export default colorPickerCategory;

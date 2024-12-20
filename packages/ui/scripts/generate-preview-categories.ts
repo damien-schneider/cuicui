@@ -93,7 +93,9 @@ for (const section of sections) {
 
 const output = `${imports}
 
-export const categoriesPreviewsList = {
+import type { JSX } from "react";
+
+export const categoriesPreviewsList: Record<string, () => JSX.Element> = {
 ${objectEntries}
 };
 `;

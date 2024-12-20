@@ -5,7 +5,7 @@ export const useInViewCategory: CategoryMetaType = {
   name: "Use in View",
   description:
     "A hook that allows you to know if an element is in the viewport",
-  releaseDateCategory: new Date("2024-08-28"),
+  latestUpdateDate: new Date("2024-08-28"),
   icon: ViewIcon,
 };
 

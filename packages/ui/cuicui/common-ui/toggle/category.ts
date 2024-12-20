@@ -6,7 +6,7 @@ export const toggleCategory: CategoryMetaType = {
   isComingSoon: true,
   description: "Toggle components",
   icon: ToggleLeftIcon,
-  releaseDateCategory: new Date("2024-09-26"),
+  latestUpdateDate: new Date("2024-09-26"),
 };
 
 export default toggleCategory;

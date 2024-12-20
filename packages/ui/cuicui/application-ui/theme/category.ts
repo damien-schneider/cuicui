@@ -4,7 +4,7 @@ import type { CategoryMetaType } from "@/lib/types/component";
 export const themeCategory: CategoryMetaType = {
   name: "Theme",
   description: "Theme components",
-  releaseDateCategory: new Date("2024-08-29"),
+  latestUpdateDate: new Date("2024-08-29"),
   icon: SunMoonIcon,
 };
 

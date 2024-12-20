@@ -42,7 +42,7 @@ export type SectionType = {
 export type CategoryMetaType = {
   name: string;
   description: string;
-  releaseDateCategory: Date;
+  latestUpdateDate: Date;
   icon: LucideIcon;
   isComingSoon?: boolean;
 };

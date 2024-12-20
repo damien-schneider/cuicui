@@ -7,5 +7,5 @@ export const ColorConverterCategory: CategoryMetaType = {
   description:
     "Convert standard colors to tailwind classes equivalent. Convert seamlessly HEX to RGB, HSL and more or convert from tailwind classes to HEX, RGB, HSL.",
   // component: <PageColorConverter />,
-  releaseDateCategory: new Date("2024-09-28"),
+  latestUpdateDate: new Date("2024-09-28"),
 };

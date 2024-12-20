@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { MainMenuCardContent } from "#/src/app/card";
 import MenuSectionWrapper from "#/src/components/main-menus/menu-category-wrapper";
 import { MainMenusGradientCard } from "@cuicui/ui/cuicui/other/cursors/dynamic-cards/gradient-card";
 
 import { sectionList } from "@/section-list";
 import { newFindSectionBySlug } from "#/src/utils/section-category-components-utils/section-list-utils";
+import { getCategoryPreviewBySlug } from "#/src/features/preview-category/utils/render-preview-category";
 
 type Props = {
   params: Promise<{ section: string }>;
@@ -48,10 +48,9 @@ export default async function Page({ params }: Props) {
                 description={category.meta.description}
                 title={category.meta.name}
               >
-                <MainMenuCardContent
-                  slugCategory={category.slug}
-                  isComingSoon={category.meta.isComingSoon}
-                />
+                <div className="flex items-center justify-center size-full gap-2 py-4 px-12">
+                  {getCategoryPreviewBySlug(category)}
+                </div>
               </MainMenusGradientCard>
             </Link>
           );

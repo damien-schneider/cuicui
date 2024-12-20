@@ -5,7 +5,7 @@ export const useLocalStorageCategory: CategoryMetaType = {
   name: "Use Local Storage",
   description:
     "A hook that allows you to manage and persist state using localStorage",
-  releaseDateCategory: new Date("2024-09-28"),
+  latestUpdateDate: new Date("2024-09-28"),
   icon: DatabaseIcon,
 };
 

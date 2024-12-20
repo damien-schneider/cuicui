@@ -4,7 +4,7 @@ import type { CategoryMetaType } from "@/lib/types/component";
 export const useInputValueCategory: CategoryMetaType = {
   name: "Use Input Value",
   description: "A hook that allows you to manage the value of an input field",
-  releaseDateCategory: new Date("2024-09-28"),
+  latestUpdateDate: new Date("2024-09-28"),
   icon: TextCursorInputIcon,
 };
 

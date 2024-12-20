@@ -4,7 +4,7 @@ import type { CategoryMetaType } from "@/lib/types/component";
 export const settingsCategory: CategoryMetaType = {
   name: "Settings",
   description: "Settings components with animations",
-  releaseDateCategory: new Date("2024-06-30"),
+  latestUpdateDate: new Date("2024-06-30"),
   icon: SettingsIcon,
 };
 

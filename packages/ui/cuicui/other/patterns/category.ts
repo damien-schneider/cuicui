@@ -4,7 +4,7 @@ export const patternsCategory: CategoryMetaType = {
   name: "Patterns",
   description:
     "Create patterns without images, just with CSS and HTML for better performance, SEO and accessibility & also more micro-interactions",
-  releaseDateCategory: new Date("2024-08-10"),
+  latestUpdateDate: new Date("2024-08-10"),
   icon: GripIcon,
 };
 

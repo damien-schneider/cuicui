@@ -4,7 +4,7 @@ import type { CategoryMetaType } from "@/lib/types/component";
 export const badgesCategory: CategoryMetaType = {
   name: "Badges",
   description: "Badges with various styles and purposes",
-  releaseDateCategory: new Date("2024-06-29"),
+  latestUpdateDate: new Date("2024-06-29"),
   icon: TagIcon,
 };
 
