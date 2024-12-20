@@ -3,9 +3,8 @@ import { FloatingDock } from "#/src/components/floating-dock-navigation/floating
 import { ArrowUpRightIcon, GithubIcon } from "lucide-react";
 import { cn } from "#/src/utils/cn";
 import Link from "next/link";
-
-import { FloatingDockToggleTheme } from "#/src/components/floating-dock-navigation/floating-dock-toggle-theme";
 import { CUICUI_GITHUB_URL } from "#/src/lib/site.const";
+import PillToggleTheme from "@/cuicui/application-ui/theme/pill-switch-theme/default.variant";
 
 const sectionLinks = sectionList.map((section) => {
   return {
@@ -51,7 +50,7 @@ export function CuicuiFloatingDock() {
           items={sectionLinks}
         />
       </div>
-      <FloatingDockToggleTheme />
+      <PillToggleTheme />
     </div>
   );
 }
