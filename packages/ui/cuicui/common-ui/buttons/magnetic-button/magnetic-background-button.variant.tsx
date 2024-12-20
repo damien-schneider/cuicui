@@ -1,4 +1,4 @@
-import { MagneticBackgroundButton } from "@/cuicui/common-ui/buttons/magnetic-button/component.magnetic-background-button";
+import { MagneticBackgroundButton } from "@/cuicui/common-ui/buttons/magnetic-button/magnetic-background-button";
 import { BedDoubleIcon, PopcornIcon, TvIcon, WavesIcon } from "lucide-react";
 
 export function PreviewMagneticBackgroundButton() {

@@ -1,4 +1,4 @@
-import { MagneticButton } from "@/cuicui/common-ui/buttons/magnetic-button/component.magnetic-button";
+import { MagneticButton } from "@/cuicui/common-ui/buttons/magnetic-button/magnetic-button";
 
 export function PreviewMagneticButton() {
   return (

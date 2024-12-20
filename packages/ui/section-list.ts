@@ -113,6 +113,7 @@ import common_ui_badges_clerk_badge_component from "@/cuicui/common-ui/badges/cl
 import common_ui_badges_modern_simple_badges_component from "@/cuicui/common-ui/badges/modern-simple-badges/component";
 import common_ui_blockquotes_modern_simple_quote_component from "@/cuicui/common-ui/blockquotes/modern-simple-quote/component";
 import common_ui_buttons_before_effect_button_component from "@/cuicui/common-ui/buttons/before-effect-button/component";
+import common_ui_buttons_call_to_action_button_component from "@/cuicui/common-ui/buttons/call-to-action-button/component";
 import common_ui_buttons_dual_action_button_component from "@/cuicui/common-ui/buttons/dual-action-button/component";
 import common_ui_buttons_github_stars_component from "@/cuicui/common-ui/buttons/github-stars/component";
 import common_ui_buttons_growing_button_component from "@/cuicui/common-ui/buttons/growing-button/component";
@@ -239,6 +240,7 @@ import common_ui_blockquotes_modern_simple_quote_default_variant from "@/cuicui/
 import common_ui_buttons_before_effect_button_advanced_button_variant from "@/cuicui/common-ui/buttons/before-effect-button/advanced-button.variant";
 import common_ui_buttons_before_effect_button_default_variant from "@/cuicui/common-ui/buttons/before-effect-button/default.variant";
 import common_ui_buttons_before_effect_button_hover_only_variant from "@/cuicui/common-ui/buttons/before-effect-button/hover-only.variant";
+import common_ui_buttons_call_to_action_button_call_to_action_button_variant from "@/cuicui/common-ui/buttons/call-to-action-button/call-to-action-button.variant";
 import common_ui_buttons_dual_action_button_dual_action_button_variant from "@/cuicui/common-ui/buttons/dual-action-button/dual-action-button.variant";
 import common_ui_buttons_github_stars_github_stars_variant from "@/cuicui/common-ui/buttons/github-stars/github-stars.variant";
 import common_ui_buttons_github_stars_gradient_container_variant from "@/cuicui/common-ui/buttons/github-stars/gradient-container.variant";
@@ -976,6 +978,20 @@ export const sectionList: SectionType[] = [
                 slug: "hover-only",
                 pathname:
                   "cuicui/common-ui/buttons/before-effect-button/hover-only.variant.tsx",
+              },
+            ],
+          },
+          {
+            meta: common_ui_buttons_call_to_action_button_component,
+            slug: "call-to-action-button",
+            variants: [
+              {
+                name: "call-to-action-button",
+                variantComponent:
+                  common_ui_buttons_call_to_action_button_call_to_action_button_variant,
+                slug: "call-to-action-button",
+                pathname:
+                  "cuicui/common-ui/buttons/call-to-action-button/call-to-action-button.variant.tsx",
               },
             ],
           },

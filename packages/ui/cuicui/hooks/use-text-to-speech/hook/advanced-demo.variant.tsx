@@ -11,7 +11,7 @@ import { type TTSHookResponse, useTts } from "tts-react";
 
 export const PreviewUseTextToSpeechAdvancedDemo = () => {
   if (typeof window === "undefined") {
-    return <p>Server-side rendering is not supported.</p>;
+    return <p>Your browser does not support SpeechSynthesis</p>;
   }
   const [pitch, setPitch] = useState(1);
   const [volume, setVolume] = useState(1);

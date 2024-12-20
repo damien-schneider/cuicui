@@ -1,7 +1,13 @@
 "use client";
 
 import { cn } from "@/cuicui/utils/cn";
-import { useState, useRef, type ReactNode, type MouseEvent } from "react";
+import {
+  useState,
+  useRef,
+  type ReactNode,
+  type MouseEvent,
+  type ComponentProps,
+} from "react";
 
 type PositionType = {
   x: number;
@@ -19,7 +25,7 @@ export function MagneticBackgroundButton({
   magneticStrength?: number;
   className?: string;
   exitForce?: number;
-} & React.HTMLAttributes<HTMLButtonElement>) {
+} & ComponentProps<"button">) {
   const [position, setPosition] = useState<PositionType>({ x: 0, y: 0 });
   const [lastMousePosition, setLastMousePosition] = useState<{
     x: number;
@@ -60,7 +66,7 @@ export function MagneticBackgroundButton({
   };
 
   function getFarAwayLastPosition() {
-    if (!buttonRef.current || !lastMousePosition) {
+    if (!(buttonRef.current && lastMousePosition)) {
       return { x: 0, y: 0 };
     }
     const rect = buttonRef.current.getBoundingClientRect();
