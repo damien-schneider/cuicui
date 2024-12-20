@@ -6,7 +6,7 @@ export const avatarsCategory: CategoryMetaType = {
   description: "Create simple avatars with different styles",
   isComingSoon: true,
   icon: CircleUserRoundIcon,
-  releaseDateCategory: new Date(),
+  latestUpdateDate: new Date(),
 };
 
 export default avatarsCategory;

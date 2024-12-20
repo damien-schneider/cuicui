@@ -4,7 +4,7 @@ import type { CategoryMetaType } from "@/lib/types/component";
 export const blockquotesCategory: CategoryMetaType = {
   name: "Blockquotes",
   description: "Blockquotes with different styles",
-  releaseDateCategory: new Date("2024-08-01"),
+  latestUpdateDate: new Date("2024-08-01"),
   icon: QuoteIcon,
 };
 

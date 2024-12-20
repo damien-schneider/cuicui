@@ -41,7 +41,7 @@ import PreviewRecursiveTreeLessAnimations from "@/cuicui/application-ui/tree/rec
 
 import Link from "next/link";
 import { getCategoryPreviewBySlug } from "#/src/features/preview-category/utils/render-preview-category";
-import { MagneticBackgroundButton } from "@/cuicui/common-ui/buttons/magnetic-button/component.magnetic-background-button";
+import { MagneticBackgroundButton } from "@/cuicui/common-ui/buttons/magnetic-button/magnetic-background-button";
 
 export default function HomePage() {
   return (

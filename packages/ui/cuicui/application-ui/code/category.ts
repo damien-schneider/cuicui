@@ -4,7 +4,7 @@ import type { CategoryMetaType } from "@/lib/types/component";
 export const codeCategory: CategoryMetaType = {
   name: "Code",
   description: "Code components with special interactions",
-  releaseDateCategory: new Date("2024-08-20"),
+  latestUpdateDate: new Date("2024-08-20"),
   icon: Code2Icon,
 };
 

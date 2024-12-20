@@ -4,7 +4,7 @@ import type { CategoryMetaType } from "@/lib/types/component";
 export const tableOfContentCategory: CategoryMetaType = {
   name: "Table of Contents",
   description: "Table of contents components",
-  releaseDateCategory: new Date("2024-08-28"),
+  latestUpdateDate: new Date("2024-08-28"),
   icon: TableOfContentsIcon,
 };
 

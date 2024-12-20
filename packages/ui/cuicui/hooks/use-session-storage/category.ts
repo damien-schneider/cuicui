@@ -6,7 +6,7 @@ import type { CategoryMetaType } from "@/lib/types/component";
 export const useSessionStorageCategory: CategoryMetaType = {
   name: "Use Session Storage",
   description: "A hook that allows you to manage session storage values",
-  releaseDateCategory: new Date("2024-08-28"),
+  latestUpdateDate: new Date("2024-08-28"),
   icon: ViewIcon,
   isComingSoon: true,
 };

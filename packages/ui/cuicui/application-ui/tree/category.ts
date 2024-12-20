@@ -4,7 +4,7 @@ import type { CategoryMetaType } from "@/lib/types/component";
 export const treeCategory: CategoryMetaType = {
   name: "Tree",
   description: "Tree components",
-  releaseDateCategory: new Date("2024-09-18"),
+  latestUpdateDate: new Date("2024-09-18"),
   icon: FolderTreeIcon,
 };
 

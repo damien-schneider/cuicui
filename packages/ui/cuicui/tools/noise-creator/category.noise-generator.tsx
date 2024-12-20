@@ -2,7 +2,7 @@ import { AudioLinesIcon } from "lucide-react";
 import type { CategoryMetaType } from "@/lib/types/component";
 
 export const noiseGeneratorCategory: CategoryMetaType = {
-  releaseDateCategory: new Date("2024-09-28"),
+  latestUpdateDate: new Date("2024-09-28"),
   name: "Noise Generator",
   icon: AudioLinesIcon,
   description:

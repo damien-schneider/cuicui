@@ -5,7 +5,7 @@ export const CuicuiDefaultStyleCategory: CategoryMetaType = {
   name: "CuicuiDefaultStyle",
   description: "Cuicui Default Style",
   icon: BirdIcon,
-  releaseDateCategory: new Date("2021-10-01"),
+  latestUpdateDate: new Date("2021-10-01"),
 };
 
 export default CuicuiDefaultStyleCategory;

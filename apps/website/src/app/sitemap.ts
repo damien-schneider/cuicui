@@ -42,7 +42,7 @@ function getComponentsSitemap(): MetadataRoute.Sitemap {
       if (section.slug && category.slug) {
         componentSitemap.push({
           url: `${HOST}/${section.slug}/${category.slug}`,
-          lastModified: category.meta.releaseDateCategory,
+          lastModified: category.meta.latestUpdateDate,
           changeFrequency: "monthly",
           priority: 0.9,
         });

@@ -5,7 +5,7 @@ export const creativeEffectCategory: CategoryMetaType = {
   name: "Creative Effects",
   description:
     "An all bunch of creative effects that can be used in any project with any artisitic style",
-  releaseDateCategory: new Date("2024-07-21"),
+  latestUpdateDate: new Date("2024-07-21"),
   icon: CreativeCommonsIcon,
 };
 

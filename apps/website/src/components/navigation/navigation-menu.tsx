@@ -14,7 +14,7 @@ export default function NavigationMenu({
 }: Readonly<{ isMobile?: boolean; className?: string }>) {
   function getCategoryTag(category: CategoryType) {
     const isNew =
-      differenceInDays(new Date(), category.meta.releaseDateCategory ?? 0) < 21;
+      differenceInDays(new Date(), category.meta.latestUpdateDate ?? 0) < 21;
     if (category.meta.isComingSoon) {
       return "Coming Soon";
     }

@@ -5,7 +5,7 @@ export const useClickOutsideCategory: CategoryMetaType = {
   name: "Use Click Outside",
   description:
     "A React hook that allows you to detect clicks outside of a specified element.",
-  releaseDateCategory: new Date("2024-10-15"),
+  latestUpdateDate: new Date("2024-10-15"),
   icon: MapIcon,
 };
 
