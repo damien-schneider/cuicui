@@ -15,6 +15,7 @@ export function StickyFooter({
     <div
       className={`relative h-[${heightValue}]`}
       style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
+      {...props}
     >
       <div
         className={cn(`fixed bottom-0 h-[${heightValue}] w-full`, className)}

@@ -8,3 +8,5 @@ export const useTextToSpeechCategory: CategoryMetaType = {
   isComingSoon: true,
   icon: SpeechIcon,
 };
+
+export default useTextToSpeechCategory;
