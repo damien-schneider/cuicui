@@ -1,3 +1,4 @@
+import { env } from "#/src/env";
 import Playground from "#/src/app/dev/playground-component/playground";
 import type { Metadata } from "next";
 
@@ -7,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 export default function PageGeneratePreviewImages() {
-  if (process.env.NODE_ENV === "production") {
+  if (env.NODE_ENV === "production") {
     return null;
   }
 

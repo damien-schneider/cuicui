@@ -1,6 +1,5 @@
+import { env } from "#/src/env";
 import type { Metadata } from "next";
-
-const { NEXT_PUBLIC_SITE_URL } = process.env;
 
 export const metadata: Metadata = {
   title: "About Us - CuiCui",
@@ -21,7 +20,7 @@ export const metadata: Metadata = {
     title: "About Us - CuiCui",
     description:
       "Learn more about the only UI library you need, simply copy-paste, use best React tools, best practices, and more creative components.",
-    url: `${NEXT_PUBLIC_SITE_URL}/about`,
+    url: `${env.NEXT_PUBLIC_SITE_URL}/about`,
     type: "website",
     siteName: "CuiCui",
   },

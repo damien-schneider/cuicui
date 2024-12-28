@@ -13,6 +13,7 @@
     "@radix-ui/react-select": "2.1.3",
     "@radix-ui/react-slot": "1.1.1",
     "@radix-ui/react-tabs": "1.1.2",
+    "@t3-oss/env-nextjs": "0.11.1",
     "class-variance-authority": "0.7.0",
     "clsx": "^2.1.1",
     "cmdk": "^1.0.4",
@@ -33,6 +34,7 @@
     "sonner": "^1.7.1",
     "tailwind-merge": "2.3.0",
     "vite-tsconfig-paths": "5.0.1",
+    "zod": "3.24.1",
     "zustand": "^4.5.5"
   },
   "description": "An open-source all-in-one library for building an advanced SaaS application, a personal website, or anything else with micro-interactions, advanced user experiences, and a focus on performance and code quality.",
@@ -49,6 +51,7 @@
     "autoprefixer": "10.4.19",
     "eslint": "9.0.0",
     "eslint-config-next": "15.1.0",
+    "jiti": "2.4.2",
     "jsdom": "25.0.0",
     "lint-staged": "15.2.2",
     "postcss": "8.4.38",

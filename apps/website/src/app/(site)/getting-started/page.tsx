@@ -1,4 +1,4 @@
-import { NEXT_PUBLIC_SITE_URL } from "#/src/lib/site.const";
+import { env } from "#/src/env";
 import { CodeContainer } from "#/src/ui/code-command-container";
 import { StaticStep } from "#/src/ui/stepper";
 
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: "Getting Started - CuiCui",
     description:
       "Learn how to use the only UI library you need, simply copy-paste, use best React tools, best practices, and more creative components.",
-    url: `${NEXT_PUBLIC_SITE_URL}/about`,
+    url: `${env.NEXT_PUBLIC_SITE_URL}/about`,
     type: "website",
     siteName: "CuiCui",
   },

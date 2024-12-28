@@ -3,8 +3,9 @@ import Head from "next/head";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
-import { NEXT_PUBLIC_SITE_URL } from "#/src/lib/site.const";
+
 import { newFindSectionBySlug } from "#/src/utils/section-category-components-utils/section-list-utils";
+import { env } from "#/src/env";
 
 type Props = {
   children: ReactNode;
@@ -30,7 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: sectionInList.meta.description,
     },
     alternates: {
-      canonical: `${NEXT_PUBLIC_SITE_URL}/${sectionInList.slug}`,
+      canonical: `${env.NEXT_PUBLIC_SITE_URL}/${sectionInList.slug}`,
     },
   };
 }
@@ -47,7 +48,7 @@ export default async function SectionLayout({ params, children }: Props) {
     <>
       <Head>
         <Link
-          href={`${NEXT_PUBLIC_SITE_URL}/${section.slug}`}
+          href={`${env.NEXT_PUBLIC_SITE_URL}/${section.slug}`}
           key="canonical"
           rel="canonical"
         />

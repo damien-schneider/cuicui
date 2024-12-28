@@ -6,16 +6,15 @@ import { DM_Sans } from "next/font/google";
 import type { ReactNode } from "react";
 import Providers from "#/src/app/providers";
 import PlausibleScripts from "#/src/components/analytics/plausible-scripts";
+import { env } from "#/src/env";
 const font = DM_Sans({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-dm-sans",
 });
 
-const { NEXT_PUBLIC_SITE_URL } = process.env;
-
 export const metadata: Metadata = {
-  metadataBase: new URL(NEXT_PUBLIC_SITE_URL ?? "https://www.cuicui.day"),
+  metadataBase: new URL(env.NEXT_PUBLIC_SITE_URL),
   title: {
     default:
       "CuiCui | High-Quality React and Tailwind Components for Copy-Paste",

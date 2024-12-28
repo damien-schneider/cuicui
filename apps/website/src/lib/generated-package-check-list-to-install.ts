@@ -32,6 +32,10 @@ export const packageCheckListToInstall: PackageToInstallType[] = [
     packageName: "@radix-ui/react-tabs",
   },
   {
+    find: [`from "@t3-oss/env-nextjs"`],
+    packageName: "@t3-oss/env-nextjs",
+  },
+  {
     find: [`from "class-variance-authority"`],
     packageName: "class-variance-authority",
   },
@@ -112,6 +116,10 @@ export const packageCheckListToInstall: PackageToInstallType[] = [
     packageName: "vite-tsconfig-paths",
   },
   {
+    find: [`from "zod"`],
+    packageName: "zod",
+  },
+  {
     find: [`from "zustand"`],
     packageName: "zustand",
   },
@@ -162,6 +170,10 @@ export const packageCheckListToInstall: PackageToInstallType[] = [
   {
     find: [`from "eslint-config-next"`],
     packageName: "eslint-config-next",
+  },
+  {
+    find: [`from "jiti"`],
+    packageName: "jiti",
   },
   {
     find: [`from "jsdom"`],
