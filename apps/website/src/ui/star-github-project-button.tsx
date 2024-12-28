@@ -1,7 +1,6 @@
 export const dynamic = "force-static";
 
-import { CUICUI_GITHUB_URL } from "../lib/site.const";
-
+import { env } from "#/src/env";
 import { GithubStarsButton } from "@/cuicui/common-ui/buttons/github-stars/github-stars";
 
 export default async function StarCuicuiGithubButton() {
@@ -13,7 +12,7 @@ export default async function StarCuicuiGithubButton() {
   return (
     <GithubStarsButton
       className="inline-flex w-full h-fit"
-      href={CUICUI_GITHUB_URL}
+      href={env.NEXT_PUBLIC_CUICUI_GITHUB_URL}
       title="Star Cuicui on GitHub"
       starNumber={numberOfStars ?? 0}
     >

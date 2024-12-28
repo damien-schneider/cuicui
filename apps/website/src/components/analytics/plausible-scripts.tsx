@@ -1,8 +1,9 @@
-import { IS_PRODUCTION, PLAUSIBLE_DOMAIN } from "#/src/lib/site.const";
+import { env } from "#/src/env";
+import { IS_PRODUCTION } from "#/src/lib/site.const";
 import Script from "next/script";
 
 export default function PlausibleScripts() {
-  if (!(IS_PRODUCTION && PLAUSIBLE_DOMAIN)) {
+  if (!IS_PRODUCTION) {
     return null;
   }
   return (
@@ -11,7 +12,7 @@ export default function PlausibleScripts() {
         id="plausible-main"
         defer={true}
         data-domain="cuicui.day"
-        src={`https://${PLAUSIBLE_DOMAIN}/js/script.hash.outbound-links.js`}
+        src={`https://${env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN}/js/script.hash.outbound-links.js`}
       />
       <Script id="plausible-inline">
         {

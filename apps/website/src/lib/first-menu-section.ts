@@ -1,4 +1,4 @@
-import { CUICUI_GITHUB_URL } from "#/src/lib/site.const";
+import { env } from "#/src/env";
 
 export const firstMenuSection = {
   name: "Info",
@@ -21,7 +21,7 @@ export const firstMenuSection = {
       slug: "contribute",
       description:
         "Help us make CuiCui better. Contribute to the project with your ideas or directly on GitHub.",
-      href: CUICUI_GITHUB_URL,
+      href: env.NEXT_PUBLIC_CUICUI_GITHUB_URL,
     },
     // {
     // 	name: "Roadmap",

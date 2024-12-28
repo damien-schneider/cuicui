@@ -1,10 +1,10 @@
 import type { MetadataRoute } from "next";
 import { sectionList } from "@/section-list";
+import { env } from "#/src/env";
 
 export const port = process.env.PORT ?? 3000;
 
-export const HOST =
-  process.env.NEXT_PUBLIC_SITE_URL ?? `http://localhost:${port}`;
+export const HOST = env.NEXT_PUBLIC_SITE_URL ?? `http://localhost:${port}`;
 export default function sitemap(): MetadataRoute.Sitemap {
   // Google's limit is 50,000 URLs per sitemap
 

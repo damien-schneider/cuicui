@@ -2,11 +2,12 @@ import Head from "next/head";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
-import { NEXT_PUBLIC_SITE_URL } from "#/src/lib/site.const";
+
 import {
   newFindCategoryBySlug,
   newFindSectionBySlug,
 } from "#/src/utils/section-category-components-utils/section-list-utils";
+import { env } from "#/src/env";
 
 export async function generateMetadata({
   params,
@@ -36,7 +37,7 @@ export async function generateMetadata({
         description: `${category.meta.description}. Advanced ${category.meta.name} React components using tailwind CSS. Just copy paste amazing UI and UX.`,
       },
       alternates: {
-        canonical: `${NEXT_PUBLIC_SITE_URL}/${section.slug}/${category.slug}`,
+        canonical: `${env.NEXT_PUBLIC_SITE_URL}/${section.slug}/${category.slug}`,
       },
       robots: "all",
     };
@@ -71,7 +72,7 @@ export default async function CategoryLayout({
     <div>
       <Head>
         <Link
-          href={`${NEXT_PUBLIC_SITE_URL}/${sectionInList.slug}/${categoryInList.slug}`}
+          href={`${env.NEXT_PUBLIC_SITE_URL}/${sectionInList.slug}/${categoryInList.slug}`}
           key="canonical"
           rel="canonical"
         />
