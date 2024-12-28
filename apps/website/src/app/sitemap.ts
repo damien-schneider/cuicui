@@ -2,9 +2,6 @@ import type { MetadataRoute } from "next";
 import { sectionList } from "@/section-list";
 import { env } from "#/src/env";
 
-export const port = process.env.PORT ?? 3000;
-
-export const HOST = env.NEXT_PUBLIC_SITE_URL ?? `http://localhost:${port}`;
 export default function sitemap(): MetadataRoute.Sitemap {
   // Google's limit is 50,000 URLs per sitemap
 
@@ -13,19 +10,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
 const staticSitemap: MetadataRoute.Sitemap = [
   {
-    url: HOST,
+    url: env.NEXT_PUBLIC_SITE_URL,
     lastModified: new Date("2024-08-14"),
     changeFrequency: "monthly",
     priority: 1,
   },
   {
-    url: `${HOST}/about`,
+    url: `${env.NEXT_PUBLIC_SITE_URL}/about`,
     lastModified: new Date("2024-08-14"),
     changeFrequency: "monthly",
     priority: 0.9,
   },
   {
-    url: `${HOST}/getting-started`,
+    url: `${env.NEXT_PUBLIC_SITE_URL}/getting-started`,
     lastModified: new Date("2024-08-14"),
     changeFrequency: "monthly",
     priority: 0.9,
@@ -41,7 +38,7 @@ function getComponentsSitemap(): MetadataRoute.Sitemap {
       }
       if (section.slug && category.slug) {
         componentSitemap.push({
-          url: `${HOST}/${section.slug}/${category.slug}`,
+          url: `${env.NEXT_PUBLIC_SITE_URL}/${section.slug}/${category.slug}`,
           lastModified: category.meta.latestUpdateDate,
           changeFrequency: "monthly",
           priority: 0.9,

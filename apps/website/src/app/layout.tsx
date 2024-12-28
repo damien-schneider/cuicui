@@ -14,7 +14,7 @@ const font = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(env.NEXT_PUBLIC_SITE_URL ?? "https://www.cuicui.day"),
+  metadataBase: new URL(env.NEXT_PUBLIC_SITE_URL),
   title: {
     default:
       "CuiCui | High-Quality React and Tailwind Components for Copy-Paste",
