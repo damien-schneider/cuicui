@@ -53,7 +53,7 @@ export default function HomePage() {
           {/* <ModernGradientContainerRoot> */}
           {/* <ModernGradientContainerContent className="block text-center p-6 pt-20 space-y-20 overflow-hidden"> */}
           <div className="space-y-4 text-center max-w-5xl mx-auto">
-            <Link href="/releases">
+            <Link href="/changelog">
               <ModernGradientContainerRoot className=" w-fit mx-auto">
                 <ModernGradientContainerContent className="block text-center text-xs text-neutral-500 w-fit px-2 py-0.5">
                   See latest Release ✨
