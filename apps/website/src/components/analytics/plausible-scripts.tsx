@@ -12,7 +12,7 @@ export default function PlausibleScripts() {
         id="plausible-main"
         defer={true}
         data-domain="cuicui.day"
-        src={`https://${env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN}/js/script.hash.outbound-links.js`}
+        src={`${env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN}/js/script.hash.outbound-links.js`}
       />
       <Script id="plausible-inline">
         {
