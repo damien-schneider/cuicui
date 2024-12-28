@@ -75,6 +75,7 @@ import marketing_ui_statistics_category from "@/cuicui/marketing-ui/statistics/c
 import marketing_ui_testimonials_category from "@/cuicui/marketing-ui/testimonials/category";
 import other_creative_effects_category from "@/cuicui/other/creative-effects/category";
 import other_cursors_category from "@/cuicui/other/cursors/category";
+import other_equalizer_category from "@/cuicui/other/equalizer/category";
 import other_mock_ups_category from "@/cuicui/other/mock-ups/category";
 import other_patterns_category from "@/cuicui/other/patterns/category";
 import other_qr_code_category from "@/cuicui/other/qr-code/category";
@@ -188,6 +189,7 @@ import other_creative_effects_bottom_blur_out_component from "@/cuicui/other/cre
 import other_creative_effects_wavy_line_component from "@/cuicui/other/creative-effects/wavy-line/component";
 import other_cursors_dynamic_cards_component from "@/cuicui/other/cursors/dynamic-cards/component";
 import other_cursors_follow_cursor_component from "@/cuicui/other/cursors/follow-cursor/component";
+import other_equalizer_equalizer_component from "@/cuicui/other/equalizer/equalizer/component";
 import other_mock_ups_airpods_component from "@/cuicui/other/mock-ups/airpods/component";
 import other_mock_ups_laptops_component from "@/cuicui/other/mock-ups/laptops/component";
 import other_mock_ups_smartphone_component from "@/cuicui/other/mock-ups/smartphone/component";
@@ -332,6 +334,7 @@ import other_cursors_dynamic_cards_gradient_card_effect_variant from "@/cuicui/o
 import other_cursors_dynamic_cards_only_border_card_effect_variant from "@/cuicui/other/cursors/dynamic-cards/only-border-card-effect.variant";
 import other_cursors_follow_cursor_replace_cursor_variant from "@/cuicui/other/cursors/follow-cursor/replace-cursor.variant";
 import other_cursors_follow_cursor_with_cursor_variant from "@/cuicui/other/cursors/follow-cursor/with-cursor.variant";
+import other_equalizer_equalizer_equalizer_variant from "@/cuicui/other/equalizer/equalizer/equalizer.variant";
 import other_mock_ups_airpods_airpods_pro_variant from "@/cuicui/other/mock-ups/airpods/airpods-pro.variant";
 import other_mock_ups_airpods_airpods_variant from "@/cuicui/other/mock-ups/airpods/airpods.variant";
 import other_mock_ups_laptops_mackbook_variant from "@/cuicui/other/mock-ups/laptops/mackbook.variant";
@@ -2453,6 +2456,25 @@ export const sectionList: SectionType[] = [
                 slug: "with-cursor",
                 pathname:
                   "cuicui/other/cursors/follow-cursor/with-cursor.variant.tsx",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        meta: other_equalizer_category,
+        slug: "equalizer",
+        components: [
+          {
+            meta: other_equalizer_equalizer_component,
+            slug: "equalizer",
+            variants: [
+              {
+                name: "equalizer",
+                variantComponent: other_equalizer_equalizer_equalizer_variant,
+                slug: "equalizer",
+                pathname:
+                  "cuicui/other/equalizer/equalizer/equalizer.variant.tsx",
               },
             ],
           },

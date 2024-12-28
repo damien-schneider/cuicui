@@ -10,7 +10,7 @@ export const getCategoryPreviewBySlug = (category: CategoryType) => {
         <div className="w-fit p-4 bg-neutral-400/15 rounded-xl gap-2 flex items-center justify-center text-neutral-400">
           {/* Hourglass Icon */}
           <HourglassIcon className="size-6 " />
-          <p className="text-2xl font-semibold">Coming Soon</p>
+          <span className="text-2xl font-semibold">Coming Soon</span>
         </div>
       </p>
     );
