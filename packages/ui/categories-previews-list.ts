@@ -20,6 +20,7 @@ import hooks_use_auto_scroll_preview from "./cuicui/hooks/use-auto-scroll/previe
 import hooks_use_battery_preview from "./cuicui/hooks/use-battery/preview";
 import hooks_use_counter_preview from "./cuicui/hooks/use-counter/preview";
 import hooks_use_event_listener_preview from "./cuicui/hooks/use-event-listener/preview";
+import hooks_use_cookies_preview from "./cuicui/hooks/use-cookies/preview";
 import hooks_use_speech_to_text_preview from "./cuicui/hooks/use-speech-to-text/preview";
 import hooks_use_online_status_preview from "./cuicui/hooks/use-online-status/preview";
 import hooks_use_session_storage_preview from "./cuicui/hooks/use-session-storage/preview";
@@ -102,6 +103,7 @@ export const categoriesPreviewsList: Record<string, () => JSX.Element> = {
   "use-battery": hooks_use_battery_preview,
   "use-counter": hooks_use_counter_preview,
   "use-event-listener": hooks_use_event_listener_preview,
+  "use-cookies": hooks_use_cookies_preview,
   "use-speech-to-text": hooks_use_speech_to_text_preview,
   "use-online-status": hooks_use_online_status_preview,
   "use-session-storage": hooks_use_session_storage_preview,
