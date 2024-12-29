@@ -38,6 +38,7 @@ import common_ui_toggle_category from "@/cuicui/common-ui/toggle/category";
 import hooks_use_auto_scroll_category from "@/cuicui/hooks/use-auto-scroll/category";
 import hooks_use_battery_category from "@/cuicui/hooks/use-battery/category";
 import hooks_use_click_outside_category from "@/cuicui/hooks/use-click-outside/category";
+import hooks_use_cookies_category from "@/cuicui/hooks/use-cookies/category";
 import hooks_use_copy_to_clipboard_category from "@/cuicui/hooks/use-copy-to-clipboard/category";
 import hooks_use_counter_category from "@/cuicui/hooks/use-counter/category";
 import hooks_use_debounce_category from "@/cuicui/hooks/use-debounce/category";
@@ -140,6 +141,7 @@ import common_ui_skeletons_shiny_gradient_component from "@/cuicui/common-ui/ske
 import hooks_use_auto_scroll_hook_component from "@/cuicui/hooks/use-auto-scroll/hook/component";
 import hooks_use_battery_hook_component from "@/cuicui/hooks/use-battery/hook/component";
 import hooks_use_click_outside_hook_component from "@/cuicui/hooks/use-click-outside/hook/component";
+import hooks_use_cookies_hook_component from "@/cuicui/hooks/use-cookies/hook/component";
 import hooks_use_copy_to_clipboard_hook_component from "@/cuicui/hooks/use-copy-to-clipboard/hook/component";
 import hooks_use_counter_hook_component from "@/cuicui/hooks/use-counter/hook/component";
 import hooks_use_debounce_hook_component from "@/cuicui/hooks/use-debounce/hook/component";
@@ -276,6 +278,7 @@ import common_ui_skeletons_shiny_gradient_vertical_variant from "@/cuicui/common
 import hooks_use_auto_scroll_hook_use_auto_scroll_variant from "@/cuicui/hooks/use-auto-scroll/hook/use-auto-scroll.variant";
 import hooks_use_battery_hook_use_battery_variant from "@/cuicui/hooks/use-battery/hook/use-battery.variant";
 import hooks_use_click_outside_hook_use_click_outside_variant from "@/cuicui/hooks/use-click-outside/hook/use-click-outside.variant";
+import hooks_use_cookies_hook_use_cookies_variant from "@/cuicui/hooks/use-cookies/hook/use-cookies.variant";
 import hooks_use_copy_to_clipboard_hook_copy_to_clipboard_variant from "@/cuicui/hooks/use-copy-to-clipboard/hook/copy-to-clipboard.variant";
 import hooks_use_counter_hook_use_counter_variant from "@/cuicui/hooks/use-counter/hook/use-counter.variant";
 import hooks_use_debounce_hook_use_debounce_variant from "@/cuicui/hooks/use-debounce/hook/use-debounce.variant";
@@ -1478,6 +1481,25 @@ export const sectionList: SectionType[] = [
                 slug: "use-click-outside",
                 pathname:
                   "cuicui/hooks/use-click-outside/hook/use-click-outside.variant.tsx",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        meta: hooks_use_cookies_category,
+        slug: "use-cookies",
+        components: [
+          {
+            meta: hooks_use_cookies_hook_component,
+            slug: "hook",
+            variants: [
+              {
+                name: "use-cookies",
+                variantComponent: hooks_use_cookies_hook_use_cookies_variant,
+                slug: "use-cookies",
+                pathname:
+                  "cuicui/hooks/use-cookies/hook/use-cookies.variant.tsx",
               },
             ],
           },
