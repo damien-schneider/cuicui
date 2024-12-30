@@ -83,6 +83,7 @@ import other_qr_code_category from "@/cuicui/other/qr-code/category";
 import other_transition_wrappers_category from "@/cuicui/other/transition-wrappers/category";
 import utils_catch_error_category from "@/cuicui/utils/catch-error/category";
 import utils_cn_category from "@/cuicui/utils/cn/category";
+import utils_create_error_category from "@/cuicui/utils/create-error/category";
 import utils_sleep_category from "@/cuicui/utils/sleep/category";
 import application_ui_action_menu_advanced_bottom_action_menu_component from "@/cuicui/application-ui/action-menu/advanced-bottom-action-menu/component";
 import application_ui_alert_modern_glassy_alert_component from "@/cuicui/application-ui/alert/modern-glassy-alert/component";
@@ -206,6 +207,7 @@ import other_transition_wrappers_blur_appear_component from "@/cuicui/other/tran
 import other_transition_wrappers_text_effect_wrapper_component from "@/cuicui/other/transition-wrappers/text-effect-wrapper/component";
 import utils_catch_error_catch_error_component from "@/cuicui/utils/catch-error/catch-error/component";
 import utils_cn_cn_component from "@/cuicui/utils/cn/cn/component";
+import utils_create_error_create_error_component from "@/cuicui/utils/create-error/create-error/component";
 import utils_sleep_sleep_component from "@/cuicui/utils/sleep/sleep/component";
 import application_ui_action_menu_advanced_bottom_action_menu_default_variant from "@/cuicui/application-ui/action-menu/advanced-bottom-action-menu/default.variant";
 import application_ui_alert_modern_glassy_alert_modern_glassy_alert_variant from "@/cuicui/application-ui/alert/modern-glassy-alert/modern-glassy-alert.variant";
@@ -356,6 +358,7 @@ import other_transition_wrappers_text_effect_wrapper_per_line_variant from "@/cu
 import other_transition_wrappers_text_effect_wrapper_per_word_variant from "@/cuicui/other/transition-wrappers/text-effect-wrapper/per-word.variant";
 import utils_catch_error_catch_error_catch_error_variant from "@/cuicui/utils/catch-error/catch-error/catch-error.variant";
 import utils_cn_cn_default_variant from "@/cuicui/utils/cn/cn/default.variant";
+import utils_create_error_create_error_create_error_variant from "@/cuicui/utils/create-error/create-error/create-error.variant";
 import utils_sleep_sleep_sleep_variant from "@/cuicui/utils/sleep/sleep/sleep.variant";
 
 import type { SectionType } from "@/lib/types/component";
@@ -2757,6 +2760,26 @@ export const sectionList: SectionType[] = [
                 variantComponent: utils_cn_cn_default_variant,
                 slug: "default",
                 pathname: "cuicui/utils/cn/cn/default.variant.tsx",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        meta: utils_create_error_category,
+        slug: "create-error",
+        components: [
+          {
+            meta: utils_create_error_create_error_component,
+            slug: "create-error",
+            variants: [
+              {
+                name: "create-error",
+                variantComponent:
+                  utils_create_error_create_error_create_error_variant,
+                slug: "create-error",
+                pathname:
+                  "cuicui/utils/create-error/create-error/create-error.variant.tsx",
               },
             ],
           },
