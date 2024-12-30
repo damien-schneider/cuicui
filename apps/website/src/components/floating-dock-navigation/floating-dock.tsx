@@ -1,7 +1,7 @@
 import { sectionList } from "@/section-list";
 import { FloatingDock } from "#/src/components/floating-dock-navigation/floating-docks-component";
 import { ArrowUpRightIcon, GithubIcon } from "lucide-react";
-import { cn } from "#/src/utils/cn";
+import { cn } from "@/cuicui/utils/cn";
 import Link from "next/link";
 
 import PillToggleTheme from "@/cuicui/application-ui/theme/pill-switch-theme/default.variant";

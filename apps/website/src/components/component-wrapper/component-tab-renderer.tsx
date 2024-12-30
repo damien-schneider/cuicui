@@ -14,7 +14,7 @@ import {
   ScrollAreaViewport,
   ScrollBar,
 } from "#/src/ui/shadcn/scrollarea";
-import { cn } from "#/src/utils/cn";
+import { cn } from "@/cuicui/utils/cn";
 import { getContainerHeightClass } from "#/src/components/component-wrapper/get-container-height-class";
 import { createElement } from "react";
 import {

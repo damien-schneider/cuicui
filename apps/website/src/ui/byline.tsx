@@ -1,6 +1,4 @@
 import Link from "next/link";
-import { cn } from "../utils/cn";
-import GradientContainer from "./gradient-container";
 import {
   ModernGradientContainerContent,
   ModernGradientContainerRoot,

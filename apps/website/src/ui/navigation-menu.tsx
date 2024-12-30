@@ -9,7 +9,7 @@ import {
   useEffect,
 } from "react";
 import { cloneElement, isValidElement, useId, useState } from "react";
-import { cn } from "../utils/cn";
+import { cn } from "@/cuicui/utils/cn";
 
 interface NavigationMenuProps extends React.HTMLAttributes<HTMLDivElement> {
   children: ReactNode;

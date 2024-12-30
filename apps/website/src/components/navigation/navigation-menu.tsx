@@ -6,7 +6,7 @@ import {
 } from "#/src/components/navigation/navigation-item";
 import { sectionList } from "@/section-list";
 import type { CategoryType } from "@cuicui/ui/lib/types/component";
-import { cn } from "#/src/utils/cn";
+import { cn } from "@/cuicui/utils/cn";
 
 export default function NavigationMenu({
   isMobile,

@@ -1,7 +1,7 @@
 import * as Tabs from "@radix-ui/react-tabs";
 import ComponentTabRenderer from "#/src/components/component-wrapper/component-tab-renderer";
 
-import { cn } from "#/src/utils/cn";
+import { cn } from "@/cuicui/utils/cn";
 import type { ComponentType } from "@cuicui/ui/lib/types/component";
 
 export type TabType = "preview" | "code-component" | "code-preview";

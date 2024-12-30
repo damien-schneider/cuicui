@@ -8,7 +8,7 @@ import {
   type ElementRef,
   forwardRef,
 } from "react";
-import { cn } from "#/src/utils/cn";
+import { cn } from "@/cuicui/utils/cn";
 
 const Select = SelectPrimitive.Root;
 

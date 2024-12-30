@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { cn } from "../utils/cn";
+import { cn } from "@/cuicui/utils/cn";
 
 export const StaticStep = ({
   step,
