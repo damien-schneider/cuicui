@@ -2,7 +2,6 @@
 
 import { CheckIcon, ClipboardIcon } from "lucide-react";
 import { toast } from "sonner";
-import { cn } from "../utils/cn";
 
 import { Button } from "./shadcn/button";
 import { ScrollArea, ScrollAreaViewport, ScrollBar } from "./shadcn/scrollarea";

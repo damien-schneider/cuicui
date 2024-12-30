@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 
 import LogoLarge from "#/src/assets/logo/logo-large.png";
-import { cn } from "../../utils/cn";
 
 import Byline from "../../ui/byline";
 
@@ -12,6 +11,7 @@ import StarCuicuiGithubButton from "../../ui/star-github-project-button";
 import { SearchMenu } from "../search-menu/search-menu";
 import NavigationMenu from "./navigation-menu";
 import InfoMenuList from "#/src/components/navigation/info-menu-list";
+import { cn } from "@/cuicui/utils/cn";
 
 export function DesktopSideMenu({
   className,

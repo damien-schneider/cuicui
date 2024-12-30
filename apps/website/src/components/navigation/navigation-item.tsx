@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname, useSelectedLayoutSegments } from "next/navigation";
 import type { AnchorHTMLAttributes, ReactNode } from "react";
 
-import { cn } from "#/src/utils/cn";
+import { cn } from "@/cuicui/utils/cn";
 import type { SectionType } from "@cuicui/ui/lib/types/component";
 
 export function GlobalNavItem({

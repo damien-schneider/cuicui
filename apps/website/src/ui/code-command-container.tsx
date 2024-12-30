@@ -1,4 +1,4 @@
-import { cn } from "../utils/cn";
+import { cn } from "@/cuicui/utils/cn";
 import CodeHighlighter from "./code-highlighter";
 
 // import { ScrollArea, ScrollBar } from "./shadcn/scrollarea";

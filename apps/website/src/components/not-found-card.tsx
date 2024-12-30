@@ -1,6 +1,6 @@
 import Link from "next/link";
 import GradientText from "../ui/gradient-text";
-import { cn } from "../utils/cn";
+import { cn } from "@/cuicui/utils/cn";
 
 export default function NotFoundCard() {
   return (

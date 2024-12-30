@@ -2,7 +2,7 @@ import type { HTMLAttributes } from "react";
 import CopyToClipboardButton from "#/src/components/component-wrapper/copy-to-clipboard-button";
 import ShikiCode from "@cuicui/ui/cuicui/application-ui/code/advanced-code-block/code-highlighter";
 
-import { cn } from "../utils/cn";
+import { cn } from "@/cuicui/utils/cn";
 export default function CodeHighlighter({
   code,
   className,

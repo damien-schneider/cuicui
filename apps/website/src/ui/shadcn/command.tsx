@@ -11,7 +11,7 @@ import {
   forwardRef,
 } from "react";
 import { Dialog, DialogContent } from "#/src/ui/shadcn/dialog";
-import { cn } from "#/src/utils/cn";
+import { cn } from "@/cuicui/utils/cn";
 
 const Command = forwardRef<
   ElementRef<typeof CommandPrimitive>,

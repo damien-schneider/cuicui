@@ -8,6 +8,7 @@ import other_cursors_preview from "./cuicui/other/cursors/preview";
 import utils_catch_error_preview from "./cuicui/utils/catch-error/preview";
 import utils_sleep_preview from "./cuicui/utils/sleep/preview";
 import utils_cn_preview from "./cuicui/utils/cn/preview";
+import utils_create_error_preview from "./cuicui/utils/create-error/preview";
 import marketing_ui_statistics_preview from "./cuicui/marketing-ui/statistics/preview";
 import marketing_ui_footer_preview from "./cuicui/marketing-ui/footer/preview";
 import marketing_ui_carousels_preview from "./cuicui/marketing-ui/carousels/preview";
@@ -91,6 +92,7 @@ export const categoriesPreviewsList: Record<string, () => JSX.Element> = {
   "catch-error": utils_catch_error_preview,
   sleep: utils_sleep_preview,
   cn: utils_cn_preview,
+  "create-error": utils_create_error_preview,
   statistics: marketing_ui_statistics_preview,
   footer: marketing_ui_footer_preview,
   carousels: marketing_ui_carousels_preview,

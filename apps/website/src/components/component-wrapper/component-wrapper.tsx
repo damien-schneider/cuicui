@@ -2,7 +2,7 @@
 import { useLayoutEffect, useState, type ReactNode } from "react";
 import { CustomIframe } from "#/src/components/custom-iframe-component";
 import type { ComponentHeightType } from "@cuicui/ui/lib/types/component";
-import { cn } from "#/src/utils/cn";
+import { cn } from "@/cuicui/utils/cn";
 import { getContainerHeightClass } from "#/src/components/component-wrapper/get-container-height-class";
 import { RefreshCwIcon } from "lucide-react";
 import { ScrollArea, ScrollAreaViewport } from "#/src/ui/shadcn/scrollarea";
