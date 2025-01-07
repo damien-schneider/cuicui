@@ -81,6 +81,7 @@ import other_font_effects_category from "@/cuicui/other/font-effects/category";
 import other_mock_ups_category from "@/cuicui/other/mock-ups/category";
 import other_patterns_category from "@/cuicui/other/patterns/category";
 import other_qr_code_category from "@/cuicui/other/qr-code/category";
+import other_text_animation_category from "@/cuicui/other/text-animation/category";
 import other_transition_wrappers_category from "@/cuicui/other/transition-wrappers/category";
 import utils_catch_error_category from "@/cuicui/utils/catch-error/category";
 import utils_cn_category from "@/cuicui/utils/cn/category";
@@ -205,6 +206,8 @@ import other_patterns_lines_pattern_component from "@/cuicui/other/patterns/line
 import other_patterns_moving_bands_component from "@/cuicui/other/patterns/moving-bands/component";
 import other_qr_code_bar_code_generator_component from "@/cuicui/other/qr-code/bar-code-generator/component";
 import other_qr_code_qr_code_generator_component from "@/cuicui/other/qr-code/qr-code-generator/component";
+import other_text_animation_scramble_hover_component from "@/cuicui/other/text-animation/scramble-hover/component";
+import other_text_animation_typewritter_component from "@/cuicui/other/text-animation/typewritter/component";
 import other_transition_wrappers_blur_appear_component from "@/cuicui/other/transition-wrappers/blur-appear/component";
 import other_transition_wrappers_text_effect_wrapper_component from "@/cuicui/other/transition-wrappers/text-effect-wrapper/component";
 import utils_catch_error_catch_error_component from "@/cuicui/utils/catch-error/catch-error/component";
@@ -355,6 +358,8 @@ import other_patterns_lines_pattern_default_variant from "@/cuicui/other/pattern
 import other_patterns_moving_bands_moving_bands_variant from "@/cuicui/other/patterns/moving-bands/moving-bands.variant";
 import other_qr_code_bar_code_generator_bar_code_generator_variant from "@/cuicui/other/qr-code/bar-code-generator/bar-code-generator.variant";
 import other_qr_code_qr_code_generator_qr_code_generator_variant from "@/cuicui/other/qr-code/qr-code-generator/qr-code-generator.variant";
+import other_text_animation_scramble_hover_scramble_variant from "@/cuicui/other/text-animation/scramble-hover/scramble.variant";
+import other_text_animation_typewritter_typewritter_variant from "@/cuicui/other/text-animation/typewritter/typewritter.variant";
 import other_transition_wrappers_blur_appear_default_variant from "@/cuicui/other/transition-wrappers/blur-appear/default.variant";
 import other_transition_wrappers_text_effect_wrapper_per_char_variant from "@/cuicui/other/transition-wrappers/text-effect-wrapper/per-char.variant";
 import other_transition_wrappers_text_effect_wrapper_per_line_variant from "@/cuicui/other/transition-wrappers/text-effect-wrapper/per-line.variant";
@@ -2689,6 +2694,40 @@ export const sectionList: SectionType[] = [
                 slug: "qr-code-generator",
                 pathname:
                   "cuicui/other/qr-code/qr-code-generator/qr-code-generator.variant.tsx",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        meta: other_text_animation_category,
+        slug: "text-animation",
+        components: [
+          {
+            meta: other_text_animation_scramble_hover_component,
+            slug: "scramble-hover",
+            variants: [
+              {
+                name: "scramble",
+                variantComponent:
+                  other_text_animation_scramble_hover_scramble_variant,
+                slug: "scramble",
+                pathname:
+                  "cuicui/other/text-animation/scramble-hover/scramble.variant.tsx",
+              },
+            ],
+          },
+          {
+            meta: other_text_animation_typewritter_component,
+            slug: "typewritter",
+            variants: [
+              {
+                name: "typewritter",
+                variantComponent:
+                  other_text_animation_typewritter_typewritter_variant,
+                slug: "typewritter",
+                pathname:
+                  "cuicui/other/text-animation/typewritter/typewritter.variant.tsx",
               },
             ],
           },

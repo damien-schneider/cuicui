@@ -1,4 +1,5 @@
 import other_creative_effects_preview from "./cuicui/other/creative-effects/preview";
+import other_text_animation_preview from "./cuicui/other/text-animation/preview";
 import other_mock_ups_preview from "./cuicui/other/mock-ups/preview";
 import other_patterns_preview from "./cuicui/other/patterns/preview";
 import other_equalizer_preview from "./cuicui/other/equalizer/preview";
@@ -84,6 +85,7 @@ import type { JSX } from "react";
 
 export const categoriesPreviewsList: Record<string, () => JSX.Element> = {
   "creative-effects": other_creative_effects_preview,
+  "text-animation": other_text_animation_preview,
   "mock-ups": other_mock_ups_preview,
   patterns: other_patterns_preview,
   equalizer: other_equalizer_preview,
