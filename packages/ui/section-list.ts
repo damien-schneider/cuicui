@@ -208,6 +208,7 @@ import other_qr_code_bar_code_generator_component from "@/cuicui/other/qr-code/b
 import other_qr_code_qr_code_generator_component from "@/cuicui/other/qr-code/qr-code-generator/component";
 import other_text_animation_scramble_hover_component from "@/cuicui/other/text-animation/scramble-hover/component";
 import other_text_animation_typewritter_component from "@/cuicui/other/text-animation/typewritter/component";
+import other_text_animation_word_list_swap_component from "@/cuicui/other/text-animation/word-list-swap/component";
 import other_transition_wrappers_blur_appear_component from "@/cuicui/other/transition-wrappers/blur-appear/component";
 import other_transition_wrappers_text_effect_wrapper_component from "@/cuicui/other/transition-wrappers/text-effect-wrapper/component";
 import utils_catch_error_catch_error_component from "@/cuicui/utils/catch-error/catch-error/component";
@@ -360,6 +361,7 @@ import other_qr_code_bar_code_generator_bar_code_generator_variant from "@/cuicu
 import other_qr_code_qr_code_generator_qr_code_generator_variant from "@/cuicui/other/qr-code/qr-code-generator/qr-code-generator.variant";
 import other_text_animation_scramble_hover_scramble_variant from "@/cuicui/other/text-animation/scramble-hover/scramble.variant";
 import other_text_animation_typewritter_typewritter_variant from "@/cuicui/other/text-animation/typewritter/typewritter.variant";
+import other_text_animation_word_list_swap_word_list_swap_variant from "@/cuicui/other/text-animation/word-list-swap/word-list-swap.variant";
 import other_transition_wrappers_blur_appear_default_variant from "@/cuicui/other/transition-wrappers/blur-appear/default.variant";
 import other_transition_wrappers_text_effect_wrapper_per_char_variant from "@/cuicui/other/transition-wrappers/text-effect-wrapper/per-char.variant";
 import other_transition_wrappers_text_effect_wrapper_per_line_variant from "@/cuicui/other/transition-wrappers/text-effect-wrapper/per-line.variant";
@@ -2728,6 +2730,20 @@ export const sectionList: SectionType[] = [
                 slug: "typewritter",
                 pathname:
                   "cuicui/other/text-animation/typewritter/typewritter.variant.tsx",
+              },
+            ],
+          },
+          {
+            meta: other_text_animation_word_list_swap_component,
+            slug: "word-list-swap",
+            variants: [
+              {
+                name: "word-list-swap",
+                variantComponent:
+                  other_text_animation_word_list_swap_word_list_swap_variant,
+                slug: "word-list-swap",
+                pathname:
+                  "cuicui/other/text-animation/word-list-swap/word-list-swap.variant.tsx",
               },
             ],
           },
