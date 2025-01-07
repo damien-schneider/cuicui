@@ -10,7 +10,9 @@ interface MouseState {
   elementPositionY: number | null;
 }
 
-export function useMouse(): [MouseState, RefObject<HTMLDivElement | null>] {
+export function useMouse(
+  containerRef?: RefObject<HTMLElement | SVGElement | null>,
+): [MouseState, RefObject<HTMLDivElement | null>] {
   const [state, setState] = useState<MouseState>({
     x: null,
     y: null,
@@ -29,7 +31,18 @@ export function useMouse(): [MouseState, RefObject<HTMLDivElement | null>] {
         y: event.pageY,
       };
 
-      if (ref.current instanceof Element) {
+      if (containerRef?.current instanceof Element) {
+        const { left, top } = containerRef.current.getBoundingClientRect();
+        const containerPositionX = left + window.scrollX;
+        const containerPositionY = top + window.scrollY;
+        const containerX = event.pageX - containerPositionX;
+        const containerY = event.pageY - containerPositionY;
+
+        newState.elementX = containerX;
+        newState.elementY = containerY;
+        newState.elementPositionX = containerPositionX;
+        newState.elementPositionY = containerPositionY;
+      } else if (ref.current instanceof Element) {
         const { left, top } = ref.current.getBoundingClientRect();
         const elementPositionX = left + window.scrollX;
         const elementPositionY = top + window.scrollY;
@@ -53,7 +66,7 @@ export function useMouse(): [MouseState, RefObject<HTMLDivElement | null>] {
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
     };
-  }, []);
+  }, [containerRef]);
 
   return [state, ref];
 }
