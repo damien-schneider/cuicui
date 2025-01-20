@@ -1,12 +1,11 @@
 import type { ComponentMetaType } from "@/lib/types/component";
 
 export const Component: ComponentMetaType = {
-  name: "Variable Font Cursor",
-  description:
-    "A cursor that changes its font size based on the cursor position",
+  name: "Typewritter",
+  description: "A typewritter effect for text, with a blinking cursor",
   inspiration: "Fancy Components",
   inspirationLink:
-    "https://www.fancycomponents.dev/docs/components/text/variable-font-cursor-proximity",
+    "https://www.fancycomponents.dev/docs/components/text/typewriter",
   sizePreview: "sm",
 };
 

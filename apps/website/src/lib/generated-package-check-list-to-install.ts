@@ -36,6 +36,10 @@ export const packageCheckListToInstall: PackageToInstallType[] = [
     packageName: "@t3-oss/env-nextjs",
   },
   {
+    find: [`from "babel-plugin-react-compiler"`],
+    packageName: "babel-plugin-react-compiler",
+  },
+  {
     find: [`from "class-variance-authority"`],
     packageName: "class-variance-authority",
   },
@@ -218,6 +222,10 @@ export const packageCheckListToInstall: PackageToInstallType[] = [
   {
     find: [`from "@number-flow/react"`],
     packageName: "@number-flow/react",
+  },
+  {
+    find: [`from "@radix-ui/react-accordion"`],
+    packageName: "@radix-ui/react-accordion",
   },
   {
     find: [`from "@radix-ui/react-context-menu"`],

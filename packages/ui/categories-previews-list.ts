@@ -1,4 +1,5 @@
 import other_creative_effects_preview from "./cuicui/other/creative-effects/preview";
+import other_text_animation_preview from "./cuicui/other/text-animation/preview";
 import other_mock_ups_preview from "./cuicui/other/mock-ups/preview";
 import other_patterns_preview from "./cuicui/other/patterns/preview";
 import other_equalizer_preview from "./cuicui/other/equalizer/preview";
@@ -14,8 +15,8 @@ import marketing_ui_statistics_preview from "./cuicui/marketing-ui/statistics/pr
 import marketing_ui_footer_preview from "./cuicui/marketing-ui/footer/preview";
 import marketing_ui_carousels_preview from "./cuicui/marketing-ui/carousels/preview";
 import marketing_ui_testimonials_preview from "./cuicui/marketing-ui/testimonials/preview";
-import marketing_ui_faq_preview from "./cuicui/marketing-ui/faq/preview";
 import marketing_ui_features_preview from "./cuicui/marketing-ui/features/preview";
+import marketing_ui_questions_and_answers_preview from "./cuicui/marketing-ui/questions-and-answers/preview";
 import marketing_ui_pricing_tables_preview from "./cuicui/marketing-ui/pricing-tables/preview";
 import hooks_use_throttle_preview from "./cuicui/hooks/use-throttle/preview";
 import hooks_use_auto_scroll_preview from "./cuicui/hooks/use-auto-scroll/preview";
@@ -84,6 +85,7 @@ import type { JSX } from "react";
 
 export const categoriesPreviewsList: Record<string, () => JSX.Element> = {
   "creative-effects": other_creative_effects_preview,
+  "text-animation": other_text_animation_preview,
   "mock-ups": other_mock_ups_preview,
   patterns: other_patterns_preview,
   equalizer: other_equalizer_preview,
@@ -99,8 +101,8 @@ export const categoriesPreviewsList: Record<string, () => JSX.Element> = {
   footer: marketing_ui_footer_preview,
   carousels: marketing_ui_carousels_preview,
   testimonials: marketing_ui_testimonials_preview,
-  faq: marketing_ui_faq_preview,
   features: marketing_ui_features_preview,
+  "questions-and-answers": marketing_ui_questions_and_answers_preview,
   "pricing-tables": marketing_ui_pricing_tables_preview,
   "use-throttle": hooks_use_throttle_preview,
   "use-auto-scroll": hooks_use_auto_scroll_preview,

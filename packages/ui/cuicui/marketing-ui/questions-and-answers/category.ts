@@ -2,8 +2,8 @@ import type { CategoryMetaType } from "@/lib/types/component";
 import { MessageCircleQuestionIcon } from "lucide-react";
 
 export const faqCategory: CategoryMetaType = {
-  name: "FAQ",
-  description: "A collection of FAQ components for your projects.",
+  name: "Q&A",
+  description: "A collection of Q&A components for your projects.",
   icon: MessageCircleQuestionIcon,
   latestUpdateDate: new Date("2024-01-11"),
 };
