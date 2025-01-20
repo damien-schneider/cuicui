@@ -15,8 +15,8 @@ import marketing_ui_statistics_preview from "./cuicui/marketing-ui/statistics/pr
 import marketing_ui_footer_preview from "./cuicui/marketing-ui/footer/preview";
 import marketing_ui_carousels_preview from "./cuicui/marketing-ui/carousels/preview";
 import marketing_ui_testimonials_preview from "./cuicui/marketing-ui/testimonials/preview";
-import marketing_ui_faq_preview from "./cuicui/marketing-ui/faq/preview";
 import marketing_ui_features_preview from "./cuicui/marketing-ui/features/preview";
+import marketing_ui_questions_and_answers_preview from "./cuicui/marketing-ui/questions-and-answers/preview";
 import marketing_ui_pricing_tables_preview from "./cuicui/marketing-ui/pricing-tables/preview";
 import hooks_use_throttle_preview from "./cuicui/hooks/use-throttle/preview";
 import hooks_use_auto_scroll_preview from "./cuicui/hooks/use-auto-scroll/preview";
@@ -101,8 +101,8 @@ export const categoriesPreviewsList: Record<string, () => JSX.Element> = {
   footer: marketing_ui_footer_preview,
   carousels: marketing_ui_carousels_preview,
   testimonials: marketing_ui_testimonials_preview,
-  faq: marketing_ui_faq_preview,
   features: marketing_ui_features_preview,
+  "questions-and-answers": marketing_ui_questions_and_answers_preview,
   "pricing-tables": marketing_ui_pricing_tables_preview,
   "use-throttle": hooks_use_throttle_preview,
   "use-auto-scroll": hooks_use_auto_scroll_preview,

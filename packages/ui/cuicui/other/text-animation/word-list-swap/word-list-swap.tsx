@@ -199,7 +199,7 @@ const WordListSwap = forwardRef<WordListSwapRef, WordListSwapProps>(
           mode={animatePresenceMode}
           initial={animatePresenceInitial}
         >
-          <motion.div
+          <motion.span
             key={currentTextIndex}
             className={cn(
               "flex flex-wrap",
@@ -251,7 +251,7 @@ const WordListSwap = forwardRef<WordListSwapRef, WordListSwapProps>(
                 </span>
               );
             })}
-          </motion.div>
+          </motion.span>
         </AnimatePresence>
       </motion.span>
     );

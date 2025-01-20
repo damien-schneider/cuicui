@@ -6,6 +6,7 @@ export const Component: ComponentMetaType = {
   inspiration: "Fancy Components",
   inspirationLink:
     "https://www.fancycomponents.dev/docs/components/text/typewriter",
+  sizePreview: "sm",
 };
 
 export default Component;

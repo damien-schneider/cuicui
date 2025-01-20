@@ -7,6 +7,7 @@ export const Component: ComponentMetaType = {
   inspiration: "Fancy Components",
   inspirationLink:
     "https://www.fancycomponents.dev/docs/components/text/variable-font-cursor-proximity",
+  sizePreview: "sm",
 };
 
 export default Component;

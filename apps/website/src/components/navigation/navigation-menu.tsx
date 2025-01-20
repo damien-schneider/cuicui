@@ -24,17 +24,17 @@ export default function NavigationMenu({
     return null;
   }
 
-  function getClosestUpdatedComponentDate(dateList: (Date | null)[]) {
-    return dateList.reduce((acc, date) => {
-      if (!date) {
-        return acc;
-      }
-      if (!acc) {
-        return date;
-      }
-      return date > acc ? date : acc;
-    }, null);
-  }
+  // function getClosestUpdatedComponentDate(dateList: (Date | null)[]) {
+  //   return dateList.reduce((acc, date) => {
+  //     if (!date) {
+  //       return acc;
+  //     }
+  //     if (!acc) {
+  //       return date;
+  //     }
+  //     return date > acc ? date : acc;
+  //   }, null);
+  // }
 
   return (
     <nav className={cn("mt-5 mb-12 px-1 space-y-2 min-h-full", className)}>

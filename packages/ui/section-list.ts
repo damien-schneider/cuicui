@@ -68,12 +68,13 @@ import hooks_use_video_category from "@/cuicui/hooks/use-video/category";
 import hooks_use_window_scroll_position_category from "@/cuicui/hooks/use-window-scroll-position/category";
 import hooks_use_window_size_category from "@/cuicui/hooks/use-window-size/category";
 import marketing_ui_carousels_category from "@/cuicui/marketing-ui/carousels/category";
-import marketing_ui_faq_category from "@/cuicui/marketing-ui/faq/category";
 import marketing_ui_features_category from "@/cuicui/marketing-ui/features/category";
 import marketing_ui_footer_category from "@/cuicui/marketing-ui/footer/category";
 import marketing_ui_pricing_tables_category from "@/cuicui/marketing-ui/pricing-tables/category";
+import marketing_ui_questions_and_answers_category from "@/cuicui/marketing-ui/questions-and-answers/category";
 import marketing_ui_statistics_category from "@/cuicui/marketing-ui/statistics/category";
 import marketing_ui_testimonials_category from "@/cuicui/marketing-ui/testimonials/category";
+import other_books_category from "@/cuicui/other/books/category";
 import other_creative_effects_category from "@/cuicui/other/creative-effects/category";
 import other_cursors_category from "@/cuicui/other/cursors/category";
 import other_equalizer_category from "@/cuicui/other/equalizer/category";
@@ -175,38 +176,45 @@ import hooks_use_window_scroll_position_hook_component from "@/cuicui/hooks/use-
 import hooks_use_window_size_hook_component from "@/cuicui/hooks/use-window-size/hook/component";
 import marketing_ui_carousels_cylindric_3d_carousel_component from "@/cuicui/marketing-ui/carousels/cylindric-3d-carousel/component";
 import marketing_ui_carousels_simple_carousel_component from "@/cuicui/marketing-ui/carousels/simple-carousel/component";
-import marketing_ui_faq_full_section_component from "@/cuicui/marketing-ui/faq/full-section/component";
-import marketing_ui_faq_gradient_qna_component from "@/cuicui/marketing-ui/faq/gradient-qna/component";
 import marketing_ui_features_animated_cards_component from "@/cuicui/marketing-ui/features/animated-cards/component";
 import marketing_ui_features_feature_four_images_component from "@/cuicui/marketing-ui/features/feature-four-images/component";
+import marketing_ui_features_stack_component from "@/cuicui/marketing-ui/features/stack/component";
 import marketing_ui_footer_sticky_footer_component from "@/cuicui/marketing-ui/footer/sticky-footer/component";
 import marketing_ui_pricing_tables_gradient_component from "@/cuicui/marketing-ui/pricing-tables/gradient/component";
 import marketing_ui_pricing_tables_many_offers_component from "@/cuicui/marketing-ui/pricing-tables/many-offers/component";
+import marketing_ui_questions_and_answers_full_section_component from "@/cuicui/marketing-ui/questions-and-answers/full-section/component";
+import marketing_ui_questions_and_answers_gradient_qna_component from "@/cuicui/marketing-ui/questions-and-answers/gradient-qna/component";
+import marketing_ui_questions_and_answers_messaging_like_qna_component from "@/cuicui/marketing-ui/questions-and-answers/messaging-like-qna/component";
 import marketing_ui_statistics_animated_counter_component from "@/cuicui/marketing-ui/statistics/animated-counter/component";
 import marketing_ui_statistics_animated_on_scroll_component from "@/cuicui/marketing-ui/statistics/animated-on-scroll/component";
 import marketing_ui_statistics_increase_to_value_component from "@/cuicui/marketing-ui/statistics/increase-to-value/component";
 import marketing_ui_statistics_trigger_on_scroll_component from "@/cuicui/marketing-ui/statistics/trigger-on-scroll/component";
 import marketing_ui_testimonials_marquee_component from "@/cuicui/marketing-ui/testimonials/marquee/component";
 import marketing_ui_testimonials_testimonials_component_component from "@/cuicui/marketing-ui/testimonials/testimonials-component/component";
+import other_books_modern_book_cover_component from "@/cuicui/other/books/modern-book-cover/component";
 import other_creative_effects_animated_noise_component from "@/cuicui/other/creative-effects/animated-noise/component";
 import other_creative_effects_border_trail_component from "@/cuicui/other/creative-effects/border-trail/component";
 import other_creative_effects_bottom_blur_out_component from "@/cuicui/other/creative-effects/bottom-blur-out/component";
+import other_creative_effects_trailing_images_component from "@/cuicui/other/creative-effects/trailing-images/component";
 import other_creative_effects_wavy_line_component from "@/cuicui/other/creative-effects/wavy-line/component";
 import other_cursors_dynamic_cards_component from "@/cuicui/other/cursors/dynamic-cards/component";
 import other_cursors_follow_cursor_component from "@/cuicui/other/cursors/follow-cursor/component";
 import other_equalizer_equalizer_component from "@/cuicui/other/equalizer/equalizer/component";
+import other_font_effects_glow_text_component from "@/cuicui/other/font-effects/glow-text/component";
 import other_font_effects_variable_font_cursor_component from "@/cuicui/other/font-effects/variable-font-cursor/component";
 import other_mock_ups_airpods_component from "@/cuicui/other/mock-ups/airpods/component";
 import other_mock_ups_laptops_component from "@/cuicui/other/mock-ups/laptops/component";
 import other_mock_ups_smartphone_component from "@/cuicui/other/mock-ups/smartphone/component";
 import other_patterns_dashed_pattern_component from "@/cuicui/other/patterns/dashed-pattern/component";
 import other_patterns_dots_pattern_component from "@/cuicui/other/patterns/dots-pattern/component";
+import other_patterns_flickering_pattern_component from "@/cuicui/other/patterns/flickering-pattern/component";
 import other_patterns_grid_pattern_component from "@/cuicui/other/patterns/grid-pattern/component";
 import other_patterns_lines_pattern_component from "@/cuicui/other/patterns/lines-pattern/component";
 import other_patterns_moving_bands_component from "@/cuicui/other/patterns/moving-bands/component";
 import other_qr_code_bar_code_generator_component from "@/cuicui/other/qr-code/bar-code-generator/component";
 import other_qr_code_qr_code_generator_component from "@/cuicui/other/qr-code/qr-code-generator/component";
 import other_text_animation_scramble_hover_component from "@/cuicui/other/text-animation/scramble-hover/component";
+import other_text_animation_shiny_text_component from "@/cuicui/other/text-animation/shiny-text/component";
 import other_text_animation_typewritter_component from "@/cuicui/other/text-animation/typewritter/component";
 import other_text_animation_word_list_swap_component from "@/cuicui/other/text-animation/word-list-swap/component";
 import other_transition_wrappers_blur_appear_component from "@/cuicui/other/transition-wrappers/blur-appear/component";
@@ -318,16 +326,18 @@ import hooks_use_window_scroll_position_hook_use_window_scroll_position_variant 
 import hooks_use_window_size_hook_use_window_size_variant from "@/cuicui/hooks/use-window-size/hook/use-window-size.variant";
 import marketing_ui_carousels_cylindric_3d_carousel_default_variant from "@/cuicui/marketing-ui/carousels/cylindric-3d-carousel/default.variant";
 import marketing_ui_carousels_simple_carousel_simple_carousel_variant from "@/cuicui/marketing-ui/carousels/simple-carousel/simple-carousel.variant";
-import marketing_ui_faq_full_section_full_section_variant from "@/cuicui/marketing-ui/faq/full-section/full-section.variant";
-import marketing_ui_faq_gradient_qna_custom_chevron_style_variant from "@/cuicui/marketing-ui/faq/gradient-qna/custom-chevron-style.variant";
-import marketing_ui_faq_gradient_qna_double_container_variant from "@/cuicui/marketing-ui/faq/gradient-qna/double-container.variant";
-import marketing_ui_faq_gradient_qna_simple_container_variant from "@/cuicui/marketing-ui/faq/gradient-qna/simple-container.variant";
 import marketing_ui_features_animated_cards_default_variant from "@/cuicui/marketing-ui/features/animated-cards/default.variant";
 import marketing_ui_features_feature_four_images_variant1_variant from "@/cuicui/marketing-ui/features/feature-four-images/variant1.variant";
 import marketing_ui_features_feature_four_images_variant2_variant from "@/cuicui/marketing-ui/features/feature-four-images/variant2.variant";
+import marketing_ui_features_stack_stack_variant from "@/cuicui/marketing-ui/features/stack/stack.variant";
 import marketing_ui_footer_sticky_footer_sticky_footer_variant from "@/cuicui/marketing-ui/footer/sticky-footer/sticky-footer.variant";
 import marketing_ui_pricing_tables_gradient_pricing_table_gradient_variant from "@/cuicui/marketing-ui/pricing-tables/gradient/pricing-table-gradient.variant";
 import marketing_ui_pricing_tables_many_offers_artlist_inspired_variant from "@/cuicui/marketing-ui/pricing-tables/many-offers/artlist-inspired.variant";
+import marketing_ui_questions_and_answers_full_section_full_section_variant from "@/cuicui/marketing-ui/questions-and-answers/full-section/full-section.variant";
+import marketing_ui_questions_and_answers_gradient_qna_custom_chevron_style_variant from "@/cuicui/marketing-ui/questions-and-answers/gradient-qna/custom-chevron-style.variant";
+import marketing_ui_questions_and_answers_gradient_qna_double_container_variant from "@/cuicui/marketing-ui/questions-and-answers/gradient-qna/double-container.variant";
+import marketing_ui_questions_and_answers_gradient_qna_simple_container_variant from "@/cuicui/marketing-ui/questions-and-answers/gradient-qna/simple-container.variant";
+import marketing_ui_questions_and_answers_messaging_like_qna_messaging_like_qna_variant from "@/cuicui/marketing-ui/questions-and-answers/messaging-like-qna/messaging-like-qna.variant";
 import marketing_ui_statistics_animated_counter_animated_counter_variant from "@/cuicui/marketing-ui/statistics/animated-counter/animated-counter.variant";
 import marketing_ui_statistics_animated_on_scroll_default_variant from "@/cuicui/marketing-ui/statistics/animated-on-scroll/default.variant";
 import marketing_ui_statistics_increase_to_value_default_variant from "@/cuicui/marketing-ui/statistics/increase-to-value/default.variant";
@@ -336,16 +346,19 @@ import marketing_ui_testimonials_marquee_horizontal_variant from "@/cuicui/marke
 import marketing_ui_testimonials_marquee_vertical_variant from "@/cuicui/marketing-ui/testimonials/marquee/vertical.variant";
 import marketing_ui_testimonials_marquee_with_framer_motion_variant from "@/cuicui/marketing-ui/testimonials/marquee/with-framer-motion.variant";
 import marketing_ui_testimonials_testimonials_component_default_variant from "@/cuicui/marketing-ui/testimonials/testimonials-component/default.variant";
+import other_books_modern_book_cover_modern_book_cover_variant from "@/cuicui/other/books/modern-book-cover/modern-book-cover.variant";
 import other_creative_effects_animated_noise_animated_noise_variant from "@/cuicui/other/creative-effects/animated-noise/animated-noise.variant";
 import other_creative_effects_animated_noise_static_noise_variant from "@/cuicui/other/creative-effects/animated-noise/static-noise.variant";
 import other_creative_effects_border_trail_border_trail_variant from "@/cuicui/other/creative-effects/border-trail/border-trail.variant";
 import other_creative_effects_bottom_blur_out_bottom_blur_out_variant from "@/cuicui/other/creative-effects/bottom-blur-out/bottom-blur-out.variant";
+import other_creative_effects_trailing_images_trailing_images_variant from "@/cuicui/other/creative-effects/trailing-images/trailing-images.variant";
 import other_creative_effects_wavy_line_wavy_line_variant from "@/cuicui/other/creative-effects/wavy-line/wavy-line.variant";
 import other_cursors_dynamic_cards_gradient_card_effect_variant from "@/cuicui/other/cursors/dynamic-cards/gradient-card-effect.variant";
 import other_cursors_dynamic_cards_only_border_card_effect_variant from "@/cuicui/other/cursors/dynamic-cards/only-border-card-effect.variant";
 import other_cursors_follow_cursor_replace_cursor_variant from "@/cuicui/other/cursors/follow-cursor/replace-cursor.variant";
 import other_cursors_follow_cursor_with_cursor_variant from "@/cuicui/other/cursors/follow-cursor/with-cursor.variant";
 import other_equalizer_equalizer_equalizer_variant from "@/cuicui/other/equalizer/equalizer/equalizer.variant";
+import other_font_effects_glow_text_glow_text_variant from "@/cuicui/other/font-effects/glow-text/glow-text.variant";
 import other_font_effects_variable_font_cursor_variable_font_cursor_variant from "@/cuicui/other/font-effects/variable-font-cursor/variable-font-cursor.variant";
 import other_mock_ups_airpods_airpods_pro_variant from "@/cuicui/other/mock-ups/airpods/airpods-pro.variant";
 import other_mock_ups_airpods_airpods_variant from "@/cuicui/other/mock-ups/airpods/airpods.variant";
@@ -354,12 +367,14 @@ import other_mock_ups_smartphone_google_pixel_variant from "@/cuicui/other/mock-
 import other_mock_ups_smartphone_iphone14_variant from "@/cuicui/other/mock-ups/smartphone/iphone14.variant";
 import other_patterns_dashed_pattern_default_variant from "@/cuicui/other/patterns/dashed-pattern/default.variant";
 import other_patterns_dots_pattern_dots_pattern_variant from "@/cuicui/other/patterns/dots-pattern/dots-pattern.variant";
+import other_patterns_flickering_pattern_flickering_pattern_variant from "@/cuicui/other/patterns/flickering-pattern/flickering-pattern.variant";
 import other_patterns_grid_pattern_grid_pattern_variant from "@/cuicui/other/patterns/grid-pattern/grid-pattern.variant";
 import other_patterns_lines_pattern_default_variant from "@/cuicui/other/patterns/lines-pattern/default.variant";
 import other_patterns_moving_bands_moving_bands_variant from "@/cuicui/other/patterns/moving-bands/moving-bands.variant";
 import other_qr_code_bar_code_generator_bar_code_generator_variant from "@/cuicui/other/qr-code/bar-code-generator/bar-code-generator.variant";
 import other_qr_code_qr_code_generator_qr_code_generator_variant from "@/cuicui/other/qr-code/qr-code-generator/qr-code-generator.variant";
 import other_text_animation_scramble_hover_scramble_variant from "@/cuicui/other/text-animation/scramble-hover/scramble.variant";
+import other_text_animation_shiny_text_shiny_text_variant from "@/cuicui/other/text-animation/shiny-text/shiny-text.variant";
 import other_text_animation_typewritter_typewritter_variant from "@/cuicui/other/text-animation/typewritter/typewritter.variant";
 import other_text_animation_word_list_swap_word_list_swap_variant from "@/cuicui/other/text-animation/word-list-swap/word-list-swap.variant";
 import other_transition_wrappers_blur_appear_default_variant from "@/cuicui/other/transition-wrappers/blur-appear/default.variant";
@@ -2113,56 +2128,6 @@ export const sectionList: SectionType[] = [
         ],
       },
       {
-        meta: marketing_ui_faq_category,
-        slug: "faq",
-        components: [
-          {
-            meta: marketing_ui_faq_full_section_component,
-            slug: "full-section",
-            variants: [
-              {
-                name: "full-section",
-                variantComponent:
-                  marketing_ui_faq_full_section_full_section_variant,
-                slug: "full-section",
-                pathname:
-                  "cuicui/marketing-ui/faq/full-section/full-section.variant.tsx",
-              },
-            ],
-          },
-          {
-            meta: marketing_ui_faq_gradient_qna_component,
-            slug: "gradient-qna",
-            variants: [
-              {
-                name: "custom-chevron-style",
-                variantComponent:
-                  marketing_ui_faq_gradient_qna_custom_chevron_style_variant,
-                slug: "custom-chevron-style",
-                pathname:
-                  "cuicui/marketing-ui/faq/gradient-qna/custom-chevron-style.variant.tsx",
-              },
-              {
-                name: "double-container",
-                variantComponent:
-                  marketing_ui_faq_gradient_qna_double_container_variant,
-                slug: "double-container",
-                pathname:
-                  "cuicui/marketing-ui/faq/gradient-qna/double-container.variant.tsx",
-              },
-              {
-                name: "simple-container",
-                variantComponent:
-                  marketing_ui_faq_gradient_qna_simple_container_variant,
-                slug: "simple-container",
-                pathname:
-                  "cuicui/marketing-ui/faq/gradient-qna/simple-container.variant.tsx",
-              },
-            ],
-          },
-        ],
-      },
-      {
         meta: marketing_ui_features_category,
         slug: "features",
         components: [
@@ -2199,6 +2164,19 @@ export const sectionList: SectionType[] = [
                 slug: "variant2",
                 pathname:
                   "cuicui/marketing-ui/features/feature-four-images/variant2.variant.tsx",
+              },
+            ],
+          },
+          {
+            meta: marketing_ui_features_stack_component,
+            slug: "stack",
+            variants: [
+              {
+                name: "stack",
+                variantComponent: marketing_ui_features_stack_stack_variant,
+                slug: "stack",
+                pathname:
+                  "cuicui/marketing-ui/features/stack/stack.variant.tsx",
               },
             ],
           },
@@ -2253,6 +2231,70 @@ export const sectionList: SectionType[] = [
                 slug: "artlist-inspired",
                 pathname:
                   "cuicui/marketing-ui/pricing-tables/many-offers/artlist-inspired.variant.tsx",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        meta: marketing_ui_questions_and_answers_category,
+        slug: "questions-and-answers",
+        components: [
+          {
+            meta: marketing_ui_questions_and_answers_full_section_component,
+            slug: "full-section",
+            variants: [
+              {
+                name: "full-section",
+                variantComponent:
+                  marketing_ui_questions_and_answers_full_section_full_section_variant,
+                slug: "full-section",
+                pathname:
+                  "cuicui/marketing-ui/questions-and-answers/full-section/full-section.variant.tsx",
+              },
+            ],
+          },
+          {
+            meta: marketing_ui_questions_and_answers_gradient_qna_component,
+            slug: "gradient-qna",
+            variants: [
+              {
+                name: "custom-chevron-style",
+                variantComponent:
+                  marketing_ui_questions_and_answers_gradient_qna_custom_chevron_style_variant,
+                slug: "custom-chevron-style",
+                pathname:
+                  "cuicui/marketing-ui/questions-and-answers/gradient-qna/custom-chevron-style.variant.tsx",
+              },
+              {
+                name: "double-container",
+                variantComponent:
+                  marketing_ui_questions_and_answers_gradient_qna_double_container_variant,
+                slug: "double-container",
+                pathname:
+                  "cuicui/marketing-ui/questions-and-answers/gradient-qna/double-container.variant.tsx",
+              },
+              {
+                name: "simple-container",
+                variantComponent:
+                  marketing_ui_questions_and_answers_gradient_qna_simple_container_variant,
+                slug: "simple-container",
+                pathname:
+                  "cuicui/marketing-ui/questions-and-answers/gradient-qna/simple-container.variant.tsx",
+              },
+            ],
+          },
+          {
+            meta: marketing_ui_questions_and_answers_messaging_like_qna_component,
+            slug: "messaging-like-qna",
+            variants: [
+              {
+                name: "messaging-like-qna",
+                variantComponent:
+                  marketing_ui_questions_and_answers_messaging_like_qna_messaging_like_qna_variant,
+                slug: "messaging-like-qna",
+                pathname:
+                  "cuicui/marketing-ui/questions-and-answers/messaging-like-qna/messaging-like-qna.variant.tsx",
               },
             ],
           },
@@ -2377,6 +2419,26 @@ export const sectionList: SectionType[] = [
     slug: "other",
     categories: [
       {
+        meta: other_books_category,
+        slug: "books",
+        components: [
+          {
+            meta: other_books_modern_book_cover_component,
+            slug: "modern-book-cover",
+            variants: [
+              {
+                name: "modern-book-cover",
+                variantComponent:
+                  other_books_modern_book_cover_modern_book_cover_variant,
+                slug: "modern-book-cover",
+                pathname:
+                  "cuicui/other/books/modern-book-cover/modern-book-cover.variant.tsx",
+              },
+            ],
+          },
+        ],
+      },
+      {
         meta: other_creative_effects_category,
         slug: "creative-effects",
         components: [
@@ -2427,6 +2489,20 @@ export const sectionList: SectionType[] = [
                 slug: "bottom-blur-out",
                 pathname:
                   "cuicui/other/creative-effects/bottom-blur-out/bottom-blur-out.variant.tsx",
+              },
+            ],
+          },
+          {
+            meta: other_creative_effects_trailing_images_component,
+            slug: "trailing-images",
+            variants: [
+              {
+                name: "trailing-images",
+                variantComponent:
+                  other_creative_effects_trailing_images_trailing_images_variant,
+                slug: "trailing-images",
+                pathname:
+                  "cuicui/other/creative-effects/trailing-images/trailing-images.variant.tsx",
               },
             ],
           },
@@ -2519,6 +2595,20 @@ export const sectionList: SectionType[] = [
         meta: other_font_effects_category,
         slug: "font-effects",
         components: [
+          {
+            meta: other_font_effects_glow_text_component,
+            slug: "glow-text",
+            variants: [
+              {
+                name: "glow-text",
+                variantComponent:
+                  other_font_effects_glow_text_glow_text_variant,
+                slug: "glow-text",
+                pathname:
+                  "cuicui/other/font-effects/glow-text/glow-text.variant.tsx",
+              },
+            ],
+          },
           {
             meta: other_font_effects_variable_font_cursor_component,
             slug: "variable-font-cursor",
@@ -2625,6 +2715,20 @@ export const sectionList: SectionType[] = [
             ],
           },
           {
+            meta: other_patterns_flickering_pattern_component,
+            slug: "flickering-pattern",
+            variants: [
+              {
+                name: "flickering-pattern",
+                variantComponent:
+                  other_patterns_flickering_pattern_flickering_pattern_variant,
+                slug: "flickering-pattern",
+                pathname:
+                  "cuicui/other/patterns/flickering-pattern/flickering-pattern.variant.tsx",
+              },
+            ],
+          },
+          {
             meta: other_patterns_grid_pattern_component,
             slug: "grid-pattern",
             variants: [
@@ -2716,6 +2820,20 @@ export const sectionList: SectionType[] = [
                 slug: "scramble",
                 pathname:
                   "cuicui/other/text-animation/scramble-hover/scramble.variant.tsx",
+              },
+            ],
+          },
+          {
+            meta: other_text_animation_shiny_text_component,
+            slug: "shiny-text",
+            variants: [
+              {
+                name: "shiny-text",
+                variantComponent:
+                  other_text_animation_shiny_text_shiny_text_variant,
+                slug: "shiny-text",
+                pathname:
+                  "cuicui/other/text-animation/shiny-text/shiny-text.variant.tsx",
               },
             ],
           },
