@@ -48,6 +48,7 @@
     "@types/node": "20.12.7",
     "@types/react": "19.0.1",
     "@types/react-dom": "19.0.2",
+    "@types/web-bluetooth": "^0.0.20",
     "@vitejs/plugin-react": "4.3.1",
     "autoprefixer": "10.4.19",
     "eslint": "9.0.0",

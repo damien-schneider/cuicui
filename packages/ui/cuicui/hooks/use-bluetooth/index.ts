@@ -13,11 +13,12 @@ interface UseBluetoothOptions extends UseBluetoothRequestDeviceOptions {
 }
 
 export function useBluetooth(options?: UseBluetoothOptions) {
+  const windowVar = typeof window !== "undefined" ? window : undefined;
   const {
     acceptAllDevices = false,
     filters = undefined,
     optionalServices = undefined,
-    navigator = window.navigator,
+    navigator = windowVar?.navigator,
   } = options || {};
 
   const [device, setDevice] = useState<BluetoothDevice | undefined>();

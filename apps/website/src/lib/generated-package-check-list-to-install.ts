@@ -160,6 +160,10 @@ export const packageCheckListToInstall: PackageToInstallType[] = [
     packageName: "@types/react-dom",
   },
   {
+    find: [`from "@types/web-bluetooth"`],
+    packageName: "@types/web-bluetooth",
+  },
+  {
     find: [`from "@vitejs/plugin-react"`],
     packageName: "@vitejs/plugin-react",
   },
@@ -270,9 +274,5 @@ export const packageCheckListToInstall: PackageToInstallType[] = [
   {
     find: [`from "@cuicui/config-typescript"`],
     packageName: "@cuicui/config-typescript",
-  },
-  {
-    find: [`from "@types/web-bluetooth"`],
-    packageName: "@types/web-bluetooth",
   },
 ];
