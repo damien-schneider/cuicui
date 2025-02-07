@@ -37,15 +37,19 @@ import common_ui_skeletons_category from "@/cuicui/common-ui/skeletons/category"
 import common_ui_toggle_category from "@/cuicui/common-ui/toggle/category";
 import hooks_use_auto_scroll_category from "@/cuicui/hooks/use-auto-scroll/category";
 import hooks_use_battery_category from "@/cuicui/hooks/use-battery/category";
+import hooks_use_bluetooth_category from "@/cuicui/hooks/use-bluetooth/category";
 import hooks_use_click_outside_category from "@/cuicui/hooks/use-click-outside/category";
 import hooks_use_cookies_category from "@/cuicui/hooks/use-cookies/category";
 import hooks_use_copy_to_clipboard_category from "@/cuicui/hooks/use-copy-to-clipboard/category";
 import hooks_use_counter_category from "@/cuicui/hooks/use-counter/category";
 import hooks_use_debounce_category from "@/cuicui/hooks/use-debounce/category";
+import hooks_use_draggable_category from "@/cuicui/hooks/use-draggable/category";
+import hooks_use_drop_zone_category from "@/cuicui/hooks/use-drop-zone/category";
 import hooks_use_event_callback_category from "@/cuicui/hooks/use-event-callback/category";
 import hooks_use_event_listener_category from "@/cuicui/hooks/use-event-listener/category";
 import hooks_use_first_visit_category from "@/cuicui/hooks/use-first-visit/category";
 import hooks_use_geolocation_category from "@/cuicui/hooks/use-geolocation/category";
+import hooks_use_history_category from "@/cuicui/hooks/use-history/category";
 import hooks_use_in_view_category from "@/cuicui/hooks/use-in-view/category";
 import hooks_use_input_value_category from "@/cuicui/hooks/use-input-value/category";
 import hooks_use_isomorphic_layout_effect_category from "@/cuicui/hooks/use-isomorphic-layout-effect/category";
@@ -54,6 +58,7 @@ import hooks_use_konami_code_category from "@/cuicui/hooks/use-konami-code/categ
 import hooks_use_local_storage_category from "@/cuicui/hooks/use-local-storage/category";
 import hooks_use_location_category from "@/cuicui/hooks/use-location/category";
 import hooks_use_measure_category from "@/cuicui/hooks/use-measure/category";
+import hooks_use_memory_category from "@/cuicui/hooks/use-memory/category";
 import hooks_use_mouse_category from "@/cuicui/hooks/use-mouse/category";
 import hooks_use_network_status_category from "@/cuicui/hooks/use-network-status/category";
 import hooks_use_online_status_category from "@/cuicui/hooks/use-online-status/category";
@@ -144,15 +149,19 @@ import common_ui_skeletons_classic_pulse_component from "@/cuicui/common-ui/skel
 import common_ui_skeletons_shiny_gradient_component from "@/cuicui/common-ui/skeletons/shiny-gradient/component";
 import hooks_use_auto_scroll_hook_component from "@/cuicui/hooks/use-auto-scroll/hook/component";
 import hooks_use_battery_hook_component from "@/cuicui/hooks/use-battery/hook/component";
+import hooks_use_bluetooth_hook_component from "@/cuicui/hooks/use-bluetooth/hook/component";
 import hooks_use_click_outside_hook_component from "@/cuicui/hooks/use-click-outside/hook/component";
 import hooks_use_cookies_hook_component from "@/cuicui/hooks/use-cookies/hook/component";
 import hooks_use_copy_to_clipboard_hook_component from "@/cuicui/hooks/use-copy-to-clipboard/hook/component";
 import hooks_use_counter_hook_component from "@/cuicui/hooks/use-counter/hook/component";
 import hooks_use_debounce_hook_component from "@/cuicui/hooks/use-debounce/hook/component";
+import hooks_use_draggable_hook_component from "@/cuicui/hooks/use-draggable/hook/component";
+import hooks_use_drop_zone_hook_component from "@/cuicui/hooks/use-drop-zone/hook/component";
 import hooks_use_event_callback_hook_component from "@/cuicui/hooks/use-event-callback/hook/component";
 import hooks_use_event_listener_hook_component from "@/cuicui/hooks/use-event-listener/hook/component";
 import hooks_use_first_visit_hook_component from "@/cuicui/hooks/use-first-visit/hook/component";
 import hooks_use_geolocation_hook_component from "@/cuicui/hooks/use-geolocation/hook/component";
+import hooks_use_history_hook_component from "@/cuicui/hooks/use-history/hook/component";
 import hooks_use_in_view_hook_component from "@/cuicui/hooks/use-in-view/hook/component";
 import hooks_use_input_value_hook_component from "@/cuicui/hooks/use-input-value/hook/component";
 import hooks_use_isomorphic_layout_effect_hook_component from "@/cuicui/hooks/use-isomorphic-layout-effect/hook/component";
@@ -161,6 +170,7 @@ import hooks_use_konami_code_hook_component from "@/cuicui/hooks/use-konami-code
 import hooks_use_local_storage_hook_component from "@/cuicui/hooks/use-local-storage/hook/component";
 import hooks_use_location_hook_component from "@/cuicui/hooks/use-location/hook/component";
 import hooks_use_measure_hook_component from "@/cuicui/hooks/use-measure/hook/component";
+import hooks_use_memory_hook_component from "@/cuicui/hooks/use-memory/hook/component";
 import hooks_use_mouse_hook_component from "@/cuicui/hooks/use-mouse/hook/component";
 import hooks_use_network_status_hook_component from "@/cuicui/hooks/use-network-status/hook/component";
 import hooks_use_online_status_hook_component from "@/cuicui/hooks/use-online-status/hook/component";
@@ -293,15 +303,19 @@ import common_ui_skeletons_shiny_gradient_horizontal_variant from "@/cuicui/comm
 import common_ui_skeletons_shiny_gradient_vertical_variant from "@/cuicui/common-ui/skeletons/shiny-gradient/vertical.variant";
 import hooks_use_auto_scroll_hook_use_auto_scroll_variant from "@/cuicui/hooks/use-auto-scroll/hook/use-auto-scroll.variant";
 import hooks_use_battery_hook_use_battery_variant from "@/cuicui/hooks/use-battery/hook/use-battery.variant";
+import hooks_use_bluetooth_hook_use_bluetooh_variant from "@/cuicui/hooks/use-bluetooth/hook/use-bluetooh.variant";
 import hooks_use_click_outside_hook_use_click_outside_variant from "@/cuicui/hooks/use-click-outside/hook/use-click-outside.variant";
 import hooks_use_cookies_hook_use_cookies_variant from "@/cuicui/hooks/use-cookies/hook/use-cookies.variant";
 import hooks_use_copy_to_clipboard_hook_copy_to_clipboard_variant from "@/cuicui/hooks/use-copy-to-clipboard/hook/copy-to-clipboard.variant";
 import hooks_use_counter_hook_use_counter_variant from "@/cuicui/hooks/use-counter/hook/use-counter.variant";
 import hooks_use_debounce_hook_use_debounce_variant from "@/cuicui/hooks/use-debounce/hook/use-debounce.variant";
+import hooks_use_draggable_hook_use_draggable_variant from "@/cuicui/hooks/use-draggable/hook/use-draggable.variant";
+import hooks_use_drop_zone_hook_drop_zone_variant from "@/cuicui/hooks/use-drop-zone/hook/drop-zone.variant";
 import hooks_use_event_callback_hook_use_event_callback_variant from "@/cuicui/hooks/use-event-callback/hook/use-event-callback.variant";
 import hooks_use_event_listener_hook_use_event_listener_variant from "@/cuicui/hooks/use-event-listener/hook/use-event-listener.variant";
 import hooks_use_first_visit_hook_use_first_visit_variant from "@/cuicui/hooks/use-first-visit/hook/use-first-visit.variant";
 import hooks_use_geolocation_hook_use_geolocation_variant from "@/cuicui/hooks/use-geolocation/hook/use-geolocation.variant";
+import hooks_use_history_hook_use_history_variant from "@/cuicui/hooks/use-history/hook/use-history.variant";
 import hooks_use_in_view_hook_in_view_variant from "@/cuicui/hooks/use-in-view/hook/in-view.variant";
 import hooks_use_input_value_hook_use_input_value_variant from "@/cuicui/hooks/use-input-value/hook/use-input-value.variant";
 import hooks_use_isomorphic_layout_effect_hook_use_isomorphic_layout_effect_variant from "@/cuicui/hooks/use-isomorphic-layout-effect/hook/use-isomorphic-layout-effect.variant";
@@ -310,6 +324,7 @@ import hooks_use_konami_code_hook_use_konami_code_variant from "@/cuicui/hooks/u
 import hooks_use_local_storage_hook_use_local_storage_variant from "@/cuicui/hooks/use-local-storage/hook/use-local-storage.variant";
 import hooks_use_location_hook_use_location_variant from "@/cuicui/hooks/use-location/hook/use-location.variant";
 import hooks_use_measure_hook_use_measure_variant from "@/cuicui/hooks/use-measure/hook/use-measure.variant";
+import hooks_use_memory_hook_use_memory_variant from "@/cuicui/hooks/use-memory/hook/use-memory.variant";
 import hooks_use_mouse_hook_use_mouse_variant from "@/cuicui/hooks/use-mouse/hook/use-mouse.variant";
 import hooks_use_network_status_hook_use_network_status_variant from "@/cuicui/hooks/use-network-status/hook/use-network-status.variant";
 import hooks_use_online_status_hook_use_online_status_variant from "@/cuicui/hooks/use-online-status/hook/use-online-status.variant";
@@ -1495,6 +1510,25 @@ export const sectionList: SectionType[] = [
         ],
       },
       {
+        meta: hooks_use_bluetooth_category,
+        slug: "use-bluetooth",
+        components: [
+          {
+            meta: hooks_use_bluetooth_hook_component,
+            slug: "hook",
+            variants: [
+              {
+                name: "use-bluetooh",
+                variantComponent: hooks_use_bluetooth_hook_use_bluetooh_variant,
+                slug: "use-bluetooh",
+                pathname:
+                  "cuicui/hooks/use-bluetooth/hook/use-bluetooh.variant.tsx",
+              },
+            ],
+          },
+        ],
+      },
+      {
         meta: hooks_use_click_outside_category,
         slug: "use-click-outside",
         components: [
@@ -1592,6 +1626,45 @@ export const sectionList: SectionType[] = [
         ],
       },
       {
+        meta: hooks_use_draggable_category,
+        slug: "use-draggable",
+        components: [
+          {
+            meta: hooks_use_draggable_hook_component,
+            slug: "hook",
+            variants: [
+              {
+                name: "use-draggable",
+                variantComponent:
+                  hooks_use_draggable_hook_use_draggable_variant,
+                slug: "use-draggable",
+                pathname:
+                  "cuicui/hooks/use-draggable/hook/use-draggable.variant.tsx",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        meta: hooks_use_drop_zone_category,
+        slug: "use-drop-zone",
+        components: [
+          {
+            meta: hooks_use_drop_zone_hook_component,
+            slug: "hook",
+            variants: [
+              {
+                name: "drop-zone",
+                variantComponent: hooks_use_drop_zone_hook_drop_zone_variant,
+                slug: "drop-zone",
+                pathname:
+                  "cuicui/hooks/use-drop-zone/hook/drop-zone.variant.tsx",
+              },
+            ],
+          },
+        ],
+      },
+      {
         meta: hooks_use_event_callback_category,
         slug: "use-event-callback",
         components: [
@@ -1666,6 +1739,25 @@ export const sectionList: SectionType[] = [
                 slug: "use-geolocation",
                 pathname:
                   "cuicui/hooks/use-geolocation/hook/use-geolocation.variant.tsx",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        meta: hooks_use_history_category,
+        slug: "use-history",
+        components: [
+          {
+            meta: hooks_use_history_hook_component,
+            slug: "hook",
+            variants: [
+              {
+                name: "use-history",
+                variantComponent: hooks_use_history_hook_use_history_variant,
+                slug: "use-history",
+                pathname:
+                  "cuicui/hooks/use-history/hook/use-history.variant.tsx",
               },
             ],
           },
@@ -1822,6 +1914,24 @@ export const sectionList: SectionType[] = [
                 slug: "use-measure",
                 pathname:
                   "cuicui/hooks/use-measure/hook/use-measure.variant.tsx",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        meta: hooks_use_memory_category,
+        slug: "use-memory",
+        components: [
+          {
+            meta: hooks_use_memory_hook_component,
+            slug: "hook",
+            variants: [
+              {
+                name: "use-memory",
+                variantComponent: hooks_use_memory_hook_use_memory_variant,
+                slug: "use-memory",
+                pathname: "cuicui/hooks/use-memory/hook/use-memory.variant.tsx",
               },
             ],
           },

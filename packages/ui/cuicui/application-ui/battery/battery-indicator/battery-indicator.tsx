@@ -7,7 +7,7 @@ import {
   BatteryWarningIcon,
   InfinityIcon,
 } from "lucide-react";
-import type React from "react";
+
 import { cn } from "@/cuicui/utils/cn";
 
 type BatteryInfoProps = {
@@ -18,13 +18,13 @@ type BatteryInfoProps = {
   className?: string;
 };
 
-export const BatteryIndicator: React.FC<BatteryInfoProps> = ({
+export const BatteryIndicator = ({
   level,
   isCharging,
   chargingTime,
   dischargingTime,
   className,
-}) => {
+}: BatteryInfoProps) => {
   const getBatteryIcon = (level: number | null, isCharging: boolean | null) => {
     if (level === null) {
       return <BatteryIcon className="size-5 text-orange-500" />;
