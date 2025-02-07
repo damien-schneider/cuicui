@@ -55,6 +55,14 @@ export default function RootLayout({
 }) {
   return (
     <html className={font.className} lang="en" suppressHydrationWarning={true}>
+      <head>
+        {process.env.NODE_ENV !== "production" && (
+          <script
+            crossOrigin="anonymous"
+            src="//unpkg.com/react-scan/dist/auto.global.js"
+          />
+        )}
+      </head>
       <PlausibleScripts />
       <Providers>
         {/* <body className="dark:bg-[url('/grid-dark-mode.svg')] bg-[url('/grid-light-mode.svg')] dark:bg-gray-950 bg-gray-50"> */}
