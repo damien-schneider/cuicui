@@ -25,33 +25,25 @@
 - [About The Project](#about-the-project)
 - [License](#license)
 - [Contributing](#contributing)
-  - [Commit Message Convention](#commit-message-convention)
-- [Activity](#activity)
-
-<!-- ABOUT THE PROJECT -->
+- [Star History](#star-history)
 
 ## About The Project
 
-open-source animated components built with React, Typescript, Tailwind CSS, and Framer Motion.
+Open-source high quality animated components built with React, Typescript, Tailwind CSS, and Framer Motion.
 100% open-source, and customizable.
 
-## Developper guide
+## Contributing
 
-To Write ... (a contribution is welcome here)
-> follow this section to contribute and write the Developper guide 🙃
+You can either contribute by just writting some issues or by contributing to the codebase.
+
+To write an issue, go to the [create an issue](https://github.com/damien-schneider/cuicui/issues/new/choose) page.
+
+To contribute to the codebase, please check the [contribute.md](https://github.com/damien-schneider/cuicui/blob/main/contribute.md)
 
 
 ## License
 
 Licensed under the [MIT license.](https://github.com/damien-schneider/cuicui/blob/main/license.md)
-
-## Contributing
-
-visit this [Documentation](https://github.com/damien-schneider/cuicui/blob/main/contributing.md)
-
-### Commit Message Convention
-
-We are using Gitmoji for our commit messages. You can find the rules at [gitmoji.dev](https://gitmoji.dev/)
 
 # Star History
 

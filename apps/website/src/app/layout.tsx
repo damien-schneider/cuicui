@@ -7,6 +7,7 @@ import type { ReactNode } from "react";
 import Providers from "#/src/app/providers";
 import PlausibleScripts from "#/src/components/analytics/plausible-scripts";
 import { env } from "#/src/env";
+import Script from "next/script";
 const font = DM_Sans({
   subsets: ["latin"],
   display: "swap",
@@ -55,12 +56,15 @@ export default function RootLayout({
 }) {
   return (
     <html className={font.className} lang="en" suppressHydrationWarning={true}>
-      <head>
-        {/* <script
-          crossOrigin="anonymous"
-          src="//unpkg.com/react-scan/dist/auto.global.js"
-        /> */}
-      </head>
+      {env.NODE_ENV === "development" && (
+        <Script
+          // crossOrigin="anonymous"
+          src="https://unpkg.com/react-scan/dist/auto.global.is"
+          async={true}
+          strategy="beforeInteractive"
+        />
+      )}
+
       <PlausibleScripts />
       <Providers>
         {/* <body className="dark:bg-[url('/grid-dark-mode.svg')] bg-[url('/grid-light-mode.svg')] dark:bg-gray-950 bg-gray-50"> */}

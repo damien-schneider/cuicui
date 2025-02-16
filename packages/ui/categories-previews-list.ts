@@ -3,6 +3,7 @@ import other_text_animation_preview from "./cuicui/other/text-animation/preview"
 import other_mock_ups_preview from "./cuicui/other/mock-ups/preview";
 import other_patterns_preview from "./cuicui/other/patterns/preview";
 import other_equalizer_preview from "./cuicui/other/equalizer/preview";
+import other_books_preview from "./cuicui/other/books/preview";
 import other_qr_code_preview from "./cuicui/other/qr-code/preview";
 import other_transition_wrappers_preview from "./cuicui/other/transition-wrappers/preview";
 import other_font_effects_preview from "./cuicui/other/font-effects/preview";
@@ -89,6 +90,7 @@ export const categoriesPreviewsList: Record<string, () => JSX.Element> = {
   "mock-ups": other_mock_ups_preview,
   patterns: other_patterns_preview,
   equalizer: other_equalizer_preview,
+  books: other_books_preview,
   "qr-code": other_qr_code_preview,
   "transition-wrappers": other_transition_wrappers_preview,
   "font-effects": other_font_effects_preview,

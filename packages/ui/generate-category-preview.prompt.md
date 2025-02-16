@@ -29,24 +29,18 @@ export default function () {
 
 Here are some example:
 
-For the category Checkboxes :
+For the category "Creative Effect" :
 
 ```typescript
-export default function () {
+export default function CreativeEffectsCategoryPreview() {
   return (
-    <div className="w-fit flex space-x-4 p-4 bg-neutral-400/15 rounded-xl">
-      {/* Unchecked Checkbox */}
-      <div className="size-6 border-2 border-neutral-500/80 rounded" />
-
-      {/* Checked Checkbox */}
-      <div className="size-6 border-2 border-neutral-500/80 rounded flex items-center justify-center">
-        <div className="w-3 h-3 bg-neutral-400/80 rounded" />
+    <div className="relative w-32 h-20 p-4 bg-neutral-400/15 rounded-xl overflow-hidden">
+      {/* Rotating Square */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="size-12 bg-neutral-400/40 transform rotate-45" />
       </div>
-
-      {/* Indeterminate Checkbox */}
-      <div className="size-6 border-2 border-neutral-500/80 rounded flex items-center justify-center">
-        <div className="w-4 h-1 bg-neutral-400/80 rounded" />
-      </div>
+      {/* Blurred Circle */}
+      <div className="absolute top-1/2 left-1/2 size-16 bg-neutral-400/60 rounded-full transform -translate-x-1/2 -translate-y-1/2 filter blur-lg" />
     </div>
   );
 }
@@ -92,28 +86,25 @@ export default function () {
 
 ```
 
-For the category Badges :
+For the category Font Effect :
 ```typescript
 export default function () {
   return (
-    <div className="w-fit p-4 bg-neutral-400/15 rounded-xl min-h-32 flex flex-wrap gap-2">
-      {/* Badge 1 */}
-      <div className="h-6 w-20 bg-neutral-400/40 rounded-full" />
+    <div className="w-fit p-4 bg-neutral-400/15 rounded-xl flex flex-col justify-center items-center space-y-2">
+      {/* 3 characters in <p> */}
+      <p className="inline text-neutral-500/70 text-lg font-medium tracking-wide">
+        <span className="text-xl">c</span>
+        <span className="text-2xl">u</span>
+        <span className="text-3xl">i</span>
+        <span className="text-xl">c</span>
+        <span className="text-2xl">u</span>
+        <span className="text-3xl">i</span>
+      </p>
 
-      {/* Badge 2 */}
-      <div className="h-6 w-24 bg-neutral-400/40 rounded-full" />
-
-      {/* Badge 3 */}
-      <div className="h-6 w-16 bg-neutral-400/40 rounded-full" />
-
-      {/* Badge 4 */}
-      <div className="h-6 w-28 bg-neutral-400/40 rounded-full" />
-
-      {/* Badge 5 */}
-      <div className="h-6 w-22 bg-neutral-400/40 rounded-full" />
-
-      {/* Badge 6 */}
-      <div className="h-6 w-18 bg-neutral-400/40 rounded-full" />
+      {/* Variable font preview bars */}
+      <div className="w-32 h-1 bg-neutral-400/40 rounded-full" />
+      <div className="w-32 h-2 bg-neutral-400/40 rounded-full" />
+      <div className="w-32 h-3 bg-neutral-400/40 rounded-full" />
     </div>
   );
 }
