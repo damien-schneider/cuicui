@@ -11,13 +11,15 @@ export const MainMenusGradientCard = ({
   circleSize = 400,
   className,
   children,
+  size = "md",
 }: {
   title: string;
-  description: string;
+  description?: string;
   withArrow?: boolean;
   circleSize?: number;
   children?: ReactNode;
   className?: string;
+  size?: "sm" | "md" | "lg";
 }) => {
   const [mouse, parentRef] = useMouse();
 
@@ -63,9 +65,11 @@ export const MainMenusGradientCard = ({
         <h3 className="font-semibold text-lg text-neutral-800 dark:text-neutral-300">
           {title}
         </h3>
-        <p className="mt-2 text-neutral-600 dark:text-neutral-400">
-          {description}
-        </p>
+        {description && (
+          <p className="mt-2 text-neutral-600 dark:text-neutral-400">
+            {description}
+          </p>
+        )}
       </div>
     </div>
   );

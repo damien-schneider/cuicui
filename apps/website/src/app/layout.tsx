@@ -5,9 +5,9 @@ import "#/src/styles/globals.css";
 import { DM_Sans } from "next/font/google";
 import type { ReactNode } from "react";
 import Providers from "#/src/app/providers";
-import PlausibleScripts from "#/src/components/analytics/plausible-scripts";
 import { env } from "#/src/env";
 import Script from "next/script";
+import { IS_PRODUCTION } from "#/src/lib/site.const";
 const font = DM_Sans({
   subsets: ["latin"],
   display: "swap",
@@ -56,16 +56,23 @@ export default function RootLayout({
 }) {
   return (
     <html className={font.className} lang="en" suppressHydrationWarning={true}>
-      {env.NODE_ENV === "development" && (
-        <Script
-          // crossOrigin="anonymous"
-          src="https://unpkg.com/react-scan/dist/auto.global.is"
-          async={true}
-          strategy="beforeInteractive"
-        />
-      )}
-
-      <PlausibleScripts />
+      <head>
+        {IS_PRODUCTION && (
+          <>
+            <Script
+              id="plausible-main"
+              defer={true}
+              data-domain="cuicui.day"
+              src={`${env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN}/js/script.hash.outbound-links.js`}
+            />
+            <Script id="plausible-inline">
+              {
+                "window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }"
+              }
+            </Script>
+          </>
+        )}
+      </head>
       <Providers>
         {/* <body className="dark:bg-[url('/grid-dark-mode.svg')] bg-[url('/grid-light-mode.svg')] dark:bg-gray-950 bg-gray-50"> */}
         <body className="bg-neutral-50 dark:bg-neutral-950 ">

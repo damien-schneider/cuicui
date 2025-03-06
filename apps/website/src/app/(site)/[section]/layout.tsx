@@ -6,6 +6,7 @@ import type { ReactNode } from "react";
 
 import { newFindSectionBySlug } from "#/src/utils/section-category-components-utils/section-list-utils";
 import { env } from "#/src/env";
+import NavigationMenu from "#/src/app/(site)/components/sidemenu/navigation-menu";
 
 type Props = {
   children: ReactNode;
@@ -44,6 +45,7 @@ export default async function SectionLayout({ params, children }: Props) {
   if (!section) {
     return notFound();
   }
+
   return (
     <>
       <Head>
@@ -53,6 +55,8 @@ export default async function SectionLayout({ params, children }: Props) {
           rel="canonical"
         />
       </Head>
+      <NavigationMenu section={section.slug} />
+
       {children}
     </>
   );
