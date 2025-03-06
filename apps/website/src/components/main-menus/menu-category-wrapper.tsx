@@ -1,16 +1,25 @@
 import type { ReactNode } from "react";
 
-export default function MenuSectionWrapper({
-  name,
+export default function MenuCategoryList({
+  title,
+  description,
   children,
-}: Readonly<{ name: string; children: ReactNode }>) {
+}: Readonly<{
+  children: ReactNode;
+  title: string;
+  description: string;
+}>) {
   return (
-    <div className="space-y-5" key={name}>
-      <h2 className="uppercase-title">{name}</h2>
+    <>
+      <h1 className="header-1">{title} category</h1>
+      <p className="caption-md">{description}</p>
+      <div className="space-y-5 w-full">
+        <h2 className="uppercase-title">{title}</h2>
 
-      <div className="grid grid-cols-1 gap-5 lg:grid-cols-2 pb-20">
-        {children}
+        <div className="grid grid-cols-1 gap-5 lg:grid-cols-2 pb-20">
+          {children}
+        </div>
       </div>
-    </div>
+    </>
   );
 }

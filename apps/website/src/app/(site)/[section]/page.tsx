@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import MenuSectionWrapper from "#/src/components/main-menus/menu-category-wrapper";
+import MenuCategoryList from "#/src/components/main-menus/menu-category-wrapper";
 import { MainMenusGradientCard } from "@cuicui/ui/cuicui/other/cursors/dynamic-cards/gradient-card";
 
 import { sectionList } from "@/section-list";
@@ -34,28 +34,27 @@ export default async function Page({ params }: Props) {
   }
 
   return (
-    <>
-      <h1 className="header-1">{sectionInList.meta.name} category</h1>
-      <p className="caption-md">{sectionInList.meta.description}</p>
-      <MenuSectionWrapper name={sectionInList.meta.name}>
-        {sectionInList.categories.map((category) => {
-          return (
-            <Link
-              href={`/${sectionInList.slug}/${category.slug}`}
-              key={category.slug}
+    <MenuCategoryList
+      title={sectionInList.meta.name}
+      description={sectionInList.meta.description}
+    >
+      {sectionInList.categories.map((category) => {
+        return (
+          <Link
+            href={`/${sectionInList.slug}/${category.slug}`}
+            key={category.slug}
+          >
+            <MainMenusGradientCard
+              description={category.meta.description}
+              title={category.meta.name}
             >
-              <MainMenusGradientCard
-                description={category.meta.description}
-                title={category.meta.name}
-              >
-                <div className="flex items-center justify-center size-full gap-2 py-4 px-12">
-                  {getCategoryPreviewBySlug(category)}
-                </div>
-              </MainMenusGradientCard>
-            </Link>
-          );
-        })}
-      </MenuSectionWrapper>
-    </>
+              <div className="flex items-center justify-center size-full gap-2 py-4 px-12">
+                {getCategoryPreviewBySlug(category)}
+              </div>
+            </MainMenusGradientCard>
+          </Link>
+        );
+      })}
+    </MenuCategoryList>
   );
 }

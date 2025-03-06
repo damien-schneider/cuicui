@@ -1,10 +1,8 @@
-import { CuicuiFloatingDock } from "#/src/components/floating-dock-navigation/floating-dock";
-import { DesktopSideMenu } from "#/src/components/navigation/desktop-menu";
-
 import { AddressBar } from "#/src/ui/address-bar";
 import StarCuicuiGithubButton from "#/src/ui/star-github-project-button";
 import { StaticNoise } from "@/cuicui/other/creative-effects/animated-noise/static-noise";
 import type { ReactNode } from "react";
+import Sidemenu from "#/src/app/(site)/components/sidemenu/sidemenu";
 
 export default function ComponentsLayout({
   children,
@@ -17,8 +15,7 @@ export default function ComponentsLayout({
           opacity={0.05}
           className="z-[9999] fixed inset-0 pointer-events-none"
         />
-        <DesktopSideMenu />
-
+        <Sidemenu />
         <div className="lg:ml-80">
           {/* Add overflow-auto if layout width problems */}
 
@@ -33,7 +30,7 @@ export default function ComponentsLayout({
           </div>
         </div>
       </div>
-      <CuicuiFloatingDock />
+      {/* <CuicuiFloatingDock /> */}
     </>
   );
 }

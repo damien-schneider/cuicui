@@ -6,13 +6,13 @@ import { createElement } from "react";
 export const getCategoryPreviewBySlug = (category: CategoryType) => {
   if (category.meta.isComingSoon) {
     return (
-      <p className="size-full grid place-content-center">
+      <div className="size-full grid place-content-center">
         <div className="w-fit p-4 bg-neutral-400/15 rounded-xl gap-2 flex items-center justify-center text-neutral-400">
           {/* Hourglass Icon */}
           <HourglassIcon className="size-6 " />
-          <span className="text-2xl font-semibold">Coming Soon</span>
+          <p className="text-2xl font-semibold">Coming Soon</p>
         </div>
-      </p>
+      </div>
     );
   }
   if (!categoriesPreviewsList[category.slug]) {

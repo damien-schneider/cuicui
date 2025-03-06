@@ -4,6 +4,10 @@ import type { PackageToInstallType } from "#/src/components/steps-to-install/pac
 
 export const packageCheckListToInstall: PackageToInstallType[] = [
   {
+    find: [`from "@cuicui/snippets"`],
+    packageName: "@cuicui/snippets",
+  },
+  {
     find: [`from "@cuicui/ui"`],
     packageName: "@cuicui/ui",
   },
@@ -114,6 +118,10 @@ export const packageCheckListToInstall: PackageToInstallType[] = [
   {
     find: [`from "tailwind-merge"`],
     packageName: "tailwind-merge",
+  },
+  {
+    find: [`from "vaul"`],
+    packageName: "vaul",
   },
   {
     find: [`from "vite-tsconfig-paths"`],
