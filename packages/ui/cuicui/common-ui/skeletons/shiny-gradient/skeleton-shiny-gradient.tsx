@@ -45,7 +45,7 @@ export const SkeletonShinyGradient = ({
             isHorizontal ? "r" : "b"
           } before:absolute before:inset-0 before:from-transparent before:via-white/50 before:to-transparent dark:before:via-rose-100/10`,
           "relative isolate overflow-hidden",
-          isHorizontal ? "before:bg-gradient-to-r" : "before:bg-gradient-to-b",
+          isHorizontal ? "before:bg-linear-to-r" : "before:bg-linear-to-b",
           className,
         )}
         {...props}

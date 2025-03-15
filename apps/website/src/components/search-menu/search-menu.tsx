@@ -50,7 +50,7 @@ export function SearchMenu({ ...props }: ComponentProps<"button">) {
             Search
           </span>
         </p>
-        <kbd className="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded bg-neutral-50 px-1.5 font-medium font-mono text-neutral-500 text-xs tracking-tighter opacity-100 dark:bg-neutral-950">
+        <kbd className="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded-xs bg-neutral-50 px-1.5 font-medium font-mono text-neutral-500 text-xs tracking-tighter opacity-100 dark:bg-neutral-950">
           ⌘ K
         </kbd>
       </button>

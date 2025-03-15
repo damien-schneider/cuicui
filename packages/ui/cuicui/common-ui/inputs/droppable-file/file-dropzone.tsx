@@ -136,7 +136,7 @@ export function FileDropzone() {
                 {file.type.startsWith("image/") ? (
                   <img
                     alt={file.name}
-                    className="mr-2 size-10 rounded object-cover"
+                    className="mr-2 size-10 rounded-xs object-cover"
                     src={file.preview}
                   />
                 ) : (

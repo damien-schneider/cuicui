@@ -149,7 +149,7 @@ const OfferCard = ({
           className={cn(
             "my-12 inline-flex w-full transform-gpu items-center justify-center rounded-full border border-neutral-400/20 px-12 py-2.5 font-semibold text-neutral-50 tracking-tight transition-all hover:scale-105",
             isBestValue
-              ? " bg-gradient-to-br from-[#f6d4a1] to-[#ed8445]"
+              ? " bg-linear-to-br from-[#f6d4a1] to-[#ed8445]"
               : "bg-neutral-700 ",
           )}
           type="button"

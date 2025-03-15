@@ -11,7 +11,7 @@ const data: CardType[] = [
   {
     title: "Cards",
     content: (
-      <div className=" space-y-1 rounded-lg border border-neutral-500/20 px-3 py-2 *:transform-gpu *:rounded-full *:bg-neutral-100 *:transition-colors *:group-hover:bg-neutral-200 dark:*:bg-neutral-700 dark:*:group-hover:bg-neutral-600">
+      <div className=" space-y-1 rounded-lg border border-neutral-500/20 px-3 py-2 *:transform-gpu *:rounded-full *:bg-neutral-100 *:transition-colors group-hover:*:bg-neutral-200 dark:*:bg-neutral-700 dark:group-hover:*:bg-neutral-600">
         <div className="size-3 text-center" />
         <div className="h-1 w-12" />
         <div className="h-1 w-5" />

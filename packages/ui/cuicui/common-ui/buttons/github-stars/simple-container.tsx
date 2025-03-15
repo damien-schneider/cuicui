@@ -75,7 +75,7 @@ export function ModernGradientContainerContent({
   return (
     <span
       className={cn(
-        "flex items-center justify-center gap-1 relative z-[1] dark:bg-neutral-950/90 bg-neutral-50/90 rounded-[11px] w-full",
+        "flex items-center justify-center gap-1 relative z-1 dark:bg-neutral-950/90 bg-neutral-50/90 rounded-[11px] w-full",
         props.className,
       )}
     >

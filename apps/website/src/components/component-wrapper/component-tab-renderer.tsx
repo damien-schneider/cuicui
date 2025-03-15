@@ -67,7 +67,7 @@ export default async function ComponentTabRenderer({
       <pre>{JSON.stringify(componentDependencies, null, 2)}</pre> */}
       <Tabs.List
         className={cn(
-          "flex w-full items-center p-0.5 *:w-full *:py-2 *:data-[state=active]:rounded-lg *:data-[state=active]:border-neutral-500/20 *:data-[state=active]:bg-neutral-400/15 *:data-[state=active]:text-neutral-900",
+          "flex w-full items-center p-0.5 *:w-full *:py-2 data-[state=active]:*:rounded-lg data-[state=active]:*:border-neutral-500/20 data-[state=active]:*:bg-neutral-400/15 data-[state=active]:*:text-neutral-900",
         )}
       >
         {tabs.map((tab) => {
@@ -83,7 +83,7 @@ export default async function ComponentTabRenderer({
                 // after pseudo element
                 "after:absolute after:right-0 after:bottom-0 after:left-0 after:h-px after:rounded-full",
                 // after pseudo element gradient
-                "after:bg-gradient-to-r after:from-sky-400 after:via-violet-500 after:to-orange-400 ",
+                "after:bg-linear-to-r after:from-sky-400 after:via-violet-500 after:to-orange-400 ",
                 // after pseudo element animation
                 "after:scale-x-0 after:transform-gpu after:transition-transform after:duration-300 data-[state=active]:after:scale-x-100",
                 "hover:after:scale-x-50",
@@ -91,7 +91,7 @@ export default async function ComponentTabRenderer({
               key={tab.value}
               value={tab.value}
             >
-              <span className="w-fit scale-100 transform-gpu bg-gradient-to-br from-neutral-800 to-neutral-400 bg-clip-text p-1 font-medium text-transparent transition-transform group-hover:scale-110 group-data-[state=active]:from-sky-400 group-data-[state=active]:via-violet-500 group-data-[state=active]:to-orange-400 dark:from-neutral-300 dark:to-neutral-600 ">
+              <span className="w-fit scale-100 transform-gpu bg-linear-to-br from-neutral-800 to-neutral-400 bg-clip-text p-1 font-medium text-transparent transition-transform group-hover:scale-110 group-data-[state=active]:from-sky-400 group-data-[state=active]:via-violet-500 group-data-[state=active]:to-orange-400 dark:from-neutral-300 dark:to-neutral-600 ">
                 {tab.name}
               </span>
             </Tabs.Trigger>

@@ -16,10 +16,10 @@ export const Airpods = () => {
       }}
     >
       {/* Cavity */}
-      <div className="-translate-x-1/2 absolute top-1/3 left-1/2 h-[20px] w-[150px] translate-y-1/3 transform-gpu rounded-full bg-gradient-to-b from-neutral-300 to-white" />
+      <div className="-translate-x-1/2 absolute top-1/3 left-1/2 h-[20px] w-[150px] translate-y-1/3 transform-gpu rounded-full bg-linear-to-b from-neutral-300 to-white" />
 
       {/* Line */}
-      <div className="relative mt-[33%] h-[2px] w-full bg-gradient-to-r from-neutral-200 via-neutral-300 to-neutral-200">
+      <div className="relative mt-[33%] h-[2px] w-full bg-linear-to-r from-neutral-200 via-neutral-300 to-neutral-200">
         <div className="absolute right-0 h-[2px] w-[5%] bg-white/50" />
         <div className="absolute left-0 h-[2px] w-[5%] bg-white/50" />
       </div>

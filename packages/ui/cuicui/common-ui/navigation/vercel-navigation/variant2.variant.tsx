@@ -19,7 +19,7 @@ export function VercelNavigationVariant2() {
     <nav className="flex flex-col sm:flex-row">
       {dataButtons.map((button, index) => (
         <button
-          className="relative inline-flex w-fit whitespace-nowrap rounded px-2 py-1 font-medium text-neutral-500 text-sm transition-colors hover:text-neutral-600 dark:hover:text-neutral-400"
+          className="relative inline-flex w-fit whitespace-nowrap rounded-xs px-2 py-1 font-medium text-neutral-500 text-sm transition-colors hover:text-neutral-600 dark:hover:text-neutral-400"
           key={button.label}
           onClick={() => handleOnClickButton(index)}
           type="button"

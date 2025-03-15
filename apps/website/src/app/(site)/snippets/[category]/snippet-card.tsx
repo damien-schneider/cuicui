@@ -42,7 +42,7 @@ export function SnippetCard(snippet: Snippet) {
               <code className="font-mono">
                 {snippet.compiledContent.content}...
               </code>
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white dark:to-neutral-950 opacity-70" />
+              <div className="absolute inset-0 bg-linear-to-b from-transparent to-white dark:to-neutral-950 opacity-70" />
             </div>
           </div>
         </div>

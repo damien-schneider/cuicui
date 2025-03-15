@@ -80,7 +80,7 @@ export const GradientContainer = ({
           "rounded-[inherit]",
           background === "solid" && "bg-neutral-50 dark:bg-neutral-950",
           background === "glassy" &&
-            "bg-gradient-to-b from-white/95 to-white/90 dark:from-neutral-950/95 dark:to-neutral-950/85",
+            "bg-linear-to-b from-white/95 to-white/90 dark:from-neutral-950/95 dark:to-neutral-950/85",
           getRoundedValue(rounded, "child"),
           classNameChild,
         )}

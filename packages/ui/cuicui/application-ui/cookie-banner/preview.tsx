@@ -7,10 +7,10 @@ export default function CookieBannerCategoryPreview() {
       <Cookie className="size-6 text-neutral-400/80" />
 
       {/* Placeholder for Message */}
-      <div className="flex-1 h-3 bg-neutral-400/60 rounded" />
+      <div className="flex-1 h-3 bg-neutral-400/60 rounded-xs" />
 
       {/* Accept Button */}
-      <div className="w-8 h-8 bg-neutral-400/30 rounded flex items-center justify-center">
+      <div className="w-8 h-8 bg-neutral-400/30 rounded-xs flex items-center justify-center">
         <Check className="size-4 text-neutral-400" />
       </div>
     </div>

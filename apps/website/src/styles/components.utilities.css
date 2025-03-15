@@ -1,0 +1,103 @@
+@utility header-1 {
+  @apply font-medium text-neutral-800 dark:text-neutral-200 text-3xl tracking-tight leading-8 mb-4;
+}
+
+@utility header-2 {
+  @apply font-medium text-neutral-800 dark:text-neutral-200 text-2xl tracking-tight leading-8 mb-3;
+}
+
+@utility header-3 {
+  @apply font-medium text-neutral-800 dark:text-neutral-200 text-xl tracking-tight leading-8 mb-3;
+}
+
+@utility header-4 {
+  @apply font-medium text-neutral-800 dark:text-neutral-200 text-lg tracking-tight leading-7 mb-3;
+}
+
+@utility header-5 {
+  @apply font-semibold text-neutral-800 dark:text-neutral-200 text-base tracking-tight mb-1;
+}
+
+@utility header-6 {
+  @apply font-medium text-neutral-800 dark:text-neutral-200 text-sm tracking-tight;
+}
+
+@utility body-1 {
+  @apply font-normal text-neutral-600 dark:text-neutral-400 text-base leading-6;
+}
+
+@utility comment-1 {
+  @apply font-normal text-neutral-500 dark:text-neutral-400 text-sm;
+}
+
+@utility caption-md {
+  @apply font-normal text-neutral-500 dark:text-neutral-400;
+}
+
+@utility caption-sm {
+  @apply font-normal text-neutral-400 dark:text-neutral-500 text-sm;
+}
+
+@utility caption-xs {
+  @apply font-normal text-neutral-400 dark:text-neutral-500 text-xs;
+}
+
+@utility uppercase-title {
+  @apply font-semibold text-neutral-400 dark:text-neutral-500 text-xs uppercase tracking-wider;
+}
+
+@utility ul-md {
+  @apply font-normal text-neutral-700 dark:text-neutral-300 text-base leading-6 list-disc pl-5 space-y-1 mb-2;
+}
+
+@utility card {
+  @apply bg-neutral-300/15 hover:bg-neutral-300/10 dark:bg-neutral-700/30 dark:hover:bg-neutral-700/10 transition-colors duration-300 rounded-lg pl-5 pr-3 py-3 border border-neutral-400/20 dark:border-neutral-400/10;
+}
+
+@utility inline-link {
+  @apply relative inline-flex bg-linear-to-br from-sky-400 via-violet-500 to-orange-400 bg-clip-text text-transparent tracking-tighter p-px  before:-inset-x-1 before:inset-y-px before:bg-linear-to-br before:from-sky-400 before:via-violet-500 before:to-orange-400 before:absolute before:z-0 before:opacity-0 before:rounded-md before:duration-200 hover:before:scale-100 hover:before:opacity-10 before:scale-50 before:pointer-events-none before:transition;
+}
+
+@utility label-md {
+  @apply font-medium text-neutral-600 dark:text-neutral-400 text-sm tracking-tight mt-3;
+}
+
+@utility label-sm {
+  @apply font-medium text-neutral-500 dark:text-neutral-400 text-xs tracking-tight;
+}
+
+@utility buttom-md {
+  @apply relative transform-gpu m-1 px-4 py-2 md:px-2 md:py-1 text-neutral-600 transition-colors before:absolute before:top-0 before:left-0 before:w-full hover:text-neutral-600/90 active:text-neutral-600/80 active:before:border-neutral-400/20 before:scale-100 before:opacity-100 hover:before:bg-neutral-500/30 before:-z-10 before:h-full before:transform-gpu before:rounded-md before:border before:border-neutral-500/5 before:bg-neutral-500/10 before:transition-all before:duration-200 before:ease-out active:before:bg-neutral-500/20 dark:before:border-neutral-600/10 dark:text-neutral-400 dark:active:text-neutral-400/80 dark:hover:text-neutral-400/90;
+}
+
+@utility input-md {
+  @apply flex h-10 w-full rounded-xl border px-3 py-2 text-sm ring-0 transition focus-visible:outline-hidden focus:ring-0 disabled:cursor-not-allowed disabled:opacity-50 border-neutral-400/20 bg-white hover:bg-white/50 dark:bg-neutral-800 dark:hover:bg-neutral-800/50 placeholder:text-neutral-400 focus-visible:border-neutral-400/50;
+}
+
+@utility input-slider {
+  @apply flex px-3 py-2 bg-transparent [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:w-1 [&::-moz-range-thumb]:appearance-none [&::-moz-range-thumb]:border-0 [&::-moz-range-thumb]:bg-neutral-600 dark:[&::-moz-range-thumb]:bg-neutral-200 [&::-moz-range-track]:h-8 [&::-moz-range-track]:w-full [&::-moz-range-track]:rounded-xl [&::-moz-range-track]:border-0 [&::-moz-range-track]:bg-neutral-200 [&::-moz-range-track]:px-2 [&::-moz-range-track]:transition-all active:[&::-moz-range-track]:bg-neutral-300 dark:[&::-moz-range-track]:bg-neutral-800 dark:active:[&::-moz-range-track]:bg-neutral-700 [&::-webkit-slider-runnable-track]:h-8 [&::-webkit-slider-runnable-track]:w-full [&::-webkit-slider-runnable-track]:rounded-xl [&::-webkit-slider-runnable-track]:border-0 [&::-webkit-slider-runnable-track]:bg-neutral-200 [&::-webkit-slider-runnable-track]:px-2 [&::-webkit-slider-runnable-track]:py-2 active:[&::-webkit-slider-runnable-track]:bg-neutral-300 dark:[&::-webkit-slider-runnable-track]:bg-neutral-800 dark:active:[&::-webkit-slider-runnable-track]:bg-neutral-700 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:w-1 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:border-0 [&::-webkit-slider-thumb]:bg-neutral-600 dark:[&::-webkit-slider-thumb]:bg-neutral-200;
+}
+
+@utility input-checkbox {
+  @apply size-5 rounded-xs border border-neutral-400/20 bg-white dark:bg-neutral-800 checked:bg-amber-400 dark:checked:bg-amber-400 ring-offset-0 focus:ring-0 ring-0 outline-hidden transition-all appearance-none;
+}
+
+@utility textarea-md {
+  @apply h-32 w-full rounded-xl border px-3 py-2 text-sm ring-0 transition focus-visible:outline-hidden focus:ring-0 disabled:cursor-not-allowed disabled:opacity-50 border-neutral-400/20 bg-white hover:bg-white/50 dark:bg-neutral-800 dark:hover:bg-neutral-800/50 placeholder:text-neutral-400 focus-visible:border-neutral-400/50;
+}
+
+@utility section-default {
+  @apply mt-8;
+}
+
+@utility code {
+  @apply font-mono text-neutral-600 dark:text-neutral-400 text-sm bg-neutral-300/10 dark:bg-neutral-700/30 rounded-md p-0.5;
+}
+
+@utility pre {
+  @apply font-mono text-neutral-600 dark:text-neutral-400 text-sm bg-neutral-300/10 dark:bg-neutral-700/30 rounded-md p-2;
+}
+
+@utility select-md {
+  @apply relative w-full h-10 rounded-xl border px-3 py-2 text-sm ring-0 transition focus-visible:outline-hidden focus:ring-0 disabled:cursor-not-allowed disabled:opacity-50 border-neutral-400/20 bg-white hover:bg-white/50 dark:bg-neutral-800 dark:hover:bg-neutral-800/50 placeholder:text-neutral-400 focus-visible:border-neutral-400/50;
+}

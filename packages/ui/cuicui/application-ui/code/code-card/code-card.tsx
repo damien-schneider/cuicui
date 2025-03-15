@@ -1,6 +1,6 @@
 const CodeEditor = ({ code, language }: { code: string; language: string }) => {
   return (
-    <div className="group hover:-translate-x-1 max-w-md transform-gpu overflow-hidden rounded-2xl border border-neutral-500/15 bg-white shadow-sm transition-transform dark:bg-neutral-800">
+    <div className="group hover:-translate-x-1 max-w-md transform-gpu overflow-hidden rounded-2xl border border-neutral-500/15 bg-white shadow-2xs transition-transform dark:bg-neutral-800">
       <div className="flex items-end">
         <span
           className=" pr-0.5 pb-4 pl-2 text-end font-medium text-neutral-400 text-sm tracking-widest dark:text-neutral-500"

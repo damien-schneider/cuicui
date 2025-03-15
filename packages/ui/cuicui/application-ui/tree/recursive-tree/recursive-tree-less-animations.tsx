@@ -52,7 +52,7 @@ export const Tree = ({
           <button
             aria-expanded={!collapsed}
             className={cn(
-              "inline-flex items-center justify-center relative  focus:outline-none size-6 m-1",
+              "inline-flex items-center justify-center relative  focus:outline-hidden size-6 m-1",
               " before:inset-0 before:bg-neutral-400/10 before:rounded-md before:absolute before:transition before:border before:border-neutral-400/10 before:opacity-0 before:scale-75",
               " hover:before:opacity-100 hover:before:scale-100",
               hasChildren ? "cursor-pointer" : "cursor-default",

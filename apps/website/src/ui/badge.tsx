@@ -17,7 +17,7 @@ const badgeVariants = cva(
         lime: "bg-lime-500/15 border border-lime-500/20 text-lime-600 dark:text-lime-400",
       },
       size: {
-        sm: "h-4 rounded px-1.5 text-sm",
+        sm: "h-4 rounded-xs px-1.5 text-sm",
 
         md: "h-6 px-4 py-2 rounded-md px-4 text-sm font-medium",
 

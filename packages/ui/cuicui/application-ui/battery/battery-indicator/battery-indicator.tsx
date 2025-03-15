@@ -75,7 +75,7 @@ export const BatteryIndicator = ({
   return (
     <div
       className={cn(
-        "inline-flex items-center space-x-2 rounded-2xl border border-neutral-400/10 bg-white px-3 py-1 shadow-sm transition-all duration-300 hover:shadow-md dark:bg-neutral-500/20",
+        "inline-flex items-center space-x-2 rounded-2xl border border-neutral-400/10 bg-white px-3 py-1 shadow-2xs transition-all duration-300 hover:shadow-md dark:bg-neutral-500/20",
         className,
       )}
     >

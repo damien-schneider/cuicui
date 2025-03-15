@@ -114,7 +114,7 @@ export const PreviewAdvancedBottomActionMenu = () => {
     // <MenuRoot>
     //   <MenuContent value="main-menu">
     //     <motion.div className="flex items-center justify-between">
-    //       <div className="rounded border border-muted-foreground/80 w-fit bg-neutral-700/80 px-2 text-base text-neutral-400">
+    //       <div className="rounded-xs border border-muted-foreground/80 w-fit bg-neutral-700/80 px-2 text-base text-neutral-400">
     //         Vercel toolbar
     //       </div>
     //       {/* <MenuTrigger value="main-menu">
@@ -129,7 +129,7 @@ export const PreviewAdvancedBottomActionMenu = () => {
     //     <div className="h-14 border-b border-muted-foreground/80">
     //       <input
     //         type="text"
-    //         className="h-full w-full bg-transparent outline-none text-xl text-muted-foreground placeholder:text-muted-foreground"
+    //         className="h-full w-full bg-transparent outline-hidden text-xl text-muted-foreground placeholder:text-muted-foreground"
     //         placeholder="What do you need?"
     //       />
     //     </div>

@@ -91,7 +91,7 @@ export const NavigationMenuButton: React.FC<NavigationButtonProps> = ({
   return (
     <button
       className={cn(
-        "group relative inline-flex w-fit whitespace-nowrap rounded px-2 py-1 font-medium text-neutral-500 text-sm",
+        "group relative inline-flex w-fit whitespace-nowrap rounded-xs px-2 py-1 font-medium text-neutral-500 text-sm",
         className,
       )}
       type="button"

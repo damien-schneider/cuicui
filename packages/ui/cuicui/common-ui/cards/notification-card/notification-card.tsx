@@ -19,7 +19,7 @@ export default function NotificationCard({
         className,
       )}
     >
-      <div className="ml-[14px] h-[50px] w-[50px] rounded-[10px] bg-gradient-to-br from-neutral-500/20 to-neutral-500/10" />
+      <div className="ml-[14px] h-[50px] w-[50px] rounded-[10px] bg-linear-to-br from-neutral-500/20 to-neutral-500/10" />
       <div className="ml-[10px] w-[calc(100%-90px)] text-neutral-700 dark:text-neutral-300">
         <div className="flex items-center justify-between">
           <p className="font-bold text-[16px]">{title}</p>

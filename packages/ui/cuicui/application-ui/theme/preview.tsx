@@ -9,7 +9,7 @@ export default function () {
       </div>
 
       {/* Divider */}
-      <div className="w-4 h-0.5 bg-neutral-400/60 rounded" />
+      <div className="w-4 h-0.5 bg-neutral-400/60 rounded-xs" />
 
       {/* Dark Theme Icon */}
       <div className="size-6 p-1 rounded-full bg-neutral-700 dark:bg-neutral-300 inline-flex items-center justify-center">

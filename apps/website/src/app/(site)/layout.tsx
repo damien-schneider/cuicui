@@ -9,11 +9,11 @@ export default function ComponentsLayout({
 }: { children: ReactNode }) {
   return (
     <>
-      <div className="mx-auto max-w-screen-2xl">
+      <div className="mx-auto max-w-(--breakpoint-2xl)">
         {/* Note: The noise effect is experimental and may affect the design. Consider its impact before using it officialy. */}
         <StaticNoise
           opacity={0.05}
-          className="z-[9999] fixed inset-0 pointer-events-none"
+          className="z-9999 fixed inset-0 pointer-events-none"
         />
         <Sidemenu />
         <div className="lg:ml-80">

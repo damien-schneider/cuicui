@@ -21,7 +21,7 @@ const SimpleCheckbox = ({
             type="checkbox"
             {...props}
           />
-          <span className="absolute inset-0 rounded-[5px] border border-blue-500 before:absolute before:inset-0 before:scale-0 before:rounded-[4px] before:bg-blue-500 before:transition-all peer-checked:before:scale-105 peer-hover:before:scale-50 peer-checked:peer-hover:before:scale-90" />
+          <span className="absolute inset-0 rounded-[5px] border border-blue-500 before:absolute before:inset-0 before:scale-0 before:rounded-[4px] before:bg-blue-500 before:transition-all peer-checked:before:scale-105 peer-hover:before:scale-50 peer-hover:peer-checked:before:scale-90" />
         </span>
         <span className="ml-2 cursor-pointer text-neutral-600 text-sm dark:text-neutral-500">
           {label}

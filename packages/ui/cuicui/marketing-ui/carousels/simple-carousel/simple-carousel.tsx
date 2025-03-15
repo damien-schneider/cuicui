@@ -222,7 +222,7 @@ const CarouselDots = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
     return (
       <div
         className={cn(
-          "-translate-x-1/2 absolute bottom-2 left-1/2 flex gap-2 rounded-full border border-white/20 bg-white/50 p-2 backdrop-blur-sm transition-all duration-300 hover:scale-105 dark:border-black/10 dark:bg-black/40",
+          "-translate-x-1/2 absolute bottom-2 left-1/2 flex gap-2 rounded-full border border-white/20 bg-white/50 p-2 backdrop-blur-xs transition-all duration-300 hover:scale-105 dark:border-black/10 dark:bg-black/40",
           className,
         )}
         ref={ref}
@@ -259,8 +259,8 @@ const CarouselPrevious = forwardRef<
   return (
     <button
       className={cn(
-        "absolute grid size-8 place-content-center rounded-full border border-white/20 bg-white/50 backdrop-blur-sm transition-all active:scale-75 dark:border-black/10 dark:bg-black/40",
-        "transform-gpu hover:scale-105 disabled:cursor-not-allowed disabled:bg-white/10 disabled:dark:bg-black/10",
+        "absolute grid size-8 place-content-center rounded-full border border-white/20 bg-white/50 backdrop-blur-xs transition-all active:scale-75 dark:border-black/10 dark:bg-black/40",
+        "transform-gpu hover:scale-105 disabled:cursor-not-allowed disabled:bg-white/10 dark:disabled:bg-black/10",
         orientation === "horizontal"
           ? "-translate-y-1/2 top-1/2 left-6"
           : "-translate-x-1/2 top-6 left-1/2 rotate-90",
@@ -289,7 +289,7 @@ const CarouselNext = forwardRef<
     <button
       className={cn(
         "absolute grid size-8 place-content-center rounded-full border border-white/20 bg-white/50 backdrop-blur-md transition-all active:scale-75 dark:border-black/10 dark:bg-black/40",
-        "transform-gpu hover:scale-105 disabled:cursor-not-allowed disabled:bg-white/10 disabled:dark:bg-black/10",
+        "transform-gpu hover:scale-105 disabled:cursor-not-allowed disabled:bg-white/10 dark:disabled:bg-black/10",
         orientation === "horizontal"
           ? "-translate-y-1/2 top-1/2 right-6"
           : "-translate-x-1/2 bottom-6 left-1/2 rotate-90",

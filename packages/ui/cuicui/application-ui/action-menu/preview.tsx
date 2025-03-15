@@ -6,9 +6,9 @@ export default function () {
 
       {/* Menu Items */}
       <div className="flex flex-col space-y-2">
-        <div className="w-full h-4 bg-neutral-400/40 rounded" />
-        <div className="w-3/4 h-4 bg-neutral-400/40 rounded" />
-        <div className="w-1/2 h-4 bg-neutral-400/40 rounded" />
+        <div className="w-full h-4 bg-neutral-400/40 rounded-xs" />
+        <div className="w-3/4 h-4 bg-neutral-400/40 rounded-xs" />
+        <div className="w-1/2 h-4 bg-neutral-400/40 rounded-xs" />
       </div>
     </div>
   );

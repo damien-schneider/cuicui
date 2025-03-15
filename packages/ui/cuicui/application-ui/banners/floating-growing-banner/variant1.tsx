@@ -44,7 +44,7 @@ export default function FloatingGrowingBannerVariant1() {
           className={cn(
             "w-56 rounded-lg px-2 py-1",
             "opacity-0 blur-md transition-all duration-1000 group-hover:opacity-100 group-hover:blur-0",
-            " z-20 bg-indigo-200/30 outline-none ring-0",
+            " z-20 bg-indigo-200/30 outline-hidden ring-0",
             // Position
             "-translate-y-1/2 absolute top-1/2 right-2",
             // Text

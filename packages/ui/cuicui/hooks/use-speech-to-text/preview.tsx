@@ -6,7 +6,7 @@ export default function UseSpeechToTextPreview() {
       {/* Microphone Icon */}
       <Mic className="size-6 text-neutral-400/80" />
       {/* Text Placeholder */}
-      <div className="w-24 h-4 bg-neutral-400/40 rounded" />
+      <div className="w-24 h-4 bg-neutral-400/40 rounded-xs" />
     </div>
   );
 }

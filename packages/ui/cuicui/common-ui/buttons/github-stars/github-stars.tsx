@@ -58,7 +58,7 @@ export const GithubStarsButton = ({
         />
       </span>
 
-      <span className="flex items-center justify-center gap-1 relative z-[1] dark:bg-neutral-950/90 bg-neutral-50/90 rounded-full py-2 px-4 pl-2 w-full">
+      <span className="flex items-center justify-center gap-1 relative z-1 dark:bg-neutral-950/90 bg-neutral-50/90 rounded-full py-2 px-4 pl-2 w-full">
         <span className="relative  group-hover:scale-105 transition-transform group-hover:rotate-[360deg]">
           <CuicuiStarIcon
             className="opacity-80 dark:opacity-100"
@@ -84,7 +84,7 @@ export const GithubStarsButton = ({
           className="z-20 dark:text-neutral-500 text-neutral-400 text-xs font-semibold tracking-tighter"
         />
         {children && (
-          <span className="bg-gradient-to-b ml-1.5 dark:from-white dark:to-white/50 from-neutral-950 to-neutral-950/50 bg-clip-text text-xs text-transparent group-hover:scale-105 transition transform-gpu">
+          <span className="bg-linear-to-b ml-1.5 dark:from-white dark:to-white/50 from-neutral-950 to-neutral-950/50 bg-clip-text text-xs text-transparent group-hover:scale-105 transition transform-gpu">
             {children}
           </span>
         )}

@@ -13,24 +13,24 @@ export const ThemeSwitcherButton = () => {
     >
       <span
         className={cn(
-          "relative size-6 scale-75 rounded-full bg-gradient-to-tr",
+          "relative size-6 scale-75 rounded-full bg-linear-to-tr",
         )}
       >
         <span
           className={cn(
-            "absolute top-0 left-0 z-10 h-full w-full transform-gpu rounded-full bg-gradient-to-tr from-indigo-400 to-sky-200 transition-color duration-500",
+            "absolute top-0 left-0 z-10 h-full w-full transform-gpu rounded-full bg-linear-to-tr from-indigo-400 to-sky-200 transition-color duration-500",
             theme === "dark" ? "scale-100" : "scale-90",
           )}
         />
         <span
           className={cn(
-            "absolute top-0 left-0 z-10 h-full w-full transform-gpu rounded-full bg-gradient-to-tr from-rose-400 to-amber-300 transition-color duration-500 dark:from-rose-600 dark:to-amber-600",
+            "absolute top-0 left-0 z-10 h-full w-full transform-gpu rounded-full bg-linear-to-tr from-rose-400 to-amber-300 transition-color duration-500 dark:from-rose-600 dark:to-amber-600",
             theme === "light" ? "opacity-100" : "opacity-0",
           )}
         />
         <span
           className={cn(
-            "absolute top-0 right-0 z-20 size-4 origin-top-right transform-gpu rounded-full bg-white transition-transform duration-500 group-hover:bg-neutral-100 dark:bg-neutral-800 group-hover:dark:bg-neutral-700",
+            "absolute top-0 right-0 z-20 size-4 origin-top-right transform-gpu rounded-full bg-white transition-transform duration-500 group-hover:bg-neutral-100 dark:bg-neutral-800 dark:group-hover:bg-neutral-700",
             theme === "dark" ? "scale-100" : "scale-0",
           )}
         />

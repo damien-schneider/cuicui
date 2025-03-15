@@ -8,7 +8,7 @@ export default function UseEventCallbackPreview() {
       {/* Arrow Icon */}
       <ArrowRight className="size-6 text-neutral-400/60" />
       {/* Function Placeholder */}
-      <div className="w-6 h-6 bg-neutral-400/40 rounded" />
+      <div className="w-6 h-6 bg-neutral-400/40 rounded-xs" />
     </div>
   );
 }

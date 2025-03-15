@@ -51,7 +51,7 @@ export const NavbarLink = ({
         className={cn(
           "relative inline-flex text-sm h-11 w-28 tracking-tight items-center justify-center",
           isHighlighted
-            ? "text-white bg-gradient-to-b from-violet-500 to-violet-600 rounded-[14px] hover:from-violet-500/80 hover:to-violet-600/80 shadow-md transition-all hover:scale-105"
+            ? "text-white bg-linear-to-b from-violet-500 to-violet-600 rounded-[14px] hover:from-violet-500/80 hover:to-violet-600/80 shadow-md transition-all hover:scale-105"
             : "text-neutral-800 dark:text-neutral-300 before:absolute before:inset-0  before:bg-neutral-500/20 hover:before:scale-100 before:scale-50 before:opacity-0 hover:before:opacity-100 before:transition before:rounded-[14px]",
         )}
         {...props}

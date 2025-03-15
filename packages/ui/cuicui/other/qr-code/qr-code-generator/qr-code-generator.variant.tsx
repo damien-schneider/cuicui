@@ -63,7 +63,7 @@ export const QrCodeGenerator = () => {
         // Uncomment and customize the following if you want to add an image to the QR code
         value={value}
       />
-      <div className="flex flex-col gap-2 *:transform-gpu *:rounded-lg *:border *:border-neutral-400/10 *:bg-neutral-400/20 *:px-3 *:py-1.5 *:text-neutral-600 *:transition-transform *:dark:text-neutral-300">
+      <div className="flex flex-col gap-2 *:transform-gpu *:rounded-lg *:border *:border-neutral-400/10 *:bg-neutral-400/20 *:px-3 *:py-1.5 *:text-neutral-600 *:transition-transform dark:*:text-neutral-300">
         <button
           className="hover:scale-90"
           onClick={handleDownloadSvg}

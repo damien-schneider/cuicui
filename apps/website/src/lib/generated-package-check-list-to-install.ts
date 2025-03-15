@@ -140,6 +140,10 @@ export const packageCheckListToInstall: PackageToInstallType[] = [
     packageName: "@tailwindcss/forms",
   },
   {
+    find: [`from "@tailwindcss/postcss"`],
+    packageName: "@tailwindcss/postcss",
+  },
+  {
     find: [`from "@tailwindcss/typography"`],
     packageName: "@tailwindcss/typography",
   },
@@ -174,10 +178,6 @@ export const packageCheckListToInstall: PackageToInstallType[] = [
   {
     find: [`from "@vitejs/plugin-react"`],
     packageName: "@vitejs/plugin-react",
-  },
-  {
-    find: [`from "autoprefixer"`],
-    packageName: "autoprefixer",
   },
   {
     find: [`from "eslint"`],
@@ -274,10 +274,6 @@ export const packageCheckListToInstall: PackageToInstallType[] = [
   {
     find: [`from "tts-react"`],
     packageName: "tts-react",
-  },
-  {
-    find: [`from "@cuicui/config-tailwind"`],
-    packageName: "@cuicui/config-tailwind",
   },
   {
     find: [`from "@cuicui/config-typescript"`],

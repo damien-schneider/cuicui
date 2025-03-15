@@ -7,19 +7,19 @@ export default function StatisticsCategoryPreview() {
       {/* Bar Chart Icon */}
       <div className="flex gap-3 items-center">
         <BarChart2 className="size-6 text-neutral-400/80" />
-        <div className="w-2/3 h-2 bg-neutral-400/80 rounded" />
+        <div className="w-2/3 h-2 bg-neutral-400/80 rounded-xs" />
       </div>
 
       {/* Trending Up Icon */}
       <div className="flex gap-3 items-center">
         <TrendingUp className="size-6 text-neutral-400/80" />
-        <div className="w-2/3 h-2 bg-neutral-400/80 rounded" />
+        <div className="w-2/3 h-2 bg-neutral-400/80 rounded-xs" />
       </div>
 
       {/* Users Icon */}
       <div className="flex gap-3 items-center">
         <Users className="size-6 text-neutral-400/80" />
-        <div className="w-2/3 h-2 bg-neutral-400/80 rounded" />
+        <div className="w-2/3 h-2 bg-neutral-400/80 rounded-xs" />
       </div>
     </div>
   );

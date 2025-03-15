@@ -1,3 +1,4 @@
+@import 'tailwindcss';
 .shiki {
   counter-reset: step;
   counter-increment: step 0;

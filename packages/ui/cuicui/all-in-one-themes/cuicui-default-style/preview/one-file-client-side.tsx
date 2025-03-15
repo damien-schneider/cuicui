@@ -39,7 +39,7 @@ export const CategoryCard = ({
       </motion.div>
       <motion.div
         layout={true}
-        className="bg-neutral-50 dark:bg-neutral-700 border border-neutral-400/20 border-dashed rounded-md shadow-sm flex items-center justify-center w-full h-20 overflow-hidden"
+        className="bg-neutral-50 dark:bg-neutral-700 border border-neutral-400/20 border-dashed rounded-md shadow-2xs flex items-center justify-center w-full h-20 overflow-hidden"
       >
         {children}
       </motion.div>

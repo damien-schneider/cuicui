@@ -19,7 +19,7 @@ export function GooglePixelVariant1() {
       </div>
 
       <div
-        className="absolute top-0 left-1/2 ml-[-147px] box-border block h-[10px] w-[294px] bg-gradient-to-b from-stone-400 via-30% via-stone-300 to-stone-300"
+        className="absolute top-0 left-1/2 ml-[-147px] box-border block h-[10px] w-[294px] bg-linear-to-b from-stone-400 via-30% via-stone-300 to-stone-300"
         id="device-header"
       />
       <div
