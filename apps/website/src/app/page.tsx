@@ -74,7 +74,7 @@ export default function HomePage() {
           </div>
           <div className="max-w-4xl mx-auto">
             <P className="mx-auto mb-2">Explore the categories</P>
-            <div className="flex w-fit items-center flex-wrap gap-2 p-2 border bg-gradient-to-t border-neutral-400/10 rounded-xl from-neutral-100 to-neutral-50 dark:from-neutral-900 dark:to-neutral-900/50 overflow-hidden mx-auto justify-center">
+            <div className="flex w-fit items-center flex-wrap gap-2 p-2 border bg-linear-to-t border-neutral-400/10 rounded-xl from-neutral-100 to-neutral-50 dark:from-neutral-900 dark:to-neutral-900/50 overflow-hidden mx-auto justify-center">
               {sectionList.map((section) => (
                 <Link
                   key={section.slug}
@@ -246,7 +246,7 @@ const FeatureCard = ({
         </div>
         <P>{description}</P>
       </div>
-      {/* <div className="relative h-56 w-full rounded-lg overflow-hidden shadow-sm">
+      {/* <div className="relative h-56 w-full rounded-lg overflow-hidden shadow-2xs">
         {children}
       </div> */}
     </Card>
@@ -274,7 +274,7 @@ function Component() {
       </div>
 
       {/* Content */}
-      <div className="flex flex-col gap-4 w-full max-w-screen-xl">
+      <div className="flex flex-col gap-4 w-full max-w-(--breakpoint-xl)">
         {/* First row (2 columns on md+) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <FeatureCard

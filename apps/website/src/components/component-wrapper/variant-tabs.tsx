@@ -38,7 +38,7 @@ export default function VariantTabs({
         </p>
         <Tabs.List
           className={cn(
-            "flex items-center p-0.5 *:data-[state=active]:rounded-lg *:data-[state=active]:border-neutral-500/20 *:data-[state=active]:bg-neutral-400/15 *:data-[state=active]:text-neutral-900",
+            "flex items-center p-0.5 data-[state=active]:*:rounded-lg data-[state=active]:*:border-neutral-500/20 data-[state=active]:*:bg-neutral-400/15 data-[state=active]:*:text-neutral-900",
           )}
         >
           {component.variants.map((variant, _index) => {
@@ -46,7 +46,7 @@ export default function VariantTabs({
               <Tabs.Trigger
                 className={cn(
                   "group relative flex items-center justify-center px-2 py-1 font-medium text-sm tracking-tighter transition-colors",
-                  "before:absolute before:inset-0 before:scale-50 before:transform-gpu before:rounded-lg before:border before:border-neutral-500/10 before:bg-neutral-400/15 before:opacity-0 before:transition before:duration-300 hover:before:scale-95 hover:before:opacity-50 before:group-active:bg-neutral-500/5 data-[state=active]:before:scale-100 data-[state=active]:before:opacity-100",
+                  "before:absolute before:inset-0 before:scale-50 before:transform-gpu before:rounded-lg before:border before:border-neutral-500/10 before:bg-neutral-400/15 before:opacity-0 before:transition before:duration-300 hover:before:scale-95 hover:before:opacity-50 group-active:before:bg-neutral-500/5 data-[state=active]:before:scale-100 data-[state=active]:before:opacity-100",
                 )}
                 key={variant.name}
                 value={variant.name}

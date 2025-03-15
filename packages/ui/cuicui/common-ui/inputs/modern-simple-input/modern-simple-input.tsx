@@ -8,7 +8,7 @@ const ModernSimpleInput = forwardRef<HTMLInputElement, InputProps>(
     return (
       <input
         className={cn(
-          "flex h-10 w-full rounded-xl border px-3 py-2 text-sm ring-0 focus:ring-0 transition focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50",
+          "flex h-10 w-full rounded-xl border px-3 py-2 text-sm ring-0 focus:ring-0 transition focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50",
           // Colors
           "border-neutral-400/20 bg-white hover:bg-white/50 dark:bg-neutral-800 dark:hover:bg-neutral-800/50",
           " placeholder:text-neutral-400 focus-visible:border-neutral-400/50",

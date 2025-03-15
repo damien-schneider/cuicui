@@ -14,7 +14,7 @@ export default function ShinyRotatingBorderButtonDebunk() {
           // top: ["10%", "0%", "15%", "85%", "90%", "80%", "10%"],
           // left: ["10%", "50%", "85%", "85%", "50%", "0%", "10%"],
         }}
-        className="-translate-x-1/2 -translate-y-1/2 absolute z-10 size-8 transform-gpu blur-sm transition-transform duration-300 group-hover:scale-[3]"
+        className="-translate-x-1/2 -translate-y-1/2 absolute z-10 size-8 transform-gpu blur-xs transition-transform duration-300 group-hover:scale-3"
         initial={{ top: 0, left: 0 }}
         transition={{
           duration: 3,

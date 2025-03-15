@@ -92,7 +92,7 @@ export default async function ProjectPage() {
           return (
             <article
               key={date.toISOString()}
-              className="[&_ul]:text-neutral-600 [&_ul]:dark:text-neutral-400"
+              className="[&_ul]:text-neutral-600 dark:[&_ul]:text-neutral-400"
             >
               <h5 className="m-0 inline">{format(date, "do MMMM yyyy")}</h5>
               {index === 0 && (

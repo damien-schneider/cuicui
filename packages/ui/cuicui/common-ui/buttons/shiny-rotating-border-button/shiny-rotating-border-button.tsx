@@ -23,7 +23,7 @@ export const ShinyRotatingBorderButton = ({
           top: ["50%", "0%", "50%", "100%", "50%"],
           left: ["0%", "50%", "100%", "50%", "0%"],
         }}
-        className="-translate-x-1/2 -translate-y-1/2 absolute z-10 size-8 transform-gpu blur-sm transition-transform duration-300 group-hover:scale-[3]"
+        className="-translate-x-1/2 -translate-y-1/2 absolute z-10 size-8 transform-gpu blur-xs transition-transform duration-300 group-hover:scale-3"
         initial={{ top: 0, left: 0 }}
         transition={{
           duration: 3,

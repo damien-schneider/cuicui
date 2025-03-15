@@ -4,14 +4,14 @@ import { cva, type VariantProps } from "class-variance-authority";
 import Link from "next/link";
 
 const buttonVariants = cva(
-  "relative before:content-[''] before:transform-gpu px-2 py-1 text-neutral-600 transition-colors before:absolute before:top-0 before:left-0 before:w-full hover:text-neutral-600/90 active:text-neutral-600/80 active:before:border-neutral-400/20 before:-z-10 before:h-full before:rounded-md before:border before:border-neutral-500/5 before:bg-neutral-500/10 before:transition before:duration-200 before:ease-out before:active:bg-neutral-500/20 before:dark:border-neutral-600/10 dark:text-neutral-400 dark:active:text-neutral-400/80 dark:hover:text-neutral-400/90",
+  "relative before:content-[''] before:transform-gpu px-2 py-1 text-neutral-600 transition-colors before:absolute before:top-0 before:left-0 before:w-full hover:text-neutral-600/90 active:text-neutral-600/80 active:before:border-neutral-400/20 before:-z-10 before:h-full before:rounded-md before:border before:border-neutral-500/5 before:bg-neutral-500/10 before:transition before:duration-200 before:ease-out active:before:bg-neutral-500/20 dark:before:border-neutral-600/10 dark:text-neutral-400 dark:active:text-neutral-400/80 dark:hover:text-neutral-400/90",
   {
     variants: {
       variant: {
         outline:
-          "before:border-neutral-500/20 before:bg-transparent before:hover:bg-neutral-500/10 before:active:bg-neutral-500/20",
+          "before:border-neutral-500/20 before:bg-transparent hover:before:bg-neutral-500/10 active:before:bg-neutral-500/20",
         hoverOnly:
-          "before:scale-0 before:opacity-0 before:hover:scale-100 before:hover:opacity-100",
+          "before:scale-0 before:opacity-0 hover:before:scale-100 hover:before:opacity-100",
         default:
           "before:scale-100 before:opacity-100 hover:before:bg-neutral-500/30",
       },
@@ -69,7 +69,7 @@ const h1Variants = cva("", {
     variant: {
       default: "dark:text-neutral-300 text-neutral-800",
       gradient:
-        "bg-gradient-to-br from-neutral-950 to-neutral-950/50 text-transparent bg-clip-text py-2 dark:from-neutral-200 dark:to-neutral-200/50",
+        "bg-linear-to-br from-neutral-950 to-neutral-950/50 text-transparent bg-clip-text py-2 dark:from-neutral-200 dark:to-neutral-200/50",
     },
   },
   defaultVariants: {
@@ -103,7 +103,7 @@ const h2Variants = cva("", {
       "small-uppercase":
         "font-mono text-xs/5 font-medium uppercase tracking-widest text-neutral-500 dark:text-neutral-400",
       gradient:
-        "bg-gradient-to-br from-neutral-950 to-neutral-950/50 text-transparent bg-clip-text py-2 dark:from-neutral-200 dark:to-neutral-200/50",
+        "bg-linear-to-br from-neutral-950 to-neutral-950/50 text-transparent bg-clip-text py-2 dark:from-neutral-200 dark:to-neutral-200/50",
     },
   },
   defaultVariants: {
@@ -266,7 +266,7 @@ const spanVariants = cva("", {
       default: "text-neutral-600 dark:text-neutral-400",
       caption: "text-neutral-500 dark:text-neutral-400",
       gradient:
-        "bg-gradient-to-br from-neutral-950 to-neutral-950/50 text-transparent bg-clip-text py-2 dark:from-neutral-200 dark:to-neutral-200/50",
+        "bg-linear-to-br from-neutral-950 to-neutral-950/50 text-transparent bg-clip-text py-2 dark:from-neutral-200 dark:to-neutral-200/50",
     },
   },
   defaultVariants: {

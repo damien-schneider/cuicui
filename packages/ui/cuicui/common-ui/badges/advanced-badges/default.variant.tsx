@@ -59,7 +59,7 @@ const badgeSizeVariants = {
 };
 
 const badgeRoundedVariants = {
-  sm: "rounded-sm",
+  sm: "rounded-xs",
   md: "rounded-md",
   lg: "rounded-lg",
   full: "rounded-full",

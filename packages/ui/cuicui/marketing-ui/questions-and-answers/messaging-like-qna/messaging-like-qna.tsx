@@ -21,7 +21,7 @@ export const FaqSection = ({
   const [openItem, setOpenItem] = useState<string | null>(null);
 
   return (
-    <div className="mx-auto w-full max-w-xl rounded-lg bg-white dark:bg-neutral-800 p-4 shadow-sm md:max-w-2xl">
+    <div className="mx-auto w-full max-w-xl rounded-lg bg-white dark:bg-neutral-800 p-4 shadow-2xs md:max-w-2xl">
       {/* Subheader / Timestamp */}
       <div className="mb-2 text-xs text-neutral-400">
         Every day, <span className="font-medium">9:01 AM</span>
@@ -44,7 +44,7 @@ export const FaqSection = ({
               <Accordion.Trigger className="group flex justify-between items-center w-full">
                 <div
                   className={cn(
-                    "inline-flex group-hover:translate-x-1 rounded-2xl rounded-bl-md transition items-center justify-between px-3 py-1.5 text-left duration-200 outline-none",
+                    "inline-flex group-hover:translate-x-1 rounded-2xl rounded-bl-md transition items-center justify-between px-3 py-1.5 text-left duration-200 outline-hidden",
                     openItem === item.id.toString()
                       ? "bg-blue-600 text-white"
                       : " text-neutral-700 dark:text-neutral-200",

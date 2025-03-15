@@ -7,7 +7,7 @@ export function Dock() {
     <div className="relative w-full">
       <div className="-translate-x-1/2 absolute bottom-0 left-1/2 mx-auto max-w-full transform-gpu pt-4">
         <div className="relative ">
-          <div className="pointer-events-none absolute right-0 bottom-0 left-0 z-10 h-[72px] max-w-full rounded-3xl border border-gray-200/60 bg-gray-200/60 shadow-sm dark:border-gray-600/60 dark:bg-gray-800/60" />
+          <div className="pointer-events-none absolute right-0 bottom-0 left-0 z-10 h-[72px] max-w-full rounded-3xl border border-gray-200/60 bg-gray-200/60 shadow-2xs dark:border-gray-600/60 dark:bg-gray-800/60" />
           <div className="flex items-end overflow-x-auto rounded-3xl pl-2">
             <AppIcon
               imgSrc={
@@ -59,7 +59,7 @@ function AppIcon({
     <div className=" group z-20 grid w-fit cursor-pointer place-items-center p-2 pl-0">
       <div
         className={cn(
-          "pointer-events-none z-20 inline size-14 transform-gpu overflow-hidden rounded-2xl bg-white shadow-inner transition-all duration-200 group-hover:size-[4rem] group-hover:shadow-sm dark:bg-gray-800",
+          "pointer-events-none z-20 inline size-14 transform-gpu overflow-hidden rounded-2xl bg-white shadow-inner transition-all duration-200 group-hover:size-[4rem] group-hover:shadow-2xs dark:bg-gray-800",
           withoutBackground ? "p-2" : "",
         )}
       >

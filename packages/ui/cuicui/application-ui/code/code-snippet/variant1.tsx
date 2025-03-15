@@ -15,7 +15,7 @@ export function CommandCode({ children }: Readonly<{ children: string }>) {
       onClick={() => handleCopyCode(children)}
       type="button"
     >
-      <code className=" overflow-hidden overflow-ellipsis whitespace-nowrap text-left">
+      <code className=" overflow-hidden text-ellipsis whitespace-nowrap text-left">
         {children}
       </code>
       <ClipboardIcon className=" size-5" />

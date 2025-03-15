@@ -8,7 +8,7 @@ export const GradientText = ({
   return (
     <p
       className={cn(
-        "bg-gradient-to-br from-sky-400 via-violet-500 to-orange-400 bg-clip-text font-medium text-transparent text-xl tracking-tighter",
+        "bg-linear-to-br from-sky-400 via-violet-500 to-orange-400 bg-clip-text font-medium text-transparent text-xl tracking-tighter",
         className,
       )}
     >

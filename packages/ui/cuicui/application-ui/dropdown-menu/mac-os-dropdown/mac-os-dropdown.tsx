@@ -88,7 +88,7 @@ const DropdownMenuItem = forwardRef<
   <DropdownMenuPrimitive.Item
     ref={ref}
     className={cn(
-      "truncate cursor-pointer whitespace-nowrap py-0.5 text-white/90 px-1.5 hover:bg-blue-600 rounded-[4px] focus:outline-none focus:ring-0",
+      "truncate cursor-pointer whitespace-nowrap py-0.5 text-white/90 px-1.5 hover:bg-blue-600 rounded-[4px] focus:outline-hidden focus:ring-0",
       inset && "pl-8",
       className,
     )}

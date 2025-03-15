@@ -46,7 +46,7 @@ export function AnimatedNumberVariant1() {
           <AnimatedNumber
             className={cn(
               "font-bold text-6xl tracking-tighter",
-              "bg-gradient-to-b from-neutral-700 to-neutral-800/60 bg-clip-text text-transparent dark:from-neutral-200 dark:to-neutral-200/60",
+              "bg-linear-to-b from-neutral-700 to-neutral-800/60 bg-clip-text text-transparent dark:from-neutral-200 dark:to-neutral-200/60",
             )}
             value={
               // This is necessary, otherwise the value will not reach perfectly the end

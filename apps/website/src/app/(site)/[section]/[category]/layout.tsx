@@ -78,7 +78,7 @@ export default async function CategoryLayout({
         />
         <meta content="all" name="robots" />
       </Head>
-      <h1 className="bg-gradient-to-b from-black to-black/40 dark:from-white dark:to-white/10 bg-clip-text font-medium text-transparent text-3xl sm:text-5xl inline tracking-tighter">
+      <h1 className="bg-linear-to-b from-black to-black/40 dark:from-white dark:to-white/10 bg-clip-text font-medium text-transparent text-3xl sm:text-5xl inline tracking-tighter">
         {categoryInList.meta.name} components
       </h1>
       {children}

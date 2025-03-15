@@ -1,6 +1,6 @@
 export const BottomBlurOut = () => {
   return (
-    <div className="gradient-blur fixed z-10 pointer-events-none before:absolute before:inset-0 after:absolute after:inset-0 before:z-[1] h-[7%] bottom-0 inset-x-0 before:backdrop-blur-[0.5px] after:backdrop-blur-[32px]">
+    <div className="gradient-blur fixed z-10 pointer-events-none before:absolute before:inset-0 after:absolute after:inset-0 before:z-1 h-[7%] bottom-0 inset-x-0 before:backdrop-blur-[0.5px] after:backdrop-blur-[32px]">
       <style>{gradientBlurCss}</style>
       {Array.from({ length: 5 }).map((_, index) => (
         <div

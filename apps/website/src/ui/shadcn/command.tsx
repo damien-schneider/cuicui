@@ -53,7 +53,7 @@ const CommandInput = forwardRef<
     <Search className="mr-2 size-4 shrink-0 opacity-50" />
     <CommandPrimitive.Input
       className={cn(
-        "mr-8 flex w-full rounded-xl border-none bg-transparent py-1 text-sm outline-none placeholder:text-neutral-400 disabled:cursor-not-allowed disabled:opacity-50",
+        "mr-8 flex w-full rounded-xl border-none bg-transparent py-1 text-sm outline-hidden placeholder:text-neutral-400 disabled:cursor-not-allowed disabled:opacity-50",
         "transform-gpu ring-0 transition-all focus:ring-2 focus:ring-neutral-500 focus:ring-opacity-50",
         className,
       )}
@@ -125,7 +125,7 @@ const CommandItem = forwardRef<
 >(({ className, ...props }, ref) => (
   <CommandPrimitive.Item
     className={cn(
-      "relative flex cursor-pointer select-none items-center rounded-md px-2 py-1.5 text-sm outline-none data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50",
+      "relative flex cursor-pointer select-none items-center rounded-md px-2 py-1.5 text-sm outline-hidden data-[disabled=true]:pointer-events-none data-[disabled=true]:opacity-50",
       "transform-gpu transition-all duration-300 data-[selected=true]:scale-[1.02] data-[selected='true']:bg-neutral-200 data-[selected=true]:font-medium data-[selected=true]:text-neutral-700 dark:data-[selected='true']:bg-neutral-900 dark:data-[selected=true]:text-neutral-300",
       className,
     )}

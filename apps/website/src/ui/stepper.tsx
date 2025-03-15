@@ -16,7 +16,7 @@ export const StaticStep = ({
     <div
       className={cn(
         // "grid gap-6 w-full",
-        // "grid-cols-[min-content,1fr]",
+        // "grid-cols-[min-content_1fr]",
         "relative flex w-full gap-6",
         className,
       )}

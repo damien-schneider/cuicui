@@ -40,7 +40,7 @@ export default function HalfSidedGlassMorphismAuthentication() {
                   First name
                 </label>
                 <input
-                  className="block h-12 w-full appearance-none rounded-xl bg-white px-4 py-2 text-amber-500 placeholder-neutral-300 duration-200 focus:outline-none focus:ring-neutral-300 sm:text-sm"
+                  className="block h-12 w-full appearance-none rounded-xl bg-white px-4 py-2 text-amber-500 placeholder-neutral-300 duration-200 focus:outline-hidden focus:ring-neutral-300 sm:text-sm"
                   id="name"
                   placeholder="Your name"
                   type="text"
@@ -54,7 +54,7 @@ export default function HalfSidedGlassMorphismAuthentication() {
                   Password
                 </label>
                 <input
-                  className="block h-12 w-full appearance-none rounded-xl bg-white px-4 py-2 text-amber-500 placeholder-neutral-300 duration-200 focus:outline-none focus:ring-neutral-300 sm:text-sm"
+                  className="block h-12 w-full appearance-none rounded-xl bg-white px-4 py-2 text-amber-500 placeholder-neutral-300 duration-200 focus:outline-hidden focus:ring-neutral-300 sm:text-sm"
                   id="password"
                   placeholder="Type password here..."
                   type="password"

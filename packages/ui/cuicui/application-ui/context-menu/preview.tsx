@@ -4,19 +4,19 @@ export default function ContextMenuCategoryPreview() {
       {/* Menu Item 1 */}
       <div className="flex items-center space-x-3">
         <div className="w-4 h-4 bg-neutral-400/80 rounded-full" />
-        <div className="w-24 h-3 bg-neutral-400/80 rounded" />
+        <div className="w-24 h-3 bg-neutral-400/80 rounded-xs" />
       </div>
 
       {/* Menu Item 2 */}
       <div className="flex items-center space-x-3">
         <div className="w-4 h-4 bg-neutral-400/80 rounded-full" />
-        <div className="w-24 h-3 bg-neutral-400/80 rounded" />
+        <div className="w-24 h-3 bg-neutral-400/80 rounded-xs" />
       </div>
 
       {/* Menu Item 3 */}
       <div className="flex items-center space-x-3">
         <div className="w-4 h-4 bg-neutral-400/80 rounded-full" />
-        <div className="w-24 h-3 bg-neutral-400/80 rounded" />
+        <div className="w-24 h-3 bg-neutral-400/80 rounded-xs" />
       </div>
     </div>
   );

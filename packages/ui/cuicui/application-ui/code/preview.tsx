@@ -9,9 +9,9 @@ export default function CodeCategoryPreview() {
 
       {/* Code Snippet */}
       <div className="w-full space-y-2">
-        <div className="w-2/3 h-1 bg-neutral-400/80 rounded" />
-        <div className="w-3/4 h-1 bg-neutral-400/80 rounded" />
-        <div className="w-1/2 h-1 bg-neutral-400/80 rounded" />
+        <div className="w-2/3 h-1 bg-neutral-400/80 rounded-xs" />
+        <div className="w-3/4 h-1 bg-neutral-400/80 rounded-xs" />
+        <div className="w-1/2 h-1 bg-neutral-400/80 rounded-xs" />
       </div>
     </div>
   );

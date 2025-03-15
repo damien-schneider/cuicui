@@ -15,7 +15,7 @@ const UserInfo = ({ avatar, name, position }: UserInfoProps) => {
       <img
         src={avatar}
         alt={name}
-        className="w-10 h-10 rounded-lg object-cover shadow-sm"
+        className="w-10 h-10 rounded-lg object-cover shadow-2xs"
       />
       <div className="flex flex-col">
         <h6 className="text-sm font-semibold text-neutral-900 dark:text-neutral-200">
@@ -35,7 +35,7 @@ interface TestimonialMessageProps {
 
 const TestimonialMessage = ({ message }: TestimonialMessageProps) => {
   return (
-    <div className="bg-neutral-50 dark:bg-neutral-700 border border-neutral-400/20 border-dashed rounded-md p-4 shadow-sm flex flex-col gap-2">
+    <div className="bg-neutral-50 dark:bg-neutral-700 border border-neutral-400/20 border-dashed rounded-md p-4 shadow-2xs flex flex-col gap-2">
       <p className="text-sm text-neutral-700 dark:text-neutral-300 leading-5">
         {message}
       </p>

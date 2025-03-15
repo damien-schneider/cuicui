@@ -27,7 +27,7 @@ const ShinyText = ({
       <div
         className={cn(
           "inline-block bg-clip-text text-transparent",
-          "bg-gradient-to-r from-35% via-50% to-65%",
+          "bg-linear-to-r from-35% via-50% to-65%",
           "from-neutral-400 via-neutral-950 to-neutral-400",
           "dark:from-neutral-500 dark:via-neutral-50 dark:to-neutral-500",
           className,

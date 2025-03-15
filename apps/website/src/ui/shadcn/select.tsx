@@ -24,7 +24,7 @@ const SelectTrigger = forwardRef<
 >(({ className, children, withIcon = true, ...props }, ref) => (
   <SelectPrimitive.Trigger
     className={cn(
-      "flex h-10 w-full items-center justify-between rounded-md border border-neutral-500/30 bg-neutral-200 px-3 py-2 text-sm ring-offset-neutral-500/20 placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-neutral-500/20 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-neutral-600 [&>span]:line-clamp-1",
+      "flex h-10 w-full items-center justify-between rounded-md border border-neutral-500/30 bg-neutral-200 px-3 py-2 text-sm ring-offset-neutral-500/20 placeholder:text-muted-foreground focus:outline-hidden focus:ring-2 focus:ring-neutral-500/20 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-neutral-600 [&>span]:line-clamp-1",
       className,
     )}
     ref={ref}
@@ -129,7 +129,7 @@ const SelectItem = forwardRef<
 >(({ className, children, ...props }, ref) => (
   <SelectPrimitive.Item
     className={cn(
-      "relative flex w-full transform-gpu cursor-pointer select-none items-center rounded-md py-1.5 pr-2 pl-8 text-sm outline-none transition-all focus:bg-neutral-400/15 focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 dark:focus:bg-neutral-500/15",
+      "relative flex w-full transform-gpu cursor-pointer select-none items-center rounded-md py-1.5 pr-2 pl-8 text-sm outline-hidden transition-all focus:bg-neutral-400/15 focus:text-accent-foreground data-disabled:pointer-events-none data-disabled:opacity-50 dark:focus:bg-neutral-500/15",
       className,
     )}
     ref={ref}

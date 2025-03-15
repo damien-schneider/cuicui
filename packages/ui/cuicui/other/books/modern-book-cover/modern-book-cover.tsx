@@ -69,11 +69,11 @@ export const ModernBookCover = ({
           isStatic
             ? "[transform:rotateY(-30deg)]"
             : "[transform:rotateY(0deg)] group-hover:[transform:rotateY(-30deg)]"
-        } aspect-[3/4] ${radiusMap[radius]}`}
+        } aspect-3/4 ${radiusMap[radius]}`}
       >
         {/* Front Side */}
         <div
-          className={`absolute inset-y-0 overflow-hidden size-full left-0 text-white flex flex-col justify-end p-6 bg-gradient-to-tr ${gradient.from} ${gradient.to} ${radiusMap[radius]}`}
+          className={`absolute inset-y-0 overflow-hidden size-full left-0 text-white flex flex-col justify-end p-6 bg-linear-to-tr ${gradient.from} ${gradient.to} ${radiusMap[radius]}`}
           style={{
             transform: "translateZ(25px)",
             boxShadow: "5px 5px 20px var(--shadowColor)",
@@ -106,7 +106,7 @@ export const ModernBookCover = ({
 
         {/* Back Side */}
         <div
-          className={`absolute inset-y-0 overflow-hidden size-full left-0 text-white flex flex-col justify-end p-6 bg-gradient-to-tr ${gradient.from} ${gradient.to} ${radiusMap[radius]}`}
+          className={`absolute inset-y-0 overflow-hidden size-full left-0 text-white flex flex-col justify-end p-6 bg-linear-to-tr ${gradient.from} ${gradient.to} ${radiusMap[radius]}`}
           style={{
             transform: "translateZ(-25px)",
             boxShadow: "-10px 0 50px 10px var(--shadowColor)",

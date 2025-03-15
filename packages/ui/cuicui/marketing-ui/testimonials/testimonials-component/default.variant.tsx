@@ -71,7 +71,7 @@ export function TestimonialsVariant1() {
                 {index >= currentSlide && (
                   <motion.div
                     animate={{ opacity: 1, x: 0, scale: 1 }}
-                    className="flex h-60 w-[24rem] flex-col justify-between rounded-lg bg-white p-4 shadow-sm dark:bg-neutral-800"
+                    className="flex h-60 w-[24rem] flex-col justify-between rounded-lg bg-white p-4 shadow-2xs dark:bg-neutral-800"
                     exit={{ opacity: 0, x: 0, scale: 0.8, rotate: 3 }}
                     initial={{ opacity: 0, x: 0, scale: 0.8 }}
                     layout={true}

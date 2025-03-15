@@ -245,8 +245,8 @@ function IconContainer({
           className={cn(
             "flex items-center justify-center",
             isActive
-              ? "*:text-neutral-100 *:dark:text-neutral-800"
-              : "*:text-neutral-800 *:dark:text-neutral-100",
+              ? "*:text-neutral-100 dark:*:text-neutral-800"
+              : "*:text-neutral-800 dark:*:text-neutral-100",
           )}
         >
           {Icon}

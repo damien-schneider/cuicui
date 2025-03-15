@@ -24,7 +24,7 @@ export function VercelNavigationVariant1() {
     >
       {dataButtons.map((button, index) => (
         <button
-          className="relative inline-flex w-fit whitespace-nowrap rounded px-2 py-1 font-medium text-neutral-500 text-sm "
+          className="relative inline-flex w-fit whitespace-nowrap rounded-xs px-2 py-1 font-medium text-neutral-500 text-sm "
           key={button.label}
           onMouseEnter={() => handleHoverButton(index)}
           type="button"

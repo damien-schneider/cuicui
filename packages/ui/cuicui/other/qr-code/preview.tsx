@@ -7,7 +7,7 @@ export default function QrCodeCategoryPreview() {
           <div
             // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
             key={`qr-code-${i}`}
-            className={"w-full h-full bg-neutral-400 rounded"}
+            className={"w-full h-full bg-neutral-400 rounded-xs"}
             style={{
               opacity: `${Math.floor(Math.random() * 90) + 10}%`,
             }}

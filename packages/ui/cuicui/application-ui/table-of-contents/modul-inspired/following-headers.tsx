@@ -227,7 +227,7 @@ const TableOfContent = ({
                   // Before element : positionning
                   "before:absolute before:top-0.5 before:right-0 before:bottom-0.5 before:left-0 ",
                   // Before element : animation
-                  "before:scale-x-75 before:scale-y-50 before:transform-gpu before:rounded-lg before:bg-neutral-400/10 before:opacity-0 before:transition-all before:duration-300 group-hover:before:scale-100 before:group-hover:opacity-100",
+                  "before:scale-x-75 before:scale-y-50 before:transform-gpu before:rounded-lg before:bg-neutral-400/10 before:opacity-0 before:transition-all before:duration-300 group-hover:before:scale-100 group-hover:before:opacity-100",
                   (heading.level === 1 || heading.level === 2) &&
                     "font-semibold",
                   heading.level === 3 && "font-normal",

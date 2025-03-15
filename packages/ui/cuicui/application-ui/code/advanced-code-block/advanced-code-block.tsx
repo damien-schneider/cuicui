@@ -36,7 +36,7 @@ export const AdvancedCodeBlock = ({
         <CopyToClipboard code={code} />
       </div>
       <div className="w-full px-1 pb-1">
-        <div className="relative isolate overflow-hidden rounded-xl border-white/80 border-t shadow-black/5 shadow-sm dark:border-white/15 dark:shadow-black/10">
+        <div className="relative isolate overflow-hidden rounded-xl border-white/80 border-t shadow-black/5 shadow-2xs dark:border-white/15 dark:shadow-black/10">
           <pre
             className="overflow-x-auto overflow-y-auto bg-white/50 py-4 text-sm text-white leading-6 dark:bg-zinc-700/50"
             style={{ paddingRight: "10px" }}

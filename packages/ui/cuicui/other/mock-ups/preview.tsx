@@ -4,7 +4,7 @@ export default function MockUpsCategoryPreview() {
       {/* Device Frame */}
       <div className="w-full h-full bg-neutral-400/40 rounded-lg relative">
         {/* Screen Content */}
-        <div className="absolute inset-1 bg-neutral-400/20 rounded" />
+        <div className="absolute inset-1 bg-neutral-400/20 rounded-xs" />
       </div>
     </div>
   );

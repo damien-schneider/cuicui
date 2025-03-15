@@ -11,7 +11,7 @@ export const CardMouseHighlightingBorder = ({
 
   return (
     <div
-      className="relative transform-gpu overflow-hidden rounded-[--radius] bg-white/10 p-2 [--radius:theme(borderRadius.2xl)] before:absolute before:inset-0 before:bg-[radial-gradient(var(--spotlight-size)_circle_at_var(--x)_var(--y),var(--spotlight-color-stops))]"
+      className="relative transform-gpu overflow-hidden rounded-(--radius) bg-white/10 p-2 [--radius:var(--radius-2xl)] before:absolute before:inset-0 before:bg-[radial-gradient(var(--spotlight-size)_circle_at_var(--x)_var(--y),var(--spotlight-color-stops))]"
       ref={parentRef}
       style={{
         //@ts-ignore : This is a valid css variable

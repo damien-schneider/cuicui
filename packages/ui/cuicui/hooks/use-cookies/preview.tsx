@@ -13,9 +13,9 @@ export default function UseCookiesPreview() {
 
       {/* "Hook" (minimal code lines) */}
       <div className="flex flex-col space-y-2">
-        <div className="w-8 h-1 bg-neutral-400/40 rounded" />
-        <div className="w-12 h-1 bg-neutral-400/40 rounded" />
-        <div className="w-6 h-1 bg-neutral-400/40 rounded" />
+        <div className="w-8 h-1 bg-neutral-400/40 rounded-xs" />
+        <div className="w-12 h-1 bg-neutral-400/40 rounded-xs" />
+        <div className="w-6 h-1 bg-neutral-400/40 rounded-xs" />
       </div>
     </div>
   );

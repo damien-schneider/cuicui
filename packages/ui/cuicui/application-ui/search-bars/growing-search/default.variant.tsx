@@ -71,9 +71,9 @@ export const SearchBar = () => {
           "-outline-offset-1 outline outline-1",
           searchSubmittedOutline
             ? "outline-blue-500 duration-150"
-            : "outline-neutral-200/0 duration-300 hover:outline-neutral-200/100 dark:outline-neutral-800/0 dark:focus:placeholder-neutral-300/100 hover:dark:outline-neutral-800/100",
+            : "outline-neutral-200/0 duration-300 hover:outline-neutral-200/100 dark:outline-neutral-800/0 dark:focus:placeholder-neutral-300/100 dark:hover:outline-neutral-800/100",
           // PLACEHOLDER
-          " placeholder-neutral-300/0 focus:placeholder-neutral-300/100 dark:placeholder-neutral-700/0 focus:dark:placeholder-neutral-700/100",
+          " placeholder-neutral-300/0 focus:placeholder-neutral-300/100 dark:placeholder-neutral-700/0 dark:focus:placeholder-neutral-700/100",
         )}
         id="search"
         onBlur={() => {
