@@ -101,7 +101,7 @@ const ArmonyCard = () => {
             className="w-32 h-fit absolute -left-4 -bottom-4 group-hover:scale-105 transition"
           />
         </div>
-        <p className="text-sm text-neutral-500 dark:text-neutral-400 group-hover:translate-2 transition">
+        <p className="text-sm text-neutral-500 dark:text-neutral-400">
           A Single Subscription. Unlimited AI Power.
         </p>
       </Link>
