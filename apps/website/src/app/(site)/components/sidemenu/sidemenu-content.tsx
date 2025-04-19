@@ -19,6 +19,7 @@ import { GlobalNavItem } from "#/src/app/(site)/components/sidemenu/navigation-i
 import { lastChangelogDate } from "#/src/changelogs/last-changelog-date";
 import NewSectionSelector from "#/src/app/(site)/components/sidemenu/new-section-selector";
 import { NewThemeSwitch } from "#/src/app/(site)/components/sidemenu/new-theme-selector";
+import { LogoArmony } from "#/src/app/(site)/components/sidemenu/logo-armony";
 
 export function SidemenuContent({
   className,
@@ -67,8 +68,43 @@ export function SidemenuContent({
           {/* <NavigationMenu /> */}
         </ScrollAreaViewport>
       </ScrollArea>
+
+      <ArmonyCard />
       <SearchMenu className="mb-2" />
       <Byline />
     </div>
   );
 }
+
+const ArmonyCard = () => {
+  return (
+    <div className="">
+      <p className="flex items-center justify-end text-sm text-neutral-500 dark:text-neutral-400 mb-2 gap-2">
+        Sponsored by{" "}
+        <Link href={"https://armony.ai"}>
+          <LogoArmony
+            size="lg"
+            className="w-28 h-fit hover:translate-x-1 transition"
+          />
+        </Link>
+      </p>
+
+      <Link
+        href={"https://armony.ai"}
+        className="w-full h-20 group bg-neutral-100 dark:bg-neutral-800 rounded-lg flex items-center justify-center relative overflow-hidden border border-neutral-400/20 hover:border-neutral-400/50 hover:bg-white dark:hover:bg-neutral-900 transition"
+      >
+        <div className="absolute -left-8 -bottom-8 blur-3xl group-hover:opacity-50 size-32 rounded-full bg-conic-180 group-hover:scale-200 from-neutral-600 via-neutral-50 to-neutral-600 dark:via-neutral-500 group-hover:translate-x-68 duration-500 transition-all" />
+
+        <div className="w-52">
+          <LogoArmony
+            size="sm"
+            className="w-32 h-fit absolute -left-4 -bottom-4 group-hover:scale-105 transition"
+          />
+        </div>
+        <p className="text-sm text-neutral-500 dark:text-neutral-400">
+          A Single Subscription. Unlimited AI Power.
+        </p>
+      </Link>
+    </div>
+  );
+};
