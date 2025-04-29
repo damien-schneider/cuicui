@@ -9,10 +9,9 @@ import type {
 import { toVarName, groupBy } from "./file-utils.ts";
 
 const variantExtensionRegex = /\.variant\.[jt]sx?$/;
-const isSection = (fileName: string) => fileName === "section.ts";
-const isCategory = (fileName: string) => fileName === "category.ts";
-// const isComponent = (fileName: string) => fileName.endsWith(".component.ts");
-const isComponent = (fileName: string) => fileName === "component.ts";
+const isSection = (fileName: string) => fileName === "section.json";
+const isCategory = (fileName: string) => fileName === "category.json";
+const isComponent = (fileName: string) => fileName === "component.json";
 const isVariant = (fileName: string) =>
   fileName.endsWith(".variant.ts") || fileName.endsWith(".variant.tsx");
 
@@ -42,15 +41,16 @@ export function discoverSections(rootDir: string): FoundSection[] {
     }
     const sectionFile = files.find((file) => isSection(file));
     if (sectionFile) {
-      const sectionVarName = toVarName(section, "section");
-      const withoutExt = removeExtension(sectionFile);
-      const importPath = `@/cuicui/${section}/${withoutExt}`;
+      const sectionData = JSON.parse(
+        fs.readFileSync(path.join(sectionPath, sectionFile), "utf-8"),
+      );
       sections.push({
-        varName: sectionVarName,
-        importPath,
+        varName: toVarName(section, "section"),
+        importPath: `@/cuicui/${section}/section`,
         sectionSlug: section,
         filename: sectionFile,
         pathname: path.join(sectionPath, sectionFile),
+        meta: sectionData.meta,
       });
     }
   }
@@ -86,20 +86,17 @@ export function discoverCategories(
 
       const categoryFile = categoryFiles.find((f) => isCategory(f));
       if (categoryFile) {
-        const categoryVarName = toVarName(
-          `${sec.sectionSlug}_${categoryDir}`,
-          "category",
+        const categoryData = JSON.parse(
+          fs.readFileSync(path.join(categoryPath, categoryFile), "utf-8"),
         );
-        const withoutExt = removeExtension(categoryFile);
-        const importPath = `@/cuicui/${sec.sectionSlug}/${categoryDir}/${withoutExt}`;
-
         categories.push({
-          varName: categoryVarName,
-          importPath,
+          varName: toVarName(`${sec.sectionSlug}_${categoryDir}`, "category"),
+          importPath: `@/cuicui/${sec.sectionSlug}/${categoryDir}/category`,
           sectionSlug: sec.sectionSlug,
           categorySlug: categoryDir,
           filename: categoryFile,
           pathname: path.join(categoryPath, categoryFile),
+          meta: categoryData.meta,
         });
       }
     }
@@ -137,48 +134,40 @@ export function discoverComponentsAndVariants(
       }
 
       const componentFile = componentFiles.find((f) => isComponent(f));
-      if (!componentFile) {
-        // Not a component directory
-        continue;
-      }
+      if (!componentFile) continue;
 
-      const componentVarName = toVarName(
-        `${cat.sectionSlug}_${cat.categorySlug}_${componentDir}`,
-        "component",
+      const componentData = JSON.parse(
+        fs.readFileSync(path.join(componentPath, componentFile), "utf-8"),
       );
-      const componentWithoutExt = removeExtension(componentFile);
-      const componentImportPath = `@/cuicui/${cat.sectionSlug}/${cat.categorySlug}/${componentDir}/${componentWithoutExt}`;
 
       components.push({
-        varName: componentVarName,
-        importPath: componentImportPath,
+        varName: toVarName(
+          `${cat.sectionSlug}_${cat.categorySlug}_${componentDir}`,
+          "component",
+        ),
+        importPath: `@/cuicui/${cat.sectionSlug}/${cat.categorySlug}/${componentDir}/component`,
         sectionSlug: cat.sectionSlug,
         categorySlug: cat.categorySlug,
         componentSlug: componentDir,
         filename: componentFile,
         pathname: path.join(componentPath, componentFile),
+        meta: componentData.meta,
       });
 
-      // Find variants
-      const variantFiles = componentFiles.filter((f) => isVariant(f));
-      for (const variantFile of variantFiles) {
-        const variantSlug = variantFile.replace(variantExtensionRegex, "");
-        const variantVarName = toVarName(
-          `${cat.sectionSlug}_${cat.categorySlug}_${componentDir}_${variantSlug}`,
-          "variant",
-        );
-        const variantWithoutExt = removeExtension(variantFile);
-        const variantImportPath = `@/cuicui/${cat.sectionSlug}/${cat.categorySlug}/${componentDir}/${variantWithoutExt}`;
-
+      // Add variants from the JSON
+      for (const variant of componentData.variants) {
         variants.push({
-          varName: variantVarName,
-          importPath: variantImportPath,
+          varName: toVarName(
+            `${cat.sectionSlug}_${cat.categorySlug}_${componentDir}_${variant.slug}`,
+            "variant",
+          ),
+          importPath: `@/cuicui/${cat.sectionSlug}/${cat.categorySlug}/${componentDir}/${variant.slug}.variant`,
           sectionSlug: cat.sectionSlug,
           categorySlug: cat.categorySlug,
           componentSlug: componentDir,
-          variantSlug: variantSlug,
-          filename: variantFile,
-          pathname: path.join(componentPath, variantFile),
+          variantSlug: variant.slug,
+          filename: `${variant.slug}.variant.tsx`,
+          pathname: variant.pathname,
         });
       }
     }
