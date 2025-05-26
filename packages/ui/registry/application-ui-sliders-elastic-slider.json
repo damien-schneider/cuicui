@@ -1,0 +1,20 @@
+{
+  "name": "elasticSlider",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { elasticSlider } from \"@/cuicui/application-ui/sliders/elastic-slider/elastic-slider\";\nexport { elasticSlider };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "application-ui/sliders/elastic-slider",
+  "variants": [
+    {
+      "name": "default",
+      "path": "application-ui/sliders/elastic-slider/default"
+    }
+  ]
+}

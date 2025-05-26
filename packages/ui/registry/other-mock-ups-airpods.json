@@ -1,0 +1,24 @@
+{
+  "name": "airpods",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { airpods } from \"@/cuicui/other/mock-ups/airpods/airpods\";\nexport { airpods };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "other/mock-ups/airpods",
+  "variants": [
+    {
+      "name": "airpods-pro",
+      "path": "other/mock-ups/airpods/airpods-pro"
+    },
+    {
+      "name": "airpods",
+      "path": "other/mock-ups/airpods/airpods"
+    }
+  ]
+}

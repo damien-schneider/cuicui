@@ -1,0 +1,20 @@
+{
+  "name": "variableFontCursor",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { variableFontCursor } from \"@/cuicui/other/font-effects/variable-font-cursor/variable-font-cursor\";\nexport { variableFontCursor };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "other/font-effects/variable-font-cursor",
+  "variants": [
+    {
+      "name": "variable-font-cursor",
+      "path": "other/font-effects/variable-font-cursor/variable-font-cursor"
+    }
+  ]
+}

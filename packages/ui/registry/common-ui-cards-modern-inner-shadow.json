@@ -1,0 +1,20 @@
+{
+  "name": "modernInnerShadow",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { modernInnerShadow } from \"@/cuicui/common-ui/cards/modern-inner-shadow/modern-inner-shadow\";\nexport { modernInnerShadow };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "common-ui/cards/modern-inner-shadow",
+  "variants": [
+    {
+      "name": "default",
+      "path": "common-ui/cards/modern-inner-shadow/default"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "codeSnippet",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { codeSnippet } from \"@/cuicui/application-ui/code/code-snippet/code-snippet\";\nexport { codeSnippet };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "application-ui/code/code-snippet",
+  "variants": [
+    {
+      "name": "code-snippet",
+      "path": "application-ui/code/code-snippet/code-snippet"
+    }
+  ]
+}

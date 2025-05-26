@@ -1,0 +1,24 @@
+{
+  "name": "followCursor",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { followCursor } from \"@/cuicui/other/cursors/follow-cursor/follow-cursor\";\nexport { followCursor };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "other/cursors/follow-cursor",
+  "variants": [
+    {
+      "name": "replace-cursor",
+      "path": "other/cursors/follow-cursor/replace-cursor"
+    },
+    {
+      "name": "with-cursor",
+      "path": "other/cursors/follow-cursor/with-cursor"
+    }
+  ]
+}

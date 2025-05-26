@@ -1,0 +1,24 @@
+{
+  "name": "animatedNoise",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { animatedNoise } from \"@/cuicui/other/creative-effects/animated-noise/animated-noise\";\nexport { animatedNoise };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "other/creative-effects/animated-noise",
+  "variants": [
+    {
+      "name": "animated-noise",
+      "path": "other/creative-effects/animated-noise/animated-noise"
+    },
+    {
+      "name": "static-noise",
+      "path": "other/creative-effects/animated-noise/static-noise"
+    }
+  ]
+}

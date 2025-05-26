@@ -1,0 +1,20 @@
+{
+  "name": "hook",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { hook } from \"@/cuicui/hooks/use-location/hook/hook\";\nexport { hook };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "hooks/use-location/hook",
+  "variants": [
+    {
+      "name": "use-location",
+      "path": "hooks/use-location/hook/use-location"
+    }
+  ]
+}

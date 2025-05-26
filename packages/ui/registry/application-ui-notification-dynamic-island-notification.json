@@ -1,0 +1,20 @@
+{
+  "name": "dynamicIslandNotification",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { dynamicIslandNotification } from \"@/cuicui/application-ui/notification/dynamic-island-notification/dynamic-island-notification\";\nexport { dynamicIslandNotification };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "application-ui/notification/dynamic-island-notification",
+  "variants": [
+    {
+      "name": "dynamic-island-notification",
+      "path": "application-ui/notification/dynamic-island-notification/dynamic-island-notification"
+    }
+  ]
+}

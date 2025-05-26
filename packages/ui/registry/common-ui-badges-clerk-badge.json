@@ -1,0 +1,20 @@
+{
+  "name": "clerkBadge",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { clerkBadge } from \"@/cuicui/common-ui/badges/clerk-badge/clerk-badge\";\nexport { clerkBadge };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "common-ui/badges/clerk-badge",
+  "variants": [
+    {
+      "name": "default",
+      "path": "common-ui/badges/clerk-badge/default"
+    }
+  ]
+}

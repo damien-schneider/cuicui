@@ -1,0 +1,566 @@
+{
+  "name": "@cuicui/ui",
+  "version": "0.0.0",
+  "components": [
+    {
+      "name": "advancedBottomActionMenu",
+      "path": "application-ui-action-menu-advanced-bottom-action-menu"
+    },
+    {
+      "name": "modernGlassyAlert",
+      "path": "application-ui-alert-modern-glassy-alert"
+    },
+    {
+      "name": "simpleAlert",
+      "path": "application-ui-alert-simple-alert"
+    },
+    {
+      "name": "halfSidedGlassmorphism",
+      "path": "application-ui-authentication-half-sided-glassmorphism"
+    },
+    {
+      "name": "batteryIndicator",
+      "path": "application-ui-battery-battery-indicator"
+    },
+    {
+      "name": "advancedCodeBlock",
+      "path": "application-ui-code-advanced-code-block"
+    },
+    {
+      "name": "codeCard",
+      "path": "application-ui-code-code-card"
+    },
+    {
+      "name": "codeSnippet",
+      "path": "application-ui-code-code-snippet"
+    },
+    {
+      "name": "inlineCode",
+      "path": "application-ui-code-inline-code"
+    },
+    {
+      "name": "arcColorPicker",
+      "path": "application-ui-color-picker-arc-color-picker"
+    },
+    {
+      "name": "macOsContextMenu",
+      "path": "application-ui-context-menu-mac-os-context-menu"
+    },
+    {
+      "name": "simpleCookieBanner",
+      "path": "application-ui-cookie-banner-simple-cookie-banner"
+    },
+    {
+      "name": "macOsDropdown",
+      "path": "application-ui-dropdown-menu-mac-os-dropdown"
+    },
+    {
+      "name": "modern-3dKbd",
+      "path": "application-ui-kbd-modern-3d-kbd"
+    },
+    {
+      "name": "modernDetailedKbd",
+      "path": "application-ui-kbd-modern-detailed-kbd"
+    },
+    {
+      "name": "dynamicIslandNotification",
+      "path": "application-ui-notification-dynamic-island-notification"
+    },
+    {
+      "name": "growingSearch",
+      "path": "application-ui-search-bars-growing-search"
+    },
+    {
+      "name": "dynamicSettings",
+      "path": "application-ui-settings-dynamic-settings"
+    },
+    {
+      "name": "reactSignature",
+      "path": "application-ui-signature-react-signature"
+    },
+    {
+      "name": "elasticSlider",
+      "path": "application-ui-sliders-elastic-slider"
+    },
+    {
+      "name": "simpleModernSlider",
+      "path": "application-ui-sliders-simple-modern-slider"
+    },
+    {
+      "name": "code",
+      "path": "application-ui-static-steppers-code"
+    },
+    {
+      "name": "modulInspired",
+      "path": "application-ui-table-of-contents-modul-inspired"
+    },
+    {
+      "name": "pillSwitchTheme",
+      "path": "application-ui-theme-pill-switch-theme"
+    },
+    {
+      "name": "themeSwitcher",
+      "path": "application-ui-theme-theme-switcher"
+    },
+    {
+      "name": "recursiveTree",
+      "path": "application-ui-tree-recursive-tree"
+    },
+    {
+      "name": "advancedBadges",
+      "path": "common-ui-badges-advanced-badges"
+    },
+    {
+      "name": "clerkBadge",
+      "path": "common-ui-badges-clerk-badge"
+    },
+    {
+      "name": "modernSimpleBadges",
+      "path": "common-ui-badges-modern-simple-badges"
+    },
+    {
+      "name": "modernSimpleQuote",
+      "path": "common-ui-blockquotes-modern-simple-quote"
+    },
+    {
+      "name": "beforeEffectButton",
+      "path": "common-ui-buttons-before-effect-button"
+    },
+    {
+      "name": "callToActionButton",
+      "path": "common-ui-buttons-call-to-action-button"
+    },
+    {
+      "name": "dualActionButton",
+      "path": "common-ui-buttons-dual-action-button"
+    },
+    {
+      "name": "githubStars",
+      "path": "common-ui-buttons-github-stars"
+    },
+    {
+      "name": "growingButton",
+      "path": "common-ui-buttons-growing-button"
+    },
+    {
+      "name": "magneticButton",
+      "path": "common-ui-buttons-magnetic-button"
+    },
+    {
+      "name": "modernAnimatedButton",
+      "path": "common-ui-buttons-modern-animated-button"
+    },
+    {
+      "name": "shinyRotatingBorderButton",
+      "path": "common-ui-buttons-shiny-rotating-border-button"
+    },
+    {
+      "name": "dynamicSquareBackground",
+      "path": "common-ui-cards-dynamic-square-background"
+    },
+    {
+      "name": "hoverEffectCard",
+      "path": "common-ui-cards-hover-effect-card"
+    },
+    {
+      "name": "modernInnerShadow",
+      "path": "common-ui-cards-modern-inner-shadow"
+    },
+    {
+      "name": "notificationCard",
+      "path": "common-ui-cards-notification-card"
+    },
+    {
+      "name": "testimonyCard",
+      "path": "common-ui-cards-testimony-card"
+    },
+    {
+      "name": "simpleCheckbox",
+      "path": "common-ui-checkboxes-simple-checkbox"
+    },
+    {
+      "name": "droppableFile",
+      "path": "common-ui-inputs-droppable-file"
+    },
+    {
+      "name": "modernSimpleInput",
+      "path": "common-ui-inputs-modern-simple-input"
+    },
+    {
+      "name": "spinnerLoader",
+      "path": "common-ui-loaders-spinner-loader"
+    },
+    {
+      "name": "threeDotSimpleLoader",
+      "path": "common-ui-loaders-three-dot-simple-loader"
+    },
+    {
+      "name": "simpleWithCta",
+      "path": "common-ui-navbar-simple-with-cta"
+    },
+    {
+      "name": "macDock",
+      "path": "common-ui-navigation-mac-dock"
+    },
+    {
+      "name": "sideMenuSmoothHover",
+      "path": "common-ui-navigation-side-menu-smooth-hover"
+    },
+    {
+      "name": "vercelNavigation",
+      "path": "common-ui-navigation-vercel-navigation"
+    },
+    {
+      "name": "classicPulse",
+      "path": "common-ui-skeletons-classic-pulse"
+    },
+    {
+      "name": "shinyGradient",
+      "path": "common-ui-skeletons-shiny-gradient"
+    },
+    {
+      "name": "hook",
+      "path": "hooks-use-auto-scroll-hook"
+    },
+    {
+      "name": "hook",
+      "path": "hooks-use-battery-hook"
+    },
+    {
+      "name": "hook",
+      "path": "hooks-use-bluetooth-hook"
+    },
+    {
+      "name": "hook",
+      "path": "hooks-use-click-outside-hook"
+    },
+    {
+      "name": "hook",
+      "path": "hooks-use-cookies-hook"
+    },
+    {
+      "name": "hook",
+      "path": "hooks-use-copy-to-clipboard-hook"
+    },
+    {
+      "name": "hook",
+      "path": "hooks-use-counter-hook"
+    },
+    {
+      "name": "hook",
+      "path": "hooks-use-debounce-hook"
+    },
+    {
+      "name": "hook",
+      "path": "hooks-use-draggable-hook"
+    },
+    {
+      "name": "hook",
+      "path": "hooks-use-drop-zone-hook"
+    },
+    {
+      "name": "hook",
+      "path": "hooks-use-event-callback-hook"
+    },
+    {
+      "name": "hook",
+      "path": "hooks-use-event-listener-hook"
+    },
+    {
+      "name": "hook",
+      "path": "hooks-use-first-visit-hook"
+    },
+    {
+      "name": "hook",
+      "path": "hooks-use-geolocation-hook"
+    },
+    {
+      "name": "hook",
+      "path": "hooks-use-history-hook"
+    },
+    {
+      "name": "hook",
+      "path": "hooks-use-in-view-hook"
+    },
+    {
+      "name": "hook",
+      "path": "hooks-use-input-value-hook"
+    },
+    {
+      "name": "hook",
+      "path": "hooks-use-isomorphic-layout-effect-hook"
+    },
+    {
+      "name": "hook",
+      "path": "hooks-use-key-press-hook"
+    },
+    {
+      "name": "hook",
+      "path": "hooks-use-konami-code-hook"
+    },
+    {
+      "name": "hook",
+      "path": "hooks-use-local-storage-hook"
+    },
+    {
+      "name": "hook",
+      "path": "hooks-use-location-hook"
+    },
+    {
+      "name": "hook",
+      "path": "hooks-use-measure-hook"
+    },
+    {
+      "name": "hook",
+      "path": "hooks-use-memory-hook"
+    },
+    {
+      "name": "hook",
+      "path": "hooks-use-mouse-hook"
+    },
+    {
+      "name": "hook",
+      "path": "hooks-use-network-status-hook"
+    },
+    {
+      "name": "hook",
+      "path": "hooks-use-online-status-hook"
+    },
+    {
+      "name": "hook",
+      "path": "hooks-use-rerender-hook"
+    },
+    {
+      "name": "hook",
+      "path": "hooks-use-session-storage-hook"
+    },
+    {
+      "name": "hook",
+      "path": "hooks-use-speech-to-text-hook"
+    },
+    {
+      "name": "hook",
+      "path": "hooks-use-step-hook"
+    },
+    {
+      "name": "hook",
+      "path": "hooks-use-stopwatch-hook"
+    },
+    {
+      "name": "hook",
+      "path": "hooks-use-text-to-speech-hook"
+    },
+    {
+      "name": "hook",
+      "path": "hooks-use-throttle-hook"
+    },
+    {
+      "name": "hook",
+      "path": "hooks-use-video-hook"
+    },
+    {
+      "name": "hook",
+      "path": "hooks-use-window-scroll-position-hook"
+    },
+    {
+      "name": "hook",
+      "path": "hooks-use-window-size-hook"
+    },
+    {
+      "name": "cylindric-3dCarousel",
+      "path": "marketing-ui-carousels-cylindric-3d-carousel"
+    },
+    {
+      "name": "simpleCarousel",
+      "path": "marketing-ui-carousels-simple-carousel"
+    },
+    {
+      "name": "animatedCards",
+      "path": "marketing-ui-features-animated-cards"
+    },
+    {
+      "name": "featureFourImages",
+      "path": "marketing-ui-features-feature-four-images"
+    },
+    {
+      "name": "stack",
+      "path": "marketing-ui-features-stack"
+    },
+    {
+      "name": "stickyFooter",
+      "path": "marketing-ui-footer-sticky-footer"
+    },
+    {
+      "name": "gradient",
+      "path": "marketing-ui-pricing-tables-gradient"
+    },
+    {
+      "name": "manyOffers",
+      "path": "marketing-ui-pricing-tables-many-offers"
+    },
+    {
+      "name": "fullSection",
+      "path": "marketing-ui-questions-and-answers-full-section"
+    },
+    {
+      "name": "gradientQna",
+      "path": "marketing-ui-questions-and-answers-gradient-qna"
+    },
+    {
+      "name": "messagingLikeQna",
+      "path": "marketing-ui-questions-and-answers-messaging-like-qna"
+    },
+    {
+      "name": "animatedCounter",
+      "path": "marketing-ui-statistics-animated-counter"
+    },
+    {
+      "name": "animatedOnScroll",
+      "path": "marketing-ui-statistics-animated-on-scroll"
+    },
+    {
+      "name": "increaseToValue",
+      "path": "marketing-ui-statistics-increase-to-value"
+    },
+    {
+      "name": "triggerOnScroll",
+      "path": "marketing-ui-statistics-trigger-on-scroll"
+    },
+    {
+      "name": "marquee",
+      "path": "marketing-ui-testimonials-marquee"
+    },
+    {
+      "name": "testimonialsComponent",
+      "path": "marketing-ui-testimonials-testimonials-component"
+    },
+    {
+      "name": "modernBookCover",
+      "path": "other-books-modern-book-cover"
+    },
+    {
+      "name": "animatedNoise",
+      "path": "other-creative-effects-animated-noise"
+    },
+    {
+      "name": "borderTrail",
+      "path": "other-creative-effects-border-trail"
+    },
+    {
+      "name": "bottomBlurOut",
+      "path": "other-creative-effects-bottom-blur-out"
+    },
+    {
+      "name": "trailingImages",
+      "path": "other-creative-effects-trailing-images"
+    },
+    {
+      "name": "wavyLine",
+      "path": "other-creative-effects-wavy-line"
+    },
+    {
+      "name": "dynamicCards",
+      "path": "other-cursors-dynamic-cards"
+    },
+    {
+      "name": "followCursor",
+      "path": "other-cursors-follow-cursor"
+    },
+    {
+      "name": "equalizer",
+      "path": "other-equalizer-equalizer"
+    },
+    {
+      "name": "glowText",
+      "path": "other-font-effects-glow-text"
+    },
+    {
+      "name": "variableFontCursor",
+      "path": "other-font-effects-variable-font-cursor"
+    },
+    {
+      "name": "airpods",
+      "path": "other-mock-ups-airpods"
+    },
+    {
+      "name": "laptops",
+      "path": "other-mock-ups-laptops"
+    },
+    {
+      "name": "smartphone",
+      "path": "other-mock-ups-smartphone"
+    },
+    {
+      "name": "dashedPattern",
+      "path": "other-patterns-dashed-pattern"
+    },
+    {
+      "name": "dotsPattern",
+      "path": "other-patterns-dots-pattern"
+    },
+    {
+      "name": "flickeringPattern",
+      "path": "other-patterns-flickering-pattern"
+    },
+    {
+      "name": "gridPattern",
+      "path": "other-patterns-grid-pattern"
+    },
+    {
+      "name": "linesPattern",
+      "path": "other-patterns-lines-pattern"
+    },
+    {
+      "name": "movingBands",
+      "path": "other-patterns-moving-bands"
+    },
+    {
+      "name": "barCodeGenerator",
+      "path": "other-qr-code-bar-code-generator"
+    },
+    {
+      "name": "qrCodeGenerator",
+      "path": "other-qr-code-qr-code-generator"
+    },
+    {
+      "name": "scrambleHover",
+      "path": "other-text-animation-scramble-hover"
+    },
+    {
+      "name": "shinyText",
+      "path": "other-text-animation-shiny-text"
+    },
+    {
+      "name": "typewritter",
+      "path": "other-text-animation-typewritter"
+    },
+    {
+      "name": "wordListSwap",
+      "path": "other-text-animation-word-list-swap"
+    },
+    {
+      "name": "blurAppear",
+      "path": "other-transition-wrappers-blur-appear"
+    },
+    {
+      "name": "textEffectWrapper",
+      "path": "other-transition-wrappers-text-effect-wrapper"
+    },
+    {
+      "name": "catchError",
+      "path": "utils-catch-error-catch-error"
+    },
+    {
+      "name": "cn",
+      "path": "utils-cn-cn"
+    },
+    {
+      "name": "createError",
+      "path": "utils-create-error-create-error"
+    },
+    {
+      "name": "sleep",
+      "path": "utils-sleep-sleep"
+    }
+  ]
+}

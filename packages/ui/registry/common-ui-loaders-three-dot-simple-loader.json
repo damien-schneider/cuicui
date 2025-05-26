@@ -1,0 +1,28 @@
+{
+  "name": "threeDotSimpleLoader",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { threeDotSimpleLoader } from \"@/cuicui/common-ui/loaders/three-dot-simple-loader/three-dot-simple-loader\";\nexport { threeDotSimpleLoader };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "common-ui/loaders/three-dot-simple-loader",
+  "variants": [
+    {
+      "name": "nine-dot-grid-random",
+      "path": "common-ui/loaders/three-dot-simple-loader/nine-dot-grid-random"
+    },
+    {
+      "name": "three-dot-loader-growing",
+      "path": "common-ui/loaders/three-dot-simple-loader/three-dot-loader-growing"
+    },
+    {
+      "name": "three-dot-simple-loader",
+      "path": "common-ui/loaders/three-dot-simple-loader/three-dot-simple-loader"
+    }
+  ]
+}

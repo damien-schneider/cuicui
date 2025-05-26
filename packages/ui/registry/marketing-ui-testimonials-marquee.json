@@ -1,0 +1,28 @@
+{
+  "name": "marquee",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { marquee } from \"@/cuicui/marketing-ui/testimonials/marquee/marquee\";\nexport { marquee };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "marketing-ui/testimonials/marquee",
+  "variants": [
+    {
+      "name": "horizontal",
+      "path": "marketing-ui/testimonials/marquee/horizontal"
+    },
+    {
+      "name": "vertical",
+      "path": "marketing-ui/testimonials/marquee/vertical"
+    },
+    {
+      "name": "with-framer-motion",
+      "path": "marketing-ui/testimonials/marquee/with-framer-motion"
+    }
+  ]
+}

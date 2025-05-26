@@ -1,0 +1,24 @@
+{
+  "name": "simpleModernSlider",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { simpleModernSlider } from \"@/cuicui/application-ui/sliders/simple-modern-slider/simple-modern-slider\";\nexport { simpleModernSlider };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "application-ui/sliders/simple-modern-slider",
+  "variants": [
+    {
+      "name": "simple-modern-slider-with-max",
+      "path": "application-ui/sliders/simple-modern-slider/simple-modern-slider-with-max"
+    },
+    {
+      "name": "simple-modern-slider",
+      "path": "application-ui/sliders/simple-modern-slider/simple-modern-slider"
+    }
+  ]
+}

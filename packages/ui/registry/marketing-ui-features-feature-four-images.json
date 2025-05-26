@@ -1,0 +1,24 @@
+{
+  "name": "featureFourImages",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { featureFourImages } from \"@/cuicui/marketing-ui/features/feature-four-images/feature-four-images\";\nexport { featureFourImages };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "marketing-ui/features/feature-four-images",
+  "variants": [
+    {
+      "name": "variant1",
+      "path": "marketing-ui/features/feature-four-images/variant1"
+    },
+    {
+      "name": "variant2",
+      "path": "marketing-ui/features/feature-four-images/variant2"
+    }
+  ]
+}

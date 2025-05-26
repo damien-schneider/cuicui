@@ -1,0 +1,24 @@
+{
+  "name": "dynamicCards",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { dynamicCards } from \"@/cuicui/other/cursors/dynamic-cards/dynamic-cards\";\nexport { dynamicCards };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "other/cursors/dynamic-cards",
+  "variants": [
+    {
+      "name": "gradient-card-effect",
+      "path": "other/cursors/dynamic-cards/gradient-card-effect"
+    },
+    {
+      "name": "only-border-card-effect",
+      "path": "other/cursors/dynamic-cards/only-border-card-effect"
+    }
+  ]
+}

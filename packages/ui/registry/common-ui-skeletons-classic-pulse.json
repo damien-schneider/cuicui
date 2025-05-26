@@ -1,0 +1,20 @@
+{
+  "name": "classicPulse",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { classicPulse } from \"@/cuicui/common-ui/skeletons/classic-pulse/classic-pulse\";\nexport { classicPulse };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "common-ui/skeletons/classic-pulse",
+  "variants": [
+    {
+      "name": "default",
+      "path": "common-ui/skeletons/classic-pulse/default"
+    }
+  ]
+}

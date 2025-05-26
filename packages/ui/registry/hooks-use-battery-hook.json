@@ -1,0 +1,20 @@
+{
+  "name": "hook",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { hook } from \"@/cuicui/hooks/use-battery/hook/hook\";\nexport { hook };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "hooks/use-battery/hook",
+  "variants": [
+    {
+      "name": "use-battery",
+      "path": "hooks/use-battery/hook/use-battery"
+    }
+  ]
+}

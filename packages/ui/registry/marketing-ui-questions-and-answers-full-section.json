@@ -1,0 +1,20 @@
+{
+  "name": "fullSection",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { fullSection } from \"@/cuicui/marketing-ui/questions-and-answers/full-section/full-section\";\nexport { fullSection };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "marketing-ui/questions-and-answers/full-section",
+  "variants": [
+    {
+      "name": "full-section",
+      "path": "marketing-ui/questions-and-answers/full-section/full-section"
+    }
+  ]
+}

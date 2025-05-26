@@ -1,0 +1,20 @@
+{
+  "name": "glowText",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { glowText } from \"@/cuicui/other/font-effects/glow-text/glow-text\";\nexport { glowText };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "other/font-effects/glow-text",
+  "variants": [
+    {
+      "name": "glow-text",
+      "path": "other/font-effects/glow-text/glow-text"
+    }
+  ]
+}

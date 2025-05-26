@@ -1,0 +1,20 @@
+{
+  "name": "dotsPattern",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { dotsPattern } from \"@/cuicui/other/patterns/dots-pattern/dots-pattern\";\nexport { dotsPattern };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "other/patterns/dots-pattern",
+  "variants": [
+    {
+      "name": "dots-pattern",
+      "path": "other/patterns/dots-pattern/dots-pattern"
+    }
+  ]
+}

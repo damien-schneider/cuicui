@@ -1,0 +1,28 @@
+{
+  "name": "textEffectWrapper",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { textEffectWrapper } from \"@/cuicui/other/transition-wrappers/text-effect-wrapper/text-effect-wrapper\";\nexport { textEffectWrapper };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "other/transition-wrappers/text-effect-wrapper",
+  "variants": [
+    {
+      "name": "per-char",
+      "path": "other/transition-wrappers/text-effect-wrapper/per-char"
+    },
+    {
+      "name": "per-line",
+      "path": "other/transition-wrappers/text-effect-wrapper/per-line"
+    },
+    {
+      "name": "per-word",
+      "path": "other/transition-wrappers/text-effect-wrapper/per-word"
+    }
+  ]
+}

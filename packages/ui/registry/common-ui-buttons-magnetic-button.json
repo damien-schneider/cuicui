@@ -1,0 +1,24 @@
+{
+  "name": "magneticButton",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { magneticButton } from \"@/cuicui/common-ui/buttons/magnetic-button/magnetic-button\";\nexport { magneticButton };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "common-ui/buttons/magnetic-button",
+  "variants": [
+    {
+      "name": "magnetic-background-button",
+      "path": "common-ui/buttons/magnetic-button/magnetic-background-button"
+    },
+    {
+      "name": "magnetic-button",
+      "path": "common-ui/buttons/magnetic-button/magnetic-button"
+    }
+  ]
+}

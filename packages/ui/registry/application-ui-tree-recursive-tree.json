@@ -1,0 +1,24 @@
+{
+  "name": "recursiveTree",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { recursiveTree } from \"@/cuicui/application-ui/tree/recursive-tree/recursive-tree\";\nexport { recursiveTree };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "application-ui/tree/recursive-tree",
+  "variants": [
+    {
+      "name": "recursive-tree-less-animations",
+      "path": "application-ui/tree/recursive-tree/recursive-tree-less-animations"
+    },
+    {
+      "name": "recursive-tree",
+      "path": "application-ui/tree/recursive-tree/recursive-tree"
+    }
+  ]
+}

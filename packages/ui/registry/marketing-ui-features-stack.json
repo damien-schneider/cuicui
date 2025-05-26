@@ -1,0 +1,20 @@
+{
+  "name": "stack",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { stack } from \"@/cuicui/marketing-ui/features/stack/stack\";\nexport { stack };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "marketing-ui/features/stack",
+  "variants": [
+    {
+      "name": "stack",
+      "path": "marketing-ui/features/stack/stack"
+    }
+  ]
+}

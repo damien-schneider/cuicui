@@ -1,0 +1,24 @@
+{
+  "name": "modernSimpleBadges",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { modernSimpleBadges } from \"@/cuicui/common-ui/badges/modern-simple-badges/modern-simple-badges\";\nexport { modernSimpleBadges };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "common-ui/badges/modern-simple-badges",
+  "variants": [
+    {
+      "name": "amber",
+      "path": "common-ui/badges/modern-simple-badges/amber"
+    },
+    {
+      "name": "red",
+      "path": "common-ui/badges/modern-simple-badges/red"
+    }
+  ]
+}

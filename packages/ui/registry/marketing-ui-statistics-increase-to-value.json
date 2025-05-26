@@ -1,0 +1,20 @@
+{
+  "name": "increaseToValue",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { increaseToValue } from \"@/cuicui/marketing-ui/statistics/increase-to-value/increase-to-value\";\nexport { increaseToValue };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "marketing-ui/statistics/increase-to-value",
+  "variants": [
+    {
+      "name": "default",
+      "path": "marketing-ui/statistics/increase-to-value/default"
+    }
+  ]
+}

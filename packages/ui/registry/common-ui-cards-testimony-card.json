@@ -1,0 +1,20 @@
+{
+  "name": "testimonyCard",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { testimonyCard } from \"@/cuicui/common-ui/cards/testimony-card/testimony-card\";\nexport { testimonyCard };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "common-ui/cards/testimony-card",
+  "variants": [
+    {
+      "name": "default",
+      "path": "common-ui/cards/testimony-card/default"
+    }
+  ]
+}

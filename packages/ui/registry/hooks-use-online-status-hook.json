@@ -1,0 +1,20 @@
+{
+  "name": "hook",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { hook } from \"@/cuicui/hooks/use-online-status/hook/hook\";\nexport { hook };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "hooks/use-online-status/hook",
+  "variants": [
+    {
+      "name": "use-online-status",
+      "path": "hooks/use-online-status/hook/use-online-status"
+    }
+  ]
+}

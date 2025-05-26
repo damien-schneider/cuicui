@@ -5,10 +5,11 @@
   "private": true,
   "scripts": {
     "_build": "pnpm pre-build",
-    "pre-build": "pnpm generate-preview-categories && pnpm generate-section-list",
+    "pre-build": "pnpm generate-preview-categories && pnpm generate-section-list && pnpm build-registry",
     "type-check": "tsc --noEmit",
     "generate-preview-categories": "deno run --allow-read --allow-write scripts/generate-preview-categories.ts && pnpm biome format --write ./categories-previews-list.ts",
-    "generate-section-list": "deno run --allow-read --allow-write scripts/generate-section-list/main.ts && pnpm biome format --write ./section-list.ts"
+    "generate-section-list": "deno run --allow-read --allow-write scripts/generate-section-list/main.ts && pnpm biome format --write ./section-list.ts",
+    "build-registry": "node scripts/build-shadcn-registry.js"
   },
   "license": "MIT",
   "peerDependencies": {

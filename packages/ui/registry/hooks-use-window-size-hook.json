@@ -1,0 +1,20 @@
+{
+  "name": "hook",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { hook } from \"@/cuicui/hooks/use-window-size/hook/hook\";\nexport { hook };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "hooks/use-window-size/hook",
+  "variants": [
+    {
+      "name": "use-window-size",
+      "path": "hooks/use-window-size/hook/use-window-size"
+    }
+  ]
+}

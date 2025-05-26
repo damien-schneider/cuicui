@@ -1,0 +1,7 @@
+{
+  "$schema": "https://ui.shadcn.com/registry.schema.json",
+  "name": "@cuicui/ui",
+  "description": "Cuicui UI components library",
+  "version": "0.0.0",
+  "registryUrl": "https://github.com/damien-schneider/cuicui/packages/ui/registry"
+}

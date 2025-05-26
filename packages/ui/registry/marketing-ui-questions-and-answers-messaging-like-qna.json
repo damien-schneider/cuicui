@@ -1,0 +1,20 @@
+{
+  "name": "messagingLikeQna",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { messagingLikeQna } from \"@/cuicui/marketing-ui/questions-and-answers/messaging-like-qna/messaging-like-qna\";\nexport { messagingLikeQna };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "marketing-ui/questions-and-answers/messaging-like-qna",
+  "variants": [
+    {
+      "name": "messaging-like-qna",
+      "path": "marketing-ui/questions-and-answers/messaging-like-qna/messaging-like-qna"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "hook",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { hook } from \"@/cuicui/hooks/use-bluetooth/hook/hook\";\nexport { hook };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "hooks/use-bluetooth/hook",
+  "variants": [
+    {
+      "name": "use-bluetooh",
+      "path": "hooks/use-bluetooth/hook/use-bluetooh"
+    }
+  ]
+}

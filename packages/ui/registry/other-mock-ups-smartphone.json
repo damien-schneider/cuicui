@@ -1,0 +1,24 @@
+{
+  "name": "smartphone",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { smartphone } from \"@/cuicui/other/mock-ups/smartphone/smartphone\";\nexport { smartphone };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "other/mock-ups/smartphone",
+  "variants": [
+    {
+      "name": "google-pixel",
+      "path": "other/mock-ups/smartphone/google-pixel"
+    },
+    {
+      "name": "iphone14",
+      "path": "other/mock-ups/smartphone/iphone14"
+    }
+  ]
+}

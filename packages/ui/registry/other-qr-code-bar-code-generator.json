@@ -1,0 +1,20 @@
+{
+  "name": "barCodeGenerator",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { barCodeGenerator } from \"@/cuicui/other/qr-code/bar-code-generator/bar-code-generator\";\nexport { barCodeGenerator };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "other/qr-code/bar-code-generator",
+  "variants": [
+    {
+      "name": "bar-code-generator",
+      "path": "other/qr-code/bar-code-generator/bar-code-generator"
+    }
+  ]
+}

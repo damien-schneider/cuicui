@@ -1,0 +1,20 @@
+{
+  "name": "reactSignature",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { reactSignature } from \"@/cuicui/application-ui/signature/react-signature/react-signature\";\nexport { reactSignature };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "application-ui/signature/react-signature",
+  "variants": [
+    {
+      "name": "react-signature",
+      "path": "application-ui/signature/react-signature/react-signature"
+    }
+  ]
+}

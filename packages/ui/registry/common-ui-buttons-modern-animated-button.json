@@ -1,0 +1,20 @@
+{
+  "name": "modernAnimatedButton",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { modernAnimatedButton } from \"@/cuicui/common-ui/buttons/modern-animated-button/modern-animated-button\";\nexport { modernAnimatedButton };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "common-ui/buttons/modern-animated-button",
+  "variants": [
+    {
+      "name": "default",
+      "path": "common-ui/buttons/modern-animated-button/default"
+    }
+  ]
+}

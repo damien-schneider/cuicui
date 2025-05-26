@@ -1,0 +1,20 @@
+{
+  "name": "linesPattern",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { linesPattern } from \"@/cuicui/other/patterns/lines-pattern/lines-pattern\";\nexport { linesPattern };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "other/patterns/lines-pattern",
+  "variants": [
+    {
+      "name": "default",
+      "path": "other/patterns/lines-pattern/default"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "simpleCarousel",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { simpleCarousel } from \"@/cuicui/marketing-ui/carousels/simple-carousel/simple-carousel\";\nexport { simpleCarousel };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "marketing-ui/carousels/simple-carousel",
+  "variants": [
+    {
+      "name": "simple-carousel",
+      "path": "marketing-ui/carousels/simple-carousel/simple-carousel"
+    }
+  ]
+}
