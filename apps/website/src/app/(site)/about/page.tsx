@@ -47,7 +47,7 @@ const aboutContent = {
     },
     {
       title: "Promoting good practices",
-      text: "I are committed to promoting good coding practices. Our components are built with clean, efficient, and optimized code. I avoid bloat and focus on delivering quality over quantity. Each component is a showcase of how to write effective and maintainable code.",
+      text: "I am committed to promoting good coding practices. Our components are built with clean, efficient, and optimized code. I avoid bloat and focus on delivering quality over quantity. Each component is a showcase of how to write effective and maintainable code.",
     },
     {
       title: "Diverse artistic directions",
@@ -69,7 +69,7 @@ const aboutContent = {
     },
   ],
   footer: {
-    text: "&copy; 2024 CuiCui. All rights reserved. (on the site, I mean of course there is no right on copy pasted code)",
+    text: "© 2024 CuiCui. All rights reserved. (on the site, I mean of course there is no right on copy pasted code)",
   },
 };
 
