@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "use-battery",
+  "type": "registry:block",
+  "title": "Use Battery",
+  "author": "Damien Schneider",
+  "description": "A hook to get battery informations",
+  "files": [
+    {
+      "path": "src/use-battery/index.tsx",
+      "content": "\"use client\";\nimport React from \"react\";\n\nexport interface BatteryState {\n  isSupported: boolean;\n  isLoading: boolean;\n  level: number | null;\n  isCharging: boolean | null;\n  chargingTime: number | null;\n  dischargingTime: number | null;\n}\n\n// Define the BatteryManager interface\nexport interface BatteryManager extends EventTarget {\n  level: number;\n  charging: boolean;\n  chargingTime: number;\n  dischargingTime: number;\n  addEventListener(\n    type:\n      | \"levelchange\"\n      | \"chargingchange\"\n      | \"chargingtimechange\"\n      | \"dischargingtimechange\",\n    listener: (this: BatteryManager, ev: Event) => void,\n  ): void;\n  removeEventListener(\n    type:\n      | \"levelchange\"\n      | \"chargingchange\"\n      | \"chargingtimechange\"\n      | \"dischargingtimechange\",\n    listener: (this: BatteryManager, ev: Event) => void,\n  ): void;\n}\n\n// Extend Navigator interface to include getBattery method\nexport interface Navigator {\n  getBattery?: () => Promise<BatteryManager>;\n}\n\n// Extend window.navigator with the getBattery method\ndeclare const navigator: Navigator;\n\nexport function useBattery() {\n  const [state, setState] = React.useState<BatteryState>({\n    isSupported: true,\n    isLoading: true,\n    level: null,\n    isCharging: null,\n    chargingTime: null,\n    dischargingTime: null,\n  });\n\n  React.useEffect(() => {\n    if (!navigator.getBattery) {\n      setState((s) => ({\n        ...s,\n        isSupported: false,\n        isLoading: false,\n      }));\n      return;\n    }\n\n    let battery: BatteryManager | null = null;\n\n    const handleChange = () => {\n      if (battery) {\n        setState({\n          isSupported: true,\n          isLoading: false,\n          level: battery.level,\n          isCharging: battery.charging,\n          chargingTime: battery.chargingTime,\n          dischargingTime: battery.dischargingTime,\n        });\n      }\n    };\n\n    navigator.getBattery().then((b) => {\n      battery = b;\n      handleChange();\n\n      b.addEventListener(\"levelchange\", handleChange);\n      b.addEventListener(\"chargingchange\", handleChange);\n      b.addEventListener(\"chargingtimechange\", handleChange);\n      b.addEventListener(\"dischargingtimechange\", handleChange);\n    });\n\n    return () => {\n      if (battery) {\n        battery.removeEventListener(\"levelchange\", handleChange);\n        battery.removeEventListener(\"chargingchange\", handleChange);\n        battery.removeEventListener(\"chargingtimechange\", handleChange);\n        battery.removeEventListener(\"dischargingtimechange\", handleChange);\n      }\n    };\n  }, []);\n\n  return state;\n}\n",
+      "type": "registry:component"
+    }
+  ]
+}

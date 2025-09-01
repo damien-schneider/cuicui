@@ -1,0 +1,72 @@
+{
+	"$schema": "https://ui.shadcn.com/schema/registry.json",
+	"name": "acme",
+	"homepage": "https://cuicui.day",
+	"items": [
+		{
+			"name": "use-battery",
+			"type": "registry:block",
+			"title": "Use Battery",
+			"description": "A hook to get battery informations",
+			"author": "Damien Schneider",
+			"files": [
+				{
+					"path": "src/use-battery/index.tsx",
+					"type": "registry:component"
+				}
+			]
+		},
+		{
+			"name": "use-bluetooth",
+			"type": "registry:block",
+			"title": "Use Bluetooth",
+			"description": "A hook to interact with Bluetooth devices via Web Bluetooth API",
+			"author": "Damien Schneider",
+			"files": [
+				{
+					"path": "src/use-bluetooth/index.ts",
+					"type": "registry:component"
+				}
+			]
+		},
+		{
+			"name": "use-click-outside",
+			"type": "registry:block",
+			"title": "Use Click Outside",
+			"description": "A hook to detect clicks outside of a specified element",
+			"author": "Damien Schneider",
+			"files": [
+				{
+					"path": "src/use-click-outside/index.ts",
+					"type": "registry:component"
+				}
+			]
+		},
+		{
+			"name": "use-event-listener",
+			"type": "registry:block",
+			"title": "Use Event Listener",
+			"description": "A hook to add event listeners to DOM elements with proper cleanup",
+			"author": "Damien Schneider",
+			"files": [
+				{
+					"path": "src/use-event-listener/index.ts",
+					"type": "registry:component"
+				}
+			]
+		},
+		{
+			"name": "use-isomorphic-layout-effect",
+			"type": "registry:block",
+			"title": "Use Isomorphic Layout Effect",
+			"description": "A hook that uses useLayoutEffect on the client and useEffect on the server",
+			"author": "Damien Schneider",
+			"files": [
+				{
+					"path": "src/use-isomorphic-layout-effect/index.ts",
+					"type": "registry:component"
+				}
+			]
+		}
+	]
+}

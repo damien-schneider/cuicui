@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "use-click-outside",
+  "type": "registry:block",
+  "title": "Use Click Outside",
+  "author": "Damien Schneider",
+  "description": "A hook to detect clicks outside of a specified element",
+  "files": [
+    {
+      "path": "src/use-click-outside/index.ts",
+      "content": "\"use client\";\nimport { useEventListener } from \"@/cuicui/hooks/use-event-listener\";\nimport type { RefObject } from \"react\";\n\ntype EventType =\n\t| \"mousedown\"\n\t| \"mouseup\"\n\t| \"touchstart\"\n\t| \"touchend\"\n\t| \"focusin\"\n\t| \"focusout\";\n\nexport function useOnClickOutside<T extends HTMLElement = HTMLElement>(\n\tref: RefObject<T | null> | RefObject<T | null>[],\n\thandler: (event: MouseEvent | TouchEvent | FocusEvent) => void,\n\teventType: EventType = \"mousedown\",\n\teventListenerOptions: AddEventListenerOptions = {},\n): void {\n\tuseEventListener(\n\t\teventType,\n\t\t(event) => {\n\t\t\tconst target = event.target as Node;\n\n\t\t\t// Do nothing if the target is not connected element with document\n\t\t\tif (!target?.isConnected) {\n\t\t\t\treturn;\n\t\t\t}\n\n\t\t\tconst isOutside = Array.isArray(ref)\n\t\t\t\t? ref\n\t\t\t\t\t\t.filter((r) => Boolean(r.current))\n\t\t\t\t\t\t.every((r) => r.current && !r.current.contains(target))\n\t\t\t\t: ref.current && !ref.current.contains(target);\n\n\t\t\tif (isOutside) {\n\t\t\t\thandler(event);\n\t\t\t}\n\t\t},\n\t\tundefined,\n\t\teventListenerOptions,\n\t);\n}\n",
+      "type": "registry:component"
+    }
+  ]
+}

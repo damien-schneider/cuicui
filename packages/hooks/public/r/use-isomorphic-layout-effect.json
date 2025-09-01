@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "use-isomorphic-layout-effect",
+  "type": "registry:block",
+  "title": "Use Isomorphic Layout Effect",
+  "author": "Damien Schneider",
+  "description": "A hook that uses useLayoutEffect on the client and useEffect on the server",
+  "files": [
+    {
+      "path": "src/use-isomorphic-layout-effect/index.ts",
+      "content": "import { useEffect, useLayoutEffect } from \"react\";\n\nexport const useIsomorphicLayoutEffect =\n\ttypeof window !== \"undefined\" ? useLayoutEffect : useEffect;\n",
+      "type": "registry:component"
+    }
+  ]
+}
