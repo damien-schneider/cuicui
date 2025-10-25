@@ -1,0 +1,20 @@
+{
+  "name": "modernSimpleInput",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { modernSimpleInput } from \"@/cuicui/common-ui/inputs/modern-simple-input/modern-simple-input\";\nexport { modernSimpleInput };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "common-ui/inputs/modern-simple-input",
+  "variants": [
+    {
+      "name": "simple-modern-input",
+      "path": "common-ui/inputs/modern-simple-input/simple-modern-input"
+    }
+  ]
+}

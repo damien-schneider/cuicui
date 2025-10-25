@@ -1,0 +1,20 @@
+{
+  "name": "shinyRotatingBorderButton",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { shinyRotatingBorderButton } from \"@/cuicui/common-ui/buttons/shiny-rotating-border-button/shiny-rotating-border-button\";\nexport { shinyRotatingBorderButton };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "common-ui/buttons/shiny-rotating-border-button",
+  "variants": [
+    {
+      "name": "shiny-rotating-border-button",
+      "path": "common-ui/buttons/shiny-rotating-border-button/shiny-rotating-border-button"
+    }
+  ]
+}

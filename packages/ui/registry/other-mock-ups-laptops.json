@@ -1,0 +1,20 @@
+{
+  "name": "laptops",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { laptops } from \"@/cuicui/other/mock-ups/laptops/laptops\";\nexport { laptops };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "other/mock-ups/laptops",
+  "variants": [
+    {
+      "name": "mackbook",
+      "path": "other/mock-ups/laptops/mackbook"
+    }
+  ]
+}

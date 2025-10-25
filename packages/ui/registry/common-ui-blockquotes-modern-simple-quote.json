@@ -1,0 +1,20 @@
+{
+  "name": "modernSimpleQuote",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { modernSimpleQuote } from \"@/cuicui/common-ui/blockquotes/modern-simple-quote/modern-simple-quote\";\nexport { modernSimpleQuote };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "common-ui/blockquotes/modern-simple-quote",
+  "variants": [
+    {
+      "name": "default",
+      "path": "common-ui/blockquotes/modern-simple-quote/default"
+    }
+  ]
+}

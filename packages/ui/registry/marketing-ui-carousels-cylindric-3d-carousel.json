@@ -1,0 +1,20 @@
+{
+  "name": "cylindric-3dCarousel",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { cylindric-3dCarousel } from \"@/cuicui/marketing-ui/carousels/cylindric-3d-carousel/cylindric-3d-carousel\";\nexport { cylindric-3dCarousel };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "marketing-ui/carousels/cylindric-3d-carousel",
+  "variants": [
+    {
+      "name": "default",
+      "path": "marketing-ui/carousels/cylindric-3d-carousel/default"
+    }
+  ]
+}

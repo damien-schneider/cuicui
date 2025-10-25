@@ -1,0 +1,20 @@
+{
+  "name": "modernDetailedKbd",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { modernDetailedKbd } from \"@/cuicui/application-ui/kbd/modern-detailed-kbd/modern-detailed-kbd\";\nexport { modernDetailedKbd };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "application-ui/kbd/modern-detailed-kbd",
+  "variants": [
+    {
+      "name": "default",
+      "path": "application-ui/kbd/modern-detailed-kbd/default"
+    }
+  ]
+}

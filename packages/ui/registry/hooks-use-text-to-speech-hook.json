@@ -1,0 +1,24 @@
+{
+  "name": "hook",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { hook } from \"@/cuicui/hooks/use-text-to-speech/hook/hook\";\nexport { hook };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "hooks/use-text-to-speech/hook",
+  "variants": [
+    {
+      "name": "advanced-demo",
+      "path": "hooks/use-text-to-speech/hook/advanced-demo"
+    },
+    {
+      "name": "use-text-to-speech",
+      "path": "hooks/use-text-to-speech/hook/use-text-to-speech"
+    }
+  ]
+}

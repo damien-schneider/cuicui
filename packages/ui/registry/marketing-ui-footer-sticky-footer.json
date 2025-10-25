@@ -1,0 +1,20 @@
+{
+  "name": "stickyFooter",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { stickyFooter } from \"@/cuicui/marketing-ui/footer/sticky-footer/sticky-footer\";\nexport { stickyFooter };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "marketing-ui/footer/sticky-footer",
+  "variants": [
+    {
+      "name": "sticky-footer",
+      "path": "marketing-ui/footer/sticky-footer/sticky-footer"
+    }
+  ]
+}

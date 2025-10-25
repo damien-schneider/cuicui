@@ -1,0 +1,24 @@
+{
+  "name": "githubStars",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { githubStars } from \"@/cuicui/common-ui/buttons/github-stars/github-stars\";\nexport { githubStars };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "common-ui/buttons/github-stars",
+  "variants": [
+    {
+      "name": "github-stars",
+      "path": "common-ui/buttons/github-stars/github-stars"
+    },
+    {
+      "name": "gradient-container",
+      "path": "common-ui/buttons/github-stars/gradient-container"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "dashedPattern",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { dashedPattern } from \"@/cuicui/other/patterns/dashed-pattern/dashed-pattern\";\nexport { dashedPattern };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "other/patterns/dashed-pattern",
+  "variants": [
+    {
+      "name": "default",
+      "path": "other/patterns/dashed-pattern/default"
+    }
+  ]
+}

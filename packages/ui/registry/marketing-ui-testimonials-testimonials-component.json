@@ -1,0 +1,20 @@
+{
+  "name": "testimonialsComponent",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { testimonialsComponent } from \"@/cuicui/marketing-ui/testimonials/testimonials-component/testimonials-component\";\nexport { testimonialsComponent };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "marketing-ui/testimonials/testimonials-component",
+  "variants": [
+    {
+      "name": "default",
+      "path": "marketing-ui/testimonials/testimonials-component/default"
+    }
+  ]
+}

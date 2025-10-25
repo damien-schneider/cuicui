@@ -1,0 +1,24 @@
+{
+  "name": "shinyGradient",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { shinyGradient } from \"@/cuicui/common-ui/skeletons/shiny-gradient/shiny-gradient\";\nexport { shinyGradient };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "common-ui/skeletons/shiny-gradient",
+  "variants": [
+    {
+      "name": "horizontal",
+      "path": "common-ui/skeletons/shiny-gradient/horizontal"
+    },
+    {
+      "name": "vertical",
+      "path": "common-ui/skeletons/shiny-gradient/vertical"
+    }
+  ]
+}

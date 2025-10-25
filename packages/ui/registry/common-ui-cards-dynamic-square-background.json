@@ -1,0 +1,20 @@
+{
+  "name": "dynamicSquareBackground",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { dynamicSquareBackground } from \"@/cuicui/common-ui/cards/dynamic-square-background/dynamic-square-background\";\nexport { dynamicSquareBackground };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "common-ui/cards/dynamic-square-background",
+  "variants": [
+    {
+      "name": "dynamic-square-background",
+      "path": "common-ui/cards/dynamic-square-background/dynamic-square-background"
+    }
+  ]
+}

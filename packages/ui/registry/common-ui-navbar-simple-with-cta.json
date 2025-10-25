@@ -1,0 +1,20 @@
+{
+  "name": "simpleWithCta",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { simpleWithCta } from \"@/cuicui/common-ui/navbar/simple-with-cta/simple-with-cta\";\nexport { simpleWithCta };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "common-ui/navbar/simple-with-cta",
+  "variants": [
+    {
+      "name": "default",
+      "path": "common-ui/navbar/simple-with-cta/default"
+    }
+  ]
+}

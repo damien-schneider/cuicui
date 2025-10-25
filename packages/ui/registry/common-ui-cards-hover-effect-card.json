@@ -1,0 +1,20 @@
+{
+  "name": "hoverEffectCard",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { hoverEffectCard } from \"@/cuicui/common-ui/cards/hover-effect-card/hover-effect-card\";\nexport { hoverEffectCard };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "common-ui/cards/hover-effect-card",
+  "variants": [
+    {
+      "name": "hover-effect-card",
+      "path": "common-ui/cards/hover-effect-card/hover-effect-card"
+    }
+  ]
+}

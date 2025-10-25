@@ -1,0 +1,28 @@
+{
+  "name": "spinnerLoader",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { spinnerLoader } from \"@/cuicui/common-ui/loaders/spinner-loader/spinner-loader\";\nexport { spinnerLoader };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "common-ui/loaders/spinner-loader",
+  "variants": [
+    {
+      "name": "circular-bars-spinner-loader",
+      "path": "common-ui/loaders/spinner-loader/circular-bars-spinner-loader"
+    },
+    {
+      "name": "dual-ring-spinner-loader",
+      "path": "common-ui/loaders/spinner-loader/dual-ring-spinner-loader"
+    },
+    {
+      "name": "spinner-loader",
+      "path": "common-ui/loaders/spinner-loader/spinner-loader"
+    }
+  ]
+}

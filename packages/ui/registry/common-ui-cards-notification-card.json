@@ -1,0 +1,20 @@
+{
+  "name": "notificationCard",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { notificationCard } from \"@/cuicui/common-ui/cards/notification-card/notification-card\";\nexport { notificationCard };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "common-ui/cards/notification-card",
+  "variants": [
+    {
+      "name": "notification-card",
+      "path": "common-ui/cards/notification-card/notification-card"
+    }
+  ]
+}

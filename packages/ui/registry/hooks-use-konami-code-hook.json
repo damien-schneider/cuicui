@@ -1,0 +1,20 @@
+{
+  "name": "hook",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { hook } from \"@/cuicui/hooks/use-konami-code/hook/hook\";\nexport { hook };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "hooks/use-konami-code/hook",
+  "variants": [
+    {
+      "name": "use-konami-code",
+      "path": "hooks/use-konami-code/hook/use-konami-code"
+    }
+  ]
+}

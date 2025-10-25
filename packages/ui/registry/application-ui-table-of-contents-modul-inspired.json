@@ -1,0 +1,20 @@
+{
+  "name": "modulInspired",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { modulInspired } from \"@/cuicui/application-ui/table-of-contents/modul-inspired/modul-inspired\";\nexport { modulInspired };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "application-ui/table-of-contents/modul-inspired",
+  "variants": [
+    {
+      "name": "following-header",
+      "path": "application-ui/table-of-contents/modul-inspired/following-header"
+    }
+  ]
+}

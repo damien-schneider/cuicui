@@ -1,0 +1,24 @@
+{
+  "name": "advancedCodeBlock",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { advancedCodeBlock } from \"@/cuicui/application-ui/code/advanced-code-block/advanced-code-block\";\nexport { advancedCodeBlock };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "application-ui/code/advanced-code-block",
+  "variants": [
+    {
+      "name": "advanced-code-block-tab",
+      "path": "application-ui/code/advanced-code-block/advanced-code-block-tab"
+    },
+    {
+      "name": "advanced-code-block",
+      "path": "application-ui/code/advanced-code-block/advanced-code-block"
+    }
+  ]
+}

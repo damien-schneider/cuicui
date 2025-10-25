@@ -1,0 +1,28 @@
+{
+  "name": "gradientQna",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { gradientQna } from \"@/cuicui/marketing-ui/questions-and-answers/gradient-qna/gradient-qna\";\nexport { gradientQna };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "marketing-ui/questions-and-answers/gradient-qna",
+  "variants": [
+    {
+      "name": "custom-chevron-style",
+      "path": "marketing-ui/questions-and-answers/gradient-qna/custom-chevron-style"
+    },
+    {
+      "name": "double-container",
+      "path": "marketing-ui/questions-and-answers/gradient-qna/double-container"
+    },
+    {
+      "name": "simple-container",
+      "path": "marketing-ui/questions-and-answers/gradient-qna/simple-container"
+    }
+  ]
+}

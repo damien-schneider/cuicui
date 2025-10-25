@@ -1,0 +1,20 @@
+{
+  "name": "animatedOnScroll",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { animatedOnScroll } from \"@/cuicui/marketing-ui/statistics/animated-on-scroll/animated-on-scroll\";\nexport { animatedOnScroll };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "marketing-ui/statistics/animated-on-scroll",
+  "variants": [
+    {
+      "name": "default",
+      "path": "marketing-ui/statistics/animated-on-scroll/default"
+    }
+  ]
+}

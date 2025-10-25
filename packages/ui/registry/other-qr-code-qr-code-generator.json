@@ -1,0 +1,20 @@
+{
+  "name": "qrCodeGenerator",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { qrCodeGenerator } from \"@/cuicui/other/qr-code/qr-code-generator/qr-code-generator\";\nexport { qrCodeGenerator };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "other/qr-code/qr-code-generator",
+  "variants": [
+    {
+      "name": "qr-code-generator",
+      "path": "other/qr-code/qr-code-generator/qr-code-generator"
+    }
+  ]
+}

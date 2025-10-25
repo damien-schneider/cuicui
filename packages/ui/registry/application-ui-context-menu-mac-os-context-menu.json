@@ -1,0 +1,20 @@
+{
+  "name": "macOsContextMenu",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { macOsContextMenu } from \"@/cuicui/application-ui/context-menu/mac-os-context-menu/mac-os-context-menu\";\nexport { macOsContextMenu };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "application-ui/context-menu/mac-os-context-menu",
+  "variants": [
+    {
+      "name": "mac-os-context-menu",
+      "path": "application-ui/context-menu/mac-os-context-menu/mac-os-context-menu"
+    }
+  ]
+}

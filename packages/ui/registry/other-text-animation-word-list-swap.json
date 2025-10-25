@@ -1,0 +1,20 @@
+{
+  "name": "wordListSwap",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { wordListSwap } from \"@/cuicui/other/text-animation/word-list-swap/word-list-swap\";\nexport { wordListSwap };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "other/text-animation/word-list-swap",
+  "variants": [
+    {
+      "name": "word-list-swap",
+      "path": "other/text-animation/word-list-swap/word-list-swap"
+    }
+  ]
+}

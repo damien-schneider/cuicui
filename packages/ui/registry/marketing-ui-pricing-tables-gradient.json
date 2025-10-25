@@ -1,0 +1,20 @@
+{
+  "name": "gradient",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { gradient } from \"@/cuicui/marketing-ui/pricing-tables/gradient/gradient\";\nexport { gradient };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "marketing-ui/pricing-tables/gradient",
+  "variants": [
+    {
+      "name": "pricing-table-gradient",
+      "path": "marketing-ui/pricing-tables/gradient/pricing-table-gradient"
+    }
+  ]
+}

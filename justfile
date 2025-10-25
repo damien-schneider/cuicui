@@ -37,6 +37,11 @@ build-packages:
 build-ui:
   pnpm build
 
+# This is a command to build the UI registry
+[group('build'), working-directory('packages/ui')]
+build-ui-registry:
+  pnpm build-registry
+
 # Check all
 [group('Format & Lint')]
 biome-check:

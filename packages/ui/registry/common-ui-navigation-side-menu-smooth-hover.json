@@ -1,0 +1,20 @@
+{
+  "name": "sideMenuSmoothHover",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { sideMenuSmoothHover } from \"@/cuicui/common-ui/navigation/side-menu-smooth-hover/side-menu-smooth-hover\";\nexport { sideMenuSmoothHover };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "common-ui/navigation/side-menu-smooth-hover",
+  "variants": [
+    {
+      "name": "sidemenu",
+      "path": "common-ui/navigation/side-menu-smooth-hover/sidemenu"
+    }
+  ]
+}

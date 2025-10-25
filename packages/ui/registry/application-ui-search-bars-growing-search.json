@@ -1,0 +1,20 @@
+{
+  "name": "growingSearch",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { growingSearch } from \"@/cuicui/application-ui/search-bars/growing-search/growing-search\";\nexport { growingSearch };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "application-ui/search-bars/growing-search",
+  "variants": [
+    {
+      "name": "default",
+      "path": "application-ui/search-bars/growing-search/default"
+    }
+  ]
+}

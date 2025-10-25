@@ -1,0 +1,20 @@
+{
+  "name": "droppableFile",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { droppableFile } from \"@/cuicui/common-ui/inputs/droppable-file/droppable-file\";\nexport { droppableFile };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "common-ui/inputs/droppable-file",
+  "variants": [
+    {
+      "name": "default",
+      "path": "common-ui/inputs/droppable-file/default"
+    }
+  ]
+}

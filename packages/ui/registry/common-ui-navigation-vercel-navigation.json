@@ -1,0 +1,24 @@
+{
+  "name": "vercelNavigation",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { vercelNavigation } from \"@/cuicui/common-ui/navigation/vercel-navigation/vercel-navigation\";\nexport { vercelNavigation };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "common-ui/navigation/vercel-navigation",
+  "variants": [
+    {
+      "name": "variant1",
+      "path": "common-ui/navigation/vercel-navigation/variant1"
+    },
+    {
+      "name": "variant2",
+      "path": "common-ui/navigation/vercel-navigation/variant2"
+    }
+  ]
+}

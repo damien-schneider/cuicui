@@ -1,0 +1,20 @@
+{
+  "name": "scrambleHover",
+  "type": "components:component",
+  "files": [
+    {
+      "name": "component.tsx",
+      "content": "import { scrambleHover } from \"@/cuicui/other/text-animation/scramble-hover/scramble-hover\";\nexport { scrambleHover };",
+      "type": "components:component"
+    }
+  ],
+  "dependencies": [],
+  "registryDependencies": [],
+  "path": "other/text-animation/scramble-hover",
+  "variants": [
+    {
+      "name": "scramble",
+      "path": "other/text-animation/scramble-hover/scramble"
+    }
+  ]
+}
