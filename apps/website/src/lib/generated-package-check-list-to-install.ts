@@ -279,4 +279,8 @@ export const packageCheckListToInstall: PackageToInstallType[] = [
     find: [`from "@cuicui/config-typescript"`],
     packageName: "@cuicui/config-typescript",
   },
+  {
+    find: [`from "tsx"`],
+    packageName: "tsx",
+  },
 ];
