@@ -21,5 +21,10 @@
   "engines": {
     "node": ">=18"
   },
-  "name": "cuicui"
+  "name": "cuicui",
+  "dependencies": {
+    "shadcn": "^3.5.2",
+    "tsx": "^4.21.0",
+    "zod": "^3.24.1"
+  }
 }
