@@ -41,23 +41,30 @@ function validateSchema(): ValidationResult {
     return { isValid: false, errors, warnings };
   }
 
-  // Check for required schema types
+  // Check for required schema types (updated for official shadcn imports)
   const schemaContent = fs.readFileSync(SCHEMA_PATH, "utf-8");
-  const requiredTypes = [
-    "RegistryItem",
-    "Registry", 
-    "registryItemSchema",
-    "registrySchema",
-  ];
-
-  for (const type of requiredTypes) {
-    if (!schemaContent.includes(`export type ${type}`) && !schemaContent.includes(`export const ${type}`)) {
-      errors.push({
-        file: SCHEMA_PATH,
-        message: `Missing required type: ${type}`,
-        severity: "error",
-      });
-    }
+  
+  // Check that we're using official shadcn imports
+  if (!schemaContent.includes('from \'shadcn/schema\'') && !schemaContent.includes('from "shadcn/schema"')) {
+    errors.push({
+      file: SCHEMA_PATH,
+      message: "Schema should import from official shadcn package",
+      severity: "error",
+    });
+  }
+  
+  // Check for shadcn exports being re-exported
+  const hasShadcnExports = 
+    schemaContent.includes('export {') && 
+    (schemaContent.includes('RegistryItem') || schemaContent.includes('type RegistryItem')) &&
+    (schemaContent.includes('Registry') || schemaContent.includes('type Registry'));
+    
+  if (!hasShadcnExports) {
+    errors.push({
+      file: SCHEMA_PATH,
+      message: "Missing re-exports of official shadcn types",
+      severity: "error",
+    });
   }
 
   return { isValid: errors.length === 0, errors, warnings };
