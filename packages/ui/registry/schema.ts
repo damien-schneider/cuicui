@@ -1,119 +1,95 @@
 /**
  * Schema types for the shadcn registry format
- * Based on https://ui.shadcn.com/docs/registry
+ * Compatible with official shadcn registry structure
  */
 
-export type RegistryItem = {
-  /** Unique identifier for the item */
-  name: string;
-  /** Short description of the component */
-  description: string;
-  /** File dependencies of the component */
-  dependencies?: string[];
-  /** Files that make up the component */
-  files: RegistryFile[];
-  /** Component metadata */
-  meta?: RegistryItemMeta;
-  /** Registry type */
-  type?: "components" | "ui" | "example";
-};
+import { z } from 'zod';
 
-export type RegistryFile = {
-  /** Path to the file */
-  path: string;
-  /** Content of the file (optional for binary files) */
-  content?: string;
-  /** File type */
-  type: "components" | "styles" | "ui" | "lib" | "util";
-  /** Target directory (optional) */
-  target?: string;
-};
+// Registry item type enum matching shadcn structure
+export const registryItemTypeEnum = z.enum([
+  "registry:lib", 
+  "registry:block", 
+  "registry:component", 
+  "registry:ui", 
+  "registry:hook", 
+  "registry:page", 
+  "registry:file", 
+  "registry:theme", 
+  "registry:style", 
+  "registry:item", 
+  "registry:example", 
+  "registry:internal"
+]);
 
-export type RegistryItemMeta = {
-  /** Component category */
-  category?: string;
-  /** Component subcategory */
-  subcategory?: string;
-  /** Component tags */
-  tags?: string[];
-  /** Component slug */
-  slug?: string;
-  /** Component aliases */
-  aliases?: string[];
-  /** Component demo URL */
-  demoUrl?: string;
-  /** Component docs URL */
-  docsUrl?: string;
-  /** Installation instructions */
-  installation?: {
-    /** Package name */
-    package: string;
-    /** Import path */
-    import: string;
-    /** Installation command */
-    command?: string;
-  };
-  /** Code examples */
-  examples?: RegistryExample[];
-  /** Related components */
-  related?: string[];
-};
+// Registry item file type enum
+export const registryItemFileTypeEnum = z.enum([
+  "registry:file", 
+  "registry:page",
+  "registry:lib",
+  "registry:block", 
+  "registry:component", 
+  "registry:ui", 
+  "registry:hook", 
+  "registry:theme", 
+  "registry:style", 
+  "registry:item", 
+  "registry:example", 
+  "registry:internal"
+]);
 
-export type RegistryExample = {
-  /** Example name */
-  name: string;
-  /** Example description */
-  description?: string;
-  /** Example code */
-  code: string;
-  /** Example language */
-  language?: string;
-  /** Example sandbox URL */
-  sandboxUrl?: string;
-  /** Example demo URL */
-  demoUrl?: string;
-};
+// File schema for registry items
+export const registryItemFileSchema = z.discriminatedUnion("type", [
+  z.object({
+    path: z.string(),
+    content: z.string().optional(),
+    type: z.literal("registry:file").or(z.literal("registry:page")),
+    target: z.string(),
+  }),
+  z.object({
+    path: z.string(),
+    content: z.string().optional(),
+    type: z.enum([
+      "registry:lib", 
+      "registry:block", 
+      "registry:component", 
+      "registry:ui", 
+      "registry:hook", 
+      "registry:theme", 
+      "registry:style", 
+      "registry:item", 
+      "registry:example", 
+      "registry:internal"
+    ]),
+    target: z.string().optional(),
+  }),
+]);
 
-/**
- * Registry index structure
- */
-export type RegistryIndex = {
-  /** Registry items */
-  items: RegistryItem[];
-  /** Registry metadata */
-  meta: {
-    /** Registry name */
-    name: string;
-    /** Registry description */
-    description: string;
-    /** Registry version */
-    version: string;
-    /** Registry source URL */
-    sourceUrl?: string;
-    /** Registry homepage */
-    homepage?: string;
-    /** Registry license */
-    license?: string;
-  };
-};
+// Main registry item schema
+export const registryItemSchema = z.object({
+  $schema: z.string().optional(),
+  extends: z.string().optional(),
+  name: z.string(),
+  type: registryItemTypeEnum,
+  title: z.string().optional(),
+  author: z.string().optional(),
+  description: z.string().optional(),
+  dependencies: z.array(z.string()).optional(),
+  devDependencies: z.array(z.string()).optional(),
+  registryDependencies: z.array(z.string()).optional(),
+  files: z.array(registryItemFileSchema).optional(),
+  categories: z.array(z.string()).optional(),
+  meta: z.record(z.string(), z.any()).optional(),
+  docs: z.string().optional(),
+});
 
-/**
- * Registry collection structure
- */
-export type RegistryCollection = {
-  /** Collection name */
-  name: string;
-  /** Collection description */
-  description: string;
-  /** Collection items */
-  items: string[];
-  /** Collection metadata */
-  meta?: {
-    /** Collection icon */
-    icon?: string;
-    /** Collection color */
-    color?: string;
-    /** Collection tags */
-    tags?: string[];
-  };
-};
+// Registry main schema
+export const registrySchema = z.object({
+  name: z.string(),
+  homepage: z.string(),
+  items: z.array(registryItemSchema),
+});
+
+// Export inferred types
+export type RegistryItem = z.infer<typeof registryItemSchema>;
+export type Registry = z.infer<typeof registrySchema>;
+export type RegistryItemFile = z.infer<typeof registryItemFileSchema>;

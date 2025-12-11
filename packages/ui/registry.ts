@@ -3,7 +3,7 @@
  * This module provides the registry interface for consumption by the site and runtime code
  */
 
-import { registryIndex } from "./registry/index";
+import { registry } from "./registry/index";
 import type { RegistryItem } from "./registry/schema";
 import { commonUiRegistryItems } from "./registry/collections/common-ui";
 import { marketingUiRegistryItems } from "./registry/collections/marketing-ui";
@@ -14,7 +14,7 @@ import { utilsRegistryItems } from "./registry/collections/utils";
 import { toolsRegistryItems } from "./registry/collections/tools";
 
 // Re-export registry components
-export { registryIndex };
+export { registry };
 export type { RegistryItem };
 export { 
   commonUiRegistryItems,

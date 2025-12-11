@@ -10,12 +10,15 @@ import type { RegistryItem } from "../schema";
  */
 export const modernSimpleInputRegistryItem: RegistryItem = {
   name: "modern-simple-input",
+  title: "Modern Simple Input",
+  type: "registry:component",
   description: "A simple input that can be used in any project with any artistic style.",
+  author: "cuicui-day",
   dependencies: ["react", "clsx", "tailwind-merge"],
   files: [
     {
       path: "components/ui/modern-simple-input.tsx",
-      type: "components",
+      type: "registry:component",
       content: `import { type InputHTMLAttributes, forwardRef } from "react";
 import { cn } from "@/lib/utils";
 
@@ -46,12 +49,9 @@ ModernSimpleInput.displayName = "Modern Simple Input";
 export { ModernSimpleInput };`,
     },
   ],
+  categories: ["inputs", "forms", "common"],
   meta: {
-    category: "inputs",
-    subcategory: "common-ui",
-    tags: ["input", "form", "field", "common"],
-    slug: "modern-simple-input",
-    aliases: ["input", "simple-input"],
+    source: "@cuicui/ui",
     demoUrl: "https://cuicui.day/components/modern-simple-input",
     docsUrl: "https://cuicui.day/docs/components/modern-simple-input",
     installation: {
@@ -59,30 +59,7 @@ export { ModernSimpleInput };`,
       import: 'import { ModernSimpleInput } from "@cuicui/ui/cuicui/common-ui/inputs/modern-simple-input/modern-simple-input"',
       command: "pnpm add @cuicui/ui",
     },
-    examples: [
-      {
-        name: "Basic Input",
-        description: "A simple input with placeholder",
-        code: `<ModernSimpleInput placeholder="Type something..." />`,
-        language: "tsx",
-      },
-      {
-        name: "Controlled Input",
-        description: "Input with React state management",
-        code: `const [value, setValue] = useState("");
-return (
-  <ModernSimpleInput
-    value={value}
-    onChange={(e) => setValue(e.target.value)}
-    placeholder="Type something..."
-  />
-);`,
-        language: "tsx",
-      },
-    ],
-    related: ["input-field", "text-area", "select"],
   },
-  type: "components",
 };
 
 /**
@@ -90,12 +67,15 @@ return (
  */
 export const droppableFileRegistryItem: RegistryItem = {
   name: "droppable-file",
+  title: "File Dropzone",
+  type: "registry:component",
   description: "A file input with drag and drop functionality for better user experience.",
+  author: "cuicui-day",
   dependencies: ["react", "motion", "lucide-react"],
   files: [
     {
       path: "components/ui/droppable-file.tsx",
-      type: "components",
+      type: "registry:component",
       content: `"use client";
 import { AnimatePresence, motion } from "motion/react";
 import { File, Trash2, Upload } from "lucide-react";
@@ -262,30 +242,17 @@ export function FileDropzone() {
 export default FileDropzone;`,
     },
   ],
+  categories: ["inputs", "files", "forms", "common"],
   meta: {
-    category: "inputs",
-    subcategory: "common-ui",
-    tags: ["file", "upload", "drag-drop", "input"],
-    slug: "droppable-file",
-    aliases: ["file-upload", "file-input", "dropzone"],
+    source: "@cuicui/ui",
     demoUrl: "https://cuicui.day/components/droppable-file",
     docsUrl: "https://cuicui.day/docs/components/droppable-file",
     installation: {
       package: "@cuicui/ui",
-      import: 'import { DroppableFile } from "@cuicui/ui/cuicui/common-ui/inputs/droppable-file"',
+      import: 'import { FileDropzone } from "@cuicui/ui/cuicui/common-ui/inputs/droppable-file/file-dropzone"',
       command: "pnpm add @cuicui/ui",
     },
-    examples: [
-      {
-        name: "Basic File Drop",
-        description: "Simple drag and drop file input",
-        code: `<DroppableFile onFilesSelected={(files) => console.log(files)} />`,
-        language: "tsx",
-      },
-    ],
-    related: ["modern-simple-input", "file-input", "upload"],
   },
-  type: "components",
 };
 
 /**

@@ -23,6 +23,8 @@
   },
   "name": "cuicui",
   "dependencies": {
-    "tsx": "^4.21.0"
+    "shadcn": "^3.5.2",
+    "tsx": "^4.21.0",
+    "zod": "^3.24.1"
   }
 }

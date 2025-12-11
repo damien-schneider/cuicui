@@ -45,14 +45,13 @@ function validateSchema(): ValidationResult {
   const schemaContent = fs.readFileSync(SCHEMA_PATH, "utf-8");
   const requiredTypes = [
     "RegistryItem",
-    "RegistryFile", 
-    "RegistryItemMeta",
-    "RegistryIndex",
-    "RegistryCollection",
+    "Registry", 
+    "registryItemSchema",
+    "registrySchema",
   ];
 
   for (const type of requiredTypes) {
-    if (!schemaContent.includes(`export type ${type}`) && !schemaContent.includes(`export interface ${type}`)) {
+    if (!schemaContent.includes(`export type ${type}`) && !schemaContent.includes(`export const ${type}`)) {
       errors.push({
         file: SCHEMA_PATH,
         message: `Missing required type: ${type}`,
@@ -83,20 +82,20 @@ function validateIndex(): ValidationResult {
   try {
     const indexContent = fs.readFileSync(INDEX_PATH, "utf-8");
     
-    // Check for main export
-    if (!indexContent.includes("registryIndex")) {
+    // Check for main export (should be 'registry' now)
+    if (!indexContent.includes("export const registry")) {
       errors.push({
         file: INDEX_PATH,
-        message: "registryIndex export missing",
+        message: "registry export missing",
         severity: "error",
       });
     }
 
-    // Check for meta structure
-    if (!indexContent.includes("meta:")) {
+    // Check for homepage field
+    if (!indexContent.includes("homepage:")) {
       errors.push({
         file: INDEX_PATH,
-        message: "Registry meta structure missing",
+        message: "Registry homepage missing",
         severity: "error",
       });
     }
