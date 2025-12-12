@@ -1,7 +1,7 @@
 "use client";
 import { create } from "zustand";
 
-export const PackageManagerList = ["npm", "yarn", "pnpm"] as const;
+export const PackageManagerList = ["npm", "yarn", "pnpm", "bun"] as const;
 export type PackageManagerType = (typeof PackageManagerList)[number];
 
 export type PackageManagerStore = {
@@ -28,7 +28,7 @@ function getLocalStoragePackageManager() {
       return selectedPackageManager;
     }
   }
-  return "npm";
+  return "bun";
 }
 
 export function getCodeByPackageManager(packageManager: PackageManagerType) {
@@ -39,7 +39,9 @@ export function getCodeByPackageManager(packageManager: PackageManagerType) {
       return "yarn add";
     case "pnpm":
       return "pnpm add";
+    case "bun":
+      return "bun add";
     default:
-      return "npm install";
+      return "bun add";
   }
 }

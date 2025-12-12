@@ -4,11 +4,11 @@
 
 ### Prerequisites
 - Node.js v20+
-- pnpm v9+
+- bun v1.1+
 
 ### 1. Install Global Dependencies
 ```bash
-pnpm install turbo --global
+bun add -g turbo
 ```
 
 ### 2. Configure Environment
@@ -20,7 +20,7 @@ cp app/website/.env.template app/website/.env
 
 ### 3. Start Development Server
 ```bash
-pnpm dev
+bun dev
 ```
 
 ## 🧩 Component Development Guide
@@ -70,7 +70,7 @@ export const BaseComponent = (props: ComponentProps) => {
    ```
 4. Run the "pre-build" script to generate component exports:
 ```bash
-pnpm pre-build
+bun pre-build
 ```
 
 ## Commit Message Convention

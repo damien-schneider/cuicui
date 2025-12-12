@@ -4,11 +4,11 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "_build": "pnpm pre-build",
-    "pre-build": "pnpm generate-preview-categories && pnpm generate-section-list",
+    "_build": "bun pre-build",
+    "pre-build": "bun generate-preview-categories && bun generate-section-list",
     "type-check": "tsc --noEmit",
-    "generate-preview-categories": "deno run --allow-read --allow-write scripts/generate-preview-categories.ts && pnpm biome format --write ./categories-previews-list.ts",
-    "generate-section-list": "deno run --allow-read --allow-write scripts/generate-section-list/main.ts && pnpm biome format --write ./section-list.ts"
+    "generate-preview-categories": "deno run --allow-read --allow-write scripts/generate-preview-categories.ts && bun biome format --write ./categories-previews-list.ts",
+    "generate-section-list": "deno run --allow-read --allow-write scripts/generate-section-list/main.ts && bun biome format --write ./section-list.ts"
   },
   "license": "MIT",
   "peerDependencies": {
