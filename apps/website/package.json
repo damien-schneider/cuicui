@@ -80,17 +80,17 @@
       "url": "https://github.com/damien-schneider"
     }
   ],
-  "packageManager": "pnpm@9.0.4",
+  "packageManager": "bun@1.3.4",
   "private": false,
   "publisher": "Damien Schneider",
   "scripts": {
-    "build": "pnpm pre-build && next build",
-    "pre-build": "pnpm scripts/generate-latest-changelog-date.mjs && pnpm scripts/generate-package-list-check.mjs",
+    "build": "bun pre-build && next build",
+    "pre-build": "bun scripts/generate-latest-changelog-date.mjs && bun scripts/generate-package-list-check.mjs",
     "dev": "next dev --turbopack",
     "start": "next start",
     "generate-package-list-check": "node scripts/generate-package-list-check.js",
     "lint": "biome check ./src",
-    "lint-format:check": "pnpm format:check && pnpm lint",
+    "lint-format:check": "bun format:check && bun lint",
     "lint-staged": "lint-staged",
     "lint:write-unsafe": "biome check --write --unsafe ./src",
     "test": "vitest",

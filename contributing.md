@@ -37,16 +37,16 @@ You can of course suggest new features or report bugs by opening a new issue on 
 5. **Install dependencies**
 
     ```bash
-    pnpm install
+    bun install
     ```
 
 6. **Run the project**
     ```bash
-    pnpm run dev
+    bun run dev
     ```
     or
     ```bash
-    pnpm run dev:turbo
+    bun run dev:turbo
     ```
 
 ## Ask for Help
