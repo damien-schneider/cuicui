@@ -28,7 +28,7 @@ function getLocalStoragePackageManager() {
       return selectedPackageManager;
     }
   }
-  return "bun";
+  return "npm";
 }
 
 export function getCodeByPackageManager(packageManager: PackageManagerType) {
