@@ -4,7 +4,7 @@
 
 ### Prerequisites
 - Node.js v20+
-- bun v1.1+
+- bun v1.3.4+
 
 ### 1. Install Global Dependencies
 ```bash
