@@ -42,6 +42,6 @@ export function getCodeByPackageManager(packageManager: PackageManagerType) {
     case "bun":
       return "bun add";
     default:
-      return "bun add";
+      return "npm install";
   }
 }
