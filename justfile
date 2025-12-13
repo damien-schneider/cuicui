@@ -35,7 +35,7 @@ build-packages:
 # This is a command to build the UI package
 [group('build'), working-directory('packages/ui')]
 build-ui:
-  bun build
+  bun run build
 
 # Check all
 [group('Format & Lint')]
