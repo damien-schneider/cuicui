@@ -58,19 +58,11 @@ export default function RootLayout({
     <html className={font.className} lang="en" suppressHydrationWarning={true}>
       <head>
         {IS_PRODUCTION && (
-          <>
-            <Script
-              data-domain="cuicui.day"
-              defer={true}
-              id="plausible-main"
-              src={`${env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN}/js/script.hash.outbound-links.js`}
-            />
-            <Script id="plausible-inline">
-              {
-                "window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }"
-              }
-            </Script>
-          </>
+          <Script
+            defer={true}
+            src="https://umami.damien-schneider.pro/script.js"
+            data-website-id="1ad3dc22-6b89-43d2-b38b-95bb1ffbc95d"
+          />
         )}
       </head>
       <Providers>
