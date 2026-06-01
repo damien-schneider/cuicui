@@ -12,7 +12,7 @@
   </p>
   <hr></hr>
   <p align="left">
-   An open-source animated components built with React, Typescript, Tailwind CSS, and Framer Motion.
+   Open-source animated components built with React, Typescript, Tailwind CSS, and Framer Motion.
 100% open-source, and customizable that can be copy pasted directly into your code base.
   </p>
 
