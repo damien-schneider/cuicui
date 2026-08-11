@@ -5,17 +5,17 @@ default:
 # Display all the dependencies in the mono-repo, including the dependencies of the dependencies
 [group('Simple scripts')]
 check-dependencies:
-  pnpm ls --depth=Infinity -r > dependencies_list.txt
+  bun pm ls --all > dependencies_list.txt
 
-# Remove .next & node_modules & pnpm-lock.yaml & .turbo
+# Remove .next & node_modules & bun.lock/bun.lockb & .turbo
 [group('Simple scripts')]
 clean:
   turbo clean && ./scripts/cleanup-repo.sh
 
-# Reset pnpm-lock.yaml in the root directory and all the sub-folders
+# Reset bun.lock/bun.lockb in the root directory and all the sub-folders
 [group('Simple scripts')]
-reset-pnpm:
-  pnpm recursive install --force
+reset-bun:
+  bun install --force
 
 # Run turbo build with the --graph option to generate a graph of the build process
 [group('Build')]
@@ -35,25 +35,25 @@ build-packages:
 # This is a command to build the UI package
 [group('build'), working-directory('packages/ui')]
 build-ui:
-  pnpm build
+  bun run build
 
 # Check all
 [group('Format & Lint')]
 biome-check:
-  pnpm biome check
+  bun biome check
 
 # Check errors only
 [group('Format & Lint')]
 biome-check-error:
-  pnpm biome check --diagnostic-level=error
+  bun biome check --diagnostic-level=error
 
 # Apply all suggestions
 [group('Format & Lint')]
 biome-write:
-  pnpm biome check --write
+  bun biome check --write
 
 # Apply all suggestions even unsafe ones
 [group('Format & Lint')]
 biome-write-unsafe:
-  pnpm biome check --write --unsafe
+  bun biome check --write --unsafe
 
