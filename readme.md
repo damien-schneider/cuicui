@@ -23,6 +23,7 @@
 ## Table of Contents
 
 - [About The Project](#about-the-project)
+- [Control UI](#control-ui)
 - [License](#license)
 - [Contributing](#contributing)
 - [Star History](#star-history)
@@ -31,6 +32,16 @@
 
 Open-source high quality animated components built with React, Typescript, Tailwind CSS, and Framer Motion.
 100% open-source, and customizable.
+
+## Control UI
+
+The components I maintain today live in [Control UI](https://control-ui.dev): shadcn-compatible React components on Base UI and Tailwind CSS, with skins you can switch, from Refined to Windows 98. Same idea as Cuicui, copy the source into your project and own it.
+
+```bash
+npx shadcn@latest add https://control-ui.dev/r/all.json
+```
+
+[control-ui.dev](https://control-ui.dev) · [GitHub](https://github.com/damien-schneider/control-ui)
 
 ## Contributing
 

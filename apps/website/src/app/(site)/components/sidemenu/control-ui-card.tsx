@@ -12,7 +12,7 @@ export function ControlUiCard() {
       href="https://control-ui.dev"
       rel="noreferrer"
       target="_blank"
-      title="Control UI - React components for AI interfaces"
+      title="Control UI - shadcn-compatible React components with switchable skins"
     >
       <ModernGradientContainerRoot
         animationDurationInSeconds={8}
